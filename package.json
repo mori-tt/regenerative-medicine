@@ -1,0 +1,28 @@
+{
+  "name": "regenerative-medicine-note",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build --webpack",
+    "preview": "node scripts/preview.mjs",
+    "typecheck": "tsc --noEmit",
+    "check:export": "node scripts/check-export.mjs",
+    "format": "prettier --write src scripts docs README.md package.json next.config.ts tsconfig.json"
+  },
+  "dependencies": {
+    "next": "16.3.5",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "prettier": "^3.9.8",
+    "typescript": "^5"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  }
+}
