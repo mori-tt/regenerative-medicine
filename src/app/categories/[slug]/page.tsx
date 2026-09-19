@@ -54,7 +54,9 @@ export default async function CategoryPage({
         ))}
       </nav>
       <section aria-labelledby={`core-${slug}`}>
+        <span className="eyebrow">GUIDES</span>
         <h2 id={`core-${slug}`} className="listing-heading">基本ガイド</h2>
+        <p className="listing-lead">再生医療を理解するための基本を、順番に学べます。</p>
         <div className="listing-grid">
           {core.map((a) => (
             <ArticleCard key={a.slug} article={a} />
@@ -63,7 +65,9 @@ export default async function CategoryPage({
       </section>
       {columns.length > 0 && (
         <section aria-labelledby={`columns-${slug}`} className="columns-section">
+          <span className="eyebrow">COLUMN</span>
           <h2 id={`columns-${slug}`} className="listing-heading">コラム</h2>
+          <p className="listing-lead">研究のこぼれ話や季節の話題など、読みものとして楽しめる記事です。</p>
           <div className="listing-grid">
             {columns.map((a) => (
               <ArticleCard key={a.slug} article={a} />

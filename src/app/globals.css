@@ -852,10 +852,22 @@ svg {
 }
 .columns-section {
   margin-top: 34px;
-  background: #f3f5ee;
-  border: 1px solid var(--line);
+  background: #edf2e4;
+  border: 1px solid #d9e2cb;
+  border-left: 5px solid #527855;
   border-radius: 8px;
-  padding: 6px 22px 26px;
+  padding: 20px 22px 26px;
+}
+section > .eyebrow + .listing-heading {
+  border-top: none;
+  padding-top: 0;
+  margin-top: 12px;
+}
+.listing-lead {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 2;
+  margin: -8px 0 20px;
 }
 .card-kicker {
   display: block;
