@@ -1,8 +1,7 @@
 import Link from "next/link";
-import { articles, categories, columnArticles, coreArticles, isVisibleArticle, visibleArticles } from "@/content/articles";
+import { articles, categories, columnArticles, coreArticles, visibleArticles } from "@/content/articles";
 import type { SiteLocale } from "@/content/locales";
 import { localizedCategoryName } from "@/content/locales";
-import { articleLocales } from "@/content/article-locales";
 import { LocalizedArticleGrid } from "./localized-articles";
 import { Breadcrumbs } from "./content";
 
@@ -38,14 +37,5 @@ export function LocalizedCategory({ locale, slug }: { locale: SiteLocale; slug: 
   const listed = visibleArticles(articles).filter((article) => article.category === slug);
   const core = coreArticles(listed);
   const columns = columnArticles(listed);
-  const upcoming = articles
-    .filter((article) => article.category === slug && article.kind === "column" && !isVisibleArticle(article) && article.publishAt)
-    .sort((a, b) => (a.publishAt as string).localeCompare(b.publishAt as string));
-  const monthShort = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-  const upcomingDate = (iso: string) => {
-    const [, m, d] = iso.split("-").map(Number);
-    return locale === "en" ? `${monthShort[m - 1]} ${d}` : `${m}月${d}日`;
-  };
-  const upcomingBadge = locale === "en" ? "Upcoming" : "预告";
-  return <div lang={locale === "en" ? "en" : "zh-CN"} className="localized-page"><div className="container inner-page"><Breadcrumbs homeLabel={copy.home} homeHref={`/${locale}/`} locale={locale} items={[{ label: title }]} /><div className="page-heading"><span className="eyebrow">{copy.eyebrow}</span><h1>{title}</h1><p>{description}</p></div><div className="question-box"><div><h2>{copy.note}</h2><p>{copy.noteBody}</p></div><Link className="button outline" href={`/${locale}/`}>{copy.back}</Link></div><nav className="filter-links" aria-label={copy.navLabel}><Link href={`/${locale}/articles/`}>{copy.all}</Link>{categories.map((item) => <Link key={item.slug} href={`/${locale}/categories/${item.slug}/`} className={item.slug === slug ? "active" : undefined} aria-current={item.slug === slug ? "page" : undefined}>{localizedCategoryName(locale, item.slug)}</Link>)}</nav><section aria-label={copy.core}><span className="eyebrow">{copy.coreEyebrow}</span><h2 className="listing-heading">{copy.core}</h2><p className="listing-lead">{copy.coreLead}</p><LocalizedArticleGrid locale={locale} list={core} /></section>{(columns.length > 0 || upcoming.length > 0) && <section aria-label={copy.columns} className="columns-section"><span className="eyebrow">{copy.columnsEyebrow}</span><h2 className="listing-heading">{copy.columns}</h2><p className="listing-lead">{copy.columnsLead}</p>{columns.length > 0 && <LocalizedArticleGrid locale={locale} list={columns} />}{upcoming.length > 0 && <ul className="upcoming-list">{upcoming.map((article) => <li key={article.slug} className="upcoming-item"><span className="upcoming-date">{upcomingDate(article.publishAt as string)}{upcomingBadge === "Upcoming" ? " · Upcoming" : "预告"}</span><span>{articleLocales[article.slug]?.[locale]?.title ?? article.title}</span></li>)}</ul>}</section>}</div></div>;
+  return <div lang={locale === "en" ? "en" : "zh-CN"} className="localized-page"><div className="container inner-page"><Breadcrumbs homeLabel={copy.home} homeHref={`/${locale}/`} locale={locale} items={[{ label: title }]} /><div className="page-heading"><span className="eyebrow">{copy.eyebrow}</span><h1>{title}</h1><p>{description}</p></div><div className="question-box"><div><h2>{copy.note}</h2><p>{copy.noteBody}</p></div><Link className="button outline" href={`/${locale}/`}>{copy.back}</Link></div><nav className="filter-links" aria-label={copy.navLabel}><Link href={`/${locale}/articles/`}>{copy.all}</Link>{categories.map((item) => <Link key={item.slug} href={`/${locale}/categories/${item.slug}/`} className={item.slug === slug ? "active" : undefined} aria-current={item.slug === slug ? "page" : undefined}>{localizedCategoryName(locale, item.slug)}</Link>)}</nav><section aria-label={copy.core}><span className="eyebrow">{copy.coreEyebrow}</span><h2 className="listing-heading">{copy.core}</h2><p className="listing-lead">{copy.coreLead}</p><LocalizedArticleGrid locale={locale} list={core} /></section>{columns.length > 0 && <section aria-label={copy.columns} className="columns-section"><span className="eyebrow">{copy.columnsEyebrow}</span><h2 className="listing-heading">{copy.columns}</h2><p className="listing-lead">{copy.columnsLead}</p><LocalizedArticleGrid locale={locale} list={columns} /></section>}</div></div>;
 }

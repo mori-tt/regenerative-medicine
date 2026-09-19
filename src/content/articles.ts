@@ -3006,7 +3006,7 @@ const rawArticles: Article[] = [
   },
   {
     slug: "long-term-followup",
-    title: "長期追跡の重要性： years 単位で見る安全性",
+    title: "長期追跡の重要性：年単位で見る安全性",
     description:
       "短期の結果と長期の経過の違い、追跡調査の読み方をまとめます。",
     category: "research",

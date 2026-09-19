@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { articles, categories, columnArticles, coreArticles, isVisibleArticle, visibleArticles } from "@/content/articles";
+import { articles, categories, columnArticles, coreArticles, visibleArticles } from "@/content/articles";
 import { ArticleCard, Breadcrumbs } from "@/components/content";
 import { pageMetadata } from "@/lib/site";
 export const dynamicParams = false;
@@ -32,13 +32,6 @@ export default async function CategoryPage({
   const listed = visibleArticles(articles).filter((a) => a.category === slug);
   const core = coreArticles(listed);
   const columns = columnArticles(listed);
-  const upcoming = articles
-    .filter((a) => a.category === slug && a.kind === "column" && !isVisibleArticle(a) && a.publishAt)
-    .sort((a, b) => (a.publishAt as string).localeCompare(b.publishAt as string));
-  const upcomingDate = (iso: string) => {
-    const [, m, d] = iso.split("-").map(Number);
-    return `${m}月${d}日`;
-  };
   return (
     <div className="container inner-page">
       <Breadcrumbs items={[{ label: category.label }]} />
@@ -70,28 +63,16 @@ export default async function CategoryPage({
           ))}
         </div>
       </section>
-      {(columns.length > 0 || upcoming.length > 0) && (
+      {(columns.length > 0) && (
         <section aria-labelledby={`columns-${slug}`} className="columns-section">
           <span className="eyebrow">COLUMN</span>
           <h2 id={`columns-${slug}`} className="listing-heading">コラム</h2>
           <p className="listing-lead">研究のこぼれ話や季節の話題など、読みものとして楽しめる記事です。</p>
-          {columns.length > 0 && (
-            <div className="listing-grid">
-              {columns.map((a) => (
-                <ArticleCard key={a.slug} article={a} />
-              ))}
-            </div>
-          )}
-          {upcoming.length > 0 && (
-            <ul className="upcoming-list">
-              {upcoming.map((a) => (
-                <li key={a.slug} className="upcoming-item">
-                  <span className="upcoming-date">{upcomingDate(a.publishAt as string)}公開予定</span>
-                  <span>{a.title}</span>
-                </li>
-              ))}
-            </ul>
-          )}
+          <div className="listing-grid">
+            {columns.map((a) => (
+              <ArticleCard key={a.slug} article={a} />
+            ))}
+          </div>
         </section>
       )}
     </div>
