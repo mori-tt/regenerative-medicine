@@ -850,6 +850,22 @@ svg {
   padding-top: 0;
   border-top: none;
 }
+.columns-section {
+  margin-top: 34px;
+  background: #f3f5ee;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 6px 22px 26px;
+}
+.card-kicker {
+  display: block;
+  font-family: Arial, "Yu Gothic", sans-serif;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  color: #5f7a64;
+  margin-bottom: 9px;
+}
 .filter-links {
   display: flex;
   gap: 10px;

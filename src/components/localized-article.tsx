@@ -165,6 +165,9 @@ export function LocalizedArticleCard({
         <span className={`category-label ${cat.color}`}>{article.category}</span>
       </Link>
       <div className="article-card-body">
+        {source.kind === "column" && (
+          <span className="card-kicker">{locale === "en" ? "Column" : "专栏"}</span>
+        )}
         <div className="article-meta">
           <span>{isReviewed(source) ? copy.editorialManuscript : `${copy.editorialManuscript} · ${copy.translatedVersion}`}</span>
           <span>{copy.readMinutes(source.readingMinutes)}</span>

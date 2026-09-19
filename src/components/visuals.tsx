@@ -217,25 +217,6 @@ export function CellArt({
             strokeOpacity=".6"
           />
           <circle cx="426" cy="114" r="3" fill="#557862" />
-          <text
-            x="39"
-            y="399"
-            fill="#557862"
-            fontFamily="sans-serif"
-            fontSize="10"
-            letterSpacing="3"
-          >
-            THE SCIENCE OF POSSIBILITY
-          </text>
-          <text
-            x="570"
-            y="400"
-            fill="#557862"
-            fontFamily="sans-serif"
-            fontSize="11"
-          >
-            01 / 04
-          </text>
         </>
       )}
     </svg>

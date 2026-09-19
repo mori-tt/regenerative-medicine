@@ -65,6 +65,7 @@ export function ArticleCard({
   compact?: boolean;
 }) {
   const cat = categoryFor(article.category);
+  const isColumn = article.kind === "column";
   return (
     <article className={`article-card ${compact ? "compact" : ""}`}>
       <Link
@@ -87,6 +88,7 @@ export function ArticleCard({
         <span className={`category-label ${cat.color}`}>{cat.label}</span>
       </Link>
       <div className="article-card-body">
+        {isColumn && <span className="card-kicker">コラム</span>}
         <div className="article-meta">
           <span>{isReviewed(article) ? "医師監修済み" : "一般情報・編集部記事"}</span>
           <span>約{article.readingMinutes}分で読める</span>

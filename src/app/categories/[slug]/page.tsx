@@ -54,7 +54,7 @@ export default async function CategoryPage({
         ))}
       </nav>
       <section aria-labelledby={`core-${slug}`}>
-        <h2 id={`core-${slug}`} className="listing-heading">大事なコンテンツ</h2>
+        <h2 id={`core-${slug}`} className="listing-heading">基本ガイド</h2>
         <div className="listing-grid">
           {core.map((a) => (
             <ArticleCard key={a.slug} article={a} />
@@ -62,8 +62,8 @@ export default async function CategoryPage({
         </div>
       </section>
       {columns.length > 0 && (
-        <section aria-labelledby={`columns-${slug}`}>
-          <h2 id={`columns-${slug}`} className="listing-heading">通常のコラム</h2>
+        <section aria-labelledby={`columns-${slug}`} className="columns-section">
+          <h2 id={`columns-${slug}`} className="listing-heading">コラム</h2>
           <div className="listing-grid">
             {columns.map((a) => (
               <ArticleCard key={a.slug} article={a} />
