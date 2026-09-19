@@ -148,7 +148,7 @@ const rawArticles: Article[] = [
     description:
       "言葉の意味から、研究と治療の違いまで。再生医療について理解するための、最初の一歩。",
     category: "basics",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-01",
     readingMinutes: 2,
     status: "draft",
     illustration: "cells",
@@ -189,7 +189,7 @@ const rawArticles: Article[] = [
     description:
       "再生医療の話に出てくる「細胞」「組織」の言葉を、体のつくりから整理します。",
     category: "basics",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-01",
     readingMinutes: 3,
     status: "draft",
     illustration: "cells",
@@ -232,7 +232,7 @@ const rawArticles: Article[] = [
     description:
       "千原良友先生の所属学会である日本再生医療学会について、設立の目的、学術活動、認定制度、制度情報を公式資料から整理します。",
     category: "research",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-01",
     readingMinutes: 7,
     status: "draft",
     illustration: "network",
@@ -300,7 +300,7 @@ const rawArticles: Article[] = [
     description:
       "再生医療は突然生まれたものではありません。医療の歴史の中での位置づけをたどります。",
     category: "basics",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-01",
     readingMinutes: 3,
     status: "draft",
     illustration: "cells",
@@ -343,7 +343,7 @@ const rawArticles: Article[] = [
     description:
       "ひとくちに再生医療といっても方法はさまざま。代表的な考え方を3つに分けて紹介します。",
     category: "basics",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-02",
     readingMinutes: 3,
     status: "draft",
     illustration: "cells",
@@ -386,7 +386,7 @@ const rawArticles: Article[] = [
     description:
       "「何でも治る」「自分にもすぐ使える」は本当？ 誤解しやすい点を5つに絞って解説します。",
     category: "basics",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-02",
     readingMinutes: 4,
     status: "draft",
     illustration: "cells",
@@ -428,7 +428,7 @@ const rawArticles: Article[] = [
     title: "幹細胞とは？ iPS細胞・ES細胞・体性幹細胞の違い",
     description: "幹細胞の基本的な働きと、代表的な種類を整理します。",
     category: "stem-cells",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-02",
     readingMinutes: 2,
     status: "draft",
     illustration: "network",
@@ -461,7 +461,7 @@ const rawArticles: Article[] = [
     description:
       "体の細胞から作られる多能性幹細胞。できること・できないことを整理します。",
     category: "stem-cells",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-02",
     readingMinutes: 4,
     status: "draft",
     illustration: "network",
@@ -504,7 +504,7 @@ const rawArticles: Article[] = [
     description:
       "初期胚に由来する多能性幹細胞。iPS細胞との違いと、研究のルールを紹介します。",
     category: "stem-cells",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-03",
     readingMinutes: 3,
     status: "draft",
     illustration: "network",
@@ -547,7 +547,7 @@ const rawArticles: Article[] = [
     description:
       "体の組織に存在する幹細胞。種類ごとの働きと、治療との関わりを整理します。",
     category: "stem-cells",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-03",
     readingMinutes: 4,
     status: "draft",
     illustration: "network",
@@ -590,7 +590,7 @@ const rawArticles: Article[] = [
     description:
       "細胞を増やし、確かめて、届けるまで。安全性を支える工程を紹介します。",
     category: "stem-cells",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-03",
     readingMinutes: 4,
     status: "draft",
     illustration: "network",
@@ -633,7 +633,7 @@ const rawArticles: Article[] = [
     description:
       "納得して相談するために。根拠、リスク、費用についての質問を整理しましょう。",
     category: "treatment",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-03",
     readingMinutes: 2,
     status: "draft",
     illustration: "cross",
@@ -666,7 +666,7 @@ const rawArticles: Article[] = [
     description:
       "保険診療・治験・自由診療で費用の仕組みは違います。確認すべき点をまとめます。",
     category: "treatment",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-04",
     readingMinutes: 4,
     status: "draft",
     illustration: "cross",
@@ -709,7 +709,7 @@ const rawArticles: Article[] = [
     description:
       "感染・免疫・アレルギーなど、細胞を用いる治療に特有の注意点を含めて解説します。",
     category: "treatment",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-04",
     readingMinutes: 4,
     status: "draft",
     illustration: "cross",
@@ -752,7 +752,7 @@ const rawArticles: Article[] = [
     description:
       "主治医との関係を保ちながら、別の視点を取り入れるための進め方を紹介します。",
     category: "treatment",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-04",
     readingMinutes: 3,
     status: "draft",
     illustration: "cross",
@@ -795,7 +795,7 @@ const rawArticles: Article[] = [
     description:
       "研究としての治療に参加する意味、同意・費用・途中辞退について解説します。",
     category: "treatment",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-04",
     readingMinutes: 4,
     status: "draft",
     illustration: "cross",
@@ -838,7 +838,7 @@ const rawArticles: Article[] = [
     description:
       "「研究で分かったこと」を正しく受け止めるための、ニュースの読み方。",
     category: "research",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-05",
     readingMinutes: 2,
     status: "draft",
     illustration: "scope",
@@ -878,7 +878,7 @@ const rawArticles: Article[] = [
     description:
       "細胞の発見が治療になるまでの長い道のり。各段階の役割を紹介します。",
     category: "research",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-05",
     readingMinutes: 4,
     status: "draft",
     illustration: "scope",
@@ -921,7 +921,7 @@ const rawArticles: Article[] = [
     description:
       "症例報告と大規模試験はどう違う？ 根拠の強さを見分ける視点を紹介します。",
     category: "research",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-05",
     readingMinutes: 4,
     status: "draft",
     illustration: "scope",
@@ -964,7 +964,7 @@ const rawArticles: Article[] = [
     description:
       "条件・期限付き承認を含め、承認の仕組みと調べ方を整理します。",
     category: "research",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-05",
     readingMinutes: 4,
     status: "draft",
     illustration: "scope",
@@ -1007,7 +1007,7 @@ const rawArticles: Article[] = [
     description:
       "期待が集まる領域を、現状と課題と一緒に冷静に眺めます。",
     category: "research",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-06",
     readingMinutes: 4,
     status: "draft",
     illustration: "scope",
@@ -1050,7 +1050,7 @@ const rawArticles: Article[] = [
     description:
       "傷が治るとき体で何が起きているか。再生医療の背景にある仕組みを整理します。",
     category: "basics",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-06",
     readingMinutes: 3,
     status: "draft",
     illustration: "cells",
@@ -1090,7 +1090,7 @@ const rawArticles: Article[] = [
     description:
       "自分由来と他人由来の細胞。それぞれの利点と課題を比べます。",
     category: "basics",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-06",
     readingMinutes: 3,
     status: "draft",
     illustration: "cells",
@@ -1130,7 +1130,7 @@ const rawArticles: Article[] = [
     description:
       "ニュースでよく見る3つの言葉の意味と関係を、図解のつもりで解説します。",
     category: "basics",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-06",
     readingMinutes: 3,
     status: "draft",
     illustration: "cells",
@@ -1170,7 +1170,7 @@ const rawArticles: Article[] = [
     description:
       "遺伝子・ゲノム・タンパク質の関係を、再生医療の話題に絞って紹介します。",
     category: "basics",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-07",
     readingMinutes: 3,
     status: "draft",
     illustration: "cells",
@@ -1210,7 +1210,7 @@ const rawArticles: Article[] = [
     description:
       "移植で問題になる拒絶反応の仕組みと、対策の考え方をやさしく解説します。",
     category: "basics",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-07",
     readingMinutes: 3,
     status: "draft",
     illustration: "cells",
@@ -1250,7 +1250,7 @@ const rawArticles: Article[] = [
     description:
       "細胞治療の原点である血液の仕組みから、体の細胞社会をのぞきます。",
     category: "basics",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-07",
     readingMinutes: 3,
     status: "draft",
     illustration: "cells",
@@ -1290,7 +1290,7 @@ const rawArticles: Article[] = [
     description:
       "培養表皮や骨・軟骨の治療など、比較的イメージしやすい例を紹介します。",
     category: "basics",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-07",
     readingMinutes: 3,
     status: "draft",
     illustration: "cells",
@@ -1330,7 +1330,7 @@ const rawArticles: Article[] = [
     description:
       "一度失われると戻りにくい組織の事情と、研究の方向性を紹介します。",
     category: "basics",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-08",
     readingMinutes: 3,
     status: "draft",
     illustration: "cells",
@@ -1370,7 +1370,7 @@ const rawArticles: Article[] = [
     description:
       "年齢で変わる修復の力と、治療を考えるときの注意点を整理します。",
     category: "basics",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-08",
     readingMinutes: 3,
     status: "draft",
     illustration: "cells",
@@ -1410,7 +1410,7 @@ const rawArticles: Article[] = [
     description:
       "薬物療法や手術と比べたときの、再生医療の特徴と選び方を整理します。",
     category: "basics",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-08",
     readingMinutes: 3,
     status: "draft",
     illustration: "cells",
@@ -1450,7 +1450,7 @@ const rawArticles: Article[] = [
     description:
       "説明の場でよく出る4つの言葉の意味を押さえ、相談をスムーズにします。",
     category: "basics",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-08",
     readingMinutes: 3,
     status: "draft",
     illustration: "cells",
@@ -1490,7 +1490,7 @@ const rawArticles: Article[] = [
     description:
       "期待のずれを防ぎ、一緒に考えるための話し合いのヒントをまとめます。",
     category: "basics",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-09",
     readingMinutes: 3,
     status: "draft",
     illustration: "cells",
@@ -1530,7 +1530,7 @@ const rawArticles: Article[] = [
     description:
       "基礎を終えた後のおすすめの読み順を、関心別に3コースで紹介します。",
     category: "basics",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-09",
     readingMinutes: 3,
     status: "draft",
     illustration: "cells",
@@ -1570,7 +1570,7 @@ const rawArticles: Article[] = [
     description:
       "白血病などの治療で行われる移植の仕組みと、他の治療との違いを学びます。",
     category: "stem-cells",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-09",
     readingMinutes: 4,
     status: "draft",
     illustration: "network",
@@ -1610,7 +1610,7 @@ const rawArticles: Article[] = [
     description:
       "骨・軟骨・脂肪などに関わる細胞群。説明を受けるときの確認点をまとめます。",
     category: "stem-cells",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-09",
     readingMinutes: 3,
     status: "draft",
     illustration: "network",
@@ -1650,7 +1650,7 @@ const rawArticles: Article[] = [
     description:
       "神経の再生が難しい理由と、細胞移植研究の現状・課題を紹介します。",
     category: "stem-cells",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-10",
     readingMinutes: 3,
     status: "draft",
     illustration: "network",
@@ -1690,7 +1690,7 @@ const rawArticles: Article[] = [
     description:
       "日常の入れ替わりを支える幹細胞たち。それぞれの働きを紹介します。",
     category: "stem-cells",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-10",
     readingMinutes: 3,
     status: "draft",
     illustration: "network",
@@ -1730,7 +1730,7 @@ const rawArticles: Article[] = [
     description:
       "拒絶されにくい型の備蓄と、個別作製との使い分けを解説します。",
     category: "stem-cells",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-10",
     readingMinutes: 3,
     status: "draft",
     illustration: "network",
@@ -1770,7 +1770,7 @@ const rawArticles: Article[] = [
     description:
       "狙った細胞を作り分け、不要な細胞を取り除く工程の重要性を紹介します。",
     category: "stem-cells",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-10",
     readingMinutes: 3,
     status: "draft",
     illustration: "network",
@@ -1810,7 +1810,7 @@ const rawArticles: Article[] = [
     description:
       "混同されやすいゲノム編集と再生医療の関係を、役割分担で整理します。",
     category: "stem-cells",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-11",
     readingMinutes: 3,
     status: "draft",
     illustration: "network",
@@ -1850,7 +1850,7 @@ const rawArticles: Article[] = [
     description:
       "自分の細胞と備蓄細胞。治療を受ける側の体験の違いを比べます。",
     category: "stem-cells",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-11",
     readingMinutes: 3,
     status: "draft",
     illustration: "network",
@@ -1890,7 +1890,7 @@ const rawArticles: Article[] = [
     description:
       "増殖力に伴う懸念と、それを確かめる試験の考え方を解説します。",
     category: "stem-cells",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-11",
     readingMinutes: 3,
     status: "draft",
     illustration: "network",
@@ -1930,7 +1930,7 @@ const rawArticles: Article[] = [
     description:
       "移植の適合性で聞くHLAの意味と、型合わせの限界を整理します。",
     category: "stem-cells",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-11",
     readingMinutes: 3,
     status: "draft",
     illustration: "network",
@@ -1970,7 +1970,7 @@ const rawArticles: Article[] = [
     description:
       "病気の再現と薬探しへの活用。治療応用とは別の広がりを紹介します。",
     category: "stem-cells",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-12",
     readingMinutes: 3,
     status: "draft",
     illustration: "network",
@@ -2010,7 +2010,7 @@ const rawArticles: Article[] = [
     description:
       "立体的な小さな組織モデルの作り方・使い道・限界を整理します。",
     category: "stem-cells",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-12",
     readingMinutes: 3,
     status: "draft",
     illustration: "network",
@@ -2050,7 +2050,7 @@ const rawArticles: Article[] = [
     description:
       "注目を集める分泌物を用いる説明について、検証状況の確認点をまとめます。",
     category: "stem-cells",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-12",
     readingMinutes: 3,
     status: "draft",
     illustration: "network",
@@ -2090,7 +2090,7 @@ const rawArticles: Article[] = [
     description:
       "限られた診察時間を有効に使うための、資料整理と伝え方のコツです。",
     category: "treatment",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-12",
     readingMinutes: 3,
     status: "draft",
     illustration: "cross",
@@ -2130,7 +2130,7 @@ const rawArticles: Article[] = [
     description:
       "インフォームド・コンセントを形だけでなく活かすための実践編です。",
     category: "treatment",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-13",
     readingMinutes: 3,
     status: "draft",
     illustration: "cross",
@@ -2170,7 +2170,7 @@ const rawArticles: Article[] = [
     description:
       "初回相談・検査・同意・投与・経過観察の一連の流れを紹介します。",
     category: "treatment",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-13",
     readingMinutes: 3,
     status: "draft",
     illustration: "cross",
@@ -2210,7 +2210,7 @@ const rawArticles: Article[] = [
     description:
       "保険で受けられる治療の調べ方と、受診先選びの視点をまとめます。",
     category: "treatment",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-13",
     readingMinutes: 3,
     status: "draft",
     illustration: "cross",
@@ -2250,7 +2250,7 @@ const rawArticles: Article[] = [
     description:
       "総額・中止時・合併症時の扱いなど、書面で確認すべき項目を解説します。",
     category: "treatment",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-13",
     readingMinutes: 4,
     status: "draft",
     illustration: "cross",
@@ -2290,7 +2290,7 @@ const rawArticles: Article[] = [
     description:
       "医療広告のルールと、宣伝を見るときのチェック視点を紹介します。",
     category: "treatment",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-14",
     readingMinutes: 3,
     status: "draft",
     illustration: "cross",
@@ -2330,7 +2330,7 @@ const rawArticles: Article[] = [
     description:
       "体調変化・契約トラブル・広告への疑問、それぞれの相談先を整理します。",
     category: "treatment",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-14",
     readingMinutes: 3,
     status: "draft",
     illustration: "cross",
@@ -2370,7 +2370,7 @@ const rawArticles: Article[] = [
     description:
       "効果判定の時期や続けたい記録など、治療後の過ごし方をまとめます。",
     category: "treatment",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-14",
     readingMinutes: 3,
     status: "draft",
     illustration: "cross",
@@ -2410,7 +2410,7 @@ const rawArticles: Article[] = [
     description:
       "採取や投与に伴う負担と、仕事・介護との調整の視点をまとめます。",
     category: "treatment",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-14",
     readingMinutes: 3,
     status: "draft",
     illustration: "cross",
@@ -2450,7 +2450,7 @@ const rawArticles: Article[] = [
     description:
       "本人の意思確認が難しい場合の考え方と、事前の備えを紹介します。",
     category: "treatment",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-15",
     readingMinutes: 3,
     status: "draft",
     illustration: "cross",
@@ -2490,7 +2490,7 @@ const rawArticles: Article[] = [
     description:
       "複数の病気や薬がある場合の、特有の確認点をまとめます。",
     category: "treatment",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-15",
     readingMinutes: 3,
     status: "draft",
     illustration: "cross",
@@ -2530,7 +2530,7 @@ const rawArticles: Article[] = [
     description:
       "小児を対象とする治療・研究で特に大切な視点をまとめます。",
     category: "treatment",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-15",
     readingMinutes: 3,
     status: "draft",
     illustration: "cross",
@@ -2570,7 +2570,7 @@ const rawArticles: Article[] = [
     description:
       "署名の前に見直す15の質問を一枚に。印刷して使える構成です。",
     category: "treatment",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-15",
     readingMinutes: 4,
     status: "draft",
     illustration: "cross",
@@ -2610,7 +2610,7 @@ const rawArticles: Article[] = [
     description:
       "実験室の発見を診療へ届けるまでの協働の仕組みを紹介します。",
     category: "research",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-16",
     readingMinutes: 3,
     status: "draft",
     illustration: "scope",
@@ -2650,7 +2650,7 @@ const rawArticles: Article[] = [
     description:
       "くじ引きで群を分ける理由と、盲検化の意味をやさしく解説します。",
     category: "research",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-16",
     readingMinutes: 3,
     status: "draft",
     illustration: "scope",
@@ -2690,7 +2690,7 @@ const rawArticles: Article[] = [
     description:
       "少数例の報告と大規模登録の役割分担を整理します。",
     category: "research",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-16",
     readingMinutes: 3,
     status: "draft",
     illustration: "scope",
@@ -2730,7 +2730,7 @@ const rawArticles: Article[] = [
     description:
       "主要評価項目の設定と、代理指標の読み方を紹介します。",
     category: "research",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-16",
     readingMinutes: 3,
     status: "draft",
     illustration: "scope",
@@ -2770,7 +2770,7 @@ const rawArticles: Article[] = [
     description:
       "専門家による吟味の仕組みと、プレプリントとの違いを解説します。",
     category: "research",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-17",
     readingMinutes: 3,
     status: "draft",
     illustration: "scope",
@@ -2810,7 +2810,7 @@ const rawArticles: Article[] = [
     description:
       "大学・企業の発表文を、原論文と合わせて読むコツをまとめます。",
     category: "research",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-17",
     readingMinutes: 3,
     status: "draft",
     illustration: "scope",
@@ -2850,7 +2850,7 @@ const rawArticles: Article[] = [
     description:
       "数字に振り回されないための、最小限の統計リテラシーを紹介します。",
     category: "research",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-17",
     readingMinutes: 3,
     status: "draft",
     illustration: "scope",
@@ -2890,7 +2890,7 @@ const rawArticles: Article[] = [
     description:
       "資金提供や特許と研究の関係を、冷静に見る視点をまとめます。",
     category: "research",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-17",
     readingMinutes: 3,
     status: "draft",
     illustration: "scope",
@@ -2930,7 +2930,7 @@ const rawArticles: Article[] = [
     description:
       "海外報道と日本の状況をつなげて理解するための視点を紹介します。",
     category: "research",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-18",
     readingMinutes: 3,
     status: "draft",
     illustration: "scope",
@@ -2970,7 +2970,7 @@ const rawArticles: Article[] = [
     description:
       "期待外れの結果が持つ意味と、学びの活かし方を解説します。",
     category: "research",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-18",
     readingMinutes: 3,
     status: "draft",
     illustration: "scope",
@@ -3010,7 +3010,7 @@ const rawArticles: Article[] = [
     description:
       "短期の結果と長期の経過の違い、追跡調査の読み方をまとめます。",
     category: "research",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-18",
     readingMinutes: 3,
     status: "draft",
     illustration: "scope",
@@ -3050,7 +3050,7 @@ const rawArticles: Article[] = [
     description:
       "国内外の治験登録と、主治医への相談の仕方を紹介します。",
     category: "research",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-18",
     readingMinutes: 3,
     status: "draft",
     illustration: "scope",
@@ -3090,7 +3090,7 @@ const rawArticles: Article[] = [
     description:
       "各国当局の公開情報をたどり、正確につかむ方法をまとめます。",
     category: "research",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-19",
     readingMinutes: 3,
     status: "draft",
     illustration: "scope",
@@ -3130,7 +3130,7 @@ const rawArticles: Article[] = [
     description:
       "体細胞分裂の流れと、再生医療との関わりをやさしく整理します。",
     category: "basics",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-19",
     readingMinutes: 3,
     status: "draft",
     illustration: "cells",
@@ -3170,7 +3170,7 @@ const rawArticles: Article[] = [
     description:
       "二重らせんから遺伝子、染色体まで。最小限の言葉で整理します。",
     category: "basics",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-19",
     readingMinutes: 3,
     status: "draft",
     illustration: "cells",
@@ -3210,7 +3210,7 @@ const rawArticles: Article[] = [
     description:
       "酵素・抗体・シグナルなど、タンパク質の役割を身近に紹介します。",
     category: "basics",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-19",
     readingMinutes: 3,
     status: "draft",
     illustration: "cells",
@@ -3250,7 +3250,7 @@ const rawArticles: Article[] = [
     description:
       "口から腸までの旅をたどり、治療中の栄養の大切さを考えます。",
     category: "basics",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-20",
     readingMinutes: 3,
     status: "draft",
     illustration: "cells",
@@ -3290,7 +3290,7 @@ const rawArticles: Article[] = [
     description:
       "心臓・血管・血液の連携を整理し、細胞の届け方を考えます。",
     category: "basics",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-20",
     readingMinutes: 3,
     status: "draft",
     illustration: "cells",
@@ -3330,7 +3330,7 @@ const rawArticles: Article[] = [
     description:
       "肺の構造とガス交換の仕組みを、身近な例で解説します。",
     category: "basics",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-20",
     readingMinutes: 3,
     status: "draft",
     illustration: "cells",
@@ -3370,7 +3370,7 @@ const rawArticles: Article[] = [
     description:
       "沈黙の臓器とも呼ばれる2つの働きと、治療時の注意をまとめます。",
     category: "basics",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-20",
     readingMinutes: 3,
     status: "draft",
     illustration: "cells",
@@ -3410,7 +3410,7 @@ const rawArticles: Article[] = [
     description:
       "神経細胞とグリア、部位ごとの役割を大まかに紹介します。",
     category: "basics",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-21",
     readingMinutes: 3,
     status: "draft",
     illustration: "cells",
@@ -3450,7 +3450,7 @@ const rawArticles: Article[] = [
     description:
       "視覚と聴覚の入り口の構造と、再生への挑戦を紹介します。",
     category: "basics",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-21",
     readingMinutes: 3,
     status: "draft",
     illustration: "cells",
@@ -3490,7 +3490,7 @@ const rawArticles: Article[] = [
     description:
       "成長期の体の作り替えと、歯・骨の再生研究の話題を整理します。",
     category: "basics",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-21",
     readingMinutes: 3,
     status: "draft",
     illustration: "cells",
@@ -3530,7 +3530,7 @@ const rawArticles: Article[] = [
     description:
       "血液で運ばれる信号の仕組みと、代表的な例を紹介します。",
     category: "basics",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-21",
     readingMinutes: 3,
     status: "draft",
     illustration: "cells",
@@ -3570,7 +3570,7 @@ const rawArticles: Article[] = [
     description:
       "感染から守る記憶の仕組みと、細胞治療との違いを整理します。",
     category: "basics",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-22",
     readingMinutes: 3,
     status: "draft",
     illustration: "cells",
@@ -3610,7 +3610,7 @@ const rawArticles: Article[] = [
     description:
       "花粉症や食物アレルギーを例に、免疫の誤作動を解説します。",
     category: "basics",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-22",
     readingMinutes: 3,
     status: "draft",
     illustration: "cells",
@@ -3650,7 +3650,7 @@ const rawArticles: Article[] = [
     description:
       "がんの成り立ちと、再生医療との関係・違いを整理します。",
     category: "basics",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-22",
     readingMinutes: 3,
     status: "draft",
     illustration: "cells",
@@ -3690,7 +3690,7 @@ const rawArticles: Article[] = [
     description:
       "膵臓のβ細胞と血糖の関係から、慢性疾患の付き合い方を考えます。",
     category: "basics",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-22",
     readingMinutes: 3,
     status: "draft",
     illustration: "cells",
@@ -3730,7 +3730,7 @@ const rawArticles: Article[] = [
     description:
       "臍帯血の採取・保存・利用の仕組みと、決断の視点をまとめます。",
     category: "basics",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-23",
     readingMinutes: 3,
     status: "draft",
     illustration: "cells",
@@ -3770,7 +3770,7 @@ const rawArticles: Article[] = [
     description:
       "高齢化で増える病気と、再生医療に寄せられる期待を冷静に見ます。",
     category: "basics",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-23",
     readingMinutes: 3,
     status: "draft",
     illustration: "cells",
@@ -3810,7 +3810,7 @@ const rawArticles: Article[] = [
     description:
       "障害者手帳や福祉サービスなど、暮らしを支える制度の入り口です。",
     category: "basics",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-23",
     readingMinutes: 3,
     status: "draft",
     illustration: "cells",
@@ -3850,7 +3850,7 @@ const rawArticles: Article[] = [
     description:
       "理学・作業・言語療法の役割と、再生医療との組み合わせを解説します。",
     category: "basics",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-23",
     readingMinutes: 3,
     status: "draft",
     illustration: "cells",
@@ -3890,7 +3890,7 @@ const rawArticles: Article[] = [
     description:
       "治療中の体を支える栄養の考え方を、基本から整理します。",
     category: "basics",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-24",
     readingMinutes: 3,
     status: "draft",
     illustration: "cells",
@@ -3930,7 +3930,7 @@ const rawArticles: Article[] = [
     description:
       "無理のない運動の考え方と、治療中の注意をまとめます。",
     category: "basics",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-24",
     readingMinutes: 3,
     status: "draft",
     illustration: "cells",
@@ -3970,7 +3970,7 @@ const rawArticles: Article[] = [
     description:
       "睡眠の役割と、質を上げる生活習慣を紹介します。",
     category: "basics",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-24",
     readingMinutes: 3,
     status: "draft",
     illustration: "cells",
@@ -4010,7 +4010,7 @@ const rawArticles: Article[] = [
     description:
       "治療選択のストレスへの対処と、相談先の使い方をまとめます。",
     category: "basics",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-24",
     readingMinutes: 3,
     status: "draft",
     illustration: "cells",
@@ -4050,7 +4050,7 @@ const rawArticles: Article[] = [
     description:
       "特定健診とがん検診の違い、要精密検査への対応を整理します。",
     category: "basics",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-25",
     readingMinutes: 3,
     status: "draft",
     illustration: "cells",
@@ -4090,7 +4090,7 @@ const rawArticles: Article[] = [
     description:
       "かかりつけ医の役割と、上手な付き合い方を紹介します。",
     category: "basics",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-25",
     readingMinutes: 3,
     status: "draft",
     illustration: "cells",
@@ -4130,7 +4130,7 @@ const rawArticles: Article[] = [
     description:
       "増殖のタイミングを制御する仕組みと、培養管理の関係を紹介します。",
     category: "stem-cells",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-25",
     readingMinutes: 3,
     status: "draft",
     illustration: "network",
@@ -4170,7 +4170,7 @@ const rawArticles: Article[] = [
     description:
       "自分を残しつつ分化細胞を生む、幹細胞独特の分裂を紹介します。",
     category: "stem-cells",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-25",
     readingMinutes: 3,
     status: "draft",
     illustration: "network",
@@ -4210,7 +4210,7 @@ const rawArticles: Article[] = [
     description:
       "周囲の環境が幹細胞の振る舞いを決める考え方を解説します。",
     category: "stem-cells",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-26",
     readingMinutes: 3,
     status: "draft",
     illustration: "network",
@@ -4250,7 +4250,7 @@ const rawArticles: Article[] = [
     description:
       "増殖因子や接触信号など、細胞の会話の基本を紹介します。",
     category: "stem-cells",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-26",
     readingMinutes: 3,
     status: "draft",
     illustration: "network",
@@ -4290,7 +4290,7 @@ const rawArticles: Article[] = [
     description:
       "代表的な因子の役割と、培養・治療での使い方を整理します。",
     category: "stem-cells",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-26",
     readingMinutes: 3,
     status: "draft",
     illustration: "network",
@@ -4330,7 +4330,7 @@ const rawArticles: Article[] = [
     description:
       "生体材料と合成材料、立体組織づくりの工夫を紹介します。",
     category: "stem-cells",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-26",
     readingMinutes: 3,
     status: "draft",
     illustration: "network",
@@ -4370,7 +4370,7 @@ const rawArticles: Article[] = [
     description:
       "治療に足る量の細胞を安定に作る技術を紹介します。",
     category: "stem-cells",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-27",
     readingMinutes: 3,
     status: "draft",
     illustration: "network",
@@ -4410,7 +4410,7 @@ const rawArticles: Article[] = [
     description:
       "凍結保護剤や vitrification など、保存技術の基本を解説します。",
     category: "stem-cells",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-27",
     readingMinutes: 3,
     status: "draft",
     illustration: "network",
@@ -4450,7 +4450,7 @@ const rawArticles: Article[] = [
     description:
       "臍帯血に含まれる細胞と、移植利用の実際を紹介します。",
     category: "stem-cells",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-27",
     readingMinutes: 3,
     status: "draft",
     illustration: "network",
@@ -4490,7 +4490,7 @@ const rawArticles: Article[] = [
     description:
       "乳歯や親知らずの歯髄に含まれる幹細胞の研究を紹介します。",
     category: "stem-cells",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-27",
     readingMinutes: 3,
     status: "draft",
     illustration: "network",
@@ -4530,7 +4530,7 @@ const rawArticles: Article[] = [
     description:
       "脂肪吸引で得られる細胞の特徴と、説明の確認点をまとめます。",
     category: "stem-cells",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-28",
     readingMinutes: 3,
     status: "draft",
     illustration: "network",
@@ -4570,7 +4570,7 @@ const rawArticles: Article[] = [
     description:
       "骨髄の構造と造血の場としての役割を紹介します。",
     category: "stem-cells",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-28",
     readingMinutes: 3,
     status: "draft",
     illustration: "network",
@@ -4610,7 +4610,7 @@ const rawArticles: Article[] = [
     description:
       "けがの際に働く筋肉の幹細胞と、加齢による変化を紹介します。",
     category: "stem-cells",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-28",
     readingMinutes: 3,
     status: "draft",
     illustration: "network",
@@ -4650,7 +4650,7 @@ const rawArticles: Article[] = [
     description:
       "陰窩と絨毛の構造、オルガノイド培養への応用を解説します。",
     category: "stem-cells",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-28",
     readingMinutes: 3,
     status: "draft",
     illustration: "network",
@@ -4690,7 +4690,7 @@ const rawArticles: Article[] = [
     description:
       "肝切除後に戻る力の仕組みと、研究の現状を紹介します。",
     category: "stem-cells",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-29",
     readingMinutes: 3,
     status: "draft",
     illustration: "network",
@@ -4730,7 +4730,7 @@ const rawArticles: Article[] = [
     description:
       "目の表面を守る幹細胞と、シート移植などの取り組みを紹介します。",
     category: "stem-cells",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-29",
     readingMinutes: 3,
     status: "draft",
     illustration: "network",
@@ -4770,7 +4770,7 @@ const rawArticles: Article[] = [
     description:
       "血流の乏しさと荷重の課題、治療選択の視点を整理します。",
     category: "stem-cells",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-29",
     readingMinutes: 3,
     status: "draft",
     illustration: "network",
@@ -4810,7 +4810,7 @@ const rawArticles: Article[] = [
     description:
       "血流の乏しい線維組織の治りにくさと、治療の考え方をまとめます。",
     category: "stem-cells",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-29",
     readingMinutes: 3,
     status: "draft",
     illustration: "network",
@@ -4850,7 +4850,7 @@ const rawArticles: Article[] = [
     description:
       "毛周期と毛包幹細胞の話題を、現状と一緒に整理します。",
     category: "stem-cells",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-30",
     readingMinutes: 3,
     status: "draft",
     illustration: "network",
@@ -4890,7 +4890,7 @@ const rawArticles: Article[] = [
     description:
       "歯胚の再構成などの挑戦と、現在の歯科治療の位置づけを紹介します。",
     category: "stem-cells",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-30",
     readingMinutes: 3,
     status: "draft",
     illustration: "network",
@@ -4930,7 +4930,7 @@ const rawArticles: Article[] = [
     description:
       "難聴の種類と、再生・補聴の両面の進歩を紹介します。",
     category: "stem-cells",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-30",
     readingMinutes: 3,
     status: "draft",
     illustration: "network",
@@ -4970,7 +4970,7 @@ const rawArticles: Article[] = [
     description:
       "加齢黄斑変性などを対象とする細胞治療研究の現状を整理します。",
     category: "stem-cells",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-30",
     readingMinutes: 3,
     status: "draft",
     illustration: "network",
@@ -5010,7 +5010,7 @@ const rawArticles: Article[] = [
     description:
       "損傷後の変化と、細胞移植・リハビリの組み合わせを解説します。",
     category: "stem-cells",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-31",
     readingMinutes: 3,
     status: "draft",
     illustration: "network",
@@ -5050,7 +5050,7 @@ const rawArticles: Article[] = [
     description:
       "シート工学の工夫と、虚血性心疾患治療の位置づけを整理します。",
     category: "stem-cells",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-31",
     readingMinutes: 3,
     status: "draft",
     illustration: "network",
@@ -5090,7 +5090,7 @@ const rawArticles: Article[] = [
     description:
       "多能性状態を経ずに細胞を変換する研究の考え方を紹介します。",
     category: "stem-cells",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-31",
     readingMinutes: 3,
     status: "draft",
     illustration: "network",
@@ -5130,7 +5130,7 @@ const rawArticles: Article[] = [
     description:
       "初診・再診のルールと、対面との使い分けを整理します。",
     category: "treatment",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-08-31",
     readingMinutes: 3,
     status: "draft",
     illustration: "cross",
@@ -5170,7 +5170,7 @@ const rawArticles: Article[] = [
     description:
       "紹介状の役割と、逆紹介で地域に戻る流れを解説します。",
     category: "treatment",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-09-01",
     readingMinutes: 3,
     status: "draft",
     illustration: "cross",
@@ -5210,7 +5210,7 @@ const rawArticles: Article[] = [
     description:
       "カルテ開示の手続きと、記録の活かし方をまとめます。",
     category: "treatment",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-09-01",
     readingMinutes: 3,
     status: "draft",
     illustration: "cross",
@@ -5250,7 +5250,7 @@ const rawArticles: Article[] = [
     description:
       "専門性・実績・通いやすさを比べるための視点を紹介します。",
     category: "treatment",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-09-01",
     readingMinutes: 3,
     status: "draft",
     illustration: "cross",
@@ -5290,7 +5290,7 @@ const rawArticles: Article[] = [
     description:
       "救急車を呼ぶ目安と、持病の伝え方をまとめます。",
     category: "treatment",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-09-01",
     readingMinutes: 3,
     status: "draft",
     illustration: "cross",
@@ -5330,7 +5330,7 @@ const rawArticles: Article[] = [
     description:
       "お薬手帳の使い方と、飲み合わせ相談のコツを紹介します。",
     category: "treatment",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-09-02",
     readingMinutes: 3,
     status: "draft",
     illustration: "cross",
@@ -5370,7 +5370,7 @@ const rawArticles: Article[] = [
     description:
       "訪問看護やケアマネジャーとの協働の仕組みを紹介します。",
     category: "treatment",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-09-02",
     readingMinutes: 3,
     status: "draft",
     illustration: "cross",
@@ -5410,7 +5410,7 @@ const rawArticles: Article[] = [
     description:
       "訪問診療と往診の違い、利用の流れを整理します。",
     category: "treatment",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-09-02",
     readingMinutes: 3,
     status: "draft",
     illustration: "cross",
@@ -5450,7 +5450,7 @@ const rawArticles: Article[] = [
     description:
       "休暇制度や主治医との連携など、働きながらの治療の工夫です。",
     category: "treatment",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-09-02",
     readingMinutes: 3,
     status: "draft",
     illustration: "cross",
@@ -5490,7 +5490,7 @@ const rawArticles: Article[] = [
     description:
       "検査・通院・付き添いまで含めた見積もり表の作り方を紹介します。",
     category: "treatment",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-09-03",
     readingMinutes: 3,
     status: "draft",
     illustration: "cross",
@@ -5530,7 +5530,7 @@ const rawArticles: Article[] = [
     description:
       "自己負担に上限を設ける制度の概要と手続きを解説します。",
     category: "treatment",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-09-03",
     readingMinutes: 3,
     status: "draft",
     illustration: "cross",
@@ -5570,7 +5570,7 @@ const rawArticles: Article[] = [
     description:
       "対象になる費用と、領収書管理のコツをまとめます。",
     category: "treatment",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-09-03",
     readingMinutes: 3,
     status: "draft",
     illustration: "cross",
@@ -5610,7 +5610,7 @@ const rawArticles: Article[] = [
     description:
       "医療保険・がん保険を見直すときの視点を整理します。",
     category: "treatment",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-09-03",
     readingMinutes: 3,
     status: "draft",
     illustration: "cross",
@@ -5650,7 +5650,7 @@ const rawArticles: Article[] = [
     description:
       "選択肢を整理するディシジョンエイドの活用法を紹介します。",
     category: "treatment",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-09-04",
     readingMinutes: 3,
     status: "draft",
     illustration: "cross",
@@ -5690,7 +5690,7 @@ const rawArticles: Article[] = [
     description:
       "当事者同士の支え合いの探し方と、付き合い方のコツです。",
     category: "treatment",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-09-04",
     readingMinutes: 3,
     status: "draft",
     illustration: "cross",
@@ -5730,7 +5730,7 @@ const rawArticles: Article[] = [
     description:
       "医師との行き違いを調整する仕組みと窓口を紹介します。",
     category: "treatment",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-09-04",
     readingMinutes: 3,
     status: "draft",
     illustration: "cross",
@@ -5770,7 +5770,7 @@ const rawArticles: Article[] = [
     description:
       "痛みや不安への早期からの対応と、利用の仕方を解説します。",
     category: "treatment",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-09-04",
     readingMinutes: 3,
     status: "draft",
     illustration: "cross",
@@ -5810,7 +5810,7 @@ const rawArticles: Article[] = [
     description:
       "目標設定と段階的な負荷、継続のコツをまとめます。",
     category: "treatment",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-09-05",
     readingMinutes: 3,
     status: "draft",
     illustration: "cross",
@@ -5850,7 +5850,7 @@ const rawArticles: Article[] = [
     description:
       "感染症予防と栄養摂取のための、口のケアを紹介します。",
     category: "treatment",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-09-05",
     readingMinutes: 3,
     status: "draft",
     illustration: "cross",
@@ -5890,7 +5890,7 @@ const rawArticles: Article[] = [
     description:
       "交通・宿泊・付き添いの計画と、利用できる支援をまとめます。",
     category: "treatment",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-09-05",
     readingMinutes: 3,
     status: "draft",
     illustration: "cross",
@@ -5930,7 +5930,7 @@ const rawArticles: Article[] = [
     description:
       "言葉の壁を下げる伝え方と、通訳利用の方法を紹介します。",
     category: "treatment",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-09-05",
     readingMinutes: 3,
     status: "draft",
     illustration: "cross",
@@ -5970,7 +5970,7 @@ const rawArticles: Article[] = [
     description:
       "症状・服薬・生活の記録法と、診察での活かし方をまとめます。",
     category: "treatment",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-09-06",
     readingMinutes: 3,
     status: "draft",
     illustration: "cross",
@@ -6010,7 +6010,7 @@ const rawArticles: Article[] = [
     description:
       "効果がないときの見直し方と、中止の進め方を整理します。",
     category: "treatment",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-09-06",
     readingMinutes: 3,
     status: "draft",
     illustration: "cross",
@@ -6050,7 +6050,7 @@ const rawArticles: Article[] = [
     description:
       "預け先やサービスの確保など、両立のための準備をまとめます。",
     category: "treatment",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-09-06",
     readingMinutes: 3,
     status: "draft",
     illustration: "cross",
@@ -6090,7 +6090,7 @@ const rawArticles: Article[] = [
     description:
       "分割や猶予、支援制度など、支払いに困ったときの道筋です。",
     category: "treatment",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-09-06",
     readingMinutes: 3,
     status: "draft",
     illustration: "cross",
@@ -6130,7 +6130,7 @@ const rawArticles: Article[] = [
     description:
       "目に見えない細胞の世界のスケール感をつかみます。",
     category: "basics",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-09-07",
     readingMinutes: 3,
     status: "draft",
     illustration: "cells",
@@ -6170,7 +6170,7 @@ const rawArticles: Article[] = [
     description:
       "赤血球の目印の違いと、輸血で適合を見る理由を整理します。",
     category: "basics",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-09-07",
     readingMinutes: 3,
     status: "draft",
     illustration: "cells",
@@ -6210,7 +6210,7 @@ const rawArticles: Article[] = [
     description:
       "体重の約6割を占める水分の役割と、補給の基本をまとめます。",
     category: "basics",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-09-07",
     readingMinutes: 3,
     status: "draft",
     illustration: "cells",
@@ -6250,7 +6250,7 @@ const rawArticles: Article[] = [
     description:
       "血管と並ぶ循環のもう一つの流れを整理します。",
     category: "basics",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-09-07",
     readingMinutes: 3,
     status: "draft",
     illustration: "cells",
@@ -6290,7 +6290,7 @@ const rawArticles: Article[] = [
     description:
       "100兆個ともいわれる腸内細菌の働きと付き合い方を紹介します。",
     category: "basics",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-09-08",
     readingMinutes: 4,
     status: "draft",
     illustration: "cells",
@@ -6330,7 +6330,7 @@ const rawArticles: Article[] = [
     description:
       "体温を上げる体の判断と、対処の目安を整理します。",
     category: "basics",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-09-08",
     readingMinutes: 3,
     status: "draft",
     illustration: "cells",
@@ -6370,7 +6370,7 @@ const rawArticles: Article[] = [
     description:
       "痛みが伝わる経路と、感じ方が変わる理由を紹介します。",
     category: "basics",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-09-08",
     readingMinutes: 3,
     status: "draft",
     illustration: "cells",
@@ -6410,7 +6410,7 @@ const rawArticles: Article[] = [
     description:
       "骨と骨をつなぐ関節のつくりと、動きの種類を整理します。",
     category: "basics",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-09-08",
     readingMinutes: 3,
     status: "draft",
     illustration: "cells",
@@ -6450,7 +6450,7 @@ const rawArticles: Article[] = [
     description:
       "骨が修復される段階と、治療中の過ごし方を紹介します。",
     category: "basics",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-09-09",
     readingMinutes: 3,
     status: "draft",
     illustration: "cells",
@@ -6490,7 +6490,7 @@ const rawArticles: Article[] = [
     description:
       "めまいや疲れの背景にある貧血の基本と受診の目安です。",
     category: "basics",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-09-09",
     readingMinutes: 3,
     status: "draft",
     illustration: "cells",
@@ -6530,7 +6530,7 @@ const rawArticles: Article[] = [
     description:
       "上と下の数値の意味と、測り方のコツを整理します。",
     category: "basics",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-09-09",
     readingMinutes: 3,
     status: "draft",
     illustration: "cells",
@@ -6570,7 +6570,7 @@ const rawArticles: Article[] = [
     description:
       "体に必要な脂質の役割と、検査値の見方を紹介します。",
     category: "basics",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-09-09",
     readingMinutes: 3,
     status: "draft",
     illustration: "cells",
@@ -6610,7 +6610,7 @@ const rawArticles: Article[] = [
     description:
       "暑い時期の体調不良を防ぐ工夫と、重症度の見分け方です。",
     category: "basics",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-09-10",
     readingMinutes: 3,
     status: "draft",
     illustration: "cells",
@@ -6650,7 +6650,7 @@ const rawArticles: Article[] = [
     description:
       "臍帯血・骨髄・iPSの保管の仕組みと選び方を整理します。",
     category: "stem-cells",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-09-10",
     readingMinutes: 3,
     status: "draft",
     illustration: "network",
@@ -6690,7 +6690,7 @@ const rawArticles: Article[] = [
     description:
       "細胞を育てる液体の中身と管理の基本を紹介します。",
     category: "stem-cells",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-09-10",
     readingMinutes: 3,
     status: "draft",
     illustration: "network",
@@ -6730,7 +6730,7 @@ const rawArticles: Article[] = [
     description:
       "目的の細胞だけを取り出す技術の基本を整理します。",
     category: "stem-cells",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-09-10",
     readingMinutes: 3,
     status: "draft",
     illustration: "network",
@@ -6770,7 +6770,7 @@ const rawArticles: Article[] = [
     description:
       "出産に伴い得られる組織の研究と利用の実際を紹介します。",
     category: "stem-cells",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-09-11",
     readingMinutes: 3,
     status: "draft",
     illustration: "network",
@@ -6810,7 +6810,7 @@ const rawArticles: Article[] = [
     description:
       "インスリンを出す細胞の再生と移植研究の現状を整理します。",
     category: "stem-cells",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-09-11",
     readingMinutes: 4,
     status: "draft",
     illustration: "network",
@@ -6850,7 +6850,7 @@ const rawArticles: Article[] = [
     description:
       "腎機能の回復を目指す研究と、現在の治療の位置づけを紹介します。",
     category: "stem-cells",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-09-11",
     readingMinutes: 4,
     status: "draft",
     illustration: "network",
@@ -6890,7 +6890,7 @@ const rawArticles: Article[] = [
     description:
       "ガス交換の仕組みを守る・戻す研究の現状を整理します。",
     category: "stem-cells",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-09-11",
     readingMinutes: 3,
     status: "draft",
     illustration: "network",
@@ -6930,7 +6930,7 @@ const rawArticles: Article[] = [
     description:
       "背骨のクッションの変性と、再生への挑戦を紹介します。",
     category: "stem-cells",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-09-12",
     readingMinutes: 3,
     status: "draft",
     illustration: "network",
@@ -6970,7 +6970,7 @@ const rawArticles: Article[] = [
     description:
       "閉塞性動脈疾患などを対象とする血管再生の考え方を整理します。",
     category: "stem-cells",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-09-12",
     readingMinutes: 3,
     status: "draft",
     illustration: "network",
@@ -7010,7 +7010,7 @@ const rawArticles: Article[] = [
     description:
       "細胞を材料に立体組織を作る技術の現状と課題を紹介します。",
     category: "stem-cells",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-09-12",
     readingMinutes: 3,
     status: "draft",
     illustration: "network",
@@ -7050,7 +7050,7 @@ const rawArticles: Article[] = [
     description:
       "ドナーからの提供と公平な分配を支える制度を紹介します。",
     category: "stem-cells",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-09-12",
     readingMinutes: 4,
     status: "draft",
     illustration: "network",
@@ -7090,7 +7090,7 @@ const rawArticles: Article[] = [
     description:
       "研究やストックのための血液提供と、その後の扱いを解説します。",
     category: "stem-cells",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-09-13",
     readingMinutes: 3,
     status: "draft",
     illustration: "network",
@@ -7130,7 +7130,7 @@ const rawArticles: Article[] = [
     description:
       "いざというときの希望を伝える文書の作り方と使い方です。",
     category: "treatment",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-09-13",
     readingMinutes: 3,
     status: "draft",
     illustration: "cross",
@@ -7170,7 +7170,7 @@ const rawArticles: Article[] = [
     description:
       "説明を受ける権利や自己決定など、医療における基本的な権利を整理します。",
     category: "treatment",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-09-13",
     readingMinutes: 3,
     status: "draft",
     illustration: "cross",
@@ -7210,7 +7210,7 @@ const rawArticles: Article[] = [
     description:
       "先発品との違いと、切り替えるときの確認点をまとめます。",
     category: "treatment",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-09-13",
     readingMinutes: 3,
     status: "draft",
     illustration: "cross",
@@ -7250,7 +7250,7 @@ const rawArticles: Article[] = [
     description:
       "受診に必要な確認と、マイナ保険証の利用方法を紹介します。",
     category: "treatment",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-09-14",
     readingMinutes: 3,
     status: "draft",
     illustration: "cross",
@@ -7290,7 +7290,7 @@ const rawArticles: Article[] = [
     description:
       "介護が必要になったときの申請手順とサービスの種類を整理します。",
     category: "treatment",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-09-14",
     readingMinutes: 4,
     status: "draft",
     illustration: "cross",
@@ -7330,7 +7330,7 @@ const rawArticles: Article[] = [
     description:
       "治療中の運転の注意と、免許に関わる制度を紹介します。",
     category: "treatment",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-09-14",
     readingMinutes: 3,
     status: "draft",
     illustration: "cross",
@@ -7370,7 +7370,7 @@ const rawArticles: Article[] = [
     description:
       "仕事が原因のけが・病気と、それ以外の休業の保障を整理します。",
     category: "treatment",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-09-14",
     readingMinutes: 4,
     status: "draft",
     illustration: "cross",
@@ -7410,7 +7410,7 @@ const rawArticles: Article[] = [
     description:
       "予期せぬ死亡などが起きたときの調査と支援の枠組みを紹介します。",
     category: "treatment",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-09-15",
     readingMinutes: 3,
     status: "draft",
     illustration: "cross",
@@ -7450,7 +7450,7 @@ const rawArticles: Article[] = [
     description:
       "飲み合わせや副作用の情報を整理し、安全につなげる方法です。",
     category: "treatment",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-09-15",
     readingMinutes: 3,
     status: "draft",
     illustration: "cross",
@@ -7490,7 +7490,7 @@ const rawArticles: Article[] = [
     description:
       "成人に勧められる予防接種と、接種前の確認点をまとめます。",
     category: "treatment",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-09-15",
     readingMinutes: 3,
     status: "draft",
     illustration: "cross",
@@ -7530,7 +7530,7 @@ const rawArticles: Article[] = [
     description:
       "歯科の初診から治療完了までの流れと準備を紹介します。",
     category: "treatment",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-09-15",
     readingMinutes: 3,
     status: "draft",
     illustration: "cross",
@@ -7570,7 +7570,7 @@ const rawArticles: Article[] = [
     description:
       "体を支える用具の種類と、作製・支給の流れを整理します。",
     category: "treatment",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-09-16",
     readingMinutes: 3,
     status: "draft",
     illustration: "cross",
@@ -7610,7 +7610,7 @@ const rawArticles: Article[] = [
     description:
       "住まいの危険箇所の見直しと、転倒を防ぐ工夫をまとめます。",
     category: "treatment",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-09-16",
     readingMinutes: 3,
     status: "draft",
     illustration: "cross",
@@ -7650,7 +7650,7 @@ const rawArticles: Article[] = [
     description:
       "お金を払えば載る雑誌の特徴と、論文の質の見極めを紹介します。",
     category: "research",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-09-16",
     readingMinutes: 3,
     status: "draft",
     illustration: "scope",
@@ -7690,7 +7690,7 @@ const rawArticles: Article[] = [
     description:
       "取り下げられた論文の意味と、撤回情報の探し方を整理します。",
     category: "research",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-09-16",
     readingMinutes: 3,
     status: "draft",
     illustration: "scope",
@@ -7730,7 +7730,7 @@ const rawArticles: Article[] = [
     description:
       "無料公開の仕組みと、購読誌との違いを紹介します。",
     category: "research",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-09-17",
     readingMinutes: 3,
     status: "draft",
     illustration: "scope",
@@ -7770,7 +7770,7 @@ const rawArticles: Article[] = [
     description:
       "雑誌の影響指標の仕組みと、誤用への注意を整理します。",
     category: "research",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-09-17",
     readingMinutes: 3,
     status: "draft",
     illustration: "scope",
@@ -7810,7 +7810,7 @@ const rawArticles: Article[] = [
     description:
       "推奨度とエビデンスレベルの表記の読み方を紹介します。",
     category: "research",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-09-17",
     readingMinutes: 4,
     status: "draft",
     illustration: "scope",
@@ -7850,7 +7850,7 @@ const rawArticles: Article[] = [
     description:
       "効能・用法・副作用の記載の読み方と注意点をまとめます。",
     category: "research",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-09-17",
     readingMinutes: 3,
     status: "draft",
     illustration: "scope",
@@ -7890,7 +7890,7 @@ const rawArticles: Article[] = [
     description:
       "治験以外のデータの役割と読み方の注意を紹介します。",
     category: "research",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-09-18",
     readingMinutes: 3,
     status: "draft",
     illustration: "scope",
@@ -7930,7 +7930,7 @@ const rawArticles: Article[] = [
     description:
       "承認前の薬にアクセスする制度と考え方を整理します。",
     category: "research",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-09-18",
     readingMinutes: 4,
     status: "draft",
     illustration: "scope",
@@ -7970,7 +7970,7 @@ const rawArticles: Article[] = [
     description:
       "最初期の臨床試験の目的と参加の考え方を紹介します。",
     category: "research",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-09-18",
     readingMinutes: 3,
     status: "draft",
     illustration: "scope",
@@ -8010,7 +8010,7 @@ const rawArticles: Article[] = [
     description:
       "オンラインや訪問を組み合わせた新しい治験の形を整理します。",
     category: "research",
-    updatedAt: "2026-09-19",
+    updatedAt: "2026-09-18",
     readingMinutes: 3,
     status: "draft",
     illustration: "scope",
