@@ -2,11 +2,14 @@ import Link from "next/link";
 import { Breadcrumbs, JsonLd } from "./content";
 import { Icon } from "./visuals";
 import { jsrmCertification, jsrmSources, jsrmTimeline } from "@/content/jsrm";
+import { jsrmChapters } from "@/content/jsrm-chapters";
+import { publication } from "@/lib/site-config";
 
 export function JsrmGuide() {
   return (
     <div className="container inner-page jsrm-page">
       <Breadcrumbs items={[{ label: "日本再生医療学会" }]} />
+      {publication.showPreparationNotices && <div className="draft-notice">この特集は公式資料をもとにした編集部の情報整理です。医師監修・法務確認前の原稿であり、個別の診断・治療・契約判断を示すものではありません。</div>}
       <JsonLd
         data={{
           "@context": "https://schema.org",
@@ -51,6 +54,16 @@ export function JsrmGuide() {
           <p>
             ただし、個別の治療が自分に合うか、効果があるか、安全かどうかは、病気、症状、検査結果、治療方法、根拠、リスクを別々に確認して判断します。
           </p>
+        </div>
+      </section>
+
+      <section className="jsrm-chapters-section">
+        <div className="section-heading">
+          <div><span className="eyebrow">THE 10-CHAPTER GUIDE</span><h2>学会を10章で読み解く<span className="heading-dot">。</span></h2></div>
+          <span className="section-caption">気になるテーマから読めます</span>
+        </div>
+        <div className="jsrm-chapters-grid">
+          {jsrmChapters.map((chapter) => <Link href={`/jsrm/${chapter.slug}/`} key={chapter.slug} className="jsrm-chapter-card"><span>{chapter.number}</span><div><small>{chapter.eyebrow}</small><h3>{chapter.title}</h3><p>{chapter.description}</p></div><Icon name="arrow" size={19} /></Link>)}
         </div>
       </section>
 

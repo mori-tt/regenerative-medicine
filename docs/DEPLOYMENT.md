@@ -11,12 +11,13 @@
 ```dotenv
 NEXT_PUBLIC_SITE_URL=https://your-domain.jp
 NEXT_PUBLIC_SITE_INDEXABLE=false
+NEXT_PUBLIC_PUBLICATION_MODE=preview
 NEXT_PUBLIC_CONTACT_EMAIL=実際の受付用メールアドレス
 NEXT_PUBLIC_BASE_PATH=
 NEXT_PUBLIC_ASSET_PREFIX=
 ```
 
-準備中は`false`を維持します。運営情報・監修・原稿を確定し、正式公開するときに`true`へ変更します。
+準備中は`NEXT_PUBLIC_SITE_INDEXABLE=false` と `NEXT_PUBLIC_PUBLICATION_MODE=preview` を維持します。運営情報・監修・原稿・法務確認を確定し、正式公開するときだけ `NEXT_PUBLIC_SITE_INDEXABLE=true` と `NEXT_PUBLIC_PUBLICATION_MODE=production` に変更します。両方が揃わない限り、robots・canonical周辺の公開設定とサイトマップは公開状態になりません。
 
 配置先ごとの設定は次のとおりです。
 

@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
+import { publication } from "./site-config";
 
 const configuredUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://example.com";
 const parsedUrl = new URL(configuredUrl);
 export const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? (process.env.GITHUB_PAGES === "true" ? "/regenerative-medicine" : "");
 export const indexable = process.env.NEXT_PUBLIC_SITE_INDEXABLE === "true";
+export const publiclyIndexable = indexable && publication.mode === "production";
 if (parsedUrl.pathname !== "/" || parsedUrl.search || parsedUrl.hash) {
   throw new Error(
     "NEXT_PUBLIC_SITE_URL はドメインのルートURLを指定してください。",
@@ -42,7 +44,7 @@ export function pageMetadata(
     title,
     description,
     alternates: { canonical: absolute(path) },
-    robots: { index: indexable && allowIndex, follow: true },
+    robots: { index: publiclyIndexable && allowIndex, follow: true },
     openGraph: {
       title: `${title} | ${site.name}`,
       description,

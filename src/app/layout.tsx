@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Header, Footer } from "@/components/site-shell";
 import { LocaleDocument } from "@/components/locale-document";
-import { absolute, indexable, site } from "@/lib/site";
+import { absolute, publiclyIndexable, site } from "@/lib/site";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     template: `%s | ${site.name}`,
   },
   description: site.description,
-  robots: { index: indexable, follow: true },
+  robots: { index: publiclyIndexable, follow: true },
   openGraph: { locale: "ja_JP", type: "website", siteName: site.name },
   icons: { icon: absolute("/icon.svg") },
 };
