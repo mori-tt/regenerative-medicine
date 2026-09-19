@@ -3,6 +3,8 @@ import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/content";
 import { infoPages } from "@/content/pages";
 import { pageMetadata, site } from "@/lib/site";
+import { ReviewerProfile } from "@/components/reviewer-profile";
+import { publication } from "@/lib/site-config";
 export const dynamicParams = false;
 export function generateStaticParams() {
   return infoPages.map((p) => ({ page: p.slug }));
@@ -34,11 +36,12 @@ export default async function InfoPage({
         <p>{info.description}</p>
       </div>
       <div className="prose">
-        {info.sections.map((s) => (
+        {page === "supervision" && <ReviewerProfile />}
+        {page !== "supervision" && info.sections.map((s) => (
           <section key={s.title}>
             <h2>{s.title}</h2>
             {s.paragraphs.map((p) => (
-              <p key={p}>{p}</p>
+              <p key={p}>{publication.showPreparationNotices ? p : p.replaceAll("現在の掲載原稿は監修前のサンプルであり、正式公開前に精査します。", "記事は監修者の確認範囲と更新日を明示して管理します。")}</p>
             ))}
           </section>
         ))}

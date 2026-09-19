@@ -6,6 +6,7 @@ const labels = {
   zh: { about: "关于本网站", "editorial-policy": "编辑方针", supervision: "医学审核", advertising: "广告刊登", privacy: "隐私政策", contact: "联系我们", guide: "入门指南", glossary: "术语表", faq: "常见问题", safety: "安全性", regulation: "制度与法规", terms: "使用条款", corrections: "勘误与更新", citations: "引用与转载", disclaimer: "重要说明", accessibility: "无障碍", "site-guide": "网站地图", updates: "更新信息" },
 } as const;
 export type InfoSlug = keyof typeof labels.en;
+export function infoTitleFor(locale: SiteLocale, slug: InfoSlug) { return labels[locale][slug]; }
 
 export function LocalizedInfo({ locale, slug }: { locale: SiteLocale; slug: InfoSlug }) {
   const en = locale === "en";

@@ -3,6 +3,7 @@ import { articles, categories } from "@/content/articles";
 import { ArticleCard, AdSlot, JsonLd } from "@/components/content";
 import { CellArt, Icon } from "@/components/visuals";
 import { absolute, pageMetadata, site } from "@/lib/site";
+import { publication } from "@/lib/site-config";
 
 export const metadata = pageMetadata(
   "再生医療と幹細胞を、もっとわかりやすく。",
@@ -71,7 +72,7 @@ export default function Home() {
             <Icon name="check" />
             <span>
               医師監修を前提とした編集体制
-              <small>現在は監修前のサンプルを掲載しています</small>
+              <small>{publication.showPreparationNotices ? "現在は記事ごとの監修前原稿を掲載しています" : "監修者情報と記事ごとの確認範囲を公開しています"}</small>
             </span>
           </div>
           <div>

@@ -4,16 +4,26 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useRef } from "react";
 import { categories } from "@/content/articles";
+import { localizedShell, type SiteLocale } from "@/content/locales";
+
+function localeFromPath(pathname: string): SiteLocale | "ja" {
+  if (pathname.startsWith("/en")) return "en";
+  if (pathname.startsWith("/zh")) return "zh";
+  return "ja";
+}
 
 export function MainNavigation() {
   const pathname = usePathname();
+  const locale = localeFromPath(pathname);
+  const copy = locale === "ja" ? null : localizedShell[locale];
+  const prefix = locale === "ja" ? "" : `/${locale}`;
   const links = [
-    { href: "/", label: "ホーム" },
+    { href: `${prefix}/`, label: copy?.home || "ホーム" },
     ...categories.map((c) => ({
-      href: `/categories/${c.slug}/`,
-      label: c.label,
+      href: `${prefix}/categories/${c.slug}/`,
+      label: copy ? { basics: copy.basics, "stem-cells": copy.stemCells, treatment: copy.treatment, research: copy.research }[c.slug] : c.label,
     })),
-    { href: "/about/", label: "このサイトについて" },
+    { href: `${prefix}/about/`, label: copy?.about || "このサイトについて" },
   ];
   return (
     <nav className="main-nav container" aria-label="メインナビゲーション">
@@ -33,23 +43,27 @@ export function MainNavigation() {
 
 export function MobileMenu() {
   const details = useRef<HTMLDetailsElement>(null);
+  const pathname = usePathname();
+  const locale = localeFromPath(pathname);
+  const copy = locale === "ja" ? null : localizedShell[locale];
+  const prefix = locale === "ja" ? "" : `/${locale}`;
   function close() {
     details.current?.removeAttribute("open");
   }
   return (
     <details className="mobile-menu" ref={details}>
-      <summary aria-label="メニューを開く">☰</summary>
+      <summary aria-label={copy?.menu || "メニューを開く"}>☰</summary>
       <nav>
         {categories.map((c) => (
-          <Link key={c.slug} href={`/categories/${c.slug}/`} onClick={close}>
-            {c.label}
+          <Link key={c.slug} href={`${prefix}/categories/${c.slug}/`} onClick={close}>
+            {copy ? { basics: copy.basics, "stem-cells": copy.stemCells, treatment: copy.treatment, research: copy.research }[c.slug] : c.label}
           </Link>
         ))}
-        <Link href="/editorial-policy/" onClick={close}>
-          編集方針
+        <Link href={`${prefix}/editorial-policy/`} onClick={close}>
+          {copy?.editorial || "編集方針"}
         </Link>
-        <Link href="/search/" onClick={close}>
-          記事検索
+        <Link href={`${prefix}/search/`} onClick={close}>
+          {copy?.search || "記事検索"}
         </Link>
       </nav>
     </details>

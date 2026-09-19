@@ -78,6 +78,21 @@ NEXT_PUBLIC_CONTACT_EMAIL=実際に受信できるメールアドレス
 
 `robots.txt`は準備中もクロールを許可します。これはクローラがHTML内の`noindex`を読み取れるようにするためです。`noindex`は閲覧制限ではありません。非公開で確認する場合はサーバー側の認証等を使ってください。
 
+## 監修者と公開モード
+
+監修者のプロフィール、資格、経歴、所属学会、監修範囲、写真の出典は [`src/content/site-config.json`](src/content/site-config.json) で管理します。現在はノリス美容クリニック院長・千原良友先生の公式プロフィール情報を登録しています。記事ごとの監修日が確定するまでは、記事を「医師監修済み」と表示しません。
+
+本番切替時に、準備中表示を一括で変更できます。
+
+```dotenv
+NEXT_PUBLIC_PUBLICATION_MODE=live
+NEXT_PUBLIC_SHOW_PREVIEW_BANNER=false
+NEXT_PUBLIC_SHOW_PREPARATION_NOTICES=false
+NEXT_PUBLIC_SITE_INDEXABLE=true
+```
+
+写真は監修者の公式プロフィールページ掲載写真を使用し、サイト内に出典リンクを表示しています。監修者が変更になった場合はJSONの監修者情報と写真を差し替えて再ビルドしてください。
+
 ## 実装の範囲
 
 - 静的HTML、ページ固有のメタデータ、canonical、OGP、パンくず・構造化データ、sitemap、robots。

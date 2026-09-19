@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Header, Footer } from "@/components/site-shell";
+import { LocaleDocument } from "@/components/locale-document";
 import { indexable, site } from "@/lib/site";
 import "./globals.css";
 
@@ -20,6 +21,7 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body>
+        <LocaleDocument />
         <a className="skip-link" href="#main">
           本文へスキップ
         </a>

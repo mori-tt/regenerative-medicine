@@ -3,6 +3,7 @@ import Image from "next/image";
 import { bannerAds } from "@/content/ads";
 import { type Article, categoryFor, isReviewed } from "@/content/articles";
 import { absolute } from "@/lib/site";
+import { publication } from "@/lib/site-config";
 import { CellArt, Icon } from "./visuals";
 
 export function JsonLd({ data }: { data: unknown }) {
@@ -71,7 +72,7 @@ export function ArticleCard({
       </Link>
       <div className="article-card-body">
         <div className="article-meta">
-          <span>{isReviewed(article) ? "医師監修済み" : "監修前サンプル"}</span>
+          <span>{isReviewed(article) ? "医師監修済み" : publication.showPreparationNotices ? "監修前サンプル" : "編集部記事"}</span>
           <span>約{article.readingMinutes}分で読める</span>
         </div>
         <h3>

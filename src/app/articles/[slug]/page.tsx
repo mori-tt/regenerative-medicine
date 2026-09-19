@@ -3,6 +3,8 @@ import { notFound } from "next/navigation";
 import { articles, categoryFor, isReviewed } from "@/content/articles";
 import { ArticleCard, AdSlot, Breadcrumbs, JsonLd } from "@/components/content";
 import { CellArt } from "@/components/visuals";
+import { ReviewerProfile } from "@/components/reviewer-profile";
+import { publication } from "@/lib/site-config";
 import { absolute, pageMetadata, site } from "@/lib/site";
 export const dynamicParams = false;
 export function generateStaticParams() {
@@ -66,7 +68,7 @@ export default async function ArticlePage({
           }}
         />
       )}
-      {!reviewed && (
+      {!reviewed && publication.showPreparationNotices && (
         <div className="draft-notice">
           この記事は医師監修前の編集部原稿です。一般的な情報整理を目的としており、個別の診断・治療の根拠や推奨を示すものではありません。正式公開前に医学的内容、出典、更新日を確認します。
         </div>
@@ -137,9 +139,7 @@ export default async function ArticlePage({
                 <p>監修日：{article.reviewer.reviewedAt}</p>
               </>
             ) : (
-              <p>
-                監修医師は現在調整中です。氏名・所属・専門分野・監修日を確認したうえで掲載します。
-              </p>
+              <><p>この記事の医学的内容は、記事ごとの監修記録が確定するまで監修済みとは表示しません。</p><ReviewerProfile compact /></>
             )}
             <Link href="/supervision/">監修の方針を読む →</Link>
           </section>

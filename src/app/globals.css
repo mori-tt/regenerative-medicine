@@ -938,6 +938,29 @@ svg {
   margin-top: 13px;
   text-decoration: underline;
 }
+.reviewer-profile {
+  display: grid;
+  grid-template-columns: minmax(180px, 260px) 1fr;
+  gap: 28px;
+  margin-block: 28px;
+  padding: 26px;
+  background: #f3f5ef;
+  border: 1px solid var(--line);
+}
+.reviewer-profile-photo img { display: block; width: 100%; height: auto; aspect-ratio: 767 / 651; object-fit: cover; }
+.reviewer-profile-copy h2 { font-family: var(--serif); font-size: 26px; margin-top: 7px; }
+.reviewer-title { color: var(--green); font-weight: 600; margin-top: 3px; }
+.reviewer-profile-copy > p { margin-top: 12px; }
+.reviewer-profile-copy h3 { font-size: 14px; margin-top: 20px; }
+.reviewer-profile-copy ul { margin: 7px 0 0; padding-left: 20px; font-size: 12px; }
+.reviewer-career { columns: 2; }
+.reviewer-status { color: var(--muted); font-size: 12px; }
+.reviewer-credit { display: block; margin-top: 20px; color: var(--muted); font-size: 10px; }
+.reviewer-credit a { margin-top: 0; }
+.reviewer-profile.compact { grid-template-columns: 110px 1fr; gap: 18px; margin: 20px 0 0; padding: 15px; }
+.reviewer-profile.compact .reviewer-profile-copy h2 { font-size: 19px; }
+.reviewer-profile.compact .reviewer-profile-copy h3 { margin-top: 13px; }
+.reviewer-profile.compact .reviewer-profile-photo img { aspect-ratio: 1; }
 .toc {
   border-block: 1px solid var(--line);
   padding: 22px 0;
@@ -1161,6 +1184,13 @@ svg {
   .container {
     width: calc(100% - 36px);
   }
+  .reviewer-profile,
+  .reviewer-profile.compact {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .reviewer-profile-photo { max-width: 260px; }
+  .reviewer-career { columns: 1; }
   .topline .container {
     justify-content: center;
     font-size: 9px;
