@@ -4,7 +4,6 @@ import { notFound } from "next/navigation";
 import { articles, categoryFor, isReviewed, isVisibleArticle, visibleArticles } from "@/content/articles";
 import { ArticleCard, AdSlot, Breadcrumbs, JsonLd } from "@/components/content";
 import { CellArt } from "@/components/visuals";
-import { ReviewerProfile } from "@/components/reviewer-profile";
 import { publicAsset } from "@/lib/site";
 import { publication } from "@/lib/site-config";
 import { absolute, pageMetadata, site } from "@/lib/site";
@@ -138,9 +137,9 @@ export default async function ArticlePage({
               資料の内容は更新されることがあります。詳細は発表元の情報をご確認ください。
             </p>
           </section>
-          <section className="reviewer-box">
-            <h2>{reviewed ? "この記事の監修医師" : "医師監修について"}</h2>
-            {reviewed && article.reviewer ? (
+          {reviewed && article.reviewer ? (
+            <section className="reviewer-box">
+              <h2>この記事の監修医師</h2>
               <>
                 <a href={article.reviewer.profileUrl}>
                   {article.reviewer.name}
@@ -150,12 +149,11 @@ export default async function ArticlePage({
                   {article.reviewer.affiliation}
                 </p>
                 <p>監修日：{article.reviewer.reviewedAt}</p>
+                {article.reviewer.scope && <p>確認範囲：{article.reviewer.scope}</p>}
               </>
-            ) : (
-              <><p>この記事の医学的内容は、記事ごとの監修記録が確定するまで監修済みとは表示しません。</p><ReviewerProfile compact /></>
-            )}
-            <Link href="/supervision/">監修の方針を読む →</Link>
-          </section>
+              <Link href="/supervision/">監修の方針を読む →</Link>
+            </section>
+          ) : null}
           <p className="disclaimer">
             この記事は一般的な情報提供を目的としています。個別の診断や治療については医師にご相談ください。
           </p>

@@ -1,4 +1,5 @@
 import { articleImageFor } from "./article-images";
+import { medicalReviewer } from "@/lib/site-config";
 
 export const categories = [
   {
@@ -44,6 +45,8 @@ export type Reviewer = {
   affiliation: string;
   profileUrl: string;
   reviewedAt: string;
+  /** 記事ごとの確認範囲（監修記録）。 */
+  scope?: string;
 };
 export type Article = {
   slug: string;
@@ -69,6 +72,15 @@ export type Article = {
    * 未指定は公開済み扱い。
    */
   publishAt?: string;
+  /**
+   * 監修チェック。設定すると監修済み表示・構造化データ・サイトマップの対象になる。
+   * reviewedAt: 確認日 (YYYY-MM-DD)、scope: 確認範囲の記録。
+   * 監修者が未設定の記事は医師表示なし。
+   */
+  review?: {
+    reviewedAt: string;
+    scope: string;
+  };
 };
 const cira = {
   title: "京都大学iPS細胞研究所 CiRA：iPS細胞とは？",
@@ -8624,9 +8636,18 @@ export const articles: Article[] = rawArticles.map((article, index) => ({
   ...article,
   image: articleImageFor(article.category, index).src,
   imageAlt: articleImageFor(article.category, index).alt,
-  status: "draft",
-  reviewer: undefined,
-  publishedAt: undefined,
+  status: article.review ? "published" : "draft",
+  reviewer: article.review
+    ? {
+        name: medicalReviewer.name,
+        credentials: medicalReviewer.credentials.join(" / "),
+        affiliation: medicalReviewer.affiliation,
+        profileUrl: medicalReviewer.profileUrl,
+        reviewedAt: article.review.reviewedAt,
+        scope: article.review.scope,
+      }
+    : undefined,
+  publishedAt: article.review ? article.review.reviewedAt : undefined,
   readingMinutes: Math.max(article.readingMinutes, 5),
   sections: [
     ...article.sections,

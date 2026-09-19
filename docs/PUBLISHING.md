@@ -42,6 +42,27 @@ NEXT_PUBLIC_PREVIEW_DATE=2026-10-30 npm run build && npm run preview
 | 2026-11-21 | nobel-prize-guide | ノーベル生理学・医学賞の読み方 | research |
 | 2026-11-28 | science-events | 科学イベントの探し方：公開講座と見学会 | research |
 
+## 監修フロー（千原先生）
+
+- 記事に監修が付くのは、`rawArticles` の該当記事に `review` を書いたときだけ
+- 監修なしの記事ページには医師の氏名・写真・プロフィールを一切表示しない（方針）
+
+```ts
+{
+  slug: "example",
+  // ...
+  review: {
+    reviewedAt: "2026-10-01", // 確認日
+    scope: "医学的表現と出典の整合を確認", // 確認範囲の記録
+  },
+}
+```
+
+- `review` を書くと自動で以下が切り替わる：記事ページの監修医師ボックス（氏名・資格・所属・監修日・確認範囲）＋監修済みラベル、`Article` 構造化データ、サイトマップ掲載、検索公開（本番のみ）
+- 監修者情報（氏名・資格・所属・URL）は `src/content/site-config.json` の `medicalReviewer` が正本。記事側に医師情報を直書きしない
+- 英中ページの確認範囲は日文のまま表示される。必要なら該当記事の `scope` に対応する訳を `article-bodies-*.ts` 側で持つ（現状は未訳運用）
+- 利益相反・掲載許諾・修正履歴は `docs/LEGAL-REVIEW.md` の監査メモに記録する
+
 ## 新規追加の手順
 
 1. `rawArticles` に日文を追加（`kind: "column"` と `publishAt` はコラム・予約の場合のみ）

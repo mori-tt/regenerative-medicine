@@ -15,7 +15,6 @@ import { localizedArticle, localizedCategoryName, type SiteLocale } from "@/cont
 import type { ArticleBodyLocale } from "@/content/article-bodies-research";
 import { AdSlot, Breadcrumbs, JsonLd } from "@/components/content";
 import { CellArt, Icon } from "@/components/visuals";
-import { ReviewerProfile } from "@/components/reviewer-profile";
 import { absolute, publicAsset, site } from "@/lib/site";
 import { publication } from "@/lib/site-config";
 
@@ -309,9 +308,9 @@ export function LocalizedArticle({ locale, source }: { locale: SiteLocale; sourc
               </ol>
               <p>{copy.referencesNote}</p>
             </section>
-            <section className="reviewer-box">
-              <h2>{reviewed ? copy.reviewerDone : copy.reviewerPending}</h2>
-              {reviewed && source?.reviewer ? (
+            {reviewed && source?.reviewer ? (
+              <section className="reviewer-box">
+                <h2>{copy.reviewerDone}</h2>
                 <>
                   <a href={source.reviewer.profileUrl}>{source.reviewer.name}</a>
                   <p>
@@ -320,15 +319,15 @@ export function LocalizedArticle({ locale, source }: { locale: SiteLocale; sourc
                   <p>
                     {en ? "Reviewed" : "审核日期"}：{source.reviewer.reviewedAt}
                   </p>
+                  {source.reviewer.scope && (
+                    <p>
+                      {en ? "Review scope" : "审核范围"}：{source.reviewer.scope}
+                    </p>
+                  )}
                 </>
-              ) : (
-                <>
-                  <p>{copy.reviewerPendingBody}</p>
-                  <ReviewerProfile compact locale={locale} />
-                </>
-              )}
-              <Link href={`/${locale}/supervision/`}>{copy.reviewerPolicy} →</Link>
-            </section>
+                <Link href={`/${locale}/supervision/`}>{copy.reviewerPolicy} →</Link>
+              </section>
+            ) : null}
             <p className="disclaimer">{copy.disclaimer}</p>
           </article>
           <aside className="article-sidebar">
