@@ -8,6 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     "/",
     "/articles/",
+    "/jsrm/",
     ...categories.map((c) => `/categories/${c.slug}/`),
     ...infoPages.map((p) => `/${p.slug}/`),
   ]

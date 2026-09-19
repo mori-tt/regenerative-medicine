@@ -154,6 +154,17 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <section className="society-promo-section">
+        <div className="container society-promo">
+          <div className="society-promo-mark" aria-hidden="true"><span>J S R M</span><small>OFFICIAL SOURCE GUIDE</small></div>
+          <div>
+            <span className="eyebrow">SPECIAL FEATURE</span>
+            <h2>日本再生医療学会を知る。</h2>
+            <p>再生医療を支える学会の役割、認定制度、制度情報を公式資料から整理しました。千原良友先生の所属学会についても、治療の判断と混同しないように解説します。</p>
+            <Link className="text-link" href="/jsrm/">学会特集を読む <span><Icon name="arrow" size={21} /></span></Link>
+          </div>
+        </div>
+      </section>
       <section className="section container">
         <div className="section-heading">
           <div>
