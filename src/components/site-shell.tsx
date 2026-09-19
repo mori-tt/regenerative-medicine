@@ -63,11 +63,23 @@ export function Footer() {
             </p>
           </div>
           <div className="footer-links">
+            <Link href="/guide/">はじめての方へ</Link>
+            <Link href="/glossary/">用語集</Link>
+            <Link href="/faq/">よくある質問</Link>
+            <Link href="/safety/">安全性の考え方</Link>
+            <Link href="/regulation/">制度と法律</Link>
             <Link href="/about/">運営について</Link>
             <Link href="/editorial-policy/">編集方針</Link>
             <Link href="/supervision/">医師監修について</Link>
             <Link href="/advertising/">広告掲載について</Link>
+            <Link href="/terms/">利用規約</Link>
             <Link href="/privacy/">プライバシーポリシー</Link>
+            <Link href="/disclaimer/">利用上の注意</Link>
+            <Link href="/corrections/">訂正・更新の方針</Link>
+            <Link href="/citations/">引用・転載</Link>
+            <Link href="/accessibility/">アクセシビリティ</Link>
+            <Link href="/site-guide/">サイトマップ</Link>
+            <Link href="/updates/">更新情報</Link>
             <Link href="/contact/">お問い合わせ</Link>
           </div>
         </div>
