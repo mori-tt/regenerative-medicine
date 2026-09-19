@@ -9,4 +9,7 @@ export const publication = {
   showPreparationNotices: envBoolean(process.env.NEXT_PUBLIC_SHOW_PREPARATION_NOTICES, rawConfig.publication.showPreparationNotices),
 };
 
-export const medicalReviewer = rawConfig.medicalReviewer;
+export const medicalReviewer = {
+  ...rawConfig.medicalReviewer,
+  enabled: envBoolean(process.env.NEXT_PUBLIC_MEDICAL_REVIEWER_ENABLED, rawConfig.medicalReviewer.enabled),
+};

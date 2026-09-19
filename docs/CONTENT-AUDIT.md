@@ -47,3 +47,5 @@
 ## 公開切替の条件
 
 `NEXT_PUBLIC_PUBLICATION_MODE=production` と `NEXT_PUBLIC_SITE_INDEXABLE=true` は、上記の許諾、運営者情報、監修記録、制度確認、法務確認が完了してから設定する。設定値を変更しただけでは、医学的な確認や法的適合性は成立しない。
+
+手作業で必要な確認の一覧は [`MANUAL-LEGAL-CHECKLIST.md`](./MANUAL-LEGAL-CHECKLIST.md) にまとめています。

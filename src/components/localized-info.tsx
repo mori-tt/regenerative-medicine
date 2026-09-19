@@ -6,7 +6,7 @@ import { ReviewerProfile } from "./reviewer-profile";
 import { SourceDirectory } from "./source-directory";
 import { ContactForm } from "./contact-form";
 import { site } from "@/lib/site";
-import { publication } from "@/lib/site-config";
+import { medicalReviewer, publication } from "@/lib/site-config";
 
 export type InfoSlug = keyof (typeof infoLocales)["en"];
 export function infoTitleFor(locale: SiteLocale, slug: InfoSlug) {
@@ -50,8 +50,8 @@ export function LocalizedInfo({ locale, slug }: { locale: SiteLocale; slug: Info
         </div>
         <div className="prose">
           {slug === "sources" && <SourceDirectory locale={locale} />}
-          {slug === "supervision" && <ReviewerProfile locale={locale} />}
-          {slug !== "supervision" && slug !== "sources" && content.sections.map((section) => (
+          {slug === "supervision" && medicalReviewer.enabled && <ReviewerProfile locale={locale} />}
+          {slug !== "sources" && (slug !== "supervision" || !medicalReviewer.enabled) && content.sections.map((section) => (
             <section key={section.title}>
               <h2>{section.title}</h2>
               {section.paragraphs.map((paragraph) => (
@@ -64,6 +64,8 @@ export function LocalizedInfo({ locale, slug }: { locale: SiteLocale; slug: Info
               <h2 id="operator-info-title">{copy.operatorTitle}</h2>
               {site.operatorName && <p><strong>{copy.operatorName}：</strong>{site.operatorName}</p>}
               {site.operatorAddress && <p><strong>{copy.operatorAddress}：</strong>{site.operatorAddress}</p>}
+              {site.editorName && <p><strong>{en ? "Editor" : "编辑者"}：</strong>{site.editorName}</p>}
+              {site.editorAddress && <p><strong>{en ? "Editor address" : "编辑者地址"}：</strong>{site.editorAddress}</p>}
               {site.contactEmail && <p><strong>{copy.operatorContact}：</strong><a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a></p>}
               {(!site.operatorName || !site.operatorAddress || !site.contactEmail) && publication.showPreparationNotices && (
                 <p className="form-result error">{copy.operatorMissing}</p>

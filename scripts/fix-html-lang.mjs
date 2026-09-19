@@ -22,11 +22,12 @@ let fixed = 0;
 for (const file of files) {
   const rel = relative(out, file).replace(/\\/g, "/");
   const want =
-    rel === "en.html" || rel.startsWith("en/") ? "en" : rel === "zh.html" || rel.startsWith("zh/") ? "zh-CN" : null;
-  if (!want) continue;
+    rel === "en.html" || rel.startsWith("en/") ? "en" : rel === "zh.html" || rel.startsWith("zh/") ? "zh-CN" : "ja";
   const html = await readFile(file, "utf8");
   if (html.includes(`<html lang="${want}"`)) continue;
-  const next = html.replace(/<html lang="[^"]*"/, `<html lang="${want}"`);
+  const next = html.includes("<html lang=")
+    ? html.replace(/<html lang="[^"]*"/, `<html lang="${want}"`)
+    : html.replace("<html", `<html lang="${want}"`);
   if (next !== html) {
     await writeFile(file, next);
     fixed++;

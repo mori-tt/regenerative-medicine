@@ -1,10 +1,10 @@
-# 法務・医療公開前チェック（2026-09-19）
+# 法務・医療公開前チェック（2026-09-20）
 
 この文書は弁護士による法的意見書ではありません。正式公開前に、運営者・掲載許諾者・医療広告に詳しい専門家が確認するための監査メモです。
 
 ## 現時点の判定
 
-現在の設定は `publication.mode=preview`、`showPreparationNotices=false` です。記事は一般情報・編集部記事として表示され、`reviewedAt` が空欄のため医師監修済み記事としての表示・Article構造化データ・記事サイトマップ掲載には進みません。検索公開（`NEXT_PUBLIC_SITE_INDEXABLE=true`）への切替条件は、監修・許諾・運営者情報・法務確認の完了です。
+現在の設定は `publication.mode=preview`、`showPreparationNotices=false`、`medicalReviewer.enabled=false` です。記事は一般情報・編集部記事として表示されます。本番モードでは、監修記録のない記事を一覧・検索・カテゴリ・詳細ページ・サイトマップから自動的に除外します。検索公開（`NEXT_PUBLIC_SITE_INDEXABLE=true`）への切替条件は、監修・許諾・運営者情報・法務確認の完了です。
 
 本文を確認した範囲では、個別治療の効果・安全性を断定する表現、患者体験談、ビフォーアフター、他院との比較優良表現、治療予約への誘導は確認できませんでした。出典を示し、研究・承認・自由診療を分け、個別判断は医師へ相談する構成です。
 
@@ -21,5 +21,7 @@
 ## 公開切替の条件
 
 `NEXT_PUBLIC_PUBLICATION_MODE=production` と `NEXT_PUBLIC_SITE_INDEXABLE=true` への変更は、上記の監修・許諾・運営者情報・法務確認が完了した後に行う。実際の確認がない状態で、監修済み・公開済みとして表示することは禁止する。
+
+手作業で必要な確認は [`MANUAL-LEGAL-CHECKLIST.md`](./MANUAL-LEGAL-CHECKLIST.md) に集約しています。
 
 詳細な内容監査と公開後の定期運用は [`docs/CONTENT-AUDIT.md`](./CONTENT-AUDIT.md) に記載しています。

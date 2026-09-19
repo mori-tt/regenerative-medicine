@@ -1,5 +1,5 @@
 import { articleImageFor } from "./article-images";
-import { medicalReviewer } from "@/lib/site-config";
+import { medicalReviewer, publication } from "@/lib/site-config";
 
 export const categories = [
   {
@@ -1876,14 +1876,14 @@ const rawArticles: Article[] = [
         id: "flow-self",
         title: "自家の場合の流れ",
         paragraphs: [
-          "組織の採取、培養・加工、検査、投与と進み、製造期間中は待機が必要です。自分の細胞である安心感がある一方、採取の負担や製造のばらつきが課題です。",
+          "組織の採取、培養・加工、検査、投与と進み、製造期間中は待機が必要です。自分の細胞を使う場合でも安全性が保証されるわけではなく、採取の負担や製造のばらつきが課題です。",
         ],
       },
       {
         id: "flow-donor",
         title: "他家の場合の流れ",
         paragraphs: [
-          "事前に用意・検査された細胞を用いるため、適応が合えば速やかに進められます。拒絶対策や感染症検査の体制、長期追跡への協力が前提になります。",
+          "事前に用意・検査された細胞を用いるため、条件が合えば採取を待たずに進められる場合があります。拒絶対策や感染症検査の体制、長期追跡への協力が前提になります。",
         ],
       },
       {
@@ -5596,7 +5596,7 @@ const rawArticles: Article[] = [
         id: "what",
         title: "制度の概要",
         paragraphs: [
-          "1年間の医療費が一定額を超えた場合に所得控除を受けられます。自由診療でも治療目的のものは対象になりえます。",
+          "医師等による診療・治療の対価など、法令上の要件を満たす医療費は、一定の計算により所得控除の対象になり得ます。自由診療でも一律に対象・対象外とはいえないため、治療内容と費用の性質を確認し、最新の国税庁情報や税務署で確認してください。",
         ],
       },
       {
@@ -8682,7 +8682,11 @@ export function publishBaseDate(now: Date = new Date()): string {
 /** publishAt が未来日の間は非公開（ページ生成・一覧・検索・関連の対象外）。 */
 export function isVisibleArticle(article: Article, baseDate?: string): boolean {
   const today = baseDate ?? publishBaseDate();
-  return !article.publishAt || article.publishAt <= today;
+  if (article.publishAt && article.publishAt > today) return false;
+  // Preview builds are useful for editorial review. Production builds expose
+  // only articles with a recorded review and publication state.
+  if (publication.mode === "production" && !isReviewed(article)) return false;
+  return true;
 }
 
 export function visibleArticles(list: Article[], baseDate?: string): Article[] {

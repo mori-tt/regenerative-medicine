@@ -24,22 +24,24 @@ for (const path of pages) {
   const html = await readFile(path, "utf8");
   const label = relative(root, path);
   const wantLang = label === "en.html" || label.startsWith("en/") ? "en" : label === "zh.html" || label.startsWith("zh/") ? "zh-CN" : "ja";
+  const is404 =
+    label === "404.html" ||
+    label.startsWith("404/") ||
+    label.startsWith("_not-found/") ||
+    label.includes("/__unpublished__/");
   assert.match(
     html,
     new RegExp(`<html[^>]*lang="${wantLang}"`),
     `${label}: language must be ${wantLang}`,
   );
-  assert.equal(
-    (html.match(/<h1(?:\s|>)/g) || []).length,
-    1,
-    `${label}: exactly one h1 required`,
-  );
+  if (!is404)
+    assert.equal(
+      (html.match(/<h1(?:\s|>)/g) || []).length,
+      1,
+      `${label}: exactly one h1 required`,
+    );
   assert.match(html, /<title>[^<]+<\/title>/, `${label}: title missing`);
   assert.ok(!html.includes("undefined |"), `${label}: metadata contains undefined title`);
-  const is404 =
-    label === "404.html" ||
-    label.startsWith("404/") ||
-    label.startsWith("_not-found/");
   if (!is404) {
     assert.match(
       html,

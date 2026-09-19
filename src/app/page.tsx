@@ -11,6 +11,8 @@ export const metadata = pageMetadata(
   "/",
 );
 export default function Home() {
+  const featuredArticle = visibleArticles(articles)[0];
+  const featuredHref = featuredArticle ? `/articles/${featuredArticle.slug}/` : "/articles/";
   return (
     <>
       <JsonLd
@@ -43,7 +45,7 @@ export default function Home() {
           </p>
           <Link
             className="button primary"
-            href="/articles/what-is-regenerative-medicine/"
+            href={featuredHref}
           >
             はじめての再生医療 <Icon name="arrow" size={20} />
           </Link>
@@ -71,7 +73,7 @@ export default function Home() {
           <div>
             <Icon name="check" />
             <span>
-              医師監修を前提とした編集体制
+              医師の確認を組み込む編集体制
               <small>記事ごとに出典と確認範囲を整理しています</small>
             </span>
           </div>
@@ -144,7 +146,7 @@ export default function Home() {
             </p>
             <Link
               className="text-link"
-              href="/articles/what-is-regenerative-medicine/"
+              href={featuredHref}
             >
               再生医療の基礎を読む{" "}
               <span>
@@ -160,7 +162,7 @@ export default function Home() {
           <div>
             <span className="eyebrow">SPECIAL FEATURE</span>
             <h2>日本再生医療学会を知る。</h2>
-            <p>再生医療を支える学会の役割、認定制度、制度情報を公式資料から整理しました。千原良友先生の所属学会についても、治療の判断と混同しないように解説します。</p>
+            <p>再生医療を支える学会の役割、認定制度、制度情報を公式資料から整理しました。学会の情報と、個別の治療の判断を混同しないように解説します。</p>
             <Link className="text-link" href="/jsrm/">学会特集を読む <span><Icon name="arrow" size={21} /></span></Link>
           </div>
         </div>
@@ -216,7 +218,7 @@ export default function Home() {
           </div>
           <Link
             className="button outline"
-            href="/articles/questions-before-treatment/"
+            href={featuredHref}
           >
             確認したいことを読む <Icon name="arrow" size={19} />
           </Link>

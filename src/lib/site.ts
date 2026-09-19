@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { publication } from "./site-config";
+import rawConfig from "@/content/site-config.json";
 
 const configuredUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://example.com";
 const parsedUrl = new URL(configuredUrl);
@@ -30,7 +31,21 @@ export const site = {
   contactEmail: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "",
   operatorName: process.env.NEXT_PUBLIC_OPERATOR_NAME || "",
   operatorAddress: process.env.NEXT_PUBLIC_OPERATOR_ADDRESS || "",
+  editorName: process.env.NEXT_PUBLIC_EDITOR_NAME || rawConfig.editor.name,
+  editorAddress: process.env.NEXT_PUBLIC_EDITOR_ADDRESS || rawConfig.editor.address,
 };
+if (publication.mode === "production" && indexable) {
+  const missing = [
+    !site.operatorName && "NEXT_PUBLIC_OPERATOR_NAME",
+    !site.operatorAddress && "NEXT_PUBLIC_OPERATOR_ADDRESS",
+    !site.contactEmail && "NEXT_PUBLIC_CONTACT_EMAIL",
+  ].filter(Boolean);
+  if (missing.length > 0) {
+    throw new Error(
+      `正式公開には運営者情報と連絡先が必要です: ${missing.join(", ")}`,
+    );
+  }
+}
 export function publicAsset(path: string) {
   const normalized = path.startsWith("/") ? path : `/${path}`;
   return `${basePath}${normalized}` || "/";

@@ -1,7 +1,11 @@
 {
   "publication": { "mode": "preview", "showPreviewBanner": false, "showPreparationNotices": false },
+  "editor": {
+    "name": "森 崇裕 Takahiro Mori",
+    "address": "〒105-0022 東京都港区海岸一丁目１−１"
+  },
   "medicalReviewer": {
-    "enabled": true,
+    "enabled": false,
     "name": "千原 良友",
     "honorificName": "千原良友先生",
     "title": "ノリス美容クリニック 院長",

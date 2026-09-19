@@ -9,7 +9,8 @@ import { publication } from "@/lib/site-config";
 import { absolute, pageMetadata, site } from "@/lib/site";
 export const dynamicParams = false;
 export function generateStaticParams() {
-  return visibleArticles(articles).map((a) => ({ slug: a.slug }));
+  const params = visibleArticles(articles).map((a) => ({ slug: a.slug }));
+  return params.length > 0 ? params : [{ slug: "__unpublished__" }];
 }
 export async function generateMetadata({
   params,
@@ -83,7 +84,7 @@ export default async function ArticlePage({
             <h1>{article.title}</h1>
             <p>{article.description}</p>
             <div className="byline">
-              <span>編集：{site.name}編集部</span>
+              <span>編集：{site.editorName || `${site.name}編集部`}</span>
               <span>位置づけ：一般情報</span>
               <time dateTime={article.updatedAt}>
                 更新：{article.updatedAt.replaceAll("-", ".")}

@@ -4,7 +4,7 @@ import { Breadcrumbs } from "@/components/content";
 import { infoPages } from "@/content/pages";
 import { pageMetadata, site } from "@/lib/site";
 import { ReviewerProfile } from "@/components/reviewer-profile";
-import { publication } from "@/lib/site-config";
+import { medicalReviewer, publication } from "@/lib/site-config";
 import { ContactForm } from "@/components/contact-form";
 import { SourceDirectory } from "@/components/source-directory";
 export const dynamicParams = false;
@@ -39,8 +39,8 @@ export default async function InfoPage({
       </div>
       <div className="prose">
         {page === "sources" && <SourceDirectory />}
-        {page === "supervision" && <ReviewerProfile />}
-        {page !== "supervision" && page !== "sources" && info.sections.map((s) => (
+        {page === "supervision" && medicalReviewer.enabled && <ReviewerProfile />}
+        {page !== "sources" && (page !== "supervision" || !medicalReviewer.enabled) && info.sections.map((s) => (
           <section key={s.title}>
             <h2>{s.title}</h2>
             {s.paragraphs.map((p) => (
@@ -53,6 +53,8 @@ export default async function InfoPage({
             <h2 id="operator-info-title">運営者情報</h2>
             {site.operatorName && <p><strong>運営者：</strong>{site.operatorName}</p>}
             {site.operatorAddress && <p><strong>所在地：</strong>{site.operatorAddress}</p>}
+            {site.editorName && <p><strong>編集者：</strong>{site.editorName}</p>}
+            {site.editorAddress && <p><strong>編集者住所：</strong>{site.editorAddress}</p>}
             {site.contactEmail && <p><strong>連絡先：</strong><a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a></p>}
             {(!site.operatorName || !site.operatorAddress || !site.contactEmail) && publication.showPreparationNotices && (
               <p className="form-result error">運営者名・所在地・連絡先は、実値を環境変数に設定してから正式公開してください。</p>
