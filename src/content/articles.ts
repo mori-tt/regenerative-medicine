@@ -61,6 +61,14 @@ export type Article = {
   points: string[];
   sections: { id: string; title: string; paragraphs: string[] }[];
   references: { title: string; url: string }[];
+  /** "core" が大事なコンテンツ、"column" が通常コラム。未指定は "core"。 */
+  kind?: "core" | "column";
+  /**
+   * 公開予定日 (YYYY-MM-DD)。未来日の間はJSONに保存されていても、
+   * 一覧・検索・関連・サイトマップ・ページ生成の対象外になる。
+   * 未指定は公開済み扱い。
+   */
+  publishAt?: string;
 };
 const cira = {
   title: "京都大学iPS細胞研究所 CiRA：iPS細胞とは？",
@@ -8116,6 +8124,426 @@ const rawArticles: Article[] = [
     ],
     references: [pmda, mhlwAd],
   },
+  {
+    slug: "thermometer-guide",
+    title: "体温計の使い方：脇・耳・おでこの違い",
+    description:
+      "部位による違いと、正しく測るコツを紹介するコラムです。",
+    category: "basics",
+    updatedAt: "2026-09-26",
+    readingMinutes: 3,
+    status: "draft",
+    illustration: "cells",
+    kind: "column",
+    publishAt: "2026-09-26",
+    points: [
+      "測る部位で値が異なります。",
+      "測る前の安静が大切です。",
+      "記録が受診に役立ちます。",
+    ],
+    sections: [
+      {
+        id: "sites",
+        title: "部位による違い",
+        paragraphs: [
+          "脇・耳・おでこでは測る仕組みが異なり、同じタイミングでも値がずれることがあります。平熱は部位ごとに把握しておきましょう。",
+        ],
+      },
+      {
+        id: "tips",
+        title: "正しく測るコツ",
+        paragraphs: [
+          "運動後や入浴後、飲食の直後は避け、数分休んでから測ります。電池切れや測り方のずれが疑わしいときは、別の方法でも確かめましょう。",
+        ],
+      },
+      {
+        id: "record",
+        title: "記録の活かし方",
+        paragraphs: [
+          "朝晩の体温と症状をメモすると、受診時の判断材料になります。治療中の発熱は提供機関の連絡先にも共有しましょう。",
+        ],
+      },
+    ],
+    references: [mhlw],
+  },
+  {
+    slug: "blood-donation-basics",
+    title: "献血の流れと条件：初めての方へ",
+    description:
+      "献血の種類・条件・当日の流れをまとめたコラムです。",
+    category: "basics",
+    updatedAt: "2026-10-03",
+    readingMinutes: 3,
+    status: "draft",
+    illustration: "cells",
+    kind: "column",
+    publishAt: "2026-10-03",
+    points: [
+      "種類によって条件と間隔が違います。",
+      "当日の問診と検査があります。",
+      "終了後の休憩と水分が大切です。",
+    ],
+    sections: [
+      {
+        id: "types",
+        title: "献血の種類",
+        paragraphs: [
+          "全血献血と成分献血があり、年齢・体重・ヘモグロビン値などの条件と、次回までの間隔が定められています。",
+        ],
+      },
+      {
+        id: "day",
+        title: "当日の流れ",
+        paragraphs: [
+          "受付、問診、血圧や血液の事前検査を経て採血します。体調がすぐれない日は無理せず、次回にしましょう。",
+        ],
+      },
+      {
+        id: "after",
+        title: "終わった後の注意",
+        paragraphs: [
+          "しばらく休憩し、水分を取ります。当日の激しい運動や飲酒は避け、気分が悪くなったら係員に伝えましょう。",
+        ],
+      },
+    ],
+    references: [mhlw],
+  },
+  {
+    slug: "microscope-world",
+    title: "顕微鏡でのぞく世界：細胞観察入門",
+    description:
+      "顕微鏡の種類と、細胞の見え方の基本を紹介するコラムです。",
+    category: "basics",
+    updatedAt: "2026-10-10",
+    readingMinutes: 3,
+    status: "draft",
+    illustration: "cells",
+    kind: "column",
+    publishAt: "2026-10-10",
+    points: [
+      "光学と電子で見えるものが違います。",
+      "染色で構造が見やすくなります。",
+      "科学館などでも体験できます。",
+    ],
+    sections: [
+      {
+        id: "types",
+        title: "顕微鏡の種類",
+        paragraphs: [
+          "光学顕微鏡は生きた細胞の観察に向き、電子顕微鏡は細部の立体構造を捉えます。用途で使い分けられます。",
+        ],
+      },
+      {
+        id: "stain",
+        title: "染色の工夫",
+        paragraphs: [
+          "透明な細胞はそのままでは見えにくいため、色素で染め分けて核や骨格を見やすくします。蛍光を使う方法もあります。",
+        ],
+      },
+      {
+        id: "places",
+        title: "見られる場所",
+        paragraphs: [
+          "科学館や博物館の展示、公開講座などで顕微鏡体験ができることがあります。出かける前に開催情報を確認しましょう。",
+        ],
+      },
+    ],
+    references: [cira],
+  },
+  {
+    slug: "ips-nobel-story",
+    title: "iPS細胞とノーベル賞：2012年の出来事",
+    description:
+      "山中伸弥教授の受賞の背景と、その後の歩みをたどるコラムです。",
+    category: "stem-cells",
+    updatedAt: "2026-10-17",
+    readingMinutes: 4,
+    status: "draft",
+    illustration: "network",
+    kind: "column",
+    publishAt: "2026-10-17",
+    points: [
+      "2012年に生理学・医学賞を受賞しました。",
+      "受賞は研究の出発点の一つです。",
+      "臨床応用は段階的に進んでいます。",
+    ],
+    sections: [
+      {
+        id: "prize",
+        title: "受賞の内容",
+        paragraphs: [
+          "山中伸弥教授は、成熟した細胞が多能性を持つ状態へ戻りうることの発見により、ガードン博士とともに2012年のノーベル生理学・医学賞を受賞しました。",
+        ],
+      },
+      {
+        id: "after",
+        title: "受賞後の歩み",
+        paragraphs: [
+          "受賞を機に研究支援やCiRAの体制が整い、臨床研究やiPSストック、創薬への応用が広がりました。一方、治療としての確立には長い検証が続いています。",
+        ],
+      },
+      {
+        id: "view",
+        title: "賞の話題との付き合い方",
+        paragraphs: [
+          "受賞は研究の重要性を示しますが、個別の治療の効果を保証しません。対象疾患ごとの進み具合を個別に見ましょう。",
+        ],
+      },
+    ],
+    references: [cira, amed],
+  },
+  {
+    slug: "organoid-ethics",
+    title: "オルガノイドと意識の議論：脳モデルの倫理",
+    description:
+      "ミニ臓器をめぐる倫理的な問いを紹介するコラムです。",
+    category: "stem-cells",
+    updatedAt: "2026-10-24",
+    readingMinutes: 3,
+    status: "draft",
+    illustration: "network",
+    kind: "column",
+    publishAt: "2026-10-24",
+    points: [
+      "脳オルガノイドの扱いが議論されています。",
+      "意識の有無は確かめようがありません。",
+      "指針作りが国際的に進んでいます。",
+    ],
+    sections: [
+      {
+        id: "question",
+        title: "問われていること",
+        paragraphs: [
+          "脳の組織を模したオルガノイドが高度化する中で、どこまでを物として扱ってよいか、意識の可能性をどう考えるかが議論されています。",
+        ],
+      },
+      {
+        id: "rules",
+        title: "指針の動き",
+        paragraphs: [
+          "各国の学会や生命倫理の機関が、作製の目的や規模、移植や意識に関する評価の考え方を整理し始めています。研究の進み具合と合わせて見直されます。",
+        ],
+      },
+      {
+        id: "readers",
+        title: "読者としての受け止め",
+        paragraphs: [
+          "「意識があるかもしれない」という話題は関心を集めますが、現状の科学で確かめる手段はありません。話題と検証の段階を分けて受け止めましょう。",
+        ],
+      },
+    ],
+    references: [amed, jsrm],
+  },
+  {
+    slug: "home-culture-myth",
+    title: "自宅で細胞培養はできません：誤解と理由",
+    description:
+      "培養に必要な条件を整理し、安易な試みへの注意をまとめたコラムです。",
+    category: "stem-cells",
+    updatedAt: "2026-10-31",
+    readingMinutes: 3,
+    status: "draft",
+    illustration: "network",
+    kind: "column",
+    publishAt: "2026-10-31",
+    points: [
+      "無菌操作が必須です。",
+      "温度やガスの管理が必要です。",
+      "自家製の細胞使用は危険です。",
+    ],
+    sections: [
+      {
+        id: "sterile",
+        title: "無菌の壁",
+        paragraphs: [
+          "細胞培養では細菌や真菌の混入が命取りで、専用の清浄設備と訓練された操作が必要です。家庭の環境では確保できません。",
+        ],
+      },
+      {
+        id: "control",
+        title: "環境の管理",
+        paragraphs: [
+          "温度や二酸化炭素濃度、培地の交換時期、品質の確認など、多くの条件を記録とともに管理します。見よう見まねの再現はできません。",
+        ],
+      },
+      {
+        id: "danger",
+        title: "安易な試みの危険",
+        paragraphs: [
+          "自作の細胞や培養物を体に戻す行為は感染症などの重大な危険があります。そのような勧誘や商品には関わらないようにしましょう。",
+        ],
+      },
+    ],
+    references: [mhlw, pmda],
+  },
+  {
+    slug: "first-aid-basics",
+    title: "応急手当の基礎：止血と119番",
+    description:
+      "けがや急病の現場でできることをまとめたコラムです。",
+    category: "treatment",
+    updatedAt: "2026-11-07",
+    readingMinutes: 3,
+    status: "draft",
+    illustration: "cross",
+    kind: "column",
+    publishAt: "2026-11-07",
+    points: [
+      "安全の確保が最優先です。",
+      "圧迫止血と119番が基本です。",
+      "講習の受講が備えになります。",
+    ],
+    sections: [
+      {
+        id: "safety",
+        title: "まず安全を確保する",
+        paragraphs: [
+          "交通や火気などの危険を避け、自分が倒れないことが第一です。周囲の人に協力を求め、役割を分担しましょう。",
+        ],
+      },
+      {
+        id: "bleed",
+        title: "止血と通報",
+        paragraphs: [
+          "出血には清潔な布での圧迫止血、意識や呼吸の確認と119番への通報が基本です。指令員の指示に従って対応します。",
+        ],
+      },
+      {
+        id: "learn",
+        title: "学ぶ機会",
+        paragraphs: [
+          "消防署や自治体の救命講習で心肺蘇生やAEDの使い方を学べます。定期的な復習が、いざというときの支えになります。",
+        ],
+      },
+    ],
+    references: [mhlw],
+  },
+  {
+    slug: "medicine-storage",
+    title: "薬の保管方法：期限と置き場所",
+    description:
+      "薬の品質を保つ保管のコツと、残薬の扱いを紹介するコラムです。",
+    category: "treatment",
+    updatedAt: "2026-11-14",
+    readingMinutes: 3,
+    status: "draft",
+    illustration: "cross",
+    kind: "column",
+    publishAt: "2026-11-14",
+    points: [
+      "湿気・光・温度に注意します。",
+      "使用期限を守ります。",
+      "残薬は薬局に相談します。",
+    ],
+    sections: [
+      {
+        id: "keep",
+        title: "保管の基本",
+        paragraphs: [
+          "直射日光や高温多湿を避け、子どもの手の届かない場所に保管します。冷所保存の指示がある薬は冷蔵庫で管理しましょう。",
+        ],
+      },
+      {
+        id: "expiry",
+        title: "期限の考え方",
+        paragraphs: [
+          "開封後の使用期限は剤形で異なり、目薬などは短めです。期限切れや変色・異臭のある薬は使わず、薬局に相談しましょう。",
+        ],
+      },
+      {
+        id: "leftover",
+        title: "残薬の扱い",
+        paragraphs: [
+          "飲み残しはため込まず、受診や薬局で調整してもらいましょう。自己判断での他人への譲渡はしません。",
+        ],
+      },
+    ],
+    references: [pmda],
+  },
+  {
+    slug: "nobel-prize-guide",
+    title: "ノーベル生理学・医学賞の読み方",
+    description:
+      "受賞研究の意味と、報道との付き合い方を紹介するコラムです。",
+    category: "research",
+    updatedAt: "2026-11-21",
+    readingMinutes: 3,
+    status: "draft",
+    illustration: "scope",
+    kind: "column",
+    publishAt: "2026-11-21",
+    points: [
+      "基礎研究の功績が対象です。",
+      "治療の確立とは別の話です。",
+      "受賞理由の原文にあたります。",
+    ],
+    sections: [
+      {
+        id: "prize",
+        title: "賞の対象",
+        paragraphs: [
+          "生理学・医学賞は、病気の仕組みの解明など基礎的な発見に贈られることが多く、発表から年月を経て評価されます。",
+        ],
+      },
+      {
+        id: "news",
+        title: "報道との付き合い方",
+        paragraphs: [
+          "「治療に直結」のような見出しは、研究段階を確認して受け止めます。受賞理由の解説資料や原論文に進むと理解が深まります。",
+        ],
+      },
+      {
+        id: "use",
+        title: "学びへの活かし方",
+        paragraphs: [
+          "受賞をきっかけに、関連する基礎知識の記事を読み返すと、研究の全体像が見えやすくなります。",
+        ],
+      },
+    ],
+    references: [ciraNews, amed],
+  },
+  {
+    slug: "science-events",
+    title: "科学イベントの探し方：公開講座と見学会",
+    description:
+      "研究に触れられる場の種類と探し方をまとめたコラムです。",
+    category: "research",
+    updatedAt: "2026-11-28",
+    readingMinutes: 3,
+    status: "draft",
+    illustration: "scope",
+    kind: "column",
+    publishAt: "2026-11-28",
+    points: [
+      "大学や研究所が公開行事を開いています。",
+      "事前申込が必要な場合があります。",
+      "質問の準備があると学びが深まります。",
+    ],
+    sections: [
+      {
+        id: "types",
+        title: "場の種類",
+        paragraphs: [
+          "公開講座や施設見学会、科学館の企画展、オンライン配信などがあります。対象年齢や専門度を確認して選びましょう。",
+        ],
+      },
+      {
+        id: "find",
+        title: "探し方",
+        paragraphs: [
+          "大学や研究機関のイベント案内、自治体の広報、図書館の掲示などが情報源です。人気の企画は早めの申込が必要です。",
+        ],
+      },
+      {
+        id: "join",
+        title: "参加のコツ",
+        paragraphs: [
+          "分からない言葉のメモと質問を用意すると、研究者との対話が深まります。見学の記録は後の学習に役立ちます。",
+        ],
+      },
+    ],
+    references: [ciraNews],
+  },
 ];
 
 type ArticleDepth = {
@@ -8221,6 +8649,33 @@ export function isReviewed(article: Article) {
         article.reviewer.reviewedAt,
     )
   );
+}
+
+/** 予約公開の基準日 (YYYY-MM-DD、日本時間)。プレビュー時は NEXT_PUBLIC_PREVIEW_DATE で上書き可。 */
+export function publishBaseDate(now: Date = new Date()): string {
+  const override = process.env.NEXT_PUBLIC_PREVIEW_DATE;
+  if (override && /^\d{4}-\d{2}-\d{2}$/.test(override)) return override;
+  return new Date(now.getTime() + 9 * 3600 * 1000).toISOString().slice(0, 10);
+}
+
+/** publishAt が未来日の間は非公開（ページ生成・一覧・検索・関連の対象外）。 */
+export function isVisibleArticle(article: Article, baseDate?: string): boolean {
+  const today = baseDate ?? publishBaseDate();
+  return !article.publishAt || article.publishAt <= today;
+}
+
+export function visibleArticles(list: Article[], baseDate?: string): Article[] {
+  return list.filter((article) => isVisibleArticle(article, baseDate));
+}
+
+/** 大事なコンテンツ (kind 未指定は core 扱い)。 */
+export function coreArticles(list: Article[]): Article[] {
+  return list.filter((article) => (article.kind ?? "core") === "core");
+}
+
+/** 通常コラム。 */
+export function columnArticles(list: Article[]): Article[] {
+  return list.filter((article) => article.kind === "column");
 }
 export function categoryFor(slug: CategorySlug) {
   return categories.find((c) => c.slug === slug)!;

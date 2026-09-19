@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { articles, categoryFor, isReviewed } from "@/content/articles";
+import { articles, categoryFor, isReviewed, isVisibleArticle, visibleArticles } from "@/content/articles";
 import { ArticleCard, AdSlot, Breadcrumbs, JsonLd } from "@/components/content";
 import { CellArt } from "@/components/visuals";
 import { ReviewerProfile } from "@/components/reviewer-profile";
@@ -10,7 +10,7 @@ import { publication } from "@/lib/site-config";
 import { absolute, pageMetadata, site } from "@/lib/site";
 export const dynamicParams = false;
 export function generateStaticParams() {
-  return articles.map((a) => ({ slug: a.slug }));
+  return visibleArticles(articles).map((a) => ({ slug: a.slug }));
 }
 export async function generateMetadata({
   params,
@@ -19,7 +19,7 @@ export async function generateMetadata({
 }) {
   const { slug } = await params;
   const a = articles.find((a) => a.slug === slug);
-  if (!a) notFound();
+  if (!a || !isVisibleArticle(a)) notFound();
   return pageMetadata(
     a.title,
     a.description,
@@ -34,7 +34,7 @@ export default async function ArticlePage({
 }) {
   const { slug } = await params;
   const article = articles.find((a) => a.slug === slug);
-  if (!article) notFound();
+  if (!article || !isVisibleArticle(article)) notFound();
   const cat = categoryFor(article.category);
   const reviewed = isReviewed(article);
   return (
@@ -178,7 +178,7 @@ export default async function ArticlePage({
         <h2>あわせて読みたい</h2>
         <div className="article-grid">
           {articles
-            .filter((a) => a.slug !== slug)
+            .filter((a) => a.slug !== slug && isVisibleArticle(a))
             .slice(0, 3)
             .map((a) => (
               <ArticleCard article={a} key={a.slug} />

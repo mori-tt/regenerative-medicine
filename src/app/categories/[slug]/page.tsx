@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { articles, categories } from "@/content/articles";
+import { articles, categories, columnArticles, coreArticles, visibleArticles } from "@/content/articles";
 import { ArticleCard, Breadcrumbs } from "@/components/content";
 import { pageMetadata } from "@/lib/site";
 export const dynamicParams = false;
@@ -29,6 +29,9 @@ export default async function CategoryPage({
   const { slug } = await params;
   const category = categories.find((c) => c.slug === slug);
   if (!category) notFound();
+  const listed = visibleArticles(articles).filter((a) => a.category === slug);
+  const core = coreArticles(listed);
+  const columns = columnArticles(listed);
   return (
     <div className="container inner-page">
       <Breadcrumbs items={[{ label: category.label }]} />
@@ -50,13 +53,24 @@ export default async function CategoryPage({
           </Link>
         ))}
       </nav>
-      <div className="listing-grid">
-        {articles
-          .filter((a) => a.category === slug)
-          .map((a) => (
+      <section aria-labelledby={`core-${slug}`}>
+        <h2 id={`core-${slug}`} className="listing-heading">大事なコンテンツ</h2>
+        <div className="listing-grid">
+          {core.map((a) => (
             <ArticleCard key={a.slug} article={a} />
           ))}
-      </div>
+        </div>
+      </section>
+      {columns.length > 0 && (
+        <section aria-labelledby={`columns-${slug}`}>
+          <h2 id={`columns-${slug}`} className="listing-heading">通常のコラム</h2>
+          <div className="listing-grid">
+            {columns.map((a) => (
+              <ArticleCard key={a.slug} article={a} />
+            ))}
+          </div>
+        </section>
+      )}
     </div>
   );
 }

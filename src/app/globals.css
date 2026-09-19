@@ -836,6 +836,20 @@ svg {
   grid-template-columns: repeat(3, 1fr);
   gap: 36px 25px;
 }
+.listing-heading {
+  font-family: var(--serif);
+  font-size: 21px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  margin: 38px 0 20px;
+  padding-top: 30px;
+  border-top: 1px solid var(--line);
+}
+.listing-heading:first-child {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+}
 .filter-links {
   display: flex;
   gap: 10px;

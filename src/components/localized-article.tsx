@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { articles, categoryFor, isReviewed, type Article } from "@/content/articles";
+import { articles, categoryFor, isReviewed, isVisibleArticle, type Article } from "@/content/articles";
 import { articleLocales } from "@/content/article-locales";
 import { articleBodiesResearch } from "@/content/article-bodies-research";
 import { articleBodiesTreatment } from "@/content/article-bodies-treatment";
@@ -8,6 +8,7 @@ import { articleBodiesStemCells } from "@/content/article-bodies-stem-cells";
 import { articleBodiesBasicsA } from "@/content/article-bodies-basics-a";
 import { articleBodiesBasicsB } from "@/content/article-bodies-basics-b";
 import { articleBodiesExtraA } from "@/content/article-bodies-extra";
+import { articleBodiesColumns } from "@/content/article-bodies-columns";
 import { articleGuideSections } from "@/content/article-bodies-guides";
 import { articleImageAlt } from "@/content/article-images";
 import { localizedArticle, localizedCategoryName, type SiteLocale } from "@/content/locales";
@@ -36,6 +37,7 @@ const bodyBySlug: Record<string, { en: ArticleBodyLocale; zh: ArticleBodyLocale 
   ...articleBodiesBasicsA,
   ...articleBodiesBasicsB,
   ...articleBodiesExtraA,
+  ...articleBodiesColumns,
 };
 
 export type LocalizedSection = { title: string; paragraphs: string[] };
@@ -345,7 +347,7 @@ export function LocalizedArticle({ locale, source }: { locale: SiteLocale; sourc
             <h2>{copy.related}</h2>
             <div className="article-grid">
               {articles
-                .filter((a) => a.slug !== source.slug)
+                .filter((a) => a.slug !== source.slug && isVisibleArticle(a))
                 .slice(0, 3)
                 .map((a) => (
                   <LocalizedArticleCard locale={locale} source={a} key={a.slug} />

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { articles, categories } from "@/content/articles";
+import { articles, categories, visibleArticles } from "@/content/articles";
 import { ArticleCard, AdSlot, JsonLd } from "@/components/content";
 import { CellArt, Icon } from "@/components/visuals";
 import { absolute, pageMetadata, site } from "@/lib/site";
@@ -179,7 +179,7 @@ export default function Home() {
         </div>
         <div className="journal-layout">
           <div className="article-grid">
-            {articles.slice(1, 4).map((a) => (
+            {visibleArticles(articles).slice(1, 4).map((a) => (
               <ArticleCard article={a} key={a.slug} compact />
             ))}
           </div>

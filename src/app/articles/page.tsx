@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { articles, categories } from "@/content/articles";
+import { articles, categories, visibleArticles } from "@/content/articles";
 import { ArticleCard, Breadcrumbs } from "@/components/content";
 import { pageMetadata } from "@/lib/site";
 export const metadata = pageMetadata(
@@ -27,7 +27,7 @@ export default function ArticlesPage() {
         ))}
       </nav>
       <div className="listing-grid">
-        {articles.map((a) => (
+        {visibleArticles(articles).map((a) => (
           <ArticleCard key={a.slug} article={a} />
         ))}
       </div>

@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { articles, categories } from "@/content/articles";
+import { articles, categories, visibleArticles } from "@/content/articles";
 import { ArticleCard } from "./content";
 import { Icon } from "./visuals";
 
@@ -13,7 +13,7 @@ export function ArticleSearch() {
     .trim()
     .split(/\s+/)
     .filter(Boolean);
-  const results = articles.filter(
+  const results = visibleArticles(articles).filter(
     (a) =>
       (category === "all" || a.category === category) &&
       terms.every((t) =>

@@ -1,7 +1,8 @@
 import Link from "next/link";
+import { articles, categories, columnArticles, coreArticles, visibleArticles } from "@/content/articles";
 import type { SiteLocale } from "@/content/locales";
 import { localizedCategoryName } from "@/content/locales";
-import { LocalizedArticles } from "./localized-articles";
+import { LocalizedArticleGrid } from "./localized-articles";
 import { Breadcrumbs } from "./content";
 
 const categoryDescriptions = {
@@ -19,6 +20,11 @@ const categoryDescriptions = {
   },
 } as const;
 
+const chrome = {
+  en: { home: "Home", eyebrow: "TOPIC", core: "Essentials", columns: "Regular columns", back: "Back to the home page", note: "Careful, source-based reading", noteBody: "Each article has a separate editorial manuscript in this language. Check the evidence, limitations, and medical questions before making a decision.", navLabel: "Browse by category", all: "All articles" },
+  zh: { home: "首页", eyebrow: "主题", core: "重要内容", columns: "专栏", back: "返回首页", note: "基于来源的谨慎阅读", noteBody: "每篇文章都有单独的中文编辑原稿。做出决定前，请确认证据、局限性和需要向医生询问的问题。", navLabel: "按主题浏览", all: "全部文章" },
+} as const;
+
 export type LocalizedCategorySlug = keyof typeof categoryDescriptions.en;
 
 export function localizedCategoryFor(locale: SiteLocale, slug: LocalizedCategorySlug) {
@@ -27,6 +33,9 @@ export function localizedCategoryFor(locale: SiteLocale, slug: LocalizedCategory
 
 export function LocalizedCategory({ locale, slug }: { locale: SiteLocale; slug: LocalizedCategorySlug }) {
   const { title, description } = localizedCategoryFor(locale, slug);
-  const en = locale === "en";
-  return <div lang={en ? "en" : "zh-CN"} className="localized-page"><div className="container inner-page"><Breadcrumbs homeLabel={en ? "Home" : "首页"} homeHref={`/${locale}/`} locale={locale} items={[{ label: title }]} /><div className="page-heading"><span className="eyebrow">{en ? "TOPIC" : "主题"}</span><h1>{title}</h1><p>{description}</p></div><div className="question-box"><div><h2>{en ? "Careful, source-based reading" : "基于来源的谨慎阅读"}</h2><p>{en ? "Each article has a separate editorial manuscript in this language. Check the evidence, limitations, and medical questions before making a decision." : "每篇文章都有单独的中文编辑原稿。做出决定前，请确认证据、局限性和需要向医生询问的问题。"}</p></div><Link className="button outline" href={`/${locale}/`}>{en ? "Back to the home page" : "返回首页"}</Link></div></div><LocalizedArticles locale={locale} category={slug} embedded /></div>;
+  const copy = chrome[locale];
+  const listed = visibleArticles(articles).filter((article) => article.category === slug);
+  const core = coreArticles(listed);
+  const columns = columnArticles(listed);
+  return <div lang={locale === "en" ? "en" : "zh-CN"} className="localized-page"><div className="container inner-page"><Breadcrumbs homeLabel={copy.home} homeHref={`/${locale}/`} locale={locale} items={[{ label: title }]} /><div className="page-heading"><span className="eyebrow">{copy.eyebrow}</span><h1>{title}</h1><p>{description}</p></div><div className="question-box"><div><h2>{copy.note}</h2><p>{copy.noteBody}</p></div><Link className="button outline" href={`/${locale}/`}>{copy.back}</Link></div><nav className="filter-links" aria-label={copy.navLabel}><Link href={`/${locale}/articles/`}>{copy.all}</Link>{categories.map((item) => <Link key={item.slug} href={`/${locale}/categories/${item.slug}/`} className={item.slug === slug ? "active" : undefined} aria-current={item.slug === slug ? "page" : undefined}>{localizedCategoryName(locale, item.slug)}</Link>)}</nav><section aria-label={copy.core}><h2 className="listing-heading">{copy.core}</h2><LocalizedArticleGrid locale={locale} list={core} /></section>{columns.length > 0 && <section aria-label={copy.columns}><h2 className="listing-heading">{copy.columns}</h2><LocalizedArticleGrid locale={locale} list={columns} /></section>}</div></div>;
 }

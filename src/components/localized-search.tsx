@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import { articles, categories } from "@/content/articles";
+import { articles, categories, visibleArticles } from "@/content/articles";
 import { articleLocales } from "@/content/article-locales";
 import { Breadcrumbs } from "./content";
 import { localizedArticleFor } from "./localized-article";
@@ -34,7 +34,7 @@ export function LocalizedSearch({ locale }: { locale: SiteLocale }) {
     .trim()
     .split(/\s+/)
     .filter(Boolean);
-  const results = articles.filter((source) => {
+  const results = visibleArticles(articles).filter((source) => {
     if (category !== "all" && source.category !== category) return false;
     if (terms.length === 0) return true;
     const translated = articleLocales[source.slug]?.[locale];

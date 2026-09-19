@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { articles, categories, isReviewed } from "@/content/articles";
+import { articles, categories, isReviewed, isVisibleArticle } from "@/content/articles";
 import { infoPages } from "@/content/pages";
 import { jsrmChapters } from "@/content/jsrm-chapters";
 import { publication } from "@/lib/site-config";
@@ -22,7 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     .map((path) => ({ url: absolute(path === "" ? "/" : path) }))
     .concat(
       articles
-        .filter(isReviewed)
+        .filter((a) => isVisibleArticle(a) && isReviewed(a))
         .map((a) => withLocales([`/articles/${a.slug}/`]).map((path) => ({
           url: absolute(path),
           lastModified: a.updatedAt,
