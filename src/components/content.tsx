@@ -4,7 +4,7 @@ import { bannerAds } from "@/content/ads";
 import { type Article, categoryFor, isReviewed } from "@/content/articles";
 import { absolute, publicAsset } from "@/lib/site";
 import { publication } from "@/lib/site-config";
-import { CellArt, Icon } from "./visuals";
+import { Icon } from "./visuals";
 
 export function JsonLd({ data }: { data: unknown }) {
   return (
@@ -68,26 +68,8 @@ export function ArticleCard({
   const isColumn = article.kind === "column";
   return (
     <article className={`article-card ${compact ? "compact" : ""}`}>
-      <Link
-        className="article-image"
-        href={`/articles/${article.slug}/`}
-        tabIndex={-1}
-        aria-hidden="true"
-      >
-        {article.image ? (
-          <Image
-            src={publicAsset(article.image)}
-            alt={article.imageAlt ?? "記事のイメージ"}
-            width={1280}
-            height={853}
-            unoptimized
-          />
-        ) : (
-          <CellArt variant={article.illustration} />
-        )}
-        <span className={`category-label ${cat.color}`}>{cat.label}</span>
-      </Link>
       <div className="article-card-body">
+        <span className={`category-label ${cat.color}`}>{cat.label}</span>
         {isColumn && <span className="card-kicker">コラム</span>}
         <div className="article-meta">
           <span>{isReviewed(article) ? "医師監修済み" : "一般情報・編集部記事"}</span>

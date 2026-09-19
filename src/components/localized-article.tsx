@@ -144,26 +144,8 @@ export function LocalizedArticleCard({
   const cat = categoryFor(source.category);
   return (
     <article className={`article-card ${compact ? "compact" : ""}`}>
-      <Link
-        className="article-image"
-        href={`/${locale}/articles/${source.slug}/`}
-        tabIndex={-1}
-        aria-hidden="true"
-      >
-        {source.image ? (
-          <Image
-            src={publicAsset(source.image)}
-            alt={articleImageAlt(source.image, locale) ?? article.title}
-            width={1280}
-            height={853}
-            unoptimized
-          />
-        ) : (
-          <CellArt variant={source.illustration} label={locale === "en" ? "Abstract cell illustration" : "抽象细胞插画"} />
-        )}
-        <span className={`category-label ${cat.color}`}>{article.category}</span>
-      </Link>
       <div className="article-card-body">
+        <span className={`category-label ${cat.color}`}>{article.category}</span>
         {source.kind === "column" && (
           <span className="card-kicker">{locale === "en" ? "Column" : "专栏"}</span>
         )}
