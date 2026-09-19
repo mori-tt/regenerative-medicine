@@ -2,6 +2,7 @@ import Link from "next/link";
 import { MainNavigation, MobileMenu } from "./navigation";
 import { indexable, site } from "@/lib/site";
 import { Icon } from "./visuals";
+import { LanguageSwitcher } from "./language-switcher";
 
 export function Logo() {
   return (
@@ -42,6 +43,7 @@ export function Header() {
             <Icon name="search" />
             <span>記事を探す</span>
           </Link>
+          <LanguageSwitcher />
           <MobileMenu />
         </div>
         <MainNavigation />

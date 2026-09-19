@@ -91,16 +91,9 @@ const mhlwAd = {
   url: "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/iryou/kokokukisei/",
 };
 
-const sampleReviewer = {
-  name: "山田 太郎",
-  credentials: "医学博士",
-  affiliation: "〇〇大学 再生医療学講座 教授",
-  profileUrl: "https://example-university.ac.jp/profile/yamada",
-  reviewedAt: "2026-09-19",
-};
-
-// 雛形用の短い原稿です。監修・出典精査・加筆後に公開してください。
-export const articles: Article[] = [
+// 医療記事は、実在の監修者・出典・更新履歴を確認できるまで公開扱いにしない。
+// 本文はサイトの構成確認用に残すが、検索エンジンには draft として扱わせる。
+const rawArticles: Article[] = [
   {
     slug: "what-is-regenerative-medicine",
     title: "再生医療とは？ はじめに知っておきたい基礎知識",
@@ -109,9 +102,7 @@ export const articles: Article[] = [
     category: "basics",
     updatedAt: "2026-09-19",
     readingMinutes: 2,
-    status: "published",
-    reviewer: sampleReviewer,
-    publishedAt: "2026-09-19",
+    status: "draft",
     illustration: "cells",
     points: [
       "再生医療という言葉だけで、効果や安全性は判断できません。",
@@ -323,9 +314,7 @@ export const articles: Article[] = [
     category: "stem-cells",
     updatedAt: "2026-09-19",
     readingMinutes: 2,
-    status: "published",
-    reviewer: sampleReviewer,
-    publishedAt: "2026-09-19",
+    status: "draft",
     illustration: "network",
     points: [
       "幹細胞には、増える能力と別の種類の細胞になる能力があります。",
@@ -530,9 +519,7 @@ export const articles: Article[] = [
     category: "treatment",
     updatedAt: "2026-09-19",
     readingMinutes: 2,
-    status: "published",
-    reviewer: sampleReviewer,
-    publishedAt: "2026-09-19",
+    status: "draft",
     illustration: "cross",
     points: [
       "自分の病気に対する根拠を尋ねましょう。",
@@ -565,9 +552,7 @@ export const articles: Article[] = [
     category: "treatment",
     updatedAt: "2026-09-19",
     readingMinutes: 4,
-    status: "published",
-    reviewer: sampleReviewer,
-    publishedAt: "2026-09-19",
+    status: "draft",
     illustration: "cross",
     points: [
       "保険が使える治療と、自由診療の治療があります。",
@@ -653,9 +638,7 @@ export const articles: Article[] = [
     category: "treatment",
     updatedAt: "2026-09-19",
     readingMinutes: 3,
-    status: "published",
-    reviewer: sampleReviewer,
-    publishedAt: "2026-09-19",
+    status: "draft",
     illustration: "cross",
     points: [
       "セカンドオピニオンは診断・治療方針の確認に役立ちます。",
@@ -698,9 +681,7 @@ export const articles: Article[] = [
     category: "treatment",
     updatedAt: "2026-09-19",
     readingMinutes: 4,
-    status: "published",
-    reviewer: sampleReviewer,
-    publishedAt: "2026-09-19",
+    status: "draft",
     illustration: "cross",
     points: [
       "治験・臨床研究は治療と研究の両面があります。",
@@ -743,9 +724,7 @@ export const articles: Article[] = [
     category: "research",
     updatedAt: "2026-09-19",
     readingMinutes: 2,
-    status: "published",
-    reviewer: sampleReviewer,
-    publishedAt: "2026-09-19",
+    status: "draft",
     illustration: "scope",
     points: [
       "誰を対象にした研究か確認します。",
@@ -871,9 +850,7 @@ export const articles: Article[] = [
     category: "research",
     updatedAt: "2026-09-19",
     readingMinutes: 4,
-    status: "published",
-    reviewer: sampleReviewer,
-    publishedAt: "2026-09-19",
+    status: "draft",
     illustration: "scope",
     points: [
       "承認された製品は対象疾患と使い方が定められています。",
@@ -6032,6 +6009,95 @@ export const articles: Article[] = [
     references: [mhlw],
   },
 ];
+
+type ArticleDepth = {
+  title: string;
+  paragraphs: string[];
+};
+
+const depthByCategory: Record<CategorySlug, ArticleDepth[]> = {
+  basics: [
+    {
+      title: "この知識を治療の話につなげるとき",
+      paragraphs: [
+        "基礎知識は、特定の治療を受けるべきかどうかを決めるための材料の一部です。細胞の名前や「再生」という言葉だけで効果を推測せず、対象となる病気・症状、治療の目的、比較される標準治療を分けて確認します。",
+        "同じ言葉でも、研究で使われる意味と医療機関が説明する意味が異なることがあります。説明資料に書かれた用語をそのままにせず、対象者、方法、評価期間、分かっていない点を質問に置き換えると、誤解を減らせます。",
+      ],
+    },
+    {
+      title: "確認しておきたいチェック項目",
+      paragraphs: [
+        "読むときは、①人を対象にした研究か、②どのくらいの人数・期間か、③利益だけでなく不利益が示されているか、④承認された範囲や研究計画の中の話か、を確認します。数字がない説明や、すべての人に効くと受け取れる表現には注意が必要です。",
+        "治療の可否は、診察・検査・既往歴・服薬などを踏まえて医師が判断します。この記事の内容だけで治療を中止・開始せず、疑問点は主治医や対象疾患の専門医に相談してください。",
+      ],
+    },
+  ],
+  "stem-cells": [
+    {
+      title: "細胞名だけでは評価できない",
+      paragraphs: [
+        "iPS細胞、ES細胞、間葉系幹細胞などの名称は、出発点や性質を示すもので、治療の有効性を保証する言葉ではありません。同じ名称でも、分化させる方法、混ざり得る細胞、投与する量や部位、品質検査が異なります。",
+        "説明を受ける際は、使う細胞の由来と最終的な細胞の種類、製造場所、品質試験、保存方法、投与方法を確認します。分からない点を「安全ですか」だけで終わらせず、どのリスクをどう監視するかまで尋ねることが重要です。",
+      ],
+    },
+    {
+      title: "研究から人の治療までの距離",
+      paragraphs: [
+        "細胞を作れること、動物で変化が見られること、人で利益が確認されることは別の段階です。人を対象とする場合も、対象疾患・比較方法・評価項目・追跡期間を見ないと、結果の意味を判断できません。",
+        "研究参加や自由診療を検討するときは、研究計画・承認や届出の位置づけ・費用負担・有害事象が起きたときの対応を文書で確認してください。",
+      ],
+    },
+  ],
+  treatment: [
+    {
+      title: "診察で確認する4つの軸",
+      paragraphs: [
+        "相談では、目的を「症状を軽くする」「機能を保つ」「検査値を改善する」など具体化します。そのうえで、期待できる利益の根拠、起こり得る害と頻度、他の選択肢、治療しない場合の見通しを並べて説明してもらいます。",
+        "自分に適用できるかは、病名だけでは決まりません。症状の程度、画像や検査の結果、年齢、併存症、服薬、妊娠可能性など、判断に影響する条件を医療者と共有します。",
+      ],
+    },
+    {
+      title: "契約・費用・治療後を一つの計画で見る",
+      paragraphs: [
+        "自由診療では、初回費用だけでなく採取・加工・投与・入院・検査・通院・追加治療の費用を合計し、返金や中止、キャンセル、分割払いの条件を契約前に確認します。高額であること自体は効果の証明になりません。",
+        "治療後の観察期間、連絡先、緊急時の受診先、有害事象の報告方法、効果が乏しい場合の次の選択肢も確認します。急いで契約するよう促されたり、リスクや代替案の説明が不十分だったりする場合は、いったん持ち帰って第三者に相談しましょう。",
+      ],
+    },
+  ],
+  research: [
+    {
+      title: "研究結果を4つの質問に変える",
+      paragraphs: [
+        "ニュースを読んだら、「誰を対象にしたか」「何と比べたか」「何を測ったか」「どの期間の結果か」に置き換えます。細胞や画像の変化が、患者さんの症状や生活の改善を意味するとは限りません。",
+        "研究の限界には、人数の少なさ、比較対象がないこと、追跡期間の短さ、途中で参加者が減ること、結果を評価する人が治療を知っていることなどがあります。限界は失敗という意味ではなく、結果をどこまで広げてよいかを示す情報です。",
+      ],
+    },
+    {
+      title: "原資料と更新日を確認する",
+      paragraphs: [
+        "報道や広報だけで判断せず、論文、研究登録、審査報告書、添付文書など元の資料へ進みます。研究段階の記事では、発表日だけでなく、結果が査読済みか、後続研究で再現されたか、重大な有害事象や未解決の課題があるかも確認します。",
+        "制度や承認状況は更新されるため、最新情報は厚生労働省・PMDAなどの公式ページで確認してください。この記事の更新日以後に制度や承認範囲が変わっている可能性もあります。",
+      ],
+    },
+  ],
+};
+
+// すべての記事に、定義の説明だけで終わらせない「読み解き」と「行動」の層を加える。
+// 個別治療を推奨する表現は避け、読者が医療者へ確認するための質問に落とし込む。
+export const articles: Article[] = rawArticles.map((article) => ({
+  ...article,
+  status: "draft",
+  reviewer: undefined,
+  publishedAt: undefined,
+  readingMinutes: Math.max(article.readingMinutes, 5),
+  sections: [
+    ...article.sections,
+    ...depthByCategory[article.category].map((section, index) => ({
+      ...section,
+      id: `${article.slug}-guide-${index + 1}`,
+    })),
+  ],
+}));
 
 export function isReviewed(article: Article) {
   return (

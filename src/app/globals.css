@@ -141,6 +141,21 @@ svg {
   border-left: 1px solid var(--line);
   padding-left: 28px;
 }
+.language-switcher {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-left: 1px solid var(--line);
+  padding-left: 18px;
+  font-size: 10px;
+  white-space: nowrap;
+}
+.language-switcher > span { color: var(--muted); letter-spacing: .08em; font-size: 9px; }
+.language-switcher a { border: 1px solid transparent; padding: 2px 5px; }
+.language-switcher a.current { border-color: #a7b68b; color: var(--green); }
+.localized-disclaimer { margin-bottom: 56px; }
+.localized-article { padding-bottom: 80px; }
+.localized-article .page-heading { max-width: 820px; }
 .main-nav {
   display: flex;
   border-block: 1px solid var(--line);
@@ -1179,6 +1194,18 @@ svg {
   }
   .search-link > span {
     display: none;
+  }
+  .language-switcher {
+    border: 0;
+    padding-left: 0;
+    gap: 3px;
+  }
+  .language-switcher > span {
+    display: none;
+  }
+  .language-switcher a {
+    padding: 2px;
+    font-size: 9px;
   }
   .mobile-menu {
     display: block;

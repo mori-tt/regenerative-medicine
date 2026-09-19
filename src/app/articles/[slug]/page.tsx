@@ -68,7 +68,7 @@ export default async function ArticlePage({
       )}
       {!reviewed && (
         <div className="draft-notice">
-          この記事はサイト構成を確認するための短いサンプル原稿です。医師監修は完了していません。正式公開前に内容の精査・加筆を行います。
+          この記事は医師監修前の編集部原稿です。一般的な情報整理を目的としており、個別の診断・治療の根拠や推奨を示すものではありません。正式公開前に医学的内容、出典、更新日を確認します。
         </div>
       )}
       <div className="article-layout">
