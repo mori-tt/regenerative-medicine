@@ -1,5 +1,19 @@
 export type SiteLocale = "en" | "zh";
 
+const categoryNamesZh = {
+  basics: "再生医学基础",
+  "stem-cells": "认识干细胞",
+  treatment: "考虑治疗时",
+  research: "研究与新闻",
+} as const;
+
+export function localizedCategoryName(locale: SiteLocale, slug: keyof typeof categoryNamesZh): string {
+  if (locale === "en") {
+    return { basics: "The basics", "stem-cells": "Stem cells", treatment: "Considering treatment", research: "Research & news" }[slug];
+  }
+  return categoryNamesZh[slug];
+}
+
 export const localizedHome = {
   en: {
     eyebrow: "KNOWLEDGE FOR YOUR NEXT STEP",

@@ -3,6 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { articles, categories } from "@/content/articles";
 import { articleLocales } from "@/content/article-locales";
+import { Breadcrumbs } from "./content";
 import { localizedArticleFor } from "./localized-article";
 import type { SiteLocale } from "@/content/locales";
 
@@ -50,6 +51,11 @@ export function LocalizedSearch({ locale }: { locale: SiteLocale }) {
   });
   return (
     <div className="container inner-page">
+      <Breadcrumbs
+        homeLabel={en ? "Home" : "首页"}
+        homeHref={`/${locale}/`}
+        items={[{ label: en ? "Find articles" : "查找文章" }]}
+      />
       <div className="page-heading">
         <span className="eyebrow">FIND YOUR NEXT READ</span>
         <h1>{en ? "Find what you want to learn." : "寻找你想了解的内容。"}</h1>
