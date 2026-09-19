@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Header, Footer } from "@/components/site-shell";
 import { LocaleDocument } from "@/components/locale-document";
-import { indexable, site } from "@/lib/site";
+import { absolute, indexable, site } from "@/lib/site";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description: site.description,
   robots: { index: indexable, follow: true },
   openGraph: { locale: "ja_JP", type: "website", siteName: site.name },
-  icons: { icon: "/icon.svg" },
+  icons: { icon: absolute("/icon.svg") },
 };
 export default function RootLayout({
   children,

@@ -13,11 +13,13 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 28px;
+  overflow-x: hidden;
 }
 body {
   margin: 0;
   background: var(--paper);
   color: var(--ink);
+  overflow-x: hidden;
   font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
   font-size: 14px;
   line-height: 1.8;
@@ -178,6 +180,9 @@ svg {
 .mobile-menu {
   display: none;
 }
+.mobile-menu:not([open]) nav {
+  display: none;
+}
 .hero {
   display: grid;
   grid-template-columns: 1fr 1.05fr;
@@ -186,6 +191,7 @@ svg {
   padding-bottom: 48px;
   align-items: center;
 }
+.hero > * { min-width: 0; }
 .eyebrow {
   font-family: Arial, "Yu Gothic", sans-serif;
   font-size: 10px;
@@ -258,6 +264,7 @@ svg {
   align-self: stretch;
   min-height: 405px;
   margin-top: 8px;
+  overflow: hidden;
 }
 .hero-art {
   height: 100%;
@@ -541,7 +548,16 @@ svg {
   object-fit: cover;
   transition: transform 0.4s;
 }
+.article-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
 .article-image:hover .cell-art {
+  transform: scale(1.035);
+}
+.article-image:hover img {
   transform: scale(1.035);
 }
 .article-card:nth-child(2) .article-image .cell-art {
@@ -861,6 +877,11 @@ svg {
   margin-block: 26px;
 }
 .article-cover svg {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.article-cover img {
   height: 100%;
   width: 100%;
   object-fit: cover;
@@ -1200,27 +1221,31 @@ svg {
   }
   .header-main {
     min-height: 82px;
-    gap: 18px;
+    gap: 4px;
   }
   .logo {
-    font-size: 22px;
-    gap: 9px;
+    font-size: 17px;
+    gap: 6px;
+    letter-spacing: 0;
   }
+  .logo-en {
+    max-width: 145px;
+    white-space: normal;
+    line-height: 1.15;
+  }
+  .logo-en > span:last-child { overflow-wrap: anywhere; }
   .logo-mark {
-    width: 39px;
-    height: 39px;
+    width: 34px;
+    height: 34px;
   }
   .logo small {
-    font-size: 6px;
-    letter-spacing: 0.15em;
+    display: none;
   }
   .header-links {
     display: none;
   }
   .search-link {
-    border: 0;
-    margin-left: auto;
-    padding: 0;
+    display: none;
   }
   .search-link > span {
     display: none;
@@ -1228,14 +1253,14 @@ svg {
   .language-switcher {
     border: 0;
     padding-left: 0;
-    gap: 3px;
+    gap: 0;
   }
   .language-switcher > span {
     display: none;
   }
   .language-switcher a {
-    padding: 2px;
-    font-size: 9px;
+    padding: 0 1px;
+    font-size: 7px;
   }
   .mobile-menu {
     display: block;
@@ -1249,7 +1274,7 @@ svg {
     display: none;
   }
   .mobile-menu nav {
-    position: absolute;
+    position: fixed;
     top: 106px;
     right: 18px;
     left: 18px;
@@ -1264,6 +1289,7 @@ svg {
   }
   .main-nav {
     width: 100%;
+    max-width: 100vw;
     overflow: auto;
     justify-content: flex-start;
     white-space: nowrap;

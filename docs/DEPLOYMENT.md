@@ -4,7 +4,7 @@
 
 ## 1. 公開先を設定
 
-独自ドメインの公開フォルダとHTTPSをサーバー側で準備します。この雛形は **ドメイン直下**（`https://your-domain.jp/`）に配置する前提です。サブディレクトリ（`/media/`等）への配置は未対応です。その場合は`basePath`、画像・リンク、canonical、404設定などをまとめて調整してください。
+独自ドメインの公開フォルダとHTTPSをサーバー側で準備します。Lolipopのサブドメイン・独自ドメインは通常 **ドメイン直下**（`https://your-domain.jp/`）に配置し、`NEXT_PUBLIC_BASE_PATH`は空欄にします。GitHub Pagesのリポジトリ配下だけは、`GITHUB_PAGES=true`から`/regenerative-medicine`が自動設定されます。
 
 `.env.example`を`.env.local`にコピーし、実際のドメインを設定します。ドメインの値にサブディレクトリを含めるとビルドエラーになります。
 
@@ -12,9 +12,21 @@
 NEXT_PUBLIC_SITE_URL=https://your-domain.jp
 NEXT_PUBLIC_SITE_INDEXABLE=false
 NEXT_PUBLIC_CONTACT_EMAIL=実際の受付用メールアドレス
+NEXT_PUBLIC_BASE_PATH=
+NEXT_PUBLIC_ASSET_PREFIX=
 ```
 
 準備中は`false`を維持します。運営情報・監修・原稿を確定し、正式公開するときに`true`へ変更します。
+
+配置先ごとの設定は次のとおりです。
+
+| 配置先 | `NEXT_PUBLIC_SITE_URL` | `NEXT_PUBLIC_BASE_PATH` | `NEXT_PUBLIC_ASSET_PREFIX` |
+| --- | --- | --- | --- |
+| GitHub Pages（リポジトリ配下） | Pagesのドメイン | 未設定（自動で`/regenerative-medicine`） | 未設定（自動生成） |
+| Lolipopサブドメイン | `https://サブドメイン.example` | 空欄 | 空欄 |
+| 独自ドメイン | `https://独自ドメイン.example` | 空欄 | 空欄 |
+
+`public/`配下の画像・アイコンは、`NEXT_PUBLIC_BASE_PATH`を含むURLへビルド時に変換されます。GitHub PagesからLolipopへ移すときは、環境変数を切り替えて再ビルドしてください。
 
 ## 2. 手元で生成・確認
 

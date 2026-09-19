@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { bannerAds } from "@/content/ads";
 import { type Article, categoryFor, isReviewed } from "@/content/articles";
-import { absolute } from "@/lib/site";
+import { absolute, publicAsset } from "@/lib/site";
 import { publication } from "@/lib/site-config";
 import { CellArt, Icon } from "./visuals";
 
@@ -67,7 +67,17 @@ export function ArticleCard({
         tabIndex={-1}
         aria-hidden="true"
       >
-        <CellArt variant={article.illustration} />
+        {article.image ? (
+          <Image
+            src={publicAsset(article.image)}
+            alt={article.imageAlt ?? "記事のイメージ"}
+            width={1280}
+            height={853}
+            unoptimized
+          />
+        ) : (
+          <CellArt variant={article.illustration} />
+        )}
         <span className={`category-label ${cat.color}`}>{cat.label}</span>
       </Link>
       <div className="article-card-body">
@@ -96,7 +106,7 @@ export function AdSlot({ compact = false }: { compact?: boolean }) {
         <span className="ad-label">広告 · {ad.advertiser}</span>
         <a href={ad.href} target="_blank" rel="sponsored noopener noreferrer">
           <Image
-            src={ad.image}
+            src={publicAsset(ad.image)}
             alt={ad.alt}
             width={ad.width}
             height={ad.height}

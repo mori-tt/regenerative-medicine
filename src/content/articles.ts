@@ -1,3 +1,5 @@
+import { articleImageFor } from "./article-images";
+
 export const categories = [
   {
     slug: "basics",
@@ -54,6 +56,8 @@ export type Article = {
   reviewer?: Reviewer;
   publishedAt?: string;
   illustration: "cells" | "network" | "scope" | "cross";
+  image?: string;
+  imageAlt?: string;
   points: string[];
   sections: { id: string; title: string; paragraphs: string[] }[];
   references: { title: string; url: string }[];
@@ -6084,8 +6088,10 @@ const depthByCategory: Record<CategorySlug, ArticleDepth[]> = {
 
 // すべての記事に、定義の説明だけで終わらせない「読み解き」と「行動」の層を加える。
 // 個別治療を推奨する表現は避け、読者が医療者へ確認するための質問に落とし込む。
-export const articles: Article[] = rawArticles.map((article) => ({
+export const articles: Article[] = rawArticles.map((article, index) => ({
   ...article,
+  image: articleImageFor(article.category, index).src,
+  imageAlt: articleImageFor(article.category, index).alt,
   status: "draft",
   reviewer: undefined,
   publishedAt: undefined,

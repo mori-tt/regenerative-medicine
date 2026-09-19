@@ -1,9 +1,11 @@
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { articles, categoryFor, isReviewed } from "@/content/articles";
 import { ArticleCard, AdSlot, Breadcrumbs, JsonLd } from "@/components/content";
 import { CellArt } from "@/components/visuals";
 import { ReviewerProfile } from "@/components/reviewer-profile";
+import { publicAsset } from "@/lib/site";
 import { publication } from "@/lib/site-config";
 import { absolute, pageMetadata, site } from "@/lib/site";
 export const dynamicParams = false;
@@ -90,7 +92,17 @@ export default async function ArticlePage({
             </div>
           </header>
           <div className="article-cover">
-            <CellArt variant={article.illustration} />
+            {article.image ? (
+              <Image
+                src={publicAsset(article.image)}
+                alt={article.imageAlt ?? "記事のイメージ"}
+                width={1280}
+                height={853}
+                unoptimized
+              />
+            ) : (
+              <CellArt variant={article.illustration} />
+            )}
           </div>
           <div className="key-points">
             <h2>この記事のポイント</h2>

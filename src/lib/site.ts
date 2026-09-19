@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 const configuredUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://example.com";
 const parsedUrl = new URL(configuredUrl);
+export const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? (process.env.GITHUB_PAGES === "true" ? "/regenerative-medicine" : "");
 export const indexable = process.env.NEXT_PUBLIC_SITE_INDEXABLE === "true";
 if (parsedUrl.pathname !== "/" || parsedUrl.search || parsedUrl.hash) {
   throw new Error(
@@ -24,8 +25,12 @@ export const site = {
     "再生医療と幹細胞について、基礎知識から研究の読み方、治療を検討するときの確認事項まで。確かな情報とともに、一つずつ理解するための情報メディア。",
   contactEmail: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "",
 };
+export function publicAsset(path: string) {
+  const normalized = path.startsWith("/") ? path : `/${path}`;
+  return `${basePath}${normalized}` || "/";
+}
 export function absolute(path = "/") {
-  return new URL(path, site.url).toString();
+  return new URL(publicAsset(path), site.url).toString();
 }
 export function pageMetadata(
   title: string,

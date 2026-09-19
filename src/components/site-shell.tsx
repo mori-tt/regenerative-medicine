@@ -22,7 +22,7 @@ function localizedHomePath(locale: SiteLocale | "ja") {
 export function Logo({ locale = "ja" }: { locale?: SiteLocale | "ja" }) {
   const copy = locale === "ja" ? null : localizedShell[locale];
   return (
-    <Link href={localizedHomePath(locale)} className="logo" aria-label={copy?.logoAria || "再生医療ノート ホーム"}>
+    <Link href={localizedHomePath(locale)} className={`logo ${locale === "en" ? "logo-en" : locale === "zh" ? "logo-zh" : ""}`} aria-label={copy?.logoAria || "再生医療ノート ホーム"}>
       <span className="logo-mark">
         <Icon name="cells" size={32} />
       </span>
