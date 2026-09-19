@@ -84,7 +84,8 @@ export default async function ArticlePage({
             <h1>{article.title}</h1>
             <p>{article.description}</p>
             <div className="byline">
-              <span>執筆：{site.name}編集部（仮称）</span>
+              <span>編集：{site.name}編集部</span>
+              <span>位置づけ：一般情報</span>
               <time dateTime={article.updatedAt}>
                 更新：{article.updatedAt.replaceAll("-", ".")}
               </time>

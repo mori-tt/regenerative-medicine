@@ -22,6 +22,9 @@ const groups = [
       ["厚生労働省：医療広告規制", "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/iryou/kokokukisei/", "医療広告を作成・掲載するときに確認する公式ガイド。"],
       ["PMDA：再生医療等製品", "https://www.pmda.go.jp/review-services/drug-reviews/about-reviews/ctp/0007.html", "再生医療等製品の定義、審査・承認関連の公式情報。"],
       ["PMDA：再生医療等製品情報検索", "https://www.pmda.go.jp/PmdaSearch/saiseiSearch/", "添付文書などの製品情報を検索するための公式データベース。"],
+      ["PMDA：新再生医療等製品の承認品目一覧", "https://www.pmda.go.jp/review-services/drug-reviews/review-information/ctp/0004.html", "年度ごとの承認品目と審査資料を確認する入口。"],
+      ["厚生労働省：臨床研究等提出・公開システム（jRCT）", "https://jrct.mhlw.go.jp/", "臨床研究・再生医療等研究の公開情報を検索するシステム。"],
+      ["国税庁：医療費控除", "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1120.htm", "医療費控除の対象・手続きを確認する税務当局の情報。"],
     ],
   },
   {

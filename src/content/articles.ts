@@ -114,6 +114,22 @@ const mhlwAd = {
   title: "厚生労働省：医療法における病院等の広告規制について",
   url: "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/iryou/kokokukisei/",
 };
+const pmdaApproved = {
+  title: "PMDA：新再生医療等製品の承認品目一覧",
+  url: "https://www.pmda.go.jp/review-services/drug-reviews/review-information/ctp/0004.html",
+};
+const mhlwInsurance = {
+  title: "厚生労働省：再生医療等製品の医療保険上の取扱い",
+  url: "https://www.mhlw.go.jp/content/10808000/001578917.pdf",
+};
+const jrct = {
+  title: "厚生労働省：臨床研究等提出・公開システム（jRCT）",
+  url: "https://jrct.mhlw.go.jp/",
+};
+const nta = {
+  title: "国税庁：医療費控除",
+  url: "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1120.htm",
+};
 
 // 医療記事は、実在の監修者・出典・更新履歴を確認できるまで公開扱いにしない。
 // 本文はサイトの構成確認用に残すが、検索エンジンには draft として扱わせる。
@@ -954,7 +970,7 @@ const rawArticles: Article[] = [
         id: "system",
         title: "承認の仕組み",
         paragraphs: [
-          "再生医療等製品は、医薬品医療機器法のもとで品質・有効性・安全性が審査され、承認されると保険適用などが検討されます。有効性が推定され安全性が確認された場合に、条件と期限を付けて早期に承認する仕組みもあります。",
+          "再生医療等製品は、医薬品医療機器等法のもとで品質・有効性・安全性が審査されます。有効性が推定され安全性が確認された場合に、条件と期限を付けて早期に承認する仕組みもあります。承認と健康保険で使用できるかどうかは別の手続き・判断なので、製品ごとの最新情報を確認します。",
           "承認は「どんな病気の、どんな状態に、どう使うか」とセットになっています。",
         ],
       },
@@ -975,7 +991,7 @@ const rawArticles: Article[] = [
         ],
       },
     ],
-    references: [mhlw, pmda],
+    references: [mhlw, pmda, pmdaApproved, mhlwInsurance],
   },
   {
     slug: "future-perspectives",
@@ -3058,7 +3074,7 @@ const rawArticles: Article[] = [
         ],
       },
     ],
-    references: [amed, mhlw],
+    references: [amed, mhlw, jrct],
   },
   {
     slug: "world-products",
@@ -5578,7 +5594,7 @@ const rawArticles: Article[] = [
         ],
       },
     ],
-    references: [mhlw],
+    references: [nta],
   },
   {
     slug: "insurance-review",
