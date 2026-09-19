@@ -14,10 +14,10 @@
   <circle cx="1089" cy="384" r="52" fill="url(#cell)" stroke="#fff" stroke-width="2"/>
   <circle cx="1092" cy="388" r="18" fill="url(#core)"/>
   <g fill="#285b48" font-family="Hiragino Mincho ProN, Yu Mincho, serif">
-    <text x="76" y="125" font-size="35">再生医療ノート</text>
+    <text x="76" y="125" font-size="35">再生医療ガイド</text>
     <text x="76" y="270" font-size="60">再生医療を知る。</text>
     <text x="76" y="365" font-size="60">これからの選択に、</text>
     <text x="76" y="460" font-size="60" fill="#65805d">確かな理解を。</text>
   </g>
-  <text x="80" y="555" font-family="sans-serif" font-size="17" letter-spacing="3" fill="#738269">REGENERATIVE MEDICINE NOTE</text>
+  <text x="80" y="555" font-family="sans-serif" font-size="17" letter-spacing="3" fill="#738269">REGENERATIVE MEDICINE GUIDE</text>
 </svg>

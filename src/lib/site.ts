@@ -19,10 +19,10 @@ if (
   );
 }
 export const site = {
-  name: "再生医療ノート",
+  name: "再生医療ガイド",
   url: parsedUrl.origin,
   description:
-    "再生医療と幹細胞について、基礎知識から研究の読み方、治療を検討するときの確認事項まで。確かな情報とともに、一つずつ理解するための情報メディア。",
+    "再生医療と幹細胞について、基礎知識から研究の読み方、治療を検討するときの確認事項まで。確かな情報とともに、一つずつ理解するための情報ガイド。",
   contactEmail: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "",
 };
 export function publicAsset(path: string) {
