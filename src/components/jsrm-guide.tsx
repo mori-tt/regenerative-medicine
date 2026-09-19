@@ -9,7 +9,7 @@ export function JsrmGuide() {
   return (
     <div className="container inner-page jsrm-page">
       <Breadcrumbs items={[{ label: "日本再生医療学会" }]} />
-      {publication.showPreparationNotices && <div className="draft-notice">この特集は公式資料をもとにした編集部の情報整理です。医師監修・法務確認前の原稿であり、個別の診断・治療・契約判断を示すものではありません。</div>}
+      {publication.showPreparationNotices && <div className="draft-notice">この特集は公式資料をもとにした編集部の情報整理です。個別の診断・治療・契約判断を示すものではありません。</div>}
       <JsonLd
         data={{
           "@context": "https://schema.org",

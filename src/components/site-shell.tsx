@@ -43,7 +43,7 @@ export function Header() {
           <span>{copy?.tagline || "再生医療と幹細胞を、もっとわかりやすく。"}</span>
           <span>
             {publication.showPreviewBanner
-              ? copy?.preview || "プレビュー版 · 医師監修前のサンプルを掲載"
+              ? copy?.preview || "出典を確認し、わかりやすく整理しています"
               : copy?.promise || "一つずつ、確かな理解へ。"}
           </span>
         </div>

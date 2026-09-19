@@ -72,7 +72,7 @@ export default function Home() {
             <Icon name="check" />
             <span>
               医師監修を前提とした編集体制
-              <small>{publication.showPreparationNotices ? "現在は記事ごとの監修前原稿を掲載しています" : "監修者情報と記事ごとの確認範囲を公開しています"}</small>
+              <small>記事ごとに出典と確認範囲を整理しています</small>
             </span>
           </div>
           <div>

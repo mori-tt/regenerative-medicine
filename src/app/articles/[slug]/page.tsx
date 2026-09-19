@@ -72,7 +72,7 @@ export default async function ArticlePage({
       )}
       {!reviewed && publication.showPreparationNotices && (
         <div className="draft-notice">
-          この記事は医師監修前の編集部原稿です。一般的な情報整理を目的としており、個別の診断・治療の根拠や推奨を示すものではありません。正式公開前に医学的内容、出典、更新日を確認します。
+          この記事は一般的な情報整理を目的としており、個別の診断・治療の根拠や推奨を示すものではありません。医学的な判断は、最新の公的情報と医療専門家への相談に基づいてください。
         </div>
       )}
       <div className="article-layout">

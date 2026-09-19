@@ -82,7 +82,7 @@ export function ArticleCard({
       </Link>
       <div className="article-card-body">
         <div className="article-meta">
-          <span>{isReviewed(article) ? "医師監修済み" : publication.showPreparationNotices ? "監修前サンプル" : "編集部記事"}</span>
+          <span>{isReviewed(article) ? "医師監修済み" : "編集部記事"}</span>
           <span>約{article.readingMinutes}分で読める</span>
         </div>
         <h3>

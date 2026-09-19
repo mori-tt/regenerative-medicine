@@ -119,6 +119,7 @@ svg {
   justify-content: center;
   width: 48px;
   height: 48px;
+  flex: 0 0 48px;
   border: 1px solid #c6d3c2;
   border-radius: 50%;
   color: #406c50;
@@ -744,6 +745,7 @@ svg {
 .footer-main .logo-mark {
   width: 43px;
   height: 43px;
+  flex-basis: 43px;
 }
 .footer-main p {
   font-size: 11px;
@@ -1425,6 +1427,7 @@ svg {
   .logo-mark {
     width: 34px;
     height: 34px;
+    flex-basis: 34px;
   }
   .logo small {
     display: none;

@@ -1,5 +1,5 @@
 {
-  "publication": { "mode": "preview", "showPreviewBanner": true, "showPreparationNotices": true },
+  "publication": { "mode": "preview", "showPreviewBanner": false, "showPreparationNotices": false },
   "medicalReviewer": {
     "enabled": true,
     "name": "千原 良友",

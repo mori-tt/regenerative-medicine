@@ -8,7 +8,7 @@ export function JsrmChapterPage({ chapter, previous, next }: { chapter: JsrmChap
   return (
     <div className="container inner-page jsrm-chapter-page">
       <Breadcrumbs items={[{ label: "日本再生医療学会", href: "/jsrm/" }, { label: chapter.title }]} />
-      {publication.showPreparationNotices && <div className="draft-notice">この章は公式資料をもとにした編集部の情報整理です。医師監修・法務確認前の原稿であり、個別の診断・治療・契約判断を示すものではありません。</div>}
+      {publication.showPreparationNotices && <div className="draft-notice">この章は公式資料をもとにした編集部の情報整理です。個別の診断・治療・契約判断を示すものではありません。</div>}
       <JsonLd data={{ "@context": "https://schema.org", "@type": "Article", headline: chapter.title, description: chapter.description, author: { "@type": "Organization", name: "再生医療ガイド" }, about: { "@type": "Organization", name: "一般社団法人 日本再生医療学会" } }} />
       <header className="jsrm-chapter-header">
         <span className="eyebrow">{chapter.number} · {chapter.eyebrow}</span>
