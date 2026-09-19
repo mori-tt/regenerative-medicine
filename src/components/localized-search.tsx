@@ -54,6 +54,7 @@ export function LocalizedSearch({ locale }: { locale: SiteLocale }) {
       <Breadcrumbs
         homeLabel={en ? "Home" : "首页"}
         homeHref={`/${locale}/`}
+        locale={locale}
         items={[{ label: en ? "Find articles" : "查找文章" }]}
       />
       <div className="page-heading">

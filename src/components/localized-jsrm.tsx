@@ -23,6 +23,7 @@ export function LocalizedJsrmGuide({ locale }: { locale: SiteLocale }) {
         <Breadcrumbs
           homeLabel={en ? "Home" : "首页"}
           homeHref={`/${locale}/`}
+          locale={locale}
           items={[{ label: copy.title, href: undefined }]}
         />
         <JsonLd
@@ -234,13 +235,22 @@ export function LocalizedJsrmGuide({ locale }: { locale: SiteLocale }) {
           <span className="eyebrow">PRIMARY SOURCES</span>
           <h2>{copy.sourcesTitle}</h2>
           <div>
-            {[
-              ["JSRM Official site", "https://www.jsrm.jp/"],
-              ["Prospectus", "https://www.jsrm.jp/whoweare/prospectus/"],
-              ["History", "https://www.jsrm.jp/whoweare/pastandpresent/"],
-              ["Certification", "https://www.jsrm.jp/activity/certification/"],
-              ["Regulatory information", "https://www.jsrm.jp/activity/regulatoryaffairs/"],
-            ].map(([label, url]) => (
+            {(en
+              ? [
+                  ["JSRM Official site", "https://www.jsrm.jp/"],
+                  ["Prospectus", "https://www.jsrm.jp/whoweare/prospectus/"],
+                  ["History", "https://www.jsrm.jp/whoweare/pastandpresent/"],
+                  ["Certification", "https://www.jsrm.jp/activity/certification/"],
+                  ["Regulatory information", "https://www.jsrm.jp/activity/regulatoryaffairs/"],
+                ]
+              : [
+                  ["日本再生医学学会官方网站", "https://www.jsrm.jp/"],
+                  ["设立宗旨", "https://www.jsrm.jp/whoweare/prospectus/"],
+                  ["沿革", "https://www.jsrm.jp/whoweare/pastandpresent/"],
+                  ["认定制度", "https://www.jsrm.jp/activity/certification/"],
+                  ["新法相关信息", "https://www.jsrm.jp/activity/regulatoryaffairs/"],
+                ]
+            ).map(([label, url]) => (
               <a key={url} href={url} target="_blank" rel="noopener noreferrer">
                 {label} ↗
               </a>
@@ -250,6 +260,47 @@ export function LocalizedJsrmGuide({ locale }: { locale: SiteLocale }) {
       </div>
     </div>
   );
+}
+
+const sourceLabels: Record<SiteLocale, Record<string, string>> = {
+  en: {
+    "日本再生医療学会 公式サイト": "JSRM official site",
+    "日本再生医療学会：入会案内": "JSRM: Membership",
+    "日本再生医療学会：公的研究": "JSRM: Public research",
+    "日本再生医療学会：新法関連情報": "JSRM: Regulatory information",
+    "日本再生医療学会：本会について": "JSRM: About the society",
+    "日本再生医療学会：沿革": "JSRM: History",
+    "日本再生医療学会：補償制度": "JSRM: Compensation",
+    "日本再生医療学会：認定制度": "JSRM: Certification",
+    "監修者プロフィール": "Reviewer profile",
+    "設立趣旨": "Prospectus",
+    "認定制度 FAQ": "Certification FAQ",
+    "厚生労働省：再生医療": "MHLW: Regenerative medicine",
+    "学術事業": "Academic programs",
+    AMED: "AMED",
+    JST: "JST",
+  },
+  zh: {
+    "日本再生医療学会 公式サイト": "日本再生医学学会官方网站",
+    "日本再生医療学会：入会案内": "学会：入会指南",
+    "日本再生医療学会：公的研究": "学会：公共研究",
+    "日本再生医療学会：新法関連情報": "学会：新法相关信息",
+    "日本再生医療学会：本会について": "学会：关于本会",
+    "日本再生医療学会：沿革": "学会：沿革",
+    "日本再生医療学会：補償制度": "学会：补偿制度",
+    "日本再生医療学会：認定制度": "学会：认定制度",
+    "監修者プロフィール": "审核者简介",
+    "設立趣旨": "设立宗旨",
+    "認定制度 FAQ": "认定制度 FAQ",
+    "厚生労働省：再生医療": "厚生劳动省：再生医学",
+    "学術事業": "学术事业",
+    AMED: "AMED",
+    JST: "JST",
+  },
+};
+
+function sourceLabelFor(locale: SiteLocale, label: string): string {
+  return sourceLabels[locale][label] ?? label;
 }
 
 export function LocalizedJsrmChapter({
@@ -273,6 +324,7 @@ export function LocalizedJsrmChapter({
         <Breadcrumbs
           homeLabel={en ? "Home" : "首页"}
           homeHref={`/${locale}/`}
+          locale={locale}
           items={[
             { label: jsrmGuideLocales[locale].title, href: `/${locale}/jsrm/` },
             { label: translated.title },
@@ -333,12 +385,12 @@ export function LocalizedJsrmChapter({
               {source.sources.map(([label, url]) =>
                 url.startsWith("/") ? (
                   <p key={url}>
-                    <Link href={url}>{label} →</Link>
+                    <Link href={`/${locale}${url}`}>{sourceLabelFor(locale, label)} →</Link>
                   </p>
                 ) : (
                   <p key={url}>
                     <a href={url} target="_blank" rel="noopener noreferrer">
-                      {label} ↗
+                      {sourceLabelFor(locale, label)} ↗
                     </a>
                   </p>
                 ),

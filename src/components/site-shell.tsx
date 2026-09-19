@@ -87,7 +87,7 @@ export function Footer() {
         </div>
         <p className="disclaimer">{copy?.footerDisclaimer || "本サイトは情報提供を目的としており、診断・治療の代わりとなるものではありません。治療については、医師にご相談ください。"}</p>
         <div className="footer-bottom">
-          <span>© 2026 {site.name}</span>
+          <span>© 2026 {locale === "ja" ? site.name : copy?.logoName || site.name}</span>
           <span>KNOWLEDGE FOR YOUR NEXT STEP.</span>
         </div>
       </div>

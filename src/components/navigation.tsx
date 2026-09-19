@@ -26,7 +26,7 @@ export function MainNavigation() {
     { href: `${prefix}/about/`, label: copy?.about || "このサイトについて" },
   ];
   return (
-    <nav className="main-nav container" aria-label="メインナビゲーション">
+    <nav className="main-nav container" aria-label={locale === "en" ? "Main navigation" : locale === "zh" ? "主导航" : "メインナビゲーション"}>
       {links.map((link) => (
         <Link
           key={link.href}

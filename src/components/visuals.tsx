@@ -63,9 +63,11 @@ export function Icon({ name, size = 24 }: { name: string; size?: number }) {
 export function CellArt({
   variant = "cells",
   hero = false,
+  label = "細胞をモチーフにした抽象イラスト（模式的な表現）",
 }: {
   variant?: string;
   hero?: boolean;
+  label?: string;
 }) {
   const id = useId().replace(/:/g, "");
   return (
@@ -74,7 +76,7 @@ export function CellArt({
       preserveAspectRatio="xMidYMid slice"
       className={`cell-art ${hero ? "hero-art" : ""}`}
       role="img"
-      aria-label="細胞をモチーフにした抽象イラスト（模式的な表現）"
+      aria-label={label}
     >
       <defs>
         <radialGradient id={`${id}-bg`}>

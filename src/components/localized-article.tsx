@@ -8,6 +8,7 @@ import { articleBodiesStemCells } from "@/content/article-bodies-stem-cells";
 import { articleBodiesBasicsA } from "@/content/article-bodies-basics-a";
 import { articleBodiesBasicsB } from "@/content/article-bodies-basics-b";
 import { articleGuideSections } from "@/content/article-bodies-guides";
+import { articleImageAlt } from "@/content/article-images";
 import { localizedArticle, localizedCategoryName, type SiteLocale } from "@/content/locales";
 import type { ArticleBodyLocale } from "@/content/article-bodies-research";
 import { AdSlot, Breadcrumbs, JsonLd } from "@/components/content";
@@ -149,13 +150,13 @@ export function LocalizedArticleCard({
         {source.image ? (
           <Image
             src={publicAsset(source.image)}
-            alt={source.imageAlt ?? article.title}
+            alt={articleImageAlt(source.image, locale) ?? article.title}
             width={1280}
             height={853}
             unoptimized
           />
         ) : (
-          <CellArt variant={source.illustration} />
+          <CellArt variant={source.illustration} label={locale === "en" ? "Abstract cell illustration" : "抽象细胞插画"} />
         )}
         <span className={`category-label ${cat.color}`}>{article.category}</span>
       </Link>
@@ -199,6 +200,7 @@ export function LocalizedArticle({ locale, source }: { locale: SiteLocale; sourc
         <Breadcrumbs
           homeLabel={copy.home}
           homeHref={`/${locale}/`}
+          locale={locale}
           items={[
             ...(cat && source ? [{ label: base.category, href: `/${locale}/categories/${cat.slug}/` }] : []),
             { label: base.title },
@@ -258,13 +260,13 @@ export function LocalizedArticle({ locale, source }: { locale: SiteLocale; sourc
                 {source.image ? (
                   <Image
                     src={publicAsset(source.image)}
-                    alt={source.imageAlt ?? base.title}
+                    alt={articleImageAlt(source.image, locale) ?? base.title}
                     width={1280}
                     height={853}
                     unoptimized
                   />
                 ) : (
-                  <CellArt variant={source.illustration} />
+                  <CellArt variant={source.illustration} label={locale === "en" ? "Abstract cell illustration" : "抽象细胞插画"} />
                 )}
               </div>
             )}
@@ -314,7 +316,7 @@ export function LocalizedArticle({ locale, source }: { locale: SiteLocale; sourc
               ) : (
                 <>
                   <p>{copy.reviewerPendingBody}</p>
-                  <ReviewerProfile compact />
+                  <ReviewerProfile compact locale={locale} />
                 </>
               )}
               <Link href={`/${locale}/supervision/`}>{copy.reviewerPolicy} →</Link>

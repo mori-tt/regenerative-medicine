@@ -20,15 +20,17 @@ export function Breadcrumbs({
   items,
   homeLabel = "ホーム",
   homeHref = "/",
+  locale = "ja",
 }: {
   items: { label: string; href?: string }[];
   homeLabel?: string;
   homeHref?: string;
+  locale?: "ja" | "en" | "zh";
 }) {
   const all = [{ label: homeLabel, href: homeHref }, ...items];
   return (
     <>
-      <nav className="breadcrumbs" aria-label="パンくずリスト">
+      <nav className="breadcrumbs" aria-label={locale === "en" ? "Breadcrumbs" : locale === "zh" ? "面包屑导航" : "パンくずリスト"}>
         {all.map((item, i) => (
           <span key={i}>
             {i > 0 && <span className="crumb-separator">/</span>}

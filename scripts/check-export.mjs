@@ -23,10 +23,11 @@ let linkCount = 0;
 for (const path of pages) {
   const html = await readFile(path, "utf8");
   const label = relative(root, path);
+  const wantLang = label === "en.html" || label.startsWith("en/") ? "en" : label === "zh.html" || label.startsWith("zh/") ? "zh-CN" : "ja";
   assert.match(
     html,
-    /<html[^>]*lang="(ja|en|zh-CN)"/,
-    `${label}: language missing (expected ja, en, or zh-CN)`,
+    new RegExp(`<html[^>]*lang="${wantLang}"`),
+    `${label}: language must be ${wantLang}`,
   );
   assert.equal(
     (html.match(/<h1(?:\s|>)/g) || []).length,

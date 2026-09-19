@@ -22,6 +22,8 @@ if (
 }
 export const site = {
   name: "再生医療ガイド",
+  nameEn: "Regenerative Medicine Guide",
+  nameZh: "再生医学指南",
   url: parsedUrl.origin,
   description:
     "再生医療と幹細胞について、基礎知識から研究の読み方、治療を検討するときの確認事項まで。確かな情報とともに、一つずつ理解するための情報ガイド。",
@@ -59,6 +61,10 @@ export function localizedPath(base: string, locale: SiteLocaleCode): string {
   return `/${locale}${normalized}`;
 }
 
+export function siteNameFor(locale: SiteLocaleCode): string {
+  return locale === "en" ? site.nameEn : locale === "zh" ? site.nameZh : site.name;
+}
+
 export function pageMetadata(
   title: string,
   description: string,
@@ -68,8 +74,11 @@ export function pageMetadata(
 ): Metadata {
   const base = basePathOf(path);
   const canonical = absolute(localizedPath(base, locale));
+  const siteName = siteNameFor(locale);
   return {
-    title,
+    // NOTE: non-Japanese pages use absolute titles so the Japanese
+    // root-layout template ("%s | 再生医療ガイド") never leaks in.
+    title: locale === "ja" ? title : { absolute: `${title} | ${siteName}` },
     description,
     alternates: {
       canonical,
@@ -81,10 +90,10 @@ export function pageMetadata(
     },
     robots: { index: publiclyIndexable && allowIndex, follow: true },
     openGraph: {
-      title: `${title} | ${site.name}`,
+      title: `${title} | ${siteName}`,
       description,
       url: canonical,
-      siteName: site.name,
+      siteName,
       locale: ogLocaleFor[locale],
       alternateLocale: (Object.values(ogLocaleFor) as string[]).filter(
         (value) => value !== ogLocaleFor[locale],
@@ -95,13 +104,13 @@ export function pageMetadata(
           url: absolute("/social-card.png"),
           width: 1200,
           height: 630,
-          alt: site.name,
+          alt: siteName,
         },
       ],
     },
     twitter: {
       card: "summary_large_image",
-      title,
+      title: `${title} | ${siteName}`,
       description,
       images: [absolute("/social-card.png")],
     },

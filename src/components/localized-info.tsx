@@ -42,15 +42,15 @@ export function LocalizedInfo({ locale, slug }: { locale: SiteLocale; slug: Info
   return (
     <div lang={en ? "en" : "zh-CN"} className="localized-page">
       <div className="container inner-page">
-        <Breadcrumbs homeLabel={copy.home} homeHref={`/${locale}/`} items={[{ label: content.title }]} />
+        <Breadcrumbs homeLabel={copy.home} homeHref={`/${locale}/`} locale={locale} items={[{ label: content.title }]} />
         <div className="page-heading">
           <span className="eyebrow">{copy.eyebrow}</span>
           <h1>{content.title}</h1>
           <p>{content.description}</p>
         </div>
         <div className="prose">
-          {slug === "sources" && <SourceDirectory />}
-          {slug === "supervision" && <ReviewerProfile />}
+          {slug === "sources" && <SourceDirectory locale={locale} />}
+          {slug === "supervision" && <ReviewerProfile locale={locale} />}
           {slug !== "supervision" && slug !== "sources" && content.sections.map((section) => (
             <section key={section.title}>
               <h2>{section.title}</h2>
@@ -86,7 +86,7 @@ export function LocalizedInfo({ locale, slug }: { locale: SiteLocale; slug: Info
             <div className="policy-callout">
               <h2>{copy.contactTitle}</h2>
               <p>{copy.contactBody}</p>
-              <ContactForm />
+              <ContactForm locale={locale} />
               {site.contactEmail && <p className="contact-alternative">{copy.contactAlt}<a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a></p>}
             </div>
           ) : (

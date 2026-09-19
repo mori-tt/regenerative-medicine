@@ -10,3 +10,17 @@ export function LocaleDocument() {
   }, [pathname]);
   return null;
 }
+
+export function SkipLink() {
+  const pathname = usePathname();
+  const label = pathname.startsWith("/en")
+    ? "Skip to content"
+    : pathname.startsWith("/zh")
+      ? "跳到正文"
+      : "本文へスキップ";
+  return (
+    <a className="skip-link" href="#main">
+      {label}
+    </a>
+  );
+}
