@@ -198,7 +198,7 @@ svg {
 .hero {
   display: grid;
   grid-template-columns: 1fr 1.05fr;
-  gap: 30px;
+  gap: 40px;
   padding-top: 47px;
   padding-bottom: 48px;
   align-items: center;
@@ -288,7 +288,9 @@ svg {
 }
 .visual-label {
   display: flex;
-  gap: 8px;
+  flex-wrap: wrap;
+  row-gap: 3px;
+  column-gap: 8px;
   align-items: center;
   position: absolute;
   bottom: 25px;
@@ -297,6 +299,7 @@ svg {
   font-family: Arial, sans-serif;
   font-size: 8px;
   letter-spacing: 0.08em;
+  z-index: 1;
 }
 .visual-label > span:last-child {
   font-family: inherit;
@@ -313,8 +316,9 @@ svg {
 }
 .hero-floating {
   position: absolute;
-  left: -24px;
+  left: -16px;
   bottom: 64px;
+  max-width: calc(100% - 24px);
   background: #fffef9ed;
   border: 1px solid white;
   box-shadow: 0 8px 25px #36463509;
@@ -324,6 +328,7 @@ svg {
   align-items: center;
   font-size: 12px;
   letter-spacing: 0.04em;
+  z-index: 2;
 }
 .hero-floating small {
   display: block;
@@ -331,7 +336,7 @@ svg {
   color: #829080;
   margin-top: 3px;
 }
-.hero-floating > span { min-width: 0; }
+.hero-floating > span { min-width: 0; overflow-wrap: break-word; }
 .visual-label > span:last-child { min-width: 0; overflow-wrap: anywhere; text-align: right; }
 .mobile-only {
   display: none;
@@ -1316,7 +1321,7 @@ svg {
     font-size: 11px;
   }
   .hero {
-    gap: 15px;
+    gap: 22px;
   }
   .hero h1 {
     font-size: 35px;
@@ -1326,7 +1331,8 @@ svg {
   }
   .hero-floating {
     padding: 14px;
-    left: -10px;
+    left: -8px;
+    max-width: calc(100% - 16px);
     font-size: 11px;
   }
   .trust-strip > div {

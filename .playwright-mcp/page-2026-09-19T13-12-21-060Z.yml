@@ -1,0 +1,245 @@
+- generic [active] [ref=f101e1]:
+  - link "本文へスキップ" [ref=f101e2] [cursor=pointer]:
+    - /url: "#main"
+  - generic [ref=f101e4]:
+    - generic [ref=f101e5]: 再生医療と幹細胞を、もっとわかりやすく。
+    - generic [ref=f101e6]: 一つずつ、確かな理解へ。
+  - banner [ref=f101e7]:
+    - generic [ref=f101e8]:
+      - link "再生医療ガイド ホーム" [ref=f101e9] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f101e16]:
+          - text: 再生医療ガイド
+          - generic [ref=f101e17]: REGENERATIVE MEDICINE GUIDE
+      - generic [ref=f101e18]:
+        - link "私たちの編集方針" [ref=f101e19] [cursor=pointer]:
+          - /url: /editorial-policy/
+        - link "医師監修について ↗" [ref=f101e20] [cursor=pointer]:
+          - /url: /supervision/
+      - link "記事を検索" [ref=f101e21] [cursor=pointer]:
+        - /url: /search/
+        - generic [ref=f101e25]: 記事を探す
+      - navigation "Language selection" [ref=f101e26]:
+        - generic [ref=f101e27]: LANGUAGE
+        - link "日本語" [ref=f101e28] [cursor=pointer]:
+          - /url: /
+        - link "English" [ref=f101e29] [cursor=pointer]:
+          - /url: /en/
+        - link "中文" [ref=f101e30] [cursor=pointer]:
+          - /url: /zh/
+    - navigation "メインナビゲーション" [ref=f101e31]:
+      - link "ホーム" [ref=f101e32] [cursor=pointer]:
+        - /url: /
+      - link "再生医療の基礎" [ref=f101e33] [cursor=pointer]:
+        - /url: /categories/basics/
+      - link "幹細胞を知る" [ref=f101e34] [cursor=pointer]:
+        - /url: /categories/stem-cells/
+      - link "治療を考える" [ref=f101e35] [cursor=pointer]:
+        - /url: /categories/treatment/
+      - link "研究とニュース" [ref=f101e36] [cursor=pointer]:
+        - /url: /categories/research/
+      - link "このサイトについて" [ref=f101e37] [cursor=pointer]:
+        - /url: /about/
+  - main [ref=f101e38]:
+    - generic [ref=f101e39]:
+      - generic [ref=f101e40]:
+        - generic [ref=f101e41]: KNOWLEDGE FOR YOUR NEXT STEP
+        - heading [level=1] [ref=f101e43]:
+          - text: 再生医療を知る。これからの選択に、
+          - emphasis [ref=f101e44]: 確かな理解を。
+        - paragraph [ref=f101e45]: 期待も、疑問も、一つずつ。再生医療と幹細胞のことを、 わかりやすく、丁寧に伝えます。
+        - link "はじめての再生医療" [ref=f101e46] [cursor=pointer]:
+          - /url: /articles/what-is-regenerative-medicine/
+        - generic [ref=f101e49]: 知ることが、自分らしい選択の第一歩。
+      - generic [ref=f101e50]:
+        - img "細胞をモチーフにした抽象イラスト（模式的な表現）" [ref=f101e51]:
+          - generic [ref=f101e153]: THE SCIENCE OF POSSIBILITY
+          - generic [ref=f101e154]: 01 / 04
+        - generic [ref=f101e155]:
+          - text: LIFE, SCIENCE & YOU
+          - generic [ref=f101e157]: 細胞をモチーフにしたイメージ
+        - generic [ref=f101e161]:
+          - text: 難しいことを、やさしく。
+          - generic [ref=f101e162]: あなたの「知りたい」に寄り添うメディア
+    - generic [ref=f101e164]:
+      - generic [ref=f101e169]:
+        - text: 医師監修を前提とした編集体制
+        - generic [ref=f101e170]: 記事ごとに出典と確認範囲を整理しています
+      - generic [ref=f101e174]:
+        - text: 根拠となる情報を明記
+        - generic [ref=f101e175]: 公的機関・研究機関などの出典へ
+      - generic [ref=f101e183]:
+        - text: 中立的な情報提供
+        - generic [ref=f101e184]: 編集記事と広告を明確に区別します
+    - generic [ref=f101e185]:
+      - generic [ref=f101e186]:
+        - generic [ref=f101e187]:
+          - generic [ref=f101e188]: EXPLORE TOPICS
+          - heading "知りたいことから、探す。" [level=2] [ref=f101e189]
+        - generic [ref=f101e190]: あなたのペースで、理解を深める。
+      - generic [ref=f101e191]:
+        - link "01 再生医療の基礎 まずはここから。再生医療の考え方と、知っておきたい言葉を整理します。 THE BASICS" [ref=f101e192] [cursor=pointer]:
+          - /url: /categories/basics/
+          - generic [ref=f101e193]: "01"
+          - heading "再生医療の基礎" [level=3] [ref=f101e201]
+          - paragraph [ref=f101e202]: まずはここから。再生医療の考え方と、知っておきたい言葉を整理します。
+          - generic [ref=f101e203]: THE BASICS
+        - link "02 幹細胞を知る iPS細胞、ES細胞、体性幹細胞。それぞれの特徴を学びます。 STEM CELLS" [ref=f101e207] [cursor=pointer]:
+          - /url: /categories/stem-cells/
+          - generic [ref=f101e208]: "02"
+          - heading "幹細胞を知る" [level=3] [ref=f101e217]
+          - paragraph [ref=f101e218]: iPS細胞、ES細胞、体性幹細胞。それぞれの特徴を学びます。
+          - generic [ref=f101e219]: STEM CELLS
+        - link "03 治療を考える 費用、安全性、医師への質問。治療を検討する前の情報をまとめます。 YOUR CHOICES" [ref=f101e223] [cursor=pointer]:
+          - /url: /categories/treatment/
+          - generic [ref=f101e224]: "03"
+          - heading "治療を考える" [level=3] [ref=f101e230]
+          - paragraph [ref=f101e231]: 費用、安全性、医師への質問。治療を検討する前の情報をまとめます。
+          - generic [ref=f101e232]: YOUR CHOICES
+        - link "04 研究とニュース 研究の成果と、医療で使えることの違いを丁寧に読み解きます。 RESEARCH" [ref=f101e236] [cursor=pointer]:
+          - /url: /categories/research/
+          - generic [ref=f101e237]: "04"
+          - heading "研究とニュース" [level=3] [ref=f101e242]
+          - paragraph [ref=f101e243]: 研究の成果と、医療で使えることの違いを丁寧に読み解きます。
+          - generic [ref=f101e244]: RESEARCH
+    - generic [ref=f101e249]:
+      - generic [ref=f101e250]:
+        - img "細胞をモチーフにした抽象イラスト（模式的な表現）" [ref=f101e251]
+        - generic [ref=f101e351]: FIRST STEP GUIDE
+      - generic [ref=f101e352]:
+        - generic [ref=f101e353]: はじめての方へ
+        - heading "「再生医療って、なんだろう？」 その疑問から、はじめよう。" [level=2] [ref=f101e354]: 「再生医療って、なんだろう？」その疑問から、はじめよう。
+        - paragraph [ref=f101e355]: よく耳にするけれど、少し難しく感じる再生医療。基本的な仕組みと、知っておきたいことをまとめました。
+        - link [ref=f101e356] [cursor=pointer]:
+          - /url: /articles/what-is-regenerative-medicine/
+    - generic [ref=f101e361]:
+      - generic [aria-hidden] [ref=f101e362]:
+        - generic [ref=f101e363]: J S R M
+        - generic [ref=f101e364]: OFFICIAL SOURCE GUIDE
+      - generic [ref=f101e365]:
+        - generic [ref=f101e366]: SPECIAL FEATURE
+        - heading "日本再生医療学会を知る。" [level=2] [ref=f101e367]
+        - paragraph [ref=f101e368]: 再生医療を支える学会の役割、認定制度、制度情報を公式資料から整理しました。千原良友先生の所属学会についても、治療の判断と混同しないように解説します。
+        - link [ref=f101e369] [cursor=pointer]:
+          - /url: /jsrm/
+    - generic [ref=f101e373]:
+      - generic [ref=f101e374]:
+        - generic [ref=f101e375]:
+          - generic [ref=f101e376]: THE JOURNAL
+          - heading "一つずつ、理解を深める。" [level=2] [ref=f101e377]
+        - link "記事をすべて見る" [ref=f101e378] [cursor=pointer]:
+          - /url: /articles/
+      - generic [ref=f101e381]:
+        - generic [ref=f101e382]:
+          - article [ref=f101e383]:
+            - link [aria-hidden] [ref=f101e384] [cursor=pointer]:
+              - /url: /articles/cells-tissues-organs/
+              - generic [ref=f101e386]: 再生医療の基礎
+            - generic [ref=f101e387]:
+              - generic [ref=f101e388]:
+                - generic [ref=f101e389]: 一般情報・編集部記事
+                - generic [ref=f101e390]: 約5分で読める
+              - heading [level=3] [ref=f101e391]:
+                - link "細胞・組織・臓器の基礎：体のつくりから理解する" [ref=f101e392] [cursor=pointer]:
+                  - /url: /articles/cells-tissues-organs/
+              - generic [ref=f101e393]: 2026.09.19 更新
+          - article [ref=f101e397]:
+            - link [aria-hidden] [ref=f101e398] [cursor=pointer]:
+              - /url: /articles/japanese-society-for-regenerative-medicine/
+              - generic [ref=f101e400]: 研究とニュース
+            - generic [ref=f101e401]:
+              - generic [ref=f101e402]:
+                - generic [ref=f101e403]: 一般情報・編集部記事
+                - generic [ref=f101e404]: 約7分で読める
+              - heading [level=3] [ref=f101e405]:
+                - link "日本再生医療学会とは？役割・認定制度・公式情報の読み方" [ref=f101e406] [cursor=pointer]:
+                  - /url: /articles/japanese-society-for-regenerative-medicine/
+              - generic [ref=f101e407]: 2026.09.19 更新
+          - article [ref=f101e411]:
+            - link [aria-hidden] [ref=f101e412] [cursor=pointer]:
+              - /url: /articles/regenerative-medicine-history/
+              - generic [ref=f101e414]: 再生医療の基礎
+            - generic [ref=f101e415]:
+              - generic [ref=f101e416]:
+                - generic [ref=f101e417]: 一般情報・編集部記事
+                - generic [ref=f101e418]: 約5分で読める
+              - heading [level=3] [ref=f101e419]:
+                - link "再生医療の歩み：輸血・移植から細胞の時代へ" [ref=f101e420] [cursor=pointer]:
+                  - /url: /articles/regenerative-medicine-history/
+              - generic [ref=f101e421]: 2026.09.19 更新
+        - complementary [ref=f101e425]:
+          - generic [ref=f101e426]:
+            - generic [ref=f101e427]: OUR PROMISE
+            - heading "情報の確かさを、 大切に。" [level=3] [ref=f101e431]: 情報の確かさを、大切に。
+            - paragraph [ref=f101e432]: 誰が、何を根拠に伝えるのか。私たちの編集と監修の考え方。
+            - link "編集方針を読む" [ref=f101e433] [cursor=pointer]:
+              - /url: /editorial-policy/
+    - generic [ref=f101e436]:
+      - complementary "広告掲載枠のご案内" [ref=f101e437]:
+        - generic [ref=f101e438]: ADVERTISEMENT
+        - generic [ref=f101e439]: 医療の情報を、必要な方へ。
+        - paragraph [ref=f101e440]: 医療機関・クリニックの広告掲載について
+        - link "掲載のご案内" [ref=f101e441] [cursor=pointer]:
+          - /url: /advertising/
+        - generic [ref=f101e444]: 広告募集予定枠 · 現在広告の配信はありません
+      - generic [ref=f101e445]:
+        - generic [ref=f101e446]:
+          - generic [ref=f101e447]: BEFORE YOUR DECISION
+          - heading "治療について考えはじめたら。" [level=2] [ref=f101e448]
+          - paragraph [ref=f101e449]: 効果だけでなく、リスクや費用も。医師に相談する前の確認事項を整理しましょう。
+        - link "確認したいことを読む" [ref=f101e450] [cursor=pointer]:
+          - /url: /articles/questions-before-treatment/
+  - contentinfo [ref=f101e453]:
+    - generic [ref=f101e454]:
+      - generic [ref=f101e455]:
+        - generic [ref=f101e456]:
+          - link "再生医療ガイド ホーム" [ref=f101e457] [cursor=pointer]:
+            - /url: /
+            - generic [ref=f101e464]:
+              - text: 再生医療ガイド
+              - generic [ref=f101e465]: REGENERATIVE MEDICINE GUIDE
+          - paragraph [ref=f101e466]: 知ることから、はじまる選択。再生医療とあなたをつなぐ、情報ガイド。
+        - generic [ref=f101e467]:
+          - link "はじめての方へ" [ref=f101e468] [cursor=pointer]:
+            - /url: /guide/
+          - link "用語集" [ref=f101e469] [cursor=pointer]:
+            - /url: /glossary/
+          - link "よくある質問" [ref=f101e470] [cursor=pointer]:
+            - /url: /faq/
+          - link "安全性の考え方" [ref=f101e471] [cursor=pointer]:
+            - /url: /safety/
+          - link "制度と法律" [ref=f101e472] [cursor=pointer]:
+            - /url: /regulation/
+          - link "運営について" [ref=f101e473] [cursor=pointer]:
+            - /url: /about/
+          - link "編集方針" [ref=f101e474] [cursor=pointer]:
+            - /url: /editorial-policy/
+          - link "医師監修について" [ref=f101e475] [cursor=pointer]:
+            - /url: /supervision/
+          - link "広告掲載について" [ref=f101e476] [cursor=pointer]:
+            - /url: /advertising/
+          - link "利用規約" [ref=f101e477] [cursor=pointer]:
+            - /url: /terms/
+          - link "プライバシーポリシー" [ref=f101e478] [cursor=pointer]:
+            - /url: /privacy/
+          - link "利用上の注意" [ref=f101e479] [cursor=pointer]:
+            - /url: /disclaimer/
+          - link "訂正・更新の方針" [ref=f101e480] [cursor=pointer]:
+            - /url: /corrections/
+          - link "引用・転載" [ref=f101e481] [cursor=pointer]:
+            - /url: /citations/
+          - link "情報源・参考サイト" [ref=f101e482] [cursor=pointer]:
+            - /url: /sources/
+          - link "アクセシビリティ" [ref=f101e483] [cursor=pointer]:
+            - /url: /accessibility/
+          - link "サイトマップ" [ref=f101e484] [cursor=pointer]:
+            - /url: /site-guide/
+          - link "更新情報" [ref=f101e485] [cursor=pointer]:
+            - /url: /updates/
+          - link "お問い合わせ" [ref=f101e486] [cursor=pointer]:
+            - /url: /contact/
+      - paragraph [ref=f101e487]: 本サイトは情報提供を目的としており、診断・治療の代わりとなるものではありません。治療については、医師にご相談ください。
+      - generic [ref=f101e488]:
+        - generic [ref=f101e489]: © 2026 再生医療ガイド
+        - generic [ref=f101e490]: KNOWLEDGE FOR YOUR NEXT STEP.
+  - alert [ref=f101e491]
