@@ -5,6 +5,8 @@ import { infoPages } from "@/content/pages";
 import { pageMetadata, site } from "@/lib/site";
 import { ReviewerProfile } from "@/components/reviewer-profile";
 import { publication } from "@/lib/site-config";
+import { ContactForm } from "@/components/contact-form";
+import { SourceDirectory } from "@/components/source-directory";
 export const dynamicParams = false;
 export function generateStaticParams() {
   return infoPages.map((p) => ({ page: p.slug }));
@@ -36,8 +38,9 @@ export default async function InfoPage({
         <p>{info.description}</p>
       </div>
       <div className="prose">
+        {page === "sources" && <SourceDirectory />}
         {page === "supervision" && <ReviewerProfile />}
-        {page !== "supervision" && info.sections.map((s) => (
+        {page !== "supervision" && page !== "sources" && info.sections.map((s) => (
           <section key={s.title}>
             <h2>{s.title}</h2>
             {s.paragraphs.map((p) => (
@@ -45,6 +48,17 @@ export default async function InfoPage({
             ))}
           </section>
         ))}
+        {page === "about" && (
+          <section className="operator-info" aria-labelledby="operator-info-title">
+            <h2 id="operator-info-title">運営者情報</h2>
+            {site.operatorName && <p><strong>運営者：</strong>{site.operatorName}</p>}
+            {site.operatorAddress && <p><strong>所在地：</strong>{site.operatorAddress}</p>}
+            {site.contactEmail && <p><strong>連絡先：</strong><a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a></p>}
+            {(!site.operatorName || !site.operatorAddress || !site.contactEmail) && publication.showPreparationNotices && (
+              <p className="form-result error">運営者名・所在地・連絡先は、実値を環境変数に設定してから正式公開してください。</p>
+            )}
+          </section>
+        )}
         {page === "advertising" && (
           <p>
             参考：
@@ -59,18 +73,10 @@ export default async function InfoPage({
         )}
         {page === "contact" ? (
           <div className="policy-callout">
-            <h2>
-              {site.contactEmail
-                ? "メールでお問い合わせ"
-                : "受付開始に向けて準備中です"}
-            </h2>
-            {site.contactEmail ? (
-              <p>
-                <a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a>
-              </p>
-            ) : (
-              <p>受付先が決まり次第、このページでご案内します。</p>
-            )}
+            <h2>お問い合わせフォーム</h2>
+            <p>送信内容は運営上の連絡と記事の確認にのみ使用します。診断・治療の相談、予約、緊急連絡には対応していません。</p>
+            <ContactForm />
+            {site.contactEmail && <p className="contact-alternative">フォームが利用できない場合：<a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a></p>}
           </div>
         ) : (
           <div className="policy-callout">

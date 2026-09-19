@@ -34,6 +34,11 @@ jobs:
         run: npm run build
         env:
           GITHUB_PAGES: "true"
+          # GitHub Pagesではcanonical・OGP・faviconの基準ドメインを明示する。
+          # 独自ドメインへ移行する場合は、リポジトリのSecrets/Variablesで上書きする。
+          NEXT_PUBLIC_SITE_URL: ${{ vars.NEXT_PUBLIC_SITE_URL || 'https://mori-tt.github.io' }}
+          NEXT_PUBLIC_SITE_INDEXABLE: "false"
+          NEXT_PUBLIC_PUBLICATION_MODE: "preview"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

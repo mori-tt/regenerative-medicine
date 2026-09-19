@@ -34,6 +34,7 @@ for (const path of pages) {
     `${label}: exactly one h1 required`,
   );
   assert.match(html, /<title>[^<]+<\/title>/, `${label}: title missing`);
+  assert.ok(!html.includes("undefined |"), `${label}: metadata contains undefined title`);
   const is404 =
     label === "404.html" ||
     label.startsWith("404/") ||
@@ -114,6 +115,8 @@ for (const match of sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)) {
 }
 await access(join(root, ".htaccess"));
 await access(join(root, "robots.txt"));
+await access(join(root, "contact.php"));
+await access(join(root, "composer.json"));
 console.log(
   `Static export OK: ${pages.length} HTML pages, ${linkCount} local links/assets checked; mode=${isPreview ? "preview (noindex)" : "public"}.`,
 );

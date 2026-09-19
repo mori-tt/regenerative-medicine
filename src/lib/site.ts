@@ -26,6 +26,8 @@ export const site = {
   description:
     "再生医療と幹細胞について、基礎知識から研究の読み方、治療を検討するときの確認事項まで。確かな情報とともに、一つずつ理解するための情報ガイド。",
   contactEmail: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "",
+  operatorName: process.env.NEXT_PUBLIC_OPERATOR_NAME || "",
+  operatorAddress: process.env.NEXT_PUBLIC_OPERATOR_ADDRESS || "",
 };
 export function publicAsset(path: string) {
   const normalized = path.startsWith("/") ? path : `/${path}`;

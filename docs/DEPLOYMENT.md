@@ -13,6 +13,8 @@ NEXT_PUBLIC_SITE_URL=https://your-domain.jp
 NEXT_PUBLIC_SITE_INDEXABLE=false
 NEXT_PUBLIC_PUBLICATION_MODE=preview
 NEXT_PUBLIC_CONTACT_EMAIL=実際の受付用メールアドレス
+NEXT_PUBLIC_OPERATOR_NAME=運営者の正式名称
+NEXT_PUBLIC_OPERATOR_ADDRESS=運営者の所在地
 NEXT_PUBLIC_BASE_PATH=
 NEXT_PUBLIC_ASSET_PREFIX=
 ```
@@ -72,9 +74,39 @@ npm run preview
 
 新しい`_next`等のアセットを先にアップロードし、その後HTMLを更新すると、転送中に参照先が欠ける状況を減らせます。以前のアセットは移行確認まで保持します。削除した記事はサーバー上の旧フォルダも個別に確認して撤去し、必要に応じて適切な移転先への301リダイレクトをサーバー側に設定します。`out/`の上書きだけでは旧ファイルは削除されません。
 
-## 6. 広告と問い合わせ
+## 6. Lolipopのお問い合わせフォーム
 
-問い合わせは現在メールリンク方式です。フォームを設ける場合は外部フォームサービスまたは別途サーバー処理を導入し、個人情報の取り扱いを更新します。
+お問い合わせフォームは静的HTMLから`/contact.php`へPOSTします。PHPが利用できるLolipopでは、PHP用のPHPMailerを使ってLolipopのSMTP（`smtp.lolipop.jp`、通常は465/SSLまたは587/STARTTLS）から送信する構成を推奨します。Lolipopの管理画面・公式マニュアルで、契約プランのPHPとメールアカウントが有効であることを確認してください。
+
+`public/composer.json`を使って、Composerが使える手元の環境で次を実行します。生成された`public/vendor/`も、`contact.php`と一緒に公開フォルダへ転送してください。
+
+```bash
+composer install --no-dev --working-dir=public
+```
+
+Composerをサーバーで実行できない場合は、同じPHPメジャー・マイナーバージョンで手元に生成した`public/vendor/`を転送します。PHPMailerは`public/vendor/autoload.php`から読み込まれます。
+
+PHPの実行環境には、次の値を環境変数として設定します。`.env.local`を公開フォルダへ置いても、LolipopのPHPが自動的に読むとは限らないため、管理画面の環境変数機能またはサーバー側の設定方法に合わせてください。秘密のSMTPパスワードはGitに追加しません。
+
+```dotenv
+CONTACT_TO_EMAIL=受信するメールアドレス
+CONTACT_FROM_EMAIL=同じドメインの送信用メールアドレス
+CONTACT_FROM_NAME=再生医療ガイド
+CONTACT_SMTP_HOST=smtp.lolipop.jp
+CONTACT_SMTP_PORT=465
+CONTACT_SMTP_USER=送信用メールアドレス
+CONTACT_SMTP_PASS=メールアカウントのパスワード
+CONTACT_SMTP_SECURE=ssl
+CONTACT_PHPMAILER_AUTOLOAD=
+```
+
+`CONTACT_FROM_EMAIL`は利用者のメールアドレスにせず、サイト側のメールアドレスに固定します。利用者のアドレスはReply-Toだけに設定し、なりすましやヘッダーインジェクションを避けます。フォームには医療相談を送らない旨を明記しています。配置後は実在するテストアドレスで、送信・返信・迷惑メール判定・エラー時の挙動を確認してください。
+
+PHPMailerが利用できない場合は、PHPの`mail()`へフォールバックしますが、到達性や迷惑メール対策の面でSMTP送信を優先します。Lolipopの公式仕様では、SMTP-AUTHとSSL/TLS、ポート465/587が案内されています。
+
+フォームで取得する情報をプライバシーポリシーに反映済みです。運営者名・所在地・保存期間などの実値は、公開前に必ず確定して掲載してください。
+
+## 7. 広告
 
 静的バナーは`src/content/ads.ts`に設定し、素材を`public/`へ置いて再ビルドします。開始・終了日時による自動更新はなく、掲載開始・終了時にも再ビルドと転送が必要です。リンクに`sponsored`を付けることだけで医療広告の適法性が確認されたことにはなりません。
 
