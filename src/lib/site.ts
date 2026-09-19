@@ -36,23 +36,59 @@ export function publicAsset(path: string) {
 export function absolute(path = "/") {
   return new URL(publicAsset(path), site.url).toString();
 }
+export type SiteLocaleCode = "ja" | "en" | "zh";
+
+const ogLocaleFor: Record<SiteLocaleCode, string> = {
+  ja: "ja_JP",
+  en: "en_US",
+  zh: "zh_CN",
+};
+
+export function basePathOf(path: string): string {
+  if (path === "/en" || path === "/en/") return "/";
+  if (path === "/zh" || path === "/zh/") return "/";
+  if (path.startsWith("/en/")) return path.slice(3) || "/";
+  if (path.startsWith("/zh/")) return path.slice(3) || "/";
+  return path.startsWith("/") ? path : `/${path}`;
+}
+
+export function localizedPath(base: string, locale: SiteLocaleCode): string {
+  const normalized = base.startsWith("/") ? base : `/${base}`;
+  if (locale === "ja") return normalized;
+  if (normalized === "/") return `/${locale}/`;
+  return `/${locale}${normalized}`;
+}
+
 export function pageMetadata(
   title: string,
   description: string,
   path: string,
   allowIndex = true,
+  locale: SiteLocaleCode = "ja",
 ): Metadata {
+  const base = basePathOf(path);
+  const canonical = absolute(localizedPath(base, locale));
   return {
     title,
     description,
-    alternates: { canonical: absolute(path) },
+    alternates: {
+      canonical,
+      languages: {
+        ja: absolute(localizedPath(base, "ja")),
+        en: absolute(localizedPath(base, "en")),
+        "zh-CN": absolute(localizedPath(base, "zh")),
+      },
+    },
     robots: { index: publiclyIndexable && allowIndex, follow: true },
     openGraph: {
       title: `${title} | ${site.name}`,
       description,
-      url: absolute(path),
+      url: canonical,
       siteName: site.name,
-      locale: "ja_JP",
+      locale: ogLocaleFor[locale],
+      alternateLocale: (Object.values(ogLocaleFor) as string[]).filter(
+        (value) => value !== ogLocaleFor[locale],
+      ),
       type: "website",
       images: [
         {

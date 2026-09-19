@@ -17,7 +17,13 @@ const categories = {
   },
 } as const;
 
-export function LocalizedCategory({ locale, slug }: { locale: SiteLocale; slug: keyof typeof categories.en }) {
+export type LocalizedCategorySlug = keyof typeof categories.en;
+export function localizedCategoryFor(locale: SiteLocale, slug: LocalizedCategorySlug) {
+  const [title, description] = categories[locale][slug];
+  return { title, description };
+}
+
+export function LocalizedCategory({ locale, slug }: { locale: SiteLocale; slug: LocalizedCategorySlug }) {
   const [title, description] = categories[locale][slug];
   const en = locale === "en";
   return <div lang={en ? "en" : "zh-CN"} className="localized-page"><div className="container inner-page"><div className="page-heading"><span className="eyebrow">{en ? "TOPIC" : "主题"}</span><h1>{title}</h1><p>{description}</p></div><div className="question-box"><div><h2>{en ? "Careful, source-based reading" : "基于来源的谨慎阅读"}</h2><p>{en ? "Each article has a separate editorial manuscript in this language. Check the evidence, limitations, and medical questions before making a decision." : "每篇文章都有单独的中文编辑原稿。做出决定前，请确认证据、局限性和需要向医生询问的问题。"}</p></div><Link className="button outline" href={`/${locale}/`}>{en ? "Back to the home page" : "返回首页"}</Link></div></div><LocalizedArticles locale={locale} category={slug} embedded /></div>;

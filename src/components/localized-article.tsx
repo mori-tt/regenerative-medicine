@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { articles, categoryFor, type Article } from "@/content/articles";
+import { articleLocales } from "@/content/article-locales";
 import { localizedArticle, type SiteLocale } from "@/content/locales";
 
 const englishTerms: Record<string, string> = {
@@ -15,11 +16,12 @@ function topicFromSlug(slug: string, locale: SiteLocale) {
 
 export function localizedArticleFor(locale: SiteLocale, source: Article) {
   if (source.slug === "what-is-regenerative-medicine") return localizedArticle[locale];
-  const topic = topicFromSlug(source.slug, locale);
+  const translated = articleLocales[source.slug]?.[locale];
+  const topic = translated ? translated.title : topicFromSlug(source.slug, locale);
   const en = locale === "en";
   return {
-    title: en ? `${topic}: A Careful Guide` : `${topic}：谨慎理解指南`,
-    description: en ? `A carefully prepared guide to ${topic.toLowerCase()}, including evidence, limitations, safety, and questions to discuss with a healthcare professional.` : `介绍${topic}，包括证据、局限性、安全性，以及可以与医疗专业人员讨论的问题。`,
+    title: translated ? translated.title : en ? `${topic}: A Careful Guide` : `${topic}：谨慎理解指南`,
+    description: translated ? translated.description : en ? `A carefully prepared guide to ${topic.toLowerCase()}, including evidence, limitations, safety, and questions to discuss with a healthcare professional.` : `介绍${topic}，包括证据、局限性、安全性，以及可以与医疗专业人员讨论的问题。`,
     category: en ? categoryFor(source.category).en : { basics: "再生医学基础", "stem-cells": "认识干细胞", treatment: "考虑治疗时", research: "研究与新闻" }[source.category],
     points: en ? ["The topic name alone does not establish effectiveness or safety.", "Research findings, approved use, and individual treatment decisions must be separated.", "Discuss personal decisions with a qualified healthcare professional."] : ["主题名称本身不能证明疗效或安全性。", "必须区分研究成果、获批准的使用范围和个人治疗决定。", "涉及个人决定时，请咨询有资质的医疗专业人员。"],
     sections: en ? [["What this topic covers", `${topic} is explained here as general background information. The relevant method, target disease, and stage of evidence should be checked separately.`, "The same term may be used differently in research and clinical materials. Ask what is known, what remains uncertain, and who the information applies to."], ["How to read the evidence", "A laboratory result, an animal study, and a human clinical study answer different questions. Check participants, comparison groups, outcome measures, and follow-up time.", "Do not treat a promising result or a treatment name as proof of benefit. Limitations are part of the evidence and should be read alongside positive findings."], ["Safety and practical questions", "Ask about possible harms, monitoring, emergency arrangements, total cost, alternatives, and what happens if the expected benefit is not seen.", "Request written information and avoid making a rushed decision. A second opinion can help when interests or recommendations differ."], ["Before making a decision", "This page is educational and does not diagnose or recommend a personal treatment. Individual suitability depends on the disease, symptoms, tests, medical history, and current medicines.", "Use the information as a question list for a consultation, not as a substitute for one."], ["Official information and updates", "Regulatory status and approved uses can change. Confirm current information with official sources such as Japan’s Ministry of Health, Labour and Welfare and PMDA.", "The translated manuscript is maintained separately from the Japanese source and should be reviewed when the underlying medical evidence or regulations change."]] : [["本主题介绍什么", `本页面将${topic}作为一般性背景知识进行说明。具体方法、目标疾病和证据阶段需要分别确认。`, "同一个词在研究资料和临床说明中可能含义不同。请确认哪些内容已经明确、哪些仍不确定，以及适用于哪些人群。"], ["如何阅读证据", "实验室结果、动物研究和人体临床研究回答的问题不同。请确认参加者、对照组、评价指标和随访时间。", "有希望的结果或治疗名称本身不能证明获益。研究局限也属于证据的一部分，应与积极结果一起阅读。"], ["安全性与实际问题", "请询问可能的伤害、观察方式、紧急情况安排、总费用、其他选择，以及没有达到预期效果时的安排。", "请索取书面资料，不要在压力下仓促决定。当利益关系或建议不一致时，可以考虑第二意见。"], ["做出决定前", "本页面用于一般信息说明，不能进行诊断，也不推荐个人治疗。是否适合个人，需要结合疾病、症状、检查、病史和正在使用的药物判断。", "请把本文作为就诊时的问题清单，而不是替代就诊。"], ["官方资料与更新", "制度和批准范围可能发生变化。最新信息请通过厚生劳动省、PMDA等官方资料确认。", "翻译原稿与日文原稿分别维护，在医学证据或制度变化时需要重新审核。"]],

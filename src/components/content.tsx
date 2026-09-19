@@ -18,10 +18,14 @@ export function JsonLd({ data }: { data: unknown }) {
 }
 export function Breadcrumbs({
   items,
+  homeLabel = "ホーム",
+  homeHref = "/",
 }: {
   items: { label: string; href?: string }[];
+  homeLabel?: string;
+  homeHref?: string;
 }) {
-  const all = [{ label: "ホーム", href: "/" }, ...items];
+  const all = [{ label: homeLabel, href: homeHref }, ...items];
   return (
     <>
       <nav className="breadcrumbs" aria-label="パンくずリスト">

@@ -25,8 +25,8 @@ for (const path of pages) {
   const label = relative(root, path);
   assert.match(
     html,
-    /<html[^>]*lang="ja"/,
-    `${label}: Japanese language missing`,
+    /<html[^>]*lang="(ja|en|zh-CN)"/,
+    `${label}: language missing (expected ja, en, or zh-CN)`,
   );
   assert.equal(
     (html.match(/<h1(?:\s|>)/g) || []).length,
