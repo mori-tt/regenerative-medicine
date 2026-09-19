@@ -13,7 +13,7 @@ import { articleImageAlt } from "@/content/article-images";
 import { localizedArticle, localizedCategoryName, type SiteLocale } from "@/content/locales";
 import type { ArticleBodyLocale } from "@/content/article-bodies-research";
 import { AdSlot, Breadcrumbs, JsonLd } from "@/components/content";
-import { CellArt } from "@/components/visuals";
+import { CellArt, Icon } from "@/components/visuals";
 import { ReviewerProfile } from "@/components/reviewer-profile";
 import { absolute, publicAsset, site } from "@/lib/site";
 import { publication } from "@/lib/site-config";
@@ -173,6 +173,7 @@ export function LocalizedArticleCard({
         {!compact && <p>{article.description}</p>}
         <div className="card-bottom">
           <span>{source.updatedAt.replaceAll("-", ".")} · {copy.updated}</span>
+          <Icon name="arrow" size={19} />
         </div>
       </div>
     </article>
