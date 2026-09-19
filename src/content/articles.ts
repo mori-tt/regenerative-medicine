@@ -6116,6 +6116,2006 @@ const rawArticles: Article[] = [
     ],
     references: [mhlw],
   },
+  {
+    slug: "cell-sizes",
+    title: "細胞の大きさ比べ：卵子から血小板まで",
+    description:
+      "目に見えない細胞の世界のスケール感をつかみます。",
+    category: "basics",
+    updatedAt: "2026-09-19",
+    readingMinutes: 3,
+    status: "draft",
+    illustration: "cells",
+    points: [
+      "細胞の大きさは種類で大きく異なります。",
+      "単位（μm）の感覚があると説明が読みやすくなります。",
+      "小さいことと働きの重要さは関係ありません。",
+    ],
+    sections: [
+      {
+        id: "scale",
+        title: "大きさの目安",
+        paragraphs: [
+          "人の卵子は直径0.1mmほどで肉眼でかろうじて見えますが、多くの体細胞は10〜30μm（1μmは1mmの1000分の1）です。血小板はさらに小さく2〜3μmほどです。",
+        ],
+      },
+      {
+        id: "measure",
+        title: "測り方と単位",
+        paragraphs: [
+          "顕微鏡の画像にはスケールバー（物差し）が付いています。μmとnm（ナノメートル、μmの1000分の1）が出てきたら、対象の大きさを意識してみましょう。",
+        ],
+      },
+      {
+        id: "meaning",
+        title: "大きさが意味すること",
+        paragraphs: [
+          "赤血球の小ささは毛細血管を通るため、神経の長さは信号を遠くへ届けるためです。形と大きさは働きと結びついています。",
+        ],
+      },
+    ],
+    references: [cira],
+  },
+  {
+    slug: "blood-types",
+    title: "血液型の仕組み：ABO式と輸血の関係",
+    description:
+      "赤血球の目印の違いと、輸血で適合を見る理由を整理します。",
+    category: "basics",
+    updatedAt: "2026-09-19",
+    readingMinutes: 3,
+    status: "draft",
+    illustration: "cells",
+    points: [
+      "ABO式は赤血球の表面の目印の違いです。",
+      "合わない血液の輸血は重い副作用につながります。",
+      "血液型と性格・病気のかかりやすさは別の話です。",
+    ],
+    sections: [
+      {
+        id: "abo",
+        title: "ABO式とは",
+        paragraphs: [
+          "赤血球の表面にある糖鎖などの目印（抗原）の組み合わせで分けられます。血漿の中には、自分にない型への抗体があり、合わない血液が入ると固まる反応が起きます。",
+        ],
+      },
+      {
+        id: "transfusion",
+        title: "輸血での適合確認",
+        paragraphs: [
+          "輸血の前には血液型の検査と交差適合試験で適合を確かめます。適合は確率を上げる手段であり、体調の観察も続けられます。",
+        ],
+      },
+      {
+        id: "myths",
+        title: "血液型にまつわる誤解",
+        paragraphs: [
+          "血液型で性格や能力が決まるという科学的根拠はありません。病気のかかりやすさとの関連が報告される場合も、生活習慣などの影響と分けて考える必要があります。",
+        ],
+      },
+    ],
+    references: [mhlw],
+  },
+  {
+    slug: "body-water",
+    title: "体の水分と電解質：脱水を防ぐ考え方",
+    description:
+      "体重の約6割を占める水分の役割と、補給の基本をまとめます。",
+    category: "basics",
+    updatedAt: "2026-09-19",
+    readingMinutes: 3,
+    status: "draft",
+    illustration: "cells",
+    points: [
+      "成人の体の約60%は水分です。",
+      "水と塩分（電解質）のバランスが大切です。",
+      "のどの渇きを感じる前からの補給が基本です。",
+    ],
+    sections: [
+      {
+        id: "roles",
+        title: "水分の働き",
+        paragraphs: [
+          "血液やリンパの流れ、栄養や老廃物の運搬、体温の調整などを担います。わずかな不足でも疲れや集中力の低下につながります。",
+        ],
+      },
+      {
+        id: "electrolytes",
+        title: "電解質とは",
+        paragraphs: [
+          "ナトリウムやカリウムなど、水に溶けて電気を帯びた成分です。汗で失われるため、大量の発汗時は水だけでなく塩分の補給も必要です。",
+        ],
+      },
+      {
+        id: "intake",
+        title: "補給のコツ",
+        paragraphs: [
+          "起床時や入浴前後、運動時には意識して水分を取ります。持病や服薬で水分・塩分の制限がある方は、医師の指示を優先しましょう。",
+        ],
+      },
+    ],
+    references: [mhlw],
+  },
+  {
+    slug: "lymph-system",
+    title: "リンパの仕組み：むくみと免疫の通り道",
+    description:
+      "血管と並ぶ循環のもう一つの流れを整理します。",
+    category: "basics",
+    updatedAt: "2026-09-19",
+    readingMinutes: 3,
+    status: "draft",
+    illustration: "cells",
+    points: [
+      "リンパは組織の余分な水分を回収します。",
+      "リンパ節は異物をせき止める関所です。",
+      "むくみが続くときは原因の確認が必要です。",
+    ],
+    sections: [
+      {
+        id: "flow",
+        title: "リンパの流れ",
+        paragraphs: [
+          "毛細血管からしみ出た水分や老廃物はリンパ管に集められ、静脈へ戻ります。筋肉の動きが流れを助けるため、長時間の同じ姿勢ではむくみやすくなります。",
+        ],
+      },
+      {
+        id: "nodes",
+        title: "リンパ節の役割",
+        paragraphs: [
+          "首や脇、足の付け根などにあるリンパ節では、免疫細胞が細菌やウイルスを捕らえます。感染時に腫れて痛むのは、この働きの現れです。",
+        ],
+      },
+      {
+        id: "swelling",
+        title: "むくみへの対応",
+        paragraphs: [
+          "一過性のむくみは休息や軽い運動で改善します。片側だけの腫れや長引くむくみ、痛みを伴う場合は医療機関に相談しましょう。",
+        ],
+      },
+    ],
+    references: [mhlw],
+  },
+  {
+    slug: "microbiome",
+    title: "腸内細菌と体：共生する微生物の話",
+    description:
+      "100兆個ともいわれる腸内細菌の働きと付き合い方を紹介します。",
+    category: "basics",
+    updatedAt: "2026-09-19",
+    readingMinutes: 4,
+    status: "draft",
+    illustration: "cells",
+    points: [
+      "腸内には多様な細菌がすんでいます。",
+      "消化の助けや免疫との関わりが研究されています。",
+      "特定食品の誇大な効果には注意が必要です。",
+    ],
+    sections: [
+      {
+        id: "residents",
+        title: "腸内の住人たち",
+        paragraphs: [
+          "ヒトの腸内には100兆個ともいわれる細菌がすみ、その種類のバランスは人それぞれです。出産や食事、薬の影響で変化します。",
+        ],
+      },
+      {
+        id: "roles",
+        title: "分かってきた働き",
+        paragraphs: [
+          "食物繊維の分解やビタミンの合成、腸の防御、免疫の調整などへの関わりが研究されています。肥満や病気との関連も調べられていますが、因果の解明は途上です。",
+        ],
+      },
+      {
+        id: "living",
+        title: "付き合い方",
+        paragraphs: [
+          "多様な食品を取る食生活と、極端な除去や過剰な摂取を避けることが基本です。便移植などの医療は研究・診療の枠組みの中で行われるもので、自己判断の実施は危険です。",
+        ],
+      },
+    ],
+    references: [amed],
+  },
+  {
+    slug: "fever-basics",
+    title: "熱が出る仕組み：発熱と解熱の考え方",
+    description:
+      "体温を上げる体の判断と、対処の目安を整理します。",
+    category: "basics",
+    updatedAt: "2026-09-19",
+    readingMinutes: 3,
+    status: "draft",
+    illustration: "cells",
+    points: [
+      "発熱は免疫の働きを助ける体の反応です。",
+      "数字だけでなく全身の状態を見ます。",
+      "受診の目安を知っておくと安心です。",
+    ],
+    sections: [
+      {
+        id: "mechanism",
+        title: "なぜ熱が出るのか",
+        paragraphs: [
+          "細菌やウイルスを感知すると、脳の設定温度が上がり、震えや血管の収縮で熱を作ります。免疫の働きを高めるための体の戦略と考えられています。",
+        ],
+      },
+      {
+        id: "care",
+        title: "熱があるときの対応",
+        paragraphs: [
+          "水分をこまめに取り、楽な服装で休みます。解熱薬はつらさを和らげるためのもので、病気そのものを治すものではありません。使い方を薬剤師に確認しましょう。",
+        ],
+      },
+      {
+        id: "signals",
+        title: "受診を考える合図",
+        paragraphs: [
+          "意識がはっきりしない、呼吸が苦しい、水分が取れない、高熱が続く、乳幼児や高齢者でぐったりしているなどの場合は早めに受診します。治療中の発熱は提供機関の連絡先にも共有しましょう。",
+        ],
+      },
+    ],
+    references: [mhlw],
+  },
+  {
+    slug: "pain-basics",
+    title: "痛みの仕組み：信号と感じ方の違い",
+    description:
+      "痛みが伝わる経路と、感じ方が変わる理由を紹介します。",
+    category: "basics",
+    updatedAt: "2026-09-19",
+    readingMinutes: 3,
+    status: "draft",
+    illustration: "cells",
+    points: [
+      "痛みは危険を知らせる信号です。",
+      "同じ刺激でも感じ方は人や状況で変わります。",
+      "伝え方の工夫で診療がスムーズになります。",
+    ],
+    sections: [
+      {
+        id: "signals",
+        title: "痛みの伝わり方",
+        paragraphs: [
+          "けがや炎症の信号は神経を通って脳へ届き、痛みとして感じられます。反射的に手を引っ込める動きは、脳を経由しない素早い回路によるものです。",
+        ],
+      },
+      {
+        id: "perception",
+        title: "感じ方が変わる理由",
+        paragraphs: [
+          "緊張や不安、睡眠不足、過去の経験で痛みの感じ方は変わります。慢性の痛みでは神経の感度自体が上がっている場合があり、原因への対応と感じ方への対応の両方が検討されます。",
+        ],
+      },
+      {
+        id: "telling",
+        title: "痛みの伝え方",
+        paragraphs: [
+          "場所、始まった時期、どんな痛みか（ズキズキ・チクチクなど）、0〜10の強さ、何で楽になるかを整理して伝えると、診断や治療の選択に役立ちます。",
+        ],
+      },
+    ],
+    references: [mhlw],
+  },
+  {
+    slug: "joints-basics",
+    title: "関節の仕組み：動く連結部の構造",
+    description:
+      "骨と骨をつなぐ関節のつくりと、動きの種類を整理します。",
+    category: "basics",
+    updatedAt: "2026-09-19",
+    readingMinutes: 3,
+    status: "draft",
+    illustration: "cells",
+    points: [
+      "関節は骨・軟骨・靭帯・滑液の組み合わせです。",
+      "動きの方向は関節の形で決まります。",
+      "痛みが続くときは使い方の見直しと受診が大切です。",
+    ],
+    sections: [
+      {
+        id: "parts",
+        title: "関節の部品",
+        paragraphs: [
+          "骨の端は軟骨に覆われ、関節包の中の滑液が滑りを助け、靭帯がゆるみすぎないよう支えます。筋肉と腱が動きを生み出します。",
+        ],
+      },
+      {
+        id: "types",
+        title: "動きの種類",
+        paragraphs: [
+          "肩や股関節は多方向に動く球関節、肘や膝は一方向が中心の蝶番関節です。構造に合わない無理な動きや急な負荷は傷めの原因になります。",
+        ],
+      },
+      {
+        id: "care",
+        title: "関節を守る工夫",
+        paragraphs: [
+          "適度な運動で周囲の筋肉を保ち、体重の管理や正しい姿勢を心がけます。腫れや可動域の制限、長引く痛みがあれば整形外科に相談しましょう。",
+        ],
+      },
+    ],
+    references: [mhlw],
+  },
+  {
+    slug: "fracture-healing",
+    title: "骨折の治り方：骨がつながるまで",
+    description:
+      "骨が修復される段階と、治療中の過ごし方を紹介します。",
+    category: "basics",
+    updatedAt: "2026-09-19",
+    readingMinutes: 3,
+    status: "draft",
+    illustration: "cells",
+    points: [
+      "骨折は血腫・仮骨・リモデリングの段階で治ります。",
+      "固定と安静は治癒の土台です。",
+      "リハビリは時期を見て段階的に進めます。",
+    ],
+    sections: [
+      {
+        id: "stages",
+        title: "治るまでの段階",
+        paragraphs: [
+          "折れた部位にはまず血の塊ができ、やわらかい仮骨が橋渡しし、時間をかけて硬い骨に置き換わって形が整います（リモデリング）。部位や年齢で期間は異なります。",
+        ],
+      },
+      {
+        id: "fixation",
+        title: "固定の役割",
+        paragraphs: [
+          "ギプスや手術の金具は、骨の位置を保って修復を助けます。自己判断で外したり動かしたりすると、変形や治癒の遅れにつながります。",
+        ],
+      },
+      {
+        id: "rehab",
+        title: "治った後の回復",
+        paragraphs: [
+          "骨がつながった後は、固まった関節や落ちた筋力をリハビリで戻します。痛みの合図を見ながら段階を上げ、医師の指示に従いましょう。",
+        ],
+      },
+    ],
+    references: [mhlw],
+  },
+  {
+    slug: "anemia-basics",
+    title: "貧血とは：酸素不足のサイン",
+    description:
+      "めまいや疲れの背景にある貧血の基本と受診の目安です。",
+    category: "basics",
+    updatedAt: "2026-09-19",
+    readingMinutes: 3,
+    status: "draft",
+    illustration: "cells",
+    points: [
+      "貧血は血液の酸素運搬の力不足です。",
+      "鉄不足だけが原因ではありません。",
+      "徐々に進む貧血は自覚しにくいことがあります。",
+    ],
+    sections: [
+      {
+        id: "what",
+        title: "貧血で起きること",
+        paragraphs: [
+          "赤血球やヘモグロビンが減ると、全身への酸素供給が滞り、疲れやすさ、動悸、息切れ、顔色の悪さなどが出ます。",
+        ],
+      },
+      {
+        id: "causes",
+        title: "主な原因",
+        paragraphs: [
+          "鉄不足のほか、出血（月経や消化管など）、ビタミン不足、慢性の病気、骨髄の働きの低下などがあります。原因で対応が変わるため、自己判断の鉄剤だけに頼らないことが大切です。",
+        ],
+      },
+      {
+        id: "check",
+        title: "確認と受診",
+        paragraphs: [
+          "健診の血液検査で見つかることが多く、経過の比較が役立ちます。症状がある場合や数値の異常を指摘されたら、内科などで原因を調べましょう。",
+        ],
+      },
+    ],
+    references: [mhlw],
+  },
+  {
+    slug: "blood-pressure-basics",
+    title: "血圧の仕組み：数値の読み方",
+    description:
+      "上と下の数値の意味と、測り方のコツを整理します。",
+    category: "basics",
+    updatedAt: "2026-09-19",
+    readingMinutes: 3,
+    status: "draft",
+    illustration: "cells",
+    points: [
+      "上は心臓が縮んだとき、下は広がったときの圧力です。",
+      "測る条件で値は変わります。",
+      "家庭での記録が診断に役立ちます。",
+    ],
+    sections: [
+      {
+        id: "numbers",
+        title: "2つの数値の意味",
+        paragraphs: [
+          "上の血圧（収縮期）は心臓が血液を押し出すとき、下の血圧（拡張期）は心臓が広がるときの血管の圧力です。どちらか一方だけが高くても注意が必要です。",
+        ],
+      },
+      {
+        id: "measure",
+        title: "正しい測り方",
+        paragraphs: [
+          "静かな環境で数分休んでから、同じ時間帯・同じ腕で測ります。運動後や食後、カフェインの直後は高めに出ます。医療機関での緊張による上昇（白衣高血圧）もあります。",
+        ],
+      },
+      {
+        id: "record",
+        title: "記録の活かし方",
+        paragraphs: [
+          "朝晩の測定を2週間ほど続けると傾向が見えます。記録を持参すると、治療の要否や薬の調整の判断材料になります。基準値は年齢や持病で異なるため、医師と目標を確認しましょう。",
+        ],
+      },
+    ],
+    references: [mhlw],
+  },
+  {
+    slug: "cholesterol-basics",
+    title: "コレステロールとは：善玉・悪玉の話",
+    description:
+      "体に必要な脂質の役割と、検査値の見方を紹介します。",
+    category: "basics",
+    updatedAt: "2026-09-19",
+    readingMinutes: 3,
+    status: "draft",
+    illustration: "cells",
+    points: [
+      "コレステロール自体は体に必要な成分です。",
+      "運び方の違いが善玉・悪玉と呼ばれます。",
+      "食事・運動・薬を組み合わせて管理します。",
+    ],
+    sections: [
+      {
+        id: "roles",
+        title: "必要な働き",
+        paragraphs: [
+          "細胞の膜やホルモンの材料になります。問題になるのは量のバランスで、多すぎると血管の壁にたまって動脈硬化につながります。",
+        ],
+      },
+      {
+        id: "ldl-hdl",
+        title: "LDLとHDLの違い",
+        paragraphs: [
+          "LDLはコレステロールを組織へ運び、増えすぎると沈着の原因になります。HDLは余分を回収する方向に働きます。検査では両方と中性脂肪を合わせて見ます。",
+        ],
+      },
+      {
+        id: "manage",
+        title: "管理の方法",
+        paragraphs: [
+          "食事の見直し、運動、禁煙を基本に、リスクに応じて薬が使われます。数値の目標は年齢や持病で異なるため、医師と決めましょう。",
+        ],
+      },
+    ],
+    references: [mhlw],
+  },
+  {
+    slug: "heatstroke-dehydration",
+    title: "脱水と熱中症：夏の備えと応急対応",
+    description:
+      "暑い時期の体調不良を防ぐ工夫と、重症度の見分け方です。",
+    category: "basics",
+    updatedAt: "2026-09-19",
+    readingMinutes: 3,
+    status: "draft",
+    illustration: "cells",
+    points: [
+      "のどの渇きの前の補給が基本です。",
+      "めまいや吐き気は危険信号です。",
+      "意識の変化があればすぐ救急を考えます。",
+    ],
+    sections: [
+      {
+        id: "prevent",
+        title: "予防の工夫",
+        paragraphs: [
+          "外出時は帽子や日傘、こまめな休憩と水分・塩分の補給を心がけます。室内でも温度と湿度を確認し、高齢者や子どもは特に注意が必要です。",
+        ],
+      },
+      {
+        id: "signs",
+        title: "症状の見分け",
+        paragraphs: [
+          "めまい、大量の汗、吐き気、筋肉のけいれんは初期のサインです。涼しい場所へ移り、衣服をゆるめて体を冷やし、水分を取ります。",
+        ],
+      },
+      {
+        id: "emergency",
+        title: "救急を考える場合",
+        paragraphs: [
+          "意識がはっきりしない、自力で水分が取れない、体が熱いままなどの場合は救急車を呼びます。治療中の方は持病や服薬も伝えてください。",
+        ],
+      },
+    ],
+    references: [mhlw],
+  },
+  {
+    slug: "cell-banks-guide",
+    title: "細胞バンクの種類：公的と民間の違い",
+    description:
+      "臍帯血・骨髄・iPSの保管の仕組みと選び方を整理します。",
+    category: "stem-cells",
+    updatedAt: "2026-09-19",
+    readingMinutes: 3,
+    status: "draft",
+    illustration: "network",
+    points: [
+      "公的バンクは第三者への提供が目的です。",
+      "民間保存は家族のための有償保管です。",
+      "将来の利用可能性は確約されません。",
+    ],
+    sections: [
+      {
+        id: "public",
+        title: "公的バンクとは",
+        paragraphs: [
+          "臍帯血や骨髄の公的バンクでは、無償提供された細胞を検査・保存し、適合する患者さんへ分配します。社会全体で助け合う仕組みです。",
+        ],
+      },
+      {
+        id: "private",
+        title: "民間保存との違い",
+        paragraphs: [
+          "民間のさい帯血保存や歯髄保存は、家族のために費用を払って保管するものです。利用の可能性、費用、保管期間、事業者の継続性を冷静に見ましょう。",
+        ],
+      },
+      {
+        id: "choose",
+        title: "選ぶときの視点",
+        paragraphs: [
+          "出産前など決断の期限がある場合は、資料を取り寄せて家族で話し合いましょう。勧誘を急がされても、その場で決めないことが大切です。",
+        ],
+      },
+    ],
+    references: [mhlw],
+  },
+  {
+    slug: "culture-media",
+    title: "培養液とは：細胞の食事と環境",
+    description:
+      "細胞を育てる液体の中身と管理の基本を紹介します。",
+    category: "stem-cells",
+    updatedAt: "2026-09-19",
+    readingMinutes: 3,
+    status: "draft",
+    illustration: "network",
+    points: [
+      "栄養・塩分・pHなどを整えた液体です。",
+      "血清の有無で性質が変わります。",
+      "交換の頻度や記録も品質の一部です。",
+    ],
+    sections: [
+      {
+        id: "contents",
+        title: "培養液の中身",
+        paragraphs: [
+          "糖やアミノ酸、ビタミン、塩類に加え、増殖因子や抗生物質が含まれることがあります。対象の細胞に合わせた組成が選ばれます。",
+        ],
+      },
+      {
+        id: "serum",
+        title: "血清の扱い",
+        paragraphs: [
+          "牛胎児血清などの動物由来成分は栄養が豊富ですが、ばらつきや感染リスクの管理が必要です。無血清培地への切り替えも進められています。",
+        ],
+      },
+      {
+        id: "manage",
+        title: "管理の視点",
+        paragraphs: [
+          "交換のタイミング、使用期限、保存温度、ロット番号の記録が品質を支えます。治療の説明では「何で育て、何を確認しているか」を尋ねてみましょう。",
+        ],
+      },
+    ],
+    references: [mhlw],
+  },
+  {
+    slug: "cell-sorting",
+    title: "細胞の選別：マーカーとセルソーター",
+    description:
+      "目的の細胞だけを取り出す技術の基本を整理します。",
+    category: "stem-cells",
+    updatedAt: "2026-09-19",
+    readingMinutes: 3,
+    status: "draft",
+    illustration: "network",
+    points: [
+      "表面の目印で細胞を見分けます。",
+      "選別の精度が治療の質に関わります。",
+      "選別後の確認も工程に含まれます。",
+    ],
+    sections: [
+      {
+        id: "markers",
+        title: "目印の使い方",
+        paragraphs: [
+          "細胞表面のタンパク質（マーカー）に光る標識を付け、目的の細胞を見分けます。単一の目印では不十分なため、複数の組み合わせで絞り込みます。",
+        ],
+      },
+      {
+        id: "sorter",
+        title: "セルソーターとは",
+        paragraphs: [
+          "液体の流れの中で細胞を一つずつ光で読み分け、電気的に振り分ける装置です。磁気ビーズで集める方法と使い分けられます。",
+        ],
+      },
+      {
+        id: "purity",
+        title: "純度の確認",
+        paragraphs: [
+          "選別後の純度や生存率の測定が、出荷や投与の判断材料になります。未分化細胞の残存など、混入してはならないものの確認が重要です。",
+        ],
+      },
+    ],
+    references: [cira],
+  },
+  {
+    slug: "placenta-cells",
+    title: "胎盤・羊膜由来の細胞：出産時の組織の活用",
+    description:
+      "出産に伴い得られる組織の研究と利用の実際を紹介します。",
+    category: "stem-cells",
+    updatedAt: "2026-09-19",
+    readingMinutes: 3,
+    status: "draft",
+    illustration: "network",
+    points: [
+      "採取の負担が小さい利点があります。",
+      "免疫の調整に関わる働きが研究されています。",
+      "利用には同意と検査の体制が前提です。",
+    ],
+    sections: [
+      {
+        id: "sources",
+        title: "由来組織の特徴",
+        paragraphs: [
+          "胎盤や羊膜、臍帯組織には多様な細胞が含まれ、母子への負担が少なく採取できます。廃棄される組織の有効活用としても注目されています。",
+        ],
+      },
+      {
+        id: "research",
+        title: "研究の方向",
+        paragraphs: [
+          "炎症の調整や組織修復への関わりが研究され、創傷や炎症性疾患などへの応用が検討されています。治療としての提供は検証途上です。",
+        ],
+      },
+      {
+        id: "consent",
+        title: "提供と同意",
+        paragraphs: [
+          "利用には出産前の説明と同意、感染症などの検査が必要です。民間保存を考える場合は、費用や将来の利用可能性を冷静に見ましょう。",
+        ],
+      },
+    ],
+    references: [mhlw, amed],
+  },
+  {
+    slug: "pancreas-progenitor",
+    title: "膵臓の再生研究：β細胞を目指して",
+    description:
+      "インスリンを出す細胞の再生と移植研究の現状を整理します。",
+    category: "stem-cells",
+    updatedAt: "2026-09-19",
+    readingMinutes: 4,
+    status: "draft",
+    illustration: "network",
+    points: [
+      "β細胞の補充が目標の一つです。",
+      "免疫と長期の安定性が課題です。",
+      "標準治療に置き換わる段階ではありません。",
+    ],
+    sections: [
+      {
+        id: "target",
+        title: "目指すもの",
+        paragraphs: [
+          "1型糖尿病などではインスリンを出すβ細胞が失われます。ES細胞やiPS細胞からβ細胞様の細胞を作り、補う研究が進められています。",
+        ],
+      },
+      {
+        id: "devices",
+        title: "拒絶と安定化の工夫",
+        paragraphs: [
+          "免疫抑制薬の使用、カプセルで包む方法、拒絶されにくい改変など、移植した細胞を守る工夫が検討されています。血糖の安定や合併症への効果の検証が必要です。",
+        ],
+      },
+      {
+        id: "now",
+        title: "今の治療との関係",
+        paragraphs: [
+          "インスリン療法や機器の進歩が日常管理を支えています。細胞治療の話題は、対象や段階、リスクと合わせて受け止めましょう。",
+        ],
+      },
+    ],
+    references: [amed, jsrm],
+  },
+  {
+    slug: "kidney-progenitor",
+    title: "腎臓の再生研究：透析と再生の間",
+    description:
+      "腎機能の回復を目指す研究と、現在の治療の位置づけを紹介します。",
+    category: "stem-cells",
+    updatedAt: "2026-09-19",
+    readingMinutes: 4,
+    status: "draft",
+    illustration: "network",
+    points: [
+      "腎臓は複雑な構造で再生が難しい臓器です。",
+      "透析・移植が確立した治療の中心です。",
+      "進行を遅らせる対策がまず大切です。",
+    ],
+    sections: [
+      {
+        id: "difficulty",
+        title: "難しい理由",
+        paragraphs: [
+          "腎臓は100万個ともいわれるネフロンの集まりで、ろ過や再吸収の精密な連携が必要です。この複雑さが再生の大きな壁とされています。",
+        ],
+      },
+      {
+        id: "research",
+        title: "研究の方向",
+        paragraphs: [
+          "前駆細胞やオルガノイドの活用、急性障害からの回復促進などが研究されています。慢性に進んだ線維化の改善は特に難しい課題です。",
+        ],
+      },
+      {
+        id: "now",
+        title: "今できること",
+        paragraphs: [
+          "血圧や血糖の管理、減塩、薬の調整、定期検査で進行を遅らせることが中心です。透析や移植の選択肢は専門医と早めに相談しましょう。",
+        ],
+      },
+    ],
+    references: [mhlw, amed],
+  },
+  {
+    slug: "lung-regeneration",
+    title: "肺の再生研究：呼吸を取り戻す挑戦",
+    description:
+      "ガス交換の仕組みを守る・戻す研究の現状を整理します。",
+    category: "stem-cells",
+    updatedAt: "2026-09-19",
+    readingMinutes: 3,
+    status: "draft",
+    illustration: "network",
+    points: [
+      "薄い壁と血管網の再現が課題です。",
+      "間質性肺炎など対象で研究が進んでいます。",
+      "禁煙と早期受診がまず大切です。",
+    ],
+    sections: [
+      {
+        id: "structure",
+        title: "再現の難しさ",
+        paragraphs: [
+          "肺胞の薄い壁と毛細血管の網目、空気の通り道の立体構造を同時に再現する必要があります。呼吸という動きの中での定着も課題です。",
+        ],
+      },
+      {
+        id: "research",
+        title: "研究の現状",
+        paragraphs: [
+          "間葉系幹細胞などを用いた炎症の調整や、肺胞上皮の修復を目指す研究が進められています。臨床応用には安全性と機能の検証が必要です。",
+        ],
+      },
+      {
+        id: "daily",
+        title: "日常の備え",
+        paragraphs: [
+          "禁煙、粉じん対策、ワクチン、早期の受診と治療の継続が肺を守ります。息切れが続くときは呼吸器科に相談しましょう。",
+        ],
+      },
+    ],
+    references: [amed, mhlw],
+  },
+  {
+    slug: "disc-regeneration",
+    title: "椎間板の再生研究：腰痛との関係",
+    description:
+      "背骨のクッションの変性と、再生への挑戦を紹介します。",
+    category: "stem-cells",
+    updatedAt: "2026-09-19",
+    readingMinutes: 3,
+    status: "draft",
+    illustration: "network",
+    points: [
+      "椎間板は血流が乏しく治りにくい組織です。",
+      "画像の変性と痛みは一致しないことがあります。",
+      "保存療法と運動が基本の対応です。",
+    ],
+    sections: [
+      {
+        id: "disc",
+        title: "椎間板とは",
+        paragraphs: [
+          "背骨の骨の間でクッションとなる組織で、中心の髄核と周囲の線維輪からなります。加齢や負荷で水分が減り、変性が進みます。",
+        ],
+      },
+      {
+        id: "pain",
+        title: "痛みとの関係",
+        paragraphs: [
+          "画像で変性があっても痛みがない場合や、その逆もあります。痛みの原因は筋肉や関節、神経など多様で、総合的な評価が必要です。",
+        ],
+      },
+      {
+        id: "research",
+        title: "再生の研究",
+        paragraphs: [
+          "細胞や成長因子、足場を用いて髄核の修復を目指す研究があります。強度や長期成績の検証が必要で、まずは保存療法と運動、姿勢の見直しが基本です。",
+        ],
+      },
+    ],
+    references: [amed, mhlw],
+  },
+  {
+    slug: "vessel-regeneration",
+    title: "血管の再生：足りない血流を補う",
+    description:
+      "閉塞性動脈疾患などを対象とする血管再生の考え方を整理します。",
+    category: "stem-cells",
+    updatedAt: "2026-09-19",
+    readingMinutes: 3,
+    status: "draft",
+    illustration: "network",
+    points: [
+      "新しい血管網を作る方向の研究です。",
+      "重症の虚血が対象になります。",
+      "歩行や禁煙などの基本対策と並行します。",
+    ],
+    sections: [
+      {
+        id: "idea",
+        title: "考え方",
+        paragraphs: [
+          "血管を作る細胞や成長因子を用いて、血流の乏しい部位に迂回路のような血管網を促す方向の研究です。足の潰瘍や安静時痛など、重症の虚血が対象になります。",
+        ],
+      },
+      {
+        id: "status",
+        title: "検証の状況",
+        paragraphs: [
+          "歩行距離や潰瘍の改善、切断の回避などを指標に検証が進められています。効果の個人差や長期の持続が課題です。",
+        ],
+      },
+      {
+        id: "daily",
+        title: "基本の対策",
+        paragraphs: [
+          "禁煙、歩行訓練、血糖や脂質の管理、フットケアが土台です。新しい治療の話題は、対象や段階と合わせて受け止めましょう。",
+        ],
+      },
+    ],
+    references: [amed, pmda],
+  },
+  {
+    slug: "bioprinting",
+    title: "3Dバイオプリンティング：印刷する組織",
+    description:
+      "細胞を材料に立体組織を作る技術の現状と課題を紹介します。",
+    category: "stem-cells",
+    updatedAt: "2026-09-19",
+    readingMinutes: 3,
+    status: "draft",
+    illustration: "network",
+    points: [
+      "細胞入りのインクで立体を積層します。",
+      "創薬や研究用途が先行しています。",
+      "移植用の臓器印刷は将来の課題です。",
+    ],
+    sections: [
+      {
+        id: "how",
+        title: "仕組み",
+        paragraphs: [
+          "細胞や足場材料を含むバイオインクを、設計図通りに積み重ねて立体組織を作ります。皮膚や軟骨など比較的単純な構造から取り組まれています。",
+        ],
+      },
+      {
+        id: "uses",
+        title: "今の使い道",
+        paragraphs: [
+          "薬の毒性評価や病気の再現モデル、手術の練習用モデルなどに活用されています。血管網や複数組織の組み合わせが次の壁です。",
+        ],
+      },
+      {
+        id: "future",
+        title: "移植への距離",
+        paragraphs: [
+          "臓器そのものの印刷と移植には、機能や安全性の検証が長く必要です。話題を見るときは、対象の構造と段階を確認しましょう。",
+        ],
+      },
+    ],
+    references: [amed, jsrm],
+  },
+  {
+    slug: "organ-transplant-basics",
+    title: "臓器移植の基礎：提供と分配の仕組み",
+    description:
+      "ドナーからの提供と公平な分配を支える制度を紹介します。",
+    category: "stem-cells",
+    updatedAt: "2026-09-19",
+    readingMinutes: 4,
+    status: "draft",
+    illustration: "network",
+    points: [
+      "提供の意思表示が起点です。",
+      "分配は医学的な基準で公平に行われます。",
+      "移植後の免疫抑制と経過観察が続きます。",
+    ],
+    sections: [
+      {
+        id: "donation",
+        title: "提供の意思",
+        paragraphs: [
+          "健康保険証や運転免許証の意思表示欄、臓器提供意思登録などで示せます。家族の承諾も必要で、日頃の話し合いが大切です。",
+        ],
+      },
+      {
+        id: "allocation",
+        title: "分配の仕組み",
+        paragraphs: [
+          "適合性や重症度、待機期間などを基準に、ネットワークを通じて公平に分配されます。順番の売買などは法律で禁じられています。",
+        ],
+      },
+      {
+        id: "after",
+        title: "移植後の生活",
+        paragraphs: [
+          "拒絶を抑える薬の継続、感染症の予防、定期検査が続きます。提供者と受け手の双方への支援体制が整えられています。",
+        ],
+      },
+    ],
+    references: [mhlw],
+  },
+  {
+    slug: "ips-donation",
+    title: "iPSの提供ドナーとは：協力の仕組みと流れ",
+    description:
+      "研究やストックのための血液提供と、その後の扱いを解説します。",
+    category: "stem-cells",
+    updatedAt: "2026-09-19",
+    readingMinutes: 3,
+    status: "draft",
+    illustration: "network",
+    points: [
+      "血液の提供からiPS細胞が作られます。",
+      "同意はいつでも撤回できるのが原則です。",
+      "提供が直接の治療にはなりません。",
+    ],
+    sections: [
+      {
+        id: "flow",
+        title: "提供の流れ",
+        paragraphs: [
+          "説明を受けて同意書に署名し、採血します。感染症などの検査を経て、研究やストック用のiPS細胞が作製・評価・保存されます。",
+        ],
+      },
+      {
+        id: "consent",
+        title: "同意と個人情報",
+        paragraphs: [
+          "利用目的、個人情報の扱い、研究成果の公表、同意の撤回の方法を説明文書で確認します。分からない点は納得するまで質問しましょう。",
+        ],
+      },
+      {
+        id: "meaning",
+        title: "協力の意味",
+        paragraphs: [
+          "提供は将来の患者さんの治療や研究につながる可能性があります。一方、提供者自身への直接の利益や優先治療を意味しません。",
+        ],
+      },
+    ],
+    references: [cira, mhlw],
+  },
+  {
+    slug: "advance-directives",
+    title: "事前指示書の書き方：延命治療と意思表示",
+    description:
+      "いざというときの希望を伝える文書の作り方と使い方です。",
+    category: "treatment",
+    updatedAt: "2026-09-19",
+    readingMinutes: 3,
+    status: "draft",
+    illustration: "cross",
+    points: [
+      "元気なうちに考えを整理します。",
+      "家族と医療者で共有します。",
+      "定期的に見直します。",
+    ],
+    sections: [
+      {
+        id: "what",
+        title: "事前指示書とは",
+        paragraphs: [
+          "判断能力が低下したときに備え、延命治療や療養の場所などの希望を文章にしたものです。リビングウィルとも呼ばれます。法的な効力の扱いは国や自治体で異なるため、位置づけを確認しましょう。",
+        ],
+      },
+      {
+        id: "write",
+        title: "書く内容の例",
+        paragraphs: [
+          "受けたい治療・受けたくない治療、大切にしたい生活、頼みたい人、連絡してほしい人を具体的に書きます。あいまいな表現は避け、理由も添えると伝わりやすくなります。",
+        ],
+      },
+      {
+        id: "share",
+        title: "共有と見直し",
+        paragraphs: [
+          "家族やかかりつけ医と内容を共有し、診療情報と一緒に保管します。考えは変わるものなので、1年ごとや体調の変化時に見直しましょう。",
+        ],
+      },
+    ],
+    references: [mhlw, patient],
+  },
+  {
+    slug: "patient-rights",
+    title: "患者の権利：知っておきたい基本",
+    description:
+      "説明を受ける権利や自己決定など、医療における基本的な権利を整理します。",
+    category: "treatment",
+    updatedAt: "2026-09-19",
+    readingMinutes: 3,
+    status: "draft",
+    illustration: "cross",
+    points: [
+      "説明を受け納得して決める権利があります。",
+      "診療記録の開示を求められます。",
+      "意見が合わないときの相談先があります。",
+    ],
+    sections: [
+      {
+        id: "rights",
+        title: "基本となる権利",
+        paragraphs: [
+          "病状や治療の説明を受けること、納得して同意・拒否すること、プライバシーを守られること、差別されないことなどが基本です。医療機関の掲示や案内で確認できます。",
+        ],
+      },
+      {
+        id: "records",
+        title: "記録と情報の権利",
+        paragraphs: [
+          "診療記録の開示請求や、セカンドオピニオンのための情報提供を求められます。紹介状や画像データの受け取り方も尋ねてみましょう。",
+        ],
+      },
+      {
+        id: "trouble",
+        title: "困ったときは",
+        paragraphs: [
+          "説明が不十分と感じるときは、まず担当医や看護師に伝えましょう。解決しない場合は医療安全支援センターなどの相談窓口が利用できます。",
+        ],
+      },
+    ],
+    references: [mhlw, patient],
+  },
+  {
+    slug: "generic-drugs",
+    title: "ジェネリック医薬品：後発品の選び方",
+    description:
+      "先発品との違いと、切り替えるときの確認点をまとめます。",
+    category: "treatment",
+    updatedAt: "2026-09-19",
+    readingMinutes: 3,
+    status: "draft",
+    illustration: "cross",
+    points: [
+      "有効成分は先発品と同じです。",
+      "価格が抑えられる利点があります。",
+      "切り替え後は体調の変化を見ます。",
+    ],
+    sections: [
+      {
+        id: "what",
+        title: "後発品とは",
+        paragraphs: [
+          "特許が切れた後に作られる、同じ有効成分の薬です。国による品質の確認を経て承認されます。添加物や形が異なる場合があります。",
+        ],
+      },
+      {
+        id: "switch",
+        title: "切り替えの進め方",
+        paragraphs: [
+          "医師や薬剤師に希望を伝え、対象の薬があるか確認します。切り替え後は効果や副作用の変化に注意し、気になる点は早めに相談しましょう。",
+        ],
+      },
+      {
+        id: "points",
+        title: "確認点",
+        paragraphs: [
+          "すべての薬に後発品があるわけではなく、供給状況で変わることもあります。自己判断の中止や変更は避け、処方内容はお薬手帳で管理します。",
+        ],
+      },
+    ],
+    references: [pmda, mhlw],
+  },
+  {
+    slug: "insurance-card-guide",
+    title: "保険証とマイナ保険証：受診時の使い方",
+    description:
+      "受診に必要な確認と、マイナ保険証の利用方法を紹介します。",
+    category: "treatment",
+    updatedAt: "2026-09-19",
+    readingMinutes: 3,
+    status: "draft",
+    illustration: "cross",
+    points: [
+      "受診時は資格の確認が必要です。",
+      "マイナ保険証は顔認証などで使えます。",
+      "情報提供の同意は選べます。",
+    ],
+    sections: [
+      {
+        id: "check",
+        title: "受診時の確認",
+        paragraphs: [
+          "医療機関では保険の資格を確認します。転職や引っ越し、扶養の変更で資格が変わるため、変更時は早めに手続きしましょう。",
+        ],
+      },
+      {
+        id: "myna",
+        title: "マイナ保険証の使い方",
+        paragraphs: [
+          "マイナンバーカードを読み取り機にかざし、顔認証か暗証番号で本人確認します。過去の処方や健診情報の提供に同意すると、診療に活かされます。",
+        ],
+      },
+      {
+        id: "trouble",
+        title: "困ったときは",
+        paragraphs: [
+          "カードを忘れた場合や読み取れない場合は窓口に相談しましょう。資格確認書などの代替手段もあります。",
+        ],
+      },
+    ],
+    references: [mhlw],
+  },
+  {
+    slug: "nursing-care-certification",
+    title: "要介護認定の流れ：申請からサービスまで",
+    description:
+      "介護が必要になったときの申請手順とサービスの種類を整理します。",
+    category: "treatment",
+    updatedAt: "2026-09-19",
+    readingMinutes: 4,
+    status: "draft",
+    illustration: "cross",
+    points: [
+      "申請は市区町村の窓口から始まります。",
+      "調査と審査で要介護度が決まります。",
+      "ケアマネジャーと計画を作ります。",
+    ],
+    sections: [
+      {
+        id: "apply",
+        title: "申請の手順",
+        paragraphs: [
+          "本人や家族が市区町村に申請すると、調査員による聞き取りと主治医の意見書をもとに審査されます。結果が出るまで1か月ほどかかります。",
+        ],
+      },
+      {
+        id: "levels",
+        title: "要介護度の意味",
+        paragraphs: [
+          "要支援1・2、要介護1〜5の区分で、使えるサービスの量や種類が変わります。状態が変われば区分変更の申請ができます。",
+        ],
+      },
+      {
+        id: "plan",
+        title: "ケアプランの作成",
+        paragraphs: [
+          "ケアマネジャーと希望や困りごとを話し合い、訪問介護やデイサービスなどを組み合わせた計画を作ります。合わない点は遠慮なく伝えましょう。",
+        ],
+      },
+    ],
+    references: [mhlw],
+  },
+  {
+    slug: "driving-illness",
+    title: "病気と運転：免許と安全の考え方",
+    description:
+      "治療中の運転の注意と、免許に関わる制度を紹介します。",
+    category: "treatment",
+    updatedAt: "2026-09-19",
+    readingMinutes: 3,
+    status: "draft",
+    illustration: "cross",
+    points: [
+      "薬や病気が運転に影響することがあります。",
+      "一定の病気は届出や適性検査の対象です。",
+      "代替の移動手段も一緒に考えます。",
+    ],
+    sections: [
+      {
+        id: "effects",
+        title: "運転への影響",
+        paragraphs: [
+          "眠気を催す薬、意識に影響する病気、視野や運動機能の低下は事故につながります。薬の説明書の注意を確認し、不安があれば医師に相談しましょう。",
+        ],
+      },
+      {
+        id: "system",
+        title: "免許の制度",
+        paragraphs: [
+          "てんかんや認知症など一定の病気は、公安委員会への届出や適性検査の対象です。主治医の診断書が求められる場合があります。",
+        ],
+      },
+      {
+        id: "life",
+        title: "移動の工夫",
+        paragraphs: [
+          "運転を見合わせる場合は、家族の送迎や公共交通、福祉の移動支援を組み合わせます。通院の継続と安全の両立を考えましょう。",
+        ],
+      },
+    ],
+    references: [mhlw, patient],
+  },
+  {
+    slug: "work-injury-insurance",
+    title: "労災と傷病手当：働けなくなったときの保障",
+    description:
+      "仕事が原因のけが・病気と、それ以外の休業の保障を整理します。",
+    category: "treatment",
+    updatedAt: "2026-09-19",
+    readingMinutes: 4,
+    status: "draft",
+    illustration: "cross",
+    points: [
+      "仕事が原因なら労災保険が対象です。",
+      "それ以外の病気休業は傷病手当金が中心です。",
+      "早めの相談と書類の準備が大切です。",
+    ],
+    sections: [
+      {
+        id: "rousai",
+        title: "労災保険とは",
+        paragraphs: [
+          "業務中や通勤中のけが・病気が対象で、治療費や休業補償が受けられます。事業主を介して労働基準監督署に請求します。",
+        ],
+      },
+      {
+        id: "sick",
+        title: "傷病手当金とは",
+        paragraphs: [
+          "業務外の病気やけがで働けない場合に、加入する健康保険から支給されます。連続した休業日数などの条件があり、医師の証明が必要です。",
+        ],
+      },
+      {
+        id: "steps",
+        title: "手続きの進め方",
+        paragraphs: [
+          "職場の担当や社会保険労務士、加入保険者に早めに相談しましょう。診断書や出勤簿などの書類をそろえ、期限を確認します。",
+        ],
+      },
+    ],
+    references: [mhlw],
+  },
+  {
+    slug: "medical-accident-system",
+    title: "医療事故調査制度：仕組みと相談先",
+    description:
+      "予期せぬ死亡などが起きたときの調査と支援の枠組みを紹介します。",
+    category: "treatment",
+    updatedAt: "2026-09-19",
+    readingMinutes: 3,
+    status: "draft",
+    illustration: "cross",
+    points: [
+      "対象事例は第三者機関へ報告されます。",
+      "遺族への説明と院内調査が行われます。",
+      "相談窓口の利用ができます。",
+    ],
+    sections: [
+      {
+        id: "system",
+        title: "制度の概要",
+        paragraphs: [
+          "医療に起因する予期せぬ死亡などが起きた場合、医療機関は医療事故調査・支援センターへ報告し、院内調査を行います。再発防止を目的とした仕組みです。",
+        ],
+      },
+      {
+        id: "family",
+        title: "遺族への対応",
+        paragraphs: [
+          "調査の前後で遺族への説明が行われます。疑問や不安は医療機関の窓口や相談支援センターに伝えましょう。",
+        ],
+      },
+      {
+        id: "consult",
+        title: "相談先",
+        paragraphs: [
+          "医療安全支援センターでは医療への苦情や相談を受け付けています。経過の記録や資料を整理して臨みましょう。",
+        ],
+      },
+    ],
+    references: [mhlw],
+  },
+  {
+    slug: "drug-allergy-record",
+    title: "薬のアレルギーと副作用の記録：伝え方",
+    description:
+      "飲み合わせや副作用の情報を整理し、安全につなげる方法です。",
+    category: "treatment",
+    updatedAt: "2026-09-19",
+    readingMinutes: 3,
+    status: "draft",
+    illustration: "cross",
+    points: [
+      "出た症状を具体的に記録します。",
+      "お薬手帳にアレルギーを記載します。",
+      "市販薬やサプリも申告します。",
+    ],
+    sections: [
+      {
+        id: "record",
+        title: "記録する内容",
+        paragraphs: [
+          "薬の名前、飲み始めた時期、出た症状と時期、どう対応したかをメモします。写真や残薬があると伝わりやすくなります。",
+        ],
+      },
+      {
+        id: "share",
+        title: "医療者への共有",
+        paragraphs: [
+          "受診や薬局で記録を見せ、アレルギー歴を毎回伝えましょう。救急時にも役立つため、お薬手帳の携帯を習慣にします。",
+        ],
+      },
+      {
+        id: "otc",
+        title: "市販薬との付き合い方",
+        paragraphs: [
+          "市販薬やサプリメントも相互作用の原因になります。使用中はすべて申告し、自己判断の併用は避けましょう。",
+        ],
+      },
+    ],
+    references: [pmda, patient],
+  },
+  {
+    slug: "vaccination-adult",
+    title: "大人の予防接種：種類と受け方",
+    description:
+      "成人に勧められる予防接種と、接種前の確認点をまとめます。",
+    category: "treatment",
+    updatedAt: "2026-09-19",
+    readingMinutes: 3,
+    status: "draft",
+    illustration: "cross",
+    points: [
+      "定期接種と任意接種があります。",
+      "持病や服薬で注意が変わります。",
+      "記録を残して計画的に受けます。",
+    ],
+    sections: [
+      {
+        id: "types",
+        title: "主な種類",
+        paragraphs: [
+          "インフルエンザや新型コロナ、高齢者の肺炎球菌など、対象や時期が定められたものがあります。自治体の案内で対象と費用を確認しましょう。",
+        ],
+      },
+      {
+        id: "check",
+        title: "接種前の確認",
+        paragraphs: [
+          "体調、持病、服用薬、アレルギー歴、妊娠の可能性を問診票に正確に記入します。治療中の方は主治医に時期を相談しましょう。",
+        ],
+      },
+      {
+        id: "after",
+        title: "接種後の注意",
+        paragraphs: [
+          "当日の激しい運動や飲酒を避け、副反応のサインを知っておきます。気になる症状があれば接種機関やかかりつけ医に連絡しましょう。",
+        ],
+      },
+    ],
+    references: [mhlw],
+  },
+  {
+    slug: "dental-visit-guide",
+    title: "歯科受診の進め方：検診と治療の流れ",
+    description:
+      "歯科の初診から治療完了までの流れと準備を紹介します。",
+    category: "treatment",
+    updatedAt: "2026-09-19",
+    readingMinutes: 3,
+    status: "draft",
+    illustration: "cross",
+    points: [
+      "検査と説明が治療の前にあります。",
+      "治療計画と費用を確認します。",
+      "定期検診で予防につなげます。",
+    ],
+    sections: [
+      {
+        id: "first",
+        title: "初診の流れ",
+        paragraphs: [
+          "問診とレントゲンなどの検査の後、診断と治療方針の説明があります。痛みの場所や経過、お薬手帳を用意しましょう。",
+        ],
+      },
+      {
+        id: "plan",
+        title: "計画と費用の確認",
+        paragraphs: [
+          "保険と自費の選択肢、回数、期間、総額を確認します。分からない点はその場で尋ね、納得してから進めましょう。",
+        ],
+      },
+      {
+        id: "prevent",
+        title: "治療後の予防",
+        paragraphs: [
+          "治療が終わったら定期検診とクリーニングで維持します。持病や服薬がある方は、医科との連携も確認しましょう。",
+        ],
+      },
+    ],
+    references: [mhlw],
+  },
+  {
+    slug: "assistive-devices",
+    title: "補装具の作り方：義肢・装具と費用",
+    description:
+      "体を支える用具の種類と、作製・支給の流れを整理します。",
+    category: "treatment",
+    updatedAt: "2026-09-19",
+    readingMinutes: 3,
+    status: "draft",
+    illustration: "cross",
+    points: [
+      "医師の処方をもとに作製します。",
+      "支給制度の対象を確認します。",
+      "調整と練習が使いこなしの鍵です。",
+    ],
+    sections: [
+      {
+        id: "types",
+        title: "主な種類",
+        paragraphs: [
+          "義手・義足、装具（コルセットや足底板など）、車いす、補聴器などがあります。目的と体の状態に合わせて選定されます。",
+        ],
+      },
+      {
+        id: "make",
+        title: "作製の流れ",
+        paragraphs: [
+          "医師の処方をもとに専門業者が採型・作製し、仮合わせと調整を経て完成します。支給制度の対象や自己負担は自治体や保険者に確認しましょう。",
+        ],
+      },
+      {
+        id: "use",
+        title: "使いこなすために",
+        paragraphs: [
+          "リハビリ職と練習し、痛みや不具合があれば早めに調整してもらいます。成長や体形の変化に合わせた作り替えも検討します。",
+        ],
+      },
+    ],
+    references: [mhlw],
+  },
+  {
+    slug: "home-safety-elderly",
+    title: "高齢者の家の安全：転倒予防の工夫",
+    description:
+      "住まいの危険箇所の見直しと、転倒を防ぐ工夫をまとめます。",
+    category: "treatment",
+    updatedAt: "2026-09-19",
+    readingMinutes: 3,
+    status: "draft",
+    illustration: "cross",
+    points: [
+      "転倒の多くは住まいの中で起きます。",
+      "段差・滑り・暗さの対策が基本です。",
+      "介護保険の住宅改修も利用できます。",
+    ],
+    sections: [
+      {
+        id: "risks",
+        title: "危険な場所",
+        paragraphs: [
+          "敷居やコード、滑りやすい浴室、暗い廊下や階段が代表例です。夜間のトイレ動線を重点的に見直しましょう。",
+        ],
+      },
+      {
+        id: "devices",
+        title: "工夫と用具",
+        paragraphs: [
+          "手すりの設置、滑り止め、明るさの確保、履物の見直しが有効です。福祉用具の貸与や購入もケアマネジャーに相談できます。",
+        ],
+      },
+      {
+        id: "body",
+        title: "体の備え",
+        paragraphs: [
+          "下肢の筋力やバランスの維持、視力や薬の見直しも転倒予防につながります。転んだ後の連絡手段も決めておきましょう。",
+        ],
+      },
+    ],
+    references: [mhlw],
+  },
+  {
+    slug: "predatory-journals",
+    title: "ハゲタカジャーナルとは：粗悪誌の見分け方",
+    description:
+      "お金を払えば載る雑誌の特徴と、論文の質の見極めを紹介します。",
+    category: "research",
+    updatedAt: "2026-09-19",
+    readingMinutes: 3,
+    status: "draft",
+    illustration: "scope",
+    points: [
+      "査読が形だけの雑誌があります。",
+      "掲載料の請求が目印の一つです。",
+      "掲載誌の確認が論文評価の第一歩です。",
+    ],
+    sections: [
+      {
+        id: "what",
+        title: "ハゲタカジャーナルとは",
+        paragraphs: [
+          "十分な査読をせず、掲載料収入を目的に論文を集める雑誌の通称です。実在の学会誌に似た名前で勧誘メールが届くことがあります。",
+        ],
+      },
+      {
+        id: "signs",
+        title: "見分け方の目安",
+        paragraphs: [
+          "短期間での掲載保証、編集委員の実在性の低さ、過去論文の引用の乏しさ、身に覚えのない勧誘などが目安です。結論だけで判断せず、掲載誌を確認しましょう。",
+        ],
+      },
+      {
+        id: "check",
+        title: "確認の方法",
+        paragraphs: [
+          "主要な論文データベースへの収録有無や、所属機関の図書館案内を参考にします。怪しい論文を根拠にする説明には注意が必要です。",
+        ],
+      },
+    ],
+    references: [ciraNews, amed],
+  },
+  {
+    slug: "retractions",
+    title: "論文撤回とは：撤回理由の読み方",
+    description:
+      "取り下げられた論文の意味と、撤回情報の探し方を整理します。",
+    category: "research",
+    updatedAt: "2026-09-19",
+    readingMinutes: 3,
+    status: "draft",
+    illustration: "scope",
+    points: [
+      "撤回は誤りや不正への対応です。",
+      "理由の公開が信頼の目安です。",
+      "撤回論文の引用に注意します。",
+    ],
+    sections: [
+      {
+        id: "what",
+        title: "撤回の意味",
+        paragraphs: [
+          "データの誤りや画像の不適切な扱い、査読の問題などが判明した際、論文誌が論文を取り下げます。科学の自浄作用の一つです。",
+        ],
+      },
+      {
+        id: "reasons",
+        title: "理由の読み方",
+        paragraphs: [
+          "撤回通知には理由が記されます。正直な誤りと不正では意味が異なります。理由の公開がない撤回は、評価を保留する材料です。",
+        ],
+      },
+      {
+        id: "use",
+        title: "読み手の注意",
+        paragraphs: [
+          "撤回された論文を根拠にする説明は、その後の検証を確認します。撤回情報のデータベースや論文ページの表示を見てみましょう。",
+        ],
+      },
+    ],
+    references: [ciraNews, amed],
+  },
+  {
+    slug: "open-access",
+    title: "オープンアクセスとは：誰でも読める論文",
+    description:
+      "無料公開の仕組みと、購読誌との違いを紹介します。",
+    category: "research",
+    updatedAt: "2026-09-19",
+    readingMinutes: 3,
+    status: "draft",
+    illustration: "scope",
+    points: [
+      "誰でも無料で読める公開方式です。",
+      "著者側が費用を負担する形もあります。",
+      "無料＝質が低いではありません。",
+    ],
+    sections: [
+      {
+        id: "what",
+        title: "仕組み",
+        paragraphs: [
+          "従来は読者側の購読料で運営されましたが、オープンアクセスでは著者側の支払いや機関の支援で無料公開します。査読の有無とは別の話です。",
+        ],
+      },
+      {
+        id: "fee",
+        title: "掲載料の考え方",
+        paragraphs: [
+          "正規の論文誌でも掲載料がかかる場合があります。金額の妥当性は分野の相場や機関の支援制度と合わせて見ます。高額請求だけが粗悪の目印ではありません。",
+        ],
+      },
+      {
+        id: "use",
+        title: "読み手の利点",
+        paragraphs: [
+          "原論文に直接あたれるため、報道の正確さを確かめられます。公開版と最終版の違い（査読前後）に注意しましょう。",
+        ],
+      },
+    ],
+    references: [ciraNews],
+  },
+  {
+    slug: "impact-factor",
+    title: "インパクトファクターの読み方：数字の意味と限界",
+    description:
+      "雑誌の影響指標の仕組みと、誤用への注意を整理します。",
+    category: "research",
+    updatedAt: "2026-09-19",
+    readingMinutes: 3,
+    status: "draft",
+    illustration: "scope",
+    points: [
+      "雑誌の平均的な引用のされやすさです。",
+      "個々の論文の質を示しません。",
+      "分野で水準が異なります。",
+    ],
+    sections: [
+      {
+        id: "what",
+        title: "指標の意味",
+        paragraphs: [
+          "過去の掲載論文がその後に引用された回数から算出される、雑誌単位の指標です。数字が高いほど注目されやすい雑誌とされます。",
+        ],
+      },
+      {
+        id: "limits",
+        title: "限界",
+        paragraphs: [
+          "分野で引用の習慣が異なるため、分野をまたいだ比較はできません。個々の論文の引用数とは別物で、研究者や治療の評価に直結させるのは誤用です。",
+        ],
+      },
+      {
+        id: "use",
+        title: "広告文句への注意",
+        paragraphs: [
+          "「一流誌掲載」を根拠の強さと同一視しないことが大切です。論文の中身（対象・方法・結果・限界）で判断しましょう。",
+        ],
+      },
+    ],
+    references: [ciraNews, amed],
+  },
+  {
+    slug: "guideline-reading",
+    title: "診療ガイドラインの読み方：推奨の強さを知る",
+    description:
+      "推奨度とエビデンスレベルの表記の読み方を紹介します。",
+    category: "research",
+    updatedAt: "2026-09-19",
+    readingMinutes: 4,
+    status: "draft",
+    illustration: "scope",
+    points: [
+      "推奨の強さと根拠の確かさは別物です。",
+      "作成方法と更新日を確認します。",
+      "個別判断は医師と相談します。",
+    ],
+    sections: [
+      {
+        id: "grades",
+        title: "推奨度の見方",
+        paragraphs: [
+          "「行うことを推奨する」「行わないことを提案する」などの強さの段階があります。強い推奨でも、患者さんの状態で当てはまりが変わります。",
+        ],
+      },
+      {
+        id: "evidence",
+        title: "エビデンスレベルの表記",
+        paragraphs: [
+          "根拠の確かさ（高・中・低など）が併記されます。確かさが低くても、害が小さく利益が見込める場合は推奨されることがあります。",
+        ],
+      },
+      {
+        id: "use",
+        title: "使い方",
+        paragraphs: [
+          "ガイドラインは標準的な方針の目安で、個別の指示書ではありません。自分の状態への当てはまりは主治医と相談しましょう。発行年が古い場合は最新版を探します。",
+        ],
+      },
+    ],
+    references: [mhlw, amed],
+  },
+  {
+    slug: "package-insert",
+    title: "添付文書の読み方：薬の説明書を活用する",
+    description:
+      "効能・用法・副作用の記載の読み方と注意点をまとめます。",
+    category: "research",
+    updatedAt: "2026-09-19",
+    readingMinutes: 3,
+    status: "draft",
+    illustration: "scope",
+    points: [
+      "効能・用法・注意がまとまっています。",
+      "副作用の頻度区分を確認します。",
+      "自己判断の増減は避けます。",
+    ],
+    sections: [
+      {
+        id: "sections",
+        title: "記載の構成",
+        paragraphs: [
+          "効能・効果、用法・用量、警告・禁忌、副作用、保管方法などが定型で記載されます。患者向けの説明文書と合わせて読みます。",
+        ],
+      },
+      {
+        id: "side",
+        title: "副作用の読み方",
+        paragraphs: [
+          "重大な副作用とその他の副作用、頻度の区分が示されます。記載があること自体で怖がらず、頻度と対処を医師・薬剤師に尋ねましょう。",
+        ],
+      },
+      {
+        id: "use",
+        title: "活用の注意",
+        paragraphs: [
+          "添付文書は医療者向けの詳細情報を含みます。読み取れない点は薬剤師に尋ね、用法の自己変更はしないことが大切です。",
+        ],
+      },
+    ],
+    references: [pmda],
+  },
+  {
+    slug: "rwd-basics",
+    title: "リアルワールドデータとは：日常診療の記録の活用",
+    description:
+      "治験以外のデータの役割と読み方の注意を紹介します。",
+    category: "research",
+    updatedAt: "2026-09-19",
+    readingMinutes: 3,
+    status: "draft",
+    illustration: "scope",
+    points: [
+      "日常の診療記録を研究に活かします。",
+      "治験を補う位置づけです。",
+      "偏りへの注意が必要です。",
+    ],
+    sections: [
+      {
+        id: "what",
+        title: "RWDとは",
+        paragraphs: [
+          "電子カルテやレセプト、登録研究の記録など、日常診療から生まれるデータの総称です。治験に参加しない人々の情報も含まれる利点があります。",
+        ],
+      },
+      {
+        id: "roles",
+        title: "治験との関係",
+        paragraphs: [
+          "厳密な条件の治験に対し、実臨床での使われ方や長期の経過を捉えます。承認後の安全性の監視や、適応の見直しに活かされます。",
+        ],
+      },
+      {
+        id: "limits",
+        title: "読み方の注意",
+        paragraphs: [
+          "記録のばらつきや、治療選択の偏りが結果に混ざります。比較の工夫や限界の記載と一緒に読みましょう。",
+        ],
+      },
+    ],
+    references: [amed, pmda],
+  },
+  {
+    slug: "expanded-access",
+    title: "拡大治験とコンパッショネートユース：未承認薬への道",
+    description:
+      "承認前の薬にアクセスする制度と考え方を整理します。",
+    category: "research",
+    updatedAt: "2026-09-19",
+    readingMinutes: 4,
+    status: "draft",
+    illustration: "scope",
+    points: [
+      "通常の治験に参加できない場合の道です。",
+      "効果の保証ではありません。",
+      "主治医と一緒に検討します。",
+    ],
+    sections: [
+      {
+        id: "what",
+        title: "制度の考え方",
+        paragraphs: [
+          "他に治療がなく、治験の条件にも合わない場合に、人道的な観点から未承認の薬の使用を認める枠組みです。国で名称や条件が異なります。",
+        ],
+      },
+      {
+        id: "trials",
+        title: "拡大治験との違い",
+        paragraphs: [
+          "拡大治験は承認申請を見据えた試験の一環で、データ収集を伴います。個別の使用は主に患者さんの利益のための提供で、研究としての検証は限定的です。",
+        ],
+      },
+      {
+        id: "consider",
+        title: "検討するときは",
+        paragraphs: [
+          "対象疾患での実施例、リスクと費用、治療後の観察、他の選択肢を主治医と確認します。期待と検証のバランスを冷静に見ましょう。",
+        ],
+      },
+    ],
+    references: [pmda, jrct],
+  },
+  {
+    slug: "first-in-human",
+    title: "ファーストインヒューマン試験とは：人で初めて試す段階",
+    description:
+      "最初期の臨床試験の目的と参加の考え方を紹介します。",
+    category: "research",
+    updatedAt: "2026-09-19",
+    readingMinutes: 3,
+    status: "draft",
+    illustration: "scope",
+    points: [
+      "安全性の確認が中心の段階です。",
+      "少量から慎重に進めます。",
+      "治療目的とは区別して考えます。",
+    ],
+    sections: [
+      {
+        id: "purpose",
+        title: "目的",
+        paragraphs: [
+          "人での安全性や体内での動きを初めて確かめる段階で、少人数から始めます。効果の検証は後の段階の役割です。",
+        ],
+      },
+      {
+        id: "design",
+        title: "進め方の工夫",
+        paragraphs: [
+          "微量からの段階的な増量、十分な観察期間、緊急時の体制など、安全第一の設計です。参加の条件は厳格に定められます。",
+        ],
+      },
+      {
+        id: "join",
+        title: "参加を考えるとき",
+        paragraphs: [
+          "治療としての利益は期待しにくい段階です。目的、負担、リスク、辞退の自由を説明文書で確認し、時間をかけて考えましょう。",
+        ],
+      },
+    ],
+    references: [pmda, jrct],
+  },
+  {
+    slug: "decentralized-trials",
+    title: "分散型治験（DCT）とは：来院しない治験",
+    description:
+      "オンラインや訪問を組み合わせた新しい治験の形を整理します。",
+    category: "research",
+    updatedAt: "2026-09-19",
+    readingMinutes: 3,
+    status: "draft",
+    illustration: "scope",
+    points: [
+      "通院負担の軽減が目的の一つです。",
+      "対象や評価方法の工夫が必要です。",
+      "対面が必要な場面もあります。",
+    ],
+    sections: [
+      {
+        id: "what",
+        title: "DCTとは",
+        paragraphs: [
+          "説明や同意の一部、服薬確認、症状の記録などをオンラインや訪問看護で補い、来院回数を減らす治験の進め方です。",
+        ],
+      },
+      {
+        id: "merits",
+        title: "利点と課題",
+        paragraphs: [
+          "遠方や仕事との両立がしやすくなる一方、機器の操作や通信環境、データの質の確保が課題です。対象疾患で向き不向きがあります。",
+        ],
+      },
+      {
+        id: "join",
+        title: "参加を考えるとき",
+        paragraphs: [
+          "来院が必要な検査や処置、緊急時の連絡先、機器の貸与や支援を確認しましょう。主治医とも共有して検討します。",
+        ],
+      },
+    ],
+    references: [pmda, jrct],
+  },
+  {
+    slug: "basket-trials",
+    title: "バスケット試験・アンブレラ試験とは：遺伝子で分ける治験",
+    description:
+      "臓器ではなく特徴で分ける新しい治験デザインを紹介します。",
+    category: "research",
+    updatedAt: "2026-09-19",
+    readingMinutes: 4,
+    status: "draft",
+    illustration: "scope",
+    points: [
+      "遺伝子などの特徴で対象を分けます。",
+      "複数の薬や病気をまとめて検証します。",
+      "検査の精度が前提になります。",
+    ],
+    sections: [
+      {
+        id: "basket",
+        title: "バスケット試験とは",
+        paragraphs: [
+          "同じ遺伝子の変化を持つ、異なる臓器のがんなどを一つの basket に集めて薬を試す方法です。希少な変化の検証に向きます。",
+        ],
+      },
+      {
+        id: "umbrella",
+        title: "アンブレラ試験とは",
+        paragraphs: [
+          "一つの臓器・疾患の中で、遺伝子の特徴ごとに異なる薬を割り付ける方法です。傘（アンブレラ）の下に複数の試験がぶら下がる形です。",
+        ],
+      },
+      {
+        id: "points",
+        title: "読み方の注意",
+        paragraphs: [
+          "対象の絞り込みが細かいため、結果の当てはまりを慎重に見ます。遺伝子検査の精度や、変化の意味づけも確認しましょう。",
+        ],
+      },
+    ],
+    references: [amed, jrct],
+  },
+  {
+    slug: "digital-therapeutics",
+    title: "デジタル療法（DTx）とは：アプリで治す時代",
+    description:
+      "治療用アプリの仕組みと、薬との違いを整理します。",
+    category: "research",
+    updatedAt: "2026-09-19",
+    readingMinutes: 3,
+    status: "draft",
+    illustration: "scope",
+    points: [
+      "プログラム自体が治療効果を持ちます。",
+      "医師の処方で使われます。",
+      "継続の仕組みが効果を左右します。",
+    ],
+    sections: [
+      {
+        id: "what",
+        title: "DTxとは",
+        paragraphs: [
+          "禁煙や生活習慣病、不眠などに対し、アプリの指示や記録、指導で症状の改善を目指す治療です。臨床試験で効果を検証して承認されます。",
+        ],
+      },
+      {
+        id: "drugs",
+        title: "薬との違い",
+        paragraphs: [
+          "化学的な作用ではなく、行動の変容や習慣の定着を促します。副作用の種類が異なり、使い方の指導が重要です。",
+        ],
+      },
+      {
+        id: "use",
+        title: "使うときの注意",
+        paragraphs: [
+          "対象疾患や使い方、費用、データの扱いを確認しましょう。広告上の体験談と検証された効果は区別して受け止めます。",
+        ],
+      },
+    ],
+    references: [pmda, mhlwAd],
+  },
 ];
 
 type ArticleDepth = {

@@ -7,6 +7,7 @@ import { articleBodiesTreatment } from "@/content/article-bodies-treatment";
 import { articleBodiesStemCells } from "@/content/article-bodies-stem-cells";
 import { articleBodiesBasicsA } from "@/content/article-bodies-basics-a";
 import { articleBodiesBasicsB } from "@/content/article-bodies-basics-b";
+import { articleBodiesExtraA } from "@/content/article-bodies-extra";
 import { articleGuideSections } from "@/content/article-bodies-guides";
 import { articleImageAlt } from "@/content/article-images";
 import { localizedArticle, localizedCategoryName, type SiteLocale } from "@/content/locales";
@@ -34,6 +35,7 @@ const bodyBySlug: Record<string, { en: ArticleBodyLocale; zh: ArticleBodyLocale 
   ...articleBodiesStemCells,
   ...articleBodiesBasicsA,
   ...articleBodiesBasicsB,
+  ...articleBodiesExtraA,
 };
 
 export type LocalizedSection = { title: string; paragraphs: string[] };
