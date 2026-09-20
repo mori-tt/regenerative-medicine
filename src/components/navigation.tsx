@@ -19,6 +19,8 @@ export function MainNavigation() {
   const prefix = locale === "ja" ? "" : `/${locale}`;
   const links = [
     { href: `${prefix}/`, label: copy?.home || "ホーム" },
+    { href: `${prefix}/guide/`, label: copy?.guide || "はじめての方へ" },
+    { href: `${prefix}/articles/`, label: copy?.articles || "記事一覧" },
     ...categories.map((c) => ({
       href: `${prefix}/categories/${c.slug}/`,
       label: copy ? { basics: copy.basics, "stem-cells": copy.stemCells, treatment: copy.treatment, research: copy.research }[c.slug] : c.label,
@@ -59,6 +61,8 @@ export function MobileMenu() {
             {copy ? { basics: copy.basics, "stem-cells": copy.stemCells, treatment: copy.treatment, research: copy.research }[c.slug] : c.label}
           </Link>
         ))}
+        <Link href={`${prefix}/guide/`} onClick={close}>{copy?.guide || "はじめての方へ"}</Link>
+        <Link href={`${prefix}/articles/`} onClick={close}>{copy?.articles || "記事一覧"}</Link>
         <Link href={`${prefix}/editorial-policy/`} onClick={close}>
           {copy?.editorial || "編集方針"}
         </Link>

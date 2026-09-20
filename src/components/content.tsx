@@ -66,11 +66,12 @@ export function ArticleCard({
 }) {
   const cat = categoryFor(article.category);
   const isColumn = article.kind === "column";
+  const typeLabel = isColumn ? "コラム" : article.category === "treatment" ? "治療前の確認" : article.category === "research" ? "研究の読み方" : article.category === "stem-cells" ? "細胞・基礎" : "基礎知識";
   return (
     <article className={`article-card ${compact ? "compact" : ""}`}>
       <div className="article-card-body">
         <span className={`category-label ${cat.color}`}>{cat.label}</span>
-        {isColumn && <span className="card-kicker">コラム</span>}
+        <span className="card-kicker">{typeLabel}</span>
         <div className="article-meta">
           <span>{isReviewed(article) ? "医師監修済み" : "一般情報・編集部記事"}</span>
           <span>約{article.readingMinutes}分で読める</span>
