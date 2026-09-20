@@ -90,13 +90,6 @@ export function ArticleCard({
 
 export function AdSlot({ compact = false, locale = "ja" }: { compact?: boolean; locale?: "ja" | "en" | "zh" }) {
   const ad = bannerAds[compact ? "article" : "home"];
-  const copy =
-    locale === "en"
-      ? { ad: "ADVERTISEMENT", title: "Bringing medical information to those who need it.", body: "About advertising for medical institutions and clinics", link: "Placement guide", note: "Planned ad slots · No ads are currently served", empty: "About ad placements" }
-      : locale === "zh"
-        ? { ad: "ADVERTISEMENT", title: "把医疗信息送到需要的人手中。", body: "关于医疗机构与诊所的广告刊登", link: "刊登指南", note: "计划中的广告位 · 目前没有投放广告", empty: "关于广告刊登位" }
-        : { ad: "ADVERTISEMENT", title: "医療の情報を、必要な方へ。", body: "医療機関・クリニックの広告掲載について", link: "掲載のご案内", note: "広告募集予定枠 · 現在広告の配信はありません", empty: "広告掲載枠のご案内" };
-  const advertisingHref = locale === "ja" ? "/advertising/" : `/${locale}/advertising/`;
   if (ad)
     return (
       <aside className="ad-slot" aria-label={`広告：${ad.advertiser}`}>
@@ -113,20 +106,5 @@ export function AdSlot({ compact = false, locale = "ja" }: { compact?: boolean; 
         </a>
       </aside>
     );
-  return (
-    <aside
-      className={`ad-slot ${compact ? "ad-compact" : ""}`}
-      aria-label={copy.empty}
-    >
-      <span className="ad-label">{copy.ad}</span>
-      <span className="ad-title">{copy.title}</span>
-      <p>{copy.body}</p>
-      <Link href={advertisingHref}>
-        {copy.link} <Icon name="arrow" size={17} />
-      </Link>
-      <span className="ad-note">
-        {copy.note}
-      </span>
-    </aside>
-  );
+  return null;
 }
