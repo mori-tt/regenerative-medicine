@@ -15,6 +15,7 @@ import { localizedArticle, localizedCategoryName, type SiteLocale } from "@/cont
 import type { ArticleBodyLocale } from "@/content/article-bodies-research";
 import { AdSlot, Breadcrumbs, JsonLd } from "@/components/content";
 import { CellArt, Icon } from "@/components/visuals";
+import { ArticleVisual } from "@/components/article-visuals";
 import { absolute, publicAsset, site } from "@/lib/site";
 import { publication } from "@/lib/site-config";
 
@@ -267,6 +268,7 @@ export function LocalizedArticle({ locale, source }: { locale: SiteLocale; sourc
                 ))}
               </ul>
             </div>
+            {source && <ArticleVisual slug={source.slug} locale={locale} />}
             <div className="article-body">
               {base.sections.map((section, index) => (
                 <section id={sectionIds[index]} key={section.title}>

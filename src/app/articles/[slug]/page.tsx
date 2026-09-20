@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { articles, categoryFor, isReviewed, isVisibleArticle, visibleArticles } from "@/content/articles";
 import { ArticleCard, AdSlot, Breadcrumbs, JsonLd } from "@/components/content";
 import { CellArt } from "@/components/visuals";
+import { ArticleVisual } from "@/components/article-visuals";
 import { publicAsset } from "@/lib/site";
 import { publication } from "@/lib/site-config";
 import { absolute, pageMetadata, site } from "@/lib/site";
@@ -113,6 +114,7 @@ export default async function ArticlePage({
               ))}
             </ul>
           </div>
+          <ArticleVisual slug={article.slug} />
           <div className="article-body">
             {article.sections.map((section) => (
               <section id={section.id} key={section.id}>

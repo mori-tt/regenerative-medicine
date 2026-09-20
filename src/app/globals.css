@@ -1045,6 +1045,74 @@ section > .eyebrow + .listing-heading {
   line-height: 2;
   margin-bottom: 0;
 }
+.article-visual {
+  margin: 28px 0 34px;
+  padding: 20px;
+  background: #fbfcf8;
+  border: 1px solid #dfe7d8;
+  border-radius: 2px;
+}
+.article-visual-heading {
+  color: #63745d;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  margin-bottom: 16px;
+}
+.visual-cards,
+.visual-flow,
+.visual-ladder {
+  display: grid;
+  gap: 10px;
+}
+.visual-cards-three { grid-template-columns: repeat(3, 1fr); }
+.visual-cards-four { grid-template-columns: repeat(4, 1fr); }
+.visual-card,
+.visual-flow-step,
+.visual-ladder-step {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 58px;
+  padding: 12px 14px;
+  background: #eef3e9;
+  color: #394638;
+  font-size: 13px;
+  line-height: 1.5;
+}
+.visual-card b,
+.visual-flow-step b,
+.visual-ladder-step b {
+  display: grid;
+  flex: 0 0 25px;
+  width: 25px;
+  height: 25px;
+  place-items: center;
+  border-radius: 50%;
+  background: #718b68;
+  color: #fff;
+  font-size: 12px;
+}
+.visual-flow { grid-template-columns: repeat(4, 1fr); }
+.visual-flow-step { position: relative; }
+.visual-flow-step:not(:last-child)::after {
+  content: "→";
+  position: absolute;
+  right: -10px;
+  color: #718b68;
+  font-size: 18px;
+  z-index: 1;
+}
+.visual-ladder-step { width: calc(72% + (var(--step) * 7%)); }
+.visual-ladder-step:nth-child(2) { background: #e8f0e4; }
+.visual-ladder-step:nth-child(3) { background: #e1ecdd; }
+.visual-ladder-step:nth-child(4) { background: #d9e8d5; }
+.visual-table-wrap { overflow-x: auto; }
+.visual-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.visual-table th,
+.visual-table td { padding: 11px 12px; border: 1px solid #d9e2d3; text-align: left; vertical-align: top; line-height: 1.6; }
+.visual-table th { background: #e8efe4; color: #4f614b; font-weight: 700; }
+.article-visual figcaption { margin-top: 14px; color: #73806e; font-size: 11px; line-height: 1.7; }
 .article-body section {
   margin-block: 40px;
 }
@@ -2041,6 +2109,23 @@ section > .eyebrow + .listing-heading {
   }
   .key-points ul {
     font-size: 13px;
+  }
+  .article-visual {
+    padding: 16px;
+  }
+  .visual-cards-three,
+  .visual-cards-four,
+  .visual-flow {
+    grid-template-columns: 1fr;
+  }
+  .visual-flow-step:not(:last-child)::after {
+    content: "↓";
+    right: auto;
+    bottom: -15px;
+    left: 50%;
+  }
+  .visual-ladder-step {
+    width: 100%;
   }
   .article-body h2 {
     font-size: 23px;
