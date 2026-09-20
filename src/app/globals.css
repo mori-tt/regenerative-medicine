@@ -1719,6 +1719,7 @@ section > .eyebrow + .listing-heading {
     border: 0;
     padding-left: 0;
     gap: 2px;
+    margin-left: auto;
     flex: 0 0 auto;
   }
   .language-switcher > span {
@@ -1735,6 +1736,7 @@ section > .eyebrow + .listing-heading {
   }
   .mobile-menu {
     display: block;
+    margin-left: 4px;
     flex: 0 0 auto;
     font-size: 20px;
   }
