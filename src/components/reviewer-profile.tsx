@@ -5,7 +5,18 @@ import type { SiteLocale } from "@/content/locales";
 import { publicAsset } from "@/lib/site";
 
 export function ReviewerProfile({ compact = false, locale = "ja" }: { compact?: boolean; locale?: SiteLocale | "ja" }) {
-  if (!medicalReviewer.enabled) return null;
+  if (!medicalReviewer.enabled && !medicalReviewer.planned) return null;
+  if (!medicalReviewer.enabled) {
+    if (locale === "ja") {
+      return <section className={`reviewer-profile planned-reviewer ${compact ? "compact" : ""}`} aria-labelledby="reviewer-profile-title">
+        <div className="reviewer-profile-copy"><span className="eyebrow">PLANNED MEDICAL REVIEWER</span><h2 id="reviewer-profile-title">{medicalReviewer.honorificName}</h2><p className="reviewer-title">{medicalReviewer.title}</p><p>現在、記事ごとの医学的確認を準備しています。監修が完了した記事のみ、確認日と確認範囲を表示します。</p><p className="reviewer-status">この表示は監修予定者の案内であり、個別の記事が医師監修済みであることや、特定の治療の効果・安全性を示すものではありません。</p></div>
+      </section>;
+    }
+    const copy = reviewerLocales[locale];
+    return <section className={`reviewer-profile planned-reviewer ${compact ? "compact" : ""}`} aria-labelledby="reviewer-profile-title">
+      <div className="reviewer-profile-copy"><span className="eyebrow">PLANNED MEDICAL REVIEWER</span><h2 id="reviewer-profile-title">{copy.name}</h2><p className="reviewer-title">{copy.title}</p><p>{locale === "en" ? "Article-by-article medical review is being prepared. Review dates and scopes will be shown only for articles that have actually been reviewed." : "正在准备按文章进行医学审核。只有实际完成审核的文章才会显示审核日期与范围。"}</p><p className="reviewer-status">{locale === "en" ? "This is a notice about a planned reviewer and does not mean that individual articles or treatments have been reviewed, recommended, or guaranteed." : "此处仅介绍计划中的审核医生，并不表示个别文章或治疗已完成审核、获得推荐或得到保证。"}</p></div>
+    </section>;
+  }
   if (locale === "ja") {
     return <section className={`reviewer-profile ${compact ? "compact" : ""}`} aria-labelledby="reviewer-profile-title">
       <div className="reviewer-profile-photo"><Image src={publicAsset(medicalReviewer.photo)} alt={`${medicalReviewer.honorificName} プロフィール写真`} width={767} height={651} unoptimized /></div>

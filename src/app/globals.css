@@ -1112,6 +1112,13 @@ section > .eyebrow + .listing-heading {
   background: #f3f5ef;
   border: 1px solid var(--line);
 }
+.planned-reviewer {
+  display: block;
+  border-left: 4px solid #9aae8e;
+}
+.planned-reviewer .reviewer-profile-copy {
+  max-width: 720px;
+}
 .reviewer-profile-photo img { display: block; width: 100%; height: auto; aspect-ratio: 767 / 651; object-fit: cover; }
 .reviewer-profile-copy h2 { font-family: var(--serif); font-size: 26px; margin-top: 7px; }
 .reviewer-title { color: var(--green); font-weight: 600; margin-top: 3px; }

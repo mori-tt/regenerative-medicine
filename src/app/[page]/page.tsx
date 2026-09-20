@@ -39,8 +39,8 @@ export default async function InfoPage({
       </div>
       <div className="prose">
         {page === "sources" && <SourceDirectory />}
-        {page === "supervision" && medicalReviewer.enabled && <ReviewerProfile />}
-        {page !== "sources" && (page !== "supervision" || !medicalReviewer.enabled) && info.sections.map((s) => (
+        {page === "supervision" && (medicalReviewer.enabled || medicalReviewer.planned) && <ReviewerProfile />}
+        {page !== "sources" && (page !== "supervision" || (!medicalReviewer.enabled && !medicalReviewer.planned)) && info.sections.map((s) => (
           <section key={s.title}>
             <h2>{s.title}</h2>
             {s.paragraphs.map((p) => (

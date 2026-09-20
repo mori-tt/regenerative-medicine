@@ -50,8 +50,8 @@ export function LocalizedInfo({ locale, slug }: { locale: SiteLocale; slug: Info
         </div>
         <div className="prose">
           {slug === "sources" && <SourceDirectory locale={locale} />}
-          {slug === "supervision" && medicalReviewer.enabled && <ReviewerProfile locale={locale} />}
-          {slug !== "sources" && (slug !== "supervision" || !medicalReviewer.enabled) && content.sections.map((section) => (
+          {slug === "supervision" && (medicalReviewer.enabled || medicalReviewer.planned) && <ReviewerProfile locale={locale} />}
+          {slug !== "sources" && (slug !== "supervision" || (!medicalReviewer.enabled && !medicalReviewer.planned)) && content.sections.map((section) => (
             <section key={section.title}>
               <h2>{section.title}</h2>
               {section.paragraphs.map((paragraph) => (

@@ -12,4 +12,5 @@ export const publication = {
 export const medicalReviewer = {
   ...rawConfig.medicalReviewer,
   enabled: envBoolean(process.env.NEXT_PUBLIC_MEDICAL_REVIEWER_ENABLED, rawConfig.medicalReviewer.enabled),
+  planned: envBoolean(process.env.NEXT_PUBLIC_MEDICAL_REVIEWER_PLANNED, rawConfig.medicalReviewer.planned),
 };
