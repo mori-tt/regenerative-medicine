@@ -3,6 +3,8 @@ import { medicalReviewer, publication } from "@/lib/site-config";
 import reviewRecords from "./article-review-records.json";
 const reviewSchedule = reviewRecords as Record<string, {
   publishAt?: string;
+  /** 記事台帳で指定する画像カタログのキー。 */
+  imageKey?: string;
   lastEditedAt?: string;
   publishedAt?: string;
 }>;
@@ -83,6 +85,7 @@ export type Article = {
    * 未指定は公開済み扱い。
    */
   publishAt?: string;
+  imageKey?: string;
   /**
    * 監修チェック。設定すると監修済み表示・構造化データ・サイトマップの対象になる。
    * reviewedAt: 確認日 (YYYY-MM-DD)、scope: 確認範囲の記録。
@@ -8637,8 +8640,8 @@ export const articles: Article[] = rawArticles.map((article, index) => ({
   ...article,
   publishAt: reviewSchedule[article.slug]?.publishAt ?? article.publishAt,
   updatedAt: reviewSchedule[article.slug]?.lastEditedAt ?? article.updatedAt,
-  image: articleImageFor(article.category, index).src,
-  imageAlt: articleImageFor(article.category, index).alt,
+  image: articleImageFor(article.category, index, reviewSchedule[article.slug]?.imageKey).src,
+  imageAlt: articleImageFor(article.category, index, reviewSchedule[article.slug]?.imageKey).alt,
   status: article.review ? "published" : "draft",
   reviewer: article.review
     ? {

@@ -1,6 +1,7 @@
 import fs from "node:fs";
 
 const source = fs.readFileSync("src/content/articles.ts", "utf8");
+const media = JSON.parse(fs.readFileSync("src/content/article-media.json", "utf8"));
 const existingRecords = fs.existsSync("src/content/article-review-records.json")
   ? JSON.parse(fs.readFileSync("src/content/article-review-records.json", "utf8"))
   : {};
@@ -63,7 +64,9 @@ function updatedAtFrom(block) {
   return block.match(/\n    updatedAt: "(\d{4}-\d{2}-\d{2})"/)?.[1] ?? "";
 }
 
-const matches = [...body.matchAll(blockPattern)].sort((a, b) => {
+const sourceMatches = [...body.matchAll(blockPattern)];
+const rawIndexBySlug = new Map(sourceMatches.map((match, index) => [match[1], index]));
+const matches = [...sourceMatches].sort((a, b) => {
   const aInitial = initialCandidates.has(a[1]) ? 0 : 1;
   const bInitial = initialCandidates.has(b[1]) ? 0 : 1;
   return aInitial - bInitial;
@@ -76,10 +79,13 @@ for (const [index, match] of matches.entries()) {
   const category = categoryFrom(block);
   const previous = existingRecords[slug] ?? {};
   const previousReviewer = previous.reviewer ?? {};
+  const defaultImages = media.categoryDefaults[category] ?? media.categoryDefaults.basics;
+  const defaultImageKey = defaultImages[rawIndexBySlug.get(slug) % defaultImages.length];
   records[slug] = {
     slug,
     title,
     lastEditedAt: updatedAtFrom(block),
+    imageKey: previous.imageKey ?? defaultImageKey,
     publishAt: scheduledDate(index),
     publishedAt: previous.publishedAt ?? "",
     releaseTrack: initialCandidates.has(slug) ? "initial-candidate" : "scheduled",
