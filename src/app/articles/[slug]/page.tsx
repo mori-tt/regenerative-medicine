@@ -89,8 +89,9 @@ export default async function ArticlePage({
               <span>編集：{site.editorName || `${site.name}編集部`}</span>
               <span>位置づけ：一般情報</span>
               <time dateTime={article.updatedAt}>
-                更新：{article.updatedAt.replaceAll("-", ".")}
+                最終編集：{article.updatedAt.replaceAll("-", ".")}
               </time>
+              {article.publishedAt && <time dateTime={article.publishedAt}>公開：{article.publishedAt.replaceAll("-", ".")}</time>}
               <span>約{article.readingMinutes}分で読める</span>
             </div>
             {scheduled && (

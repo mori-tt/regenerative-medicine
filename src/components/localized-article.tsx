@@ -74,7 +74,7 @@ const fallbackSections: Record<SiteLocale, [string, string, string][]> = {
 const chrome = {
   en: {
     home: "Home", editedBy: "Edited by the Regenerative Medicine Guide editorial team", position: "Position: general information",
-    updated: "Updated", readMinutes: (n: number) => `About ${n} min read`, keyPoints: "Key points",
+    updated: "Last edited", published: "Published", readMinutes: (n: number) => `About ${n} min read`, keyPoints: "Key points",
     toc: "On this page", references: "Sources and further reading", referencesNote: "Source materials may be updated. Check the original publishers for details.",
     reviewerDone: "Reviewing physician for this article", reviewerPending: "About medical review",
     reviewerPendingBody: "The medical content of this article is not labelled as reviewed until per-article review records are finalized.",
@@ -84,7 +84,7 @@ const chrome = {
   },
   zh: {
     home: "首页", editedBy: "编辑：再生医学指南编辑部", position: "定位：一般信息",
-    updated: "更新", readMinutes: (n: number) => `约${n}分钟阅读`, keyPoints: "文章要点",
+    updated: "最后编辑", published: "发布", readMinutes: (n: number) => `约${n}分钟阅读`, keyPoints: "文章要点",
     toc: "本文目录", references: "参考资料", referencesNote: "资料内容可能更新。详情请确认发布方信息。",
     reviewerDone: "本文的审核医生", reviewerPending: "关于医学审核",
     reviewerPendingBody: "本文的医学内容在按文章的审核记录确定前，不会标注为已审核。",
@@ -168,7 +168,7 @@ export function LocalizedArticleCard({
         </h3>
         {!compact && <p>{article.description}</p>}
         <div className="card-bottom">
-          <span>{source.updatedAt.replaceAll("-", ".")} · {copy.updated}</span>
+          <span>{source.publishedAt ? `${source.publishedAt.replaceAll("-", ".")} · ${copy.published}` : `${source.updatedAt.replaceAll("-", ".")} · ${copy.updated}`}</span>
           <Icon name="arrow" size={19} />
         </div>
       </div>
@@ -251,6 +251,7 @@ export function LocalizedArticle({ locale, source }: { locale: SiteLocale; sourc
                   <time dateTime={source.updatedAt}>
                     {copy.updated}：{source.updatedAt.replaceAll("-", ".")}
                   </time>
+                  {source.publishedAt && <time dateTime={source.publishedAt}>{copy.published}：{source.publishedAt.replaceAll("-", ".")}</time>}
                   <span>{copy.readMinutes(source.readingMinutes)}</span>
                 </div>
               )}

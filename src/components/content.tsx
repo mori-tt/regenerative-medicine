@@ -83,7 +83,7 @@ export function ArticleCard({
         </h3>
         {!compact && <p>{article.description}</p>}
         <div className="card-bottom">
-          <span>{article.updatedAt.replaceAll("-", ".")} 更新</span>
+          <span>{article.publishedAt ? `公開 ${article.publishedAt.replaceAll("-", ".")}` : `最終編集 ${article.updatedAt.replaceAll("-", ".")}`}</span>
           <Icon name="arrow" size={19} />
         </div>
       </div>

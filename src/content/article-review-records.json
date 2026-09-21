@@ -2,7 +2,9 @@
   "what-is-regenerative-medicine": {
     "slug": "what-is-regenerative-medicine",
     "title": "再生医療とは？ はじめに知っておきたい基礎知識",
+    "lastEditedAt": "2026-08-01",
     "publishAt": "2026-09-21",
+    "publishedAt": "",
     "releaseTrack": "initial-candidate",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -27,7 +29,9 @@
   "cells-tissues-organs": {
     "slug": "cells-tissues-organs",
     "title": "細胞・組織・臓器の基礎：体のつくりから理解する",
+    "lastEditedAt": "2026-08-01",
     "publishAt": "2026-09-24",
+    "publishedAt": "",
     "releaseTrack": "initial-candidate",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -50,7 +54,9 @@
   "three-approaches": {
     "slug": "three-approaches",
     "title": "再生医療の3つのアプローチ：細胞移植・組織工学・体の力を生かす",
+    "lastEditedAt": "2026-08-02",
     "publishAt": "2026-09-27",
+    "publishedAt": "",
     "releaseTrack": "initial-candidate",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -74,7 +80,9 @@
   "stem-cell-types": {
     "slug": "stem-cell-types",
     "title": "幹細胞とは？ iPS細胞・ES細胞・体性幹細胞の違い",
+    "lastEditedAt": "2026-08-02",
     "publishAt": "2026-09-30",
+    "publishedAt": "",
     "releaseTrack": "initial-candidate",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -98,7 +106,9 @@
   "ips-cells-explained": {
     "slug": "ips-cells-explained",
     "title": "iPS細胞とは？ 仕組みと研究の現状をやさしく解説",
+    "lastEditedAt": "2026-08-02",
     "publishAt": "2026-10-03",
+    "publishedAt": "",
     "releaseTrack": "initial-candidate",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -123,7 +133,9 @@
   "es-cells-explained": {
     "slug": "es-cells-explained",
     "title": "ES細胞とは？ 特徴と倫理的な配慮",
+    "lastEditedAt": "2026-08-03",
     "publishAt": "2026-10-06",
+    "publishedAt": "",
     "releaseTrack": "initial-candidate",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -147,7 +159,9 @@
   "questions-before-treatment": {
     "slug": "questions-before-treatment",
     "title": "再生医療を検討するとき、医師に確認したいこと",
+    "lastEditedAt": "2026-08-03",
     "publishAt": "2026-10-09",
+    "publishedAt": "",
     "releaseTrack": "initial-candidate",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -173,7 +187,9 @@
   "cost-and-insurance": {
     "slug": "cost-and-insurance",
     "title": "費用と保険：再生医療のお金の話を整理する",
+    "lastEditedAt": "2026-08-04",
     "publishAt": "2026-10-12",
+    "publishedAt": "",
     "releaseTrack": "initial-candidate",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -200,7 +216,9 @@
   "risks-and-safety": {
     "slug": "risks-and-safety",
     "title": "リスクと安全性：副作用・合併症の考え方",
+    "lastEditedAt": "2026-08-04",
     "publishAt": "2026-10-15",
+    "publishedAt": "",
     "releaseTrack": "initial-candidate",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -226,7 +244,9 @@
   "stages-of-research": {
     "slug": "stages-of-research",
     "title": "研究の段階：基礎研究から非臨床・臨床試験へ",
+    "lastEditedAt": "2026-08-05",
     "publishAt": "2026-10-18",
+    "publishedAt": "",
     "releaseTrack": "initial-candidate",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -251,7 +271,9 @@
   "japanese-society-for-regenerative-medicine": {
     "slug": "japanese-society-for-regenerative-medicine",
     "title": "日本再生医療学会とは？役割・認定制度・公式情報の読み方",
+    "lastEditedAt": "2026-08-01",
     "publishAt": "2026-11-01",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -277,7 +299,9 @@
   "regenerative-medicine-history": {
     "slug": "regenerative-medicine-history",
     "title": "再生医療の歩み：輸血・移植から細胞の時代へ",
+    "lastEditedAt": "2026-08-01",
     "publishAt": "2026-11-04",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -303,7 +327,9 @@
   "myths-and-facts": {
     "slug": "myths-and-facts",
     "title": "再生医療のよくある誤解5つ：期待と現実の区別",
+    "lastEditedAt": "2026-08-02",
     "publishAt": "2026-11-07",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -328,7 +354,9 @@
   "somatic-stem-cells": {
     "slug": "somatic-stem-cells",
     "title": "体性幹細胞とは？ 造血・間葉系・神経幹細胞の違い",
+    "lastEditedAt": "2026-08-03",
     "publishAt": "2026-11-10",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -354,7 +382,9 @@
   "cell-culture-and-quality": {
     "slug": "cell-culture-and-quality",
     "title": "細胞の培養・加工・品質管理：治療の裏側にある工程",
+    "lastEditedAt": "2026-08-03",
     "publishAt": "2026-11-13",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -378,7 +408,9 @@
   "second-opinion": {
     "slug": "second-opinion",
     "title": "セカンドオピニオンの活用法：納得のための第二の意見",
+    "lastEditedAt": "2026-08-04",
     "publishAt": "2026-11-16",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -402,7 +434,9 @@
   "clinical-trials-guide": {
     "slug": "clinical-trials-guide",
     "title": "治験・臨床研究に参加するとき：流れと確認点",
+    "lastEditedAt": "2026-08-04",
     "publishAt": "2026-11-19",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -429,7 +463,9 @@
   "reading-research-news": {
     "slug": "reading-research-news",
     "title": "再生医療のニュースを読むための、3つの視点",
+    "lastEditedAt": "2026-08-05",
     "publishAt": "2026-11-22",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -452,7 +488,9 @@
   "evidence-levels": {
     "slug": "evidence-levels",
     "title": "エビデンスレベルと論文の読み方：確かさを比べる",
+    "lastEditedAt": "2026-08-05",
     "publishAt": "2026-11-25",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -475,7 +513,9 @@
   "approved-products-japan": {
     "slug": "approved-products-japan",
     "title": "日本で承認された再生医療等製品：今使える治療を知る",
+    "lastEditedAt": "2026-08-05",
     "publishAt": "2026-11-28",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -501,7 +541,9 @@
   "future-perspectives": {
     "slug": "future-perspectives",
     "title": "これからの研究：オルガノイド・臓器再生・個別化医療",
+    "lastEditedAt": "2026-08-06",
     "publishAt": "2026-12-01",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -525,7 +567,9 @@
   "body-repair-mechanisms": {
     "slug": "body-repair-mechanisms",
     "title": "体の修復の仕組み：炎症・瘢痕・再生の違い",
+    "lastEditedAt": "2026-08-06",
     "publishAt": "2026-12-04",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -549,7 +593,9 @@
   "self-vs-donor-cells": {
     "slug": "self-vs-donor-cells",
     "title": "自家と他家：誰の細胞を使うかの違い",
+    "lastEditedAt": "2026-08-06",
     "publishAt": "2026-12-07",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -574,7 +620,9 @@
   "differentiation-basics": {
     "slug": "differentiation-basics",
     "title": "分化・脱分化・リプログラミング：細胞の変化を表す言葉",
+    "lastEditedAt": "2026-08-06",
     "publishAt": "2026-12-10",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -595,7 +643,9 @@
   "genes-and-cells": {
     "slug": "genes-and-cells",
     "title": "遺伝子と細胞の関係：設計図と働き手の入門",
+    "lastEditedAt": "2026-08-07",
     "publishAt": "2026-12-13",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -618,7 +668,9 @@
   "immune-basics": {
     "slug": "immune-basics",
     "title": "免疫の基礎と拒絶：他人の細胞が排除される理由",
+    "lastEditedAt": "2026-08-07",
     "publishAt": "2026-12-16",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -642,7 +694,9 @@
   "blood-basics": {
     "slug": "blood-basics",
     "title": "血液の基礎：赤血球・白血球・血小板と造血",
+    "lastEditedAt": "2026-08-07",
     "publishAt": "2026-12-19",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -666,7 +720,9 @@
   "skin-bone-cartilage": {
     "slug": "skin-bone-cartilage",
     "title": "皮膚・骨・軟骨の再生：身近な組織の例",
+    "lastEditedAt": "2026-08-07",
     "publishAt": "2026-12-22",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -690,7 +746,9 @@
   "nerve-muscle-heart": {
     "slug": "nerve-muscle-heart",
     "title": "神経・筋・心臓の特徴：再生が難しいとされる臓器",
+    "lastEditedAt": "2026-08-08",
     "publishAt": "2026-12-25",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -713,7 +771,9 @@
   "age-and-regeneration": {
     "slug": "age-and-regeneration",
     "title": "年齢と再生力：子どもの治りと大人の治りの違い",
+    "lastEditedAt": "2026-08-08",
     "publishAt": "2026-12-28",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -736,7 +796,9 @@
   "drugs-surgery-comparison": {
     "slug": "drugs-surgery-comparison",
     "title": "薬・手術との比較：再生医療の位置づけ",
+    "lastEditedAt": "2026-08-08",
     "publishAt": "2027-01-01",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -761,7 +823,9 @@
   "hospital-words": {
     "slug": "hospital-words",
     "title": "病院で聞く言葉：適応・禁忌・予後・QOL",
+    "lastEditedAt": "2026-08-08",
     "publishAt": "2027-01-04",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -784,7 +848,9 @@
   "family-discussion": {
     "slug": "family-discussion",
     "title": "家族との話し方：治療の選択を共有するために",
+    "lastEditedAt": "2026-08-09",
     "publishAt": "2027-01-07",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -807,7 +873,9 @@
   "next-steps-after-basics": {
     "slug": "next-steps-after-basics",
     "title": "基礎の次に読む順番：あなたに合った道案内",
+    "lastEditedAt": "2026-08-09",
     "publishAt": "2027-01-10",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -832,7 +900,9 @@
   "hematopoietic-transplant": {
     "slug": "hematopoietic-transplant",
     "title": "造血幹細胞移植：確立した細胞治療の代表例",
+    "lastEditedAt": "2026-08-09",
     "publishAt": "2027-01-13",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -856,7 +926,9 @@
   "mesenchymal-basics": {
     "slug": "mesenchymal-basics",
     "title": "間葉系幹細胞の整理：よく聞く名前の実像",
+    "lastEditedAt": "2026-08-09",
     "publishAt": "2027-01-16",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -880,7 +952,9 @@
   "neural-stem-cells": {
     "slug": "neural-stem-cells",
     "title": "神経幹細胞：脳と脊髄の修復を目指す研究",
+    "lastEditedAt": "2026-08-10",
     "publishAt": "2027-01-19",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -905,7 +979,9 @@
   "tissue-stem-cells": {
     "slug": "tissue-stem-cells",
     "title": "組織幹細胞の世界：皮膚・腸・筋肉の維持役",
+    "lastEditedAt": "2026-08-10",
     "publishAt": "2027-01-22",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -929,7 +1005,9 @@
   "ips-stock": {
     "slug": "ips-stock",
     "title": "iPS細胞ストック：備蓄細胞で迅速に届ける工夫",
+    "lastEditedAt": "2026-08-10",
     "publishAt": "2027-01-25",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -953,7 +1031,9 @@
   "differentiation-purification": {
     "slug": "differentiation-purification",
     "title": "分化誘導と純化：目的の細胞だけを取り出す技術",
+    "lastEditedAt": "2026-08-10",
     "publishAt": "2027-01-28",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -977,7 +1057,9 @@
   "genome-editing-difference": {
     "slug": "genome-editing-difference",
     "title": "ゲノム編集との違い：切る技術と育てる技術",
+    "lastEditedAt": "2026-08-11",
     "publishAt": "2027-02-01",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -1001,7 +1083,9 @@
   "autologous-allogeneic": {
     "slug": "autologous-allogeneic",
     "title": "自家細胞と他家細胞：採取・製造・通院の違い",
+    "lastEditedAt": "2026-08-11",
     "publishAt": "2027-02-04",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -1026,7 +1110,9 @@
   "tumorigenicity-safety": {
     "slug": "tumorigenicity-safety",
     "title": "腫瘍化と安全性試験：増える力の裏側",
+    "lastEditedAt": "2026-08-11",
     "publishAt": "2027-02-07",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -1049,7 +1135,9 @@
   "hla-rejection": {
     "slug": "hla-rejection",
     "title": "HLAと拒絶：型合わせの基本",
+    "lastEditedAt": "2026-08-11",
     "publishAt": "2027-02-10",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -1073,7 +1161,9 @@
   "ips-drug-discovery": {
     "slug": "ips-drug-discovery",
     "title": "iPS創薬：移植だけではないiPSの使い道",
+    "lastEditedAt": "2026-08-12",
     "publishAt": "2027-02-13",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -1097,7 +1187,9 @@
   "organoids-intro": {
     "slug": "organoids-intro",
     "title": "オルガノイド入門：ミニ臓器で何が分かるか",
+    "lastEditedAt": "2026-08-12",
     "publishAt": "2027-02-16",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -1121,7 +1213,9 @@
   "exosomes-notes": {
     "slug": "exosomes-notes",
     "title": "エクソソーム・分泌物療法の話題：冷静な見方",
+    "lastEditedAt": "2026-08-12",
     "publishAt": "2027-02-19",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -1146,7 +1240,9 @@
   "first-visit-prep": {
     "slug": "first-visit-prep",
     "title": "初診の準備：持参物と伝え方の checklist",
+    "lastEditedAt": "2026-08-12",
     "publishAt": "2027-02-22",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -1170,7 +1266,9 @@
   "informed-consent-howto": {
     "slug": "informed-consent-howto",
     "title": "説明と同意の受け方：納得のための聞き方",
+    "lastEditedAt": "2026-08-13",
     "publishAt": "2027-02-25",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -1195,7 +1293,9 @@
   "treatment-flow": {
     "slug": "treatment-flow",
     "title": "相談から治療後までの流れ：全体像をつかむ",
+    "lastEditedAt": "2026-08-13",
     "publishAt": "2027-02-28",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -1219,7 +1319,9 @@
   "insurance-care": {
     "slug": "insurance-care",
     "title": "保険診療の探し方：対象疾患と医療機関",
+    "lastEditedAt": "2026-08-13",
     "publishAt": "2027-03-01",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -1244,7 +1346,9 @@
   "jibihi-contract": {
     "slug": "jibihi-contract",
     "title": "自由診療の契約書の読み方：署名前に見る点",
+    "lastEditedAt": "2026-08-13",
     "publishAt": "2027-03-04",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -1269,7 +1373,9 @@
   "advertising-literacy": {
     "slug": "advertising-literacy",
     "title": "広告の見分け方：症例写真・体験談との付き合い方",
+    "lastEditedAt": "2026-08-14",
     "publishAt": "2027-03-07",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -1296,7 +1402,9 @@
   "trouble-help": {
     "slug": "trouble-help",
     "title": "トラブル時の相談先：困ったときの連絡順",
+    "lastEditedAt": "2026-08-14",
     "publishAt": "2027-03-10",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -1321,7 +1429,9 @@
   "aftercare": {
     "slug": "aftercare",
     "title": "治療後の経過観察：通院・検査・生活の注意",
+    "lastEditedAt": "2026-08-14",
     "publishAt": "2027-03-13",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -1345,7 +1455,9 @@
   "pain-burden": {
     "slug": "pain-burden",
     "title": "痛み・入院・通院の負担：体と暮らしの見通し",
+    "lastEditedAt": "2026-08-14",
     "publishAt": "2027-03-16",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -1369,7 +1481,9 @@
   "family-decision": {
     "slug": "family-decision",
     "title": "家族と決める：代理判断が必要なとき",
+    "lastEditedAt": "2026-08-15",
     "publishAt": "2027-03-19",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -1393,7 +1507,9 @@
   "elderly-points": {
     "slug": "elderly-points",
     "title": "高齢者が考えるときの注意：持病・薬・通院",
+    "lastEditedAt": "2026-08-15",
     "publishAt": "2027-03-22",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -1416,7 +1532,9 @@
   "children-points": {
     "slug": "children-points",
     "title": "子どもが対象のとき：成長への配慮と同意",
+    "lastEditedAt": "2026-08-15",
     "publishAt": "2027-03-25",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -1440,7 +1558,9 @@
   "final-checklist": {
     "slug": "final-checklist",
     "title": "契約前の最終チェック15項目：持ち帰り確認シート",
+    "lastEditedAt": "2026-08-15",
     "publishAt": "2027-03-28",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -1466,7 +1586,9 @@
   "bench-to-bedside": {
     "slug": "bench-to-bedside",
     "title": "基礎と臨床の橋渡し：トランスレーショナルリサーチ",
+    "lastEditedAt": "2026-08-16",
     "publishAt": "2027-04-01",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -1489,7 +1611,9 @@
   "randomized-trials": {
     "slug": "randomized-trials",
     "title": "ランダム化比較試験とは：公平に比べる工夫",
+    "lastEditedAt": "2026-08-16",
     "publishAt": "2027-04-04",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -1512,7 +1636,9 @@
   "case-reports-registries": {
     "slug": "case-reports-registries",
     "title": "症例報告とレジストリ：一人ひとりの積み重ね",
+    "lastEditedAt": "2026-08-16",
     "publishAt": "2027-04-07",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -1535,7 +1661,9 @@
   "endpoints": {
     "slug": "endpoints",
     "title": "評価項目・エンドポイント：何をもって効いたとするか",
+    "lastEditedAt": "2026-08-16",
     "publishAt": "2027-04-10",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -1556,7 +1684,9 @@
   "peer-review": {
     "slug": "peer-review",
     "title": "査読と論文誌：論文が世に出るまで",
+    "lastEditedAt": "2026-08-17",
     "publishAt": "2027-04-13",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -1577,7 +1707,9 @@
   "press-release-reading": {
     "slug": "press-release-reading",
     "title": "プレスリリースの読み方：発表文の裏側を読む",
+    "lastEditedAt": "2026-08-17",
     "publishAt": "2027-04-16",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -1600,7 +1732,9 @@
   "statistics-intro": {
     "slug": "statistics-intro",
     "title": "統計の超入門：p値・信頼区間・ n数",
+    "lastEditedAt": "2026-08-17",
     "publishAt": "2027-04-19",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -1623,7 +1757,9 @@
   "conflict-of-interest": {
     "slug": "conflict-of-interest",
     "title": "利益相反の開示：誰が得をする研究か",
+    "lastEditedAt": "2026-08-17",
     "publishAt": "2027-04-22",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -1644,7 +1780,9 @@
   "overseas-research": {
     "slug": "overseas-research",
     "title": "海外の研究を読む：国による制度の違い",
+    "lastEditedAt": "2026-08-18",
     "publishAt": "2027-04-25",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -1669,7 +1807,9 @@
   "negative-trials": {
     "slug": "negative-trials",
     "title": "うまくいかなかった研究の価値：陰性試験を読む",
+    "lastEditedAt": "2026-08-18",
     "publishAt": "2027-04-28",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -1692,7 +1832,9 @@
   "long-term-followup": {
     "slug": "long-term-followup",
     "title": "長期追跡の重要性：年単位で見る安全性",
+    "lastEditedAt": "2026-08-18",
     "publishAt": "2027-05-01",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -1715,7 +1857,9 @@
   "how-to-find-trials": {
     "slug": "how-to-find-trials",
     "title": "治験を探す方法：登録情報の使い方",
+    "lastEditedAt": "2026-08-18",
     "publishAt": "2027-05-04",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -1739,7 +1883,9 @@
   "world-products": {
     "slug": "world-products",
     "title": "世界の承認製品の調べ方：原資料にあたる",
+    "lastEditedAt": "2026-08-19",
     "publishAt": "2027-05-07",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -1762,7 +1908,9 @@
   "cell-division": {
     "slug": "cell-division",
     "title": "細胞分裂の基礎：体が増え・入れ替わる仕組み",
+    "lastEditedAt": "2026-08-19",
     "publishAt": "2027-05-10",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -1786,7 +1934,9 @@
   "dna-basics": {
     "slug": "dna-basics",
     "title": "DNAの基礎：設計情報の読み方",
+    "lastEditedAt": "2026-08-19",
     "publishAt": "2027-05-13",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -1807,7 +1957,9 @@
   "proteins-basics": {
     "slug": "proteins-basics",
     "title": "タンパク質の基礎：体の働き手",
+    "lastEditedAt": "2026-08-19",
     "publishAt": "2027-05-16",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -1828,7 +1980,9 @@
   "digestion-absorption": {
     "slug": "digestion-absorption",
     "title": "消化と吸収：栄養が体になるまで",
+    "lastEditedAt": "2026-08-20",
     "publishAt": "2027-05-19",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -1851,7 +2005,9 @@
   "circulation": {
     "slug": "circulation",
     "title": "循環の仕組み：血液が巡る道",
+    "lastEditedAt": "2026-08-20",
     "publishAt": "2027-05-22",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -1874,7 +2030,9 @@
   "respiration": {
     "slug": "respiration",
     "title": "呼吸の仕組み：酸素と二酸化炭素の交換",
+    "lastEditedAt": "2026-08-20",
     "publishAt": "2027-05-25",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -1895,7 +2053,9 @@
   "kidney-liver": {
     "slug": "kidney-liver",
     "title": "腎臓と肝臓：老廃物処理と代謝の要",
+    "lastEditedAt": "2026-08-20",
     "publishAt": "2027-05-28",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -1918,7 +2078,9 @@
   "brain-basics": {
     "slug": "brain-basics",
     "title": "脳の基礎：指令塔のつくりと働き",
+    "lastEditedAt": "2026-08-21",
     "publishAt": "2027-06-01",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -1939,7 +2101,9 @@
   "senses": {
     "slug": "senses",
     "title": "目と耳：感覚器の仕組みと再生研究",
+    "lastEditedAt": "2026-08-21",
     "publishAt": "2027-06-04",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -1960,7 +2124,9 @@
   "teeth-bones-growth": {
     "slug": "teeth-bones-growth",
     "title": "歯と骨の成長：子どもの体の変化",
+    "lastEditedAt": "2026-08-21",
     "publishAt": "2027-06-07",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -1983,7 +2149,9 @@
   "hormones": {
     "slug": "hormones",
     "title": "ホルモンの基礎：全身の連絡網",
+    "lastEditedAt": "2026-08-21",
     "publishAt": "2027-06-10",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -2006,7 +2174,9 @@
   "antibodies-vaccines": {
     "slug": "antibodies-vaccines",
     "title": "抗体とワクチン：免疫の記憶の仕組み",
+    "lastEditedAt": "2026-08-22",
     "publishAt": "2027-06-13",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -2030,7 +2200,9 @@
   "allergy-basics": {
     "slug": "allergy-basics",
     "title": "アレルギーの基礎：過剰な防御反応",
+    "lastEditedAt": "2026-08-22",
     "publishAt": "2027-06-16",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -2054,7 +2226,9 @@
   "cancer-basics": {
     "slug": "cancer-basics",
     "title": "がんの基礎知識：細胞の増殖の暴走",
+    "lastEditedAt": "2026-08-22",
     "publishAt": "2027-06-19",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -2079,7 +2253,9 @@
   "diabetes-lifestyle": {
     "slug": "diabetes-lifestyle",
     "title": "生活習慣病と細胞：糖尿病を例に",
+    "lastEditedAt": "2026-08-22",
     "publishAt": "2027-06-22",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -2103,7 +2279,9 @@
   "pregnancy-cordblood": {
     "slug": "pregnancy-cordblood",
     "title": "妊娠・出産と臍帯血：誕生時の細胞の活用",
+    "lastEditedAt": "2026-08-23",
     "publishAt": "2027-06-25",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -2126,7 +2304,9 @@
   "aging-society": {
     "slug": "aging-society",
     "title": "超高齢社会と再生医療：期待の背景",
+    "lastEditedAt": "2026-08-23",
     "publishAt": "2027-06-28",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -2149,7 +2329,9 @@
   "disabilities-support": {
     "slug": "disabilities-support",
     "title": "障害と支援制度：医療と暮らしの橋渡し",
+    "lastEditedAt": "2026-08-23",
     "publishAt": "2027-07-01",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -2172,7 +2354,9 @@
   "rehabilitation-basics": {
     "slug": "rehabilitation-basics",
     "title": "リハビリの基礎：回復を支える訓練",
+    "lastEditedAt": "2026-08-23",
     "publishAt": "2027-07-04",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -2195,7 +2379,9 @@
   "nutrition-basics": {
     "slug": "nutrition-basics",
     "title": "栄養の基礎：5大栄養素と体の材料",
+    "lastEditedAt": "2026-08-24",
     "publishAt": "2027-07-07",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -2218,7 +2404,9 @@
   "exercise-basics": {
     "slug": "exercise-basics",
     "title": "運動と体：筋肉・骨・心肺への効果",
+    "lastEditedAt": "2026-08-24",
     "publishAt": "2027-07-10",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -2241,7 +2429,9 @@
   "sleep-basics": {
     "slug": "sleep-basics",
     "title": "睡眠と修復：眠りが体を整える",
+    "lastEditedAt": "2026-08-24",
     "publishAt": "2027-07-13",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -2264,7 +2454,9 @@
   "mental-health-decision": {
     "slug": "mental-health-decision",
     "title": "心の健康と意思決定：不安と向き合う",
+    "lastEditedAt": "2026-08-24",
     "publishAt": "2027-07-16",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -2287,7 +2479,9 @@
   "health-checkups": {
     "slug": "health-checkups",
     "title": "健診・検診の活かし方：結果の読み方",
+    "lastEditedAt": "2026-08-25",
     "publishAt": "2027-07-19",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -2308,7 +2502,9 @@
   "family-doctor": {
     "slug": "family-doctor",
     "title": "かかりつけ医の持ち方：相談の起点",
+    "lastEditedAt": "2026-08-25",
     "publishAt": "2027-07-22",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -2331,7 +2527,9 @@
   "cell-cycle": {
     "slug": "cell-cycle",
     "title": "細胞周期：分裂と休止のリズム",
+    "lastEditedAt": "2026-08-25",
     "publishAt": "2027-07-25",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -2352,7 +2550,9 @@
   "asymmetric-division": {
     "slug": "asymmetric-division",
     "title": "非対称分裂：幹細胞を保つ分け方",
+    "lastEditedAt": "2026-08-25",
     "publishAt": "2027-07-28",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -2373,7 +2573,9 @@
   "stemcell-niche": {
     "slug": "stemcell-niche",
     "title": "ニッチ：幹細胞を支える微小環境",
+    "lastEditedAt": "2026-08-26",
     "publishAt": "2027-08-01",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -2394,7 +2596,9 @@
   "cell-signaling": {
     "slug": "cell-signaling",
     "title": "細胞間シグナル：連絡を取り合う仕組み",
+    "lastEditedAt": "2026-08-26",
     "publishAt": "2027-08-04",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -2417,7 +2621,9 @@
   "growth-factors": {
     "slug": "growth-factors",
     "title": "成長因子：増殖と分化の合図",
+    "lastEditedAt": "2026-08-26",
     "publishAt": "2027-08-07",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -2441,7 +2647,9 @@
   "scaffolds": {
     "slug": "scaffolds",
     "title": "足場材料：細胞の家を設計する",
+    "lastEditedAt": "2026-08-26",
     "publishAt": "2027-08-10",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -2464,7 +2672,9 @@
   "bioreactors": {
     "slug": "bioreactors",
     "title": "大量培養：バイオリアクターの役割",
+    "lastEditedAt": "2026-08-27",
     "publishAt": "2027-08-13",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -2487,7 +2697,9 @@
   "cryopreservation": {
     "slug": "cryopreservation",
     "title": "凍結保存：細胞を止めて運ぶ技術",
+    "lastEditedAt": "2026-08-27",
     "publishAt": "2027-08-16",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -2508,7 +2720,9 @@
   "cord-blood-cells": {
     "slug": "cord-blood-cells",
     "title": "臍帯血の細胞：採取から利用まで",
+    "lastEditedAt": "2026-08-27",
     "publishAt": "2027-08-19",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -2529,7 +2743,9 @@
   "dental-pulp-stem": {
     "slug": "dental-pulp-stem",
     "title": "歯髄幹細胞：抜いた歯の活用",
+    "lastEditedAt": "2026-08-27",
     "publishAt": "2027-08-22",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -2553,7 +2769,9 @@
   "adipose-stem": {
     "slug": "adipose-stem",
     "title": "脂肪由来幹細胞：採取しやすさと注意点",
+    "lastEditedAt": "2026-08-28",
     "publishAt": "2027-08-25",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -2578,7 +2796,9 @@
   "bone-marrow-system": {
     "slug": "bone-marrow-system",
     "title": "骨髄の仕組み：血を作る工場",
+    "lastEditedAt": "2026-08-28",
     "publishAt": "2027-08-28",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -2599,7 +2819,9 @@
   "satellite-cells": {
     "slug": "satellite-cells",
     "title": "筋サテライト細胞：筋肉の控え選手",
+    "lastEditedAt": "2026-08-28",
     "publishAt": "2027-09-01",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -2622,7 +2844,9 @@
   "intestinal-stem": {
     "slug": "intestinal-stem",
     "title": "腸管上皮幹細胞：毎日生まれ変わる仕組み",
+    "lastEditedAt": "2026-08-28",
     "publishAt": "2027-09-04",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -2645,7 +2869,9 @@
   "liver-progenitor": {
     "slug": "liver-progenitor",
     "title": "肝臓の再生と前駆細胞：強い回復力の源",
+    "lastEditedAt": "2026-08-29",
     "publishAt": "2027-09-07",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -2666,7 +2892,9 @@
   "corneal-regeneration": {
     "slug": "corneal-regeneration",
     "title": "角膜・上皮の再生：輪部幹細胞の働き",
+    "lastEditedAt": "2026-08-29",
     "publishAt": "2027-09-10",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -2687,7 +2915,9 @@
   "cartilage-repair-deep": {
     "slug": "cartilage-repair-deep",
     "title": "軟骨再生の深掘り：なぜ難しいか",
+    "lastEditedAt": "2026-08-29",
     "publishAt": "2027-09-13",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -2710,7 +2940,9 @@
   "tendon-ligament": {
     "slug": "tendon-ligament",
     "title": "腱・靭帯：つなぐ組織の修復",
+    "lastEditedAt": "2026-08-29",
     "publishAt": "2027-09-16",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -2733,7 +2965,9 @@
   "hair-regeneration": {
     "slug": "hair-regeneration",
     "title": "毛髪再生の研究：毛包の仕組み",
+    "lastEditedAt": "2026-08-30",
     "publishAt": "2027-09-19",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -2759,7 +2993,9 @@
   "tooth-regeneration": {
     "slug": "tooth-regeneration",
     "title": "歯の再生研究：失った歯を取り戻せるか",
+    "lastEditedAt": "2026-08-30",
     "publishAt": "2027-09-22",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -2782,7 +3018,9 @@
   "inner-ear-regeneration": {
     "slug": "inner-ear-regeneration",
     "title": "内耳・聴覚の再生研究：有毛細胞を目指して",
+    "lastEditedAt": "2026-08-30",
     "publishAt": "2027-09-25",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -2806,7 +3044,9 @@
   "retina-regeneration": {
     "slug": "retina-regeneration",
     "title": "網膜の再生研究：見る力を守る挑戦",
+    "lastEditedAt": "2026-08-30",
     "publishAt": "2027-09-28",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -2829,7 +3069,9 @@
   "spinal-cord-detail": {
     "slug": "spinal-cord-detail",
     "title": "脊髄損傷の治療研究：神経をつなぐ挑戦",
+    "lastEditedAt": "2026-08-31",
     "publishAt": "2027-10-01",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -2853,7 +3095,9 @@
   "heart-sheet-detail": {
     "slug": "heart-sheet-detail",
     "title": "心筋シートの研究：拍動する組織を目指して",
+    "lastEditedAt": "2026-08-31",
     "publishAt": "2027-10-04",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -2876,7 +3120,9 @@
   "direct-reprogramming": {
     "slug": "direct-reprogramming",
     "title": "ダイレクトリプログラミング：経由しない変換",
+    "lastEditedAt": "2026-08-31",
     "publishAt": "2027-10-07",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -2900,7 +3146,9 @@
   "online-care": {
     "slug": "online-care",
     "title": "オンライン診療との付き合い方：遠方の相談に",
+    "lastEditedAt": "2026-08-31",
     "publishAt": "2027-10-10",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -2923,7 +3171,9 @@
   "referral-letters": {
     "slug": "referral-letters",
     "title": "紹介状・逆紹介：医療機関をつなぐ文書",
+    "lastEditedAt": "2026-09-01",
     "publishAt": "2027-10-13",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -2948,7 +3198,9 @@
   "medical-records": {
     "slug": "medical-records",
     "title": "診療記録の開示請求：自分の記録を受け取る",
+    "lastEditedAt": "2026-09-01",
     "publishAt": "2027-10-16",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -2973,7 +3225,9 @@
   "hospital-choice": {
     "slug": "hospital-choice",
     "title": "病院選びの視点：症例数と連携を見る",
+    "lastEditedAt": "2026-09-01",
     "publishAt": "2027-10-19",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -2997,7 +3251,9 @@
   "emergency-care": {
     "slug": "emergency-care",
     "title": "救急とのかかわり：いざというときの備え",
+    "lastEditedAt": "2026-09-01",
     "publishAt": "2027-10-22",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -3024,7 +3280,9 @@
   "pharmacy-use": {
     "slug": "pharmacy-use",
     "title": "薬局・薬剤師の活用：薬の相談役",
+    "lastEditedAt": "2026-09-02",
     "publishAt": "2027-10-25",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -3048,7 +3306,9 @@
   "nursing-care-link": {
     "slug": "nursing-care-link",
     "title": "看護・介護との連携：暮らしを支える体制",
+    "lastEditedAt": "2026-09-02",
     "publishAt": "2027-10-28",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -3072,7 +3332,9 @@
   "home-care": {
     "slug": "home-care",
     "title": "在宅医療の基礎：家で受ける医療",
+    "lastEditedAt": "2026-09-02",
     "publishAt": "2027-11-01",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -3095,7 +3357,9 @@
   "work-balance": {
     "slug": "work-balance",
     "title": "治療と仕事の両立：両立支援の使い方",
+    "lastEditedAt": "2026-09-02",
     "publishAt": "2027-11-04",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -3119,7 +3383,9 @@
   "cost-simulation": {
     "slug": "cost-simulation",
     "title": "費用シミュレーションの作り方：総額を見通す",
+    "lastEditedAt": "2026-09-03",
     "publishAt": "2027-11-07",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -3143,7 +3409,9 @@
   "high-cost-care": {
     "slug": "high-cost-care",
     "title": "高額療養費制度：医療費の上限の仕組み",
+    "lastEditedAt": "2026-09-03",
     "publishAt": "2027-11-10",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -3167,7 +3435,9 @@
   "tax-deduction": {
     "slug": "tax-deduction",
     "title": "医療費控除：確定申告での手続き",
+    "lastEditedAt": "2026-09-03",
     "publishAt": "2027-11-13",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -3192,7 +3462,9 @@
   "insurance-review": {
     "slug": "insurance-review",
     "title": "民間保険の見直し方：保障と必要額",
+    "lastEditedAt": "2026-09-03",
     "publishAt": "2027-11-16",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -3217,7 +3489,9 @@
   "decision-aids": {
     "slug": "decision-aids",
     "title": "意思決定支援ツール：比べる表の使い方",
+    "lastEditedAt": "2026-09-04",
     "publishAt": "2027-11-19",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -3241,7 +3515,9 @@
   "patient-groups": {
     "slug": "patient-groups",
     "title": "患者会・ピアサポート：経験者とつながる",
+    "lastEditedAt": "2026-09-04",
     "publishAt": "2027-11-22",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -3265,7 +3541,9 @@
   "counseling-support": {
     "slug": "counseling-support",
     "title": "医療相談支援：メディエーションと相談窓口",
+    "lastEditedAt": "2026-09-04",
     "publishAt": "2027-11-25",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -3289,7 +3567,9 @@
   "palliative-care": {
     "slug": "palliative-care",
     "title": "緩和ケアの考え方：つらさを和らげる",
+    "lastEditedAt": "2026-09-04",
     "publishAt": "2027-11-28",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -3313,7 +3593,9 @@
   "rehab-after-treatment": {
     "slug": "rehab-after-treatment",
     "title": "術後リハビリ計画：回復の道筋",
+    "lastEditedAt": "2026-09-05",
     "publishAt": "2027-12-01",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -3336,7 +3618,9 @@
   "oral-care-during": {
     "slug": "oral-care-during",
     "title": "治療中の口腔ケア：口の健康を守る",
+    "lastEditedAt": "2026-09-05",
     "publishAt": "2027-12-04",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -3361,7 +3645,9 @@
   "distant-travel-care": {
     "slug": "distant-travel-care",
     "title": "遠方通院・宿泊：負担を減らす工夫",
+    "lastEditedAt": "2026-09-05",
     "publishAt": "2027-12-07",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -3384,7 +3670,9 @@
   "language-support": {
     "slug": "language-support",
     "title": "やさしい日本語・多言語：伝わる工夫",
+    "lastEditedAt": "2026-09-05",
     "publishAt": "2027-12-10",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -3407,7 +3695,9 @@
   "treatment-diary": {
     "slug": "treatment-diary",
     "title": "治療日記のつけ方：変化を見える化する",
+    "lastEditedAt": "2026-09-06",
     "publishAt": "2027-12-13",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -3431,7 +3721,9 @@
   "reviewing-treatment": {
     "slug": "reviewing-treatment",
     "title": "治療を見直す・やめる判断：立ち止まる勇気",
+    "lastEditedAt": "2026-09-06",
     "publishAt": "2027-12-16",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -3456,7 +3748,9 @@
   "childcare-balance": {
     "slug": "childcare-balance",
     "title": "育児・介護との両立：治療中の暮らし",
+    "lastEditedAt": "2026-09-06",
     "publishAt": "2027-12-19",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -3479,7 +3773,9 @@
   "medical-payment-help": {
     "slug": "medical-payment-help",
     "title": "医療費の支払い相談：困ったときの窓口",
+    "lastEditedAt": "2026-09-06",
     "publishAt": "2027-12-22",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -3503,7 +3799,9 @@
   "cell-sizes": {
     "slug": "cell-sizes",
     "title": "細胞の大きさ比べ：卵子から血小板まで",
+    "lastEditedAt": "2026-09-07",
     "publishAt": "2027-12-25",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -3524,7 +3822,9 @@
   "blood-types": {
     "slug": "blood-types",
     "title": "血液型の仕組み：ABO式と輸血の関係",
+    "lastEditedAt": "2026-09-07",
     "publishAt": "2027-12-28",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -3547,7 +3847,9 @@
   "body-water": {
     "slug": "body-water",
     "title": "体の水分と電解質：脱水を防ぐ考え方",
+    "lastEditedAt": "2026-09-07",
     "publishAt": "2028-01-01",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -3568,7 +3870,9 @@
   "lymph-system": {
     "slug": "lymph-system",
     "title": "リンパの仕組み：むくみと免疫の通り道",
+    "lastEditedAt": "2026-09-07",
     "publishAt": "2028-01-04",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -3592,7 +3896,9 @@
   "microbiome": {
     "slug": "microbiome",
     "title": "腸内細菌と体：共生する微生物の話",
+    "lastEditedAt": "2026-09-08",
     "publishAt": "2028-01-07",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -3616,7 +3922,9 @@
   "fever-basics": {
     "slug": "fever-basics",
     "title": "熱が出る仕組み：発熱と解熱の考え方",
+    "lastEditedAt": "2026-09-08",
     "publishAt": "2028-01-10",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -3640,7 +3948,9 @@
   "pain-basics": {
     "slug": "pain-basics",
     "title": "痛みの仕組み：信号と感じ方の違い",
+    "lastEditedAt": "2026-09-08",
     "publishAt": "2028-01-13",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -3663,7 +3973,9 @@
   "joints-basics": {
     "slug": "joints-basics",
     "title": "関節の仕組み：動く連結部の構造",
+    "lastEditedAt": "2026-09-08",
     "publishAt": "2028-01-16",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -3684,7 +3996,9 @@
   "fracture-healing": {
     "slug": "fracture-healing",
     "title": "骨折の治り方：骨がつながるまで",
+    "lastEditedAt": "2026-09-09",
     "publishAt": "2028-01-19",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -3707,7 +4021,9 @@
   "anemia-basics": {
     "slug": "anemia-basics",
     "title": "貧血とは：酸素不足のサイン",
+    "lastEditedAt": "2026-09-09",
     "publishAt": "2028-01-22",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -3728,7 +4044,9 @@
   "blood-pressure-basics": {
     "slug": "blood-pressure-basics",
     "title": "血圧の仕組み：数値の読み方",
+    "lastEditedAt": "2026-09-09",
     "publishAt": "2028-01-25",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -3751,7 +4069,9 @@
   "cholesterol-basics": {
     "slug": "cholesterol-basics",
     "title": "コレステロールとは：善玉・悪玉の話",
+    "lastEditedAt": "2026-09-09",
     "publishAt": "2028-01-28",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -3774,7 +4094,9 @@
   "heatstroke-dehydration": {
     "slug": "heatstroke-dehydration",
     "title": "脱水と熱中症：夏の備えと応急対応",
+    "lastEditedAt": "2026-09-10",
     "publishAt": "2028-02-01",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -3798,7 +4120,9 @@
   "cell-banks-guide": {
     "slug": "cell-banks-guide",
     "title": "細胞バンクの種類：公的と民間の違い",
+    "lastEditedAt": "2026-09-10",
     "publishAt": "2028-02-04",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -3821,7 +4145,9 @@
   "culture-media": {
     "slug": "culture-media",
     "title": "培養液とは：細胞の食事と環境",
+    "lastEditedAt": "2026-09-10",
     "publishAt": "2028-02-07",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -3845,7 +4171,9 @@
   "cell-sorting": {
     "slug": "cell-sorting",
     "title": "細胞の選別：マーカーとセルソーター",
+    "lastEditedAt": "2026-09-10",
     "publishAt": "2028-02-10",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -3868,7 +4196,9 @@
   "placenta-cells": {
     "slug": "placenta-cells",
     "title": "胎盤・羊膜由来の細胞：出産時の組織の活用",
+    "lastEditedAt": "2026-09-11",
     "publishAt": "2028-02-13",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -3893,7 +4223,9 @@
   "pancreas-progenitor": {
     "slug": "pancreas-progenitor",
     "title": "膵臓の再生研究：β細胞を目指して",
+    "lastEditedAt": "2026-09-11",
     "publishAt": "2028-02-16",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -3917,7 +4249,9 @@
   "kidney-progenitor": {
     "slug": "kidney-progenitor",
     "title": "腎臓の再生研究：透析と再生の間",
+    "lastEditedAt": "2026-09-11",
     "publishAt": "2028-02-19",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -3940,7 +4274,9 @@
   "lung-regeneration": {
     "slug": "lung-regeneration",
     "title": "肺の再生研究：呼吸を取り戻す挑戦",
+    "lastEditedAt": "2026-09-11",
     "publishAt": "2028-02-22",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -3964,7 +4300,9 @@
   "disc-regeneration": {
     "slug": "disc-regeneration",
     "title": "椎間板の再生研究：腰痛との関係",
+    "lastEditedAt": "2026-09-12",
     "publishAt": "2028-02-25",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -3985,7 +4323,9 @@
   "vessel-regeneration": {
     "slug": "vessel-regeneration",
     "title": "血管の再生：足りない血流を補う",
+    "lastEditedAt": "2026-09-12",
     "publishAt": "2028-02-28",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -4008,7 +4348,9 @@
   "bioprinting": {
     "slug": "bioprinting",
     "title": "3Dバイオプリンティング：印刷する組織",
+    "lastEditedAt": "2026-09-12",
     "publishAt": "2028-03-01",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -4031,7 +4373,9 @@
   "organ-transplant-basics": {
     "slug": "organ-transplant-basics",
     "title": "臓器移植の基礎：提供と分配の仕組み",
+    "lastEditedAt": "2026-09-12",
     "publishAt": "2028-03-04",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -4055,7 +4399,9 @@
   "ips-donation": {
     "slug": "ips-donation",
     "title": "iPSの提供ドナーとは：協力の仕組みと流れ",
+    "lastEditedAt": "2026-09-13",
     "publishAt": "2028-03-07",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -4079,7 +4425,9 @@
   "advance-directives": {
     "slug": "advance-directives",
     "title": "事前指示書の書き方：延命治療と意思表示",
+    "lastEditedAt": "2026-09-13",
     "publishAt": "2028-03-10",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -4103,7 +4451,9 @@
   "patient-rights": {
     "slug": "patient-rights",
     "title": "患者の権利：知っておきたい基本",
+    "lastEditedAt": "2026-09-13",
     "publishAt": "2028-03-13",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -4128,7 +4478,9 @@
   "generic-drugs": {
     "slug": "generic-drugs",
     "title": "ジェネリック医薬品：後発品の選び方",
+    "lastEditedAt": "2026-09-13",
     "publishAt": "2028-03-16",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -4154,7 +4506,9 @@
   "insurance-card-guide": {
     "slug": "insurance-card-guide",
     "title": "保険証とマイナ保険証：受診時の使い方",
+    "lastEditedAt": "2026-09-14",
     "publishAt": "2028-03-19",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -4178,7 +4532,9 @@
   "nursing-care-certification": {
     "slug": "nursing-care-certification",
     "title": "要介護認定の流れ：申請からサービスまで",
+    "lastEditedAt": "2026-09-14",
     "publishAt": "2028-03-22",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -4201,7 +4557,9 @@
   "driving-illness": {
     "slug": "driving-illness",
     "title": "病気と運転：免許と安全の考え方",
+    "lastEditedAt": "2026-09-14",
     "publishAt": "2028-03-25",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -4226,7 +4584,9 @@
   "work-injury-insurance": {
     "slug": "work-injury-insurance",
     "title": "労災と傷病手当：働けなくなったときの保障",
+    "lastEditedAt": "2026-09-14",
     "publishAt": "2028-03-28",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -4251,7 +4611,9 @@
   "medical-accident-system": {
     "slug": "medical-accident-system",
     "title": "医療事故調査制度：仕組みと相談先",
+    "lastEditedAt": "2026-09-15",
     "publishAt": "2028-04-01",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -4275,7 +4637,9 @@
   "drug-allergy-record": {
     "slug": "drug-allergy-record",
     "title": "薬のアレルギーと副作用の記録：伝え方",
+    "lastEditedAt": "2026-09-15",
     "publishAt": "2028-04-04",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -4300,7 +4664,9 @@
   "vaccination-adult": {
     "slug": "vaccination-adult",
     "title": "大人の予防接種：種類と受け方",
+    "lastEditedAt": "2026-09-15",
     "publishAt": "2028-04-07",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -4326,7 +4692,9 @@
   "dental-visit-guide": {
     "slug": "dental-visit-guide",
     "title": "歯科受診の進め方：検診と治療の流れ",
+    "lastEditedAt": "2026-09-15",
     "publishAt": "2028-04-10",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -4351,7 +4719,9 @@
   "assistive-devices": {
     "slug": "assistive-devices",
     "title": "補装具の作り方：義肢・装具と費用",
+    "lastEditedAt": "2026-09-16",
     "publishAt": "2028-04-13",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -4375,7 +4745,9 @@
   "home-safety-elderly": {
     "slug": "home-safety-elderly",
     "title": "高齢者の家の安全：転倒予防の工夫",
+    "lastEditedAt": "2026-09-16",
     "publishAt": "2028-04-16",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -4400,7 +4772,9 @@
   "predatory-journals": {
     "slug": "predatory-journals",
     "title": "ハゲタカジャーナルとは：粗悪誌の見分け方",
+    "lastEditedAt": "2026-09-16",
     "publishAt": "2028-04-19",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -4421,7 +4795,9 @@
   "retractions": {
     "slug": "retractions",
     "title": "論文撤回とは：撤回理由の読み方",
+    "lastEditedAt": "2026-09-16",
     "publishAt": "2028-04-22",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -4442,7 +4818,9 @@
   "open-access": {
     "slug": "open-access",
     "title": "オープンアクセスとは：誰でも読める論文",
+    "lastEditedAt": "2026-09-17",
     "publishAt": "2028-04-25",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -4465,7 +4843,9 @@
   "impact-factor": {
     "slug": "impact-factor",
     "title": "インパクトファクターの読み方：数字の意味と限界",
+    "lastEditedAt": "2026-09-17",
     "publishAt": "2028-04-28",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -4489,7 +4869,9 @@
   "guideline-reading": {
     "slug": "guideline-reading",
     "title": "診療ガイドラインの読み方：推奨の強さを知る",
+    "lastEditedAt": "2026-09-17",
     "publishAt": "2028-05-01",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -4510,7 +4892,9 @@
   "package-insert": {
     "slug": "package-insert",
     "title": "添付文書の読み方：薬の説明書を活用する",
+    "lastEditedAt": "2026-09-17",
     "publishAt": "2028-05-04",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -4534,7 +4918,9 @@
   "rwd-basics": {
     "slug": "rwd-basics",
     "title": "リアルワールドデータとは：日常診療の記録の活用",
+    "lastEditedAt": "2026-09-18",
     "publishAt": "2028-05-07",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -4559,7 +4945,9 @@
   "expanded-access": {
     "slug": "expanded-access",
     "title": "拡大治験とコンパッショネートユース：未承認薬への道",
+    "lastEditedAt": "2026-09-18",
     "publishAt": "2028-05-10",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -4585,7 +4973,9 @@
   "first-in-human": {
     "slug": "first-in-human",
     "title": "ファーストインヒューマン試験とは：人で初めて試す段階",
+    "lastEditedAt": "2026-09-18",
     "publishAt": "2028-05-13",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -4609,7 +4999,9 @@
   "decentralized-trials": {
     "slug": "decentralized-trials",
     "title": "分散型治験（DCT）とは：来院しない治験",
+    "lastEditedAt": "2026-09-18",
     "publishAt": "2028-05-16",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -4632,7 +5024,9 @@
   "basket-trials": {
     "slug": "basket-trials",
     "title": "バスケット試験・アンブレラ試験とは：遺伝子で分ける治験",
+    "lastEditedAt": "2026-09-19",
     "publishAt": "2028-05-19",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -4655,7 +5049,9 @@
   "digital-therapeutics": {
     "slug": "digital-therapeutics",
     "title": "デジタル療法（DTx）とは：アプリで治す時代",
+    "lastEditedAt": "2026-09-19",
     "publishAt": "2028-05-22",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -4681,7 +5077,9 @@
   "thermometer-guide": {
     "slug": "thermometer-guide",
     "title": "体温計の使い方：脇・耳・おでこの違い",
+    "lastEditedAt": "2026-09-26",
     "publishAt": "2028-05-25",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -4704,7 +5102,9 @@
   "blood-donation-basics": {
     "slug": "blood-donation-basics",
     "title": "献血の流れと条件：初めての方へ",
+    "lastEditedAt": "2026-10-03",
     "publishAt": "2028-05-28",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -4727,7 +5127,9 @@
   "microscope-world": {
     "slug": "microscope-world",
     "title": "顕微鏡でのぞく世界：細胞観察入門",
+    "lastEditedAt": "2026-10-10",
     "publishAt": "2028-06-01",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -4748,7 +5150,9 @@
   "ips-nobel-story": {
     "slug": "ips-nobel-story",
     "title": "iPS細胞とノーベル賞：2012年の出来事",
+    "lastEditedAt": "2026-10-17",
     "publishAt": "2028-06-04",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -4772,7 +5176,9 @@
   "organoid-ethics": {
     "slug": "organoid-ethics",
     "title": "オルガノイドと意識の議論：脳モデルの倫理",
+    "lastEditedAt": "2026-10-24",
     "publishAt": "2028-06-07",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -4793,7 +5199,9 @@
   "home-culture-myth": {
     "slug": "home-culture-myth",
     "title": "自宅で細胞培養はできません：誤解と理由",
+    "lastEditedAt": "2026-10-31",
     "publishAt": "2028-06-10",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -4816,7 +5224,9 @@
   "first-aid-basics": {
     "slug": "first-aid-basics",
     "title": "応急手当の基礎：止血と119番",
+    "lastEditedAt": "2026-11-07",
     "publishAt": "2028-06-13",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -4841,7 +5251,9 @@
   "medicine-storage": {
     "slug": "medicine-storage",
     "title": "薬の保管方法：期限と置き場所",
+    "lastEditedAt": "2026-11-14",
     "publishAt": "2028-06-16",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -4864,7 +5276,9 @@
   "nobel-prize-guide": {
     "slug": "nobel-prize-guide",
     "title": "ノーベル生理学・医学賞の読み方",
+    "lastEditedAt": "2026-11-21",
     "publishAt": "2028-06-19",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",
@@ -4887,7 +5301,9 @@
   "science-events": {
     "slug": "science-events",
     "title": "科学イベントの探し方：公開講座と見学会",
+    "lastEditedAt": "2026-11-28",
     "publishAt": "2028-06-22",
+    "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
     "legalStatus": "needs_legal_editorial_review",

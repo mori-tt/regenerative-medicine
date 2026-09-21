@@ -1,6 +1,9 @@
 import fs from "node:fs";
 
 const source = fs.readFileSync("src/content/articles.ts", "utf8");
+const existingRecords = fs.existsSync("src/content/article-review-records.json")
+  ? JSON.parse(fs.readFileSync("src/content/article-review-records.json", "utf8"))
+  : {};
 const start = source.indexOf("const rawArticles:");
 const end = source.indexOf("type ArticleDepth:");
 const body = source.slice(start, end);
@@ -56,6 +59,9 @@ function referenceCount(block) {
   const match = block.match(/\n    references: \[([^\]]*)\]/s);
   return match ? (match[1].match(/\b[a-zA-Z][a-zA-Z0-9]*\b/g) ?? []).length : 0;
 }
+function updatedAtFrom(block) {
+  return block.match(/\n    updatedAt: "(\d{4}-\d{2}-\d{2})"/)?.[1] ?? "";
+}
 
 const matches = [...body.matchAll(blockPattern)].sort((a, b) => {
   const aInitial = initialCandidates.has(a[1]) ? 0 : 1;
@@ -68,10 +74,14 @@ for (const [index, match] of matches.entries()) {
   const title = match[2];
   const block = match[3];
   const category = categoryFrom(block);
+  const previous = existingRecords[slug] ?? {};
+  const previousReviewer = previous.reviewer ?? {};
   records[slug] = {
     slug,
     title,
+    lastEditedAt: updatedAtFrom(block),
     publishAt: scheduledDate(index),
+    publishedAt: previous.publishedAt ?? "",
     releaseTrack: initialCandidates.has(slug) ? "initial-candidate" : "scheduled",
     medicalStatus: "needs_medical_review",
     legalStatus: "needs_legal_editorial_review",
@@ -80,11 +90,11 @@ for (const [index, match] of matches.entries()) {
     riskFlags: flags(block, category),
     referenceCount: referenceCount(block),
     reviewer: {
-      status: "planned",
-      name: "千原 良友",
-      reviewedAt: "",
-      scope: "",
-      conflictOfInterest: "",
+      status: previousReviewer.status ?? "planned",
+      name: previousReviewer.name ?? "千原 良友",
+      reviewedAt: previousReviewer.reviewedAt ?? "",
+      scope: previousReviewer.scope ?? "",
+      conflictOfInterest: previousReviewer.conflictOfInterest ?? "",
     },
     publishGate: "review_record_required",
     notes: "自動監査による仮判定。医学的・法的な確認完了を意味しない。",

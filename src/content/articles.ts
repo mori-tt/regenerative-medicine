@@ -1,7 +1,11 @@
 import { articleImageFor } from "./article-images";
 import { medicalReviewer, publication } from "@/lib/site-config";
 import reviewRecords from "./article-review-records.json";
-const reviewSchedule = reviewRecords as Record<string, { publishAt?: string }>;
+const reviewSchedule = reviewRecords as Record<string, {
+  publishAt?: string;
+  lastEditedAt?: string;
+  publishedAt?: string;
+}>;
 export type ArticleBuildMode = "scheduled" | "all";
 export const articleBuildMode: ArticleBuildMode = process.env.NEXT_PUBLIC_ARTICLE_BUILD_MODE === "all" ? "all" : "scheduled";
 
@@ -57,10 +61,12 @@ export type Article = {
   title: string;
   description: string;
   category: CategorySlug;
+  /** 原稿を最後に編集した日。公開日・監修日とは別に管理する。 */
   updatedAt: string;
   readingMinutes: number;
   status: "draft" | "published";
   reviewer?: Reviewer;
+  /** 実際に公開した日。予定日を代入せず、公開後に台帳へ記録する。 */
   publishedAt?: string;
   illustration: "cells" | "network" | "scope" | "cross";
   image?: string;
@@ -8630,6 +8636,7 @@ const depthByCategory: Record<CategorySlug, ArticleDepth[]> = {
 export const articles: Article[] = rawArticles.map((article, index) => ({
   ...article,
   publishAt: reviewSchedule[article.slug]?.publishAt ?? article.publishAt,
+  updatedAt: reviewSchedule[article.slug]?.lastEditedAt ?? article.updatedAt,
   image: articleImageFor(article.category, index).src,
   imageAlt: articleImageFor(article.category, index).alt,
   status: article.review ? "published" : "draft",
@@ -8643,7 +8650,7 @@ export const articles: Article[] = rawArticles.map((article, index) => ({
         scope: article.review.scope,
       }
     : undefined,
-  publishedAt: article.review ? article.review.reviewedAt : undefined,
+  publishedAt: article.review?.reviewedAt || reviewSchedule[article.slug]?.publishedAt || undefined,
   readingMinutes: Math.max(article.readingMinutes, 5),
   sections: [
     ...article.sections,
