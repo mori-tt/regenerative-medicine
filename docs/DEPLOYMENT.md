@@ -57,7 +57,7 @@ NEXT_PUBLIC_ARTICLE_BUILD_MODE=scheduled
 
 ## 2. GitHub ActionsでLolipopへ配置する場合
 
-現在のLolipop workflowは有効化していません。テンプレートを [`deploy-lolipop.example.yml`](../.github/workflows/deploy-lolipop.example.yml) として保存しています。最終公開時に `.github/workflows/deploy-lolipop.yml` へコピーし、次のGitHub Secretsを登録します。
+現在のLolipop workflowは有効化していません。GitHub Actionsに認識されない `.disabled` 拡張子のテンプレートを [`deploy-lolipop.example.disabled`](../.github/workflows/deploy-lolipop.example.disabled) として保存しています。最終公開時に `.github/workflows/deploy-lolipop.yml` へコピーし、次のGitHub Secretsを登録します。
 
 - `LOLIPOP_SSH_USER`
 - `LOLIPOP_SSH_PASSWORD`
@@ -70,7 +70,7 @@ GitHub Variablesには次を登録します。
 - `LOLIPOP_SITE_INDEXABLE`：確認中は `false`、正式公開後は `true`
 - 必要に応じて `NEXT_PUBLIC_CONTACT_EMAIL`、`NEXT_PUBLIC_OPERATOR_NAME`、`NEXT_PUBLIC_OPERATOR_ADDRESS`
 
-ファイルを有効化すると、mainへのpush、手動実行、毎週土曜06:00（日本時間）の予約実行で、`npm run build:lolipop` と静的検査を行い、予約日到達分だけをSSH経由で配置します。GitHub Pages workflowは既存のままmain pushで全記事をnoindex配置します。同時公開の直前にworkflowファイルを有効化してください。
+ファイルを有効化すると、mainへのpush、手動実行、毎週土曜06:00（日本時間）の予約実行で、`npm run build:lolipop` と静的検査を行い、予約日到達分だけをSSH経由で配置します。GitHub Pages workflowは既存のままmain pushで全記事をnoindex配置します。同時公開の直前にworkflowファイルを有効化してください。`.disabled`のままでは実行されません。
 
 ## 3. 手元で生成・確認
 
