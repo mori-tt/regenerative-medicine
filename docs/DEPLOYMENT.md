@@ -59,6 +59,19 @@ NEXT_PUBLIC_ARTICLE_BUILD_MODE=scheduled
 
 現在のLolipop workflowは有効化していません。GitHub Actionsに認識されない `.disabled` 拡張子のテンプレートを [`deploy-lolipop.example.disabled`](../.github/workflows/deploy-lolipop.example.disabled) として保存しています。最終公開時に `.github/workflows/deploy-lolipop.yml` へコピーし、次のGitHub Secretsを登録します。
 
+### Lolipopを有効化しない期間の注意
+
+GitHub Actionsは、`.github/workflows/`内にある拡張子`.yml`または`.yaml`のファイルを、ファイル名に`example`が含まれていてもworkflowとして認識します。そのため、テンプレートを`deploy-lolipop.example.yml`という名前で置くと、mainへのpushやscheduleで実行されます。Lolipop公開前は必ず`.disabled`のまま保存し、`.github/workflows/`内にLolipop用の`.yml`ファイルを置かないでください。
+
+公開直前にだけ、次のようにコピーして有効化します。
+
+```bash
+cp .github/workflows/deploy-lolipop.example.disabled \
+   .github/workflows/deploy-lolipop.yml
+```
+
+その後、Secrets・Variablesを登録してからpushします。コピー前にSSH接続やLolipopへの転送は発生しません。
+
 - `LOLIPOP_SSH_USER`
 - `LOLIPOP_SSH_PASSWORD`
 - `LOLIPOP_SSH_REMOTE_DIR`：対象ドメインの公開フォルダ。`/`やSSHのHOME自体は指定しない

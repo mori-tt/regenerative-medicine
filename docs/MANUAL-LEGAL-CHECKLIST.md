@@ -81,6 +81,8 @@
 - [ ] GitHub Pagesの確認用ビルドで、未来記事に「公開予定」「確認用」が表示されることを確認した。
 - [ ] 本番Lolipopビルドでは未来記事が生成・表示されないことを確認した。
 - [ ] Lolipopをまだ公開しない期間は、workflowテンプレートが`.disabled`拡張子のままで、`.github/workflows/`直下に`.yml`として存在しないことを確認した。
+- [ ] GitHub Actionsはファイル名に`example`が含まれていても`.yml`を実行するため、Lolipop公開前に`deploy-lolipop.example.yml`を作成・保存していないことを確認した。
+- [ ] Lolipop公開時だけ`deploy-lolipop.example.disabled`を`deploy-lolipop.yml`へコピーし、SSH SecretsとVariablesを登録してからpushする。
 - [ ] 広告掲載ページの「広告が記事内容・順位・監修に影響しない」という表示を確認した。
 - [ ] スマートフォンで、言語選択とハンバーガーメニューが右側に収まり、メニュー開閉とリンク遷移ができることを確認した。
 - [ ] キーボード操作でスキップリンク、メニュー、言語選択、記事リンクへ移動できることを確認した。
