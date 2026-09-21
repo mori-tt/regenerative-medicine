@@ -28,23 +28,25 @@ export default function Home() {
             <span /> 編集部が整理する情報ガイド
           </div>
           <h1>
-            再生医療を知る。
+            再生医療を、
             <br />
-            研究と治療を分けて、
+            自分の言葉で
             <br />
-            <em>これからの選択を考える。</em>
+            <em>理解する。</em>
           </h1>
           <p>
             再生医療と幹細胞について、何が分かっていて、何が研究中なのか。
             <br />
             根拠、限界、安全性、費用を、公的資料とともに整理します。
           </p>
-          <Link
-            className="button primary"
-            href={featuredHref}
-          >
-            はじめての再生医療 <Icon name="arrow" size={20} />
-          </Link>
+          <div className="hero-actions">
+            <Link className="button primary" href={featuredHref}>
+              はじめての再生医療 <Icon name="arrow" size={20} />
+            </Link>
+            <Link className="hero-secondary" href="/articles/">
+              記事から探す <Icon name="arrow" size={18} />
+            </Link>
+          </div>
           <span className="hero-footnote">
             個別の診断や治療の判断は、医療専門家へご相談ください。
           </span>
@@ -54,13 +56,6 @@ export default function Home() {
           <div className="visual-label">
             <span className="small-dot" /> イメージイラスト
             <span>細胞をモチーフにした抽象画</span>
-          </div>
-          <div className="hero-floating">
-            <Icon name="book" size={23} />
-            <span>
-              難しいことを、順序立てて。
-              <small>根拠と限界を一緒に読むためのガイド</small>
-            </span>
           </div>
         </div>
       </section>
@@ -82,30 +77,16 @@ export default function Home() {
           <div>
             <Icon name="network" />
             <span>
-              編集と広告を分ける<small>広告の有無は記事内容に影響しません</small>
+              編集と広告を分ける
+              <small>広告の有無は記事内容に影響しません</small>
             </span>
           </div>
         </div>
       </div>
-      <section className="section purpose-section container">
-        <div className="section-heading">
-          <div>
-            <span className="eyebrow">目的から探す</span>
-            <h2>目的から探す<span className="heading-dot">。</span></h2>
-          </div>
-          <span className="section-caption">今の疑問に近い入口から読めます。</span>
-        </div>
-        <div className="purpose-links">
-          <Link href="/guide/"><strong>まず基礎を知りたい</strong><span>再生医療の全体像から読む →</span></Link>
-          <Link href="/categories/treatment/"><strong>治療を検討している</strong><span>費用・リスク・同意を確認 →</span></Link>
-          <Link href="/categories/research/"><strong>研究ニュースを読みたい</strong><span>研究の段階と根拠を読む →</span></Link>
-          <Link href="/categories/treatment/"><strong>医師に相談する前に整理したい</strong><span>質問と確認事項を見る →</span></Link>
-        </div>
-      </section>
       <section className="section container">
         <div className="section-heading">
           <div>
-            <span className="eyebrow">テーマから探す</span>
+            <span className="eyebrow">EXPLORE THE TOPICS</span>
             <h2>
               知りたいことから、探す<span className="heading-dot">。</span>
             </h2>
@@ -130,7 +111,7 @@ export default function Home() {
               <h3>{cat.label}</h3>
               <p>{cat.description}</p>
               <div className="category-bottom">
-              <span>詳しく読む</span>
+                <span>詳しく読む</span>
                 <Icon name="arrow" size={21} />
               </div>
             </Link>
@@ -146,19 +127,16 @@ export default function Home() {
           <div className="feature-copy">
             <span className="eyebrow">はじめての方へ</span>
             <h2>
-              「再生医療って、なんだろう？」
+              再生医療の基本を、
               <br />
-              その疑問から、はじめよう。
+              ここから。
             </h2>
             <p>
               よく耳にするけれど、少し難しく感じる再生医療。
               <br />
               基本的な仕組みと、知っておきたいことをまとめました。
             </p>
-            <Link
-              className="text-link"
-              href={featuredHref}
-            >
+            <Link className="text-link" href={featuredHref}>
               再生医療の基礎を読む{" "}
               <span>
                 <Icon name="arrow" size={21} />
@@ -181,9 +159,11 @@ export default function Home() {
         </div>
         <div className="journal-layout">
           <div className="article-grid">
-            {visibleArticles(articles).slice(1, 4).map((a) => (
-              <ArticleCard article={a} key={a.slug} compact />
-            ))}
+            {visibleArticles(articles)
+              .slice(0, 4)
+              .map((a) => (
+                <ArticleCard article={a} key={a.slug} />
+              ))}
           </div>
           <aside className="journal-sidebar">
             <div className="editorial-note">
@@ -216,22 +196,29 @@ export default function Home() {
               効果だけでなく、リスクや費用も。医師に相談する前の確認事項を整理しましょう。
             </p>
           </div>
-          <Link
-            className="button outline"
-            href={featuredHref}
-          >
+          <Link className="button outline" href="/categories/treatment/">
             確認したいことを読む <Icon name="arrow" size={19} />
           </Link>
         </div>
       </section>
       <section className="society-promo-section society-promo-section-quiet">
         <div className="container society-promo">
-          <div className="society-promo-mark" aria-hidden="true"><span>J S R M</span><small>BASED ON OFFICIAL SOURCES</small></div>
+          <div className="society-promo-mark" aria-hidden="true">
+            <span>J S R M</span>
+            <small>BASED ON OFFICIAL SOURCES</small>
+          </div>
           <div>
             <span className="eyebrow">公式資料を読む</span>
             <h2>日本再生医療学会を知る。</h2>
-            <p>公開資料をもとに、学会の役割や制度情報を当サイト編集部が整理しています。学会公式サイトや、個別の治療の推奨とは別の編集記事です。</p>
-            <Link className="text-link" href="/jsrm/">学会特集を読む <span><Icon name="arrow" size={21} /></span></Link>
+            <p>
+              公開資料をもとに、学会の役割や制度情報を当サイト編集部が整理しています。学会公式サイトや、個別の治療の推奨とは別の編集記事です。
+            </p>
+            <Link className="text-link" href="/jsrm/">
+              学会特集を読む{" "}
+              <span>
+                <Icon name="arrow" size={21} />
+              </span>
+            </Link>
           </div>
         </div>
       </section>

@@ -123,12 +123,14 @@ export default async function ArticlePage({
             </ul>
           </div>
           <ArticleVisual slug={article.slug} />
-          <nav className="toc mobile-article-toc" aria-label="この記事の目次">
-            <h2>この記事の目次</h2>
-            <ol>
-              {article.sections.map((s) => <li key={s.id}><a href={`#${s.id}`}>{s.title}</a></li>)}
-            </ol>
-          </nav>
+          <details className="toc mobile-article-toc">
+            <summary>この記事の目次</summary>
+            <nav aria-label="この記事の目次">
+              <ol>
+                {article.sections.map((s) => <li key={s.id}><a href={`#${s.id}`}>{s.title}</a></li>)}
+              </ol>
+            </nav>
+          </details>
           <div className="article-body">
             {article.sections.map((section) => (
               <section id={section.id} key={section.id}>

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { categories } from "@/content/categories";
 import { localizedShell, type SiteLocale } from "@/content/locales";
 
@@ -23,18 +23,42 @@ export function MainNavigation() {
     { href: `${prefix}/articles/`, label: copy?.articles || "記事一覧" },
     ...categories.map((c) => ({
       href: `${prefix}/categories/${c.slug}/`,
-      label: copy ? { basics: copy.basics, "stem-cells": copy.stemCells, treatment: copy.treatment, research: copy.research }[c.slug] : c.label,
+      label: copy
+        ? {
+            basics: copy.basics,
+            "stem-cells": copy.stemCells,
+            treatment: copy.treatment,
+            research: copy.research,
+          }[c.slug]
+        : c.label,
     })),
     { href: `${prefix}/about/`, label: copy?.about || "このサイトについて" },
   ];
   return (
-    <nav className="main-nav container" aria-label={locale === "en" ? "Main navigation" : locale === "zh" ? "主导航" : "メインナビゲーション"}>
+    <nav
+      className="main-nav container"
+      aria-label={
+        locale === "en"
+          ? "Main navigation"
+          : locale === "zh"
+            ? "主导航"
+            : "メインナビゲーション"
+      }
+    >
       {links.map((link) => (
         <Link
           key={link.href}
           href={link.href}
-          className={pathname === link.href ? "current" : undefined}
-          aria-current={pathname === link.href ? "page" : undefined}
+          className={
+            pathname.replace(/\/$/, "") === link.href.replace(/\/$/, "")
+              ? "current"
+              : undefined
+          }
+          aria-current={
+            pathname.replace(/\/$/, "") === link.href.replace(/\/$/, "")
+              ? "page"
+              : undefined
+          }
         >
           {link.label}
         </Link>
@@ -52,17 +76,80 @@ export function MobileMenu() {
   function close() {
     details.current?.removeAttribute("open");
   }
+  useEffect(() => {
+    function dismiss(event: PointerEvent) {
+      if (
+        event.target instanceof Node &&
+        !details.current?.contains(event.target)
+      )
+        close();
+    }
+    function escape(event: KeyboardEvent) {
+      if (event.key === "Escape" && details.current?.open) {
+        close();
+        details.current.querySelector("summary")?.focus();
+      }
+    }
+    document.addEventListener("pointerdown", dismiss);
+    document.addEventListener("keydown", escape);
+    return () => {
+      document.removeEventListener("pointerdown", dismiss);
+      document.removeEventListener("keydown", escape);
+    };
+  }, []);
   return (
     <details className="mobile-menu" ref={details}>
-      <summary aria-label={copy?.menu || "メニューを開く"}>☰</summary>
-      <nav>
+      <summary
+        aria-label={
+          locale === "en" ? "Menu" : locale === "zh" ? "菜单" : "メニュー"
+        }
+      >
+        <svg
+          width="22"
+          height="22"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          aria-hidden="true"
+        >
+          <path d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </summary>
+      <nav
+        aria-label={
+          locale === "en"
+            ? "Mobile navigation"
+            : locale === "zh"
+              ? "移动导航"
+              : "モバイルナビゲーション"
+        }
+      >
+        <Link href={`${prefix}/`} onClick={close}>
+          {copy?.home || "ホーム"}
+        </Link>
+        <Link href={`${prefix}/guide/`} onClick={close}>
+          {copy?.guide || "はじめての方へ"}
+        </Link>
+        <Link href={`${prefix}/articles/`} onClick={close}>
+          {copy?.articles || "記事一覧"}
+        </Link>
         {categories.map((c) => (
-          <Link key={c.slug} href={`${prefix}/categories/${c.slug}/`} onClick={close}>
-            {copy ? { basics: copy.basics, "stem-cells": copy.stemCells, treatment: copy.treatment, research: copy.research }[c.slug] : c.label}
+          <Link
+            key={c.slug}
+            href={`${prefix}/categories/${c.slug}/`}
+            onClick={close}
+          >
+            {copy
+              ? {
+                  basics: copy.basics,
+                  "stem-cells": copy.stemCells,
+                  treatment: copy.treatment,
+                  research: copy.research,
+                }[c.slug]
+              : c.label}
           </Link>
         ))}
-        <Link href={`${prefix}/guide/`} onClick={close}>{copy?.guide || "はじめての方へ"}</Link>
-        <Link href={`${prefix}/articles/`} onClick={close}>{copy?.articles || "記事一覧"}</Link>
         <Link href={`${prefix}/editorial-policy/`} onClick={close}>
           {copy?.editorial || "編集方針"}
         </Link>

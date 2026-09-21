@@ -3,6 +3,7 @@ import { Header, Footer } from "@/components/site-shell";
 import { LocaleDocument, SkipLink } from "@/components/locale-document";
 import { absolute, publiclyIndexable, site } from "@/lib/site";
 import "./globals.css";
+import "./editorial.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),

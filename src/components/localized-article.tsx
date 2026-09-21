@@ -146,8 +146,10 @@ export function LocalizedArticleCard({
   return (
     <article className={`article-card ${compact ? "compact" : ""}`}>
       <div className="article-card-body">
-        <span className={`category-label ${cat.color}`}>{article.category}</span>
-        <span className="card-kicker">{typeLabel}</span>
+        <div className="card-label-row">
+          <span className={`category-label ${cat.color}`}>{article.category}</span>
+          <span className="card-kicker">{typeLabel}</span>
+        </div>
         <div className="article-meta">
           <span>{isReviewed(source) ? copy.editorialManuscript : `${copy.editorialManuscript} · ${copy.translatedVersion}`}</span>
           <span>{copy.readMinutes(source.readingMinutes)}</span>
@@ -275,10 +277,12 @@ export function LocalizedArticle({ locale, source }: { locale: SiteLocale; sourc
               </ul>
             </div>
             {source && <ArticleVisual slug={source.slug} locale={locale} />}
-            <nav className="toc mobile-article-toc" aria-label={copy.toc}>
-              <h2>{copy.toc}</h2>
-              <ol>{base.sections.map((section, index) => <li key={sectionIds[index]}><a href={`#${sectionIds[index]}`}>{section.title}</a></li>)}</ol>
-            </nav>
+            <details className="toc mobile-article-toc">
+              <summary>{copy.toc}</summary>
+              <nav aria-label={copy.toc}>
+                <ol>{base.sections.map((section, index) => <li key={sectionIds[index]}><a href={`#${sectionIds[index]}`}>{section.title}</a></li>)}</ol>
+              </nav>
+            </details>
             <div className="article-body">
               {base.sections.map((section, index) => (
                 <section id={sectionIds[index]} key={section.title}>

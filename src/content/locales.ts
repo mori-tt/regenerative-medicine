@@ -17,14 +17,14 @@ export function localizedCategoryName(locale: SiteLocale, slug: keyof typeof cat
 export const localizedHome = {
   en: {
     eyebrow: "KNOWLEDGE FOR YOUR NEXT STEP",
-    title: ["Understand regenerative medicine.", "Make your next decision", "with clarity."],
+    title: ["Regenerative", "medicine,", "made clearer."],
     intro: "Clear, careful information about regenerative medicine and stem cells—what is known, what is still being studied, and what to ask your doctor.",
     start: "Start with the basics", footnote: "Understanding comes before making a medical decision.", visual: "Abstract cell illustration", floating: "Complex ideas, explained clearly.", floatingSmall: "A reader-first guide to regenerative medicine", topics: "Explore topics", topicTitle: "Learn at your own pace.", topicCaption: "Choose a subject to begin.", guideEyebrow: "START HERE", guideTitle: "What is regenerative medicine?", guideBody: "A careful introduction to the difference between research, approved products, and individual treatment decisions.", guideLink: "Read the introduction", journal: "Build your understanding step by step.", promise: "Evidence, limitations, and questions to ask are shown together.", disclaimer: "This site provides general information, not diagnosis or treatment. Please consult a qualified healthcare professional for personal medical decisions.",
     categories: [["The basics", "Start with the essential concepts and vocabulary."], ["Stem cells", "Learn how iPS cells, ES cells, and somatic stem cells differ."], ["Considering treatment", "Questions about evidence, safety, cost, and consent."], ["Research & news", "How to read research results without overestimating them."]],
   },
   zh: {
     eyebrow: "KNOWLEDGE FOR YOUR NEXT STEP",
-    title: ["了解再生医学。", "为下一步选择，", "建立清晰的理解。"],
+    title: ["读懂再生医学，", "从理解", "开始。"],
     intro: "用清晰、谨慎的方式介绍再生医学与干细胞：哪些已经明确，哪些仍在研究，以及就诊时可以询问什么。",
     start: "从基础开始", footnote: "充分了解，是做出医疗决定的第一步。", visual: "细胞主题的抽象插画", floating: "把复杂内容讲清楚。", floatingSmall: "以读者为中心的再生医学指南", topics: "探索主题", topicTitle: "按照自己的节奏学习。", topicCaption: "选择一个主题开始阅读。", guideEyebrow: "从这里开始", guideTitle: "什么是再生医学？", guideBody: "介绍研究、已批准产品和个人治疗决定之间的重要区别。", guideLink: "阅读入门文章", journal: "一步一步加深理解。", promise: "同时说明证据、局限性以及可以向医生询问的问题。", disclaimer: "本网站提供一般性信息，不构成诊断或治疗建议。涉及个人医疗决定时，请咨询有资质的医疗专业人员。",
     categories: [["再生医学基础", "从基本概念和常用词汇开始。"], ["认识干细胞", "了解 iPS 细胞、ES 细胞和体性干细胞的区别。"], ["考虑治疗时", "整理证据、安全性、费用和知情同意相关问题。"], ["研究与新闻", "学习如何阅读研究结果，避免过度解读。"]],
