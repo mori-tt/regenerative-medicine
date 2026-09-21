@@ -7,6 +7,8 @@ const parsedUrl = new URL(configuredUrl);
 export const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? (process.env.GITHUB_PAGES === "true" ? "/regenerative-medicine" : "");
 export const indexable = process.env.NEXT_PUBLIC_SITE_INDEXABLE === "true";
 export const publiclyIndexable = indexable && publication.mode === "production";
+// 英語・中国語ページは翻訳・医学用語・監修範囲を確認した後に個別に検索公開する。
+export const localizedIndexable = process.env.NEXT_PUBLIC_LOCALIZED_INDEXABLE === "true";
 if (parsedUrl.pathname !== "/" || parsedUrl.search || parsedUrl.hash) {
   throw new Error(
     "NEXT_PUBLIC_SITE_URL はドメインのルートURLを指定してください。",
@@ -98,12 +100,16 @@ export function pageMetadata(
     alternates: {
       canonical,
       languages: {
-        ja: absolute(localizedPath(base, "ja")),
+        "ja-JP": absolute(localizedPath(base, "ja")),
         en: absolute(localizedPath(base, "en")),
         "zh-CN": absolute(localizedPath(base, "zh")),
+        "x-default": absolute(localizedPath(base, "ja")),
       },
     },
-    robots: { index: publiclyIndexable && allowIndex, follow: true },
+    robots: {
+      index: publiclyIndexable && allowIndex && (locale === "ja" || localizedIndexable),
+      follow: true,
+    },
     openGraph: {
       title: `${title} | ${siteName}`,
       description,

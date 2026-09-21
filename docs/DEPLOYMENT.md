@@ -13,6 +13,8 @@
 ```dotenv
 NEXT_PUBLIC_SITE_URL=https://your-domain.jp
 NEXT_PUBLIC_SITE_INDEXABLE=false
+# 英語・中国語ページの検索公開。翻訳・医学用語・監修範囲の確認後だけ true。
+NEXT_PUBLIC_LOCALIZED_INDEXABLE=false
 NEXT_PUBLIC_PUBLICATION_MODE=preview
 NEXT_PUBLIC_ARTICLE_BUILD_MODE=scheduled
 NEXT_PUBLIC_CONTACT_EMAIL=実際の受付用メールアドレス
@@ -22,7 +24,7 @@ NEXT_PUBLIC_BASE_PATH=
 NEXT_PUBLIC_ASSET_PREFIX=
 ```
 
-準備中は`NEXT_PUBLIC_SITE_INDEXABLE=false` と `NEXT_PUBLIC_PUBLICATION_MODE=preview` を維持します。運営情報・監修・原稿・法務確認を確定し、正式公開するときだけ `NEXT_PUBLIC_SITE_INDEXABLE=true` と `NEXT_PUBLIC_PUBLICATION_MODE=production` に変更します。両方が揃わない限り、robots・canonical周辺の公開設定とサイトマップは公開状態になりません。
+準備中は`NEXT_PUBLIC_SITE_INDEXABLE=false` と `NEXT_PUBLIC_PUBLICATION_MODE=preview`を維持します。運営情報・監修・原稿・法務確認を確定し、正式公開するときだけ`NEXT_PUBLIC_SITE_INDEXABLE=true`と`NEXT_PUBLIC_PUBLICATION_MODE=production`に変更します。英語・中国語も検索公開する場合は、翻訳・医学用語・監修範囲の確認後に`NEXT_PUBLIC_LOCALIZED_INDEXABLE=true`へ変更します。両方が揃わない限り、robots・canonical周辺の公開設定とサイトマップは公開状態になりません。
 
 記事の生成範囲は `NEXT_PUBLIC_ARTICLE_BUILD_MODE` で分けます。GitHub Pagesは編集・監修確認用として `all` を設定し、公開予定日が未来の記事も全記事を生成します。Lolipopへ配置するビルドは `scheduled` を設定し、`publishAt` が当日以前の記事だけを生成します。検索公開の可否と、生成範囲は別の設定です。
 
@@ -81,6 +83,7 @@ GitHub Variablesには次を登録します。
 - `LOLIPOP_SITE_URL`
 - `LOLIPOP_PUBLICATION_MODE`：確認中は `preview`、医学・法務確認後は `production`
 - `LOLIPOP_SITE_INDEXABLE`：確認中は `false`、正式公開後は `true`
+- `LOLIPOP_LOCALIZED_INDEXABLE`：英語・中国語の翻訳確認後だけ`true`
 - 必要に応じて `NEXT_PUBLIC_CONTACT_EMAIL`、`NEXT_PUBLIC_OPERATOR_NAME`、`NEXT_PUBLIC_OPERATOR_ADDRESS`
 
 ファイルを有効化すると、mainへのpush、手動実行、毎週土曜06:00（日本時間）の予約実行で、`npm run build:lolipop` と静的検査を行い、予約日到達分だけをSSH経由で配置します。GitHub Pages workflowは既存のままmain pushで全記事をnoindex配置します。同時公開の直前にworkflowファイルを有効化してください。`.disabled`のままでは実行されません。
