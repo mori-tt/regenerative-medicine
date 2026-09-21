@@ -1,0 +1,99 @@
+name: Deploy to Lolipop
+
+# このファイルは有効化前のテンプレートです。
+# 最終公開時に deploy-lolipop.yml へリネームしてから、GitHub Secrets/Variablesを設定してください。
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "src/**"
+      - "public/**"
+      - "scripts/**"
+      - "deploy/**"
+      - "package.json"
+      - "package-lock.json"
+      - "next.config.ts"
+      - "tsconfig.json"
+      - ".env.example"
+  workflow_dispatch:
+  # 予約公開日を反映するため、毎週土曜06:00（日本時間）に実行。
+  schedule:
+    - cron: "0 21 * * 5"
+
+env:
+  NODE_VERSION: "22"
+  SSH_HOST: ssh.lolipop.jp
+  SSH_PORT: "2222"
+  NEXT_PUBLIC_SITE_URL: ${{ vars.LOLIPOP_SITE_URL }}
+  NEXT_PUBLIC_BASE_PATH: ""
+  NEXT_PUBLIC_ASSET_PREFIX: ""
+  NEXT_PUBLIC_ARTICLE_BUILD_MODE: scheduled
+  NEXT_PUBLIC_PUBLICATION_MODE: ${{ vars.LOLIPOP_PUBLICATION_MODE || 'preview' }}
+  NEXT_PUBLIC_SITE_INDEXABLE: ${{ vars.LOLIPOP_SITE_INDEXABLE || 'false' }}
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build scheduled Lolipop output
+        env:
+          NEXT_PUBLIC_CONTACT_EMAIL: ${{ vars.NEXT_PUBLIC_CONTACT_EMAIL }}
+          NEXT_PUBLIC_OPERATOR_NAME: ${{ vars.NEXT_PUBLIC_OPERATOR_NAME }}
+          NEXT_PUBLIC_OPERATOR_ADDRESS: ${{ vars.NEXT_PUBLIC_OPERATOR_ADDRESS }}
+        run: |
+          test -n "${NEXT_PUBLIC_SITE_URL}" || { echo "::error::LOLIPOP_SITE_URL is not configured"; exit 1; }
+          npm run build:lolipop
+          npm run check:export
+
+      - name: Install sshpass
+        run: sudo apt-get update && sudo apt-get install -y sshpass
+
+      - name: Archive build output
+        run: tar czf regenerative-medicine-out.tar.gz -C out .
+
+      - name: Deploy via SSH
+        env:
+          SSHPASS: ${{ secrets.LOLIPOP_SSH_PASSWORD }}
+          SSH_USER: ${{ secrets.LOLIPOP_SSH_USER }}
+          SSH_REMOTE_DIR: ${{ secrets.LOLIPOP_SSH_REMOTE_DIR }}
+          SSH_ARCHIVE: regenerative-medicine-out.tar.gz
+        run: |
+          set -euo pipefail
+          if [ -z "${SSHPASS}" ] || [ -z "${SSH_USER}" ] || [ -z "${SSH_REMOTE_DIR}" ]; then
+            echo "::error::Required secrets are missing: LOLIPOP_SSH_PASSWORD, LOLIPOP_SSH_USER, LOLIPOP_SSH_REMOTE_DIR"
+            exit 1
+          fi
+
+          SSH_TARGET="${SSH_USER}@${{ env.SSH_HOST }}"
+          SSH_OPTIONS=(-o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -p "${{ env.SSH_PORT }}")
+          REMOTE_HOME=$(sshpass -e ssh "${SSH_OPTIONS[@]}" "${SSH_TARGET}" 'printf "%s" "$HOME"')
+          if [ -z "${REMOTE_HOME}" ] || [ "${REMOTE_HOME}" = "/" ]; then
+            echo "::error::Unable to determine remote HOME. Deployment aborted."
+            exit 1
+          fi
+
+          REMOTE_ROOT="${SSH_REMOTE_DIR%/}"
+          if [[ "${REMOTE_ROOT}" == "~" ]]; then
+            REMOTE_ROOT="${REMOTE_HOME}"
+          elif [[ "${REMOTE_ROOT}" == "~/"* ]]; then
+            REMOTE_ROOT="${REMOTE_HOME}/${REMOTE_ROOT#~/}"
+          fi
+          if [ "${REMOTE_ROOT}" = "/" ] || [ -z "${REMOTE_ROOT}" ] || [ "${REMOTE_ROOT}" = "${REMOTE_HOME}" ]; then
+            echo "::error::SSH_REMOTE_DIR must be the site's public directory, not / or HOME."
+            exit 1
+          fi
+
+          REMOTE_ARCHIVE="${REMOTE_HOME}/${SSH_ARCHIVE}"
+          sshpass -e scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -P "${{ env.SSH_PORT }}" "${SSH_ARCHIVE}" "${SSH_TARGET}:${REMOTE_ARCHIVE}"
+          sshpass -e ssh "${SSH_OPTIONS[@]}" "${SSH_TARGET}" "mkdir -p \"${REMOTE_ROOT}\" && cd \"${REMOTE_ROOT}\" && find . -mindepth 1 -maxdepth 1 -exec rm -rf -- {} + && tar xzf \"${REMOTE_ARCHIVE}\" && rm -f \"${REMOTE_ARCHIVE}\""

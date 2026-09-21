@@ -55,7 +55,24 @@ NEXT_PUBLIC_ARTICLE_BUILD_MODE=scheduled
 
 `public/`配下の画像・アイコンは、`NEXT_PUBLIC_BASE_PATH`を含むURLへビルド時に変換されます。GitHub PagesからLolipopへ移すときは、環境変数を切り替えて再ビルドしてください。
 
-## 2. 手元で生成・確認
+## 2. GitHub ActionsでLolipopへ配置する場合
+
+現在のLolipop workflowは有効化していません。テンプレートを [`deploy-lolipop.example.yml`](../.github/workflows/deploy-lolipop.example.yml) として保存しています。最終公開時に `.github/workflows/deploy-lolipop.yml` へコピーし、次のGitHub Secretsを登録します。
+
+- `LOLIPOP_SSH_USER`
+- `LOLIPOP_SSH_PASSWORD`
+- `LOLIPOP_SSH_REMOTE_DIR`：対象ドメインの公開フォルダ。`/`やSSHのHOME自体は指定しない
+
+GitHub Variablesには次を登録します。
+
+- `LOLIPOP_SITE_URL`
+- `LOLIPOP_PUBLICATION_MODE`：確認中は `preview`、医学・法務確認後は `production`
+- `LOLIPOP_SITE_INDEXABLE`：確認中は `false`、正式公開後は `true`
+- 必要に応じて `NEXT_PUBLIC_CONTACT_EMAIL`、`NEXT_PUBLIC_OPERATOR_NAME`、`NEXT_PUBLIC_OPERATOR_ADDRESS`
+
+ファイルを有効化すると、mainへのpush、手動実行、毎週土曜06:00（日本時間）の予約実行で、`npm run build:lolipop` と静的検査を行い、予約日到達分だけをSSH経由で配置します。GitHub Pages workflowは既存のままmain pushで全記事をnoindex配置します。同時公開の直前にworkflowファイルを有効化してください。
+
+## 3. 手元で生成・確認
 
 ```bash
 npm ci
@@ -67,7 +84,7 @@ npm run preview
 
 `http://127.0.0.1:4173`で表示を確認します。検査スクリプトはHTMLのメタデータ・内部リンク・生成ファイル・検索公開状態を確認します。監修の医学的妥当性やApacheの実際の設定は検証しません。
 
-## 3. 転送
+## 4. 転送
 
 1. 既存サイトがある場合はファイルと`.htaccess`をバックアップします。
 2. ロリポップの管理画面で、対象ドメインの公開フォルダを確認します。
@@ -80,7 +97,7 @@ npm run preview
 
 `public/.htaccess`はドメイン直下用のサンプルで、ビルド時に`out/.htaccess`へコピーされます。既存のWordPress用リライト等がある場合は、そのまま上書きせず統合してください。使えるディレクティブはサーバー設定に依存するため、配置後に確認します。
 
-## 4. 配置後の確認
+## 5. 配置後の確認
 
 - トップ、カテゴリ、記事詳細をそれぞれURLの直接入力で開ける。
 - 記事URLでブラウザを再読み込みしても表示される。
@@ -92,13 +109,13 @@ npm run preview
 - 連絡先のメールリンクを確認する。
 - 正式公開後、Search Consoleで所有権を確認し、`/sitemap.xml`を送信する。
 
-## 5. 更新するとき
+## 6. 更新するとき
 
 記事を修正し、再度ビルド・検査してから転送します。ビルド環境がないレンタルサーバー上でソースだけ変更してもページは更新されません。
 
 新しい`_next`等のアセットを先にアップロードし、その後HTMLを更新すると、転送中に参照先が欠ける状況を減らせます。以前のアセットは移行確認まで保持します。削除した記事はサーバー上の旧フォルダも個別に確認して撤去し、必要に応じて適切な移転先への301リダイレクトをサーバー側に設定します。`out/`の上書きだけでは旧ファイルは削除されません。
 
-## 6. Lolipopのお問い合わせフォーム
+## 7. Lolipopのお問い合わせフォーム
 
 お問い合わせフォームは静的HTMLから`/contact.php`へPOSTします。PHPが利用できるLolipopでは、PHP用のPHPMailerを使ってLolipopのSMTP（`smtp.lolipop.jp`、通常は465/SSLまたは587/STARTTLS）から送信する構成を推奨します。Lolipopの管理画面・公式マニュアルで、契約プランのPHPとメールアカウントが有効であることを確認してください。
 
@@ -130,7 +147,7 @@ PHPMailerが利用できない場合は、PHPの`mail()`へフォールバック
 
 フォームで取得する情報をプライバシーポリシーに反映済みです。運営者名・所在地・保存期間などの実値は、公開前に必ず確定して掲載してください。
 
-## 7. 広告
+## 8. 広告
 
 静的バナーは`src/content/ads.ts`に設定し、素材を`public/`へ置いて再ビルドします。開始・終了日時による自動更新はなく、掲載開始・終了時にも再ビルドと転送が必要です。リンクに`sponsored`を付けることだけで医療広告の適法性が確認されたことにはなりません。
 
