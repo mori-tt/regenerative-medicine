@@ -24,4 +24,6 @@
 
 手作業で必要な確認は [`MANUAL-LEGAL-CHECKLIST.md`](./MANUAL-LEGAL-CHECKLIST.md) に集約しています。
 
+今回の監査結果と画像権利ゲートは [`LEGAL-AUDIT-2026-09-22.md`](./LEGAL-AUDIT-2026-09-22.md) に記録しています。
+
 詳細な内容監査と公開後の定期運用は [`docs/CONTENT-AUDIT.md`](./CONTENT-AUDIT.md) に記載しています。

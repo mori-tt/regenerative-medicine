@@ -2,7 +2,9 @@ import { spawnSync } from "node:child_process";
 
 const target = process.argv[2] || process.env.DEPLOY_TARGET;
 if (!target || !["github-pages", "lolipop"].includes(target)) {
-  console.error("使い方: DEPLOY_TARGET=github-pages|lolipop npm run build:target");
+  console.error(
+    "使い方: DEPLOY_TARGET=github-pages|lolipop npm run build:target",
+  );
   process.exit(1);
 }
 
@@ -16,6 +18,13 @@ if (target === "github-pages") {
 } else {
   delete env.GITHUB_PAGES;
   env.NEXT_PUBLIC_ARTICLE_BUILD_MODE = "scheduled";
+  if (env.NEXT_PUBLIC_PUBLICATION_MODE === "production") {
+    const rights = spawnSync(command, ["run", "check:rights"], {
+      env,
+      stdio: "inherit",
+    });
+    if (rights.status !== 0) process.exit(rights.status ?? 1);
+  }
 }
 
 const command = process.platform === "win32" ? "npm.cmd" : "npm";

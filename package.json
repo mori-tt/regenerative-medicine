@@ -15,6 +15,7 @@
     "check:article-schedule": "node scripts/check-article-schedule.mjs",
     "format": "prettier --write src scripts docs README.md package.json next.config.ts tsconfig.json",
     "check:pubmed": "node scripts/check-pubmed-metadata.mjs",
+    "check:rights": "node scripts/check-rights.mjs",
     "report:article-evidence": "node scripts/report-article-evidence.mjs",
     "prebuild": "npm run check:article-content && npm run test:article-review",
     "test:article-review": "node --test scripts/tests/article-review.test.mjs"
