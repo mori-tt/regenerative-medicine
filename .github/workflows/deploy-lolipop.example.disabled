@@ -31,6 +31,7 @@ env:
   NEXT_PUBLIC_ARTICLE_BUILD_MODE: scheduled
   NEXT_PUBLIC_PUBLICATION_MODE: ${{ vars.LOLIPOP_PUBLICATION_MODE || 'preview' }}
   NEXT_PUBLIC_SITE_INDEXABLE: ${{ vars.LOLIPOP_SITE_INDEXABLE || 'false' }}
+  NEXT_PUBLIC_LOCALIZED_INDEXABLE: ${{ vars.LOLIPOP_LOCALIZED_INDEXABLE || 'false' }}
 
 jobs:
   build-and-deploy:
@@ -43,8 +44,17 @@ jobs:
           node-version: ${{ env.NODE_VERSION }}
           cache: npm
 
+      - name: Setup PHP and Composer
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.3"
+          tools: composer:v2
+
       - name: Install dependencies
         run: npm ci
+
+      - name: Install PHPMailer
+        run: composer install --no-dev --working-dir=public --no-interaction --prefer-dist
 
       - name: Build scheduled Lolipop output
         env:

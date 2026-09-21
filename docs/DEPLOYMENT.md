@@ -155,11 +155,17 @@ CONTACT_SMTP_USER=送信用メールアドレス
 CONTACT_SMTP_PASS=メールアカウントのパスワード
 CONTACT_SMTP_SECURE=ssl
 CONTACT_PHPMAILER_AUTOLOAD=
+CONTACT_ALLOWED_ORIGINS=https://saisei-med.com
+CONTACT_RATE_LIMIT_MAX=5
+CONTACT_RATE_LIMIT_WINDOW=600
+CONTACT_ALLOW_NATIVE_MAIL=false
 ```
 
 `CONTACT_FROM_EMAIL`は利用者のメールアドレスにせず、サイト側のメールアドレスに固定します。利用者のアドレスはReply-Toだけに設定し、なりすましやヘッダーインジェクションを避けます。フォームには医療相談を送らない旨を明記しています。配置後は実在するテストアドレスで、送信・返信・迷惑メール判定・エラー時の挙動を確認してください。
 
-PHPMailerが利用できない場合は、PHPの`mail()`へフォールバックしますが、到達性や迷惑メール対策の面でSMTP送信を優先します。Lolipopの公式仕様では、SMTP-AUTHとSSL/TLS、ポート465/587が案内されています。
+`CONTACT_ALLOWED_ORIGINS`にはフォームを置く本番ドメインを指定します。英語・中国語ページからの送信は、固定コードのカテゴリと元の言語ページを保持します。IPごとに既定で10分5件までに制限し、超過時はエラーにします。PHPMailerが配置されていない場合は、誤って`mail()`へフォールバックせず送信を停止します。互換経路を使う場合だけ`CONTACT_ALLOW_NATIVE_MAIL=true`を明示してください。Lolipopの公式仕様では、SMTP-AUTHとSSL/TLS、ポート465/587が案内されています。
+
+GitHub PagesはPHPを実行しないため、確認用GitHub Pagesではフォーム送信は完了しません。フォームの実送信、SMTP、返信、迷惑メール判定は、PHPMailerとPHPを実行できる本番Lolipop上で確認します。
 
 フォームで取得する情報をプライバシーポリシーに反映済みです。運営者名・所在地・保存期間などの実値は、公開前に必ず確定して掲載してください。
 
