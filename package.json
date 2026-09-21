@@ -8,6 +8,7 @@
     "preview": "node scripts/preview.mjs",
     "typecheck": "tsc --noEmit",
     "check:export": "node scripts/check-export.mjs",
+    "check:article-schedule": "node scripts/check-article-schedule.mjs",
     "format": "prettier --write src scripts docs README.md package.json next.config.ts tsconfig.json"
   },
   "dependencies": {

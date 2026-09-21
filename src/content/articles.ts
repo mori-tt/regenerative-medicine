@@ -1,5 +1,7 @@
 import { articleImageFor } from "./article-images";
 import { medicalReviewer, publication } from "@/lib/site-config";
+import reviewRecords from "./article-review-records.json";
+const reviewSchedule = reviewRecords as Record<string, { publishAt?: string }>;
 
 export const categories = [
   {
@@ -67,7 +69,8 @@ export type Article = {
   /** "core" が大事なコンテンツ、"column" が通常コラム。未指定は "core"。 */
   kind?: "core" | "column";
   /**
-   * 公開予定日 (YYYY-MM-DD)。未来日の間はJSONに保存されていても、
+   * 公開予定日 (YYYY-MM-DD)。実際の管理台帳はarticle-review-records.json。
+   * 未来日の間はJSONに保存されていても、
    * 一覧・検索・関連・サイトマップ・ページ生成の対象外になる。
    * 未指定は公開済み扱い。
    */
@@ -8147,7 +8150,6 @@ const rawArticles: Article[] = [
     status: "draft",
     illustration: "cells",
     kind: "column",
-    publishAt: "2026-09-26",
     points: [
       "測る部位で値が異なります。",
       "測る前の安静が大切です。",
@@ -8189,7 +8191,6 @@ const rawArticles: Article[] = [
     status: "draft",
     illustration: "cells",
     kind: "column",
-    publishAt: "2026-10-03",
     points: [
       "種類によって条件と間隔が違います。",
       "当日の問診と検査があります。",
@@ -8231,7 +8232,6 @@ const rawArticles: Article[] = [
     status: "draft",
     illustration: "cells",
     kind: "column",
-    publishAt: "2026-10-10",
     points: [
       "光学と電子で見えるものが違います。",
       "染色で構造が見やすくなります。",
@@ -8273,7 +8273,6 @@ const rawArticles: Article[] = [
     status: "draft",
     illustration: "network",
     kind: "column",
-    publishAt: "2026-10-17",
     points: [
       "2012年に生理学・医学賞を受賞しました。",
       "受賞は研究の出発点の一つです。",
@@ -8315,7 +8314,6 @@ const rawArticles: Article[] = [
     status: "draft",
     illustration: "network",
     kind: "column",
-    publishAt: "2026-10-24",
     points: [
       "脳オルガノイドの扱いが議論されています。",
       "意識の有無は確かめようがありません。",
@@ -8357,7 +8355,6 @@ const rawArticles: Article[] = [
     status: "draft",
     illustration: "network",
     kind: "column",
-    publishAt: "2026-10-31",
     points: [
       "無菌操作が必須です。",
       "温度やガスの管理が必要です。",
@@ -8399,7 +8396,6 @@ const rawArticles: Article[] = [
     status: "draft",
     illustration: "cross",
     kind: "column",
-    publishAt: "2026-11-07",
     points: [
       "安全の確保が最優先です。",
       "圧迫止血と119番が基本です。",
@@ -8441,7 +8437,6 @@ const rawArticles: Article[] = [
     status: "draft",
     illustration: "cross",
     kind: "column",
-    publishAt: "2026-11-14",
     points: [
       "湿気・光・温度に注意します。",
       "使用期限を守ります。",
@@ -8483,7 +8478,6 @@ const rawArticles: Article[] = [
     status: "draft",
     illustration: "scope",
     kind: "column",
-    publishAt: "2026-11-21",
     points: [
       "基礎研究の功績が対象です。",
       "治療の確立とは別の話です。",
@@ -8525,7 +8519,6 @@ const rawArticles: Article[] = [
     status: "draft",
     illustration: "scope",
     kind: "column",
-    publishAt: "2026-11-28",
     points: [
       "大学や研究所が公開行事を開いています。",
       "事前申込が必要な場合があります。",
@@ -8634,6 +8627,7 @@ const depthByCategory: Record<CategorySlug, ArticleDepth[]> = {
 // 個別治療を推奨する表現は避け、読者が医療者へ確認するための質問に落とし込む。
 export const articles: Article[] = rawArticles.map((article, index) => ({
   ...article,
+  publishAt: reviewSchedule[article.slug]?.publishAt ?? article.publishAt,
   image: articleImageFor(article.category, index).src,
   imageAlt: articleImageFor(article.category, index).alt,
   status: article.review ? "published" : "draft",

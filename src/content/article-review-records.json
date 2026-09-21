@@ -1,0 +1,4908 @@
+{
+  "what-is-regenerative-medicine": {
+    "slug": "what-is-regenerative-medicine",
+    "title": "再生医療とは？ はじめに知っておきたい基礎知識",
+    "publishAt": "2026-09-21",
+    "releaseTrack": "initial-candidate",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim",
+      "cost_or_system_claim"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "cells-tissues-organs": {
+    "slug": "cells-tissues-organs",
+    "title": "細胞・組織・臓器の基礎：体のつくりから理解する",
+    "publishAt": "2026-09-24",
+    "releaseTrack": "initial-candidate",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "three-approaches": {
+    "slug": "three-approaches",
+    "title": "再生医療の3つのアプローチ：細胞移植・組織工学・体の力を生かす",
+    "publishAt": "2026-09-27",
+    "releaseTrack": "initial-candidate",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "stem-cell-types": {
+    "slug": "stem-cell-types",
+    "title": "幹細胞とは？ iPS細胞・ES細胞・体性幹細胞の違い",
+    "publishAt": "2026-09-30",
+    "releaseTrack": "initial-candidate",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
+    "referenceCount": 1,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "ips-cells-explained": {
+    "slug": "ips-cells-explained",
+    "title": "iPS細胞とは？ 仕組みと研究の現状をやさしく解説",
+    "publishAt": "2026-10-03",
+    "releaseTrack": "initial-candidate",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim",
+      "regulatory_or_advertising_claim"
+    ],
+    "referenceCount": 3,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "es-cells-explained": {
+    "slug": "es-cells-explained",
+    "title": "ES細胞とは？ 特徴と倫理的な配慮",
+    "publishAt": "2026-10-06",
+    "releaseTrack": "initial-candidate",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "questions-before-treatment": {
+    "slug": "questions-before-treatment",
+    "title": "再生医療を検討するとき、医師に確認したいこと",
+    "publishAt": "2026-10-09",
+    "releaseTrack": "initial-candidate",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim",
+      "cost_or_system_claim",
+      "individual_decision_context"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "cost-and-insurance": {
+    "slug": "cost-and-insurance",
+    "title": "費用と保険：再生医療のお金の話を整理する",
+    "publishAt": "2026-10-12",
+    "releaseTrack": "initial-candidate",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim",
+      "cost_or_system_claim",
+      "regulatory_or_advertising_claim",
+      "individual_decision_context"
+    ],
+    "referenceCount": 3,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "risks-and-safety": {
+    "slug": "risks-and-safety",
+    "title": "リスクと安全性：副作用・合併症の考え方",
+    "publishAt": "2026-10-15",
+    "releaseTrack": "initial-candidate",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim",
+      "cost_or_system_claim",
+      "individual_decision_context"
+    ],
+    "referenceCount": 3,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "stages-of-research": {
+    "slug": "stages-of-research",
+    "title": "研究の段階：基礎研究から非臨床・臨床試験へ",
+    "publishAt": "2026-10-18",
+    "releaseTrack": "initial-candidate",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim",
+      "regulatory_or_advertising_claim"
+    ],
+    "referenceCount": 3,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "japanese-society-for-regenerative-medicine": {
+    "slug": "japanese-society-for-regenerative-medicine",
+    "title": "日本再生医療学会とは？役割・認定制度・公式情報の読み方",
+    "publishAt": "2026-11-01",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim",
+      "cost_or_system_claim",
+      "regulatory_or_advertising_claim"
+    ],
+    "referenceCount": 7,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "regenerative-medicine-history": {
+    "slug": "regenerative-medicine-history",
+    "title": "再生医療の歩み：輸血・移植から細胞の時代へ",
+    "publishAt": "2026-11-04",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim",
+      "cost_or_system_claim",
+      "regulatory_or_advertising_claim"
+    ],
+    "referenceCount": 3,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "myths-and-facts": {
+    "slug": "myths-and-facts",
+    "title": "再生医療のよくある誤解5つ：期待と現実の区別",
+    "publishAt": "2026-11-07",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim",
+      "cost_or_system_claim"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "somatic-stem-cells": {
+    "slug": "somatic-stem-cells",
+    "title": "体性幹細胞とは？ 造血・間葉系・神経幹細胞の違い",
+    "publishAt": "2026-11-10",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim",
+      "cost_or_system_claim",
+      "regulatory_or_advertising_claim"
+    ],
+    "referenceCount": 3,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "cell-culture-and-quality": {
+    "slug": "cell-culture-and-quality",
+    "title": "細胞の培養・加工・品質管理：治療の裏側にある工程",
+    "publishAt": "2026-11-13",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "second-opinion": {
+    "slug": "second-opinion",
+    "title": "セカンドオピニオンの活用法：納得のための第二の意見",
+    "publishAt": "2026-11-16",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "individual_decision_context"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "clinical-trials-guide": {
+    "slug": "clinical-trials-guide",
+    "title": "治験・臨床研究に参加するとき：流れと確認点",
+    "publishAt": "2026-11-19",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim",
+      "cost_or_system_claim",
+      "regulatory_or_advertising_claim",
+      "individual_decision_context"
+    ],
+    "referenceCount": 3,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "reading-research-news": {
+    "slug": "reading-research-news",
+    "title": "再生医療のニュースを読むための、3つの視点",
+    "publishAt": "2026-11-22",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
+    "referenceCount": 1,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "evidence-levels": {
+    "slug": "evidence-levels",
+    "title": "エビデンスレベルと論文の読み方：確かさを比べる",
+    "publishAt": "2026-11-25",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "safety_or_risk_claim"
+    ],
+    "referenceCount": 3,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "approved-products-japan": {
+    "slug": "approved-products-japan",
+    "title": "日本で承認された再生医療等製品：今使える治療を知る",
+    "publishAt": "2026-11-28",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim",
+      "cost_or_system_claim",
+      "regulatory_or_advertising_claim"
+    ],
+    "referenceCount": 4,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "future-perspectives": {
+    "slug": "future-perspectives",
+    "title": "これからの研究：オルガノイド・臓器再生・個別化医療",
+    "publishAt": "2026-12-01",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "safety_or_risk_claim",
+      "cost_or_system_claim"
+    ],
+    "referenceCount": 3,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "body-repair-mechanisms": {
+    "slug": "body-repair-mechanisms",
+    "title": "体の修復の仕組み：炎症・瘢痕・再生の違い",
+    "publishAt": "2026-12-04",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "self-vs-donor-cells": {
+    "slug": "self-vs-donor-cells",
+    "title": "自家と他家：誰の細胞を使うかの違い",
+    "publishAt": "2026-12-07",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim",
+      "cost_or_system_claim"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "differentiation-basics": {
+    "slug": "differentiation-basics",
+    "title": "分化・脱分化・リプログラミング：細胞の変化を表す言葉",
+    "publishAt": "2026-12-10",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [],
+    "referenceCount": 1,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "genes-and-cells": {
+    "slug": "genes-and-cells",
+    "title": "遺伝子と細胞の関係：設計図と働き手の入門",
+    "publishAt": "2026-12-13",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "immune-basics": {
+    "slug": "immune-basics",
+    "title": "免疫の基礎と拒絶：他人の細胞が排除される理由",
+    "publishAt": "2026-12-16",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "blood-basics": {
+    "slug": "blood-basics",
+    "title": "血液の基礎：赤血球・白血球・血小板と造血",
+    "publishAt": "2026-12-19",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "skin-bone-cartilage": {
+    "slug": "skin-bone-cartilage",
+    "title": "皮膚・骨・軟骨の再生：身近な組織の例",
+    "publishAt": "2026-12-22",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "nerve-muscle-heart": {
+    "slug": "nerve-muscle-heart",
+    "title": "神経・筋・心臓の特徴：再生が難しいとされる臓器",
+    "publishAt": "2026-12-25",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "age-and-regeneration": {
+    "slug": "age-and-regeneration",
+    "title": "年齢と再生力：子どもの治りと大人の治りの違い",
+    "publishAt": "2026-12-28",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "drugs-surgery-comparison": {
+    "slug": "drugs-surgery-comparison",
+    "title": "薬・手術との比較：再生医療の位置づけ",
+    "publishAt": "2027-01-01",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim",
+      "cost_or_system_claim"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "hospital-words": {
+    "slug": "hospital-words",
+    "title": "病院で聞く言葉：適応・禁忌・予後・QOL",
+    "publishAt": "2027-01-04",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
+    "referenceCount": 1,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "family-discussion": {
+    "slug": "family-discussion",
+    "title": "家族との話し方：治療の選択を共有するために",
+    "publishAt": "2027-01-07",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "cost_or_system_claim"
+    ],
+    "referenceCount": 1,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "next-steps-after-basics": {
+    "slug": "next-steps-after-basics",
+    "title": "基礎の次に読む順番：あなたに合った道案内",
+    "publishAt": "2027-01-10",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim",
+      "cost_or_system_claim"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "hematopoietic-transplant": {
+    "slug": "hematopoietic-transplant",
+    "title": "造血幹細胞移植：確立した細胞治療の代表例",
+    "publishAt": "2027-01-13",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "mesenchymal-basics": {
+    "slug": "mesenchymal-basics",
+    "title": "間葉系幹細胞の整理：よく聞く名前の実像",
+    "publishAt": "2027-01-16",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "cost_or_system_claim"
+    ],
+    "referenceCount": 3,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "neural-stem-cells": {
+    "slug": "neural-stem-cells",
+    "title": "神経幹細胞：脳と脊髄の修復を目指す研究",
+    "publishAt": "2027-01-19",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim",
+      "regulatory_or_advertising_claim"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "tissue-stem-cells": {
+    "slug": "tissue-stem-cells",
+    "title": "組織幹細胞の世界：皮膚・腸・筋肉の維持役",
+    "publishAt": "2027-01-22",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "ips-stock": {
+    "slug": "ips-stock",
+    "title": "iPS細胞ストック：備蓄細胞で迅速に届ける工夫",
+    "publishAt": "2027-01-25",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "safety_or_risk_claim",
+      "cost_or_system_claim"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "differentiation-purification": {
+    "slug": "differentiation-purification",
+    "title": "分化誘導と純化：目的の細胞だけを取り出す技術",
+    "publishAt": "2027-01-28",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "genome-editing-difference": {
+    "slug": "genome-editing-difference",
+    "title": "ゲノム編集との違い：切る技術と育てる技術",
+    "publishAt": "2027-02-01",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "autologous-allogeneic": {
+    "slug": "autologous-allogeneic",
+    "title": "自家細胞と他家細胞：採取・製造・通院の違い",
+    "publishAt": "2027-02-04",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim",
+      "cost_or_system_claim"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "tumorigenicity-safety": {
+    "slug": "tumorigenicity-safety",
+    "title": "腫瘍化と安全性試験：増える力の裏側",
+    "publishAt": "2027-02-07",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "safety_or_risk_claim"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "hla-rejection": {
+    "slug": "hla-rejection",
+    "title": "HLAと拒絶：型合わせの基本",
+    "publishAt": "2027-02-10",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "ips-drug-discovery": {
+    "slug": "ips-drug-discovery",
+    "title": "iPS創薬：移植だけではないiPSの使い道",
+    "publishAt": "2027-02-13",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "organoids-intro": {
+    "slug": "organoids-intro",
+    "title": "オルガノイド入門：ミニ臓器で何が分かるか",
+    "publishAt": "2027-02-16",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
+    "referenceCount": 3,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "exosomes-notes": {
+    "slug": "exosomes-notes",
+    "title": "エクソソーム・分泌物療法の話題：冷静な見方",
+    "publishAt": "2027-02-19",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim",
+      "cost_or_system_claim"
+    ],
+    "referenceCount": 3,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "first-visit-prep": {
+    "slug": "first-visit-prep",
+    "title": "初診の準備：持参物と伝え方の checklist",
+    "publishAt": "2027-02-22",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "individual_decision_context"
+    ],
+    "referenceCount": 1,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "informed-consent-howto": {
+    "slug": "informed-consent-howto",
+    "title": "説明と同意の受け方：納得のための聞き方",
+    "publishAt": "2027-02-25",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim",
+      "individual_decision_context"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "treatment-flow": {
+    "slug": "treatment-flow",
+    "title": "相談から治療後までの流れ：全体像をつかむ",
+    "publishAt": "2027-02-28",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "individual_decision_context"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "insurance-care": {
+    "slug": "insurance-care",
+    "title": "保険診療の探し方：対象疾患と医療機関",
+    "publishAt": "2027-03-01",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "cost_or_system_claim",
+      "individual_decision_context"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "jibihi-contract": {
+    "slug": "jibihi-contract",
+    "title": "自由診療の契約書の読み方：署名前に見る点",
+    "publishAt": "2027-03-04",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "safety_or_risk_claim",
+      "cost_or_system_claim",
+      "individual_decision_context"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "advertising-literacy": {
+    "slug": "advertising-literacy",
+    "title": "広告の見分け方：症例写真・体験談との付き合い方",
+    "publishAt": "2027-03-07",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim",
+      "cost_or_system_claim",
+      "regulatory_or_advertising_claim",
+      "individual_decision_context"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "trouble-help": {
+    "slug": "trouble-help",
+    "title": "トラブル時の相談先：困ったときの連絡順",
+    "publishAt": "2027-03-10",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "cost_or_system_claim",
+      "regulatory_or_advertising_claim",
+      "individual_decision_context"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "aftercare": {
+    "slug": "aftercare",
+    "title": "治療後の経過観察：通院・検査・生活の注意",
+    "publishAt": "2027-03-13",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "individual_decision_context"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "pain-burden": {
+    "slug": "pain-burden",
+    "title": "痛み・入院・通院の負担：体と暮らしの見通し",
+    "publishAt": "2027-03-16",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "individual_decision_context"
+    ],
+    "referenceCount": 1,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "family-decision": {
+    "slug": "family-decision",
+    "title": "家族と決める：代理判断が必要なとき",
+    "publishAt": "2027-03-19",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "individual_decision_context"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "elderly-points": {
+    "slug": "elderly-points",
+    "title": "高齢者が考えるときの注意：持病・薬・通院",
+    "publishAt": "2027-03-22",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "individual_decision_context"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "children-points": {
+    "slug": "children-points",
+    "title": "子どもが対象のとき：成長への配慮と同意",
+    "publishAt": "2027-03-25",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "individual_decision_context"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "final-checklist": {
+    "slug": "final-checklist",
+    "title": "契約前の最終チェック15項目：持ち帰り確認シート",
+    "publishAt": "2027-03-28",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim",
+      "cost_or_system_claim",
+      "individual_decision_context"
+    ],
+    "referenceCount": 3,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "bench-to-bedside": {
+    "slug": "bench-to-bedside",
+    "title": "基礎と臨床の橋渡し：トランスレーショナルリサーチ",
+    "publishAt": "2027-04-01",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "safety_or_risk_claim"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "randomized-trials": {
+    "slug": "randomized-trials",
+    "title": "ランダム化比較試験とは：公平に比べる工夫",
+    "publishAt": "2027-04-04",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "case-reports-registries": {
+    "slug": "case-reports-registries",
+    "title": "症例報告とレジストリ：一人ひとりの積み重ね",
+    "publishAt": "2027-04-07",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "endpoints": {
+    "slug": "endpoints",
+    "title": "評価項目・エンドポイント：何をもって効いたとするか",
+    "publishAt": "2027-04-10",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "peer-review": {
+    "slug": "peer-review",
+    "title": "査読と論文誌：論文が世に出るまで",
+    "publishAt": "2027-04-13",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "press-release-reading": {
+    "slug": "press-release-reading",
+    "title": "プレスリリースの読み方：発表文の裏側を読む",
+    "publishAt": "2027-04-16",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "regulatory_or_advertising_claim"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "statistics-intro": {
+    "slug": "statistics-intro",
+    "title": "統計の超入門：p値・信頼区間・ n数",
+    "publishAt": "2027-04-19",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
+    "referenceCount": 1,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "conflict-of-interest": {
+    "slug": "conflict-of-interest",
+    "title": "利益相反の開示：誰が得をする研究か",
+    "publishAt": "2027-04-22",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [],
+    "referenceCount": 3,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "overseas-research": {
+    "slug": "overseas-research",
+    "title": "海外の研究を読む：国による制度の違い",
+    "publishAt": "2027-04-25",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "cost_or_system_claim",
+      "regulatory_or_advertising_claim"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "negative-trials": {
+    "slug": "negative-trials",
+    "title": "うまくいかなかった研究の価値：陰性試験を読む",
+    "publishAt": "2027-04-28",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "long-term-followup": {
+    "slug": "long-term-followup",
+    "title": "長期追跡の重要性：年単位で見る安全性",
+    "publishAt": "2027-05-01",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "how-to-find-trials": {
+    "slug": "how-to-find-trials",
+    "title": "治験を探す方法：登録情報の使い方",
+    "publishAt": "2027-05-04",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "regulatory_or_advertising_claim"
+    ],
+    "referenceCount": 3,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "world-products": {
+    "slug": "world-products",
+    "title": "世界の承認製品の調べ方：原資料にあたる",
+    "publishAt": "2027-05-07",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "regulatory_or_advertising_claim"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "cell-division": {
+    "slug": "cell-division",
+    "title": "細胞分裂の基礎：体が増え・入れ替わる仕組み",
+    "publishAt": "2027-05-10",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
+    "referenceCount": 1,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "dna-basics": {
+    "slug": "dna-basics",
+    "title": "DNAの基礎：設計情報の読み方",
+    "publishAt": "2027-05-13",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "proteins-basics": {
+    "slug": "proteins-basics",
+    "title": "タンパク質の基礎：体の働き手",
+    "publishAt": "2027-05-16",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [],
+    "referenceCount": 1,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "digestion-absorption": {
+    "slug": "digestion-absorption",
+    "title": "消化と吸収：栄養が体になるまで",
+    "publishAt": "2027-05-19",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
+    "referenceCount": 1,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "circulation": {
+    "slug": "circulation",
+    "title": "循環の仕組み：血液が巡る道",
+    "publishAt": "2027-05-22",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
+    "referenceCount": 1,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "respiration": {
+    "slug": "respiration",
+    "title": "呼吸の仕組み：酸素と二酸化炭素の交換",
+    "publishAt": "2027-05-25",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [],
+    "referenceCount": 1,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "kidney-liver": {
+    "slug": "kidney-liver",
+    "title": "腎臓と肝臓：老廃物処理と代謝の要",
+    "publishAt": "2027-05-28",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "brain-basics": {
+    "slug": "brain-basics",
+    "title": "脳の基礎：指令塔のつくりと働き",
+    "publishAt": "2027-06-01",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "senses": {
+    "slug": "senses",
+    "title": "目と耳：感覚器の仕組みと再生研究",
+    "publishAt": "2027-06-04",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "teeth-bones-growth": {
+    "slug": "teeth-bones-growth",
+    "title": "歯と骨の成長：子どもの体の変化",
+    "publishAt": "2027-06-07",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "hormones": {
+    "slug": "hormones",
+    "title": "ホルモンの基礎：全身の連絡網",
+    "publishAt": "2027-06-10",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
+    "referenceCount": 1,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "antibodies-vaccines": {
+    "slug": "antibodies-vaccines",
+    "title": "抗体とワクチン：免疫の記憶の仕組み",
+    "publishAt": "2027-06-13",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
+    "referenceCount": 1,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "allergy-basics": {
+    "slug": "allergy-basics",
+    "title": "アレルギーの基礎：過剰な防御反応",
+    "publishAt": "2027-06-16",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
+    "referenceCount": 1,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "cancer-basics": {
+    "slug": "cancer-basics",
+    "title": "がんの基礎知識：細胞の増殖の暴走",
+    "publishAt": "2027-06-19",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim",
+      "cost_or_system_claim"
+    ],
+    "referenceCount": 1,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "diabetes-lifestyle": {
+    "slug": "diabetes-lifestyle",
+    "title": "生活習慣病と細胞：糖尿病を例に",
+    "publishAt": "2027-06-22",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "pregnancy-cordblood": {
+    "slug": "pregnancy-cordblood",
+    "title": "妊娠・出産と臍帯血：誕生時の細胞の活用",
+    "publishAt": "2027-06-25",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "cost_or_system_claim"
+    ],
+    "referenceCount": 1,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "aging-society": {
+    "slug": "aging-society",
+    "title": "超高齢社会と再生医療：期待の背景",
+    "publishAt": "2027-06-28",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "cost_or_system_claim"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "disabilities-support": {
+    "slug": "disabilities-support",
+    "title": "障害と支援制度：医療と暮らしの橋渡し",
+    "publishAt": "2027-07-01",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
+    "referenceCount": 1,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "rehabilitation-basics": {
+    "slug": "rehabilitation-basics",
+    "title": "リハビリの基礎：回復を支える訓練",
+    "publishAt": "2027-07-04",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "nutrition-basics": {
+    "slug": "nutrition-basics",
+    "title": "栄養の基礎：5大栄養素と体の材料",
+    "publishAt": "2027-07-07",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
+    "referenceCount": 1,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "exercise-basics": {
+    "slug": "exercise-basics",
+    "title": "運動と体：筋肉・骨・心肺への効果",
+    "publishAt": "2027-07-10",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
+    "referenceCount": 1,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "sleep-basics": {
+    "slug": "sleep-basics",
+    "title": "睡眠と修復：眠りが体を整える",
+    "publishAt": "2027-07-13",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "safety_or_risk_claim"
+    ],
+    "referenceCount": 1,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "mental-health-decision": {
+    "slug": "mental-health-decision",
+    "title": "心の健康と意思決定：不安と向き合う",
+    "publishAt": "2027-07-16",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "health-checkups": {
+    "slug": "health-checkups",
+    "title": "健診・検診の活かし方：結果の読み方",
+    "publishAt": "2027-07-19",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [],
+    "referenceCount": 1,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "family-doctor": {
+    "slug": "family-doctor",
+    "title": "かかりつけ医の持ち方：相談の起点",
+    "publishAt": "2027-07-22",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "cell-cycle": {
+    "slug": "cell-cycle",
+    "title": "細胞周期：分裂と休止のリズム",
+    "publishAt": "2027-07-25",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [],
+    "referenceCount": 1,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "asymmetric-division": {
+    "slug": "asymmetric-division",
+    "title": "非対称分裂：幹細胞を保つ分け方",
+    "publishAt": "2027-07-28",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "stemcell-niche": {
+    "slug": "stemcell-niche",
+    "title": "ニッチ：幹細胞を支える微小環境",
+    "publishAt": "2027-08-01",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "cell-signaling": {
+    "slug": "cell-signaling",
+    "title": "細胞間シグナル：連絡を取り合う仕組み",
+    "publishAt": "2027-08-04",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
+    "referenceCount": 1,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "growth-factors": {
+    "slug": "growth-factors",
+    "title": "成長因子：増殖と分化の合図",
+    "publishAt": "2027-08-07",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "scaffolds": {
+    "slug": "scaffolds",
+    "title": "足場材料：細胞の家を設計する",
+    "publishAt": "2027-08-10",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "safety_or_risk_claim"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "bioreactors": {
+    "slug": "bioreactors",
+    "title": "大量培養：バイオリアクターの役割",
+    "publishAt": "2027-08-13",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "cryopreservation": {
+    "slug": "cryopreservation",
+    "title": "凍結保存：細胞を止めて運ぶ技術",
+    "publishAt": "2027-08-16",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "cord-blood-cells": {
+    "slug": "cord-blood-cells",
+    "title": "臍帯血の細胞：採取から利用まで",
+    "publishAt": "2027-08-19",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [],
+    "referenceCount": 1,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "dental-pulp-stem": {
+    "slug": "dental-pulp-stem",
+    "title": "歯髄幹細胞：抜いた歯の活用",
+    "publishAt": "2027-08-22",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "cost_or_system_claim"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "adipose-stem": {
+    "slug": "adipose-stem",
+    "title": "脂肪由来幹細胞：採取しやすさと注意点",
+    "publishAt": "2027-08-25",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim",
+      "cost_or_system_claim"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "bone-marrow-system": {
+    "slug": "bone-marrow-system",
+    "title": "骨髄の仕組み：血を作る工場",
+    "publishAt": "2027-08-28",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [],
+    "referenceCount": 1,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "satellite-cells": {
+    "slug": "satellite-cells",
+    "title": "筋サテライト細胞：筋肉の控え選手",
+    "publishAt": "2027-09-01",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "intestinal-stem": {
+    "slug": "intestinal-stem",
+    "title": "腸管上皮幹細胞：毎日生まれ変わる仕組み",
+    "publishAt": "2027-09-04",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "liver-progenitor": {
+    "slug": "liver-progenitor",
+    "title": "肝臓の再生と前駆細胞：強い回復力の源",
+    "publishAt": "2027-09-07",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "corneal-regeneration": {
+    "slug": "corneal-regeneration",
+    "title": "角膜・上皮の再生：輪部幹細胞の働き",
+    "publishAt": "2027-09-10",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "cartilage-repair-deep": {
+    "slug": "cartilage-repair-deep",
+    "title": "軟骨再生の深掘り：なぜ難しいか",
+    "publishAt": "2027-09-13",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "tendon-ligament": {
+    "slug": "tendon-ligament",
+    "title": "腱・靭帯：つなぐ組織の修復",
+    "publishAt": "2027-09-16",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "hair-regeneration": {
+    "slug": "hair-regeneration",
+    "title": "毛髪再生の研究：毛包の仕組み",
+    "publishAt": "2027-09-19",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim",
+      "cost_or_system_claim",
+      "regulatory_or_advertising_claim"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "tooth-regeneration": {
+    "slug": "tooth-regeneration",
+    "title": "歯の再生研究：失った歯を取り戻せるか",
+    "publishAt": "2027-09-22",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "inner-ear-regeneration": {
+    "slug": "inner-ear-regeneration",
+    "title": "内耳・聴覚の再生研究：有毛細胞を目指して",
+    "publishAt": "2027-09-25",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "retina-regeneration": {
+    "slug": "retina-regeneration",
+    "title": "網膜の再生研究：見る力を守る挑戦",
+    "publishAt": "2027-09-28",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
+    "referenceCount": 3,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "spinal-cord-detail": {
+    "slug": "spinal-cord-detail",
+    "title": "脊髄損傷の治療研究：神経をつなぐ挑戦",
+    "publishAt": "2027-10-01",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "safety_or_risk_claim",
+      "regulatory_or_advertising_claim"
+    ],
+    "referenceCount": 3,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "heart-sheet-detail": {
+    "slug": "heart-sheet-detail",
+    "title": "心筋シートの研究：拍動する組織を目指して",
+    "publishAt": "2027-10-04",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "direct-reprogramming": {
+    "slug": "direct-reprogramming",
+    "title": "ダイレクトリプログラミング：経由しない変換",
+    "publishAt": "2027-10-07",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
+    "referenceCount": 3,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "online-care": {
+    "slug": "online-care",
+    "title": "オンライン診療との付き合い方：遠方の相談に",
+    "publishAt": "2027-10-10",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "individual_decision_context"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "referral-letters": {
+    "slug": "referral-letters",
+    "title": "紹介状・逆紹介：医療機関をつなぐ文書",
+    "publishAt": "2027-10-13",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "cost_or_system_claim",
+      "individual_decision_context"
+    ],
+    "referenceCount": 1,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "medical-records": {
+    "slug": "medical-records",
+    "title": "診療記録の開示請求：自分の記録を受け取る",
+    "publishAt": "2027-10-16",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "cost_or_system_claim",
+      "individual_decision_context"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "hospital-choice": {
+    "slug": "hospital-choice",
+    "title": "病院選びの視点：症例数と連携を見る",
+    "publishAt": "2027-10-19",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "safety_or_risk_claim",
+      "individual_decision_context"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "emergency-care": {
+    "slug": "emergency-care",
+    "title": "救急とのかかわり：いざというときの備え",
+    "publishAt": "2027-10-22",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim",
+      "regulatory_or_advertising_claim",
+      "public_health_instruction",
+      "individual_decision_context"
+    ],
+    "referenceCount": 1,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "pharmacy-use": {
+    "slug": "pharmacy-use",
+    "title": "薬局・薬剤師の活用：薬の相談役",
+    "publishAt": "2027-10-25",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "safety_or_risk_claim",
+      "individual_decision_context"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "nursing-care-link": {
+    "slug": "nursing-care-link",
+    "title": "看護・介護との連携：暮らしを支える体制",
+    "publishAt": "2027-10-28",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "individual_decision_context"
+    ],
+    "referenceCount": 1,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "home-care": {
+    "slug": "home-care",
+    "title": "在宅医療の基礎：家で受ける医療",
+    "publishAt": "2027-11-01",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "individual_decision_context"
+    ],
+    "referenceCount": 1,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "work-balance": {
+    "slug": "work-balance",
+    "title": "治療と仕事の両立：両立支援の使い方",
+    "publishAt": "2027-11-04",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "individual_decision_context"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "cost-simulation": {
+    "slug": "cost-simulation",
+    "title": "費用シミュレーションの作り方：総額を見通す",
+    "publishAt": "2027-11-07",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "cost_or_system_claim",
+      "individual_decision_context"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "high-cost-care": {
+    "slug": "high-cost-care",
+    "title": "高額療養費制度：医療費の上限の仕組み",
+    "publishAt": "2027-11-10",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "cost_or_system_claim",
+      "individual_decision_context"
+    ],
+    "referenceCount": 1,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "tax-deduction": {
+    "slug": "tax-deduction",
+    "title": "医療費控除：確定申告での手続き",
+    "publishAt": "2027-11-13",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "cost_or_system_claim",
+      "individual_decision_context"
+    ],
+    "referenceCount": 1,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "insurance-review": {
+    "slug": "insurance-review",
+    "title": "民間保険の見直し方：保障と必要額",
+    "publishAt": "2027-11-16",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "cost_or_system_claim",
+      "individual_decision_context"
+    ],
+    "referenceCount": 1,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "decision-aids": {
+    "slug": "decision-aids",
+    "title": "意思決定支援ツール：比べる表の使い方",
+    "publishAt": "2027-11-19",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "individual_decision_context"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "patient-groups": {
+    "slug": "patient-groups",
+    "title": "患者会・ピアサポート：経験者とつながる",
+    "publishAt": "2027-11-22",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "individual_decision_context"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "counseling-support": {
+    "slug": "counseling-support",
+    "title": "医療相談支援：メディエーションと相談窓口",
+    "publishAt": "2027-11-25",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "safety_or_risk_claim",
+      "individual_decision_context"
+    ],
+    "referenceCount": 1,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "palliative-care": {
+    "slug": "palliative-care",
+    "title": "緩和ケアの考え方：つらさを和らげる",
+    "publishAt": "2027-11-28",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "individual_decision_context"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "rehab-after-treatment": {
+    "slug": "rehab-after-treatment",
+    "title": "術後リハビリ計画：回復の道筋",
+    "publishAt": "2027-12-01",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "individual_decision_context"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "oral-care-during": {
+    "slug": "oral-care-during",
+    "title": "治療中の口腔ケア：口の健康を守る",
+    "publishAt": "2027-12-04",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim",
+      "individual_decision_context"
+    ],
+    "referenceCount": 1,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "distant-travel-care": {
+    "slug": "distant-travel-care",
+    "title": "遠方通院・宿泊：負担を減らす工夫",
+    "publishAt": "2027-12-07",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "individual_decision_context"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "language-support": {
+    "slug": "language-support",
+    "title": "やさしい日本語・多言語：伝わる工夫",
+    "publishAt": "2027-12-10",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "individual_decision_context"
+    ],
+    "referenceCount": 1,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "treatment-diary": {
+    "slug": "treatment-diary",
+    "title": "治療日記のつけ方：変化を見える化する",
+    "publishAt": "2027-12-13",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "individual_decision_context"
+    ],
+    "referenceCount": 1,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "reviewing-treatment": {
+    "slug": "reviewing-treatment",
+    "title": "治療を見直す・やめる判断：立ち止まる勇気",
+    "publishAt": "2027-12-16",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "cost_or_system_claim",
+      "individual_decision_context"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "childcare-balance": {
+    "slug": "childcare-balance",
+    "title": "育児・介護との両立：治療中の暮らし",
+    "publishAt": "2027-12-19",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "individual_decision_context"
+    ],
+    "referenceCount": 1,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "medical-payment-help": {
+    "slug": "medical-payment-help",
+    "title": "医療費の支払い相談：困ったときの窓口",
+    "publishAt": "2027-12-22",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "cost_or_system_claim",
+      "individual_decision_context"
+    ],
+    "referenceCount": 1,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "cell-sizes": {
+    "slug": "cell-sizes",
+    "title": "細胞の大きさ比べ：卵子から血小板まで",
+    "publishAt": "2027-12-25",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [],
+    "referenceCount": 1,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "blood-types": {
+    "slug": "blood-types",
+    "title": "血液型の仕組み：ABO式と輸血の関係",
+    "publishAt": "2027-12-28",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "safety_or_risk_claim"
+    ],
+    "referenceCount": 1,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "body-water": {
+    "slug": "body-water",
+    "title": "体の水分と電解質：脱水を防ぐ考え方",
+    "publishAt": "2028-01-01",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [],
+    "referenceCount": 1,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "lymph-system": {
+    "slug": "lymph-system",
+    "title": "リンパの仕組み：むくみと免疫の通り道",
+    "publishAt": "2028-01-04",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
+    "referenceCount": 1,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "microbiome": {
+    "slug": "microbiome",
+    "title": "腸内細菌と体：共生する微生物の話",
+    "publishAt": "2028-01-07",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
+    "referenceCount": 1,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "fever-basics": {
+    "slug": "fever-basics",
+    "title": "熱が出る仕組み：発熱と解熱の考え方",
+    "publishAt": "2028-01-10",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
+    "referenceCount": 1,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "pain-basics": {
+    "slug": "pain-basics",
+    "title": "痛みの仕組み：信号と感じ方の違い",
+    "publishAt": "2028-01-13",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
+    "referenceCount": 1,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "joints-basics": {
+    "slug": "joints-basics",
+    "title": "関節の仕組み：動く連結部の構造",
+    "publishAt": "2028-01-16",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [],
+    "referenceCount": 1,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "fracture-healing": {
+    "slug": "fracture-healing",
+    "title": "骨折の治り方：骨がつながるまで",
+    "publishAt": "2028-01-19",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
+    "referenceCount": 1,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "anemia-basics": {
+    "slug": "anemia-basics",
+    "title": "貧血とは：酸素不足のサイン",
+    "publishAt": "2028-01-22",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [],
+    "referenceCount": 1,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "blood-pressure-basics": {
+    "slug": "blood-pressure-basics",
+    "title": "血圧の仕組み：数値の読み方",
+    "publishAt": "2028-01-25",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
+    "referenceCount": 1,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "cholesterol-basics": {
+    "slug": "cholesterol-basics",
+    "title": "コレステロールとは：善玉・悪玉の話",
+    "publishAt": "2028-01-28",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "safety_or_risk_claim"
+    ],
+    "referenceCount": 1,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "heatstroke-dehydration": {
+    "slug": "heatstroke-dehydration",
+    "title": "脱水と熱中症：夏の備えと応急対応",
+    "publishAt": "2028-02-01",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "public_health_instruction"
+    ],
+    "referenceCount": 1,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "cell-banks-guide": {
+    "slug": "cell-banks-guide",
+    "title": "細胞バンクの種類：公的と民間の違い",
+    "publishAt": "2028-02-04",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "cost_or_system_claim"
+    ],
+    "referenceCount": 1,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "culture-media": {
+    "slug": "culture-media",
+    "title": "培養液とは：細胞の食事と環境",
+    "publishAt": "2028-02-07",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
+    "referenceCount": 1,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "cell-sorting": {
+    "slug": "cell-sorting",
+    "title": "細胞の選別：マーカーとセルソーター",
+    "publishAt": "2028-02-10",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
+    "referenceCount": 1,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "placenta-cells": {
+    "slug": "placenta-cells",
+    "title": "胎盤・羊膜由来の細胞：出産時の組織の活用",
+    "publishAt": "2028-02-13",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim",
+      "cost_or_system_claim"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "pancreas-progenitor": {
+    "slug": "pancreas-progenitor",
+    "title": "膵臓の再生研究：β細胞を目指して",
+    "publishAt": "2028-02-16",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "kidney-progenitor": {
+    "slug": "kidney-progenitor",
+    "title": "腎臓の再生研究：透析と再生の間",
+    "publishAt": "2028-02-19",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "lung-regeneration": {
+    "slug": "lung-regeneration",
+    "title": "肺の再生研究：呼吸を取り戻す挑戦",
+    "publishAt": "2028-02-22",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "disc-regeneration": {
+    "slug": "disc-regeneration",
+    "title": "椎間板の再生研究：腰痛との関係",
+    "publishAt": "2028-02-25",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "vessel-regeneration": {
+    "slug": "vessel-regeneration",
+    "title": "血管の再生：足りない血流を補う",
+    "publishAt": "2028-02-28",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "bioprinting": {
+    "slug": "bioprinting",
+    "title": "3Dバイオプリンティング：印刷する組織",
+    "publishAt": "2028-03-01",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "safety_or_risk_claim"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "organ-transplant-basics": {
+    "slug": "organ-transplant-basics",
+    "title": "臓器移植の基礎：提供と分配の仕組み",
+    "publishAt": "2028-03-04",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "safety_or_risk_claim",
+      "cost_or_system_claim"
+    ],
+    "referenceCount": 1,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "ips-donation": {
+    "slug": "ips-donation",
+    "title": "iPSの提供ドナーとは：協力の仕組みと流れ",
+    "publishAt": "2028-03-07",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "advance-directives": {
+    "slug": "advance-directives",
+    "title": "事前指示書の書き方：延命治療と意思表示",
+    "publishAt": "2028-03-10",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "individual_decision_context"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "patient-rights": {
+    "slug": "patient-rights",
+    "title": "患者の権利：知っておきたい基本",
+    "publishAt": "2028-03-13",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim",
+      "individual_decision_context"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "generic-drugs": {
+    "slug": "generic-drugs",
+    "title": "ジェネリック医薬品：後発品の選び方",
+    "publishAt": "2028-03-16",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim",
+      "regulatory_or_advertising_claim",
+      "individual_decision_context"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "insurance-card-guide": {
+    "slug": "insurance-card-guide",
+    "title": "保険証とマイナ保険証：受診時の使い方",
+    "publishAt": "2028-03-19",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "cost_or_system_claim",
+      "individual_decision_context"
+    ],
+    "referenceCount": 1,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "nursing-care-certification": {
+    "slug": "nursing-care-certification",
+    "title": "要介護認定の流れ：申請からサービスまで",
+    "publishAt": "2028-03-22",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "individual_decision_context"
+    ],
+    "referenceCount": 1,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "driving-illness": {
+    "slug": "driving-illness",
+    "title": "病気と運転：免許と安全の考え方",
+    "publishAt": "2028-03-25",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim",
+      "individual_decision_context"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "work-injury-insurance": {
+    "slug": "work-injury-insurance",
+    "title": "労災と傷病手当：働けなくなったときの保障",
+    "publishAt": "2028-03-28",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "cost_or_system_claim",
+      "individual_decision_context"
+    ],
+    "referenceCount": 1,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "medical-accident-system": {
+    "slug": "medical-accident-system",
+    "title": "医療事故調査制度：仕組みと相談先",
+    "publishAt": "2028-04-01",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "safety_or_risk_claim",
+      "individual_decision_context"
+    ],
+    "referenceCount": 1,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "drug-allergy-record": {
+    "slug": "drug-allergy-record",
+    "title": "薬のアレルギーと副作用の記録：伝え方",
+    "publishAt": "2028-04-04",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "safety_or_risk_claim",
+      "public_health_instruction",
+      "individual_decision_context"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "vaccination-adult": {
+    "slug": "vaccination-adult",
+    "title": "大人の予防接種：種類と受け方",
+    "publishAt": "2028-04-07",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim",
+      "cost_or_system_claim",
+      "individual_decision_context"
+    ],
+    "referenceCount": 1,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "dental-visit-guide": {
+    "slug": "dental-visit-guide",
+    "title": "歯科受診の進め方：検診と治療の流れ",
+    "publishAt": "2028-04-10",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "cost_or_system_claim",
+      "individual_decision_context"
+    ],
+    "referenceCount": 1,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "assistive-devices": {
+    "slug": "assistive-devices",
+    "title": "補装具の作り方：義肢・装具と費用",
+    "publishAt": "2028-04-13",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "cost_or_system_claim",
+      "individual_decision_context"
+    ],
+    "referenceCount": 1,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "home-safety-elderly": {
+    "slug": "home-safety-elderly",
+    "title": "高齢者の家の安全：転倒予防の工夫",
+    "publishAt": "2028-04-16",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "cost_or_system_claim",
+      "individual_decision_context"
+    ],
+    "referenceCount": 1,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "predatory-journals": {
+    "slug": "predatory-journals",
+    "title": "ハゲタカジャーナルとは：粗悪誌の見分け方",
+    "publishAt": "2028-04-19",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "retractions": {
+    "slug": "retractions",
+    "title": "論文撤回とは：撤回理由の読み方",
+    "publishAt": "2028-04-22",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "open-access": {
+    "slug": "open-access",
+    "title": "オープンアクセスとは：誰でも読める論文",
+    "publishAt": "2028-04-25",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "cost_or_system_claim"
+    ],
+    "referenceCount": 1,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "impact-factor": {
+    "slug": "impact-factor",
+    "title": "インパクトファクターの読み方：数字の意味と限界",
+    "publishAt": "2028-04-28",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "regulatory_or_advertising_claim"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "guideline-reading": {
+    "slug": "guideline-reading",
+    "title": "診療ガイドラインの読み方：推奨の強さを知る",
+    "publishAt": "2028-05-01",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "package-insert": {
+    "slug": "package-insert",
+    "title": "添付文書の読み方：薬の説明書を活用する",
+    "publishAt": "2028-05-04",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
+    "referenceCount": 1,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "rwd-basics": {
+    "slug": "rwd-basics",
+    "title": "リアルワールドデータとは：日常診療の記録の活用",
+    "publishAt": "2028-05-07",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim",
+      "regulatory_or_advertising_claim"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "expanded-access": {
+    "slug": "expanded-access",
+    "title": "拡大治験とコンパッショネートユース：未承認薬への道",
+    "publishAt": "2028-05-10",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim",
+      "cost_or_system_claim",
+      "regulatory_or_advertising_claim"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "first-in-human": {
+    "slug": "first-in-human",
+    "title": "ファーストインヒューマン試験とは：人で初めて試す段階",
+    "publishAt": "2028-05-13",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "decentralized-trials": {
+    "slug": "decentralized-trials",
+    "title": "分散型治験（DCT）とは：来院しない治験",
+    "publishAt": "2028-05-16",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "regulatory_or_advertising_claim"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "basket-trials": {
+    "slug": "basket-trials",
+    "title": "バスケット試験・アンブレラ試験とは：遺伝子で分ける治験",
+    "publishAt": "2028-05-19",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "regulatory_or_advertising_claim"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "digital-therapeutics": {
+    "slug": "digital-therapeutics",
+    "title": "デジタル療法（DTx）とは：アプリで治す時代",
+    "publishAt": "2028-05-22",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim",
+      "cost_or_system_claim",
+      "regulatory_or_advertising_claim"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "thermometer-guide": {
+    "slug": "thermometer-guide",
+    "title": "体温計の使い方：脇・耳・おでこの違い",
+    "publishAt": "2028-05-25",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
+    "referenceCount": 1,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "blood-donation-basics": {
+    "slug": "blood-donation-basics",
+    "title": "献血の流れと条件：初めての方へ",
+    "publishAt": "2028-05-28",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "public_health_instruction"
+    ],
+    "referenceCount": 1,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "microscope-world": {
+    "slug": "microscope-world",
+    "title": "顕微鏡でのぞく世界：細胞観察入門",
+    "publishAt": "2028-06-01",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [],
+    "referenceCount": 1,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "ips-nobel-story": {
+    "slug": "ips-nobel-story",
+    "title": "iPS細胞とノーベル賞：2012年の出来事",
+    "publishAt": "2028-06-04",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "regulatory_or_advertising_claim"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "organoid-ethics": {
+    "slug": "organoid-ethics",
+    "title": "オルガノイドと意識の議論：脳モデルの倫理",
+    "publishAt": "2028-06-07",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "home-culture-myth": {
+    "slug": "home-culture-myth",
+    "title": "自宅で細胞培養はできません：誤解と理由",
+    "publishAt": "2028-06-10",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "safety_or_risk_claim"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "first-aid-basics": {
+    "slug": "first-aid-basics",
+    "title": "応急手当の基礎：止血と119番",
+    "publishAt": "2028-06-13",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "safety_or_risk_claim",
+      "public_health_instruction",
+      "individual_decision_context"
+    ],
+    "referenceCount": 1,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "medicine-storage": {
+    "slug": "medicine-storage",
+    "title": "薬の保管方法：期限と置き場所",
+    "publishAt": "2028-06-16",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "individual_decision_context"
+    ],
+    "referenceCount": 1,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "nobel-prize-guide": {
+    "slug": "nobel-prize-guide",
+    "title": "ノーベル生理学・医学賞の読み方",
+    "publishAt": "2028-06-19",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
+    "referenceCount": 2,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  },
+  "science-events": {
+    "slug": "science-events",
+    "title": "科学イベントの探し方：公開講座と見学会",
+    "publishAt": "2028-06-22",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "sources_listed_manual_verification_required",
+    "clarityStatus": "needs_manual_readthrough",
+    "riskFlags": [],
+    "referenceCount": 1,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "自動監査による仮判定。医学的・法的な確認完了を意味しない。"
+  }
+}

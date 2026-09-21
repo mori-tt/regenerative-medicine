@@ -103,7 +103,7 @@ export default function Home() {
           <Link href="/guide/"><strong>まず基礎を知りたい</strong><span>再生医療の全体像から読む →</span></Link>
           <Link href="/categories/treatment/"><strong>治療を検討している</strong><span>費用・リスク・同意を確認 →</span></Link>
           <Link href="/categories/research/"><strong>研究ニュースを読みたい</strong><span>研究の段階と根拠を読む →</span></Link>
-          <Link href="/articles/questions-before-treatment/"><strong>医師に相談する前に整理したい</strong><span>質問と確認事項を見る →</span></Link>
+          <Link href="/categories/treatment/"><strong>医師に相談する前に整理したい</strong><span>質問と確認事項を見る →</span></Link>
         </div>
       </section>
       <section className="section container">
