@@ -935,10 +935,16 @@ svg {
   padding: 4px 9px;
   font-size: 10px;
 }
+.card-label-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 7px;
+  min-width: 0;
+}
 .listing-grid .card-kicker {
   display: inline-block;
-  margin: 0 0 0 7px;
-  vertical-align: middle;
+  margin: 0;
 }
 .listing-grid .article-meta {
   margin-top: 17px;
