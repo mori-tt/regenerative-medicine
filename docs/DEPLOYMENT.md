@@ -12,6 +12,7 @@
 NEXT_PUBLIC_SITE_URL=https://your-domain.jp
 NEXT_PUBLIC_SITE_INDEXABLE=false
 NEXT_PUBLIC_PUBLICATION_MODE=preview
+NEXT_PUBLIC_ARTICLE_BUILD_MODE=scheduled
 NEXT_PUBLIC_CONTACT_EMAIL=実際の受付用メールアドレス
 NEXT_PUBLIC_OPERATOR_NAME=運営者の正式名称
 NEXT_PUBLIC_OPERATOR_ADDRESS=運営者の所在地
@@ -20,6 +21,23 @@ NEXT_PUBLIC_ASSET_PREFIX=
 ```
 
 準備中は`NEXT_PUBLIC_SITE_INDEXABLE=false` と `NEXT_PUBLIC_PUBLICATION_MODE=preview` を維持します。運営情報・監修・原稿・法務確認を確定し、正式公開するときだけ `NEXT_PUBLIC_SITE_INDEXABLE=true` と `NEXT_PUBLIC_PUBLICATION_MODE=production` に変更します。両方が揃わない限り、robots・canonical周辺の公開設定とサイトマップは公開状態になりません。
+
+記事の生成範囲は `NEXT_PUBLIC_ARTICLE_BUILD_MODE` で分けます。GitHub Pagesは編集・監修確認用として `all` を設定し、公開予定日が未来の記事も全記事を生成します。Lolipopへ配置するビルドは `scheduled` を設定し、`publishAt` が当日以前の記事だけを生成します。検索公開の可否と、生成範囲は別の設定です。
+
+手元では次のコマンドで対象を固定できます。
+
+```bash
+npm run build:github-pages  # 全記事を確認用に生成
+npm run build:lolipop       # 公開日到達分だけ生成
+```
+
+```dotenv
+# GitHub Pages（確認用）
+NEXT_PUBLIC_ARTICLE_BUILD_MODE=all
+
+# Lolipop（公開用）
+NEXT_PUBLIC_ARTICLE_BUILD_MODE=scheduled
+```
 
 配置先ごとの設定は次のとおりです。
 

@@ -5,9 +5,12 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build --webpack && node scripts/fix-html-lang.mjs",
+    "build:github-pages": "node scripts/build-target.mjs github-pages",
+    "build:lolipop": "node scripts/build-target.mjs lolipop",
     "preview": "node scripts/preview.mjs",
     "typecheck": "tsc --noEmit",
     "check:export": "node scripts/check-export.mjs",
+    "check:article-content": "node scripts/check-article-content.mjs",
     "check:article-schedule": "node scripts/check-article-schedule.mjs",
     "format": "prettier --write src scripts docs README.md package.json next.config.ts tsconfig.json"
   },

@@ -71,10 +71,13 @@ reviewer: {
 ```dotenv
 NEXT_PUBLIC_SITE_URL=https://your-domain.jp
 NEXT_PUBLIC_SITE_INDEXABLE=false
+NEXT_PUBLIC_ARTICLE_BUILD_MODE=scheduled
 NEXT_PUBLIC_CONTACT_EMAIL=実際に受信できるメールアドレス
 ```
 
 準備中は全ページ`noindex`でサイトマップは空です。正式公開の準備完了後に`NEXT_PUBLIC_SITE_INDEXABLE=true`に変更し、再ビルド・再配置します。ダミードメインのまま検索公開する設定はエラーにします。検索ページと未監修記事は引き続き`noindex`です。
+
+GitHub Pagesで全記事を確認する場合は`NEXT_PUBLIC_ARTICLE_BUILD_MODE=all`、Lolipopに公開する場合は`NEXT_PUBLIC_ARTICLE_BUILD_MODE=scheduled`を設定します。後者では未来の`publishAt`を持つ記事は生成されません。
 
 `robots.txt`は準備中もクロールを許可します。これはクローラがHTML内の`noindex`を読み取れるようにするためです。`noindex`は閲覧制限ではありません。非公開で確認する場合はサーバー側の認証等を使ってください。
 

@@ -24,7 +24,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "22"
           cache: "npm"
 
       - name: Install dependencies
@@ -39,6 +39,8 @@ jobs:
           NEXT_PUBLIC_SITE_URL: ${{ vars.NEXT_PUBLIC_SITE_URL || 'https://mori-tt.github.io' }}
           NEXT_PUBLIC_SITE_INDEXABLE: "false"
           NEXT_PUBLIC_PUBLICATION_MODE: "preview"
+          # GitHub Pagesは未来記事を含む全記事の確認用ビルド。
+          NEXT_PUBLIC_ARTICLE_BUILD_MODE: "all"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

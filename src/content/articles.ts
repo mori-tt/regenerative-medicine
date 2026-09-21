@@ -2,6 +2,8 @@ import { articleImageFor } from "./article-images";
 import { medicalReviewer, publication } from "@/lib/site-config";
 import reviewRecords from "./article-review-records.json";
 const reviewSchedule = reviewRecords as Record<string, { publishAt?: string }>;
+export type ArticleBuildMode = "scheduled" | "all";
+export const articleBuildMode: ArticleBuildMode = process.env.NEXT_PUBLIC_ARTICLE_BUILD_MODE === "all" ? "all" : "scheduled";
 
 export const categories = [
   {
@@ -8676,7 +8678,7 @@ export function publishBaseDate(now: Date = new Date()): string {
 /** publishAt が未来日の間は非公開（ページ生成・一覧・検索・関連の対象外）。 */
 export function isVisibleArticle(article: Article, baseDate?: string): boolean {
   const today = baseDate ?? publishBaseDate();
-  if (article.publishAt && article.publishAt > today) return false;
+  if (articleBuildMode !== "all" && article.publishAt && article.publishAt > today) return false;
   // Preview builds are useful for editorial review. Production builds expose
   // only articles with a recorded review and publication state.
   if (publication.mode === "production" && !isReviewed(article)) return false;
