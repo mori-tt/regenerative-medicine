@@ -1,12 +1,10 @@
 import Link from "next/link";
-import { articles, visibleArticles } from "@/content/articles";
 import { localizedHome, type SiteLocale } from "@/content/locales";
 import { CellArt, Icon } from "./visuals";
 
 export function LocalizedHome({ locale }: { locale: SiteLocale }) {
   const copy = localizedHome[locale];
-  const featuredArticle = visibleArticles(articles)[0];
-  const featuredHref = featuredArticle ? `/${locale}/articles/${featuredArticle.slug}/` : `/${locale}/articles/`;
+  const featuredHref = `/${locale}/guide/`;
   const categoryLinks = ["basics", "stem-cells", "treatment", "research"];
   return <div lang={locale === "en" ? "en" : "zh-CN"} className="localized-page">
     <>

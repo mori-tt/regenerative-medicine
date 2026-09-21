@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { bannerAds } from "@/content/ads";
-import { type Article, categoryFor, isReviewed } from "@/content/articles";
+import { articleBuildMode, type Article, categoryFor, isReviewed } from "@/content/articles";
 import { absolute, publicAsset } from "@/lib/site";
 import { publication } from "@/lib/site-config";
 import { Icon } from "./visuals";
@@ -66,6 +66,7 @@ export function ArticleCard({
 }) {
   const cat = categoryFor(article.category);
   const isColumn = article.kind === "column";
+  const scheduled = articleBuildMode === "all" && Boolean(article.publishAt && article.publishAt > new Date().toISOString().slice(0, 10));
   const typeLabel = isColumn ? "コラム" : article.category === "treatment" ? "治療前の確認" : article.category === "research" ? "研究の読み方" : article.category === "stem-cells" ? "細胞・基礎" : "基礎知識";
   return (
     <article className={`article-card ${compact ? "compact" : ""}`}>
@@ -76,6 +77,7 @@ export function ArticleCard({
           <span>{isReviewed(article) ? "医師監修済み" : "一般情報・編集部記事"}</span>
           <span>約{article.readingMinutes}分で読める</span>
         </div>
+        {scheduled && <span className="preview-status">公開予定：{article.publishAt?.replaceAll("-", ".")}｜確認用</span>}
         <h3>
           <Link href={`/articles/${article.slug}/`}>{article.title}</Link>
         </h3>

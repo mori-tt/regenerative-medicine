@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { articles, categoryFor, isReviewed, isVisibleArticle, type Article } from "@/content/articles";
+import { articleBuildMode, articles, categoryFor, isReviewed, isVisibleArticle, type Article } from "@/content/articles";
 import { articleLocales } from "@/content/article-locales";
 import { articleBodiesResearch } from "@/content/article-bodies-research";
 import { articleBodiesTreatment } from "@/content/article-bodies-treatment";
@@ -80,7 +80,7 @@ const chrome = {
     reviewerPendingBody: "The medical content of this article is not labelled as reviewed until per-article review records are finalized.",
     reviewerPolicy: "Read the review policy", disclaimer: "This article provides general information. For individual diagnosis or treatment, consult a physician.",
     related: "Related reading", draftNotice: "This article organizes general information; it does not present grounds or recommendations for individual diagnosis or treatment. Base medical decisions on current public information and consultation with medical professionals.",
-    editorialManuscript: "Editorial manuscript", translatedVersion: "Translated version", readGuide: "Read the guide",
+    editorialManuscript: "Editorial manuscript", translatedVersion: "Translated version", readGuide: "Read the guide", previewStatus: "Scheduled · review preview", scheduled: (date: string) => `Scheduled for ${date}`,
   },
   zh: {
     home: "首页", editedBy: "编辑：再生医学指南编辑部", position: "定位：一般信息",
@@ -90,7 +90,7 @@ const chrome = {
     reviewerPendingBody: "本文的医学内容在按文章的审核记录确定前，不会标注为已审核。",
     reviewerPolicy: "阅读审核方针", disclaimer: "本文提供一般信息。个别诊断与治疗请咨询医生。",
     related: "相关阅读", draftNotice: "本文整理一般信息，不作为个别诊断与治疗的依据或推荐。医疗判断请基于最新公共信息与医疗专业人员咨询。",
-    editorialManuscript: "编辑原稿", translatedVersion: "翻译版", readGuide: "阅读指南",
+    editorialManuscript: "编辑原稿", translatedVersion: "翻译版", readGuide: "阅读指南", previewStatus: "预定发布・审核确认用", scheduled: (date: string) => `预定发布：${date}`,
   },
 } as const;
 
@@ -143,6 +143,7 @@ export function LocalizedArticleCard({
   const copy = chrome[locale];
   const article = localizedArticleFor(locale, source);
   const cat = categoryFor(source.category);
+  const scheduled = articleBuildMode === "all" && Boolean(source.publishAt && source.publishAt > new Date().toISOString().slice(0, 10));
   const typeLabel = source.kind === "column"
     ? locale === "en" ? "Column" : "专栏"
     : source.category === "treatment"
@@ -161,6 +162,7 @@ export function LocalizedArticleCard({
           <span>{isReviewed(source) ? copy.editorialManuscript : `${copy.editorialManuscript} · ${copy.translatedVersion}`}</span>
           <span>{copy.readMinutes(source.readingMinutes)}</span>
         </div>
+        {scheduled && <span className="preview-status">{copy.previewStatus} · {copy.scheduled(source.publishAt!.replaceAll("-", "."))}</span>}
         <h3>
           <Link href={`/${locale}/articles/${source.slug}/`}>{article.title}</Link>
         </h3>
@@ -190,6 +192,7 @@ export function LocalizedArticle({ locale, source }: { locale: SiteLocale; sourc
       };
   const cat = source ? categoryFor(source.category) : null;
   const reviewed = source ? isReviewed(source) : false;
+  const scheduled = Boolean(source && articleBuildMode === "all" && source.publishAt && source.publishAt > new Date().toISOString().slice(0, 10));
   const sectionIds = base.sections.map((_, index) => `section-${index + 1}`);
   return (
     <div lang={en ? "en" : "zh-CN"} className="localized-page">
@@ -249,6 +252,11 @@ export function LocalizedArticle({ locale, source }: { locale: SiteLocale; sourc
                     {copy.updated}：{source.updatedAt.replaceAll("-", ".")}
                   </time>
                   <span>{copy.readMinutes(source.readingMinutes)}</span>
+                </div>
+              )}
+              {scheduled && source && (
+                <div className="preview-status article-preview-status">
+                  {copy.previewStatus} · {copy.scheduled(source.publishAt!.replaceAll("-", "."))}
                 </div>
               )}
             </header>

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { articles, categoryFor, isReviewed, isVisibleArticle, visibleArticles } from "@/content/articles";
+import { articleBuildMode, articles, categoryFor, isReviewed, isVisibleArticle, visibleArticles } from "@/content/articles";
 import { ArticleCard, AdSlot, Breadcrumbs, JsonLd } from "@/components/content";
 import { CellArt } from "@/components/visuals";
 import { ArticleVisual } from "@/components/article-visuals";
@@ -38,6 +38,7 @@ export default async function ArticlePage({
   if (!article || !isVisibleArticle(article)) notFound();
   const cat = categoryFor(article.category);
   const reviewed = isReviewed(article);
+  const scheduled = articleBuildMode === "all" && Boolean(article.publishAt && article.publishAt > new Date().toISOString().slice(0, 10));
   return (
     <div className="container inner-page">
       <Breadcrumbs
@@ -92,6 +93,11 @@ export default async function ArticlePage({
               </time>
               <span>約{article.readingMinutes}分で読める</span>
             </div>
+            {scheduled && (
+              <div className="preview-status article-preview-status">
+                編集・監修確認用｜公開予定：{article.publishAt?.replaceAll("-", ".")}
+              </div>
+            )}
           </header>
           <div className="article-cover">
             {article.image ? (

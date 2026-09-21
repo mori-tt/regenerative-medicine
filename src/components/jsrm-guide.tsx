@@ -3,13 +3,12 @@ import { Breadcrumbs, JsonLd } from "./content";
 import { Icon } from "./visuals";
 import { jsrmCertification, jsrmSources, jsrmTimeline } from "@/content/jsrm";
 import { jsrmChapters } from "@/content/jsrm-chapters";
-import { publication } from "@/lib/site-config";
 
 export function JsrmGuide() {
   return (
     <div className="container inner-page jsrm-page">
       <Breadcrumbs items={[{ label: "日本再生医療学会" }]} />
-      {publication.showPreparationNotices && <div className="draft-notice">この特集は公式資料をもとにした編集部の情報整理です。個別の診断・治療・契約判断を示すものではありません。</div>}
+      <div className="draft-notice">この特集は日本再生医療学会の公式サイトではありません。公開されている公式資料をもとに、当サイト編集部が整理した解説です。個別の診断・治療・契約判断を示すものではありません。</div>
       <JsonLd
         data={{
           "@context": "https://schema.org",
@@ -26,8 +25,8 @@ export function JsrmGuide() {
           <span className="eyebrow">JAPANESE SOCIETY FOR REGENERATIVE MEDICINE</span>
           <h1>日本再生医療学会を知る。</h1>
           <p>
-            再生医療に関する研究、臨床、細胞加工、倫理、法制度をつなぐ学術団体です。
-            学会の役割と認定制度を、患者さんにも分かる言葉で整理します。
+            再生医療に関する研究、臨床、細胞加工、倫理、法制度を扱う学術団体です。
+            公開されている公式資料をもとに、学会の役割と認定制度を整理します。
           </p>
           <div className="jsrm-hero-actions">
             <a className="button primary" href="https://www.jsrm.jp/" target="_blank" rel="noopener noreferrer">

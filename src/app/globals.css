@@ -645,6 +645,21 @@ svg {
   margin-top: 9px;
   letter-spacing: 0.02em;
 }
+.preview-status {
+  display: inline-block;
+  margin-top: 9px;
+  padding: 3px 8px;
+  border: 1px solid #d8c58d;
+  border-radius: 999px;
+  color: #786326;
+  background: #fffaf0;
+  font-size: 10px;
+  line-height: 1.5;
+}
+.article-preview-status {
+  margin-top: 14px;
+  font-size: 11px;
+}
 .article-card p {
   color: var(--muted);
   font-size: 12px;

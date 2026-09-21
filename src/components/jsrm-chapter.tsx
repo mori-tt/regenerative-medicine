@@ -2,13 +2,12 @@ import Link from "next/link";
 import { Breadcrumbs, JsonLd } from "./content";
 import { Icon } from "./visuals";
 import type { JsrmChapter } from "@/content/jsrm-chapters";
-import { publication } from "@/lib/site-config";
 
 export function JsrmChapterPage({ chapter, previous, next }: { chapter: JsrmChapter; previous?: JsrmChapter; next?: JsrmChapter }) {
   return (
     <div className="container inner-page jsrm-chapter-page">
       <Breadcrumbs items={[{ label: "日本再生医療学会", href: "/jsrm/" }, { label: chapter.title }]} />
-      {publication.showPreparationNotices && <div className="draft-notice">この章は公式資料をもとにした編集部の情報整理です。個別の診断・治療・契約判断を示すものではありません。</div>}
+      <div className="draft-notice">この章は日本再生医療学会の公式サイトではありません。公開されている公式資料をもとに、当サイト編集部が整理した解説です。個別の診断・治療・契約判断を示すものではありません。</div>
       <JsonLd data={{ "@context": "https://schema.org", "@type": "Article", headline: chapter.title, description: chapter.description, author: { "@type": "Organization", name: "再生医療ガイド" }, about: { "@type": "Organization", name: "一般社団法人 日本再生医療学会" } }} />
       <header className="jsrm-chapter-header">
         <span className="eyebrow">{chapter.number} · {chapter.eyebrow}</span>

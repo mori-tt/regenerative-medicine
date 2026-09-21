@@ -62,16 +62,22 @@ export default async function InfoPage({
           </section>
         )}
         {page === "advertising" && (
-          <p>
-            参考：
-            <a
-              href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/iryou/kokokukisei/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              厚生労働省「医療法における病院等の広告規制について」 ↗
-            </a>
-          </p>
+          <>
+            <div className="policy-callout advertising-separation">
+              <h2>編集と広告の分離</h2>
+              <p>広告の有無は、記事内容、掲載順位、医学的確認、編集上の評価に影響しません。広告主の情報は、特定の治療や医療機関を推奨するものではありません。</p>
+            </div>
+            <p>
+              参考：
+              <a
+                href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/iryou/kokokukisei/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                厚生労働省「医療法における病院等の広告規制について」 ↗
+              </a>
+            </p>
+          </>
         )}
         {page === "contact" ? (
           <div className="policy-callout">

@@ -73,16 +73,22 @@ export function LocalizedInfo({ locale, slug }: { locale: SiteLocale; slug: Info
             </section>
           )}
           {slug === "advertising" && (
-            <p>
-              {en ? "Reference: " : "参考："}
-              <a
-                href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/iryou/kokokukisei/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {en ? "MHLW: Advertising rules for hospitals under the Medical Care Act" : "厚生劳动省《医疗法中医院等广告规制》"} ↗
-              </a>
-            </p>
+            <>
+              <div className="policy-callout advertising-separation">
+                <h2>{en ? "Editorial independence" : "编辑与广告的区分"}</h2>
+                <p>{en ? "Advertising availability does not affect article content, rankings, medical review, or editorial evaluation. Advertiser information is not a recommendation of a treatment or medical institution." : "广告的有无不会影响文章内容、排序、医学审核或编辑评价。广告主的信息不等于对某项治疗或医疗机构的推荐。"}</p>
+              </div>
+              <p>
+                {en ? "Reference: " : "参考："}
+                <a
+                  href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/iryou/kokokukisei/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {en ? "MHLW: Advertising rules for hospitals under the Medical Care Act" : "厚生劳动省《医疗法中医院等广告规制》"} ↗
+                </a>
+              </p>
+            </>
           )}
           {slug === "contact" ? (
             <div className="policy-callout">

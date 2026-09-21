@@ -11,8 +11,7 @@ export const metadata = pageMetadata(
   "/",
 );
 export default function Home() {
-  const featuredArticle = visibleArticles(articles)[0];
-  const featuredHref = featuredArticle ? `/articles/${featuredArticle.slug}/` : "/articles/";
+  const featuredHref = "/guide/";
   return (
     <>
       <JsonLd
@@ -173,11 +172,11 @@ export default function Home() {
       </section>
       <section className="society-promo-section">
         <div className="container society-promo">
-          <div className="society-promo-mark" aria-hidden="true"><span>J S R M</span><small>OFFICIAL SOURCE GUIDE</small></div>
+          <div className="society-promo-mark" aria-hidden="true"><span>J S R M</span><small>BASED ON OFFICIAL SOURCES</small></div>
           <div>
             <span className="eyebrow">SPECIAL FEATURE</span>
             <h2>日本再生医療学会を知る。</h2>
-            <p>再生医療を支える学会の役割、認定制度、制度情報を公式資料から整理しました。学会の情報と、個別の治療の判断を混同しないように解説します。</p>
+            <p>日本再生医療学会の公開資料をもとに、学会の役割や制度情報を当サイト編集部が整理しています。学会公式サイトや、個別の治療の推奨とは別の編集記事です。</p>
             <Link className="text-link" href="/jsrm/">学会特集を読む <span><Icon name="arrow" size={21} /></span></Link>
           </div>
         </div>
