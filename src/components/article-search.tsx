@@ -1,10 +1,11 @@
 "use client";
 import { useState } from "react";
-import { articles, categories, visibleArticles } from "@/content/articles";
+import type { Article } from "@/content/articles";
+import { categories } from "@/content/categories";
 import { ArticleCard } from "./content";
 import { Icon } from "./visuals";
 
-export function ArticleSearch() {
+export function ArticleSearch({ items }: { items: (Article & { searchText: string })[] }) {
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState("all");
   const terms = query
@@ -13,17 +14,11 @@ export function ArticleSearch() {
     .trim()
     .split(/\s+/)
     .filter(Boolean);
-  const results = visibleArticles(articles).filter(
+  const results = items.filter(
     (a) =>
       (category === "all" || a.category === category) &&
       terms.every((t) =>
-        [
-          a.title,
-          a.description,
-          ...a.points,
-          ...a.sections.flatMap((s) => [s.title, ...s.paragraphs]),
-        ]
-          .join(" ")
+        a.searchText
           .normalize("NFKC")
           .toLocaleLowerCase("ja")
           .includes(t),

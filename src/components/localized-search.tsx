@@ -1,10 +1,8 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import { articles, categories, visibleArticles } from "@/content/articles";
-import { articleLocales } from "@/content/article-locales";
+import { categories } from "@/content/categories";
 import { Breadcrumbs } from "./content";
-import { localizedArticleFor } from "./localized-article";
 import type { SiteLocale } from "@/content/locales";
 
 const categoryNames: Record<SiteLocale, Record<string, string>> = {
@@ -24,7 +22,7 @@ const categoryNames: Record<SiteLocale, Record<string, string>> = {
   },
 };
 
-export function LocalizedSearch({ locale }: { locale: SiteLocale }) {
+export function LocalizedSearch({ locale, items }: { locale: SiteLocale; items: { slug: string; category: string; title: string; description: string; searchText: string }[] }) {
   const en = locale === "en";
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState("all");
@@ -34,17 +32,10 @@ export function LocalizedSearch({ locale }: { locale: SiteLocale }) {
     .trim()
     .split(/\s+/)
     .filter(Boolean);
-  const results = visibleArticles(articles).filter((source) => {
+  const results = items.filter((source) => {
     if (category !== "all" && source.category !== category) return false;
     if (terms.length === 0) return true;
-    const translated = articleLocales[source.slug]?.[locale];
-    const haystack = [
-      translated?.title ?? "",
-      translated?.description ?? "",
-      source.slug.replaceAll("-", " "),
-      localizedArticleFor(locale, source).title,
-    ]
-      .join(" ")
+    const haystack = source.searchText
       .normalize("NFKC")
       .toLocaleLowerCase("en");
     return terms.every((term) => haystack.includes(term));
@@ -96,7 +87,7 @@ export function LocalizedSearch({ locale }: { locale: SiteLocale }) {
       {results.length ? (
         <div className="listing-grid">
           {results.map((source) => {
-            const article = localizedArticleFor(locale, source);
+            const article = source;
             return (
               <article className="article-card" key={source.slug}>
                 <div className="article-card-body">

@@ -47,22 +47,9 @@ out/                     ビルドで生成する配信用ファイル
 
 初期値は全記事 `status: "draft"` です。本文は医師監修前の編集部原稿で、架空の監修医師は登録していません。記事には、基礎説明に加えて研究段階・リスク・医療者へ確認する事項を含めています。
 
-正式公開では、医学的内容・根拠・掲載許諾を確認したうえで、次を設定します。
+正式公開は `src/content/article-review-records.json` の医学・法務・監修記録と実公開日、および監修者設定に基づいて判定します。本文内の旧 `review` メモだけでは公開されません。手順は [PUBLISHING.md](docs/PUBLISHING.md) を参照してください。
 
-```ts
-status: "published",
-publishedAt: "実際の初回公開日（YYYY-MM-DD）",
-updatedAt: "実際の更新日（YYYY-MM-DD）",
-reviewer: {
-  name: "実際の監修医師の氏名",
-  credentials: "確認済みの資格・専門分野",
-  affiliation: "確認済みの所属",
-  profileUrl: "本人または正式な紹介ページのURL",
-  reviewedAt: "実際の監修日（YYYY-MM-DD）",
-},
-```
-
-これらが揃った記事のみ監修済み表示・Article構造化データ・サイトマップ掲載の対象になります。機械的な入力判定は監修の実態を保証しません。記事は一覧・検索から閲覧可能なままなので、秘密の原稿は登録せず、正式公開時にはサンプルを置き換えるか削除してください。
+記事別の文献追加・原稿訂正は `src/content/evidence/*.json`、出典と限界を含む改稿一覧は [ARTICLE-LITERATURE-AUDIT.md](docs/ARTICLE-LITERATURE-AUDIT.md) にあります。GitHub Pagesの確認用ビルドは未監修原稿も全件表示するため、秘密の原稿は置かないでください。
 
 ## SEO設定
 

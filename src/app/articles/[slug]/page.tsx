@@ -8,6 +8,7 @@ import { ArticleVisual } from "@/components/article-visuals";
 import { publicAsset } from "@/lib/site";
 import { publication } from "@/lib/site-config";
 import { absolute, pageMetadata, site } from "@/lib/site";
+import { CitationLinks, ArticleReferences } from "@/components/article-references";
 export const dynamicParams = false;
 export function generateStaticParams() {
   const params = visibleArticles(articles).map((a) => ({ slug: a.slug }));
@@ -132,27 +133,13 @@ export default async function ArticlePage({
             {article.sections.map((section) => (
               <section id={section.id} key={section.id}>
                 <h2>{section.title}</h2>
-                {section.paragraphs.map((p) => (
-                  <p key={p}>{p}</p>
+                {section.paragraphs.map((p, paragraphIndex) => (
+                  <p key={paragraphIndex}>{p}<CitationLinks ids={section.paragraphReferences?.[paragraphIndex]} references={article.references} locale="ja" /></p>
                 ))}
               </section>
             ))}
           </div>
-          <section className="references">
-            <h2>参考情報・出典</h2>
-            <ol>
-              {article.references.map((r) => (
-                <li key={r.url}>
-                  <a href={r.url} target="_blank" rel="noopener noreferrer">
-                    {r.title} ↗
-                  </a>
-                </li>
-              ))}
-            </ol>
-            <p>
-              資料の内容は更新されることがあります。詳細は発表元の情報をご確認ください。
-            </p>
-          </section>
+          <ArticleReferences references={article.references} locale="ja" />
           {reviewed && article.reviewer ? (
             <section className="reviewer-box">
               <h2>この記事の監修医師</h2>

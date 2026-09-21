@@ -20,58 +20,70 @@
 - `publishAt: "YYYY-MM-DD"` を持つ記事は、その日付が来るまで **JSONに保存されていても存在しない扱い** になる
 - 除外範囲：記事ページ生成（日英中）、記事一覧、カテゴリ、検索、関連記事、ホーム抜粋、サイトマップ
 - 判定日は日本時間の当日。ビルド時に確定する（静的書き出しのため、公開は次回ビルド以降に反映）
-- 未来の公開状態を確認するときだけ `NEXT_PUBLIC_PREVIEW_DATE=YYYY-MM-DD` を付けてビルドする。通常ビルドでは付けない
+- 未来の公開状態を確認するときだけpreviewモードで `NEXT_PUBLIC_PREVIEW_DATE=YYYY-MM-DD` を付けてビルドする。本番モードはこの値を無視し、日本時間の実日付で判定する
 
 ```bash
 # 例：10/30時点の見え方を確認（out/ は確認後に通常ビルドで戻す）
-NEXT_PUBLIC_PREVIEW_DATE=2026-10-30 npm run build && npm run preview
+NEXT_PUBLIC_PUBLICATION_MODE=preview NEXT_PUBLIC_PREVIEW_DATE=2026-10-30 npm run build && npm run preview
 ```
 
 ## 予約スケジュール
 
-| 公開日 | slug | タイトル | カテゴリ |
-| --- | --- | --- | --- |
-| 2026-09-26 | thermometer-guide | 体温計の使い方：脇・耳・おでこの違い | basics |
-| 2026-10-03 | blood-donation-basics | 献血の流れと条件：初めての方へ | basics |
-| 2026-10-10 | microscope-world | 顕微鏡でのぞく世界：細胞観察入門 | basics |
-| 2026-10-17 | ips-nobel-story | iPS細胞とノーベル賞：2012年の出来事 | stem-cells |
-| 2026-10-24 | organoid-ethics | オルガノイドと意識の議論：脳モデルの倫理 | stem-cells |
-| 2026-10-31 | home-culture-myth | 自宅で細胞培養はできません：誤解と理由 | stem-cells |
-| 2026-11-07 | first-aid-basics | 応急手当の基礎：止血と119番 | treatment |
-| 2026-11-14 | medicine-storage | 薬の保管方法：期限と置き場所 | treatment |
-| 2026-11-21 | nobel-prize-guide | ノーベル生理学・医学賞の読み方 | research |
-| 2026-11-28 | science-events | 科学イベントの探し方：公開講座と見学会 | research |
+公開予定日・実公開日・最終編集日は `src/content/article-review-records.json` を正本にします。本文の古い日付や例示用の表から再設定しません。月10件以内を `npm run check:article-schedule` で検査します。
 
-## 監修フロー（千原先生）
+## 監修・公開フロー（記事別JSON）
 
-- 記事に監修が付くのは、`rawArticles` の該当記事に `review` を書いたときだけ
-- 監修なしの記事ページには医師の氏名・写真・プロフィールを一切表示しない（方針）
+記事ごとの `article-review-records.json` に、実際の確認後だけ次を記録します。下記は書式の説明であり、確認前に一括コピーしないでください。
 
-```ts
+```json
 {
-  slug: "example",
-  // ...
-  review: {
-    reviewedAt: "2026-10-01", // 確認日
-    scope: "医学的表現と出典の整合を確認", // 確認範囲の記録
-  },
+  "medicalStatus": "reviewed",
+  "legalStatus": "reviewed",
+  "publishedAt": "実際の初回公開日 YYYY-MM-DD",
+  "reviewer": {
+    "status": "reviewed",
+    "name": "site-config.jsonの監修者名と一致する実名",
+    "reviewedAt": "実際の確認日 YYYY-MM-DD",
+    "scope": "確認した本文・文献・翻訳等の範囲",
+    "conflictOfInterest": "申告内容"
+  }
 }
 ```
 
-- `review` を書くと自動で以下が切り替わる：記事ページの監修医師ボックス（氏名・資格・所属・監修日・確認範囲）＋監修済みラベル、`Article` 構造化データ、サイトマップ掲載、検索公開（本番のみ）
-- 監修者情報（氏名・資格・所属・URL）は `src/content/site-config.json` の `medicalReviewer` が正本。記事側に医師情報を直書きしない
-- 英中ページの確認範囲は日文のまま表示される。必要なら該当記事の `scope` に対応する訳を `article-bodies-*.ts` 側で持つ（現状は未訳運用）
-- 利益相反・掲載許諾・修正履歴は `docs/LEGAL-REVIEW.md` の監査メモに記録する
+`site-config.json` の `medicalReviewer.enabled`（または対応する環境変数）も、本人の許諾と実確認を得たあとに有効化します。plannedのみ、空欄の記録、未来の監修日、最終編集日より古い監修日では公開判定を通過しません。原稿内の旧 `review` メモは公開許可として使いません。
+
+本番では、上記の確認・実公開日・公開予定日の条件を満たした記事だけを生成します。GitHub Pages確認用は全原稿をnoindexで表示します。文献の編集確認は専門家の監修とは別に記録し、原稿変更後の台帳再生成では再確認待ちに戻します。記録上の合格だけで、実際に監修・法的確認が行われたことを保証するものではありません。
 
 ## 新規追加の手順
 
 1. `rawArticles` に日文を追加（`kind: "column"` と `publishAt` はコラム・予約の場合のみ）
 2. `article-locales.ts` に英中タイトル・概要を追加
 3. `article-bodies-*.ts` に英中本文を追加し、`localized-article.tsx` の `bodyBySlug` に統合済みか確認
-4. `npm run build` と `npm run check:export` を実行し、ページ数（3言語×件数）とリンク到達を確認
+4. 主題に対応するevidence JSONを追加し、公開予定日・画像・監修状態を台帳へ登録。記事総数が変わる場合は生成・スケジュール検査の件数ガードも更新
+5. 下記の文献検査・台帳更新・ビルド検査を順番に実行し、3言語の表示とリンク到達を確認
 
 ## 更新日の方針
 
-- 基本ガイドの `updatedAt` は 2026-08-01〜2026-09-19 に分散（執筆順に単調増加、約4本/日）
-- コラムの `updatedAt` は公開日と同一
-- 内容を修正した記事は、その修正日へ更新する
+- 最終編集日は、実際に原稿を改訂した日を記事台帳に記録します。
+- 公開予定日・実公開日・監修日は別々の情報です。文献を追加した日を初回公開日や監修日へ流用しません。
+
+## 記事別の文献改稿（2026-09-22以降）
+
+追加本文・引用先・元原稿の訂正は `src/content/evidence/` の4ファイルで管理します。`basics.json`、`stem-cells.json`、`treatment.json`、`research.json` の記事slugがキーです。各記事の `locales.ja/en/zh.sections` が追加本文、段落の `sourceIds` が対応する出典です。サイトでは出典番号から参考文献欄へ移動できます。
+
+`sources` は論文・公的資料の正式タイトル、URL、研究の種類、実際の閲覧範囲、確認日を記録します。`abstract` は抄録確認、`full-text` は本文確認、`official-guidance` は公的・学会等の資料確認です。番号やリンクを足すだけで主張を検証したことにはしません。学術論文が適さない税制・保険・行政手続の記事では日本の公的資料を優先します。
+
+`corrections` は元の文章・訂正文・理由・出典を保持し、表示時に適用します。元原稿を後で直接書き換えた場合は訂正記録との対応も更新してください。`auditNote` は記事固有の注意点や確認範囲です。公開予定日・写真は引き続き `article-review-records.json` で管理します。
+
+```bash
+npm run check:pubmed             # PubMedの書誌情報をNCBIへ照会（ネットワーク必須）
+node scripts/generate-article-review-records.mjs
+npm run check:article-content    # 記事・3言語・出典IDの構造チェック
+npm run report:article-evidence  # 記事別の改稿一覧をMDへ出力
+npm run build:github-pages
+npm run check:export             # ビルド完了後に、本文・出典・訂正文の表示も検査
+```
+
+日本語原稿・英中訳・文献を変更した記事は実際の編集日を更新し、医師監修・法務確認状態を再確認待ちに戻します。予定日を編集日に置き換えたり、編集日を実公開日・監修日に転記したりしません。既存の公開予定日と画像キーは台帳再生成で維持します。
+
+構造チェックの合格は医学的・法的な承認ではありません。記事別の変更量と残項目は [ARTICLE-LITERATURE-AUDIT.md](./ARTICLE-LITERATURE-AUDIT.md)、権利処理と手作業は [LITERATURE-EDITORIAL-POLICY.md](./LITERATURE-EDITORIAL-POLICY.md) を参照してください。

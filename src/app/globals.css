@@ -2337,3 +2337,12 @@ section > .eyebrow + .listing-heading {
   }
   .logo { font-size: 17px; max-width: 175px; }
 }
+
+/* Claim-level literature links remain legible on small screens and by keyboard. */
+.citation-links { margin-inline-start: .35em; white-space: nowrap; font-size: .78em; }
+.citation-links a { display: inline-block; padding: 2px 3px; text-decoration: none; }
+.citation-links a:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }
+.references li { margin-block: 14px; scroll-margin-top: 100px; overflow-wrap: anywhere; }
+.references li:target { background: #eff4e9; outline: 2px solid #9caf91; outline-offset: 6px; }
+.reference-detail { display: block; margin-top: 4px; color: var(--muted); line-height: 1.7; }
+.reference-policy { font-size: 13px; line-height: 1.9; }

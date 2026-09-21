@@ -31,7 +31,9 @@ jobs:
         run: npm ci
 
       - name: Build
-        run: npm run build:github-pages
+        run: |
+          npm run build:github-pages
+          npm run check:export
         env:
           GITHUB_PAGES: "true"
           # GitHub Pagesではcanonical・OGP・faviconの基準ドメインを明示する。

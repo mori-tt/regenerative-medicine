@@ -1,7 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
 import { bannerAds } from "@/content/ads";
-import { articleBuildMode, type Article, categoryFor, isReviewed } from "@/content/articles";
+import type { Article } from "@/content/articles";
+import { categoryFor } from "@/content/categories";
+import { articleBuildMode, isReviewed } from "@/lib/article-state";
 import { absolute, publicAsset } from "@/lib/site";
 import { publication } from "@/lib/site-config";
 import { Icon } from "./visuals";

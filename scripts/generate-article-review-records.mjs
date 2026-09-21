@@ -1,15 +1,28 @@
 import fs from "node:fs";
+import {
+  readRawArticles,
+  readEvidence,
+  readTranslations,
+  manuscriptHash,
+} from "./lib/article-data.mjs";
 
-const source = fs.readFileSync("src/content/articles.ts", "utf8");
-const media = JSON.parse(fs.readFileSync("src/content/article-media.json", "utf8"));
+const articles = readRawArticles();
+const translations = readTranslations();
+const evidence = readEvidence();
+const media = JSON.parse(
+  fs.readFileSync("src/content/article-media.json", "utf8"),
+);
 const existingRecords = fs.existsSync("src/content/article-review-records.json")
-  ? JSON.parse(fs.readFileSync("src/content/article-review-records.json", "utf8"))
+  ? JSON.parse(
+      fs.readFileSync("src/content/article-review-records.json", "utf8"),
+    )
   : {};
-const start = source.indexOf("const rawArticles:");
-const end = source.indexOf("type ArticleDepth:");
-const body = source.slice(start, end);
-const blockPattern = /\n  \{\n    slug: "([^"]+)",\n    title: "((?:[^"\\]|\\.)*)",([\s\S]*?)(?=\n  \},\n  \{|\n\];)/g;
-const today = new Date("2026-09-21T00:00:00Z");
+const today = new Date("2026-09-21T00:00:00Z"); // Original scheduling epoch; do not shift existing plans.
+const editDate =
+  process.env.ARTICLE_EDIT_DATE ||
+  new Date(Date.now() + 9 * 3600 * 1000).toISOString().slice(0, 10);
+if (!/^\d{4}-\d{2}-\d{2}$/.test(editDate))
+  throw new Error("Invalid ARTICLE_EDIT_DATE");
 const initialCandidates = new Set([
   "what-is-regenerative-medicine",
   "cells-tissues-organs",
@@ -45,57 +58,88 @@ function scheduledDate(index) {
 }
 function flags(block, category) {
   const values = [];
-  if (/効果|有効|改善|治る|治療/.test(block)) values.push("effect_or_treatment_claim");
-  if (/安全|副作用|合併症|感染|免疫|アレルギー|リスク/.test(block)) values.push("safety_or_risk_claim");
-  if (/費用|保険|自由診療|契約|返金|税|高額/.test(block)) values.push("cost_or_system_claim");
-  if (/承認|広告|薬機|医療法|治験|臨床研究|提供計画/.test(block)) values.push("regulatory_or_advertising_claim");
-  if (/119|救急|止血|薬の保管|献血/.test(block)) values.push("public_health_instruction");
+  if (/効果|有効|改善|治る|治療/.test(block))
+    values.push("effect_or_treatment_claim");
+  if (/安全|副作用|合併症|感染|免疫|アレルギー|リスク/.test(block))
+    values.push("safety_or_risk_claim");
+  if (/費用|保険|自由診療|契約|返金|税|高額/.test(block))
+    values.push("cost_or_system_claim");
+  if (/承認|広告|薬機|医療法|治験|臨床研究|提供計画/.test(block))
+    values.push("regulatory_or_advertising_claim");
+  if (/119|救急|止血|薬の保管|献血/.test(block))
+    values.push("public_health_instruction");
   if (category === "treatment") values.push("individual_decision_context");
   return [...new Set(values)];
 }
-function categoryFrom(block) {
-  return block.match(/\n    category: "([^"]+)"/)?.[1] ?? "unknown";
-}
-function referenceCount(block) {
-  const match = block.match(/\n    references: \[([^\]]*)\]/s);
-  return match ? (match[1].match(/\b[a-zA-Z][a-zA-Z0-9]*\b/g) ?? []).length : 0;
-}
-function updatedAtFrom(block) {
-  return block.match(/\n    updatedAt: "(\d{4}-\d{2}-\d{2})"/)?.[1] ?? "";
-}
-
-const sourceMatches = [...body.matchAll(blockPattern)];
-const rawIndexBySlug = new Map(sourceMatches.map((match, index) => [match[1], index]));
-const matches = [...sourceMatches].sort((a, b) => {
-  const aInitial = initialCandidates.has(a[1]) ? 0 : 1;
-  const bInitial = initialCandidates.has(b[1]) ? 0 : 1;
-  return aInitial - bInitial;
-});
+const rawIndexBySlug = new Map(
+  articles.map((article, index) => [article.slug, index]),
+);
+const sortedArticles = [...articles].sort(
+  (a, b) =>
+    Number(!initialCandidates.has(a.slug)) -
+    Number(!initialCandidates.has(b.slug)),
+);
 const records = {};
-for (const [index, match] of matches.entries()) {
-  const slug = match[1];
-  const title = match[2];
-  const block = match[3];
-  const category = categoryFrom(block);
+for (const [index, article] of sortedArticles.entries()) {
+  const { slug, title, category } = article;
+  const block = JSON.stringify(article);
   const previous = existingRecords[slug] ?? {};
   const previousReviewer = previous.reviewer ?? {};
-  const defaultImages = media.categoryDefaults[category] ?? media.categoryDefaults.basics;
-  const defaultImageKey = defaultImages[rawIndexBySlug.get(slug) % defaultImages.length];
+  const defaultImages =
+    media.categoryDefaults[category] ?? media.categoryDefaults.basics;
+  const defaultImageKey =
+    defaultImages[rawIndexBySlug.get(slug) % defaultImages.length];
+  const topicEvidence = evidence[slug];
+  const contentHash = manuscriptHash(
+    article,
+    topicEvidence,
+    translations[slug],
+  );
+  const previousHash = previous.editorialEvidence?.contentHash;
+  const changed = previousHash !== contentHash;
   records[slug] = {
+    ...previous,
     slug,
-    title,
-    lastEditedAt: updatedAtFrom(block),
+    title: topicEvidence.corrections
+      .filter((item) => item.locale === "ja")
+      .reduce((value, item) => value.replaceAll(item.old, item.new), title),
+    lastEditedAt: changed
+      ? editDate
+      : (previous.lastEditedAt ?? article.updatedAt),
     imageKey: previous.imageKey ?? defaultImageKey,
-    publishAt: scheduledDate(index),
+    publishAt: previous.publishAt ?? scheduledDate(index),
     publishedAt: previous.publishedAt ?? "",
-    releaseTrack: initialCandidates.has(slug) ? "initial-candidate" : "scheduled",
-    medicalStatus: "needs_medical_review",
-    legalStatus: "needs_legal_editorial_review",
-    evidenceStatus: referenceCount(block) > 0 ? "sources_listed_manual_verification_required" : "missing_sources",
-    clarityStatus: "needs_manual_readthrough",
+    releaseTrack: initialCandidates.has(slug)
+      ? "initial-candidate"
+      : "scheduled",
+    medicalStatus: changed
+      ? "needs_medical_review"
+      : (previous.medicalStatus ?? "needs_medical_review"),
+    legalStatus: changed
+      ? "needs_legal_editorial_review"
+      : (previous.legalStatus ?? "needs_legal_editorial_review"),
+    evidenceStatus: "topic_sources_mapped_professional_review_pending",
+    clarityStatus: "editorial_expansion_added_professional_readthrough_pending",
     riskFlags: flags(block, category),
-    referenceCount: referenceCount(block),
+    referenceCount: new Set(
+      [...article.references, ...topicEvidence.sources].map(
+        (source) => source.url,
+      ),
+    ).size,
+    editorialEvidence: {
+      revision: "literature-v2",
+      contentHash,
+      checkedAt:
+        topicEvidence.sources
+          .map((source) => source.checkedAt)
+          .sort()
+          .at(-1) ?? editDate,
+      status: "editorial_source_review",
+      sourceCount: topicEvidence.sources.length,
+      note: topicEvidence.auditNote,
+    },
     reviewer: {
+      ...previousReviewer,
       status: previousReviewer.status ?? "planned",
       name: previousReviewer.name ?? "千原 良友",
       reviewedAt: previousReviewer.reviewedAt ?? "",
@@ -103,12 +147,16 @@ for (const [index, match] of matches.entries()) {
       conflictOfInterest: previousReviewer.conflictOfInterest ?? "",
     },
     publishGate: "review_record_required",
-    notes: "自動監査による仮判定。医学的・法的な確認完了を意味しない。",
+    notes:
+      "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
   };
 }
 
 if (Object.keys(records).length !== 208) {
   throw new Error(`記事数が想定と異なります: ${Object.keys(records).length}`);
 }
-fs.writeFileSync("src/content/article-review-records.json", `${JSON.stringify(records, null, 2)}\n`);
+fs.writeFileSync(
+  "src/content/article-review-records.json",
+  `${JSON.stringify(records, null, 2)}\n`,
+);
 console.log(`生成しました: ${Object.keys(records).length}記事`);

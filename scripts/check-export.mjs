@@ -1,6 +1,9 @@
 import { readdir, readFile, access } from "node:fs/promises";
 import { resolve, join, relative } from "node:path";
 import assert from "node:assert/strict";
+import { readEvidence } from "./lib/article-data.mjs";
+const evidence = readEvidence();
+const evidencePages = { ja: 0, en: 0, zh: 0 };
 
 const root = resolve("out");
 async function targetForUrl(url) {
@@ -95,6 +98,23 @@ for (const path of pages) {
     assert.ok(target, `${label}: missing internal target ${url}`);
     linkCount++;
   }
+  const articleMatch = label.match(/^(?:(en|zh)\/)?articles\/([^/]+)\/index\.html$/);
+  if (articleMatch && evidence[articleMatch[2]]) {
+    const locale = articleMatch[1] ?? "ja";
+    const entry = evidence[articleMatch[2]];
+    const document = html.replace(/<script\b[^>]*>[\s\S]*?<\/script>/g, "");
+    const escapeHtml = (text) => text.replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&#x27;");
+    for (const section of entry.locales[locale].sections) {
+      assert.ok(document.includes(escapeHtml(section.title)), `${label}: literature heading not rendered`);
+      for (const paragraph of section.paragraphs) assert.ok(document.includes(escapeHtml(paragraph.text)), `${label}: literature paragraph not rendered`);
+    }
+    for (const correction of entry.corrections.filter((item) => item.locale === locale)) {
+      assert.ok(document.includes(escapeHtml(correction.new)), `${label}: recorded correction was not rendered: ${correction.old.slice(0, 60)}`);
+    }
+    assert.match(document, /class="citation-links"/, `${label}: inline citations missing`);
+    assert.match(document, /id="references-title"/, `${label}: reference list missing`);
+    evidencePages[locale]++;
+  }
   for (const match of html.matchAll(/href="#([^"]+)"/g)) {
     assert.ok(
       html.includes(`id="${match[1]}"`),
@@ -135,6 +155,7 @@ await access(join(root, ".htaccess"));
 await access(join(root, "robots.txt"));
 await access(join(root, "contact.php"));
 await access(join(root, "composer.json"));
+console.log("Rendered article literature coverage:", evidencePages);
 console.log(
   `Static export OK: ${pages.length} HTML pages, ${linkCount} local links/assets checked; mode=${isPreview ? "preview (noindex)" : "public"}.`,
 );

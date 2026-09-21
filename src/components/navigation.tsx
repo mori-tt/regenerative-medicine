@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useRef } from "react";
-import { categories } from "@/content/articles";
+import { categories } from "@/content/categories";
 import { localizedShell, type SiteLocale } from "@/content/locales";
 
 function localeFromPath(pathname: string): SiteLocale | "ja" {

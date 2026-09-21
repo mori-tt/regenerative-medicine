@@ -9,7 +9,6 @@ import { articleBodiesBasicsA } from "@/content/article-bodies-basics-a";
 import { articleBodiesBasicsB } from "@/content/article-bodies-basics-b";
 import { articleBodiesExtraA } from "@/content/article-bodies-extra";
 import { articleBodiesColumns } from "@/content/article-bodies-columns";
-import { articleGuideSections } from "@/content/article-bodies-guides";
 import { articleImageAlt } from "@/content/article-images";
 import { localizedArticle, localizedCategoryName, type SiteLocale } from "@/content/locales";
 import type { ArticleBodyLocale } from "@/content/article-bodies-research";
@@ -18,6 +17,8 @@ import { CellArt, Icon } from "@/components/visuals";
 import { ArticleVisual } from "@/components/article-visuals";
 import { absolute, publicAsset, site } from "@/lib/site";
 import { publication } from "@/lib/site-config";
+import { correctArticleText, correctArticleSections, evidenceSectionsFor } from "@/content/article-evidence";
+import { CitationLinks, ArticleReferences } from "./article-references";
 
 const englishTerms: Record<string, string> = {
   basics: "The Basics", stem: "Stem Cells", cell: "Cell", cells: "Cells", tissue: "Tissue", tissues: "Tissues", organ: "Organ", organs: "Organs", treatment: "Treatment", research: "Research", safety: "Safety", cost: "Cost", insurance: "Insurance", clinical: "Clinical", trials: "Trials", trial: "Trial", study: "Study", studies: "Studies", immune: "Immune System", blood: "Blood", bone: "Bone", skin: "Skin", heart: "Heart", nerve: "Nerve", brain: "Brain", gene: "Genes", genes: "Genes", genome: "Genome", culture: "Cell Culture", quality: "Quality", consent: "Informed Consent", followup: "Follow-up", aftercare: "Aftercare", decision: "Decision-making", family: "Family Support", doctor: "Doctor", hospital: "Hospital", rehabilitation: "Rehabilitation", statistics: "Statistics", evidence: "Evidence", future: "Future Research",
@@ -40,7 +41,7 @@ const bodyBySlug: Record<string, { en: ArticleBodyLocale; zh: ArticleBodyLocale 
   ...articleBodiesColumns,
 };
 
-export type LocalizedSection = { title: string; paragraphs: string[] };
+export type LocalizedSection = { title: string; paragraphs: string[]; paragraphReferences?: string[][] };
 
 function tupleSections(sections: [string, string, string][]): LocalizedSection[] {
   return sections.map(([title, first, second]) => ({
@@ -71,21 +72,6 @@ const fallbackSections: Record<SiteLocale, [string, string, string][]> = {
   ],
 };
 
-const evidenceSections: Record<SiteLocale, Record<Article["category"], LocalizedSection>> = {
-  en: {
-    basics: { title: "How to read the papers", paragraphs: ["Check participants, comparison groups, outcomes, follow-up, and limitations. Cell or animal studies, observational studies, clinical trials, and systematic reviews answer different questions; the existence of a paper does not by itself establish benefit or safety in people.", "These references provide background and methods for reading evidence. They do not diagnose, recommend, or establish suitability for an individual. Discuss personal decisions with a healthcare professional using current clinical information."] },
-    "stem-cells": { title: "Evidence and limits in stem-cell research", paragraphs: ["Check cell source, manufacturing and purification, quality control, route of administration, disease, and follow-up. Making cells or seeing a change in a preclinical model is different from demonstrating clinical benefit.", "Clinical translation also requires reproducible manufacturing and long-term assessment of immune reactions, genetic changes, and tumor formation. The references describe promise and unresolved questions; they do not guarantee a treatment."] },
-    treatment: { title: "Checking evidence before treatment", paragraphs: ["Ask whether study participants resemble you, what the intervention was compared with, which outcomes were measured, and over what period. Small or single-site studies may generate hypotheses without showing that everyone will have the same result.", "Confirm benefits, known and unknown risks, alternatives, total costs, follow-up, and emergency arrangements in writing. This page is general information and does not recommend an individual treatment."] },
-    research: { title: "Strength and uncertainty of research", paragraphs: ["Assess participant selection, comparison groups, outcome measurement, missing data, follow-up, conflicts of interest, and reproducibility. Systematic reviews and meta-analyses can also inherit bias and heterogeneity from the included studies.", "Words such as promising or breakthrough do not mean approved or standard care. Check the original paper, trial registry, and official regulatory information, including updates after this article was edited."] },
-  },
-  zh: {
-    basics: { title: "阅读论文时的注意点", paragraphs: ["请确认研究对象、对照组、评价指标、随访时间与局限。细胞与动物研究、观察研究、临床试验和系统综述回答的问题不同，有论文并不等于已证明对人有效或安全。", "这些参考资料用于了解背景与阅读研究的方法，不用于诊断或推荐个人治疗。个人决定请结合最新诊疗信息咨询医疗专业人员。"] },
-    "stem-cells": { title: "干细胞研究的证据与局限", paragraphs: ["请分别确认细胞来源、制备与纯化、质量管理、给药方式、对象疾病和随访时间。能够制备细胞或在临床前模型观察到变化，不等于已经证明临床获益。", "临床转化还需要确认生产的可重复性，以及免疫反应、遗传变化、肿瘤形成等长期安全性。参考资料同时介绍潜力与未解决问题，不保证治疗效果。"] },
-    treatment: { title: "考虑治疗时确认依据", paragraphs: ["请确认研究对象是否与自己相似、与什么进行比较、评价了什么结果以及观察了多久。小规模或单一机构研究可以提出可能性，但不能证明所有人都有相同结果。", "请以书面确认获益、已知与未知风险、其他选择、总费用、随访和紧急应对。本页面提供一般信息，不推荐个人治疗。"] },
-    research: { title: "研究结果的强度与不确定性", paragraphs: ["请检查对象选择、对照组、评价方法、缺失数据、随访时间、利益冲突和可重复性。系统综述与荟萃分析也可能继承纳入研究的偏倚与异质性。", "“有希望”或“突破”等词不等于已批准或属于标准治疗。请确认原始论文、研究注册和官方监管信息，并留意文章编辑后是否有更新。"] },
-  },
-};
-
 const chrome = {
   en: {
     home: "Home", editedBy: "Edited by the Regenerative Medicine Guide editorial team", position: "Position: general information",
@@ -114,34 +100,23 @@ export function categoryLabelFor(locale: SiteLocale, category: Article["category
 }
 
 export function localizedArticleFor(locale: SiteLocale, source: Article) {
-  if (source.slug === "what-is-regenerative-medicine") {
-    const base = localizedArticle[locale];
-    return {
-      title: base.title,
-      description: base.description,
-      category: base.category,
-      points: [...base.points],
-      sections: [...tupleSections(base.sections as unknown as [string, string, string][]), evidenceSections[locale].basics],
-      references: source.references,
-    };
-  }
   const translated = articleLocales[source.slug]?.[locale];
-  const topic = translated ? translated.title : topicFromSlug(source.slug, locale);
-  const en = locale === "en";
+  const special = source.slug === "what-is-regenerative-medicine" ? localizedArticle[locale] : undefined;
   const body = bodyBySlug[source.slug]?.[locale];
-  const guide = articleGuideSections[locale][source.category] ?? [];
+  const topic = translated ? translated.title : topicFromSlug(source.slug, locale);
+  const originalSections = special
+    ? tupleSections(special.sections as unknown as [string, string, string][])
+    : body?.sections ?? tupleSections(fallbackSections[locale]);
+  const sections = [
+    ...correctArticleSections(source.slug, locale, originalSections),
+    ...evidenceSectionsFor(source.slug, locale),
+  ];
   return {
-    title: translated ? translated.title : en ? `${topic}: A Careful Guide` : `${topic}：谨慎理解指南`,
-    description: translated
-      ? translated.description
-      : en
-        ? `A carefully prepared guide to ${topic.toLowerCase()}, including evidence, limitations, safety, and questions to discuss with a healthcare professional.`
-        : `介绍${topic}，包括证据、局限性、安全性，以及可以与医疗专业人员讨论的问题。`,
+    title: correctArticleText(source.slug, locale, special?.title ?? translated?.title ?? topic),
+    description: correctArticleText(source.slug, locale, special?.description ?? translated?.description ?? source.description),
     category: categoryLabelFor(locale, source.category),
-    points: body ? body.points : [...fallbackPoints[locale]],
-    sections: body
-      ? [...body.sections, ...guide, evidenceSections[locale][source.category]]
-      : [...tupleSections(fallbackSections[locale]), ...guide, evidenceSections[locale][source.category]],
+    points: (special?.points ?? body?.points ?? fallbackPoints[locale]).map((text) => correctArticleText(source.slug, locale, text)),
+    sections,
     references: source.references,
   };
 }
@@ -195,7 +170,7 @@ export function LocalizedArticle({ locale, source }: { locale: SiteLocale; sourc
   const copy = chrome[locale];
   const en = locale === "en";
   const fallbackBase = localizedArticle[locale];
-  const base = source
+  const base: { title: string; description: string; category: string; points: string[]; sections: LocalizedSection[]; references: Article["references"] } = source
     ? localizedArticleFor(locale, source)
     : {
         title: fallbackBase.title,
@@ -308,25 +283,13 @@ export function LocalizedArticle({ locale, source }: { locale: SiteLocale; sourc
               {base.sections.map((section, index) => (
                 <section id={sectionIds[index]} key={section.title}>
                   <h2>{section.title}</h2>
-                  {section.paragraphs.map((paragraph) => (
-                    <p key={paragraph.slice(0, 32)}>{paragraph}</p>
+                  {section.paragraphs.map((paragraph, paragraphIndex) => (
+                    <p key={paragraphIndex}>{paragraph}<CitationLinks ids={section.paragraphReferences?.[paragraphIndex]} references={base.references} locale={locale} /></p>
                   ))}
                 </section>
               ))}
             </div>
-            <section className="references">
-              <h2>{copy.references}</h2>
-              <ol>
-                {base.references.map((reference) => (
-                  <li key={reference.url}>
-                    <a href={reference.url} target="_blank" rel="noopener noreferrer">
-                      {reference.title} ↗
-                    </a>
-                  </li>
-                ))}
-              </ol>
-              <p>{copy.referencesNote}</p>
-            </section>
+            <ArticleReferences references={base.references} locale={locale} />
             {reviewed && source?.reviewer ? (
               <section className="reviewer-box">
                 <h2>{copy.reviewerDone}</h2>
