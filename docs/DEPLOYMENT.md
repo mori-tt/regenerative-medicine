@@ -8,6 +8,8 @@
 
 `.env.example`を`.env.local`にコピーし、実際のドメインを設定します。ドメインの値にサブディレクトリを含めるとビルドエラーになります。
 
+配置先ごとの設定例は [`deploy/github-pages.env.example`](../deploy/github-pages.env.example) と [`deploy/lolipop.env.example`](../deploy/lolipop.env.example) に分けています。`DEPLOY_TARGET`を切り替えても、GitHub Pagesの確認用設定とLolipopの公開用設定が混ざらないようにします。
+
 ```dotenv
 NEXT_PUBLIC_SITE_URL=https://your-domain.jp
 NEXT_PUBLIC_SITE_INDEXABLE=false
@@ -29,6 +31,10 @@ NEXT_PUBLIC_ASSET_PREFIX=
 ```bash
 npm run build:github-pages  # 全記事を確認用に生成
 npm run build:lolipop       # 公開日到達分だけ生成
+
+# 環境変数で対象を切り替える場合
+DEPLOY_TARGET=github-pages npm run build:target
+DEPLOY_TARGET=lolipop npm run build:target
 ```
 
 ```dotenv

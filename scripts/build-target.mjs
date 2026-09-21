@@ -1,18 +1,20 @@
 import { spawnSync } from "node:child_process";
 
-const target = process.argv[2];
+const target = process.argv[2] || process.env.DEPLOY_TARGET;
 if (!target || !["github-pages", "lolipop"].includes(target)) {
-  console.error("使い方: node scripts/build-target.mjs github-pages|lolipop");
+  console.error("使い方: DEPLOY_TARGET=github-pages|lolipop npm run build:target");
   process.exit(1);
 }
 
 const env = { ...process.env };
+env.DEPLOY_TARGET = target;
 if (target === "github-pages") {
   env.GITHUB_PAGES = "true";
   env.NEXT_PUBLIC_ARTICLE_BUILD_MODE = "all";
   env.NEXT_PUBLIC_PUBLICATION_MODE ||= "preview";
   env.NEXT_PUBLIC_SITE_INDEXABLE ||= "false";
 } else {
+  delete env.GITHUB_PAGES;
   env.NEXT_PUBLIC_ARTICLE_BUILD_MODE = "scheduled";
 }
 

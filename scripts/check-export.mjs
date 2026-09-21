@@ -3,6 +3,18 @@ import { resolve, join, relative } from "node:path";
 import assert from "node:assert/strict";
 
 const root = resolve("out");
+async function targetForUrl(url) {
+  const segments = url.split("/").filter(Boolean);
+  for (let offset = 0; offset <= segments.length; offset++) {
+    const relativePath = segments.slice(offset).join("/");
+    const target = join(root, !relativePath || relativePath.endsWith("/") ? relativePath + "index.html" : relativePath);
+    try {
+      await access(target);
+      return target;
+    } catch {}
+  }
+  return null;
+}
 async function walk(dir) {
   const entries = await readdir(dir, { withFileTypes: true });
   return (
@@ -76,10 +88,11 @@ for (const path of pages) {
   )) {
     const url = decodeURIComponent(match[1]);
     if (url.startsWith("//")) continue;
-    const target = join(root, url.endsWith("/") ? url + "index.html" : url);
-    await access(target).catch(() =>
+    const target = await targetForUrl(url);
+    await Promise.resolve(target).catch(() =>
       assert.fail(`${label}: missing internal target ${url}`),
     );
+    assert.ok(target, `${label}: missing internal target ${url}`);
     linkCount++;
   }
   for (const match of html.matchAll(/href="#([^"]+)"/g)) {
@@ -110,7 +123,9 @@ if (isPreview)
 assert.ok(!sitemap.includes("/search/"), "Search must not enter sitemap");
 for (const match of sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)) {
   const path = new URL(match[1]).pathname;
-  const html = await readFile(join(root, path, "index.html"), "utf8");
+  const target = await targetForUrl(path);
+  assert.ok(target, `sitemap target is missing: ${path}`);
+  const html = await readFile(target, "utf8");
   assert.ok(
     !/<meta name="robots" content="[^"]*noindex/.test(html),
     `Sitemap contains noindex URL: ${path}`,
