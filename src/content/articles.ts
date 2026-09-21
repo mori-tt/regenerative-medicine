@@ -1,6 +1,7 @@
 import { articleImageFor } from "./article-images";
 import { medicalReviewer, publication } from "@/lib/site-config";
 import reviewRecords from "./article-review-records.json";
+import { evidenceForCategory, evidenceSectionsByCategory } from "./article-evidence";
 const reviewSchedule = reviewRecords as Record<string, {
   publishAt?: string;
   /** 記事台帳で指定する画像カタログのキー。 */
@@ -8661,7 +8662,17 @@ export const articles: Article[] = rawArticles.map((article, index) => ({
       ...section,
       id: `${article.slug}-guide-${index + 1}`,
     })),
+    {
+      title: evidenceSectionsByCategory[article.category].title,
+      paragraphs: [...evidenceSectionsByCategory[article.category].paragraphs],
+      id: `${article.slug}-evidence-notes`,
+    },
   ],
+  references: Array.from(
+    new Map(
+      [...article.references, ...evidenceForCategory(article.category)].map((reference) => [reference.url, reference]),
+    ).values(),
+  ),
 }));
 
 export function isReviewed(article: Article) {
