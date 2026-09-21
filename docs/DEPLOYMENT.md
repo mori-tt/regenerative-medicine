@@ -57,6 +57,8 @@ NEXT_PUBLIC_ARTICLE_BUILD_MODE=scheduled
 
 `public/`配下の画像・アイコンは、`NEXT_PUBLIC_BASE_PATH`を含むURLへビルド時に変換されます。GitHub PagesからLolipopへ移すときは、環境変数を切り替えて再ビルドしてください。
 
+GitHub Pagesのworkflowでは、Pages用artifactのアップロードとdeployジョブを分け、deployジョブに`pages: write`、`id-token: write`、`actions: read`を明示しています。OIDCの`Request timeout`は権限不足ではなく、GitHubのOIDCサービスまたはrunnerからの一時的な通信失敗でも発生します。権限が設定済みなら、同じworkflowを再実行して切り分けます。`ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true`でNode 20へ戻す対応は行わず、ActionsをNode 24対応版へ更新します。
+
 ## 2. GitHub ActionsでLolipopへ配置する場合
 
 現在のLolipop workflowは有効化していません。GitHub Actionsに認識されない `.disabled` 拡張子のテンプレートを [`deploy-lolipop.example.disabled`](../.github/workflows/deploy-lolipop.example.disabled) として保存しています。最終公開時に `.github/workflows/deploy-lolipop.yml` へコピーし、次のGitHub Secretsを登録します。
