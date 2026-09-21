@@ -1325,6 +1325,14 @@ section > .eyebrow + .listing-heading {
   align-items: center;
   padding-block: 42px;
 }
+.society-promo-section-quiet {
+  border-top: 1px solid var(--line);
+  background: #fbfcf8;
+}
+.society-promo-section-quiet .society-promo-mark {
+  min-height: 170px;
+  background: #f2f5ed;
+}
 .society-promo-mark,
 .jsrm-hero-mark {
   display: grid;

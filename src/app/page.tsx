@@ -3,7 +3,6 @@ import { articles, categories, visibleArticles } from "@/content/articles";
 import { ArticleCard, AdSlot, JsonLd } from "@/components/content";
 import { CellArt, Icon } from "@/components/visuals";
 import { absolute, pageMetadata, site } from "@/lib/site";
-import { publication } from "@/lib/site-config";
 
 export const metadata = pageMetadata(
   "再生医療と幹細胞を、もっとわかりやすく。",
@@ -26,21 +25,19 @@ export default function Home() {
       <section className="hero container">
         <div className="hero-copy">
           <div className="eyebrow">
-            <span /> KNOWLEDGE FOR YOUR NEXT STEP
+            <span /> 編集部が整理する情報ガイド
           </div>
           <h1>
             再生医療を知る。
             <br />
-            これからの選択に、
+            研究と治療を分けて、
             <br />
-            <em>確かな理解を。</em>
+            <em>これからの選択を考える。</em>
           </h1>
           <p>
-            期待も、疑問も、一つずつ。
+            再生医療と幹細胞について、何が分かっていて、何が研究中なのか。
             <br />
-            再生医療と幹細胞のことを、
-            <br className="mobile-only" />
-            わかりやすく、丁寧に伝えます。
+            根拠、限界、安全性、費用を、公的資料とともに整理します。
           </p>
           <Link
             className="button primary"
@@ -49,20 +46,20 @@ export default function Home() {
             はじめての再生医療 <Icon name="arrow" size={20} />
           </Link>
           <span className="hero-footnote">
-            知ることが、自分らしい選択の第一歩。
+            個別の診断や治療の判断は、医療専門家へご相談ください。
           </span>
         </div>
         <div className="hero-visual">
           <CellArt hero />
           <div className="visual-label">
-            <span className="small-dot" /> LIFE, SCIENCE & YOU{" "}
-            <span>細胞をモチーフにしたイメージ</span>
+            <span className="small-dot" /> イメージイラスト
+            <span>細胞をモチーフにした抽象画</span>
           </div>
           <div className="hero-floating">
             <Icon name="book" size={23} />
             <span>
-              難しいことを、やさしく。
-              <small>あなたの「知りたい」に寄り添うメディア</small>
+              難しいことを、順序立てて。
+              <small>根拠と限界を一緒に読むためのガイド</small>
             </span>
           </div>
         </div>
@@ -72,20 +69,20 @@ export default function Home() {
           <div>
             <Icon name="check" />
             <span>
-              医学監修の準備を進めています
-              <small>記事ごとに出典と確認範囲を整理しています</small>
+              記事ごとに確認状態を表示
+              <small>編集・医学的確認・公開状況を分けて管理</small>
             </span>
           </div>
           <div>
             <Icon name="book" />
             <span>
-              根拠となる情報を明記<small>公的機関・研究機関などの出典へ</small>
+              根拠となる情報を明記<small>公的機関・研究機関などの資料へ</small>
             </span>
           </div>
           <div>
             <Icon name="network" />
             <span>
-              中立的な情報提供<small>編集記事と広告を明確に区別します</small>
+              編集と広告を分ける<small>広告の有無は記事内容に影響しません</small>
             </span>
           </div>
         </div>
@@ -93,7 +90,7 @@ export default function Home() {
       <section className="section purpose-section container">
         <div className="section-heading">
           <div>
-            <span className="eyebrow">START WITH A PURPOSE</span>
+            <span className="eyebrow">目的から探す</span>
             <h2>目的から探す<span className="heading-dot">。</span></h2>
           </div>
           <span className="section-caption">今の疑問に近い入口から読めます。</span>
@@ -108,7 +105,7 @@ export default function Home() {
       <section className="section container">
         <div className="section-heading">
           <div>
-            <span className="eyebrow">EXPLORE TOPICS</span>
+            <span className="eyebrow">テーマから探す</span>
             <h2>
               知りたいことから、探す<span className="heading-dot">。</span>
             </h2>
@@ -133,7 +130,7 @@ export default function Home() {
               <h3>{cat.label}</h3>
               <p>{cat.description}</p>
               <div className="category-bottom">
-                <span>{cat.en}</span>
+              <span>詳しく読む</span>
                 <Icon name="arrow" size={21} />
               </div>
             </Link>
@@ -144,7 +141,7 @@ export default function Home() {
         <div className="container feature">
           <div className="feature-art">
             <CellArt variant="network" />
-            <span className="feature-caption">FIRST STEP GUIDE</span>
+            <span className="feature-caption">最初に読む</span>
           </div>
           <div className="feature-copy">
             <span className="eyebrow">はじめての方へ</span>
@@ -170,21 +167,10 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="society-promo-section">
-        <div className="container society-promo">
-          <div className="society-promo-mark" aria-hidden="true"><span>J S R M</span><small>BASED ON OFFICIAL SOURCES</small></div>
-          <div>
-            <span className="eyebrow">SPECIAL FEATURE</span>
-            <h2>日本再生医療学会を知る。</h2>
-            <p>日本再生医療学会の公開資料をもとに、学会の役割や制度情報を当サイト編集部が整理しています。学会公式サイトや、個別の治療の推奨とは別の編集記事です。</p>
-            <Link className="text-link" href="/jsrm/">学会特集を読む <span><Icon name="arrow" size={21} /></span></Link>
-          </div>
-        </div>
-      </section>
       <section className="section container">
         <div className="section-heading">
           <div>
-            <span className="eyebrow">THE JOURNAL</span>
+            <span className="eyebrow">記事</span>
             <h2>
               一つずつ、理解を深める<span className="heading-dot">。</span>
             </h2>
@@ -201,7 +187,7 @@ export default function Home() {
           </div>
           <aside className="journal-sidebar">
             <div className="editorial-note">
-              <span className="eyebrow">OUR PROMISE</span>
+              <span className="eyebrow">編集方針</span>
               <Icon name="check" size={30} />
               <h3>
                 情報の確かさを、
@@ -224,7 +210,7 @@ export default function Home() {
         <AdSlot />
         <div className="question-box">
           <div>
-            <span className="eyebrow">BEFORE YOUR DECISION</span>
+            <span className="eyebrow">治療を考える前に</span>
             <h2>治療について考えはじめたら。</h2>
             <p>
               効果だけでなく、リスクや費用も。医師に相談する前の確認事項を整理しましょう。
@@ -236,6 +222,17 @@ export default function Home() {
           >
             確認したいことを読む <Icon name="arrow" size={19} />
           </Link>
+        </div>
+      </section>
+      <section className="society-promo-section society-promo-section-quiet">
+        <div className="container society-promo">
+          <div className="society-promo-mark" aria-hidden="true"><span>J S R M</span><small>BASED ON OFFICIAL SOURCES</small></div>
+          <div>
+            <span className="eyebrow">公式資料を読む</span>
+            <h2>日本再生医療学会を知る。</h2>
+            <p>公開資料をもとに、学会の役割や制度情報を当サイト編集部が整理しています。学会公式サイトや、個別の治療の推奨とは別の編集記事です。</p>
+            <Link className="text-link" href="/jsrm/">学会特集を読む <span><Icon name="arrow" size={21} /></span></Link>
+          </div>
         </div>
       </section>
     </>
