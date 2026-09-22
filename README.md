@@ -51,6 +51,8 @@ out/                     ビルドで生成する配信用ファイル
 
 記事別の文献追加・原稿訂正は `src/content/evidence/*.json`、出典と限界を含む改稿一覧は [ARTICLE-LITERATURE-AUDIT.md](docs/ARTICLE-LITERATURE-AUDIT.md) にあります。GitHub Pagesの確認用ビルドは未監修原稿も全件表示するため、秘密の原稿は置かないでください。
 
+原稿・翻訳を編集すると `npm run check:article-content`（`prebuild`で自動実行）が、比較優良表現・保証表現・体験談誘導・誇大表現など医療広告ガイドライン上リスクのある言い回しの候補を`advisories`に出力します。ビルドを止めるものではなく人手レビューの補助です。詳細は [LEGAL-AUDIT-2026-09-22.md](docs/LEGAL-AUDIT-2026-09-22.md) の追記を参照してください。
+
 ## SEO設定
 
 `.env.example`を`.env.local`へコピーし、正式なドメインと連絡先を設定します。値はビルド時に反映されます。
