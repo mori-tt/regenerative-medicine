@@ -142,7 +142,7 @@
 
 ## 法務監査の残作業
 
-- [ ] [医療広告・薬機法・著作権監査](LEGAL-AUDIT-2026-09-22.md)を確認した。
+- [ ] [医療広告・薬機法・著作権監査](LEGAL-AUDIT-2026-09-22.md)を確認した。`npm run check:article-content`（prebuildで自動実行）が比較優良・保証・体験談・誇大表現の候補を`advisories`として出力する。これは回帰検知の補助であり、機械判定だけでは合格・不合格を決めない。出力された候補は人手で文脈を確認する。
 - [ ] `src/content/article-media.json` の各画像について、個別画像ページ、利用規約、取得日、商用利用・改変・再配布・人物利用の条件を保存し、`rightsStatus` を `verified` にした。
 - [ ] 画像権利を確認するまで `NEXT_PUBLIC_PUBLICATION_MODE=production npm run build:lolipop` は実行しない。実行時は権利ゲートが未確認画像で停止する。
 - [ ] 広告掲載、製品販売、予約リンクを追加する場合は、公開前に広告主・リンク先・表示・利益相反を台帳に記録して専門家確認を受けた。

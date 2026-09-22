@@ -22,6 +22,30 @@ const seen = new Set();
 const paragraphOwners = new Map();
 const suspicious =
   /必ず治る|完全に安全|副作用はない|guaranteed cure|no side effects|保证治愈/iu;
+// 医療広告ガイドラインが問題視する表現カテゴリの見出し語。文脈次第で安全な用法もあるため、
+// 一致は即エラーではなく advisories（人手レビュー対象）として記録する。
+const adRiskPatterns = [
+  {
+    type: "comparative_superiority_claim",
+    pattern:
+      /日本一の|日本一です|世界一の|世界一です|業界no\.?1|no\.?1の実績|最も優れ|最高の治療|一番効く|bestest|best in the world|number one in the world/iu,
+  },
+  {
+    type: "guarantee_or_absolute_claim",
+    pattern:
+      /絶対に安全|絶対安全|100\s*%\s*(安全|治る|効く)|副作用は?一切ない|副作用ゼロ|リスクはありません|誰にでも効く|確実に治る|必ず効く|absolutely safe|100%\s*(safe|effective|cure)|zero (risk|side effects)|绝对安全|绝对治愈|百分之百/iu,
+  },
+  {
+    type: "patient_testimonial_cue",
+    pattern:
+      /私は(この治療で|治療を受けて).{0,10}(治り|治りました|良くなり)|体験談として|お客様の声|患者様の声|ビフォーアフター|before\s*[\/&]\s*after photos?/iu,
+  },
+  {
+    type: "unqualified_hype_claim",
+    pattern:
+      /唯一の治療法|ここでしか受けられない|世界初の治療|今すぐ効果|驚異的な効果|奇跡の治療|miracle cure|breakthrough treatment available now/iu,
+  },
+];
 const isoDate = /^\d{4}-\d{2}-\d{2}$/;
 const normalizeTitle = (value) =>
   value
@@ -37,6 +61,18 @@ const strings = (value) =>
     : value && typeof value === "object"
       ? Object.values(value).flatMap(strings)
       : [];
+function checkAdvertisingRisk(slug, locale, source, text) {
+  if (!text) return;
+  for (const { type, pattern } of adRiskPatterns)
+    if (pattern.test(text))
+      advisories.push({
+        slug,
+        type,
+        locale,
+        source,
+        snippet: text.slice(0, 80),
+      });
+}
 const sourceURLs = new Set();
 let paragraphs = 0;
 for (const article of articles) {
@@ -50,6 +86,29 @@ for (const article of articles) {
     continue;
   }
   if (entry.category !== article.category) issue(slug, "wrong_category");
+  checkAdvertisingRisk(slug, "ja", "title", article.title);
+  checkAdvertisingRisk(slug, "ja", "description", article.description);
+  for (const point of article.points ?? [])
+    checkAdvertisingRisk(slug, "ja", "points", point);
+  for (const section of article.sections ?? [])
+    for (const paragraph of section.paragraphs ?? [])
+      checkAdvertisingRisk(slug, "ja", `section:${section.title}`, paragraph);
+  for (const locale of ["en", "zh"]) {
+    const title = translations[slug]?.titles?.[locale];
+    checkAdvertisingRisk(slug, locale, "title", title?.title);
+    checkAdvertisingRisk(slug, locale, "description", title?.description);
+    const body = translations[slug]?.bodies?.[locale];
+    for (const point of body?.points ?? [])
+      checkAdvertisingRisk(slug, locale, "points", point);
+    for (const section of body?.sections ?? [])
+      for (const paragraph of section.paragraphs ?? [])
+        checkAdvertisingRisk(
+          slug,
+          locale,
+          `section:${section.title}`,
+          paragraph,
+        );
+  }
   const currentHash = manuscriptHash(article, entry, translations[slug]);
   if (records[slug]?.editorialEvidence?.contentHash !== currentHash)
     issue(
@@ -136,6 +195,12 @@ for (const article of articles) {
         }
         if (suspicious.test(paragraph.text))
           advisories.push({ slug, type: "wording_requires_context", locale });
+        checkAdvertisingRisk(
+          slug,
+          locale,
+          "evidence_paragraph",
+          paragraph.text,
+        );
         const key = createHash("sha256")
           .update(paragraph.text ?? "")
           .digest("hex");
@@ -159,6 +224,12 @@ for (const article of articles) {
       if (!ids.has(id)) issue(slug, "unresolved_correction_source", id);
       cited.add(id);
     }
+    checkAdvertisingRisk(
+      slug,
+      correction.locale,
+      "correction_new_text",
+      correction.new,
+    );
     const original =
       correction.locale === "ja"
         ? article
@@ -181,6 +252,9 @@ for (const slug of Object.keys(evidence))
   if (!seen.has(slug)) issue(slug, "evidence_without_article");
 for (const slug of Object.keys(records))
   if (!seen.has(slug)) issue(slug, "record_without_article");
+const advertisingRiskAdvisories = advisories.filter((advisory) =>
+  adRiskPatterns.some((entry) => entry.type === advisory.type),
+);
 console.log(
   JSON.stringify(
     {
@@ -191,6 +265,7 @@ console.log(
       uniqueSourceURLs: sourceURLs.size,
       citedParagraphs: paragraphs,
       errors: issues,
+      advertisingRiskAdvisoryCount: advertisingRiskAdvisories.length,
       advisories,
     },
     null,
