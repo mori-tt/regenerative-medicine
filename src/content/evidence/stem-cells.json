@@ -8350,5 +8350,616 @@
       }
     ],
     "auditNote": "ATCC and FDA safety pages read. Corrects absolute home-impossibility wording, including title/headings where applicable, without adding culture instructions. FDA 2021 page used only for harms, not outdated approval lists."
+  },
+  "umbilical-cord-tissue-cells": {
+    "sources": [
+      {
+        "id": "pmid-31543433",
+        "title": "Characteristics and clinical applications of Wharton's jelly-derived mesenchymal stromal cells",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/31543433/",
+        "studyType": "Narrative review",
+        "accessedScope": "abstract",
+        "checkedAt": "2026-09-23"
+      },
+      {
+        "id": "cdc-mmwr-cord-blood-infections",
+        "title": "Notes from the Field: Infections After Receipt of Bacterially Contaminated Umbilical Cord Blood–Derived Stem Cell Products for Other Than Hematopoietic or Immunologic Reconstitution — United States, 2018",
+        "url": "https://www.cdc.gov/mmwr/volumes/67/wr/mm6750a5.htm",
+        "studyType": "Official public health report",
+        "accessedScope": "full-text",
+        "checkedAt": "2026-09-23"
+      }
+    ],
+    "corrections": [],
+    "auditNote": "臍帯ワルトンゼリー由来細胞のレビュー抄録と、米国CDCによる未承認臍帯血由来製品の感染事例報告を確認し要約。国内での提供実態や許可施設の状況は確認していない。",
+    "locales": {
+      "ja": {
+        "sections": [
+          {
+            "title": "臍帯組織由来細胞の特徴と臨床応用の現状",
+            "paragraphs": [
+              {
+                "text": "臍帯のワルトンゼリーに由来する間葉系間質細胞（WJ-MSC）は、胚性幹細胞やiPS細胞に比べて倫理的な課題や安全性への懸念が少なく、骨髄や脂肪組織由来の間葉系幹細胞よりも増殖能が高く、多分化能を長く維持できる特徴があるとまとめられています。脊髄・肝臓・心臓の組織損傷の修復や、免疫を介した疾患の症状緩和を目的に臨床で用いられていると報告されています。",
+                "sourceIds": [
+                  "pmid-31543433"
+                ]
+              },
+              {
+                "text": "同総説は、これまでに報告された臨床試験の規模が総じて小さく、収集された根拠はWJ-MSC治療を日常診療で定型的に用いることを裏付けるには不十分であり、安全性と有効性を確かめる厳密な臨床試験が今後必要と結論づけています。",
+                "sourceIds": [
+                  "pmid-31543433"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "未承認の細胞製品に伴うリスク",
+            "paragraphs": [
+              {
+                "text": "米国疾病予防管理センターの報告では、造血幹細胞移植以外の目的でFDA未承認の臍帯血由来細胞製品の注射・点滴を受けた患者に、細菌血流感染や関節感染が相次いで確認され、製造販売業者による自主回収に至った事例が記録されています。臍帯血は採取後に汚染を除去できないため、製造工程での無菌管理が特に重要とされています。",
+                "sourceIds": [
+                  "cdc-mmwr-cord-blood-infections"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "en": {
+        "sections": [
+          {
+            "title": "Characteristics of umbilical cord tissue-derived cells and their clinical use",
+            "paragraphs": [
+              {
+                "text": "A review of Wharton's jelly-derived mesenchymal stromal cells (WJ-MSCs) notes fewer ethical and safety concerns than embryonic or induced pluripotent stem cells, faster growth, and longer retention of multipotency compared with adult MSCs from bone marrow or fat. WJ-MSCs have been used clinically to repair injured spinal cord, liver, and heart tissue, and to modulate immune-mediated disease.",
+                "sourceIds": [
+                  "pmid-31543433"
+                ]
+              },
+              {
+                "text": "The same review concludes that reported clinical trials have generally been small in scale, and that the evidence collected so far is insufficient to support routine clinical use of WJ-MSC therapy, calling for rigorous trials on safety and efficacy.",
+                "sourceIds": [
+                  "pmid-31543433"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Risks associated with unapproved cell products",
+            "paragraphs": [
+              {
+                "text": "A US Centers for Disease Control and Prevention report documents bacterial bloodstream and joint infections in patients who received non-FDA-approved umbilical cord blood-derived cell products for purposes other than hematopoietic reconstitution, leading to a manufacturer recall. Because umbilical cord blood cannot be decontaminated after collection, sterile manufacturing controls are described as especially important.",
+                "sourceIds": [
+                  "cdc-mmwr-cord-blood-infections"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "zh": {
+        "sections": [
+          {
+            "title": "脐带组织来源细胞的特点及临床应用现状",
+            "paragraphs": [
+              {
+                "text": "一篇关于脐带华通氏胶来源间充质基质细胞（WJ-MSC）的综述指出，与胚胎干细胞或诱导多能干细胞相比，其伦理问题和安全性顾虑较少，且相较于骨髓或脂肪来源的成人间充质干细胞，增殖更快，多能性保持时间更长。WJ-MSC已被用于修复脊髓、肝脏和心脏组织损伤，以及调节免疫介导性疾病。",
+                "sourceIds": [
+                  "pmid-31543433"
+                ]
+              },
+              {
+                "text": "该综述总结认为，目前已报道的临床试验规模普遍较小，现有证据尚不足以支持WJ-MSC疗法在临床上的常规应用，仍需开展严谨的安全性和有效性试验。",
+                "sourceIds": [
+                  "pmid-31543433"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "未经批准的细胞产品存在的风险",
+            "paragraphs": [
+              {
+                "text": "美国疾病控制与预防中心的一份报告记录了患者因非用于造血重建目的而接受未经FDA批准的脐带血来源细胞产品注射，出现细菌血流感染和关节感染，最终导致制造商召回产品。由于脐带血采集后无法去污染，无菌生产控制被认为尤为重要。",
+                "sourceIds": [
+                  "cdc-mmwr-cord-blood-infections"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "prp-therapy-basics": {
+    "sources": [
+      {
+        "id": "pmid-32302218",
+        "title": "Platelet-Rich Plasma Versus Hyaluronic Acid for Knee Osteoarthritis: A Systematic Review and Meta-analysis of Randomized Controlled Trials",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/32302218/",
+        "studyType": "Systematic review and meta-analysis; 18 RCTs, 1,608 patients",
+        "accessedScope": "abstract",
+        "checkedAt": "2026-09-23"
+      },
+      {
+        "id": "pmid-38295392",
+        "title": "American Academy of Orthopaedic Surgeons Technology Overview Summary: Platelet-Rich Plasma (PRP) for Knee Osteoarthritis",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/38295392/",
+        "studyType": "Professional society technology overview based on systematic review",
+        "accessedScope": "abstract",
+        "checkedAt": "2026-09-23"
+      },
+      {
+        "id": "pmid-36913992",
+        "title": "Patients With Knee Osteoarthritis Who Receive Platelet-Rich Plasma or Bone Marrow Aspirate Concentrate Injections Have Better Outcomes Than Patients Who Receive Hyaluronic Acid: Systematic Review and Meta-analysis",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/36913992/",
+        "studyType": "Systematic review and meta-analysis; 27 Level I studies",
+        "accessedScope": "abstract",
+        "checkedAt": "2026-09-23"
+      }
+    ],
+    "corrections": [],
+    "auditNote": "PRPと膝変形性関節症に関するメタ解析とAAOS技術評価の抄録を確認し要約。美容目的や整形外科以外の適応でのPRP使用は対象にしていない。",
+    "locales": {
+      "ja": {
+        "sections": [
+          {
+            "title": "変形性膝関節症におけるPRPの効果",
+            "paragraphs": [
+              {
+                "text": "変形性膝関節症患者811人にPRP、797人にヒアルロン酸(HA)を注射したランダム化比較試験18件のメタ解析では、平均11.1か月の追跡でWOMACスコアの改善率がPRP群44.7％・HA群12.6％となり、PRP群で有意に大きな改善がみられたと報告されています。白血球を除去したPRP（leukocyte-poor PRP）の方が、白血球を含むPRPより機能スコアが優れていたともされています。",
+                "sourceIds": [
+                  "pmid-32302218"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "評価団体による技術評価の位置づけ",
+            "paragraphs": [
+              {
+                "text": "米国整形外科学会（AAOS）による技術評価では、変形性膝関節症に対するPRPの有効性を、プラセボ、鎮痛薬、ステロイド注射、運動療法、骨髄穿刺濃縮液、ヒアルロン酸などとの比較を含む54件の研究（高品質36件、中品質18件）に基づき整理し、根拠が乏しい領域や起こりうる害、必要な医療資源についても併せて検討する必要があるとしています。",
+                "sourceIds": [
+                  "pmid-38295392"
+                ]
+              },
+              {
+                "text": "同じ研究グループが27件のレベルI試験を対象に行った別のメタ解析でも、PRP群1,042人・骨髄穿刺濃縮液（BMAC）群226人はヒアルロン酸群1,128人と比べてWOMAC・VAS・IKDCスコアが有意に良好であったと報告され、PRPとBMACの間には有意差がみられなかったとされています。",
+                "sourceIds": [
+                  "pmid-36913992"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "en": {
+        "sections": [
+          {
+            "title": "The effect of PRP in knee osteoarthritis",
+            "paragraphs": [
+              {
+                "text": "A meta-analysis of 18 randomized trials involving 811 patients receiving platelet-rich plasma (PRP) and 797 receiving hyaluronic acid (HA) for knee osteoarthritis found that, at a mean follow-up of 11.1 months, WOMAC scores improved by 44.7% in the PRP group versus 12.6% in the HA group, a significantly greater improvement with PRP. Leukocyte-poor PRP was associated with better functional scores than leukocyte-rich PRP.",
+                "sourceIds": [
+                  "pmid-32302218"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "How professional technology assessments frame the evidence",
+            "paragraphs": [
+              {
+                "text": "A technology overview by the American Academy of Orthopaedic Surgeons evaluated PRP for knee osteoarthritis based on 54 studies (36 high-quality, 18 moderate-quality) comparing it with placebo, analgesics, corticosteroid injections, exercise, bone marrow aspirate concentrate, and hyaluronic acid, and noted that areas of insufficient evidence, potential harms, and resource considerations should also be weighed.",
+                "sourceIds": [
+                  "pmid-38295392"
+                ]
+              },
+              {
+                "text": "A separate meta-analysis of 27 Level I trials by the same research group found significantly better WOMAC, VAS, and IKDC scores in patients receiving PRP (1,042 patients) or bone marrow aspirate concentrate (BMAC, 226 patients) than in those receiving hyaluronic acid (1,128 patients), with no significant difference between PRP and BMAC.",
+                "sourceIds": [
+                  "pmid-36913992"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "zh": {
+        "sections": [
+          {
+            "title": "PRP对膝骨关节炎的效果",
+            "paragraphs": [
+              {
+                "text": "一项纳入18项随机对照试验、共811名接受富血小板血浆(PRP)治疗和797名接受透明质酸(HA)治疗的膝骨关节炎患者的荟萃分析显示，在平均11.1个月的随访中，PRP组WOMAC评分改善率为44.7%，HA组为12.6%，PRP组改善显著更大。贫白细胞PRP的功能评分优于富白细胞PRP。",
+                "sourceIds": [
+                  "pmid-32302218"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "专业机构技术评估如何看待现有证据",
+            "paragraphs": [
+              {
+                "text": "美国骨科医师学会（AAOS）的一项技术评估基于54项研究（36项高质量、18项中等质量），比较了PRP与安慰剂、镇痛药、皮质类固醇注射、运动疗法、骨髓穿刺浓缩液及透明质酸在膝骨关节炎中的效果，并指出证据不足的领域、潜在危害及资源占用等问题也应一并考量。",
+                "sourceIds": [
+                  "pmid-38295392"
+                ]
+              },
+              {
+                "text": "由同一研究团队开展的另一项纳入27项I级证据试验的荟萃分析显示，接受PRP治疗（1,042人）或骨髓穿刺浓缩液(BMAC)治疗（226人）的患者，其WOMAC、VAS及IKDC评分均显著优于接受透明质酸治疗（1,128人）的患者，而PRP与BMAC之间无显著差异。",
+                "sourceIds": [
+                  "pmid-36913992"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "stem-cell-administration-routes": {
+    "sources": [
+      {
+        "id": "pmid-32142771",
+        "title": "Systemic and local delivery of mesenchymal stem cells for heart renovation: Challenges and innovations",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/32142771/",
+        "studyType": "Narrative review",
+        "accessedScope": "abstract",
+        "checkedAt": "2026-09-23"
+      },
+      {
+        "id": "pmid-39609885",
+        "title": "Impact of mesenchymal stem cell size and adhesion modulation on in vivo distribution: insights from quantitative PET imaging",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/39609885/",
+        "studyType": "Animal study using PET imaging biodistribution tracking",
+        "accessedScope": "abstract",
+        "checkedAt": "2026-09-23"
+      }
+    ],
+    "corrections": [],
+    "auditNote": "投与経路と心疾患モデルに関するレビュー、およびPET画像による動物実験の抄録を確認し要約。ヒトでの投与経路別の有効性比較データは今回対象にしていない。",
+    "locales": {
+      "ja": {
+        "sections": [
+          {
+            "title": "投与経路によって異なる細胞の届き方",
+            "paragraphs": [
+              {
+                "text": "間葉系幹細胞（MSC）を用いた心臓の修復に関する総説では、疾患ごとに定まった「唯一の投与経路」はまだ確立されておらず、静脈内投与など全身投与と、患部に直接注入する局所投与にはそれぞれ利点と課題があると整理されています。細胞の生着や生存を高める工夫、細胞と治療物質を組み合わせる方法などが研究段階として紹介されています。",
+                "sourceIds": [
+                  "pmid-32142771"
+                ]
+              },
+              {
+                "text": "PET画像を用いた動物実験では、静脈内投与された間葉系幹細胞の多くが最初に肺の毛細血管に捕捉される現象（肺での初回通過効果）が確認され、細胞の大きさを培養条件によって小さくすると肺を通過し肝臓など他の臓器へ移行しやすくなったと報告されています。細胞の大きさが、接着能力よりも体内での分布を左右する主な要因であったとされています。",
+                "sourceIds": [
+                  "pmid-39609885"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "投与経路を選ぶ際に確認すべきこと",
+            "paragraphs": [
+              {
+                "text": "これらの知見は、投与経路によって細胞が届く臓器や量が大きく異なりうることを示しており、特定の投与経路で得られた効果や安全性の情報を、別の投与経路にそのまま当てはめることはできないとされています。提供を検討する際は、対象疾患でその投与経路について実際にどのような比較試験が行われたかを確認することが重要です。",
+                "sourceIds": [
+                  "pmid-32142771",
+                  "pmid-39609885"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "en": {
+        "sections": [
+          {
+            "title": "How the route of administration changes where cells go",
+            "paragraphs": [
+              {
+                "text": "A review on mesenchymal stem cell (MSC) therapy for cardiac repair notes that no single 'universal' delivery route has been established for any given disease, and that systemic administration (such as intravenous infusion) and local delivery directly into the affected tissue each carry distinct advantages and challenges. Strategies to improve cell engraftment and survival, and combining cells with therapeutic substances, are described as areas of ongoing research.",
+                "sourceIds": [
+                  "pmid-32142771"
+                ]
+              },
+              {
+                "text": "In a PET-imaging animal study, most intravenously infused mesenchymal stem cells were initially trapped in the lung's capillary bed (a first-pass pulmonary effect); reducing cell size through culture conditions allowed more cells to pass through the lungs and reach other organs such as the liver. Cell size was found to be a more important determinant of biodistribution than adhesion capacity.",
+                "sourceIds": [
+                  "pmid-39609885"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "What to check when a delivery route is chosen",
+            "paragraphs": [
+              {
+                "text": "These findings show that the organs reached and the amount of cells delivered can differ substantially by route, so that safety and efficacy data obtained for one route cannot simply be applied to another. When considering treatment, it is important to confirm what comparative studies have actually been conducted for that specific route in the condition being treated.",
+                "sourceIds": [
+                  "pmid-32142771",
+                  "pmid-39609885"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "zh": {
+        "sections": [
+          {
+            "title": "给药途径如何影响细胞的到达部位",
+            "paragraphs": [
+              {
+                "text": "一篇关于间充质干细胞（MSC）用于心脏修复的综述指出，目前尚未针对任何疾病确立唯一“通用”的给药途径，静脉输注等全身给药与直接注入患处的局部给药各有优势和挑战。改善细胞植入和存活的策略，以及将细胞与治疗性物质联合使用，被视为正在研究中的方向。",
+                "sourceIds": [
+                  "pmid-32142771"
+                ]
+              },
+              {
+                "text": "一项基于PET影像的动物研究发现，静脉输注的间充质干细胞大多首先被肺毛细血管截留（肺部首过效应）；通过培养条件缩小细胞体积后，更多细胞能够通过肺部到达肝脏等其他器官。细胞大小被发现是决定体内分布的比黏附能力更重要的因素。",
+                "sourceIds": [
+                  "pmid-39609885"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "选择给药途径时应确认的事项",
+            "paragraphs": [
+              {
+                "text": "这些发现表明，不同给药途径所到达的器官及细胞量可能存在很大差异，因此针对某一途径获得的安全性和有效性数据不能简单套用于其他途径。在考虑治疗方案时，确认该特定途径在相应疾病中是否有实际的对照研究十分重要。",
+                "sourceIds": [
+                  "pmid-32142771",
+                  "pmid-39609885"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "exosome-cosmetic-claims": {
+    "sources": [
+      {
+        "id": "mhlw-exosome-reagent-notice",
+        "title": "エクソソーム試薬に係る監視指導について（事務連絡）",
+        "url": "https://www.mhlw.go.jp/web/t_doc?dataId=00tc8664&dataType=1&pageNo=1",
+        "studyType": "Official guidance (MHLW notice)",
+        "accessedScope": "official-guidance",
+        "checkedAt": "2026-09-23"
+      },
+      {
+        "id": "mhlw-exosome-medical-notice",
+        "title": "幹細胞培養上清液及びエクソソーム等を用いる医療について（周知）",
+        "url": "https://www.mhlw.go.jp/content/001281987.pdf",
+        "studyType": "Official guidance (MHLW notice to regenerative medicine providers)",
+        "accessedScope": "official-guidance",
+        "checkedAt": "2026-09-23"
+      }
+    ],
+    "corrections": [],
+    "auditNote": "厚生労働省が発出したエクソソーム試薬に関する事務連絡と、再生医療等提供機関向け周知文書の原文を確認して要約。化粧品表示に関する消費者庁の個別処分事例までは確認していない。",
+    "locales": {
+      "ja": {
+        "sections": [
+          {
+            "title": "エクソソーム試薬・製品に薬事承認はない",
+            "paragraphs": [
+              {
+                "text": "厚生労働省の事務連絡（令和6年7月31日）では、疾病の治療等を目的としない「エクソソーム試薬」と称する製品が医療機関向けに広告・販売されている実態を指摘し、これらは薬機法に基づく承認を受けておらず、品質・有効性・安全性が確認されたものではないとしています。医薬品的な効果効能をうたう、または暗示するものは無承認無許可医薬品として取り締まりの対象になるとされています。",
+                "sourceIds": [
+                  "mhlw-exosome-reagent-notice"
+                ]
+              },
+              {
+                "text": "同事務連絡は、エクソソーム試薬に限らず、エクソソーム等と称する製品について、現時点で薬機法に基づく承認を受けた医薬品は存在しないと明記しています。化粧品や美容目的の商品で「再生」「幹細胞由来」といった表現を用いる場合も、この位置づけを踏まえた表示が求められます。",
+                "sourceIds": [
+                  "mhlw-exosome-reagent-notice"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "医療機関での使用に対する注意喚起",
+            "paragraphs": [
+              {
+                "text": "厚生労働省医政局が再生医療等提供機関向けに発した周知文書では、ヒト幹細胞培養上清液やエクソソーム等を用いる医療について、有効性・安全性が薬事承認された製品は存在しないとした上で、実施する医師・歯科医師の責任のもとで安全性に特に留意する必要があるとしています。日本再生医療学会が発行する「細胞外小胞等の臨床応用に関するガイダンス」の参照も促されています。",
+                "sourceIds": [
+                  "mhlw-exosome-medical-notice"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "en": {
+        "sections": [
+          {
+            "title": "No exosome reagent or product has drug approval",
+            "paragraphs": [
+              {
+                "text": "A Japanese Ministry of Health, Labour and Welfare (MHLW) notice (July 31, 2026) points out that products marketed to medical institutions as 'exosome reagents,' not intended for treating disease, have not received approval under Japan's Pharmaceutical and Medical Device Act and have not had their quality, efficacy, or safety confirmed. Products that claim or imply drug-like effects are treated as unapproved, unlicensed drugs subject to enforcement.",
+                "sourceIds": [
+                  "mhlw-exosome-reagent-notice"
+                ]
+              },
+              {
+                "text": "The same notice states explicitly that, as of the notice date, no drug using exosomes or similarly named products has received approval under the Act. This applies to any cosmetic or beauty product that uses terms such as 'regeneration' or 'stem cell-derived,' which should be labeled accordingly.",
+                "sourceIds": [
+                  "mhlw-exosome-reagent-notice"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Cautions for use at medical institutions",
+            "paragraphs": [
+              {
+                "text": "A notice from MHLW's Health Policy Bureau to institutions providing regenerative medicine states that no product using human stem cell culture supernatant or exosomes has been approved as safe and effective, and that physicians and dentists providing such care bear responsibility for particular attention to safety. It also encourages referring to the Japanese Society for Regenerative Medicine's guidance on the clinical application of extracellular vesicles.",
+                "sourceIds": [
+                  "mhlw-exosome-medical-notice"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "zh": {
+        "sections": [
+          {
+            "title": "外泌体试剂/产品尚无药品批准",
+            "paragraphs": [
+              {
+                "text": "日本厚生劳动省（MHLW）的一份事务联络（2026年7月31日）指出，一些并非以治疗疾病为目的、以“外泌体试剂”名义向医疗机构销售的产品，并未获得日本《药机法》批准，其质量、有效性和安全性均未得到确认。宣称或暗示具有药品效果的产品将被视为无批准、无许可的药品并接受监管处理。",
+                "sourceIds": [
+                  "mhlw-exosome-reagent-notice"
+                ]
+              },
+              {
+                "text": "该联络明确指出，截至发布之日，尚无任何以外泌体或类似名称销售的药品获得该法批准。任何使用“再生”“干细胞来源”等表述的化妆品或美容产品，也应基于这一现状进行适当标示。",
+                "sourceIds": [
+                  "mhlw-exosome-reagent-notice"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "医疗机构使用时的注意事项",
+            "paragraphs": [
+              {
+                "text": "厚生劳动省医政局面向再生医疗提供机构发出的通知指出，目前尚无以人干细胞培养上清液或外泌体为原料、经批准证实安全有效的产品，实施相关医疗的医生或牙医需对安全性给予特别关注。通知还建议参考日本再生医学会发布的《细胞外囊泡等临床应用指导意见》。",
+                "sourceIds": [
+                  "mhlw-exosome-medical-notice"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "cell-processing-license-system": {
+    "sources": [
+      {
+        "id": "egov-saisei-anzen-law",
+        "title": "再生医療等の安全性の確保等に関する法律",
+        "url": "https://laws.e-gov.go.jp/document?lawid=425AC0000000085_20220617_504AC0000000068",
+        "studyType": "Official guidance (statute text via e-Gov)",
+        "accessedScope": "official-guidance",
+        "checkedAt": "2026-09-23"
+      },
+      {
+        "id": "mhlw-cell-processing-procedure",
+        "title": "特定細胞加工物の製造に係る手続について",
+        "url": "https://kouseikyoku.mhlw.go.jp/kinki/iji/saisei/saisei_top_00006.html",
+        "studyType": "Official guidance (regional Health Bureau procedure page)",
+        "accessedScope": "official-guidance",
+        "checkedAt": "2026-09-23"
+      }
+    ],
+    "corrections": [],
+    "auditNote": "再生医療等の安全性の確保等に関する法律の条文と、近畿厚生局が公開する特定細胞加工物の製造手続ページを確認して要約。手数料や様式の最新の改定状況は今後変更されうる。",
+    "locales": {
+      "ja": {
+        "sections": [
+          {
+            "title": "特定細胞加工物の製造には届出または許可が必要",
+            "paragraphs": [
+              {
+                "text": "再生医療等の安全性の確保等に関する法律は、再生医療等に用いる特定細胞加工物の製造について、厚生労働大臣への届出または許可の取得を義務付けています。医療機関の管理者が特定細胞加工物の製造を委託する場合も、届出・許可を得た特定細胞加工物製造事業者に委託しなければならないと定められています。",
+                "sourceIds": [
+                  "egov-saisei-anzen-law"
+                ]
+              },
+              {
+                "text": "許可の対象となるのは医療機関外に製造施設を設置する場合で、細胞培養加工施設の構造設備が法令の基準に適合しているかどうかの実地調査を経て許可が判断されます。許可の有効期間は5年間で、更新には有効期間満了の5か月前までの申請が必要とされています。",
+                "sourceIds": [
+                  "mhlw-cell-processing-procedure"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "手続を怠った場合の扱いと定期報告",
+            "paragraphs": [
+              {
+                "text": "手続を経ずに特定細胞加工物の製造や再生医療等の提供を行うことは法律違反となり、罰則の対象となります。製造事業者は、製造実績の有無にかかわらず年1回の定期報告や、安全性に重大な影響を及ぼすおそれのある事態が生じた場合の報告も求められています。",
+                "sourceIds": [
+                  "mhlw-cell-processing-procedure"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "en": {
+        "sections": [
+          {
+            "title": "Manufacturing specified cell-processed products requires notification or a license",
+            "paragraphs": [
+              {
+                "text": "Japan's Act on the Safety of Regenerative Medicine requires anyone manufacturing a specified cell-processed product for use in regenerative medicine to either notify or obtain a license from the Minister of Health, Labour and Welfare. If a medical institution's administrator outsources manufacturing, it must be to a licensed or notified specified cell-processed product manufacturer.",
+                "sourceIds": [
+                  "egov-saisei-anzen-law"
+                ]
+              },
+              {
+                "text": "A license is required when the manufacturing facility is located outside a medical institution; approval follows an on-site inspection confirming that the cell-culture processing facility's structure and equipment meet the legal standards. Licenses are valid for five years, and renewal applications must be filed at least five months before expiry.",
+                "sourceIds": [
+                  "mhlw-cell-processing-procedure"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Consequences of skipping procedures and ongoing reporting",
+            "paragraphs": [
+              {
+                "text": "Manufacturing a specified cell-processed product or providing regenerative medicine without completing these procedures constitutes a violation of the law and is subject to penalties. Manufacturers must also submit an annual report — regardless of whether any manufacturing occurred — and report promptly if an event arises that could seriously affect safety.",
+                "sourceIds": [
+                  "mhlw-cell-processing-procedure"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "zh": {
+        "sections": [
+          {
+            "title": "制造特定细胞加工物需备案或获得许可",
+            "paragraphs": [
+              {
+                "text": "日本《再生医疗安全性确保法》规定，任何制造用于再生医疗的特定细胞加工物的主体，均须向厚生劳动大臣备案或取得许可。若医疗机构管理者委托他人制造，也必须委托给已获许可或已备案的特定细胞加工物制造企业。",
+                "sourceIds": [
+                  "egov-saisei-anzen-law"
+                ]
+              },
+              {
+                "text": "当制造设施设在医疗机构以外时需取得许可，须经过实地调查确认细胞培养加工设施的结构设备符合法定标准后方可获批。许可有效期为5年，续期申请须在到期前至少5个月提出。",
+                "sourceIds": [
+                  "mhlw-cell-processing-procedure"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "未履行手续的后果及持续报告义务",
+            "paragraphs": [
+              {
+                "text": "未完成上述手续即制造特定细胞加工物或提供再生医疗，将构成违法行为并受到处罚。制造企业无论当年是否实际制造，均须每年提交一次定期报告，如发生可能严重影响安全性的情况，也须及时报告。",
+                "sourceIds": [
+                  "mhlw-cell-processing-procedure"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
   }
 }

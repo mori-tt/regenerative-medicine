@@ -152,7 +152,7 @@ for (const [index, article] of sortedArticles.entries()) {
   };
 }
 
-if (Object.keys(records).length !== 208) {
+if (Object.keys(records).length !== 223) {
   throw new Error(`記事数が想定と異なります: ${Object.keys(records).length}`);
 }
 fs.writeFileSync(

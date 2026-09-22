@@ -1,9 +1,9 @@
 # 記事別の文献改稿台帳（2026-09-22）
 
-対象は /articles/ 配下の全208記事と英語・中国語版です。文献を使った編集改稿であり、医師監修や法的適合性の確定ではありません。独立した学会紹介ページ /jsrm/ と固定ページはこの208件に含みません。
+対象は /articles/ 配下の全223記事と英語・中国語版です。文献を使った編集改稿であり、医師監修や法的適合性の確定ではありません。独立した学会紹介ページ /jsrm/ と固定ページはこの208件に含みません。
 
-- 記事別追加本文：208件、各3言語。
-- 参照先：重複を除いて480 URL（うちPubMed 137件）。公的資料、原著、レビュー等を含みます。
+- 記事別追加本文：223件、各3言語。
+- 参照先：重複を除いて512 URL（うちPubMed 154件）。公的資料、原著、レビュー等を含みます。
 - 元原稿の訂正記録：576件（言語別）。
 - 数値は構造検査で集計したものです。検索の網羅性、すべての主張の正しさ、撤回の網羅的確認を保証する数値ではありません。
 
@@ -223,6 +223,21 @@
 | medicine-storage | 薬の保管方法：期限と置き場所 | 535 | 5 | 6 | official-guidance | 入力の３言語すべてを読んだ。PMDAの患者向けFAQと個別添付文書、厚生労働省のパンフレット・期限解説、横浜市の温度管理記事を開いて確認した。冷所指示を冷蔵庫に入れるだけで満たせるような説明を、製品別の条件・凍結防止へ修正。開封後の期限を剤形だけで判断せず、未開封の表示期限、内袋、単回容器の開封を区別した。古い試験教材からは安定した期限の基本概念のみを使用し、法令現況は引用していない。本文は商品名・特定の月数を挙げず、外袋と単回容器の開封指示を区別している。添付文書の出典名は正確な製品名のまま記録した。他の点眼薬への期限の一般化や購入推奨は行わず、すべての医薬品の安定性・廃棄方法を検証したものではない。 |
 | nobel-prize-guide | ノーベル生理学・医学賞の読み方 | 654 | 4 | 3 | official-guidance / abstract | Official Nobel scientific background directly fetched/read after browser failure; mouse original abstract inspected. FY2025 PMDA PDF directly read; product-specific conditional approvals not generalized. PubMed-linked abstracts were retrieved and read as actual MEDLINE abstract records through Europe PMC; full-text tags identify separately retrieved article texts, not search snippets. This is a targeted editorial audit, not a systematic review. |
 | science-events | 科学イベントの探し方：公開講座と見学会 | 664 | 2 | 0 | official-guidance / abstract | CiRA official substantive event page directly read; GRIPP2 actual abstract inspected. No current event availability or individual clinical advice asserted. PubMed-linked abstracts were retrieved and read as actual MEDLINE abstract records through Europe PMC; full-text tags identify separately retrieved article texts, not search snippets. This is a targeted editorial audit, not a systematic review. |
+| osteoporosis-basics | 骨粗しょう症とは：骨が弱くなる仕組みと骨折予防 | 447 | 3 | 0 | abstract | 骨免疫学のレビュー、内分泌領域の診療総説、運動介入のメタ解析の抄録3件を確認し要約。日本人での骨折疫学や国内ガイドラインとの整合、個別の薬剤選択の是非は確認していない。 |
+| thyroid-disease-basics | 甲状腺の病気の基礎：バセドウ病と橋本病 | 461 | 2 | 0 | abstract | バセドウ病の薬物療法に関するレビューと橋本病の概説レビューの抄録2件を確認し要約。手術・放射性ヨウ素療法の詳細な適応基準や日本国内の診療実態との突合は行っていない。 |
+| dementia-basics | 認知症の基礎：早期発見と受診の目安 | 544 | 2 | 0 | abstract | 認知症全般とアルツハイマー病に関する総説2件の抄録を確認し要約。日本国内の患者数推計や介護保険制度との対応関係は確認していない。 |
+| stroke-basics | 脳卒中の基礎：突然の症状とACT-FAST | 530 | 2 | 0 | abstract | 脳卒中の診断・急性期治療に関するJAMAレビューと、AHA/ASAの一次予防ガイドラインの抄録を確認し要約。日本脳卒中学会ガイドラインとの整合は確認していない。 |
+| heart-attack-basics | 心筋梗塞の基礎：胸の症状と救急要請の目安 | 392 | 2 | 0 | abstract | 急性心筋梗塞に関するLancetセミナーと救急領域のレビュー抄録を確認し要約。日本循環器学会ガイドラインとの数値対応は確認していない。 |
+| umbilical-cord-tissue-cells | 臍帯組織由来の幹細胞：ワルトンゼリーの特徴 | 438 | 2 | 0 | abstract / full-text | 臍帯ワルトンゼリー由来細胞のレビュー抄録と、米国CDCによる未承認臍帯血由来製品の感染事例報告を確認し要約。国内での提供実態や許可施設の状況は確認していない。 |
+| prp-therapy-basics | PRP療法とは：多血小板血漿を使う治療の位置づけ | 510 | 3 | 0 | abstract | PRPと膝変形性関節症に関するメタ解析とAAOS技術評価の抄録を確認し要約。美容目的や整形外科以外の適応でのPRP使用は対象にしていない。 |
+| stem-cell-administration-routes | 幹細胞治療の投与経路：点滴・局所投与・動脈投与の違い | 476 | 2 | 0 | abstract | 投与経路と心疾患モデルに関するレビュー、およびPET画像による動物実験の抄録を確認し要約。ヒトでの投与経路別の有効性比較データは今回対象にしていない。 |
+| exosome-cosmetic-claims | エクソソーム美容医療の科学的検証と注意点 | 490 | 2 | 0 | official-guidance | 厚生労働省が発出したエクソソーム試薬に関する事務連絡と、再生医療等提供機関向け周知文書の原文を確認して要約。化粧品表示に関する消費者庁の個別処分事例までは確認していない。 |
+| cell-processing-license-system | 特定細胞加工物の製造許可の仕組み | 384 | 2 | 0 | official-guidance | 再生医療等の安全性の確保等に関する法律の条文と、近畿厚生局が公開する特定細胞加工物の製造手続ページを確認して要約。手数料や様式の最新の改定状況は今後変更されうる。 |
+| treatment-eligibility-process | 再生医療の提供計画：治療を受けるまでの手続きの流れ | 384 | 2 | 0 | official-guidance | 厚生労働省・近畿厚生局が公開する再生医療等提供計画の手続ページと制度概要ページを確認して要約。個別医療機関の審査結果や委員会の運用実態までは確認していない。 |
+| drug-side-effect-relief-system | 医薬品副作用被害救済制度とは | 407 | 2 | 0 | official-guidance | PMDAが公表する制度概要ページと業務説明ページを確認して要約。令和5年度の決定件数など統計は今後の年度更新で変わりうる。 |
+| before-after-ad-regulation | 医療広告のビフォーアフター規制の要点 | 377 | 2 | 0 | official-guidance | 厚生労働省の医療広告ガイドライン本文と事例解説書を確認して要約。個別クリニックの違反認定事例までは対象にしていない。 |
+| animal-testing-3rs | 動物実験と3Rの原則 | 425 | 2 | 0 | official-guidance | 文部科学省の基本指針と環境省の飼養保管基準の原文を確認して要約。個別大学・研究機関の動物実験委員会の運用実態までは確認していない。 |
+| biobank-basics | バイオバンクの仕組み：試料と情報を研究に活かす | 389 | 2 | 0 | official-guidance | バイオバンク・ジャパンが公開する事業説明ページを確認して要約。他の国内バイオバンク（東北メディカル・メガバンク等）の個別運用の詳細までは対象にしていない。 |
 
 ## 管理と再確認
 

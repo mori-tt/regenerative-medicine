@@ -10588,5 +10588,365 @@
       }
     ],
     "auditNote": "入力の３言語すべてを読んだ。PMDAの患者向けFAQと個別添付文書、厚生労働省のパンフレット・期限解説、横浜市の温度管理記事を開いて確認した。冷所指示を冷蔵庫に入れるだけで満たせるような説明を、製品別の条件・凍結防止へ修正。開封後の期限を剤形だけで判断せず、未開封の表示期限、内袋、単回容器の開封を区別した。古い試験教材からは安定した期限の基本概念のみを使用し、法令現況は引用していない。本文は商品名・特定の月数を挙げず、外袋と単回容器の開封指示を区別している。添付文書の出典名は正確な製品名のまま記録した。他の点眼薬への期限の一般化や購入推奨は行わず、すべての医薬品の安定性・廃棄方法を検証したものではない。"
+  },
+  "treatment-eligibility-process": {
+    "sources": [
+      {
+        "id": "mhlw-teikyou-keikaku-procedure",
+        "title": "再生医療等提供計画の提出等に係る手続について",
+        "url": "https://kouseikyoku.mhlw.go.jp/kinki/iji/saisei/saisei_top_00005.html",
+        "studyType": "Official guidance (regional Health Bureau procedure page)",
+        "accessedScope": "official-guidance",
+        "checkedAt": "2026-09-23"
+      },
+      {
+        "id": "mhlw-saisei-iryou-overview",
+        "title": "再生・細胞医療、遺伝子治療について",
+        "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/iryou/saisei_iryou/index.html",
+        "studyType": "Official guidance (MHLW policy overview)",
+        "accessedScope": "official-guidance",
+        "checkedAt": "2026-09-23"
+      }
+    ],
+    "corrections": [],
+    "auditNote": "厚生労働省・近畿厚生局が公開する再生医療等提供計画の手続ページと制度概要ページを確認して要約。個別医療機関の審査結果や委員会の運用実態までは確認していない。",
+    "locales": {
+      "ja": {
+        "sections": [
+          {
+            "title": "再生医療等提供計画の提出と委員会審査",
+            "paragraphs": [
+              {
+                "text": "再生医療等を提供しようとする医療機関の管理者は、再生医療等提供計画を作成し、あらかじめ認定再生医療等委員会の意見を聴いたうえで地方厚生局に提出することが義務付けられています。提供計画の提出やその後の変更・中止・定期報告などの手続はオンラインの「e-再生医療」サイトを通じて行われます。",
+                "sourceIds": [
+                  "mhlw-teikyou-keikaku-procedure"
+                ]
+              },
+              {
+                "text": "手続を経ずに第一種再生医療等を提供した場合は1年以下の懲役または100万円以下の罰金、第二種・第三種の場合は50万円以下の罰金が科されうるとされ、無届・無許可での提供は法律違反として扱われます。",
+                "sourceIds": [
+                  "mhlw-teikyou-keikaku-procedure"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "患者が確認できる情報",
+            "paragraphs": [
+              {
+                "text": "提供する再生医療等の区分（第一種・第二種・第三種）によって審査の厳格さが異なり、リスクの高い第一種はより慎重な審査を経る仕組みになっています。治療を検討する際は、提供計画が受理されているか、審査を行った認定再生医療等委員会がどこかを確認することが、提供の適法性を判断する手がかりになります。",
+                "sourceIds": [
+                  "mhlw-saisei-iryou-overview"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "en": {
+        "sections": [
+          {
+            "title": "Submitting a provision plan and committee review",
+            "paragraphs": [
+              {
+                "text": "The administrator of a medical institution intending to provide regenerative medicine must prepare a 'regenerative medicine provision plan,' obtain the opinion of an accredited regenerative medicine committee, and submit the plan to the regional Health Bureau before starting treatment. Submission, subsequent changes, discontinuation, and periodic reporting are all handled through the online 'e-Saisei Iryo' system.",
+                "sourceIds": [
+                  "mhlw-teikyou-keikaku-procedure"
+                ]
+              },
+              {
+                "text": "Providing Category I regenerative medicine without completing these procedures can result in imprisonment of up to one year or a fine of up to 1 million yen, while unauthorized Category II or III provision can result in a fine of up to 500,000 yen; providing treatment without notification or approval is treated as a violation of the law.",
+                "sourceIds": [
+                  "mhlw-teikyou-keikaku-procedure"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "What patients can check",
+            "paragraphs": [
+              {
+                "text": "The rigor of review differs by category (I, II, or III), with the higher-risk Category I undergoing more careful scrutiny. When considering treatment, checking whether the provision plan has been accepted and identifying which accredited committee reviewed it can help gauge whether the provision is lawful.",
+                "sourceIds": [
+                  "mhlw-saisei-iryou-overview"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "zh": {
+        "sections": [
+          {
+            "title": "提交提供计划并接受委员会审查",
+            "paragraphs": [
+              {
+                "text": "拟提供再生医疗的医疗机构管理者须制定“再生医疗提供计划”，事先征询认定再生医疗等委员会的意见后，向地方厚生局提交。提交、后续变更、中止及定期报告等手续均通过在线的“e-再生医疗”系统办理。",
+                "sourceIds": [
+                  "mhlw-teikyou-keikaku-procedure"
+                ]
+              },
+              {
+                "text": "未完成上述手续而提供第一种再生医疗，可能被处以1年以下有期徒刑或100万日元以下罚款；未经许可提供第二种或第三种再生医疗，可能被处以50万日元以下罚款；未备案或未经批准提供治疗均被视为违法行为。",
+                "sourceIds": [
+                  "mhlw-teikyou-keikaku-procedure"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "患者可以确认的信息",
+            "paragraphs": [
+              {
+                "text": "根据风险等级（第一、二、三种）不同，审查的严格程度也不同，风险较高的第一种需经过更严格的审查。在考虑接受治疗前，确认提供计划是否已被受理，以及审查该计划的认定委员会是哪一个，有助于判断该项提供是否合法。",
+                "sourceIds": [
+                  "mhlw-saisei-iryou-overview"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "drug-side-effect-relief-system": {
+    "sources": [
+      {
+        "id": "pmda-relief-system-overview",
+        "title": "制度の概要｜医薬品副作用被害救済制度：一般国民の皆さまへ",
+        "url": "https://www.pmda.go.jp/kenkouhigai_camp/general01.html",
+        "studyType": "Official guidance (PMDA public information)",
+        "accessedScope": "official-guidance",
+        "checkedAt": "2026-09-23"
+      },
+      {
+        "id": "pmda-relief-services-business",
+        "title": "医薬品副作用被害救済制度に関する業務",
+        "url": "https://www.pmda.go.jp/relief-services/adr-sufferers/0001.html",
+        "studyType": "Official guidance (PMDA program description)",
+        "accessedScope": "official-guidance",
+        "checkedAt": "2026-09-23"
+      }
+    ],
+    "corrections": [],
+    "auditNote": "PMDAが公表する制度概要ページと業務説明ページを確認して要約。令和5年度の決定件数など統計は今後の年度更新で変わりうる。",
+    "locales": {
+      "ja": {
+        "sections": [
+          {
+            "title": "医薬品副作用被害救済制度の仕組み",
+            "paragraphs": [
+              {
+                "text": "医薬品副作用被害救済制度は、医薬品を適正に使用したにもかかわらず、入院を要するほど重篤な副作用による健康被害が生じた場合に、医療費や年金などの給付を行う公的制度として1980年に創設されました。財源は医薬品等製造販売業者からの拠出金でまかなわれています。",
+                "sourceIds": [
+                  "pmda-relief-system-overview"
+                ]
+              },
+              {
+                "text": "2014年11月からは再生医療等製品の副作用についても、この制度の対象に加えられました。給付の可否は、健康被害が医薬品等の副作用によるものかどうかや、適正に使用されたかどうかについて、厚生労働大臣が薬事審議会の意見を聴いて医学・薬学的に判定する仕組みです。",
+                "sourceIds": [
+                  "pmda-relief-services-business"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "給付の実績と対象外となる場合",
+            "paragraphs": [
+              {
+                "text": "令和5年度の決定件数は1,240件で、支給決定が1,016件（81.9％）、不支給決定が201件（16.2％）、取り下げが23件（1.9％）だったと公表されています。抗がん剤や免疫抑制剤など、疾病の性質上その適応で予測される重い副作用が避けられない医薬品の一部は、この救済制度の対象から除外されています。",
+                "sourceIds": [
+                  "pmda-relief-system-overview"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "en": {
+        "sections": [
+          {
+            "title": "How the drug side-effect relief system works",
+            "paragraphs": [
+              {
+                "text": "Japan's Relief System for Adverse Drug Reactions, created in 1980, provides benefits such as medical expenses and pensions to people who suffer serious health damage requiring hospitalization from a side effect of a drug that was used appropriately. It is funded by contributions from pharmaceutical marketing authorization holders.",
+                "sourceIds": [
+                  "pmda-relief-system-overview"
+                ]
+              },
+              {
+                "text": "Since November 2014, side effects of regenerative medicine products have also been covered by this system. Whether a case qualifies is judged medically and pharmacologically by the Minister of Health, Labour and Welfare, based on the opinion of the Pharmaceutical Affairs Council, after review by the Pharmaceuticals and Medical Devices Agency (PMDA).",
+                "sourceIds": [
+                  "pmda-relief-services-business"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Outcomes and exclusions",
+            "paragraphs": [
+              {
+                "text": "In fiscal year 2023, 1,240 decisions were made: 1,016 approvals (81.9%), 201 denials (16.2%), and 23 withdrawals (1.9%), according to published figures. Certain drugs, such as anticancer agents and immunosuppressants, are excluded from the system where severe side effects are an expected and unavoidable part of their approved use.",
+                "sourceIds": [
+                  "pmda-relief-system-overview"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "zh": {
+        "sections": [
+          {
+            "title": "药品不良反应救济制度的运作方式",
+            "paragraphs": [
+              {
+                "text": "日本的药品不良反应救济制度创立于1980年，为因正当使用药品而遭受需住院治疗的严重健康损害者提供医疗费、抚恤金等给付，资金来源为药品上市许可持有人的缴纳金。",
+                "sourceIds": [
+                  "pmda-relief-system-overview"
+                ]
+              },
+              {
+                "text": "自2014年11月起，再生医疗等制品的不良反应也纳入该制度的救济范围。是否给予救济由厚生劳动大臣在听取药事审议会意见后，基于医学与药学判断作出决定，此前需经独立行政法人医药品医疗器械综合机构（PMDA）审查。",
+                "sourceIds": [
+                  "pmda-relief-services-business"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "给付结果与除外情形",
+            "paragraphs": [
+              {
+                "text": "据公开数据，2023财年共作出1,240件决定，其中给付决定1,016件（81.9%），不给付决定201件（16.2%），撤回23件（1.9%）。部分药品（如抗癌药、免疫抑制剂等）因其批准用途本身即预期会出现难以避免的严重副作用，被排除在该救济制度之外。",
+                "sourceIds": [
+                  "pmda-relief-system-overview"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "before-after-ad-regulation": {
+    "sources": [
+      {
+        "id": "mhlw-medical-ad-guideline",
+        "title": "医業若しくは歯科医業又は病院若しくは診療所に関する広告等に関する指針（医療広告ガイドライン）",
+        "url": "https://www.mhlw.go.jp/content/10800000/001231163.pdf",
+        "studyType": "Official guidance (MHLW medical advertising guideline)",
+        "accessedScope": "official-guidance",
+        "checkedAt": "2026-09-23"
+      },
+      {
+        "id": "mhlw-medical-ad-case-studies",
+        "title": "医療広告規制におけるウェブサイトの事例解説書",
+        "url": "https://www.mhlw.go.jp/content/10800000/001147751.pdf",
+        "studyType": "Official guidance (MHLW case-study booklet)",
+        "accessedScope": "official-guidance",
+        "checkedAt": "2026-09-23"
+      }
+    ],
+    "corrections": [],
+    "auditNote": "厚生労働省の医療広告ガイドライン本文と事例解説書を確認して要約。個別クリニックの違反認定事例までは対象にしていない。",
+    "locales": {
+      "ja": {
+        "sections": [
+          {
+            "title": "ビフォーアフター写真が原則禁止される理由",
+            "paragraphs": [
+              {
+                "text": "医療広告ガイドラインは、治療等の内容や効果について患者等を誤認させるおそれがある治療の前後の写真等の広告を、省令に基づき禁止される広告類型の一つとして位置づけています。加工・修正した術前術後の写真の掲載は、虚偽広告として扱われるとされています。",
+                "sourceIds": [
+                  "mhlw-medical-ad-guideline"
+                ]
+              },
+              {
+                "text": "ガイドラインは、体験談の広告や、治療の効果を保証するかのような表現（「絶対安全」「必ず成功します」など）も同様に、医学上あり得ない、または患者の適切な受診機会を失わせるおそれがあるとして禁止しています。",
+                "sourceIds": [
+                  "mhlw-medical-ad-guideline"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "注意が必要な事例",
+            "paragraphs": [
+              {
+                "text": "厚生労働省が公表した事例解説書では、ビフォーアフター写真そのものは掲載しなくても、リンク遷移先にのみ治療内容・費用・主なリスクなどの詳細な説明を記載している事例や、バナー広告やSNS公式アカウントに十分な説明を伴わずビフォーアフター写真のみを掲載している事例が、注意が必要な広告として新たに整理されています。",
+                "sourceIds": [
+                  "mhlw-medical-ad-case-studies"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "en": {
+        "sections": [
+          {
+            "title": "Why before/after photos are generally prohibited",
+            "paragraphs": [
+              {
+                "text": "Japan's Medical Advertising Guidelines identify advertisements using before/after treatment photos that risk misleading patients about the content or effect of treatment as a category prohibited under ministerial ordinance. Posting retouched or edited before/after photos is treated as false advertising.",
+                "sourceIds": [
+                  "mhlw-medical-ad-guideline"
+                ]
+              },
+              {
+                "text": "The guidelines similarly prohibit advertisements using patient testimonials and expressions that guarantee outcomes (such as 'absolutely safe' or 'will definitely succeed'), on the grounds that such claims are medically implausible or risk depriving patients of the opportunity to make an appropriate choice of care.",
+                "sourceIds": [
+                  "mhlw-medical-ad-guideline"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Cases requiring particular caution",
+            "paragraphs": [
+              {
+                "text": "A case-study booklet published by MHLW newly documents cautionary examples such as websites that omit before/after photos on the main page but place detailed information about treatment content, cost, and major risks only on a linked page, and banner ads or clinic social media accounts that post before/after photos without adequate accompanying explanation.",
+                "sourceIds": [
+                  "mhlw-medical-ad-case-studies"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "zh": {
+        "sections": [
+          {
+            "title": "为何前后对比照片原则上被禁止",
+            "paragraphs": [
+              {
+                "text": "日本《医疗广告指南》将可能使患者对治疗内容或效果产生误解的治疗前后对比照片广告，列为省令规定禁止的广告类型之一。发布经过加工修饰的治疗前后照片将被视为虚假广告。",
+                "sourceIds": [
+                  "mhlw-medical-ad-guideline"
+                ]
+              },
+              {
+                "text": "该指南同样禁止使用患者体验谈的广告，以及保证疗效的表述（如“绝对安全”“必定成功”等），理由是这类说法在医学上不可能成立，或可能剥夺患者做出适当就医选择的机会。",
+                "sourceIds": [
+                  "mhlw-medical-ad-guideline"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "需特别注意的事例",
+            "paragraphs": [
+              {
+                "text": "厚生劳动省发布的一份案例解说手册新整理了若干需注意的事例，例如网站主页未展示前后对比照片，但仅在链接跳转后的页面提供治疗内容、费用及主要风险等详细说明；以及横幅广告或诊所官方社交媒体账号仅发布前后对比照片而缺乏充分说明。",
+                "sourceIds": [
+                  "mhlw-medical-ad-case-studies"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
   }
 }

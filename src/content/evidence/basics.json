@@ -9425,5 +9425,667 @@
       }
     ],
     "auditNote": "日英中全9段落を点検。電子顕微鏡一般を立体像とする説明を3言語で訂正。染色と蛍光の紹介、開催情報確認の勧めは維持。TEMとSEM、試料作製、光毒性を追加し、特定の展示の開催や装置性能の数値は未確認のまま記載していない。"
+  },
+  "osteoporosis-basics": {
+    "sources": [
+      {
+        "id": "pmid-37475866",
+        "title": "The effect of cytokines on osteoblasts and osteoclasts in bone remodeling in osteoporosis: a review",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/37475866/",
+        "studyType": "Narrative review of osteoimmunology mechanisms",
+        "accessedScope": "abstract",
+        "checkedAt": "2026-09-23"
+      },
+      {
+        "id": "pmid-39448132",
+        "title": "Postmenopausal Osteoporosis: A Review of Latest Guidelines",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/39448132/",
+        "studyType": "Narrative review of diagnostic and treatment guidelines",
+        "accessedScope": "abstract",
+        "checkedAt": "2026-09-23"
+      },
+      {
+        "id": "pmid-36749350",
+        "title": "Exercise training and bone mineral density in postmenopausal women: an updated systematic review and meta-analysis of intervention studies with emphasis on potential moderators",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/36749350/",
+        "studyType": "Systematic review and meta-analysis; 80 trials, 5,581 participants",
+        "accessedScope": "abstract",
+        "checkedAt": "2026-09-23"
+      }
+    ],
+    "corrections": [],
+    "auditNote": "骨免疫学のレビュー、内分泌領域の診療総説、運動介入のメタ解析の抄録3件を確認し要約。日本人での骨折疫学や国内ガイドラインとの整合、個別の薬剤選択の是非は確認していない。",
+    "locales": {
+      "ja": {
+        "sections": [
+          {
+            "title": "骨代謝を制御する免疫細胞シグナル",
+            "paragraphs": [
+              {
+                "text": "骨免疫学の総説では、破骨細胞と骨芽細胞の働きはTNFファミリーやインターロイキン、インターフェロンなど複数のサイトカインによって調整されており、骨粗しょう症の病態にはこれら免疫由来のシグナルが関わっていると整理されています。骨のリモデリングを免疫系との相互作用として捉える視点が、治療標的の探索にもつながっています。",
+                "sourceIds": [
+                  "pmid-37475866"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "診断基準と治療、運動の効果",
+            "paragraphs": [
+              {
+                "text": "内分泌領域の総説では、骨密度のTスコアがマイナス2.5以下であることが骨粗しょう症の診断基準とされ、骨折リスクは2030年までに50％増加すると見込まれています。治療期間は骨折リスクの継続的な評価と薬剤休止のタイミングをふまえて個別に判断するとされています。",
+                "sourceIds": [
+                  "pmid-39448132"
+                ]
+              },
+              {
+                "text": "閉経後女性を対象とした80件の運動介入試験（参加者5,581人）のメタ解析では、6か月以上の運動により腰椎・大腿骨頸部・大腿骨全体の骨密度がわずかに改善したと報告されています。骨量減少の有無や閉経後の時期、指導の有無による効果の差は明確ではなかったとされ、運動は薬物治療の代替ではなく生活習慣としての位置づけになります。",
+                "sourceIds": [
+                  "pmid-36749350"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "en": {
+        "sections": [
+          {
+            "title": "Immune signaling that governs bone turnover",
+            "paragraphs": [
+              {
+                "text": "A review of bone immunology describes how osteoclast and osteoblast activity is coordinated by multiple cytokines, including the TNF family, interleukins, and interferons, and situates these immune-derived signals within the pathogenesis of osteoporosis. Viewing bone remodeling as an interaction with the immune system also informs the search for new treatment targets.",
+                "sourceIds": [
+                  "pmid-37475866"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Diagnostic criteria, treatment, and the effect of exercise",
+            "paragraphs": [
+              {
+                "text": "A review in an endocrinology clinics series states that a bone mineral density T-score of -2.5 or lower defines osteoporosis, and that fracture incidence is projected to rise 50% by 2030. Treatment duration is individualized based on ongoing fracture-risk monitoring and the timing of potential drug holidays.",
+                "sourceIds": [
+                  "pmid-39448132"
+                ]
+              },
+              {
+                "text": "A meta-analysis of 80 exercise intervention trials in postmenopausal women (5,581 participants) found small improvements in bone mineral density at the lumbar spine, femoral neck, and total hip after at least 6 months of exercise. Effects did not differ clearly by baseline bone status, menopausal stage, or supervision, positioning exercise as a lifestyle measure rather than a substitute for drug therapy.",
+                "sourceIds": [
+                  "pmid-36749350"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "zh": {
+        "sections": [
+          {
+            "title": "调控骨代谢的免疫信号",
+            "paragraphs": [
+              {
+                "text": "一篇骨免疫学综述指出，破骨细胞与成骨细胞的活动由TNF家族、白细胞介素、干扰素等多种细胞因子共同调节，并将这些免疫来源的信号纳入骨质疏松症发病机制的讨论。将骨重塑视为与免疫系统相互作用的过程，也为寻找新的治疗靶点提供了思路。",
+                "sourceIds": [
+                  "pmid-37475866"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "诊断标准、治疗与运动的效果",
+            "paragraphs": [
+              {
+                "text": "一篇内分泌学期刊综述指出，骨密度T值≤-2.5为骨质疏松症的诊断标准，预计到2030年骨折发生率将上升50%。治疗时长需结合持续的骨折风险评估及可能的药物假期时机进行个体化判断。",
+                "sourceIds": [
+                  "pmid-39448132"
+                ]
+              },
+              {
+                "text": "一项针对绝经后女性、纳入80项运动干预试验（5,581名参与者）的荟萃分析显示，坚持6个月以上运动后，腰椎、股骨颈及全髋部的骨密度均有小幅改善。效果在基础骨量状况、绝经阶段或是否有指导之间并无明显差异，提示运动是一种生活方式措施，而非药物治疗的替代。",
+                "sourceIds": [
+                  "pmid-36749350"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "thyroid-disease-basics": {
+    "sources": [
+      {
+        "id": "pmid-39701285",
+        "title": "Management Aspects of Medical Therapy in Graves Disease",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/39701285/",
+        "studyType": "Narrative review of medical management",
+        "accessedScope": "abstract",
+        "checkedAt": "2026-09-23"
+      },
+      {
+        "id": "pmid-28315909",
+        "title": "A concise review of Hashimoto thyroiditis (HT) and the importance of iodine, selenium, vitamin D and gluten on the autoimmunity and dietary management of HT patients. Points that need more investigation",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/28315909/",
+        "studyType": "Narrative review",
+        "accessedScope": "abstract",
+        "checkedAt": "2026-09-23"
+      }
+    ],
+    "corrections": [],
+    "auditNote": "バセドウ病の薬物療法に関するレビューと橋本病の概説レビューの抄録2件を確認し要約。手術・放射性ヨウ素療法の詳細な適応基準や日本国内の診療実態との突合は行っていない。",
+    "locales": {
+      "ja": {
+        "sections": [
+          {
+            "title": "自己抗体が甲状腺ホルモンの分泌を左右する",
+            "paragraphs": [
+              {
+                "text": "バセドウ病の薬物療法に関する総説では、抗甲状腺薬・放射性ヨウ素・手術のいずれかで治療するとされ、近年は抗甲状腺薬が第一選択として広く用いられる傾向にあると報告されています。TSH受容体抗体の値は治療期間の決定や再発可能性の評価に重要な役割を持つとされています。",
+                "sourceIds": [
+                  "pmid-39701285"
+                ]
+              },
+              {
+                "text": "同総説では、抗甲状腺薬に加えてベータ遮断薬やグルココルチコイド、ヨウ素を含む薬剤を状況に応じて併用するとされ、適切な用量の抗甲状腺薬は長期使用時や妊娠中でも安全性が確認されているとしています。",
+                "sourceIds": [
+                  "pmid-39701285"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "橋本病の経過と栄養素の関わり",
+            "paragraphs": [
+              {
+                "text": "橋本病に関する総説では、遺伝要因と環境要因の相互作用によって生じる慢性自己免疫性甲状腺炎と位置づけられ、びまん性または結節性の甲状腺腫、無症候性から永続的な甲状腺機能低下症まで臨床像に幅があるとされています。多くの患者では生涯にわたるレボチロキシンの補充が必要になるとされています。",
+                "sourceIds": [
+                  "pmid-28315909"
+                ]
+              },
+              {
+                "text": "同総説では、ヨウ素・セレン・ビタミンDの摂取状況や、グルテン制限食の位置づけが橋本病の経過に影響しうる要因として取り上げられていますが、著者らはさらなる検証が必要な点が残ると述べています。",
+                "sourceIds": [
+                  "pmid-28315909"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "en": {
+        "sections": [
+          {
+            "title": "How autoantibodies drive thyroid hormone output",
+            "paragraphs": [
+              {
+                "text": "A review of medical therapy for Graves disease describes treatment options as antithyroid drugs, radioactive iodine, or surgery, noting that antithyroid drugs have increasingly become the preferred initial choice in recent practice. Thyrotropin receptor antibody levels are described as playing an important role in deciding treatment duration and assessing the likelihood of recurrence.",
+                "sourceIds": [
+                  "pmid-39701285"
+                ]
+              },
+              {
+                "text": "The same review notes that beta-blockers, glucocorticoids, and iodine-containing agents may be added to antithyroid drugs depending on the situation, and that antithyroid drugs at appropriate doses have been shown to be safe for long-term use and during pregnancy.",
+                "sourceIds": [
+                  "pmid-39701285"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "The course of Hashimoto thyroiditis and nutrient factors",
+            "paragraphs": [
+              {
+                "text": "A review of Hashimoto thyroiditis describes it as a chronic autoimmune thyroiditis arising from interacting genetic and environmental factors, with a clinical spectrum ranging from diffuse or nodular goiter with normal thyroid function to subclinical or permanent hypothyroidism. Most patients require lifelong levothyroxine replacement.",
+                "sourceIds": [
+                  "pmid-28315909"
+                ]
+              },
+              {
+                "text": "The same review discusses iodine, selenium, and vitamin D status, as well as gluten-restricted diets, as factors that may influence the course of Hashimoto thyroiditis, while noting that several of these points require further investigation.",
+                "sourceIds": [
+                  "pmid-28315909"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "zh": {
+        "sections": [
+          {
+            "title": "自身抗体如何影响甲状腺激素分泌",
+            "paragraphs": [
+              {
+                "text": "一篇关于Graves病（巴塞多氏病）药物治疗的综述指出，治疗方式包括抗甲状腺药物、放射性碘或手术，近年来抗甲状腺药物日益成为首选的初始治疗方式。促甲状腺激素受体抗体水平被认为在决定治疗时长和评估复发可能性方面具有重要作用。",
+                "sourceIds": [
+                  "pmid-39701285"
+                ]
+              },
+              {
+                "text": "该综述还指出，可根据情况在抗甲状腺药物基础上联合使用β受体阻滞剂、糖皮质激素或含碘制剂，且适当剂量的抗甲状腺药物在长期使用及妊娠期间均已证实具有良好的安全性。",
+                "sourceIds": [
+                  "pmid-39701285"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "桥本甲状腺炎的病程与营养因素",
+            "paragraphs": [
+              {
+                "text": "一篇关于桥本甲状腺炎的综述将其定位为遗传因素与环境因素相互作用引发的慢性自身免疫性甲状腺炎，临床表现从伴甲状腺功能正常的弥漫性或结节性甲状腺肿，到亚临床或永久性甲状腺功能减退不等。大多数患者需要终生补充左甲状腺素。",
+                "sourceIds": [
+                  "pmid-28315909"
+                ]
+              },
+              {
+                "text": "同一综述还讨论了碘、硒、维生素D摄入状况以及无麸质饮食对桥本甲状腺炎病程可能产生的影响，但作者指出其中部分内容仍需进一步验证。",
+                "sourceIds": [
+                  "pmid-28315909"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "dementia-basics": {
+    "sources": [
+      {
+        "id": "pmid-31638686",
+        "title": "Diagnosis and Management of Dementia: Review",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/31638686/",
+        "studyType": "Narrative review (JAMA)",
+        "accessedScope": "abstract",
+        "checkedAt": "2026-09-23"
+      },
+      {
+        "id": "pmid-30704681",
+        "title": "The Alzheimer's Disease Clinical Spectrum: Diagnosis and Management",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/30704681/",
+        "studyType": "Narrative review",
+        "accessedScope": "abstract",
+        "checkedAt": "2026-09-23"
+      }
+    ],
+    "corrections": [],
+    "auditNote": "認知症全般とアルツハイマー病に関する総説2件の抄録を確認し要約。日本国内の患者数推計や介護保険制度との対応関係は確認していない。",
+    "locales": {
+      "ja": {
+        "sections": [
+          {
+            "title": "認知症の診断の進め方",
+            "paragraphs": [
+              {
+                "text": "認知症に関する総説では、世界の患者数は4700万人、2050年には1億3100万人に増えると見込まれており、診断には本人だけでなく身近な人からの情報も含めた病歴聴取と、記憶・言語・注意・視空間認知・遂行機能・気分を確認する診察が必要とされています。局所神経症状があれば脳卒中を疑うなど、身体診察も原因の手がかりになるとされています。",
+                "sourceIds": [
+                  "pmid-31638686"
+                ]
+              },
+              {
+                "text": "同総説では、簡易な認知機能検査で判断がつかない場合に神経心理検査を行い、非典型例（65歳未満での発症、急速な進行、記憶以外の複数領域の障害など）では髄液検査や遺伝学的検査も検討するとされています。",
+                "sourceIds": [
+                  "pmid-31638686"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "アルツハイマー病の経過管理",
+            "paragraphs": [
+              {
+                "text": "アルツハイマー病の臨床像に関する総説では、症状が出現する数十年前から病理学的変化が始まるとされ、早期診断と多職種による継続的な管理が重要と位置づけられています。バイオマーカーは診断の確からしさを高める手段として位置づけられています。",
+                "sourceIds": [
+                  "pmid-30704681"
+                ]
+              },
+              {
+                "text": "薬物療法としては軽度から重度まで使えるアセチルコリンエステラーゼ阻害薬（ドネペジルなど）や中等度から重度に用いるメマンチンがあり、パーキンソン病に伴う認知症にはリバスチグミンが使われるとされています。読書や運動、家族との交流といった非薬物的な関わりも症状の軽減に役立つ一方、薬物療法の効果は限定的である点も総説は指摘しています。",
+                "sourceIds": [
+                  "pmid-31638686"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "en": {
+        "sections": [
+          {
+            "title": "How dementia is diagnosed",
+            "paragraphs": [
+              {
+                "text": "A review of dementia states that 47 million people live with the condition worldwide, a number projected to rise to 131 million by 2050, and that diagnosis requires a history of cognitive decline and impaired daily activities corroborated by a close friend or family member, along with a mental status examination covering memory, language, attention, visuospatial cognition, executive function, and mood. Physical examination can also point to the cause, for example focal neurologic abnormalities suggesting stroke.",
+                "sourceIds": [
+                  "pmid-31638686"
+                ]
+              },
+              {
+                "text": "The same review notes that neuropsychological testing can help when brief screening is inconclusive, and that cerebrospinal fluid assays or genetic testing may be considered in atypical cases, such as onset before age 65, rapid progression, or impairment across multiple domains beyond memory.",
+                "sourceIds": [
+                  "pmid-31638686"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Managing the course of Alzheimer's disease",
+            "paragraphs": [
+              {
+                "text": "A review of the Alzheimer's disease clinical spectrum states that the underlying pathological changes begin decades before symptoms appear, making timely diagnosis and ongoing multidisciplinary management important. Biomarkers are described as a tool that increases diagnostic confidence.",
+                "sourceIds": [
+                  "pmid-30704681"
+                ]
+              },
+              {
+                "text": "Pharmacologic options include acetylcholinesterase inhibitors such as donepezil for mild to severe dementia and memantine for moderate to severe dementia, with rivastigmine used for Parkinson disease dementia. Non-pharmacologic approaches such as reading, exercise, and family social engagement may help, though the review notes that the efficacy of available drug treatments remains limited.",
+                "sourceIds": [
+                  "pmid-31638686"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "zh": {
+        "sections": [
+          {
+            "title": "认知症的诊断流程",
+            "paragraphs": [
+              {
+                "text": "一篇关于认知症的综述指出，全球约有4700万人患有认知症，预计到2050年将增至1.31亿人。诊断需要结合患者本人及熟悉其情况的家人朋友提供的病史，以及评估记忆、语言、注意力、视空间认知、执行功能和情绪的精神状态检查。局灶性神经系统体征（如提示脑卒中）等体格检查结果也有助于寻找病因。",
+                "sourceIds": [
+                  "pmid-31638686"
+                ]
+              },
+              {
+                "text": "该综述指出，当简易认知筛查结果不能明确判断时可进行神经心理学测试，对于不典型病例（如65岁以下发病、进展迅速、记忆以外多个认知域受累）可考虑脑脊液检查或基因检测。",
+                "sourceIds": [
+                  "pmid-31638686"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "阿尔茨海默病的病程管理",
+            "paragraphs": [
+              {
+                "text": "一篇关于阿尔茨海默病临床谱系的综述指出，其病理变化在症状出现前数十年即已开始，因此及时诊断与多学科持续管理十分重要。生物标志物被视为提高诊断确定性的手段。",
+                "sourceIds": [
+                  "pmid-30704681"
+                ]
+              },
+              {
+                "text": "药物治疗包括适用于轻至重度的乙酰胆碱酯酶抑制剂（如多奈哌齐）以及适用于中至重度的美金刚，帕金森病相关认知症则使用利斯的明。阅读、运动和家庭社交等非药物干预也有助于缓解症状，但该综述同时指出现有药物治疗的效果仍然有限。",
+                "sourceIds": [
+                  "pmid-31638686"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "stroke-basics": {
+    "sources": [
+      {
+        "id": "pmid-33724327",
+        "title": "Diagnosis and Management of Transient Ischemic Attack and Acute Ischemic Stroke: A Review",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/33724327/",
+        "studyType": "Narrative review (JAMA)",
+        "accessedScope": "abstract",
+        "checkedAt": "2026-09-23"
+      },
+      {
+        "id": "pmid-39429201",
+        "title": "2024 Guideline for the Primary Prevention of Stroke: A Guideline From the American Heart Association/American Stroke Association",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/39429201/",
+        "studyType": "Clinical practice guideline",
+        "accessedScope": "abstract",
+        "checkedAt": "2026-09-23"
+      }
+    ],
+    "corrections": [],
+    "auditNote": "脳卒中の診断・急性期治療に関するJAMAレビューと、AHA/ASAの一次予防ガイドラインの抄録を確認し要約。日本脳卒中学会ガイドラインとの整合は確認していない。",
+    "locales": {
+      "ja": {
+        "sections": [
+          {
+            "title": "症状の見分け方と急性期治療",
+            "paragraphs": [
+              {
+                "text": "脳卒中に関する総説では、突然の局所神経症状に画像上の急性梗塞所見を伴うものを脳梗塞、所見を伴わず症状が消失するものを一過性脳虚血発作（TIA）と区別しています。TIA患者の7.5〜17.4％はその後3か月以内に脳卒中を起こすと報告されています。",
+                "sourceIds": [
+                  "pmid-33724327"
+                ]
+              },
+              {
+                "text": "日常生活に支障をきたす脳梗塞で発症4.5時間以内であれば血栓溶解療法、主幹動脈閉塞があり発症6時間以内（画像所見によっては24時間以内）であれば血栓回収療法によって機能的自立を得られる割合が有意に高まったと報告されています。",
+                "sourceIds": [
+                  "pmid-33724327"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "再発予防と生涯を通じた対策",
+            "paragraphs": [
+              {
+                "text": "高リスクの一過性脳虚血発作や軽症脳梗塞では、症状発現から24時間以内に開始し3週間続ける抗血小板薬の2剤併用療法が、その後の単剤療法と比べて脳卒中の再発率を7.8％から5.2％に減らしたと報告されています。頸動脈狭窄や心房細動がある場合は、それぞれ頸動脈血行再建や抗凝固療法が推奨されています。",
+                "sourceIds": [
+                  "pmid-33724327"
+                ]
+              },
+              {
+                "text": "米国心臓協会と米国脳卒中協会による一次予防ガイドラインでは、血圧・血糖・脂質・喫煙・体重・身体活動・睡眠・食事からなる「生涯における8つの健康習慣（Life's Essential 8）」の最適化を通じた生涯にわたる脳卒中予防戦略が示され、性別に応じたスクリーニングの推奨も新たに加えられています。",
+                "sourceIds": [
+                  "pmid-39429201"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "en": {
+        "sections": [
+          {
+            "title": "Recognizing symptoms and acute treatment",
+            "paragraphs": [
+              {
+                "text": "A review on stroke distinguishes acute ischemic stroke, in which sudden focal neurologic deficits are accompanied by imaging evidence of infarction, from transient ischemic attack (TIA), in which deficits resolve without infarction on imaging. An estimated 7.5% to 17.4% of TIA patients go on to have a stroke within 3 months.",
+                "sourceIds": [
+                  "pmid-33724327"
+                ]
+              },
+              {
+                "text": "For disabling acute ischemic stroke presenting within 4.5 hours, thrombolysis, and for large-vessel occlusion presenting within 6 hours (or up to 24 hours in selected imaging-based cases), mechanical thrombectomy, were both associated with a significantly higher likelihood of functional independence.",
+                "sourceIds": [
+                  "pmid-33724327"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Preventing recurrence and lifelong measures",
+            "paragraphs": [
+              {
+                "text": "In high-risk TIA or minor stroke, dual antiplatelet therapy started within 24 hours of onset and continued for 3 weeks, followed by single-agent therapy, reduced the stroke recurrence rate from 7.8% to 5.2% compared with single antiplatelet therapy alone. Carotid revascularization is recommended for symptomatic carotid stenosis, and anticoagulation for atrial fibrillation.",
+                "sourceIds": [
+                  "pmid-33724327"
+                ]
+              },
+              {
+                "text": "The American Heart Association/American Stroke Association's primary prevention guideline sets out lifelong stroke-prevention strategies built around optimizing 'Life's Essential 8' — blood pressure, blood glucose, lipids, smoking, weight, physical activity, sleep, and diet — and newly adds sex-specific screening recommendations.",
+                "sourceIds": [
+                  "pmid-39429201"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "zh": {
+        "sections": [
+          {
+            "title": "识别症状与急性期治疗",
+            "paragraphs": [
+              {
+                "text": "一篇关于卒中的综述将突发局灶性神经功能缺损且影像学显示急性梗死的情况定义为脑梗死（缺血性卒中），将症状消失且无梗死影像学证据的情况定义为短暂性脑缺血发作（TIA）。据报道，7.5%至17.4%的TIA患者会在3个月内发生卒中。",
+                "sourceIds": [
+                  "pmid-33724327"
+                ]
+              },
+              {
+                "text": "对于影响日常生活的脑梗死患者，若在发病4.5小时内接受溶栓治疗，或存在大血管闭塞并在发病6小时内（部分依据影像学评估可延长至24小时）接受机械取栓治疗，实现功能独立的比例均显著提高。",
+                "sourceIds": [
+                  "pmid-33724327"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "预防复发与终生管理",
+            "paragraphs": [
+              {
+                "text": "在高危TIA或轻型脑梗死患者中，发病24小时内启动并持续3周的双联抗血小板治疗，相较于随后的单药治疗，将卒中复发率从7.8%降至5.2%。合并症状性颈动脉狭窄者建议行颈动脉血运重建，合并心房颤动者建议抗凝治疗。",
+                "sourceIds": [
+                  "pmid-33724327"
+                ]
+              },
+              {
+                "text": "美国心脏协会/美国卒中协会的一级预防指南提出了以优化血压、血糖、血脂、吸烟、体重、身体活动、睡眠和饮食这“生命八要素（Life's Essential 8）”为核心的终生卒中预防策略，并新增了针对性别的筛查建议。",
+                "sourceIds": [
+                  "pmid-39429201"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "heart-attack-basics": {
+    "sources": [
+      {
+        "id": "pmid-27502078",
+        "title": "Acute myocardial infarction",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/27502078/",
+        "studyType": "Narrative review (Lancet seminar)",
+        "accessedScope": "abstract",
+        "checkedAt": "2026-09-23"
+      },
+      {
+        "id": "pmid-36396216",
+        "title": "Management of Acute Coronary Syndrome",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/36396216/",
+        "studyType": "Narrative review (emergency medicine)",
+        "accessedScope": "abstract",
+        "checkedAt": "2026-09-23"
+      }
+    ],
+    "corrections": [],
+    "auditNote": "急性心筋梗塞に関するLancetセミナーと救急領域のレビュー抄録を確認し要約。日本循環器学会ガイドラインとの数値対応は確認していない。",
+    "locales": {
+      "ja": {
+        "sections": [
+          {
+            "title": "急性心筋梗塞の病態と治療の進歩",
+            "paragraphs": [
+              {
+                "text": "急性心筋梗塞に関する総説では、ST上昇型・非ST上昇型のいずれも治療の考え方は共通しており、リスク層別化の精緻化、侵襲的治療（経皮的冠動脈インターベンションや血栓溶解療法）の普及、抗血小板薬・抗凝固薬の進歩、スタチンなど二次予防の強化によって、この10年で予後が大きく改善したと報告されています。",
+                "sourceIds": [
+                  "pmid-27502078"
+                ]
+              },
+              {
+                "text": "同総説では、心筋梗塞は依然として世界的な死亡・罹患の主要因であるとしつつも、迅速な血行再建を優先する医療提供体制の整備が予後改善に寄与したと述べています。",
+                "sourceIds": [
+                  "pmid-27502078"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "救急外来での見分け方と初期対応",
+            "paragraphs": [
+              {
+                "text": "救急領域の総説では、胸痛を訴える患者の主要な鑑別として急性冠症候群（不安定狭心症、非ST上昇型心筋梗塞、ST上昇型心筋梗塞）が挙げられ、その中でどの病型かを見分けることが初期の診断・治療方針を左右するとされています。急性冠症候群の診断・対応の遅れは医療訴訟の原因にもなりやすいとされ、救急外来での迅速な評価の重要性が強調されています。",
+                "sourceIds": [
+                  "pmid-36396216"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "en": {
+        "sections": [
+          {
+            "title": "Pathophysiology and treatment advances in acute myocardial infarction",
+            "paragraphs": [
+              {
+                "text": "A review of acute myocardial infarction notes that management approaches for ST-elevation and non-ST-elevation myocardial infarction are broadly similar, and that prognosis has improved substantially over the past decade through more refined risk stratification, wider use of invasive strategies (percutaneous coronary intervention or fibrinolysis), advances in antiplatelet and anticoagulant agents, and greater use of secondary prevention such as statins.",
+                "sourceIds": [
+                  "pmid-27502078"
+                ]
+              },
+              {
+                "text": "The same review states that myocardial infarction remains a leading cause of death and illness worldwide, but that care-delivery systems prioritizing immediate revascularization have contributed to the improved outcomes.",
+                "sourceIds": [
+                  "pmid-27502078"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Recognition and initial response in the emergency department",
+            "paragraphs": [
+              {
+                "text": "A review focused on the emergency department notes that acute coronary syndrome — encompassing unstable angina, non-ST-elevation myocardial infarction, and ST-elevation myocardial infarction — is a leading consideration in patients presenting with chest pain, and that distinguishing among these subtypes shapes initial diagnostic and treatment decisions. Failure to properly diagnose and manage acute coronary syndrome is described as a frequent cause of medico-legal litigation, underscoring the importance of rapid emergency department evaluation.",
+                "sourceIds": [
+                  "pmid-36396216"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "zh": {
+        "sections": [
+          {
+            "title": "急性心肌梗死的病理生理与治疗进展",
+            "paragraphs": [
+              {
+                "text": "一篇关于急性心肌梗死的综述指出，ST段抬高型与非ST段抬高型心肌梗死的治疗思路大体相似，过去十年间由于风险分层的完善、介入治疗（经皮冠状动脉介入或溶栓）的普及、抗血小板与抗凝药物的进步，以及他汀类药物等二级预防措施的加强，预后已显著改善。",
+                "sourceIds": [
+                  "pmid-27502078"
+                ]
+              },
+              {
+                "text": "该综述指出，心肌梗死目前仍是全球主要的死亡和患病原因之一，但优先实现快速血运重建的医疗服务体系建设对改善预后作出了贡献。",
+                "sourceIds": [
+                  "pmid-27502078"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "急诊科的识别与初步处理",
+            "paragraphs": [
+              {
+                "text": "一篇聚焦急诊科的综述指出，在因胸痛就诊的患者中，急性冠脉综合征（包括不稳定型心绞痛、非ST段抬高型心肌梗死和ST段抬高型心肌梗死）是主要的鉴别诊断之一，区分具体亚型对早期诊断和治疗方案的制定至关重要。未能正确诊断和处理急性冠脉综合征也是医疗诉讼的常见原因，凸显了急诊科快速评估的重要性。",
+                "sourceIds": [
+                  "pmid-36396216"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
   }
 }

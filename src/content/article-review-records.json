@@ -7201,5 +7201,536 @@
       "sourceCount": 2,
       "note": "CiRA official substantive event page directly read; GRIPP2 actual abstract inspected. No current event availability or individual clinical advice asserted. PubMed-linked abstracts were retrieved and read as actual MEDLINE abstract records through Europe PMC; full-text tags identify separately retrieved article texts, not search snippets. This is a targeted editorial audit, not a systematic review."
     }
+  },
+  "osteoporosis-basics": {
+    "slug": "osteoporosis-basics",
+    "title": "骨粗しょう症とは：骨が弱くなる仕組みと骨折予防",
+    "lastEditedAt": "2026-09-23",
+    "imageKey": "microscope",
+    "publishAt": "2028-06-25",
+    "publishedAt": "",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "topic_sources_mapped_professional_review_pending",
+    "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
+    "referenceCount": 4,
+    "editorialEvidence": {
+      "revision": "literature-v2",
+      "contentHash": "ba9a34f4d280c51a36c66e064d82f259a84553660a47cb9067d63de70fc64e72",
+      "checkedAt": "2026-09-23",
+      "status": "editorial_source_review",
+      "sourceCount": 3,
+      "note": "骨免疫学のレビュー、内分泌領域の診療総説、運動介入のメタ解析の抄録3件を確認し要約。日本人での骨折疫学や国内ガイドラインとの整合、個別の薬剤選択の是非は確認していない。"
+    },
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。"
+  },
+  "thyroid-disease-basics": {
+    "slug": "thyroid-disease-basics",
+    "title": "甲状腺の病気の基礎：バセドウ病と橋本病",
+    "lastEditedAt": "2026-09-23",
+    "imageKey": "doctor-consultation",
+    "publishAt": "2028-06-28",
+    "publishedAt": "",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "topic_sources_mapped_professional_review_pending",
+    "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
+    "referenceCount": 3,
+    "editorialEvidence": {
+      "revision": "literature-v2",
+      "contentHash": "3fc5744b8c36b4853cff17f3cff91cebddebf2883a8b4f7ed31cdf0f3de69929",
+      "checkedAt": "2026-09-23",
+      "status": "editorial_source_review",
+      "sourceCount": 2,
+      "note": "バセドウ病の薬物療法に関するレビューと橋本病の概説レビューの抄録2件を確認し要約。手術・放射性ヨウ素療法の詳細な適応基準や日本国内の診療実態との突合は行っていない。"
+    },
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。"
+  },
+  "dementia-basics": {
+    "slug": "dementia-basics",
+    "title": "認知症の基礎：早期発見と受診の目安",
+    "lastEditedAt": "2026-09-23",
+    "imageKey": "laboratory",
+    "publishAt": "2028-07-01",
+    "publishedAt": "",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "topic_sources_mapped_professional_review_pending",
+    "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
+    "referenceCount": 3,
+    "editorialEvidence": {
+      "revision": "literature-v2",
+      "contentHash": "e2762a4edf0b960a7aeb14ac6adeb60c7e528ef833116db7fa653771ac41c2c8",
+      "checkedAt": "2026-09-23",
+      "status": "editorial_source_review",
+      "sourceCount": 2,
+      "note": "認知症全般とアルツハイマー病に関する総説2件の抄録を確認し要約。日本国内の患者数推計や介護保険制度との対応関係は確認していない。"
+    },
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。"
+  },
+  "stroke-basics": {
+    "slug": "stroke-basics",
+    "title": "脳卒中の基礎：突然の症状とACT-FAST",
+    "lastEditedAt": "2026-09-23",
+    "imageKey": "medical-research",
+    "publishAt": "2028-07-04",
+    "publishedAt": "",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "topic_sources_mapped_professional_review_pending",
+    "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "public_health_instruction"
+    ],
+    "referenceCount": 3,
+    "editorialEvidence": {
+      "revision": "literature-v2",
+      "contentHash": "67c2645a4898bd8949782da7342a281362f56269b2b36be9cfba01f24f1944f1",
+      "checkedAt": "2026-09-23",
+      "status": "editorial_source_review",
+      "sourceCount": 2,
+      "note": "脳卒中の診断・急性期治療に関するJAMAレビューと、AHA/ASAの一次予防ガイドラインの抄録を確認し要約。日本脳卒中学会ガイドラインとの整合は確認していない。"
+    },
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。"
+  },
+  "heart-attack-basics": {
+    "slug": "heart-attack-basics",
+    "title": "心筋梗塞の基礎：胸の症状と救急要請の目安",
+    "lastEditedAt": "2026-09-23",
+    "imageKey": "microscope",
+    "publishAt": "2028-07-07",
+    "publishedAt": "",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "topic_sources_mapped_professional_review_pending",
+    "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "public_health_instruction"
+    ],
+    "referenceCount": 3,
+    "editorialEvidence": {
+      "revision": "literature-v2",
+      "contentHash": "51e398f19a0a8abd9a631312a94249846bd9706f3c4173accd8c4176eaa08da2",
+      "checkedAt": "2026-09-23",
+      "status": "editorial_source_review",
+      "sourceCount": 2,
+      "note": "急性心筋梗塞に関するLancetセミナーと救急領域のレビュー抄録を確認し要約。日本循環器学会ガイドラインとの数値対応は確認していない。"
+    },
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。"
+  },
+  "umbilical-cord-tissue-cells": {
+    "slug": "umbilical-cord-tissue-cells",
+    "title": "臍帯組織由来の幹細胞：ワルトンゼリーの特徴",
+    "lastEditedAt": "2026-09-23",
+    "imageKey": "laboratory",
+    "publishAt": "2028-07-10",
+    "publishedAt": "",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "topic_sources_mapped_professional_review_pending",
+    "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
+    "riskFlags": [
+      "safety_or_risk_claim",
+      "cost_or_system_claim"
+    ],
+    "referenceCount": 3,
+    "editorialEvidence": {
+      "revision": "literature-v2",
+      "contentHash": "c483d72db7c74ed156784925ca620428e2e4aebc9255196f1c4ec20bcab037d7",
+      "checkedAt": "2026-09-23",
+      "status": "editorial_source_review",
+      "sourceCount": 2,
+      "note": "臍帯ワルトンゼリー由来細胞のレビュー抄録と、米国CDCによる未承認臍帯血由来製品の感染事例報告を確認し要約。国内での提供実態や許可施設の状況は確認していない。"
+    },
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。"
+  },
+  "prp-therapy-basics": {
+    "slug": "prp-therapy-basics",
+    "title": "PRP療法とは：多血小板血漿を使う治療の位置づけ",
+    "lastEditedAt": "2026-09-23",
+    "imageKey": "researcher",
+    "publishAt": "2028-07-13",
+    "publishedAt": "",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "topic_sources_mapped_professional_review_pending",
+    "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim",
+      "cost_or_system_claim",
+      "regulatory_or_advertising_claim"
+    ],
+    "referenceCount": 4,
+    "editorialEvidence": {
+      "revision": "literature-v2",
+      "contentHash": "4882ba58d5567a6892c72a046992ded4216cfa6c5c7c7f9ae098ff5b18969cc6",
+      "checkedAt": "2026-09-23",
+      "status": "editorial_source_review",
+      "sourceCount": 3,
+      "note": "PRPと膝変形性関節症に関するメタ解析とAAOS技術評価の抄録を確認し要約。美容目的や整形外科以外の適応でのPRP使用は対象にしていない。"
+    },
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。"
+  },
+  "stem-cell-administration-routes": {
+    "slug": "stem-cell-administration-routes",
+    "title": "幹細胞治療の投与経路：点滴・局所投与・動脈投与の違い",
+    "lastEditedAt": "2026-09-23",
+    "imageKey": "medical-research",
+    "publishAt": "2028-07-16",
+    "publishedAt": "",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "topic_sources_mapped_professional_review_pending",
+    "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim",
+      "regulatory_or_advertising_claim"
+    ],
+    "referenceCount": 3,
+    "editorialEvidence": {
+      "revision": "literature-v2",
+      "contentHash": "a051e6a8c6f6002f4fb87cf886e9ee2ac275eb29d68694c8fc3085e8fab6e07b",
+      "checkedAt": "2026-09-23",
+      "status": "editorial_source_review",
+      "sourceCount": 2,
+      "note": "投与経路と心疾患モデルに関するレビュー、およびPET画像による動物実験の抄録を確認し要約。ヒトでの投与経路別の有効性比較データは今回対象にしていない。"
+    },
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。"
+  },
+  "exosome-cosmetic-claims": {
+    "slug": "exosome-cosmetic-claims",
+    "title": "エクソソーム美容医療の科学的検証と注意点",
+    "lastEditedAt": "2026-09-23",
+    "imageKey": "microscope",
+    "publishAt": "2028-07-19",
+    "publishedAt": "",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "topic_sources_mapped_professional_review_pending",
+    "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim",
+      "cost_or_system_claim",
+      "regulatory_or_advertising_claim"
+    ],
+    "referenceCount": 2,
+    "editorialEvidence": {
+      "revision": "literature-v2",
+      "contentHash": "5e13c355e0fcfe1169d65597a100a52b687ea91d19f4fd362cbca7248e019c41",
+      "checkedAt": "2026-09-23",
+      "status": "editorial_source_review",
+      "sourceCount": 2,
+      "note": "厚生労働省が発出したエクソソーム試薬に関する事務連絡と、再生医療等提供機関向け周知文書の原文を確認して要約。化粧品表示に関する消費者庁の個別処分事例までは確認していない。"
+    },
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。"
+  },
+  "cell-processing-license-system": {
+    "slug": "cell-processing-license-system",
+    "title": "特定細胞加工物の製造許可の仕組み",
+    "lastEditedAt": "2026-09-23",
+    "imageKey": "laboratory",
+    "publishAt": "2028-07-22",
+    "publishedAt": "",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "topic_sources_mapped_professional_review_pending",
+    "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
+    "referenceCount": 2,
+    "editorialEvidence": {
+      "revision": "literature-v2",
+      "contentHash": "9a58d7a616c0956cbbc73a96811cc3cca0f3c0430147c242817ea7a0388209e5",
+      "checkedAt": "2026-09-23",
+      "status": "editorial_source_review",
+      "sourceCount": 2,
+      "note": "再生医療等の安全性の確保等に関する法律の条文と、近畿厚生局が公開する特定細胞加工物の製造手続ページを確認して要約。手数料や様式の最新の改定状況は今後変更されうる。"
+    },
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。"
+  },
+  "treatment-eligibility-process": {
+    "slug": "treatment-eligibility-process",
+    "title": "再生医療の提供計画：治療を受けるまでの手続きの流れ",
+    "lastEditedAt": "2026-09-23",
+    "imageKey": "medical-team",
+    "publishAt": "2028-07-25",
+    "publishedAt": "",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "topic_sources_mapped_professional_review_pending",
+    "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim",
+      "regulatory_or_advertising_claim",
+      "individual_decision_context"
+    ],
+    "referenceCount": 3,
+    "editorialEvidence": {
+      "revision": "literature-v2",
+      "contentHash": "69f1ef0d1c4f00096f7cb06b90502f9c4273c68062e5ba346f596a3d1efb8c83",
+      "checkedAt": "2026-09-23",
+      "status": "editorial_source_review",
+      "sourceCount": 2,
+      "note": "厚生労働省・近畿厚生局が公開する再生医療等提供計画の手続ページと制度概要ページを確認して要約。個別医療機関の審査結果や委員会の運用実態までは確認していない。"
+    },
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。"
+  },
+  "drug-side-effect-relief-system": {
+    "slug": "drug-side-effect-relief-system",
+    "title": "医薬品副作用被害救済制度とは",
+    "lastEditedAt": "2026-09-23",
+    "imageKey": "medical-research",
+    "publishAt": "2028-07-28",
+    "publishedAt": "",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "topic_sources_mapped_professional_review_pending",
+    "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim",
+      "individual_decision_context"
+    ],
+    "referenceCount": 3,
+    "editorialEvidence": {
+      "revision": "literature-v2",
+      "contentHash": "802c3a5172d1c7e58e7ab8fc751934cd91cd057257086890168a98fc375fe781",
+      "checkedAt": "2026-09-23",
+      "status": "editorial_source_review",
+      "sourceCount": 2,
+      "note": "PMDAが公表する制度概要ページと業務説明ページを確認して要約。令和5年度の決定件数など統計は今後の年度更新で変わりうる。"
+    },
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。"
+  },
+  "before-after-ad-regulation": {
+    "slug": "before-after-ad-regulation",
+    "title": "医療広告のビフォーアフター規制の要点",
+    "lastEditedAt": "2026-09-23",
+    "imageKey": "doctor-consultation",
+    "publishAt": "2028-08-01",
+    "publishedAt": "",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "topic_sources_mapped_professional_review_pending",
+    "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "regulatory_or_advertising_claim",
+      "individual_decision_context"
+    ],
+    "referenceCount": 2,
+    "editorialEvidence": {
+      "revision": "literature-v2",
+      "contentHash": "7b8fafdb26df50af3a7df1daaff233f8123bffa4486a331c351efc96be6c3d3a",
+      "checkedAt": "2026-09-23",
+      "status": "editorial_source_review",
+      "sourceCount": 2,
+      "note": "厚生労働省の医療広告ガイドライン本文と事例解説書を確認して要約。個別クリニックの違反認定事例までは対象にしていない。"
+    },
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。"
+  },
+  "animal-testing-3rs": {
+    "slug": "animal-testing-3rs",
+    "title": "動物実験と3Rの原則",
+    "lastEditedAt": "2026-09-23",
+    "imageKey": "researcher",
+    "publishAt": "2028-08-04",
+    "publishedAt": "",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "topic_sources_mapped_professional_review_pending",
+    "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "regulatory_or_advertising_claim"
+    ],
+    "referenceCount": 3,
+    "editorialEvidence": {
+      "revision": "literature-v2",
+      "contentHash": "b035ae9b02531ea364e070c8cd3aab4d7304d09379b19febecfd797f3c93c4cc",
+      "checkedAt": "2026-09-23",
+      "status": "editorial_source_review",
+      "sourceCount": 2,
+      "note": "文部科学省の基本指針と環境省の飼養保管基準の原文を確認して要約。個別大学・研究機関の動物実験委員会の運用実態までは確認していない。"
+    },
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。"
+  },
+  "biobank-basics": {
+    "slug": "biobank-basics",
+    "title": "バイオバンクの仕組み：試料と情報を研究に活かす",
+    "lastEditedAt": "2026-09-23",
+    "imageKey": "microscope",
+    "publishAt": "2028-08-07",
+    "publishedAt": "",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "topic_sources_mapped_professional_review_pending",
+    "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
+    "riskFlags": [
+      "cost_or_system_claim"
+    ],
+    "referenceCount": 3,
+    "editorialEvidence": {
+      "revision": "literature-v2",
+      "contentHash": "a16094137864c433e1401414dc86ec21e68ecdf343ef6e4d8caea2d8c2f821fb",
+      "checkedAt": "2026-09-23",
+      "status": "editorial_source_review",
+      "sourceCount": 2,
+      "note": "バイオバンク・ジャパンが公開する事業説明ページを確認して要約。他の国内バイオバンク（東北メディカル・メガバンク等）の個別運用の詳細までは対象にしていない。"
+    },
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。"
   }
 }

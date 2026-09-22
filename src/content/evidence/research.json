@@ -6758,5 +6758,245 @@
     },
     "corrections": [],
     "auditNote": "CiRA official substantive event page directly read; GRIPP2 actual abstract inspected. No current event availability or individual clinical advice asserted. PubMed-linked abstracts were retrieved and read as actual MEDLINE abstract records through Europe PMC; full-text tags identify separately retrieved article texts, not search snippets. This is a targeted editorial audit, not a systematic review."
+  },
+  "animal-testing-3rs": {
+    "sources": [
+      {
+        "id": "mext-animal-experiment-guideline",
+        "title": "研究機関等における動物実験等の実施に関する基本方針",
+        "url": "https://www.mext.go.jp/b_menu/hakusho/nc/06060904.htm",
+        "studyType": "Official guidance (MEXT basic guideline)",
+        "accessedScope": "official-guidance",
+        "checkedAt": "2026-09-23"
+      },
+      {
+        "id": "env-animal-care-standard",
+        "title": "実験動物の飼養及び保管並びに苦痛の軽減に関する基準",
+        "url": "https://www.env.go.jp/nature/dobutsu/aigo/2_data/nt_h180428_88.html",
+        "studyType": "Official guidance (Ministry of the Environment standard)",
+        "accessedScope": "official-guidance",
+        "checkedAt": "2026-09-23"
+      }
+    ],
+    "corrections": [],
+    "auditNote": "文部科学省の基本指針と環境省の飼養保管基準の原文を確認して要約。個別大学・研究機関の動物実験委員会の運用実態までは確認していない。",
+    "locales": {
+      "ja": {
+        "sections": [
+          {
+            "title": "3Rの原則とは",
+            "paragraphs": [
+              {
+                "text": "文部科学省の基本指針は、動物実験に関する国際的な理念である3R原則を明文化しています。Replacement（できる限り動物を供する方法に代わり得るものを利用すること）、Reduction（科学上の目的を達成できる範囲で使用数をできる限り少なくすること）、Refinement（利用に必要な限度でできる限り動物に苦痛を与えない方法によること）の3つです。",
+                "sourceIds": [
+                  "mext-animal-experiment-guideline"
+                ]
+              },
+              {
+                "text": "この指針は、生命科学の進展や医療技術の開発のために動物実験がやむを得ない手段であるとしつつ、動物愛護の観点から適正に行われなければならないという基本的な考え方に基づいています。",
+                "sourceIds": [
+                  "mext-animal-experiment-guideline"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "実験動物の飼養・保管と苦痛軽減の基準",
+            "paragraphs": [
+              {
+                "text": "環境省が定める実験動物の飼養及び保管並びに苦痛の軽減に関する基準は、実験の実施にあたって麻酔薬・鎮痛薬の投与や実験期間の短縮など、できる限り実験動物に苦痛を与えない配慮を求めています。実験を終了・中断した動物や回復の見込みがない動物を安楽死させる場合の方法（致死量以上の麻酔薬投与や頸椎脱臼など）についても定めています。",
+                "sourceIds": [
+                  "env-animal-care-standard"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "en": {
+        "sections": [
+          {
+            "title": "What the 3Rs mean",
+            "paragraphs": [
+              {
+                "text": "Japan's Ministry of Education, Culture, Sports, Science and Technology (MEXT) basic guideline codifies the internationally recognized 3Rs principle for animal experimentation: Replacement (using alternatives to animals wherever the scientific purpose can still be achieved), Reduction (using the smallest number of animals that can still achieve the scientific purpose), and Refinement (using methods that cause as little pain as possible within the limits necessary for the scientific purpose).",
+                "sourceIds": [
+                  "mext-animal-experiment-guideline"
+                ]
+              },
+              {
+                "text": "The guideline states that, while animal experiments remain a necessary means for advancing life science and developing medical technology, they must be carried out appropriately from the standpoint of animal welfare.",
+                "sourceIds": [
+                  "mext-animal-experiment-guideline"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Standards for housing, care, and reducing pain",
+            "paragraphs": [
+              {
+                "text": "The Ministry of the Environment's standard on the care, housing, and pain relief of laboratory animals calls for measures such as administering anesthesia or analgesics and shortening the duration of experiments wherever possible, to minimize pain to laboratory animals. It also specifies methods for euthanizing animals whose experiments have ended or been discontinued, or that have no prospect of recovery, such as administering an overdose of anesthetic or cervical dislocation.",
+                "sourceIds": [
+                  "env-animal-care-standard"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "zh": {
+        "sections": [
+          {
+            "title": "3R原则的含义",
+            "paragraphs": [
+              {
+                "text": "日本文部科学省（MEXT）的基本方针明确了国际公认的动物实验3R原则：替代（Replacement，在能达到科学目的的范围内尽量使用可替代动物的方法）、减少（Reduction，在能达到科学目的的范围内尽量减少使用的动物数量）、优化（Refinement，在实现科学目的所需的最低限度内尽量采用给动物造成痛苦最小的方法）。",
+                "sourceIds": [
+                  "mext-animal-experiment-guideline"
+                ]
+              },
+              {
+                "text": "该方针指出，虽然动物实验对于推动生命科学进步和开发医疗技术仍是不可或缺的手段，但必须基于动物福利的观点适当实施。",
+                "sourceIds": [
+                  "mext-animal-experiment-guideline"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "实验动物饲养保管及减轻痛苦的标准",
+            "paragraphs": [
+              {
+                "text": "日本环境省制定的《实验动物饲养保管及减轻痛苦标准》要求在实验中尽可能采取给予麻醉药、镇痛药以及缩短实验时间等措施，以尽量减轻实验动物的痛苦。该标准还规定了对已结束或中止实验、或无康复希望的动物实施安乐死的方法，如给予过量麻醉药或颈椎脱臼法等。",
+                "sourceIds": [
+                  "env-animal-care-standard"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "biobank-basics": {
+    "sources": [
+      {
+        "id": "biobankjp-samples-info",
+        "title": "BBJの試料と情報　－対象疾患/DNA/血清/ゲノムデータ/臨床情報",
+        "url": "https://biobankjp.org/researchers/488",
+        "studyType": "Official guidance (BioBank Japan program description)",
+        "accessedScope": "official-guidance",
+        "checkedAt": "2026-09-23"
+      },
+      {
+        "id": "biobankjp-about",
+        "title": "BBJの取組みと組織体制",
+        "url": "https://biobankjp.org/about/201",
+        "studyType": "Official guidance (BioBank Japan program description)",
+        "accessedScope": "official-guidance",
+        "checkedAt": "2026-09-23"
+      }
+    ],
+    "corrections": [],
+    "auditNote": "バイオバンク・ジャパンが公開する事業説明ページを確認して要約。他の国内バイオバンク（東北メディカル・メガバンク等）の個別運用の詳細までは対象にしていない。",
+    "locales": {
+      "ja": {
+        "sections": [
+          {
+            "title": "バイオバンクの仕組みと役割",
+            "paragraphs": [
+              {
+                "text": "バイオバンク・ジャパン（BBJ）の説明では、バイオバンクとは患者や協力者から提供された血液・組織などの生体試料を研究資源として保管・管理し、医学研究に役立てる仕組みとされています。試料は氏名などの個人情報を削除し、研究用IDを付けて管理されます。",
+                "sourceIds": [
+                  "biobankjp-about"
+                ]
+              },
+              {
+                "text": "BBJは2003年度から2017年度にかけて、全国の協力医療機関を通じて約27万人分のDNA試料と臨床情報、約20万人分の血清試料を収集したと公表されています。試料は生活習慣病を含む51の対象疾患の患者から提供されたものです。",
+                "sourceIds": [
+                  "biobankjp-samples-info"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "試料・情報の利用手続き",
+            "paragraphs": [
+              {
+                "text": "BBJの試料・情報を研究に利用する際は、内外の専門家からなる試料等利用審査会の審査を経る必要があり、外部有識者によるアドバイザリーボードやELSI検討委員会の助言も受けながら事業が運営されているとされています。ゲノムデータなどの解析結果は、公的データベースを通じて公開・共有される仕組みも整備されています。",
+                "sourceIds": [
+                  "biobankjp-about"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "en": {
+        "sections": [
+          {
+            "title": "How a biobank works",
+            "paragraphs": [
+              {
+                "text": "According to BioBank Japan (BBJ), a biobank collects and manages biological samples such as blood and tissue donated by patients and volunteers as a research resource for medical research. Samples are stored with personal identifiers such as names removed and replaced with research IDs.",
+                "sourceIds": [
+                  "biobankjp-about"
+                ]
+              },
+              {
+                "text": "BBJ reports collecting DNA samples and clinical information from about 270,000 people, and serum samples from about 200,000 people, through cooperating medical institutions nationwide between fiscal years 2003 and 2017. The samples came from patients with 51 target diseases, including common lifestyle-related conditions.",
+                "sourceIds": [
+                  "biobankjp-samples-info"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "How samples and data can be used",
+            "paragraphs": [
+              {
+                "text": "Using BBJ's samples and data for research requires review by a sample and information utilization review board composed of domestic and international experts, with the program also guided by an external advisory board and an ELSI (ethical, legal, and social implications) committee. Genomic and other analysis results are made publicly available and shared through public databases.",
+                "sourceIds": [
+                  "biobankjp-about"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "zh": {
+        "sections": [
+          {
+            "title": "生物样本库(Biobank)的运作方式",
+            "paragraphs": [
+              {
+                "text": "据BioBank Japan（BBJ）介绍，生物样本库将患者及志愿者捐赠的血液、组织等生物样本作为研究资源加以收集和管理，用于医学研究。样本在去除姓名等个人信息后，以研究编号进行保管。",
+                "sourceIds": [
+                  "biobankjp-about"
+                ]
+              },
+              {
+                "text": "据BBJ公布的数据，2003至2017财年间，通过全国合作医疗机构，共收集约27万人份的DNA样本及临床信息，以及约20万人份的血清样本。这些样本来自51种目标疾病（包括常见生活方式相关疾病）的患者。",
+                "sourceIds": [
+                  "biobankjp-samples-info"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "样本与数据的使用流程",
+            "paragraphs": [
+              {
+                "text": "研究人员若要使用BBJ的样本和数据，须经过由国内外专家组成的样本信息利用审查委员会的审查，项目运营还接受外部顾问委员会及伦理法律社会影响（ELSI）委员会的指导意见。基因组等分析结果通过公共数据库对外公开与共享。",
+                "sourceIds": [
+                  "biobankjp-about"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
   }
 }
