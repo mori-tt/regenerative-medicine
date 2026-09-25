@@ -68,7 +68,7 @@ function flags(block, category) {
     values.push("regulatory_or_advertising_claim");
   if (/119|救急|止血|薬の保管|献血/.test(block))
     values.push("public_health_instruction");
-  if (category === "treatment") values.push("individual_decision_context");
+  if (category === "cost-access" || category === "safety") values.push("individual_decision_context");
   return [...new Set(values)];
 }
 const rawIndexBySlug = new Map(
@@ -152,8 +152,8 @@ for (const [index, article] of sortedArticles.entries()) {
   };
 }
 
-if (Object.keys(records).length !== 223) {
-  throw new Error(`記事数が想定と異なります: ${Object.keys(records).length}`);
+if (Object.keys(records).length !== articles.length) {
+  throw new Error(`記事数が想定と異なります: ${Object.keys(records).length} (raw: ${articles.length})`);
 }
 fs.writeFileSync(
   "src/content/article-review-records.json",

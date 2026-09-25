@@ -60,6 +60,16 @@
       "rightsStatus": "manual_rights_check_required",
       "license": "Unsplash License"
     },
+    "msc-biodistribution-eggenhofer-2012": {
+      "src": "/images/articles/msc-biodistribution-eggenhofer-2012.jpg",
+      "alt": "マウスに51Cr標識間葉系幹細胞を静脈投与した後の各臓器の放射活性分布。投与1時間後は肺に60%以上、24時間後は肝臓への割合が増加する論文の棒グラフ",
+      "altEn": "Bar charts from a paper showing organ distribution of radioactivity after IV infusion of Cr-51-labeled MSCs in mice: over 60% in lungs at 1 hour, rising liver share at 24 hours",
+      "altZh": "论文柱状图：小鼠静脉输注51Cr标记间充质干细胞后各器官放射活性分布，1小时后肺占60%以上，24小时后肝占比上升",
+      "sourceUrl": "https://www.frontiersin.org/journals/immunology/articles/10.3389/fimmu.2012.00297/full",
+      "credit": "Eggenhofer E et al., Frontiers in Immunology 2012, Figure 2 (CC BY)",
+      "license": "CC BY (Creative Commons Attribution)",
+      "rightsStatus": "verified"
+    },
     "hospital-care": {
       "src": "/images/articles/hospital-care.jpg",
       "alt": "医師の白衣と聴診器",
@@ -72,10 +82,15 @@
     }
   },
   "categoryDefaults": {
-    "basics": ["microscope", "doctor-consultation", "laboratory", "medical-research"],
-    "stem-cells": ["microscope", "laboratory", "researcher", "medical-research"],
-    "treatment": ["doctor-consultation", "hospital-care", "medical-team", "medical-research"],
-    "research": ["laboratory", "researcher", "microscope", "medical-team"]
+    "stem-basics": ["microscope", "doctor-consultation", "laboratory", "medical-research"],
+    "in-body": ["microscope", "medical-research", "laboratory", "researcher"],
+    "anti-aging": ["medical-research", "doctor-consultation", "microscope", "hospital-care"],
+    "efficacy": ["laboratory", "medical-research", "researcher", "microscope"],
+    "safety": ["doctor-consultation", "hospital-care", "medical-team", "medical-research"],
+    "cell-types": ["microscope", "laboratory", "researcher", "medical-research"],
+    "compare-therapies": ["laboratory", "microscope", "medical-research", "doctor-consultation"],
+    "cost-access": ["doctor-consultation", "hospital-care", "medical-team", "laboratory"],
+    "mechanisms": ["laboratory", "researcher", "microscope", "medical-team"]
   },
   "assignments": {}
 }

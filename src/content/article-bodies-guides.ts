@@ -6,7 +6,7 @@ export type GuideSection = { title: string; paragraphs: string[] };
 
 export const articleGuideSections: Record<SiteLocale, Record<string, GuideSection[]>> = {
   en: {
-    basics: [
+    "stem-basics": [
       {
         title: "Connecting this knowledge to treatment discussions",
         paragraphs: [
@@ -22,7 +22,7 @@ export const articleGuideSections: Record<SiteLocale, Record<string, GuideSectio
         ],
       },
     ],
-    "stem-cells": [
+    "cell-types": [
       {
         title: "Cell names alone never evaluate",
         paragraphs: [
@@ -38,7 +38,7 @@ export const articleGuideSections: Record<SiteLocale, Record<string, GuideSectio
         ],
       },
     ],
-    treatment: [
+    "cost-access": [
       {
         title: "Four axes to confirm in consultations",
         paragraphs: [
@@ -54,7 +54,7 @@ export const articleGuideSections: Record<SiteLocale, Record<string, GuideSectio
         ],
       },
     ],
-    research: [
+    mechanisms: [
       {
         title: "Turning results into four questions",
         paragraphs: [
@@ -72,7 +72,7 @@ export const articleGuideSections: Record<SiteLocale, Record<string, GuideSectio
     ],
   },
   zh: {
-    basics: [
+    "stem-basics": [
       {
         title: "把这些知识连接到治疗话题时",
         paragraphs: [
@@ -88,7 +88,7 @@ export const articleGuideSections: Record<SiteLocale, Record<string, GuideSectio
         ],
       },
     ],
-    "stem-cells": [
+    "cell-types": [
       {
         title: "仅凭细胞名无法评价",
         paragraphs: [
@@ -104,7 +104,7 @@ export const articleGuideSections: Record<SiteLocale, Record<string, GuideSectio
         ],
       },
     ],
-    treatment: [
+    "cost-access": [
       {
         title: "门诊确认四轴",
         paragraphs: [
@@ -120,7 +120,7 @@ export const articleGuideSections: Record<SiteLocale, Record<string, GuideSectio
         ],
       },
     ],
-    research: [
+    mechanisms: [
       {
         title: "把研究结果变成四个问题",
         paragraphs: [

@@ -196,7 +196,7 @@ export default function Home() {
               効果だけでなく、リスクや費用も。医師に相談する前の確認事項を整理しましょう。
             </p>
           </div>
-          <Link className="button outline" href="/categories/treatment/">
+          <Link className="button outline" href="/categories/cost-access/">
             確認したいことを読む <Icon name="arrow" size={19} />
           </Link>
         </div>

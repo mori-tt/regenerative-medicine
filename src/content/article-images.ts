@@ -6,7 +6,7 @@ export const articleImages = Object.fromEntries(
 ) as Record<string, ArticleImage>;
 
 export function articleImageFor(category: string, index: number, imageKey?: string) {
-  const set = media.categoryDefaults[category as keyof typeof media.categoryDefaults] ?? media.categoryDefaults.basics;
+  const set = media.categoryDefaults[category as keyof typeof media.categoryDefaults] ?? media.categoryDefaults["stem-basics"];
   const key = imageKey ?? set[index % set.length];
   return articleImages[key] ?? articleImages[set[index % set.length]];
 }

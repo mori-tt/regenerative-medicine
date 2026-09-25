@@ -13,3 +13,8 @@
 - [Unsplash License](https://unsplash.com/license)
 
 人物が写る画像は、治療効果や特定の医療機関を示すものではなく、記事のテーマを伝えるイメージとしてのみ使用します。
+
+## 論文図表（CC BY）
+
+- `msc-biodistribution-eggenhofer-2012.jpg`: Eggenhofer E ら "Mesenchymal stem cells are short-lived and do not migrate beyond the lungs after intravenous infusion"（Frontiers in Immunology, 2012, Figure 2）。Frontiers は CC BY のオープンアクセス誌で、帰属表示を付けて転載可能。記事「点滴で投与された幹細胞はどこへ行く？体内分布の研究」（slug: `stem-cell-biodistribution`）内の模式図の下に掲載。動物実験の一条件の結果である旨を図注に明記。
+- 画像自体は取得元のプレビュー解像度（約390px幅）のまま。印刷品質の用途には原論文サイトから高解像度版の取得を推奨。

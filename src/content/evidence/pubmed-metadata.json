@@ -16,7 +16,22 @@
       "Journal Article",
       "Research Support, Non-U.S. Gov't"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
+  },
+  "8520830": {
+    "title": "Infectious disease transmission through cell, tissue, and organ transplantation: reducing the risk through donor selection.",
+    "authors": [
+      "Eastlund T"
+    ],
+    "journal": "Cell transplantation",
+    "year": "1995",
+    "doi": "10.1177/096368979500400507",
+    "publicationTypes": [
+      "Journal Article",
+      "Research Support, Non-U.S. Gov't",
+      "Review"
+    ],
+    "checkedAt": "2026-09-25"
   },
   "9676667": {
     "title": "Effect on the quality of peer review of blinding reviewers and asking them to sign their reports: a randomized controlled trial.",
@@ -33,7 +48,7 @@
       "Journal Article",
       "Randomized Controlled Trial"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "9804556": {
     "title": "Embryonic stem cell lines derived from human blastocysts.",
@@ -53,7 +68,7 @@
       "Journal Article",
       "Research Support, Non-U.S. Gov't"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "11253156": {
     "title": "Frailty in older adults: evidence for a phenotype.",
@@ -78,7 +93,7 @@
       "Journal Article",
       "Research Support, U.S. Gov't, P.H.S."
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "12110735": {
     "title": "A controlled trial of arthroscopic surgery for osteoarthritis of the knee.",
@@ -102,7 +117,7 @@
       "Randomized Controlled Trial",
       "Research Support, U.S. Gov't, Non-P.H.S."
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "12147742": {
     "title": "Stem cell properties of human dental pulp stem cells.",
@@ -124,7 +139,7 @@
       "Journal Article",
       "Research Support, U.S. Gov't, P.H.S."
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "12683469": {
     "title": "The cumulative cost of additional wakefulness: dose-response effects on neurobehavioral functions and sleep physiology from chronic sleep restriction and total sleep deprivation.",
@@ -145,7 +160,7 @@
       "Research Support, U.S. Gov't, Non-P.H.S.",
       "Research Support, U.S. Gov't, P.H.S."
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "12962545": {
     "title": "A perfect correlate does not a surrogate make.",
@@ -159,7 +174,7 @@
     "publicationTypes": [
       "Journal Article"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "15169549": {
     "title": "The level of non-citation of articles within a journal as a measure of quality: a comparison to the impact factor.",
@@ -175,7 +190,23 @@
       "Comparative Study",
       "Journal Article"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
+  },
+  "15494428": {
+    "title": "Human mesenchymal stem cells modulate allogeneic immune cell responses.",
+    "authors": [
+      "Aggarwal S",
+      "Pittenger MF"
+    ],
+    "journal": "Blood",
+    "year": "2005",
+    "doi": "10.1182/blood-2004-04-1559",
+    "publicationTypes": [
+      "Comparative Study",
+      "Journal Article",
+      "Research Support, U.S. Gov't, Non-P.H.S."
+    ],
+    "checkedAt": "2026-09-25"
   },
   "15716955": {
     "title": "Rejuvenation of aged progenitor cells by exposure to a young systemic environment.",
@@ -196,7 +227,7 @@
       "Research Support, U.S. Gov't, Non-P.H.S.",
       "Research Support, U.S. Gov't, P.H.S."
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "15772165": {
     "title": "Low O2 tensions and the prevention of differentiation of hES cells.",
@@ -213,7 +244,23 @@
       "Research Support, N.I.H., Extramural",
       "Research Support, U.S. Gov't, P.H.S."
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
+  },
+  "16619257": {
+    "title": "Mesenchymal stem cells as trophic mediators.",
+    "authors": [
+      "Caplan AI",
+      "Dennis JE"
+    ],
+    "journal": "Journal of cellular biochemistry",
+    "year": "2006",
+    "doi": "10.1002/jcb.20886",
+    "publicationTypes": [
+      "Journal Article",
+      "Research Support, N.I.H., Extramural",
+      "Review"
+    ],
+    "checkedAt": "2026-09-25"
   },
   "16631879": {
     "title": "Tissue-engineered autologous bladders for patients needing cystoplasty.",
@@ -230,7 +277,7 @@
     "publicationTypes": [
       "Journal Article"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "16904174": {
     "title": "Induction of pluripotent stem cells from mouse embryonic and adult fibroblast cultures by defined factors.",
@@ -245,7 +292,7 @@
       "Journal Article",
       "Research Support, Non-U.S. Gov't"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "16923388": {
     "title": "Matrix elasticity directs stem cell lineage specification.",
@@ -263,7 +310,7 @@
       "Research Support, Non-U.S. Gov't",
       "Research Support, U.S. Gov't, Non-P.H.S."
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "16923606": {
     "title": "Minimal criteria for defining multipotent mesenchymal stromal cells. The International Society for Cellular Therapy position statement.",
@@ -285,7 +332,7 @@
     "publicationTypes": [
       "Journal Article"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "17828274": {
     "title": "Identification of tendon stem/progenitor cells and the role of the extracellular matrix in their niche.",
@@ -311,7 +358,7 @@
       "Research Support, N.I.H., Extramural",
       "Research Support, N.I.H., Intramural"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "17908884": {
     "title": "A randomized trial comparing autologous chondrocyte implantation with microfracture. Findings at five years.",
@@ -337,7 +384,7 @@
       "Randomized Controlled Trial",
       "Research Support, Non-U.S. Gov't"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "18035408": {
     "title": "Induction of pluripotent stem cells from adult human fibroblasts by defined factors.",
@@ -357,7 +404,7 @@
       "Journal Article",
       "Research Support, Non-U.S. Gov't"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "18199864": {
     "title": "Selective publication of antidepressant trials and its influence on apparent efficacy.",
@@ -376,7 +423,7 @@
       "Journal Article",
       "Meta-Analysis"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "18669565": {
     "title": "Open access publishing, article downloads, and citations: randomised controlled trial.",
@@ -395,7 +442,26 @@
       "Randomized Controlled Trial",
       "Research Support, Non-U.S. Gov't"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
+  },
+  "19028920": {
+    "title": "Paracrine mechanisms in adult stem cell signaling and therapy.",
+    "authors": [
+      "Gnecchi M",
+      "Zhang Z",
+      "Ni A",
+      "Dzau VJ"
+    ],
+    "journal": "Circulation research",
+    "year": "2008",
+    "doi": "10.1161/CIRCRESAHA.108.176826",
+    "publicationTypes": [
+      "Journal Article",
+      "Research Support, N.I.H., Extramural",
+      "Research Support, Non-U.S. Gov't",
+      "Review"
+    ],
+    "checkedAt": "2026-09-25"
   },
   "19062086": {
     "title": "Hematopoietic stem cells reversibly switch from dormancy to self-renewal during homeostasis and repair.",
@@ -421,7 +487,7 @@
       "Journal Article",
       "Research Support, Non-U.S. Gov't"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "19099374": {
     "title": "Pulmonary passage is a major obstacle for intravenous stem cell delivery: the pulmonary first-pass effect.",
@@ -442,7 +508,23 @@
       "Journal Article",
       "Research Support, N.I.H., Extramural"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
+  },
+  "19265660": {
+    "title": "Mesenchymal stem cell homing: the devil is in the details.",
+    "authors": [
+      "Karp JM",
+      "Leng Teo GS"
+    ],
+    "journal": "Cell stem cell",
+    "year": "2009",
+    "doi": "10.1016/j.stem.2009.02.001",
+    "publicationTypes": [
+      "Journal Article",
+      "Research Support, Non-U.S. Gov't",
+      "Review"
+    ],
+    "checkedAt": "2026-09-25"
   },
   "19329995": {
     "title": "Single Lgr5 stem cells build crypt-villus structures in vitro without a mesenchymal niche.",
@@ -465,7 +547,7 @@
     "publicationTypes": [
       "Journal Article"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "19342590": {
     "title": "Evidence for cardiomyocyte renewal in humans.",
@@ -492,7 +574,7 @@
       "Research Support, Non-U.S. Gov't",
       "Research Support, U.S. Gov't, Non-P.H.S."
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "19398828": {
     "title": "[Bone fracture and the healing mechanisms. Histological aspect of fracture healing. Primary and secondary healing].",
@@ -508,7 +590,29 @@
       "Journal Article",
       "Review"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
+  },
+  "19570514": {
+    "title": "Intravenous hMSCs improve myocardial infarction in mice because cells embolized in lung are activated to secrete the anti-inflammatory protein TSG-6.",
+    "authors": [
+      "Lee RH",
+      "Pulin AA",
+      "Seo MJ",
+      "Kota DJ",
+      "Ylostalo J",
+      "Larson BL",
+      "Semprun-Prieto L",
+      "Delafontaine P",
+      "Prockop DJ"
+    ],
+    "journal": "Cell stem cell",
+    "year": "2009",
+    "doi": "10.1016/j.stem.2009.05.003",
+    "publicationTypes": [
+      "Journal Article",
+      "Research Support, N.I.H., Extramural"
+    ],
+    "checkedAt": "2026-09-25"
   },
   "20107439": {
     "title": "Direct conversion of fibroblasts to functional neurons by defined factors.",
@@ -528,7 +632,7 @@
       "Research Support, N.I.H., Extramural",
       "Research Support, Non-U.S. Gov't"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "20573916": {
     "title": "Limbal stem-cell therapy and long-term corneal regeneration.",
@@ -547,7 +651,7 @@
       "Journal Article",
       "Research Support, Non-U.S. Gov't"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "20644535": {
     "title": "Epigenetic memory in induced pluripotent stem cells.",
@@ -590,7 +694,7 @@
       "Research Support, N.I.H., Extramural",
       "Research Support, Non-U.S. Gov't"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "20691899": {
     "title": "Direct reprogramming of fibroblasts into functional cardiomyocytes by defined factors.",
@@ -611,7 +715,7 @@
       "Research Support, N.I.H., Extramural",
       "Research Support, Non-U.S. Gov't"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "20711690": {
     "title": "ROCK inhibitor Y-27632 increases thaw-survival rates and preserves stemness and differentiation potential of human Wharton's jelly stem cells after cryopreservation.",
@@ -629,7 +733,7 @@
       "Journal Article",
       "Research Support, Non-U.S. Gov't"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "20887898": {
     "title": "Intestinal crypt homeostasis results from neutral competition between symmetrically dividing Lgr5 stem cells.",
@@ -652,7 +756,7 @@
     "publicationTypes": [
       "Journal Article"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "21113151": {
     "title": "Paneth cells constitute the niche for Lgr5 stem cells in intestinal crypts.",
@@ -674,7 +778,7 @@
     "publicationTypes": [
       "Journal Article"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "21195583": {
     "title": "GRADE guidelines: 1. Introduction-GRADE evidence profiles and summary of findings tables.",
@@ -701,7 +805,7 @@
     "publicationTypes": [
       "Journal Article"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "21208779": {
     "title": "GRADE guidelines: 3. Rating the quality of evidence.",
@@ -724,7 +828,7 @@
     "publicationTypes": [
       "Journal Article"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "21478862": {
     "title": "Chemically defined conditions for human iPSC derivation and culture.",
@@ -754,7 +858,7 @@
       "Research Support, N.I.H., Extramural",
       "Research Support, Non-U.S. Gov't"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "21828092": {
     "title": "An absolute requirement for Pax7-positive satellite cells in acute injury-induced skeletal muscle regeneration.",
@@ -772,7 +876,7 @@
       "Research Support, Non-U.S. Gov't",
       "Research Support, U.S. Gov't, Non-P.H.S."
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "21828093": {
     "title": "Pax7-expressing satellite cells are indispensable for adult skeletal muscle regeneration.",
@@ -795,7 +899,7 @@
       "Journal Article",
       "Research Support, Non-U.S. Gov't"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "21937732": {
     "title": "Overview of the matrisome--an inventory of extracellular matrix constituents and functions.",
@@ -812,7 +916,7 @@
       "Research Support, Non-U.S. Gov't",
       "Review"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "22020386": {
     "title": "SIRPA is a specific cell-surface marker for isolating cardiomyocytes derived from human pluripotent stem cells.",
@@ -833,7 +937,7 @@
       "Journal Article",
       "Research Support, Non-U.S. Gov't"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "22281595": {
     "title": "Endothelial and perivascular cells maintain haematopoietic stem cells.",
@@ -851,7 +955,7 @@
       "Research Support, N.I.H., Extramural",
       "Research Support, Non-U.S. Gov't"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "22519745": {
     "title": "Suspension culture of human pluripotent stem cells in controlled, stirred bioreactors.",
@@ -871,7 +975,7 @@
       "Journal Article",
       "Research Support, Non-U.S. Gov't"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "22607825": {
     "title": "Plasma HDL cholesterol and risk of myocardial infarction: a mendelian randomisation study.",
@@ -1012,7 +1116,7 @@
       "Research Support, N.I.H., Extramural",
       "Research Support, Non-U.S. Gov't"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "22696177": {
     "title": "Specification of midbrain dopamine neurons from primate pluripotent stem cells.",
@@ -1032,7 +1136,27 @@
       "Research Support, N.I.H., Extramural",
       "Research Support, Non-U.S. Gov't"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
+  },
+  "22767507": {
+    "title": "Human mesenchymal stem cells shift CD8+ T cells towards a suppressive phenotype by inducing tolerogenic monocytes.",
+    "authors": [
+      "Hof-Nahor I",
+      "Leshansky L",
+      "Shivtiel S",
+      "Eldor L",
+      "Aberdam D",
+      "Itskovitz-Eldor J",
+      "Berrih-Aknin S"
+    ],
+    "journal": "Journal of cell science",
+    "year": "2012",
+    "doi": "10.1242/jcs.108860",
+    "publicationTypes": [
+      "Journal Article",
+      "Research Support, Non-U.S. Gov't"
+    ],
+    "checkedAt": "2026-09-25"
   },
   "23027971": {
     "title": "Misconduct accounts for the majority of retracted scientific publications.",
@@ -1047,7 +1171,28 @@
     "publicationTypes": [
       "Journal Article"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
+  },
+  "23056000": {
+    "title": "Mesenchymal stem cells are short-lived and do not migrate beyond the lungs after intravenous infusion.",
+    "authors": [
+      "Eggenhofer E",
+      "Benseler V",
+      "Kroemer A",
+      "Popp FC",
+      "Geissler EK",
+      "Schlitt HJ",
+      "Baan CC",
+      "Dahlke MH",
+      "Hoogduijn MJ"
+    ],
+    "journal": "Frontiers in immunology",
+    "year": "2012",
+    "doi": "10.3389/fimmu.2012.00297",
+    "publicationTypes": [
+      "Journal Article"
+    ],
+    "checkedAt": "2026-09-25"
   },
   "23117550": {
     "title": "Comparison of allogeneic vs autologous bone marrow–derived mesenchymal stem cells delivered by transendocardial injection in patients with ischemic cardiomyopathy: the POSEIDON randomized trial.",
@@ -1090,7 +1235,30 @@
       "Randomized Controlled Trial",
       "Research Support, N.I.H., Intramural"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
+  },
+  "23133515": {
+    "title": "Safety of cell therapy with mesenchymal stromal cells (SafeCell): a systematic review and meta-analysis of clinical trials.",
+    "authors": [
+      "Lalu MM",
+      "McIntyre L",
+      "Pugliese C",
+      "Fergusson D",
+      "Winston BW",
+      "Marshall JC",
+      "Granton J",
+      "Stewart DJ",
+      "Canadian Critical Care Trials Group"
+    ],
+    "journal": "PloS one",
+    "year": "2012",
+    "doi": "10.1371/journal.pone.0047559",
+    "publicationTypes": [
+      "Journal Article",
+      "Meta-Analysis",
+      "Systematic Review"
+    ],
+    "checkedAt": "2026-09-25"
   },
   "23168164": {
     "title": "Distinct metabolic flow enables large-scale purification of mouse and human pluripotent stem cell-derived cardiomyocytes.",
@@ -1124,7 +1292,7 @@
       "Journal Article",
       "Research Support, Non-U.S. Gov't"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "23172272": {
     "title": "A placebo-controlled, randomized trial of mesenchymal stem cells in COPD.",
@@ -1144,7 +1312,7 @@
       "Randomized Controlled Trial",
       "Research Support, Non-U.S. Gov't"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "23570660": {
     "title": "Stromal cells from the adipose tissue-derived stromal vascular fraction and culture expanded adipose tissue-derived stromal/stem cells: a joint statement of the International Federation for Adipose Therapeutics and Science (IFATS) and the International Society for Cellular Therapy (ISCT).",
@@ -1166,7 +1334,38 @@
     "publicationTypes": [
       "Journal Article"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
+  },
+  "23734061": {
+    "title": "Transient proteolytic modification of mesenchymal stromal cells increases lung clearance rate and targeting to injured tissue.",
+    "authors": [
+      "Kerkelä E",
+      "Hakkarainen T",
+      "Mäkelä T",
+      "Raki M",
+      "Kambur O",
+      "Kilpinen L",
+      "Nikkilä J",
+      "Lehtonen S",
+      "Ritamo I",
+      "Pernu R",
+      "Pietilä M",
+      "Takalo R",
+      "Juvonen T",
+      "Bergström K",
+      "Kalso E",
+      "Valmu L",
+      "Laitinen S",
+      "Lehenkari P",
+      "Nystedt J"
+    ],
+    "journal": "Stem cells translational medicine",
+    "year": "2013",
+    "doi": "10.5966/sctm.2012-0187",
+    "publicationTypes": [
+      "Journal Article"
+    ],
+    "checkedAt": "2026-09-25"
   },
   "23921127": {
     "title": "Type 2 alveolar cells are stem cells in adult lung.",
@@ -1189,7 +1388,7 @@
       "Research Support, N.I.H., Extramural",
       "Research Support, Non-U.S. Gov't"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "23995685": {
     "title": "Cerebral organoids model human brain development and microcephaly.",
@@ -1212,7 +1411,7 @@
       "Journal Article",
       "Research Support, Non-U.S. Gov't"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "24237192": {
     "title": "The CARE guidelines: consensus-based clinical case report guideline development.",
@@ -1232,7 +1431,7 @@
       "Consensus Statement",
       "Journal Article"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "24550124": {
     "title": "3D bioprinting of vascularized, heterogeneous cell-laden tissue constructs.",
@@ -1251,7 +1450,7 @@
       "Journal Article",
       "Research Support, Non-U.S. Gov't"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "24630686": {
     "title": "Postprandial hypotension: a systematic review.",
@@ -1268,7 +1467,22 @@
       "Research Support, Non-U.S. Gov't",
       "Systematic Review"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
+  },
+  "25126378": {
+    "title": "Osteogenic potential: Comparison between bone marrow and adipose-derived mesenchymal stem cells.",
+    "authors": [
+      "Liao HT",
+      "Chen CT"
+    ],
+    "journal": "World journal of stem cells",
+    "year": "2014",
+    "doi": "10.4252/wjsc.v6.i3.288",
+    "publicationTypes": [
+      "Journal Article",
+      "Review"
+    ],
+    "checkedAt": "2026-09-25"
   },
   "25130492": {
     "title": "Adult hepatocytes are generated by self-duplication rather than stem cell differentiation.",
@@ -1290,7 +1504,7 @@
       "Research Support, N.I.H., Extramural",
       "Research Support, Non-U.S. Gov't"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "25409372": {
     "title": "Long-term safety and efficacy of factor IX gene therapy in hemophilia B.",
@@ -1335,7 +1549,7 @@
       "Research Support, N.I.H., Extramural",
       "Research Support, Non-U.S. Gov't"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "25430861": {
     "title": "Systematic literature review of imaging features of spinal degeneration in asymptomatic populations.",
@@ -1362,7 +1576,7 @@
       "Research Support, N.I.H., Extramural",
       "Systematic Review"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "25473038": {
     "title": "Wound repair and regeneration: mechanisms, signaling, and translation.",
@@ -1380,7 +1594,7 @@
       "Research Support, Non-U.S. Gov't",
       "Review"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "25498121": {
     "title": "The association between exaggeration in health related science news and academic press releases: retrospective observational study.",
@@ -1406,7 +1620,36 @@
       "Observational Study",
       "Research Support, Non-U.S. Gov't"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
+  },
+  "25822648": {
+    "title": "Treatment of Knee Osteoarthritis With Allogeneic Bone Marrow Mesenchymal Stem Cells: A Randomized Controlled Trial.",
+    "authors": [
+      "Vega A",
+      "Martín-Ferrero MA",
+      "Del Canto F",
+      "Alberca M",
+      "García V",
+      "Munar A",
+      "Orozco L",
+      "Soler R",
+      "Fuertes JJ",
+      "Huguet M",
+      "Sánchez A",
+      "García-Sancho J"
+    ],
+    "journal": "Transplantation",
+    "year": "2015",
+    "doi": "10.1097/TP.0000000000000678",
+    "publicationTypes": [
+      "Clinical Trial, Phase I",
+      "Clinical Trial, Phase II",
+      "Journal Article",
+      "Multicenter Study",
+      "Randomized Controlled Trial",
+      "Research Support, Non-U.S. Gov't"
+    ],
+    "checkedAt": "2026-09-25"
   },
   "26287849": {
     "title": "Vemurafenib in Multiple Nonmelanoma Cancers with BRAF V600 Mutations.",
@@ -1444,7 +1687,7 @@
       "Multicenter Study",
       "Research Support, Non-U.S. Gov't"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "26444236": {
     "title": "Kidney organoids from human iPS cells contain multiple lineages and model human nephrogenesis.",
@@ -1468,7 +1711,7 @@
       "Journal Article",
       "Research Support, Non-U.S. Gov't"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "26468230": {
     "title": "The hematopoietic stem cell niche in homeostasis and disease.",
@@ -1484,7 +1727,7 @@
       "Research Support, N.I.H., Extramural",
       "Review"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "26498484": {
     "title": "Scaffold and scaffold-free self-assembled systems in regenerative medicine.",
@@ -1507,7 +1750,7 @@
       "Review",
       "Research Support, Non-U.S. Gov't"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "26598661": {
     "title": "Regenerative medicine: Current therapies and future directions.",
@@ -1524,7 +1767,7 @@
       "Research Support, U.S. Gov't, Non-P.H.S.",
       "Review"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "26644527": {
     "title": "Symptom Monitoring With Patient-Reported Outcomes During Routine Cancer Treatment: A Randomized Controlled Trial.",
@@ -1557,7 +1800,41 @@
       "Research Support, N.I.H., Extramural",
       "Research Support, Non-U.S. Gov't"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
+  },
+  "26753925": {
+    "title": "Biodistribution, migration and homing of systemically applied mesenchymal stem/stromal cells.",
+    "authors": [
+      "Leibacher J",
+      "Henschler R"
+    ],
+    "journal": "Stem cell research & therapy",
+    "year": "2016",
+    "doi": "10.1186/s13287-015-0271-2",
+    "publicationTypes": [
+      "Journal Article",
+      "Review"
+    ],
+    "checkedAt": "2026-09-25"
+  },
+  "26898654": {
+    "title": "Mesenchymal Stem Cells for Ischemic Stroke: Progress and Possibilities.",
+    "authors": [
+      "Maria Ferri AL",
+      "Bersano A",
+      "Lisini D",
+      "Boncoraglio G",
+      "Frigerio S",
+      "Parati E"
+    ],
+    "journal": "Current medicinal chemistry",
+    "year": "2016",
+    "doi": "10.2174/0929867323666160222113702",
+    "publicationTypes": [
+      "Journal Article",
+      "Review"
+    ],
+    "checkedAt": "2026-09-25"
   },
   "26940231": {
     "title": "Taking cues from the extracellular matrix to design bone-mimetic regenerative scaffolds.",
@@ -1576,7 +1853,7 @@
       "Research Support, N.I.H., Extramural",
       "Research Support, U.S. Gov't, Non-P.H.S."
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "26951646": {
     "title": "Three-dimensional bioprinting of thick vascularized tissues.",
@@ -1594,7 +1871,7 @@
       "Research Support, Non-U.S. Gov't",
       "Research Support, U.S. Gov't, Non-P.H.S."
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "26982353": {
     "title": "Macrophages in Tissue Repair, Regeneration, and Fibrosis.",
@@ -1610,7 +1887,7 @@
       "Research Support, N.I.H., Intramural",
       "Review"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "26994063": {
     "title": "Using Big Data to Emulate a Target Trial When a Randomized Trial Is Not Available.",
@@ -1625,7 +1902,7 @@
       "Journal Article",
       "Research Support, N.I.H., Extramural"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "27081073": {
     "title": "Developing a pro-regenerative biomaterial scaffold microenvironment requires T helper 2 cells.",
@@ -1654,7 +1931,7 @@
       "Research Support, Non-U.S. Gov't",
       "Research Support, U.S. Gov't, Non-P.H.S."
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "27209009": {
     "title": "Statistical tests, P values, confidence intervals, and power: a guide to misinterpretations.",
@@ -1674,7 +1951,7 @@
       "Journal Article",
       "Research Support, Non-U.S. Gov't"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "27502078": {
     "title": "Acute myocardial infarction.",
@@ -1690,7 +1967,7 @@
       "Journal Article",
       "Review"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "27541692": {
     "title": "Revised Estimates for the Number of Human and Bacteria Cells in the Body.",
@@ -1706,7 +1983,7 @@
       "Journal Article",
       "Research Support, Non-U.S. Gov't"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "28007647": {
     "title": "Rewiring the spinal cord: Direct and indirect strategies.",
@@ -1721,7 +1998,7 @@
       "Journal Article",
       "Review"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "28247342": {
     "title": "Muscle Stem Cells: A Model System for Adult Stem Cell Biology.",
@@ -1738,7 +2015,7 @@
       "Research Support, N.I.H., Extramural",
       "Research Support, Non-U.S. Gov't"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "28291891": {
     "title": "Effect of Inpatient Rehabilitation vs a Monitored Home-Based Program on Mobility in Patients With Total Knee Arthroplasty: The HIHO Randomized Clinical Trial.",
@@ -1760,7 +2037,7 @@
       "Randomized Controlled Trial",
       "Research Support, Non-U.S. Gov't"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "28296613": {
     "title": "Autologous Induced Stem-Cell-Derived Retinal Cells for Macular Degeneration.",
@@ -1813,7 +2090,7 @@
       "Journal Article",
       "Research Support, Non-U.S. Gov't"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "28296617": {
     "title": "Vision Loss after Intravitreal Injection of Autologous \"Stem Cells\" for AMD.",
@@ -1838,7 +2115,7 @@
       "Research Support, N.I.H., Extramural",
       "Research Support, Non-U.S. Gov't"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "28298236": {
     "title": "Potential predatory and legitimate biomedical journals: can you tell the difference? A cross-sectional comparison.",
@@ -1861,7 +2138,7 @@
       "Comparative Study",
       "Journal Article"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "28315909": {
     "title": "A concise review of Hashimoto thyroiditis (HT) and the importance of iodine, selenium, vitamin D and gluten on the autoimmunity and dietary management of HT patients.Points that need more investigation.",
@@ -1876,7 +2153,26 @@
       "Journal Article",
       "Review"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
+  },
+  "28316123": {
+    "title": "Concise Review: MSC Adhesion Cascade-Insights into Homing and Transendothelial Migration.",
+    "authors": [
+      "Nitzsche F",
+      "Müller C",
+      "Lukomska B",
+      "Jolkkonen J",
+      "Deten A",
+      "Boltze J"
+    ],
+    "journal": "Stem cells (Dayton, Ohio)",
+    "year": "2017",
+    "doi": "10.1002/stem.2614",
+    "publicationTypes": [
+      "Journal Article",
+      "Review"
+    ],
+    "checkedAt": "2026-09-25"
   },
   "28382727": {
     "title": "Scalable stirred suspension culture for the generation of billions of human induced pluripotent stem cells using single-use bioreactors.",
@@ -1898,7 +2194,50 @@
       "Journal Article",
       "Research Support, Non-U.S. Gov't"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
+  },
+  "28444181": {
+    "title": "Allogeneic Human Mesenchymal Stem Cell Infusions for Aging Frailty.",
+    "authors": [
+      "Golpanian S",
+      "DiFede DL",
+      "Khan A",
+      "Schulman IH",
+      "Landin AM",
+      "Tompkins BA",
+      "Heldman AW",
+      "Miki R",
+      "Goldstein BJ",
+      "Mushtaq M",
+      "Levis-Dusseau S",
+      "Byrnes JJ",
+      "Lowery M",
+      "Natsumeda M",
+      "Delgado C",
+      "Saltzman R",
+      "Vidro-Casiano M",
+      "Pujol MV",
+      "Da Fonseca M",
+      "Oliva AA Jr",
+      "Green G",
+      "Premer C",
+      "Medina A",
+      "Valasaki K",
+      "Florea V",
+      "Anderson E",
+      "El-Khorazaty J",
+      "Mendizabal A",
+      "Goldschmidt-Clermont PJ",
+      "Hare JM"
+    ],
+    "journal": "The journals of gerontology. Series A, Biological sciences and medical sciences",
+    "year": "2017",
+    "doi": "10.1093/gerona/glx056",
+    "publicationTypes": [
+      "Clinical Trial",
+      "Journal Article"
+    ],
+    "checkedAt": "2026-09-25"
   },
   "28445466": {
     "title": "Human pluripotent stem cells recurrently acquire and expand dominant negative P53 mutations.",
@@ -1929,7 +2268,7 @@
       "Research Support, N.I.H., Extramural",
       "Research Support, Non-U.S. Gov't"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "28459451": {
     "title": "Generation of inner ear organoids containing functional hair cells from human pluripotent stem cells.",
@@ -1950,7 +2289,7 @@
       "Research Support, Non-U.S. Gov't",
       "Research Support, N.I.H., Extramural"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "28768629": {
     "title": "GRIPP2 reporting checklists: tools to improve reporting of patient and public involvement in research.",
@@ -1978,7 +2317,69 @@
     "publicationTypes": [
       "Journal Article"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
+  },
+  "28841158": {
+    "title": "Mesenchymal Stem Cell Secretome: Toward Cell-Free Therapeutic Strategies in Regenerative Medicine.",
+    "authors": [
+      "Vizoso FJ",
+      "Eiro N",
+      "Cid S",
+      "Schneider J",
+      "Perez-Fernandez R"
+    ],
+    "journal": "International journal of molecular sciences",
+    "year": "2017",
+    "doi": "10.3390/ijms18091852",
+    "publicationTypes": [
+      "Journal Article",
+      "Review"
+    ],
+    "checkedAt": "2026-09-25"
+  },
+  "28977399": {
+    "title": "Allogeneic Mesenchymal Stem Cells Ameliorate Aging Frailty: A Phase II Randomized, Double-Blind, Placebo-Controlled Clinical Trial.",
+    "authors": [
+      "Tompkins BA",
+      "DiFede DL",
+      "Khan A",
+      "Landin AM",
+      "Schulman IH",
+      "Pujol MV",
+      "Heldman AW",
+      "Miki R",
+      "Goldschmidt-Clermont PJ",
+      "Goldstein BJ",
+      "Mushtaq M",
+      "Levis-Dusseau S",
+      "Byrnes JJ",
+      "Lowery M",
+      "Natsumeda M",
+      "Delgado C",
+      "Saltzman R",
+      "Vidro-Casiano M",
+      "Da Fonseca M",
+      "Golpanian S",
+      "Premer C",
+      "Medina A",
+      "Valasaki K",
+      "Florea V",
+      "Anderson E",
+      "El-Khorazaty J",
+      "Mendizabal A",
+      "Green G",
+      "Oliva AA",
+      "Hare JM"
+    ],
+    "journal": "The journals of gerontology. Series A, Biological sciences and medical sciences",
+    "year": "2017",
+    "doi": "10.1093/gerona/glx137",
+    "publicationTypes": [
+      "Clinical Trial, Phase II",
+      "Journal Article",
+      "Randomized Controlled Trial"
+    ],
+    "checkedAt": "2026-09-25"
   },
   "29472484": {
     "title": "Patient-derived organoids model treatment response of metastatic gastrointestinal cancers.",
@@ -2035,7 +2436,23 @@
       "Journal Article",
       "Research Support, Non-U.S. Gov't"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
+  },
+  "29523213": {
+    "title": "Mesenchymal stem cell-derived extracellular vesicles: novel frontiers in regenerative medicine.",
+    "authors": [
+      "Keshtkar S",
+      "Azarpira N",
+      "Ghahremani MH"
+    ],
+    "journal": "Stem cell research & therapy",
+    "year": "2018",
+    "doi": "10.1186/s13287-018-0791-7",
+    "publicationTypes": [
+      "Journal Article",
+      "Review"
+    ],
+    "checkedAt": "2026-09-25"
   },
   "29557255": {
     "title": "Neural Mechanisms of Inflammation-Induced Fever.",
@@ -2051,7 +2468,7 @@
       "Research Support, Non-U.S. Gov't",
       "Review"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "29870434": {
     "title": "Assessment of human leukocyte antigen immunogenicity: current methods, challenges and opportunities.",
@@ -2068,7 +2485,27 @@
       "Research Support, Non-U.S. Gov't",
       "Review"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
+  },
+  "29921311": {
+    "title": "Adipose-derived and bone marrow mesenchymal stem cells: a donor-matched comparison.",
+    "authors": [
+      "Mohamed-Ahmed S",
+      "Fristad I",
+      "Lie SA",
+      "Suliman S",
+      "Mustafa K",
+      "Vindenes H",
+      "Idris SB"
+    ],
+    "journal": "Stem cell research & therapy",
+    "year": "2018",
+    "doi": "10.1186/s13287-018-0914-1",
+    "publicationTypes": [
+      "Journal Article",
+      "Research Support, Non-U.S. Gov't"
+    ],
+    "checkedAt": "2026-09-25"
   },
   "29933347": {
     "title": "Dehydration Impairs Cognitive Performance: A Meta-analysis.",
@@ -2084,7 +2521,7 @@
       "Meta-Analysis",
       "Systematic Review"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "29959146": {
     "title": "Continuity of care with doctors-a matter of life and death? A systematic review of continuity of care and mortality.",
@@ -2102,7 +2539,40 @@
       "Journal Article",
       "Systematic Review"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
+  },
+  "30064455": {
+    "title": "Intra-articular injection of two different doses of autologous bone marrow mesenchymal stem cells versus hyaluronic acid in the treatment of knee osteoarthritis: long-term follow up of a multicenter randomized controlled clinical trial (phase I/II).",
+    "authors": [
+      "Lamo-Espinosa JM",
+      "Mora G",
+      "Blanco JF",
+      "Granero-Moltó F",
+      "Núñez-Córdoba JM",
+      "López-Elío S",
+      "Andreu E",
+      "Sánchez-Guijo F",
+      "Aquerreta JD",
+      "Bondía JM",
+      "Valentí-Azcárate A",
+      "Del Consuelo Del Cañizo M",
+      "Villarón EM",
+      "Valentí-Nin JR",
+      "Prósper F"
+    ],
+    "journal": "Journal of translational medicine",
+    "year": "2018",
+    "doi": "10.1186/s12967-018-1591-7",
+    "publicationTypes": [
+      "Clinical Trial, Phase I",
+      "Clinical Trial, Phase II",
+      "Comparative Study",
+      "Letter",
+      "Multicenter Study",
+      "Randomized Controlled Trial",
+      "Research Support, Non-U.S. Gov't"
+    ],
+    "checkedAt": "2026-09-25"
   },
   "30132025": {
     "title": "Industry sponsorship and research outcome: systematic review with meta-analysis.",
@@ -2121,7 +2591,7 @@
       "Meta-Analysis",
       "Systematic Review"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "30180779": {
     "title": "Clinical Outcomes from a Multi-Center Study of Human Neural Stem Cell Transplantation in Chronic Cervical Spinal Cord Injury.",
@@ -2146,7 +2616,28 @@
       "Randomized Controlled Trial",
       "Research Support, Non-U.S. Gov't"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
+  },
+  "30450419": {
+    "title": "Wharton' jelly mesenchymal stromal cell therapy for ischemic brain injury.",
+    "authors": [
+      "Wu KJ",
+      "Yu SJ",
+      "Chiang CW",
+      "Lee YW",
+      "Yen BL",
+      "Hsu CS",
+      "Kuo LW",
+      "Wang Y"
+    ],
+    "journal": "Brain circulation",
+    "year": "2018",
+    "doi": "10.4103/bc.bc_16_18",
+    "publicationTypes": [
+      "Journal Article",
+      "Review"
+    ],
+    "checkedAt": "2026-09-25"
   },
   "30508922": {
     "title": "Combination of meshed dermis graft and cultured epithelial autograft for massive burns: Three case reports.",
@@ -2168,7 +2659,29 @@
       "Case Reports",
       "Journal Article"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
+  },
+  "30571672": {
+    "title": "Notes from the Field: Infections After Receipt of Bacterially Contaminated Umbilical Cord Blood-Derived Stem Cell Products for Other Than Hematopoietic or Immunologic Reconstitution - United States, 2018.",
+    "authors": [
+      "Perkins KM",
+      "Spoto S",
+      "Rankin DA",
+      "Dotson NQ",
+      "Malarkey M",
+      "Mendoza M",
+      "McNeill L",
+      "Gable P",
+      "Powell KM"
+    ],
+    "journal": "MMWR. Morbidity and mortality weekly report",
+    "year": "2018",
+    "doi": "10.15585/mmwr.mm6750a5",
+    "publicationTypes": [
+      "Case Reports",
+      "Journal Article"
+    ],
+    "checkedAt": "2026-09-25"
   },
   "30704681": {
     "title": "The Alzheimer's Disease Clinical Spectrum: Diagnosis and Management.",
@@ -2182,7 +2695,7 @@
       "Journal Article",
       "Review"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "30801478": {
     "title": "ACOG Committee Opinion No. 771: Umbilical Cord Blood Banking.",
@@ -2194,7 +2707,7 @@
       "Journal Article",
       "Practice Guideline"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "31030981": {
     "title": "Individualised nutritional support in medical inpatients at nutritional risk: a randomised clinical trial.",
@@ -2237,7 +2750,7 @@
       "Research Support, Non-U.S. Gov't",
       "Pragmatic Clinical Trial"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "31543433": {
     "title": "Characteristics and clinical applications of Wharton's jelly-derived mesenchymal stromal cells.",
@@ -2256,7 +2769,7 @@
       "Research Support, Non-U.S. Gov't",
       "Review"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "31638686": {
     "title": "Diagnosis and Management of Dementia: Review.",
@@ -2274,7 +2787,7 @@
       "Research Support, Non-U.S. Gov't",
       "Review"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "31784515": {
     "title": "Single cell census of human kidney organoids shows reproducibility and diminished off-target cells after transplantation.",
@@ -2304,7 +2817,7 @@
       "Research Support, N.I.H., Extramural",
       "Research Support, Non-U.S. Gov't"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "31988205": {
     "title": "Normal Hematopoiesis Is a Balancing Act of Self-Renewal and Regeneration.",
@@ -2322,7 +2835,7 @@
       "Research Support, Non-U.S. Gov't",
       "Review"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "32127560": {
     "title": "Development of genetic quality tests for good manufacturing practice-compliant induced pluripotent stem cells and their derivatives.",
@@ -2349,7 +2862,7 @@
       "Journal Article",
       "Research Support, Non-U.S. Gov't"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "32142771": {
     "title": "Systemic and local delivery of mesenchymal stem cells for heart renovation: Challenges and innovations.",
@@ -2375,7 +2888,7 @@
       "Journal Article",
       "Review"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "32195370": {
     "title": "A randomized controlled trial of a smoking cessation smartphone application with a carbon monoxide checker.",
@@ -2395,7 +2908,7 @@
     "publicationTypes": [
       "Journal Article"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "32302218": {
     "title": "Platelet-Rich Plasma Versus Hyaluronic Acid for Knee Osteoarthritis: A Systematic Review and Meta-analysis of Randomized Controlled Trials.",
@@ -2414,7 +2927,7 @@
       "Journal Article",
       "Systematic Review"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "32494013": {
     "title": "Hair-bearing human skin generated entirely from pluripotent stem cells.",
@@ -2439,7 +2952,25 @@
       "Research Support, N.I.H., Extramural",
       "Research Support, Non-U.S. Gov't"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
+  },
+  "32613467": {
+    "title": "Mesenchymal Stem Cells Attenuated Blood-Brain Barrier Disruption via Downregulation of Aquaporin-4 Expression in EAE Mice.",
+    "authors": [
+      "Liu Y",
+      "Ma Y",
+      "Du B",
+      "Wang Y",
+      "Yang GY",
+      "Bi X"
+    ],
+    "journal": "Molecular neurobiology",
+    "year": "2020",
+    "doi": "10.1007/s12035-020-01998-z",
+    "publicationTypes": [
+      "Journal Article"
+    ],
+    "checkedAt": "2026-09-25"
   },
   "32913098": {
     "title": "The GTEx Consortium atlas of genetic regulatory effects across human tissues.",
@@ -2454,7 +2985,7 @@
       "Research Support, N.I.H., Extramural",
       "Research Support, Non-U.S. Gov't"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "33053198": {
     "title": "Recall intervals for oral health in primary care patients.",
@@ -2474,7 +3005,25 @@
       "Research Support, Non-U.S. Gov't",
       "Systematic Review"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
+  },
+  "33096812": {
+    "title": "Platelet-Rich Plasma: New Performance Understandings and Therapeutic Considerations in 2020.",
+    "authors": [
+      "Everts P",
+      "Onishi K",
+      "Jayaram P",
+      "Lana JF",
+      "Mautner K"
+    ],
+    "journal": "International journal of molecular sciences",
+    "year": "2020",
+    "doi": "10.3390/ijms21207794",
+    "publicationTypes": [
+      "Journal Article",
+      "Review"
+    ],
+    "checkedAt": "2026-09-25"
   },
   "33221677": {
     "title": "Haplobanking induced pluripotent stem cells for clinical use.",
@@ -2495,7 +3044,35 @@
       "Research Support, Non-U.S. Gov't",
       "Review"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
+  },
+  "33242791": {
+    "title": "A safety consideration of mesenchymal stem cell therapy on COVID-19.",
+    "authors": [
+      "Cao Y",
+      "Wu H",
+      "Zhai W",
+      "Wang Y",
+      "Li M",
+      "Li M",
+      "Yang L",
+      "Tian Y",
+      "Song Y",
+      "Li J",
+      "Wang Y",
+      "Ding Q",
+      "Zhang L",
+      "Cai M",
+      "Chang Z"
+    ],
+    "journal": "Stem cell research",
+    "year": "2020",
+    "doi": "10.1016/j.scr.2020.102066",
+    "publicationTypes": [
+      "Journal Article",
+      "Research Support, Non-U.S. Gov't"
+    ],
+    "checkedAt": "2026-09-25"
   },
   "33283989": {
     "title": "CRISPR-Cas9 Gene Editing for Sickle Cell Disease and β-Thalassemia.",
@@ -2535,7 +3112,7 @@
       "Journal Article",
       "Research Support, Non-U.S. Gov't"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "33333020": {
     "title": "Generation of Functional Human 3D Cortico-Motor Assembloids.",
@@ -2563,7 +3140,7 @@
       "Research Support, N.I.H., Extramural",
       "Research Support, Non-U.S. Gov't"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "33392174": {
     "title": "Perinatal Derivatives: Where Do We Stand? A Roadmap of the Human Placenta and Consensus for Tissue and Cell Nomenclature.",
@@ -2603,7 +3180,7 @@
       "Journal Article",
       "Review"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "33432173": {
     "title": "The distribution of cellular turnover in the human body.",
@@ -2618,7 +3195,7 @@
       "Journal Article",
       "Research Support, Non-U.S. Gov't"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "33579703": {
     "title": "Anti-USAG-1 therapy for tooth regeneration through enhanced BMP signaling.",
@@ -2642,7 +3219,7 @@
       "Journal Article",
       "Research Support, Non-U.S. Gov't"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "33660551": {
     "title": "Current Best Practice for Presenting Probabilities in Patient Decision Aids: Fundamental Principles.",
@@ -2664,7 +3241,26 @@
       "Journal Article",
       "Review"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
+  },
+  "33673711": {
+    "title": "Applications of Mesenchymal Stem Cells in Skin Regeneration and Rejuvenation.",
+    "authors": [
+      "Jo H",
+      "Brito S",
+      "Kwak BM",
+      "Park S",
+      "Lee MG",
+      "Bin BH"
+    ],
+    "journal": "International journal of molecular sciences",
+    "year": "2021",
+    "doi": "10.3390/ijms22052410",
+    "publicationTypes": [
+      "Journal Article",
+      "Review"
+    ],
+    "checkedAt": "2026-09-25"
   },
   "33724327": {
     "title": "Diagnosis and Management of Transient Ischemic Attack and Acute Ischemic Stroke: A Review.",
@@ -2679,7 +3275,7 @@
       "Journal Article",
       "Review"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "33782057": {
     "title": "The PRISMA 2020 statement: an updated guideline for reporting systematic reviews.",
@@ -2719,7 +3315,7 @@
       "Research Support, N.I.H., Extramural",
       "Research Support, Non-U.S. Gov't"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "34012116": {
     "title": "Sensory neuron-derived TAFA4 promotes macrophage tissue repair functions.",
@@ -2744,7 +3340,7 @@
       "Journal Article",
       "Research Support, Non-U.S. Gov't"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "34050618": {
     "title": "Allograft recognition by recipient's natural killer cells: Molecular mechanisms and role in transplant rejection.",
@@ -2762,7 +3358,22 @@
       "Research Support, N.I.H., Extramural",
       "Review"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
+  },
+  "34064624": {
+    "title": "Adipose-Derived Mesenchymal Stem Cells (AD-MSCs) against Ultraviolet (UV) Radiation Effects and the Skin Photoaging.",
+    "authors": [
+      "Gentile P",
+      "Garcovich S"
+    ],
+    "journal": "Biomedicines",
+    "year": "2021",
+    "doi": "10.3390/biomedicines9050532",
+    "publicationTypes": [
+      "Journal Article",
+      "Review"
+    ],
+    "checkedAt": "2026-09-25"
   },
   "34095516": {
     "title": "The ARRIVE guidelines 2.0: updated guidelines for reporting animal research.",
@@ -2802,7 +3413,7 @@
     "publicationTypes": [
       "Journal Article"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "34157093": {
     "title": "Omidubicel vs standard myeloablative umbilical cord blood transplantation: results of a phase 3 randomized study.",
@@ -2844,7 +3455,7 @@
       "Randomized Controlled Trial",
       "Research Support, Non-U.S. Gov't"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "34182569": {
     "title": "SARS-CoV-2 mRNA vaccines induce persistent human germinal centre responses.",
@@ -2882,7 +3493,7 @@
       "Research Support, N.I.H., Extramural",
       "Research Support, Non-U.S. Gov't"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "34218430": {
     "title": "Megakaryocyte Cytoskeletal Proteins in Platelet Biogenesis and Diseases.",
@@ -2897,7 +3508,7 @@
     "publicationTypes": [
       "Journal Article"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "34256014": {
     "title": "Gut-microbiota-targeted diets modulate human immune status.",
@@ -2928,7 +3539,46 @@
       "Research Support, Non-U.S. Gov't",
       "Research Support, U.S. Gov't, Non-P.H.S."
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
+  },
+  "34336863": {
+    "title": "Persistency of Mesenchymal Stromal/Stem Cells in Lungs.",
+    "authors": [
+      "Ferrini E",
+      "Stellari FF",
+      "Franceschi V",
+      "Macchi F",
+      "Russo L",
+      "Murgia A",
+      "Grisendi G",
+      "Villetti G",
+      "Dominici M",
+      "Donofrio G"
+    ],
+    "journal": "Frontiers in cell and developmental biology",
+    "year": "2021",
+    "doi": "10.3389/fcell.2021.709225",
+    "publicationTypes": [
+      "Journal Article"
+    ],
+    "checkedAt": "2026-09-25"
+  },
+  "34440728": {
+    "title": "Mesenchymal Stem Cell-Derived Exosomes: Applications in Regenerative Medicine.",
+    "authors": [
+      "Hade MD",
+      "Suire CN",
+      "Suo Z"
+    ],
+    "journal": "Cells",
+    "year": "2021",
+    "doi": "10.3390/cells10081959",
+    "publicationTypes": [
+      "Journal Article",
+      "Research Support, Non-U.S. Gov't",
+      "Review"
+    ],
+    "checkedAt": "2026-09-25"
   },
   "34565196": {
     "title": "Clarifying Values: An Updated and Expanded Systematic Review and Meta-Analysis.",
@@ -2964,7 +3614,23 @@
       "Research Support, Non-U.S. Gov't",
       "Systematic Review"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
+  },
+  "34675575": {
+    "title": "Mesenchymal Stem Cell Secretome for Dermatology Application: A Review.",
+    "authors": [
+      "Damayanti RH",
+      "Rusdiana T",
+      "Wathoni N"
+    ],
+    "journal": "Clinical, cosmetic and investigational dermatology",
+    "year": "2021",
+    "doi": "10.2147/CCID.S331044",
+    "publicationTypes": [
+      "Journal Article",
+      "Review"
+    ],
+    "checkedAt": "2026-09-25"
   },
   "34812863": {
     "title": "Effect of Intra-articular Platelet-Rich Plasma vs Placebo Injection on Pain and Medial Tibial Cartilage Volume in Patients With Knee Osteoarthritis: The RESTORE Randomized Clinical Trial.",
@@ -2996,7 +3662,7 @@
       "Randomized Controlled Trial",
       "Research Support, Non-U.S. Gov't"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "35028608": {
     "title": "Insulin expression and C-peptide in type 1 diabetes subjects implanted with stem cell-derived pancreatic endoderm cells in an encapsulation device.",
@@ -3026,7 +3692,7 @@
       "Multicenter Study",
       "Research Support, Non-U.S. Gov't"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "35549404": {
     "title": "The Tabula Sapiens: A multiple-organ, single-cell transcriptomic atlas of humans.",
@@ -3210,7 +3876,7 @@
       "Journal Article",
       "Research Support, Non-U.S. Gov't"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "35661856": {
     "title": "Effect of Electronic Symptom Monitoring on Patient-Reported Outcomes Among Patients With Metastatic Cancer: A Randomized Clinical Trial.",
@@ -3252,7 +3918,32 @@
       "Journal Article",
       "Randomized Controlled Trial"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
+  },
+  "35793128": {
+    "title": "Intravenous Infusion of Autoserum-Expanded Autologous Mesenchymal Stem Cells in Patients With Chronic Brain Injury: Protocol for a Phase 2 Trial.",
+    "authors": [
+      "Oka S",
+      "Yamaki T",
+      "Sasaki M",
+      "Ukai R",
+      "Takemura M",
+      "Yokoyama T",
+      "Kataoka-Sasaki Y",
+      "Onodera R",
+      "Ito YM",
+      "Kobayashi S",
+      "Kocsis JD",
+      "Iwadate Y",
+      "Honmou O"
+    ],
+    "journal": "JMIR research protocols",
+    "year": "2022",
+    "doi": "10.2196/37898",
+    "publicationTypes": [
+      "Journal Article"
+    ],
+    "checkedAt": "2026-09-25"
   },
   "36396216": {
     "title": "Management of Acute Coronary Syndrome.",
@@ -3266,7 +3957,7 @@
       "Journal Article",
       "Review"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "36599349": {
     "title": "Hallmarks of aging: An expanding universe.",
@@ -3285,7 +3976,7 @@
       "Review",
       "Research Support, Non-U.S. Gov't"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "36749350": {
     "title": "Exercise training and bone mineral density in postmenopausal women: an updated systematic review and meta-analysis of intervention studies with emphasis on potential moderators.",
@@ -3310,7 +4001,7 @@
       "Systematic Review",
       "Journal Article"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "36876170": {
     "title": "Effectiveness of Peer Support on Quality of Life and Anxiety in Breast Cancer Patients: A Systematic Review and Meta-Analysis.",
@@ -3329,7 +4020,7 @@
     "publicationTypes": [
       "Journal Article"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "36913992": {
     "title": "Patients With Knee Osteoarthritis Who Receive Platelet-Rich Plasma or Bone Marrow Aspirate Concentrate Injections Have Better Outcomes Than Patients Who Receive Hyaluronic Acid: Systematic Review and Meta-analysis.",
@@ -3352,7 +4043,7 @@
       "Journal Article",
       "Research Support, Non-U.S. Gov't"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "37267913": {
     "title": "Phase 1/2a clinical trial in ALS with ropinirole, a drug candidate identified by iPSC drug discovery.",
@@ -3392,7 +4083,28 @@
       "Journal Article",
       "Research Support, Non-U.S. Gov't"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
+  },
+  "37377400": {
+    "title": "Efficacy of combined treatment with human adipose tissue stem cell-derived exosome-containing solution and microneedling for facial skin aging: A 12-week prospective, randomized, split-face study.",
+    "authors": [
+      "Park GH",
+      "Kwon HH",
+      "Seok J",
+      "Yang SH",
+      "Lee J",
+      "Park BC",
+      "Shin E",
+      "Park KY"
+    ],
+    "journal": "Journal of cosmetic dermatology",
+    "year": "2023",
+    "doi": "10.1111/jocd.15872",
+    "publicationTypes": [
+      "Randomized Controlled Trial",
+      "Journal Article"
+    ],
+    "checkedAt": "2026-09-25"
   },
   "37475866": {
     "title": "The effect of cytokines on osteoblasts and osteoclasts in bone remodeling in osteoporosis: a review.",
@@ -3410,7 +4122,7 @@
       "Journal Article",
       "Review"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "37493002": {
     "title": "What works in peer support for breast cancer survivors: A qualitative systematic review and meta-ethnography.",
@@ -3430,7 +4142,29 @@
       "Systematic Review",
       "Research Support, Non-U.S. Gov't"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
+  },
+  "37643762": {
+    "title": "Preclinical Study on Biodistribution of Mesenchymal Stem Cells after Local Transplantation into the Brain.",
+    "authors": [
+      "Bashyal N",
+      "Kim MG",
+      "Jung JH",
+      "Acharya R",
+      "Lee YJ",
+      "Hwang WS",
+      "Choi JM",
+      "Chang DY",
+      "Kim SS",
+      "Suh-Kim H"
+    ],
+    "journal": "International journal of stem cells",
+    "year": "2023",
+    "doi": "10.15283/ijsc23062",
+    "publicationTypes": [
+      "Journal Article"
+    ],
+    "checkedAt": "2026-09-25"
   },
   "37722043": {
     "title": "The human cell count and size distribution.",
@@ -3449,7 +4183,7 @@
       "Journal Article",
       "Research Support, Non-U.S. Gov't"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "37781295": {
     "title": "Safety confirmation of induced pluripotent stem cell-derived cardiomyocyte patch transplantation for ischemic cardiomyopathy: first three case reports.",
@@ -3478,7 +4212,7 @@
     "publicationTypes": [
       "Journal Article"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "37919438": {
     "title": "Cell-based versus corticosteroid injections for knee pain in osteoarthritis: a randomized phase 3 trial.",
@@ -3517,7 +4251,7 @@
       "Journal Article",
       "Research Support, Non-U.S. Gov't"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "38028356": {
     "title": "Methods and perceptions of success for patient recruitment in decentralized clinical studies.",
@@ -3533,7 +4267,7 @@
       "Journal Article",
       "Review"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "38284415": {
     "title": "Decision aids for people facing health treatment or screening decisions.",
@@ -3567,7 +4301,7 @@
       "Systematic Review",
       "Journal Article"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "38294084": {
     "title": "PACE: randomized, controlled, multicentre, multinational, phase III study of PLX-PAD for critical limb ischaemia in patients unsuitable for revascularization: randomized clinical trial.",
@@ -3597,7 +4331,7 @@
       "Multicenter Study",
       "Journal Article"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "38295392": {
     "title": "American Academy of Orthopaedic Surgeons Technology Overview Summary: Platelet-Rich Plasma (PRP) for Knee Osteoarthritis.",
@@ -3615,7 +4349,7 @@
       "Journal Article",
       "Systematic Review"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "38326288": {
     "title": "Minimal information for studies of extracellular vesicles (MISEV2023): From basic to advanced approaches.",
@@ -3700,7 +4434,7 @@
     "publicationTypes": [
       "Journal Article"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "38411408": {
     "title": "Prevalence of postprandial hypotension in older adults: a systematic review and meta-analysis.",
@@ -3722,7 +4456,7 @@
       "Systematic Review",
       "Meta-Analysis"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "39393844": {
     "title": "Allogenic bone marrow-derived mesenchymal stromal cell-based therapy for patients with chronic low back pain: a prospective, multicentre, randomised placebo controlled trial (RESPINE study).",
@@ -3768,7 +4502,7 @@
       "Randomized Controlled Trial",
       "Multicenter Study"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "39429201": {
     "title": "2024 Guideline for the Primary Prevention of Stroke: A Guideline From the American Heart Association/American Stroke Association.",
@@ -3808,7 +4542,7 @@
       "Practice Guideline",
       "Review"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "39448132": {
     "title": "Postmenopausal Osteoporosis: A Review of Latest Guidelines.",
@@ -3824,7 +4558,7 @@
       "Journal Article",
       "Review"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "39609885": {
     "title": "Impact of mesenchymal stem cell size and adhesion modulation on in vivo distribution: insights from quantitative PET imaging.",
@@ -3851,7 +4585,7 @@
       "Journal Article",
       "Research Support, Non-U.S. Gov't"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "39701285": {
     "title": "Management Aspects of Medical Therapy in Graves Disease.",
@@ -3867,7 +4601,7 @@
       "Journal Article",
       "Review"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "39743230": {
     "title": "Mechanisms of allorecognition and xenorecognition in transplantation.",
@@ -3882,7 +4616,7 @@
       "Journal Article",
       "Review"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "40228833": {
     "title": "CONSORT 2025 statement: updated guideline for reporting randomised trials.",
@@ -3933,7 +4667,7 @@
     "publicationTypes": [
       "Journal Article"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "40240591": {
     "title": "Phase I/II trial of iPS-cell-derived dopaminergic cells for Parkinson's disease.",
@@ -3969,7 +4703,7 @@
       "Clinical Trial, Phase I",
       "Clinical Trial, Phase II"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "40252859": {
     "title": "Early Specialist Palliative Care in Patients with Metastatic Cancer: A Population-Based Cohort Study.",
@@ -3986,7 +4720,7 @@
     "publicationTypes": [
       "Journal Article"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "40544428": {
     "title": "Stem Cell-Derived, Fully Differentiated Islets for Type 1 Diabetes.",
@@ -4022,7 +4756,7 @@
       "Journal Article",
       "Multicenter Study"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   },
   "42506877": {
     "title": "Clinical practice guideline for physical therapist management of total knee arthroplasty: revision 2026.",
@@ -4045,6 +4779,6 @@
       "Journal Article",
       "Practice Guideline"
     ],
-    "checkedAt": "2026-09-23"
+    "checkedAt": "2026-09-25"
   }
 }

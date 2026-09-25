@@ -69,7 +69,7 @@ export function ArticleCard({
   const cat = categoryFor(article.category);
   const isColumn = article.kind === "column";
   const scheduled = articleBuildMode === "all" && Boolean(article.publishAt && article.publishAt > new Date().toISOString().slice(0, 10));
-  const typeLabel = isColumn ? "コラム" : article.category === "treatment" ? "治療前の確認" : article.category === "research" ? "研究の読み方" : article.category === "stem-cells" ? "細胞・基礎" : "基礎知識";
+  const typeLabel = isColumn ? "コラム" : article.category === "cost-access" ? "費用・受診" : article.category === "safety" ? "安全性" : article.category === "efficacy" ? "エビデンス" : article.category === "mechanisms" ? "仕組み・研究" : article.category === "compare-therapies" ? "治療の比較" : article.category === "in-body" ? "体内動態" : article.category === "anti-aging" ? "美容" : article.category === "cell-types" ? "細胞の種類" : "基礎知識";
   return (
     <article className={`article-card ${compact ? "compact" : ""}`}>
       <div className="article-card-body">

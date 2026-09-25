@@ -122,6 +122,9 @@ export function manuscriptHash(article, evidence, translations) {
 
 export function readEvidence({ allowIncomplete = false } = {}) {
   const groups = ["basics", "stem-cells", "treatment", "research"];
+  const articleCategory = new Map(
+    readRawArticles().map((article) => [article.slug, article.category]),
+  );
   const records = {};
   for (const group of groups) {
     const file = `src/content/evidence/${group}.json`;
@@ -129,7 +132,7 @@ export function readEvidence({ allowIncomplete = false } = {}) {
     const data = JSON.parse(fs.readFileSync(file, "utf8"));
     for (const [slug, entry] of Object.entries(data)) {
       if (records[slug]) throw new Error(`Duplicate evidence article: ${slug}`);
-      records[slug] = { ...entry, category: group };
+      records[slug] = { ...entry, category: articleCategory.get(slug) ?? group };
     }
   }
   return records;

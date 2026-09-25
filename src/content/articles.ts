@@ -126,16 +126,27 @@ const nta = {
   title: "国税庁：医療費控除",
   url: "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1120.htm",
 };
+const fdaPatient = {
+  title: "FDA：再生医療に関する患者・消費者向け情報",
+  url: "https://www.fda.gov/vaccines-blood-biologics/consumers-biologics/important-patient-and-consumer-information-about-regenerative-medicine-therapies",
+};
+const fdaExosome = {
+  title: "FDA：エクソソーム製品に関する安全性通知",
+  url: "https://www.fda.gov/vaccines-blood-biologics/safety-availability-biologics/public-safety-notification-exosome-products",
+};
+const closerLook = {
+  title: "国際幹細胞学会（ISSCR）の患者向け情報サイト",
+  url: "https://www.closerlookatstemcells.org/",
+};
 
 // 医療記事は、実在の監修者・出典・更新履歴を確認できるまで公開扱いにしない。
 // 本文はサイトの構成確認用に残すが、検索エンジンには draft として扱わせる。
 const rawArticles: Article[] = [
   {
     slug: "what-is-regenerative-medicine",
-    title: "再生医療とは？ はじめに知っておきたい基礎知識",
-    description:
-      "言葉の意味から、研究と治療の違いまで。再生医療について理解するための、最初の一歩。",
-    category: "basics",
+    title: "再生医療とは？幹細胞を使った治療の仕組みを解説",
+    description: "再生医療の意味と、幹細胞を使った治療が目指すこと。「幹細胞」と「再生医療」の違いも含めて整理します。",
+    category: "stem-basics",
     updatedAt: "2026-08-01",
     readingMinutes: 2,
     status: "draft",
@@ -148,7 +159,7 @@ const rawArticles: Article[] = [
     sections: [
       {
         id: "overview",
-        title: "再生医療を知るための入り口",
+        title: "再生医療とは？幹細胞を使った治療の仕組みを解説",
         paragraphs: [
           "再生医療は、細胞などを用いて、損なわれた組織や機能の回復を目指す医療の分野です。ひとつの決まった治療法を指す言葉ではありません。",
           "このサイトでは、細胞の種類、研究の段階、治療ごとの情報を分けて整理していきます。",
@@ -156,14 +167,14 @@ const rawArticles: Article[] = [
       },
       {
         id: "research-and-care",
-        title: "研究の成果と、治療として使えること",
+        title: "再生医療とは？幹細胞を使った治療の仕組みを解説",
         paragraphs: [
           "研究に関するニュースを読むときは、細胞を用いた実験なのか、動物での研究なのか、人を対象にした研究なのかを確かめましょう。研究結果だけで、自分に適した治療かどうかは判断できません。",
         ],
       },
       {
         id: "questions",
-        title: "治療を検討する前に確認したいこと",
+        title: "再生医療とは？幹細胞を使った治療の仕組みを解説",
         paragraphs: [
           "対象となる病気、期待される効果の根拠、主なリスク、他の選択肢、費用を確認しましょう。分からないことを書き出し、主治医や提供する医療機関に相談することが大切です。",
         ],
@@ -176,7 +187,7 @@ const rawArticles: Article[] = [
     title: "細胞・組織・臓器の基礎：体のつくりから理解する",
     description:
       "再生医療の話に出てくる「細胞」「組織」の言葉を、体のつくりから整理します。",
-    category: "basics",
+    category: "stem-basics",
     updatedAt: "2026-08-01",
     readingMinutes: 3,
     status: "draft",
@@ -219,7 +230,7 @@ const rawArticles: Article[] = [
     title: "日本再生医療学会とは？役割・認定制度・公式情報の読み方",
     description:
       "千原良友先生の所属学会である日本再生医療学会について、設立の目的、学術活動、認定制度、制度情報を公式資料から整理します。",
-    category: "research",
+    category: "mechanisms",
     updatedAt: "2026-08-01",
     readingMinutes: 7,
     status: "draft",
@@ -287,7 +298,7 @@ const rawArticles: Article[] = [
     title: "再生医療の歩み：輸血・移植から細胞の時代へ",
     description:
       "再生医療は突然生まれたものではありません。医療の歴史の中での位置づけをたどります。",
-    category: "basics",
+    category: "stem-basics",
     updatedAt: "2026-08-01",
     readingMinutes: 3,
     status: "draft",
@@ -330,7 +341,7 @@ const rawArticles: Article[] = [
     title: "再生医療の3つのアプローチ：細胞移植・組織工学・体の力を生かす",
     description:
       "ひとくちに再生医療といっても方法はさまざま。代表的な考え方を3つに分けて紹介します。",
-    category: "basics",
+    category: "stem-basics",
     updatedAt: "2026-08-02",
     readingMinutes: 3,
     status: "draft",
@@ -370,10 +381,9 @@ const rawArticles: Article[] = [
   },
   {
     slug: "myths-and-facts",
-    title: "再生医療のよくある誤解5つ：期待と現実の区別",
-    description:
-      "「何でも治る」「自分にもすぐ使える」は本当？ 誤解しやすい点を5つに絞って解説します。",
-    category: "basics",
+    title: "再生医療は万能なの？できること・できないこと",
+    description: "「何でも治る」「自分にもすぐ使える」は本当？再生医療でできることとできないことを、よくある誤解から整理します。",
+    category: "efficacy",
     updatedAt: "2026-08-02",
     readingMinutes: 4,
     status: "draft",
@@ -386,7 +396,7 @@ const rawArticles: Article[] = [
     sections: [
       {
         id: "myth-1-2",
-        title: "誤解1・2：万能ではない、すぐ受けられるとは限らない",
+        title: "再生医療は万能なの？できること・できないこと",
         paragraphs: [
           "誤解1「再生医療はどんな病気にも効く」：対象となる病気や状態は治療ごとに決まっています。自分の病気に当てはまる根拠があるかを個別に確認しましょう。",
           "誤解2「研究のニュース＝来年には治療」：基礎研究から実際の治療までは長い検証が必要です。ニュースは「どの段階の成果か」と一緒に読みましょう。",
@@ -394,7 +404,7 @@ const rawArticles: Article[] = [
       },
       {
         id: "myth-3-4",
-        title: "誤解3・4：細胞の種類と安全性",
+        title: "再生医療は万能なの？できること・できないこと",
         paragraphs: [
           "誤解3「幹細胞ならどれも同じ」：iPS細胞、ES細胞、体性幹細胞では由来も性質も異なります。さらに同じ種類でも、作り方や使い方で評価が変わります。",
           "誤解4「自分の細胞だから安全」：自分由来でも、培養や加工の過程、投与方法によるリスクがあります。安全性は治療ごとに検証されるものです。",
@@ -402,7 +412,7 @@ const rawArticles: Article[] = [
       },
       {
         id: "myth-5",
-        title: "誤解5：費用と効果の関係",
+        title: "再生医療は万能なの？できること・できないこと",
         paragraphs: [
           "誤解5「高額な治療ほど効果が高い」：価格は効果の証明ではありません。費用の内訳、根拠となるデータ、他の選択肢、治療後の対応を含めて比較しましょう。",
           "迷ったときは、主治医やセカンドオピニオンで第三者の意見を聞くことも役立ちます。",
@@ -413,9 +423,9 @@ const rawArticles: Article[] = [
   },
   {
     slug: "stem-cell-types",
-    title: "幹細胞とは？ iPS細胞・ES細胞・体性幹細胞の違い",
-    description: "幹細胞の基本的な働きと、代表的な種類を整理します。",
-    category: "stem-cells",
+    title: "幹細胞にはどんな種類がある？ES細胞・iPS細胞・間葉系幹細胞の違い",
+    description: "幹細胞の基本的な働きと、ES細胞・iPS細胞・間葉系幹細胞をはじめとする代表的な種類の違いを整理します。",
+    category: "stem-basics",
     updatedAt: "2026-08-02",
     readingMinutes: 2,
     status: "draft",
@@ -427,14 +437,14 @@ const rawArticles: Article[] = [
     sections: [
       {
         id: "stem-cells",
-        title: "幹細胞の基本的な働き",
+        title: "幹細胞にはどんな種類がある？ES細胞・iPS細胞・間葉系幹細胞の違い",
         paragraphs: [
           "幹細胞を理解する鍵は、自分と同じ性質の細胞を作る「自己複製」と、別の種類の細胞になる「分化」です。すべての幹細胞が同じ性質を持っているわけではありません。",
         ],
       },
       {
         id: "types",
-        title: "種類と由来を区別する",
+        title: "幹細胞にはどんな種類がある？ES細胞・iPS細胞・間葉系幹細胞の違い",
         paragraphs: [
           "iPS細胞は、体の細胞に特定の因子を導入するなどして作られる多能性幹細胞です。ES細胞は初期の胚に由来し、体性幹細胞は体の組織に存在します。",
           "細胞の種類だけで治療の有効性や安全性が決まるわけではありません。治療ごとの検証を確認する必要があります。",
@@ -448,7 +458,7 @@ const rawArticles: Article[] = [
     title: "iPS細胞とは？ 仕組みと研究の現状をやさしく解説",
     description:
       "体の細胞から作られる多能性幹細胞。できること・できないことを整理します。",
-    category: "stem-cells",
+    category: "stem-basics",
     updatedAt: "2026-08-02",
     readingMinutes: 4,
     status: "draft",
@@ -491,7 +501,7 @@ const rawArticles: Article[] = [
     title: "ES細胞とは？ 特徴と倫理的な配慮",
     description:
       "初期胚に由来する多能性幹細胞。iPS細胞との違いと、研究のルールを紹介します。",
-    category: "stem-cells",
+    category: "stem-basics",
     updatedAt: "2026-08-03",
     readingMinutes: 3,
     status: "draft",
@@ -534,7 +544,7 @@ const rawArticles: Article[] = [
     title: "体性幹細胞とは？ 造血・間葉系・神経幹細胞の違い",
     description:
       "体の組織に存在する幹細胞。種類ごとの働きと、治療との関わりを整理します。",
-    category: "stem-cells",
+    category: "stem-basics",
     updatedAt: "2026-08-03",
     readingMinutes: 4,
     status: "draft",
@@ -574,10 +584,9 @@ const rawArticles: Article[] = [
   },
   {
     slug: "cell-culture-and-quality",
-    title: "細胞の培養・加工・品質管理：治療の裏側にある工程",
-    description:
-      "細胞を増やし、確かめて、届けるまで。安全性を支える工程を紹介します。",
-    category: "stem-cells",
+    title: "培養幹細胞とは？採取した細胞をどうやって治療に使うの？",
+    description: "採取した細胞を増やし、品質を確かめて投与するまで。幹細胞治療の裏側にある培養・加工の工程を紹介します。",
+    category: "cell-types",
     updatedAt: "2026-08-03",
     readingMinutes: 4,
     status: "draft",
@@ -590,7 +599,7 @@ const rawArticles: Article[] = [
     sections: [
       {
         id: "process",
-        title: "採取から投与までの流れ",
+        title: "培養幹細胞とは？採取した細胞をどうやって治療に使うの？",
         paragraphs: [
           "細胞を用いる治療では、採取、培養・加工、検査、投与という工程をたどります。細胞の種類や量、投与経路は治療ごとに決められ、記録と確認を重ねながら進められます。",
           "工程が多いほど管理の目も必要になります。説明を受ける際は、全体の流れを示してもらうと理解しやすくなります。",
@@ -598,7 +607,7 @@ const rawArticles: Article[] = [
       },
       {
         id: "quality",
-        title: "品質を確認する視点",
+        title: "培養幹細胞とは？採取した細胞をどうやって治療に使うの？",
         paragraphs: [
           "細菌などの混入がないか、目的の細胞が十分に含まれているか、想定外の変化がないかといった確認が行われます。輸送や保存の条件も品質に関わります。",
           "「どのように品質を確認していますか」「結果はどのように説明されますか」と尋ねてみましょう。",
@@ -606,7 +615,7 @@ const rawArticles: Article[] = [
       },
       {
         id: "facility",
-        title: "施設と手続きの確認",
+        title: "培養幹細胞とは？採取した細胞をどうやって治療に使うの？",
         paragraphs: [
           "細胞の加工を行う施設の体制や、再生医療等安全性確保法などの法令に基づく手続きの有無も大切な確認点です。提供機関の説明資料や厚生労働省の情報で、手続きの位置づけを確かめられます。",
           "工程の透明性は、治療を冷静に判断する助けになります。",
@@ -617,10 +626,9 @@ const rawArticles: Article[] = [
   },
   {
     slug: "questions-before-treatment",
-    title: "再生医療を検討するとき、医師に確認したいこと",
-    description:
-      "納得して相談するために。根拠、リスク、費用についての質問を整理しましょう。",
-    category: "treatment",
+    title: "幹細胞治療を受ける前に知っておきたいこと",
+    description: "効果の根拠、リスク、代替案、費用。幹細胞治療を検討するとき、医師に確認したい質問を整理します。",
+    category: "safety",
     updatedAt: "2026-08-03",
     readingMinutes: 2,
     status: "draft",
@@ -633,14 +641,14 @@ const rawArticles: Article[] = [
     sections: [
       {
         id: "evidence",
-        title: "効果とリスクについて聞く",
+        title: "幹細胞治療を受ける前に知っておきたいこと",
         paragraphs: [
           "「私の病気や状態に対して、どのような研究がありますか」「効果が得られない可能性や、主なリスクは何ですか」と質問してみましょう。説明を持ち帰って検討することも大切です。",
         ],
       },
       {
         id: "alternatives",
-        title: "他の選択肢と、費用を確認する",
+        title: "幹細胞治療を受ける前に知っておきたいこと",
         paragraphs: [
           "他の治療法との違い、治療を受けない場合の見通し、検査や通院を含めた費用の総額について確認します。体調が変化した際の連絡先や診療体制も聞いておきましょう。",
         ],
@@ -650,10 +658,9 @@ const rawArticles: Article[] = [
   },
   {
     slug: "cost-and-insurance",
-    title: "費用と保険：再生医療のお金の話を整理する",
-    description:
-      "保険診療・治験・自由診療で費用の仕組みは違います。確認すべき点をまとめます。",
-    category: "treatment",
+    title: "幹細胞治療はいくらかかる？費用の仕組みと保険の扱い",
+    description: "採取・培養・投与・通院を含む費用の内訳と、保険が使える範囲、自由診療との違いを整理します。",
+    category: "cost-access",
     updatedAt: "2026-08-04",
     readingMinutes: 4,
     status: "draft",
@@ -666,7 +673,7 @@ const rawArticles: Article[] = [
     sections: [
       {
         id: "types",
-        title: "3つの費用のかたち",
+        title: "幹細胞治療はいくらかかる？費用の仕組みと保険の扱い",
         paragraphs: [
           "保険診療として行われる治療は、定められた自己負担割合で受けられます。治験や臨床研究では費用の扱いが研究ごとに定められ、説明文書に記載されます。自由診療では全額自己負担が原則で、金額は医療機関ごとに異なります。",
           "まずは自分が検討している治療がどの位置づけかを確認しましょう。",
@@ -674,7 +681,7 @@ const rawArticles: Article[] = [
       },
       {
         id: "checklist",
-        title: "見積りで確認したい項目",
+        title: "幹細胞治療はいくらかかる？費用の仕組みと保険の扱い",
         paragraphs: [
           "初診料、検査費、細胞の加工費、投与費、通院・入院費、治療後の診察費を含めた総額を尋ねます。効果がなかった場合や途中で中止した場合の扱い、合併症が起きた際の対応と費用も事前に確認します。",
           "書面で受け取り、持ち帰って比較検討する時間を取りましょう。",
@@ -682,7 +689,7 @@ const rawArticles: Article[] = [
       },
       {
         id: "traps",
-        title: "契約を急がされるときは立ち止まる",
+        title: "幹細胞治療はいくらかかる？費用の仕組みと保険の扱い",
         paragraphs: [
           "「今日契約すれば割引」「残りわずか」といった勧誘で判断を急がせる説明には注意が必要です。医療広告のルールでは、根拠のない効果の表示や不安をあおる表現は適切ではありません。",
           "疑問が残る場合は、主治医や別の医療機関に相談し、複数の視点で考えましょう。",
@@ -693,10 +700,9 @@ const rawArticles: Article[] = [
   },
   {
     slug: "risks-and-safety",
-    title: "リスクと安全性：副作用・合併症の考え方",
-    description:
-      "感染・免疫・アレルギーなど、細胞を用いる治療に特有の注意点を含めて解説します。",
-    category: "treatment",
+    title: "幹細胞治療は安全？知っておきたい副作用とリスク",
+    description: "幹細胞治療で起こり得る副作用とリスク。投与方法や細胞の種類によって変わる注意点を整理します。",
+    category: "safety",
     updatedAt: "2026-08-04",
     readingMinutes: 4,
     status: "draft",
@@ -709,7 +715,7 @@ const rawArticles: Article[] = [
     sections: [
       {
         id: "risks",
-        title: "主なリスクの例",
+        title: "幹細胞治療は安全？知っておきたい副作用とリスク",
         paragraphs: [
           "投与に伴う痛みや腫れ、発熱、アレルギー反応、感染症、血栓などの一般的なリスクに加え、細胞の種類や投与部位に応じた特有のリスクがあります。腫瘍化などの長期的な懸念についても、研究段階に応じた説明が求められます。",
           "「どのような害が、どれくらいの頻度で報告されていますか」と具体的に尋ねてみましょう。",
@@ -717,7 +723,7 @@ const rawArticles: Article[] = [
       },
       {
         id: "followup",
-        title: "治療後の経過観察",
+        title: "幹細胞治療は安全？知っておきたい副作用とリスク",
         paragraphs: [
           "治療が終わった後の通院間隔、検査内容、注意すべき症状、緊急時の連絡先を確認します。長期の追跡調査への協力が求められる場合もあります。",
           "症状日記やお薬手帳など、変化を記録する手段を用意しておくと相談しやすくなります。",
@@ -725,7 +731,7 @@ const rawArticles: Article[] = [
       },
       {
         id: "compare",
-        title: "利益と不利益を天秤にかける",
+        title: "幹細胞治療は安全？知っておきたい副作用とリスク",
         paragraphs: [
           "期待される利益（症状の改善の見込みや根拠の強さ）と、不利益（リスク、負担、費用、他の治療機会の損失）を並べて考えます。治療を受けない場合の見通しも含めて医師に尋ねましょう。",
           "判断に迷うときは時間を置き、家族や主治医と話し合うことが役立ちます。",
@@ -739,7 +745,7 @@ const rawArticles: Article[] = [
     title: "セカンドオピニオンの活用法：納得のための第二の意見",
     description:
       "主治医との関係を保ちながら、別の視点を取り入れるための進め方を紹介します。",
-    category: "treatment",
+    category: "cost-access",
     updatedAt: "2026-08-04",
     readingMinutes: 3,
     status: "draft",
@@ -782,7 +788,7 @@ const rawArticles: Article[] = [
     title: "治験・臨床研究に参加するとき：流れと確認点",
     description:
       "研究としての治療に参加する意味、同意・費用・途中辞退について解説します。",
-    category: "treatment",
+    category: "cost-access",
     updatedAt: "2026-08-04",
     readingMinutes: 4,
     status: "draft",
@@ -825,7 +831,7 @@ const rawArticles: Article[] = [
     title: "再生医療のニュースを読むための、3つの視点",
     description:
       "「研究で分かったこと」を正しく受け止めるための、ニュースの読み方。",
-    category: "research",
+    category: "efficacy",
     updatedAt: "2026-08-05",
     readingMinutes: 2,
     status: "draft",
@@ -865,7 +871,7 @@ const rawArticles: Article[] = [
     title: "研究の段階：基礎研究から非臨床・臨床試験へ",
     description:
       "細胞の発見が治療になるまでの長い道のり。各段階の役割を紹介します。",
-    category: "research",
+    category: "efficacy",
     updatedAt: "2026-08-05",
     readingMinutes: 4,
     status: "draft",
@@ -908,7 +914,7 @@ const rawArticles: Article[] = [
     title: "エビデンスレベルと論文の読み方：確かさを比べる",
     description:
       "症例報告と大規模試験はどう違う？ 根拠の強さを見分ける視点を紹介します。",
-    category: "research",
+    category: "efficacy",
     updatedAt: "2026-08-05",
     readingMinutes: 4,
     status: "draft",
@@ -951,7 +957,7 @@ const rawArticles: Article[] = [
     title: "日本で承認された再生医療等製品：今使える治療を知る",
     description:
       "条件・期限付き承認を含め、承認の仕組みと調べ方を整理します。",
-    category: "research",
+    category: "efficacy",
     updatedAt: "2026-08-05",
     readingMinutes: 4,
     status: "draft",
@@ -994,7 +1000,7 @@ const rawArticles: Article[] = [
     title: "これからの研究：オルガノイド・臓器再生・個別化医療",
     description:
       "期待が集まる領域を、現状と課題と一緒に冷静に眺めます。",
-    category: "research",
+    category: "mechanisms",
     updatedAt: "2026-08-06",
     readingMinutes: 4,
     status: "draft",
@@ -1034,10 +1040,9 @@ const rawArticles: Article[] = [
   },
   {
     slug: "body-repair-mechanisms",
-    title: "体の修復の仕組み：炎症・瘢痕・再生の違い",
-    description:
-      "傷が治るとき体で何が起きているか。再生医療の背景にある仕組みを整理します。",
-    category: "basics",
+    title: "幹細胞はどうやって体の組織を修復するの？",
+    description: "傷ついた組織が治る仕組みと、幹細胞がどのように関わると考えられているかを解説します。",
+    category: "in-body",
     updatedAt: "2026-08-06",
     readingMinutes: 3,
     status: "draft",
@@ -1050,21 +1055,21 @@ const rawArticles: Article[] = [
     sections: [
       {
         id: "inflammation",
-        title: "炎症は修復の始まり",
+        title: "幹細胞はどうやって体の組織を修復するの？",
         paragraphs: [
           "切り傷の周りが赤く腫れるのは、免疫細胞や修復に関わる細胞が集まっている合図です。炎症そのものは悪者ではなく、壊れた組織の掃除と修復の準備の段階と捉えられます。",
         ],
       },
       {
         id: "scar",
-        title: "瘢痕と再生の違い",
+        title: "幹細胞はどうやって体の組織を修復するの？",
         paragraphs: [
           "皮膚の深い傷が傷あとになるように、元の構造とは異なる組織でふさがれるのが瘢痕です。一方、元の構造と働きが戻るのが再生です。再生医療は後者に近づくことを目指しますが、対象や条件によって難しさが異なります。",
         ],
       },
       {
         id: "organs",
-        title: "臓器ごとの得意・不得意",
+        title: "幹細胞はどうやって体の組織を修復するの？",
         paragraphs: [
           "肝臓や皮膚、血液は入れ替わりが活発で修復が得意な側面があります。心臓の筋肉や中枢神経は一度失われると戻りにくいとされ、研究の重点領域になっています。対象臓器の性質を知ると話が見通しやすくなります。",
         ],
@@ -1077,7 +1082,7 @@ const rawArticles: Article[] = [
     title: "自家と他家：誰の細胞を使うかの違い",
     description:
       "自分由来と他人由来の細胞。それぞれの利点と課題を比べます。",
-    category: "basics",
+    category: "cell-types",
     updatedAt: "2026-08-06",
     readingMinutes: 3,
     status: "draft",
@@ -1117,7 +1122,7 @@ const rawArticles: Article[] = [
     title: "分化・脱分化・リプログラミング：細胞の変化を表す言葉",
     description:
       "ニュースでよく見る3つの言葉の意味と関係を、図解のつもりで解説します。",
-    category: "basics",
+    category: "mechanisms",
     updatedAt: "2026-08-06",
     readingMinutes: 3,
     status: "draft",
@@ -1157,7 +1162,7 @@ const rawArticles: Article[] = [
     title: "遺伝子と細胞の関係：設計図と働き手の入門",
     description:
       "遺伝子・ゲノム・タンパク質の関係を、再生医療の話題に絞って紹介します。",
-    category: "basics",
+    category: "stem-basics",
     updatedAt: "2026-08-07",
     readingMinutes: 3,
     status: "draft",
@@ -1197,7 +1202,7 @@ const rawArticles: Article[] = [
     title: "免疫の基礎と拒絶：他人の細胞が排除される理由",
     description:
       "移植で問題になる拒絶反応の仕組みと、対策の考え方をやさしく解説します。",
-    category: "basics",
+    category: "mechanisms",
     updatedAt: "2026-08-07",
     readingMinutes: 3,
     status: "draft",
@@ -1237,7 +1242,7 @@ const rawArticles: Article[] = [
     title: "血液の基礎：赤血球・白血球・血小板と造血",
     description:
       "細胞治療の原点である血液の仕組みから、体の細胞社会をのぞきます。",
-    category: "basics",
+    category: "stem-basics",
     updatedAt: "2026-08-07",
     readingMinutes: 3,
     status: "draft",
@@ -1277,7 +1282,7 @@ const rawArticles: Article[] = [
     title: "皮膚・骨・軟骨の再生：身近な組織の例",
     description:
       "培養表皮や骨・軟骨の治療など、比較的イメージしやすい例を紹介します。",
-    category: "basics",
+    category: "stem-basics",
     updatedAt: "2026-08-07",
     readingMinutes: 3,
     status: "draft",
@@ -1317,7 +1322,7 @@ const rawArticles: Article[] = [
     title: "神経・筋・心臓の特徴：再生が難しいとされる臓器",
     description:
       "一度失われると戻りにくい組織の事情と、研究の方向性を紹介します。",
-    category: "basics",
+    category: "stem-basics",
     updatedAt: "2026-08-08",
     readingMinutes: 3,
     status: "draft",
@@ -1357,7 +1362,7 @@ const rawArticles: Article[] = [
     title: "年齢と再生力：子どもの治りと大人の治りの違い",
     description:
       "年齢で変わる修復の力と、治療を考えるときの注意点を整理します。",
-    category: "basics",
+    category: "anti-aging",
     updatedAt: "2026-08-08",
     readingMinutes: 3,
     status: "draft",
@@ -1397,7 +1402,7 @@ const rawArticles: Article[] = [
     title: "薬・手術との比較：再生医療の位置づけ",
     description:
       "薬物療法や手術と比べたときの、再生医療の特徴と選び方を整理します。",
-    category: "basics",
+    category: "compare-therapies",
     updatedAt: "2026-08-08",
     readingMinutes: 3,
     status: "draft",
@@ -1437,7 +1442,7 @@ const rawArticles: Article[] = [
     title: "病院で聞く言葉：適応・禁忌・予後・QOL",
     description:
       "説明の場でよく出る4つの言葉の意味を押さえ、相談をスムーズにします。",
-    category: "basics",
+    category: "cost-access",
     updatedAt: "2026-08-08",
     readingMinutes: 3,
     status: "draft",
@@ -1477,7 +1482,7 @@ const rawArticles: Article[] = [
     title: "家族との話し方：治療の選択を共有するために",
     description:
       "期待のずれを防ぎ、一緒に考えるための話し合いのヒントをまとめます。",
-    category: "basics",
+    category: "cost-access",
     updatedAt: "2026-08-09",
     readingMinutes: 3,
     status: "draft",
@@ -1517,7 +1522,7 @@ const rawArticles: Article[] = [
     title: "基礎の次に読む順番：あなたに合った道案内",
     description:
       "基礎を終えた後のおすすめの読み順を、関心別に3コースで紹介します。",
-    category: "basics",
+    category: "stem-basics",
     updatedAt: "2026-08-09",
     readingMinutes: 3,
     status: "draft",
@@ -1557,7 +1562,7 @@ const rawArticles: Article[] = [
     title: "造血幹細胞移植：確立した細胞治療の代表例",
     description:
       "白血病などの治療で行われる移植の仕組みと、他の治療との違いを学びます。",
-    category: "stem-cells",
+    category: "cell-types",
     updatedAt: "2026-08-09",
     readingMinutes: 4,
     status: "draft",
@@ -1594,10 +1599,9 @@ const rawArticles: Article[] = [
   },
   {
     slug: "mesenchymal-basics",
-    title: "間葉系幹細胞の整理：よく聞く名前の実像",
-    description:
-      "骨・軟骨・脂肪などに関わる細胞群。説明を受けるときの確認点をまとめます。",
-    category: "stem-cells",
+    title: "間葉系幹細胞（MSC）とは？再生医療で注目される理由",
+    description: "骨髄・脂肪・臍帯などに由来する間葉系幹細胞（MSC）の特徴と、再生医療で注目される理由を解説します。",
+    category: "cell-types",
     updatedAt: "2026-08-09",
     readingMinutes: 3,
     status: "draft",
@@ -1610,21 +1614,21 @@ const rawArticles: Article[] = [
     sections: [
       {
         id: "what",
-        title: "間葉系幹細胞とは",
+        title: "間葉系幹細胞（MSC）とは？再生医療で注目される理由",
         paragraphs: [
           "骨髄や脂肪などから得られる、骨・軟骨・脂肪などへの分化や、周囲の細胞に働きかける作用が研究されている細胞群です。研究や製品によって定義や性質の幅があり、一枚岩ではありません。",
         ],
       },
       {
         id: "actions",
-        title: "2つの働きの考え方",
+        title: "間葉系幹細胞（MSC）とは？再生医療で注目される理由",
         paragraphs: [
           "失われた組織そのものに置き換わる働きと、炎症や修復に関わる信号を出して周囲を助ける働きの両面が議論されています。どちらが主かは対象疾患や投与法で異なります。",
         ],
       },
       {
         id: "check",
-        title: "説明を受けるときの確認点",
+        title: "間葉系幹細胞（MSC）とは？再生医療で注目される理由",
         paragraphs: [
           "由来組織、細胞の規格や検査、投与経路と回数、根拠となる研究、費用をセットで尋ねましょう。「幹細胞」や「再生」という言葉だけでは内容は分かりません。",
         ],
@@ -1637,7 +1641,7 @@ const rawArticles: Article[] = [
     title: "神経幹細胞：脳と脊髄の修復を目指す研究",
     description:
       "神経の再生が難しい理由と、細胞移植研究の現状・課題を紹介します。",
-    category: "stem-cells",
+    category: "cell-types",
     updatedAt: "2026-08-10",
     readingMinutes: 3,
     status: "draft",
@@ -1677,7 +1681,7 @@ const rawArticles: Article[] = [
     title: "組織幹細胞の世界：皮膚・腸・筋肉の維持役",
     description:
       "日常の入れ替わりを支える幹細胞たち。それぞれの働きを紹介します。",
-    category: "stem-cells",
+    category: "cell-types",
     updatedAt: "2026-08-10",
     readingMinutes: 3,
     status: "draft",
@@ -1717,7 +1721,7 @@ const rawArticles: Article[] = [
     title: "iPS細胞ストック：備蓄細胞で迅速に届ける工夫",
     description:
       "拒絶されにくい型の備蓄と、個別作製との使い分けを解説します。",
-    category: "stem-cells",
+    category: "cell-types",
     updatedAt: "2026-08-10",
     readingMinutes: 3,
     status: "draft",
@@ -1757,7 +1761,7 @@ const rawArticles: Article[] = [
     title: "分化誘導と純化：目的の細胞だけを取り出す技術",
     description:
       "狙った細胞を作り分け、不要な細胞を取り除く工程の重要性を紹介します。",
-    category: "stem-cells",
+    category: "cell-types",
     updatedAt: "2026-08-10",
     readingMinutes: 3,
     status: "draft",
@@ -1797,7 +1801,7 @@ const rawArticles: Article[] = [
     title: "ゲノム編集との違い：切る技術と育てる技術",
     description:
       "混同されやすいゲノム編集と再生医療の関係を、役割分担で整理します。",
-    category: "stem-cells",
+    category: "mechanisms",
     updatedAt: "2026-08-11",
     readingMinutes: 3,
     status: "draft",
@@ -1834,10 +1838,9 @@ const rawArticles: Article[] = [
   },
   {
     slug: "autologous-allogeneic",
-    title: "自家細胞と他家細胞：採取・製造・通院の違い",
-    description:
-      "自分の細胞と備蓄細胞。治療を受ける側の体験の違いを比べます。",
-    category: "stem-cells",
+    title: "自家幹細胞と他家幹細胞の違いとは？",
+    description: "自分の細胞を使う自家移植と、他人由来の細胞を使う他家移植。採取・製造・免疫の観点から違いを整理します。",
+    category: "cell-types",
     updatedAt: "2026-08-11",
     readingMinutes: 3,
     status: "draft",
@@ -1850,21 +1853,21 @@ const rawArticles: Article[] = [
     sections: [
       {
         id: "flow-self",
-        title: "自家の場合の流れ",
+        title: "自家幹細胞と他家幹細胞の違いとは？",
         paragraphs: [
           "組織の採取、培養・加工、検査、投与と進み、製造期間中は待機が必要です。自分の細胞を使う場合でも安全性が保証されるわけではなく、採取の負担や製造のばらつきが課題です。",
         ],
       },
       {
         id: "flow-donor",
-        title: "他家の場合の流れ",
+        title: "自家幹細胞と他家幹細胞の違いとは？",
         paragraphs: [
           "事前に用意・検査された細胞を用いるため、条件が合えば採取を待たずに進められる場合があります。拒絶対策や感染症検査の体制、長期追跡への協力が前提になります。",
         ],
       },
       {
         id: "ask",
-        title: "比べるときの質問",
+        title: "自家幹細胞と他家幹細胞の違いとは？",
         paragraphs: [
           "製造期間、通院回数、総費用、拒絶や感染症への対策、治療後の観察期間を並べて尋ねましょう。自分の生活や価値観との相性も大切な判断材料です。",
         ],
@@ -1877,7 +1880,7 @@ const rawArticles: Article[] = [
     title: "腫瘍化と安全性試験：増える力の裏側",
     description:
       "増殖力に伴う懸念と、それを確かめる試験の考え方を解説します。",
-    category: "stem-cells",
+    category: "safety",
     updatedAt: "2026-08-11",
     readingMinutes: 3,
     status: "draft",
@@ -1917,7 +1920,7 @@ const rawArticles: Article[] = [
     title: "HLAと拒絶：型合わせの基本",
     description:
       "移植の適合性で聞くHLAの意味と、型合わせの限界を整理します。",
-    category: "stem-cells",
+    category: "safety",
     updatedAt: "2026-08-11",
     readingMinutes: 3,
     status: "draft",
@@ -1957,7 +1960,7 @@ const rawArticles: Article[] = [
     title: "iPS創薬：移植だけではないiPSの使い道",
     description:
       "病気の再現と薬探しへの活用。治療応用とは別の広がりを紹介します。",
-    category: "stem-cells",
+    category: "mechanisms",
     updatedAt: "2026-08-12",
     readingMinutes: 3,
     status: "draft",
@@ -1997,7 +2000,7 @@ const rawArticles: Article[] = [
     title: "オルガノイド入門：ミニ臓器で何が分かるか",
     description:
       "立体的な小さな組織モデルの作り方・使い道・限界を整理します。",
-    category: "stem-cells",
+    category: "mechanisms",
     updatedAt: "2026-08-12",
     readingMinutes: 3,
     status: "draft",
@@ -2034,10 +2037,9 @@ const rawArticles: Article[] = [
   },
   {
     slug: "exosomes-notes",
-    title: "エクソソーム・分泌物療法の話題：冷静な見方",
-    description:
-      "注目を集める分泌物を用いる説明について、検証状況の確認点をまとめます。",
-    category: "stem-cells",
+    title: "幹細胞治療とエクソソーム治療は何が違う？",
+    description: "細胞そのものを使う治療と、細胞の分泌物を使うエクソソーム治療。違いと研究段階を整理します。",
+    category: "compare-therapies",
     updatedAt: "2026-08-12",
     readingMinutes: 3,
     status: "draft",
@@ -2050,21 +2052,21 @@ const rawArticles: Article[] = [
     sections: [
       {
         id: "what",
-        title: "エクソソームとは",
+        title: "幹細胞治療とエクソソーム治療は何が違う？",
         paragraphs: [
           "細胞が出す小さな顆粒で、タンパク質や核酸などを運びます。細胞間の連絡に関わるとされ、診断や治療への応用が研究されています。",
         ],
       },
       {
         id: "issues",
-        title: "実用化の課題",
+        title: "幹細胞治療とエクソソーム治療は何が違う？",
         paragraphs: [
           "由来や製造法で内容が変わりやすく、品質の規格化や作用の解明が途上です。研究段階の成果と、治療としての提供は区別して考えます。",
         ],
       },
       {
         id: "check",
-        title: "説明を受けるときは",
+        title: "幹細胞治療とエクソソーム治療は何が違う？",
         paragraphs: [
           "対象疾患、根拠となる研究、製造・品質管理、リスク、費用、他の選択肢を確認しましょう。効果を断定する表示や高額な契約の勧誘には注意が必要です。",
         ],
@@ -2077,7 +2079,7 @@ const rawArticles: Article[] = [
     title: "初診の準備：持参物と伝え方の checklist",
     description:
       "限られた診察時間を有効に使うための、資料整理と伝え方のコツです。",
-    category: "treatment",
+    category: "cost-access",
     updatedAt: "2026-08-12",
     readingMinutes: 3,
     status: "draft",
@@ -2114,10 +2116,9 @@ const rawArticles: Article[] = [
   },
   {
     slug: "informed-consent-howto",
-    title: "説明と同意の受け方：納得のための聞き方",
-    description:
-      "インフォームド・コンセントを形だけでなく活かすための実践編です。",
-    category: "treatment",
+    title: "再生医療を受けるなら、どんな説明を受けるべき？",
+    description: "説明と同意の流れで確認したい、効果・リスク・代替案・費用の説明の受け方と質問の仕方。",
+    category: "cost-access",
     updatedAt: "2026-08-13",
     readingMinutes: 3,
     status: "draft",
@@ -2130,21 +2131,21 @@ const rawArticles: Article[] = [
     sections: [
       {
         id: "three",
-        title: "聞くべき3点セット",
+        title: "再生医療を受けるなら、どんな説明を受けるべき？",
         paragraphs: [
           "期待される利益（根拠の強さを含む）、主なリスクと頻度、他の選択肢（治療しない場合を含む）を尋ねます。この3点がそろうと判断の土台ができます。",
         ],
       },
       {
         id: "words",
-        title: "言葉の壁を下げる",
+        title: "再生医療を受けるなら、どんな説明を受けるべき？",
         paragraphs: [
           "専門用語は遠慮なく言い換えを求めましょう。「たとえば私の場合はどうなりますか」と自分の状況に引きつけて聞くと理解が深まります。",
         ],
       },
       {
         id: "time",
-        title: "決断の時間を確保する",
+        title: "再生医療を受けるなら、どんな説明を受けるべき？",
         paragraphs: [
           "その場での即答を求められたら、持ち帰り検討の可否を確認します。同意書の写しを受け取り、家族や主治医と共有してから決めましょう。",
         ],
@@ -2157,7 +2158,7 @@ const rawArticles: Article[] = [
     title: "相談から治療後までの流れ：全体像をつかむ",
     description:
       "初回相談・検査・同意・投与・経過観察の一連の流れを紹介します。",
-    category: "treatment",
+    category: "cost-access",
     updatedAt: "2026-08-13",
     readingMinutes: 3,
     status: "draft",
@@ -2194,10 +2195,9 @@ const rawArticles: Article[] = [
   },
   {
     slug: "insurance-care",
-    title: "保険診療の探し方：対象疾患と医療機関",
-    description:
-      "保険で受けられる治療の調べ方と、受診先選びの視点をまとめます。",
-    category: "treatment",
+    title: "幹細胞治療は保険適用される？自由診療との違い",
+    description: "保険診療・治験・臨床研究・自由診療の違いと、幹細胞治療がどの位置づけで提供されているかを確認する方法。",
+    category: "cost-access",
     updatedAt: "2026-08-13",
     readingMinutes: 3,
     status: "draft",
@@ -2210,21 +2210,21 @@ const rawArticles: Article[] = [
     sections: [
       {
         id: "search",
-        title: "公的情報での調べ方",
+        title: "幹細胞治療は保険適用される？自由診療との違い",
         paragraphs: [
           "厚生労働省やPMDAの公表資料、学会の情報、かかりつけ医の案内を組み合わせます。製品名や対象疾患名で原資料にあたると確実です。",
         ],
       },
       {
         id: "visit",
-        title: "受診の進め方",
+        title: "幹細胞治療は保険適用される？自由診療との違い",
         paragraphs: [
           "まずはかかりつけ医や対象疾患の専門医に相談し、必要に応じて紹介を受けます。実施施設が限られる治療もあるため、通院の現実味も含めて検討します。",
         ],
       },
       {
         id: "mixed",
-        title: "混合診療の考え方",
+        title: "幹細胞治療は保険適用される？自由診療との違い",
         paragraphs: [
           "保険診療と自由診療の併用には原則として制限があります。例外の制度（保険外併用療養費など）の有無も含め、医療機関に確認しましょう。",
         ],
@@ -2237,7 +2237,7 @@ const rawArticles: Article[] = [
     title: "自由診療の契約書の読み方：署名前に見る点",
     description:
       "総額・中止時・合併症時の扱いなど、書面で確認すべき項目を解説します。",
-    category: "treatment",
+    category: "cost-access",
     updatedAt: "2026-08-13",
     readingMinutes: 4,
     status: "draft",
@@ -2277,7 +2277,7 @@ const rawArticles: Article[] = [
     title: "広告の見分け方：症例写真・体験談との付き合い方",
     description:
       "医療広告のルールと、宣伝を見るときのチェック視点を紹介します。",
-    category: "treatment",
+    category: "cost-access",
     updatedAt: "2026-08-14",
     readingMinutes: 3,
     status: "draft",
@@ -2317,7 +2317,7 @@ const rawArticles: Article[] = [
     title: "トラブル時の相談先：困ったときの連絡順",
     description:
       "体調変化・契約トラブル・広告への疑問、それぞれの相談先を整理します。",
-    category: "treatment",
+    category: "safety",
     updatedAt: "2026-08-14",
     readingMinutes: 3,
     status: "draft",
@@ -2357,7 +2357,7 @@ const rawArticles: Article[] = [
     title: "治療後の経過観察：通院・検査・生活の注意",
     description:
       "効果判定の時期や続けたい記録など、治療後の過ごし方をまとめます。",
-    category: "treatment",
+    category: "cost-access",
     updatedAt: "2026-08-14",
     readingMinutes: 3,
     status: "draft",
@@ -2397,7 +2397,7 @@ const rawArticles: Article[] = [
     title: "痛み・入院・通院の負担：体と暮らしの見通し",
     description:
       "採取や投与に伴う負担と、仕事・介護との調整の視点をまとめます。",
-    category: "treatment",
+    category: "cost-access",
     updatedAt: "2026-08-14",
     readingMinutes: 3,
     status: "draft",
@@ -2437,7 +2437,7 @@ const rawArticles: Article[] = [
     title: "家族と決める：代理判断が必要なとき",
     description:
       "本人の意思確認が難しい場合の考え方と、事前の備えを紹介します。",
-    category: "treatment",
+    category: "cost-access",
     updatedAt: "2026-08-15",
     readingMinutes: 3,
     status: "draft",
@@ -2477,7 +2477,7 @@ const rawArticles: Article[] = [
     title: "高齢者が考えるときの注意：持病・薬・通院",
     description:
       "複数の病気や薬がある場合の、特有の確認点をまとめます。",
-    category: "treatment",
+    category: "cost-access",
     updatedAt: "2026-08-15",
     readingMinutes: 3,
     status: "draft",
@@ -2517,7 +2517,7 @@ const rawArticles: Article[] = [
     title: "子どもが対象のとき：成長への配慮と同意",
     description:
       "小児を対象とする治療・研究で特に大切な視点をまとめます。",
-    category: "treatment",
+    category: "cost-access",
     updatedAt: "2026-08-15",
     readingMinutes: 3,
     status: "draft",
@@ -2554,10 +2554,9 @@ const rawArticles: Article[] = [
   },
   {
     slug: "final-checklist",
-    title: "契約前の最終チェック15項目：持ち帰り確認シート",
-    description:
-      "署名の前に見直す15の質問を一枚に。印刷して使える構成です。",
-    category: "treatment",
+    title: "幹細胞治療を受ける前に確認したいポイント：契約前チェックリスト",
+    description: "契約前に確認したい項目を整理。説明・費用・体制を持ち帰って点検するためのチェックリストです。",
+    category: "cost-access",
     updatedAt: "2026-08-15",
     readingMinutes: 4,
     status: "draft",
@@ -2570,21 +2569,21 @@ const rawArticles: Article[] = [
     sections: [
       {
         id: "medical",
-        title: "医療面の5項目",
+        title: "幹細胞治療を受ける前に確認したいポイント：契約前チェックリスト",
         paragraphs: [
           "1.自分の病気が適応か 2.根拠となる研究は何か 3.主なリスクと頻度 4.効果の判定時期と方法 5.他の選択肢と受けない場合の見通し—を確認します。曖昧な点は書面で回答をもらいましょう。",
         ],
       },
       {
         id: "contract",
-        title: "契約・費用の5項目",
+        title: "幹細胞治療を受ける前に確認したいポイント：契約前チェックリスト",
         paragraphs: [
           "6.総額と追加費用 7.中止・解約と返金 8.合併症時の対応と費用 9.通院回数と期間 10.記録の保管と連絡先—を確認します。口頭と書面の一致を見比べます。",
         ],
       },
       {
         id: "compare",
-        title: "比較と相談の5項目",
+        title: "幹細胞治療を受ける前に確認したいポイント：契約前チェックリスト",
         paragraphs: [
           "11.標準治療との違い 12.主治医の見解 13.セカンドオピニオンの要否 14.家族との合意 15.決断の期限—を整えます。すべてに納得してから署名しましょう。",
         ],
@@ -2597,7 +2596,7 @@ const rawArticles: Article[] = [
     title: "基礎と臨床の橋渡し：トランスレーショナルリサーチ",
     description:
       "実験室の発見を診療へ届けるまでの協働の仕組みを紹介します。",
-    category: "research",
+    category: "mechanisms",
     updatedAt: "2026-08-16",
     readingMinutes: 3,
     status: "draft",
@@ -2637,7 +2636,7 @@ const rawArticles: Article[] = [
     title: "ランダム化比較試験とは：公平に比べる工夫",
     description:
       "くじ引きで群を分ける理由と、盲検化の意味をやさしく解説します。",
-    category: "research",
+    category: "efficacy",
     updatedAt: "2026-08-16",
     readingMinutes: 3,
     status: "draft",
@@ -2677,7 +2676,7 @@ const rawArticles: Article[] = [
     title: "症例報告とレジストリ：一人ひとりの積み重ね",
     description:
       "少数例の報告と大規模登録の役割分担を整理します。",
-    category: "research",
+    category: "efficacy",
     updatedAt: "2026-08-16",
     readingMinutes: 3,
     status: "draft",
@@ -2717,7 +2716,7 @@ const rawArticles: Article[] = [
     title: "評価項目・エンドポイント：何をもって効いたとするか",
     description:
       "主要評価項目の設定と、代理指標の読み方を紹介します。",
-    category: "research",
+    category: "efficacy",
     updatedAt: "2026-08-16",
     readingMinutes: 3,
     status: "draft",
@@ -2757,7 +2756,7 @@ const rawArticles: Article[] = [
     title: "査読と論文誌：論文が世に出るまで",
     description:
       "専門家による吟味の仕組みと、プレプリントとの違いを解説します。",
-    category: "research",
+    category: "efficacy",
     updatedAt: "2026-08-17",
     readingMinutes: 3,
     status: "draft",
@@ -2797,7 +2796,7 @@ const rawArticles: Article[] = [
     title: "プレスリリースの読み方：発表文の裏側を読む",
     description:
       "大学・企業の発表文を、原論文と合わせて読むコツをまとめます。",
-    category: "research",
+    category: "efficacy",
     updatedAt: "2026-08-17",
     readingMinutes: 3,
     status: "draft",
@@ -2837,7 +2836,7 @@ const rawArticles: Article[] = [
     title: "統計の超入門：p値・信頼区間・ n数",
     description:
       "数字に振り回されないための、最小限の統計リテラシーを紹介します。",
-    category: "research",
+    category: "efficacy",
     updatedAt: "2026-08-17",
     readingMinutes: 3,
     status: "draft",
@@ -2877,7 +2876,7 @@ const rawArticles: Article[] = [
     title: "利益相反の開示：誰が得をする研究か",
     description:
       "資金提供や特許と研究の関係を、冷静に見る視点をまとめます。",
-    category: "research",
+    category: "efficacy",
     updatedAt: "2026-08-17",
     readingMinutes: 3,
     status: "draft",
@@ -2917,7 +2916,7 @@ const rawArticles: Article[] = [
     title: "海外の研究を読む：国による制度の違い",
     description:
       "海外報道と日本の状況をつなげて理解するための視点を紹介します。",
-    category: "research",
+    category: "mechanisms",
     updatedAt: "2026-08-18",
     readingMinutes: 3,
     status: "draft",
@@ -2957,7 +2956,7 @@ const rawArticles: Article[] = [
     title: "うまくいかなかった研究の価値：陰性試験を読む",
     description:
       "期待外れの結果が持つ意味と、学びの活かし方を解説します。",
-    category: "research",
+    category: "efficacy",
     updatedAt: "2026-08-18",
     readingMinutes: 3,
     status: "draft",
@@ -2997,7 +2996,7 @@ const rawArticles: Article[] = [
     title: "長期追跡の重要性：年単位で見る安全性",
     description:
       "短期の結果と長期の経過の違い、追跡調査の読み方をまとめます。",
-    category: "research",
+    category: "efficacy",
     updatedAt: "2026-08-18",
     readingMinutes: 3,
     status: "draft",
@@ -3037,7 +3036,7 @@ const rawArticles: Article[] = [
     title: "治験を探す方法：登録情報の使い方",
     description:
       "国内外の治験登録と、主治医への相談の仕方を紹介します。",
-    category: "research",
+    category: "efficacy",
     updatedAt: "2026-08-18",
     readingMinutes: 3,
     status: "draft",
@@ -3077,7 +3076,7 @@ const rawArticles: Article[] = [
     title: "世界の承認製品の調べ方：原資料にあたる",
     description:
       "各国当局の公開情報をたどり、正確につかむ方法をまとめます。",
-    category: "research",
+    category: "efficacy",
     updatedAt: "2026-08-19",
     readingMinutes: 3,
     status: "draft",
@@ -3117,7 +3116,7 @@ const rawArticles: Article[] = [
     title: "細胞分裂の基礎：体が増え・入れ替わる仕組み",
     description:
       "体細胞分裂の流れと、再生医療との関わりをやさしく整理します。",
-    category: "basics",
+    category: "stem-basics",
     updatedAt: "2026-08-19",
     readingMinutes: 3,
     status: "draft",
@@ -3157,7 +3156,7 @@ const rawArticles: Article[] = [
     title: "DNAの基礎：設計情報の読み方",
     description:
       "二重らせんから遺伝子、染色体まで。最小限の言葉で整理します。",
-    category: "basics",
+    category: "stem-basics",
     updatedAt: "2026-08-19",
     readingMinutes: 3,
     status: "draft",
@@ -3197,7 +3196,7 @@ const rawArticles: Article[] = [
     title: "タンパク質の基礎：体の働き手",
     description:
       "酵素・抗体・シグナルなど、タンパク質の役割を身近に紹介します。",
-    category: "basics",
+    category: "stem-basics",
     updatedAt: "2026-08-19",
     readingMinutes: 3,
     status: "draft",
@@ -3237,7 +3236,7 @@ const rawArticles: Article[] = [
     title: "消化と吸収：栄養が体になるまで",
     description:
       "口から腸までの旅をたどり、治療中の栄養の大切さを考えます。",
-    category: "basics",
+    category: "stem-basics",
     updatedAt: "2026-08-20",
     readingMinutes: 3,
     status: "draft",
@@ -3277,7 +3276,7 @@ const rawArticles: Article[] = [
     title: "循環の仕組み：血液が巡る道",
     description:
       "心臓・血管・血液の連携を整理し、細胞の届け方を考えます。",
-    category: "basics",
+    category: "stem-basics",
     updatedAt: "2026-08-20",
     readingMinutes: 3,
     status: "draft",
@@ -3317,7 +3316,7 @@ const rawArticles: Article[] = [
     title: "呼吸の仕組み：酸素と二酸化炭素の交換",
     description:
       "肺の構造とガス交換の仕組みを、身近な例で解説します。",
-    category: "basics",
+    category: "stem-basics",
     updatedAt: "2026-08-20",
     readingMinutes: 3,
     status: "draft",
@@ -3357,7 +3356,7 @@ const rawArticles: Article[] = [
     title: "腎臓と肝臓：老廃物処理と代謝の要",
     description:
       "沈黙の臓器とも呼ばれる2つの働きと、治療時の注意をまとめます。",
-    category: "basics",
+    category: "stem-basics",
     updatedAt: "2026-08-20",
     readingMinutes: 3,
     status: "draft",
@@ -3397,7 +3396,7 @@ const rawArticles: Article[] = [
     title: "脳の基礎：指令塔のつくりと働き",
     description:
       "神経細胞とグリア、部位ごとの役割を大まかに紹介します。",
-    category: "basics",
+    category: "stem-basics",
     updatedAt: "2026-08-21",
     readingMinutes: 3,
     status: "draft",
@@ -3437,7 +3436,7 @@ const rawArticles: Article[] = [
     title: "目と耳：感覚器の仕組みと再生研究",
     description:
       "視覚と聴覚の入り口の構造と、再生への挑戦を紹介します。",
-    category: "basics",
+    category: "stem-basics",
     updatedAt: "2026-08-21",
     readingMinutes: 3,
     status: "draft",
@@ -3477,7 +3476,7 @@ const rawArticles: Article[] = [
     title: "歯と骨の成長：子どもの体の変化",
     description:
       "成長期の体の作り替えと、歯・骨の再生研究の話題を整理します。",
-    category: "basics",
+    category: "stem-basics",
     updatedAt: "2026-08-21",
     readingMinutes: 3,
     status: "draft",
@@ -3517,7 +3516,7 @@ const rawArticles: Article[] = [
     title: "ホルモンの基礎：全身の連絡網",
     description:
       "血液で運ばれる信号の仕組みと、代表的な例を紹介します。",
-    category: "basics",
+    category: "stem-basics",
     updatedAt: "2026-08-21",
     readingMinutes: 3,
     status: "draft",
@@ -3557,7 +3556,7 @@ const rawArticles: Article[] = [
     title: "抗体とワクチン：免疫の記憶の仕組み",
     description:
       "感染から守る記憶の仕組みと、細胞治療との違いを整理します。",
-    category: "basics",
+    category: "stem-basics",
     updatedAt: "2026-08-22",
     readingMinutes: 3,
     status: "draft",
@@ -3597,7 +3596,7 @@ const rawArticles: Article[] = [
     title: "アレルギーの基礎：過剰な防御反応",
     description:
       "花粉症や食物アレルギーを例に、免疫の誤作動を解説します。",
-    category: "basics",
+    category: "stem-basics",
     updatedAt: "2026-08-22",
     readingMinutes: 3,
     status: "draft",
@@ -3637,7 +3636,7 @@ const rawArticles: Article[] = [
     title: "がんの基礎知識：細胞の増殖の暴走",
     description:
       "がんの成り立ちと、再生医療との関係・違いを整理します。",
-    category: "basics",
+    category: "stem-basics",
     updatedAt: "2026-08-22",
     readingMinutes: 3,
     status: "draft",
@@ -3677,7 +3676,7 @@ const rawArticles: Article[] = [
     title: "生活習慣病と細胞：糖尿病を例に",
     description:
       "膵臓のβ細胞と血糖の関係から、慢性疾患の付き合い方を考えます。",
-    category: "basics",
+    category: "stem-basics",
     updatedAt: "2026-08-22",
     readingMinutes: 3,
     status: "draft",
@@ -3717,7 +3716,7 @@ const rawArticles: Article[] = [
     title: "妊娠・出産と臍帯血：誕生時の細胞の活用",
     description:
       "臍帯血の採取・保存・利用の仕組みと、決断の視点をまとめます。",
-    category: "basics",
+    category: "cell-types",
     updatedAt: "2026-08-23",
     readingMinutes: 3,
     status: "draft",
@@ -3757,7 +3756,7 @@ const rawArticles: Article[] = [
     title: "超高齢社会と再生医療：期待の背景",
     description:
       "高齢化で増える病気と、再生医療に寄せられる期待を冷静に見ます。",
-    category: "basics",
+    category: "stem-basics",
     updatedAt: "2026-08-23",
     readingMinutes: 3,
     status: "draft",
@@ -3797,7 +3796,7 @@ const rawArticles: Article[] = [
     title: "障害と支援制度：医療と暮らしの橋渡し",
     description:
       "障害者手帳や福祉サービスなど、暮らしを支える制度の入り口です。",
-    category: "basics",
+    category: "stem-basics",
     updatedAt: "2026-08-23",
     readingMinutes: 3,
     status: "draft",
@@ -3837,7 +3836,7 @@ const rawArticles: Article[] = [
     title: "リハビリの基礎：回復を支える訓練",
     description:
       "理学・作業・言語療法の役割と、再生医療との組み合わせを解説します。",
-    category: "basics",
+    category: "stem-basics",
     updatedAt: "2026-08-23",
     readingMinutes: 3,
     status: "draft",
@@ -3877,7 +3876,7 @@ const rawArticles: Article[] = [
     title: "栄養の基礎：5大栄養素と体の材料",
     description:
       "治療中の体を支える栄養の考え方を、基本から整理します。",
-    category: "basics",
+    category: "stem-basics",
     updatedAt: "2026-08-24",
     readingMinutes: 3,
     status: "draft",
@@ -3917,7 +3916,7 @@ const rawArticles: Article[] = [
     title: "運動と体：筋肉・骨・心肺への効果",
     description:
       "無理のない運動の考え方と、治療中の注意をまとめます。",
-    category: "basics",
+    category: "stem-basics",
     updatedAt: "2026-08-24",
     readingMinutes: 3,
     status: "draft",
@@ -3957,7 +3956,7 @@ const rawArticles: Article[] = [
     title: "睡眠と修復：眠りが体を整える",
     description:
       "睡眠の役割と、質を上げる生活習慣を紹介します。",
-    category: "basics",
+    category: "stem-basics",
     updatedAt: "2026-08-24",
     readingMinutes: 3,
     status: "draft",
@@ -3997,7 +3996,7 @@ const rawArticles: Article[] = [
     title: "心の健康と意思決定：不安と向き合う",
     description:
       "治療選択のストレスへの対処と、相談先の使い方をまとめます。",
-    category: "basics",
+    category: "stem-basics",
     updatedAt: "2026-08-24",
     readingMinutes: 3,
     status: "draft",
@@ -4037,7 +4036,7 @@ const rawArticles: Article[] = [
     title: "健診・検診の活かし方：結果の読み方",
     description:
       "特定健診とがん検診の違い、要精密検査への対応を整理します。",
-    category: "basics",
+    category: "stem-basics",
     updatedAt: "2026-08-25",
     readingMinutes: 3,
     status: "draft",
@@ -4077,7 +4076,7 @@ const rawArticles: Article[] = [
     title: "かかりつけ医の持ち方：相談の起点",
     description:
       "かかりつけ医の役割と、上手な付き合い方を紹介します。",
-    category: "basics",
+    category: "stem-basics",
     updatedAt: "2026-08-25",
     readingMinutes: 3,
     status: "draft",
@@ -4117,7 +4116,7 @@ const rawArticles: Article[] = [
     title: "細胞周期：分裂と休止のリズム",
     description:
       "増殖のタイミングを制御する仕組みと、培養管理の関係を紹介します。",
-    category: "stem-cells",
+    category: "mechanisms",
     updatedAt: "2026-08-25",
     readingMinutes: 3,
     status: "draft",
@@ -4157,7 +4156,7 @@ const rawArticles: Article[] = [
     title: "非対称分裂：幹細胞を保つ分け方",
     description:
       "自分を残しつつ分化細胞を生む、幹細胞独特の分裂を紹介します。",
-    category: "stem-cells",
+    category: "mechanisms",
     updatedAt: "2026-08-25",
     readingMinutes: 3,
     status: "draft",
@@ -4197,7 +4196,7 @@ const rawArticles: Article[] = [
     title: "ニッチ：幹細胞を支える微小環境",
     description:
       "周囲の環境が幹細胞の振る舞いを決める考え方を解説します。",
-    category: "stem-cells",
+    category: "mechanisms",
     updatedAt: "2026-08-26",
     readingMinutes: 3,
     status: "draft",
@@ -4237,7 +4236,7 @@ const rawArticles: Article[] = [
     title: "細胞間シグナル：連絡を取り合う仕組み",
     description:
       "増殖因子や接触信号など、細胞の会話の基本を紹介します。",
-    category: "stem-cells",
+    category: "mechanisms",
     updatedAt: "2026-08-26",
     readingMinutes: 3,
     status: "draft",
@@ -4277,7 +4276,7 @@ const rawArticles: Article[] = [
     title: "成長因子：増殖と分化の合図",
     description:
       "代表的な因子の役割と、培養・治療での使い方を整理します。",
-    category: "stem-cells",
+    category: "mechanisms",
     updatedAt: "2026-08-26",
     readingMinutes: 3,
     status: "draft",
@@ -4317,7 +4316,7 @@ const rawArticles: Article[] = [
     title: "足場材料：細胞の家を設計する",
     description:
       "生体材料と合成材料、立体組織づくりの工夫を紹介します。",
-    category: "stem-cells",
+    category: "mechanisms",
     updatedAt: "2026-08-26",
     readingMinutes: 3,
     status: "draft",
@@ -4357,7 +4356,7 @@ const rawArticles: Article[] = [
     title: "大量培養：バイオリアクターの役割",
     description:
       "治療に足る量の細胞を安定に作る技術を紹介します。",
-    category: "stem-cells",
+    category: "cell-types",
     updatedAt: "2026-08-27",
     readingMinutes: 3,
     status: "draft",
@@ -4397,7 +4396,7 @@ const rawArticles: Article[] = [
     title: "凍結保存：細胞を止めて運ぶ技術",
     description:
       "凍結保護剤や vitrification など、保存技術の基本を解説します。",
-    category: "stem-cells",
+    category: "cell-types",
     updatedAt: "2026-08-27",
     readingMinutes: 3,
     status: "draft",
@@ -4437,7 +4436,7 @@ const rawArticles: Article[] = [
     title: "臍帯血の細胞：採取から利用まで",
     description:
       "臍帯血に含まれる細胞と、移植利用の実際を紹介します。",
-    category: "stem-cells",
+    category: "cell-types",
     updatedAt: "2026-08-27",
     readingMinutes: 3,
     status: "draft",
@@ -4477,7 +4476,7 @@ const rawArticles: Article[] = [
     title: "歯髄幹細胞：抜いた歯の活用",
     description:
       "乳歯や親知らずの歯髄に含まれる幹細胞の研究を紹介します。",
-    category: "stem-cells",
+    category: "cell-types",
     updatedAt: "2026-08-27",
     readingMinutes: 3,
     status: "draft",
@@ -4514,10 +4513,9 @@ const rawArticles: Article[] = [
   },
   {
     slug: "adipose-stem",
-    title: "脂肪由来幹細胞：採取しやすさと注意点",
-    description:
-      "脂肪吸引で得られる細胞の特徴と、説明の確認点をまとめます。",
-    category: "stem-cells",
+    title: "脂肪由来幹細胞とは？美容・再生医療で使われる理由",
+    description: "脂肪から採取できる幹細胞の特徴と、美容・再生医療で用いられる理由、注意点を整理します。",
+    category: "cell-types",
     updatedAt: "2026-08-28",
     readingMinutes: 3,
     status: "draft",
@@ -4530,21 +4528,21 @@ const rawArticles: Article[] = [
     sections: [
       {
         id: "source",
-        title: "採取の特徴",
+        title: "脂肪由来幹細胞とは？美容・再生医療で使われる理由",
         paragraphs: [
           "脂肪組織から比較的多くの細胞が得られるとされます。採取自体は医療行為であり、負担や合併症があります。",
         ],
       },
       {
         id: "processing",
-        title: "加工の違い",
+        title: "脂肪由来幹細胞とは？美容・再生医療で使われる理由",
         paragraphs: [
           "遠心や酵素処理、培養の有無で細胞の内容や法的な位置づけが変わります。説明では工程の詳細を確認しましょう。",
         ],
       },
       {
         id: "check",
-        title: "確認点",
+        title: "脂肪由来幹細胞とは？美容・再生医療で使われる理由",
         paragraphs: [
           "対象疾患、根拠、リスク、費用、他の選択肢をセットで尋ねます。美容目的と治療目的の区別も大切です。",
         ],
@@ -4557,7 +4555,7 @@ const rawArticles: Article[] = [
     title: "骨髄の仕組み：血を作る工場",
     description:
       "骨髄の構造と造血の場としての役割を紹介します。",
-    category: "stem-cells",
+    category: "cell-types",
     updatedAt: "2026-08-28",
     readingMinutes: 3,
     status: "draft",
@@ -4597,7 +4595,7 @@ const rawArticles: Article[] = [
     title: "筋サテライト細胞：筋肉の控え選手",
     description:
       "けがの際に働く筋肉の幹細胞と、加齢による変化を紹介します。",
-    category: "stem-cells",
+    category: "cell-types",
     updatedAt: "2026-08-28",
     readingMinutes: 3,
     status: "draft",
@@ -4637,7 +4635,7 @@ const rawArticles: Article[] = [
     title: "腸管上皮幹細胞：毎日生まれ変わる仕組み",
     description:
       "陰窩と絨毛の構造、オルガノイド培養への応用を解説します。",
-    category: "stem-cells",
+    category: "cell-types",
     updatedAt: "2026-08-28",
     readingMinutes: 3,
     status: "draft",
@@ -4677,7 +4675,7 @@ const rawArticles: Article[] = [
     title: "肝臓の再生と前駆細胞：強い回復力の源",
     description:
       "肝切除後に戻る力の仕組みと、研究の現状を紹介します。",
-    category: "stem-cells",
+    category: "cell-types",
     updatedAt: "2026-08-29",
     readingMinutes: 3,
     status: "draft",
@@ -4717,7 +4715,7 @@ const rawArticles: Article[] = [
     title: "角膜・上皮の再生：輪部幹細胞の働き",
     description:
       "目の表面を守る幹細胞と、シート移植などの取り組みを紹介します。",
-    category: "stem-cells",
+    category: "mechanisms",
     updatedAt: "2026-08-29",
     readingMinutes: 3,
     status: "draft",
@@ -4757,7 +4755,7 @@ const rawArticles: Article[] = [
     title: "軟骨再生の深掘り：なぜ難しいか",
     description:
       "血流の乏しさと荷重の課題、治療選択の視点を整理します。",
-    category: "stem-cells",
+    category: "mechanisms",
     updatedAt: "2026-08-29",
     readingMinutes: 3,
     status: "draft",
@@ -4797,7 +4795,7 @@ const rawArticles: Article[] = [
     title: "腱・靭帯：つなぐ組織の修復",
     description:
       "血流の乏しい線維組織の治りにくさと、治療の考え方をまとめます。",
-    category: "stem-cells",
+    category: "mechanisms",
     updatedAt: "2026-08-29",
     readingMinutes: 3,
     status: "draft",
@@ -4837,7 +4835,7 @@ const rawArticles: Article[] = [
     title: "毛髪再生の研究：毛包の仕組み",
     description:
       "毛周期と毛包幹細胞の話題を、現状と一緒に整理します。",
-    category: "stem-cells",
+    category: "mechanisms",
     updatedAt: "2026-08-30",
     readingMinutes: 3,
     status: "draft",
@@ -4877,7 +4875,7 @@ const rawArticles: Article[] = [
     title: "歯の再生研究：失った歯を取り戻せるか",
     description:
       "歯胚の再構成などの挑戦と、現在の歯科治療の位置づけを紹介します。",
-    category: "stem-cells",
+    category: "mechanisms",
     updatedAt: "2026-08-30",
     readingMinutes: 3,
     status: "draft",
@@ -4917,7 +4915,7 @@ const rawArticles: Article[] = [
     title: "内耳・聴覚の再生研究：有毛細胞を目指して",
     description:
       "難聴の種類と、再生・補聴の両面の進歩を紹介します。",
-    category: "stem-cells",
+    category: "mechanisms",
     updatedAt: "2026-08-30",
     readingMinutes: 3,
     status: "draft",
@@ -4957,7 +4955,7 @@ const rawArticles: Article[] = [
     title: "網膜の再生研究：見る力を守る挑戦",
     description:
       "加齢黄斑変性などを対象とする細胞治療研究の現状を整理します。",
-    category: "stem-cells",
+    category: "mechanisms",
     updatedAt: "2026-08-30",
     readingMinutes: 3,
     status: "draft",
@@ -4997,7 +4995,7 @@ const rawArticles: Article[] = [
     title: "脊髄損傷の治療研究：神経をつなぐ挑戦",
     description:
       "損傷後の変化と、細胞移植・リハビリの組み合わせを解説します。",
-    category: "stem-cells",
+    category: "mechanisms",
     updatedAt: "2026-08-31",
     readingMinutes: 3,
     status: "draft",
@@ -5037,7 +5035,7 @@ const rawArticles: Article[] = [
     title: "心筋シートの研究：拍動する組織を目指して",
     description:
       "シート工学の工夫と、虚血性心疾患治療の位置づけを整理します。",
-    category: "stem-cells",
+    category: "mechanisms",
     updatedAt: "2026-08-31",
     readingMinutes: 3,
     status: "draft",
@@ -5077,7 +5075,7 @@ const rawArticles: Article[] = [
     title: "ダイレクトリプログラミング：経由しない変換",
     description:
       "多能性状態を経ずに細胞を変換する研究の考え方を紹介します。",
-    category: "stem-cells",
+    category: "mechanisms",
     updatedAt: "2026-08-31",
     readingMinutes: 3,
     status: "draft",
@@ -5117,7 +5115,7 @@ const rawArticles: Article[] = [
     title: "オンライン診療との付き合い方：遠方の相談に",
     description:
       "初診・再診のルールと、対面との使い分けを整理します。",
-    category: "treatment",
+    category: "cost-access",
     updatedAt: "2026-08-31",
     readingMinutes: 3,
     status: "draft",
@@ -5157,7 +5155,7 @@ const rawArticles: Article[] = [
     title: "紹介状・逆紹介：医療機関をつなぐ文書",
     description:
       "紹介状の役割と、逆紹介で地域に戻る流れを解説します。",
-    category: "treatment",
+    category: "cost-access",
     updatedAt: "2026-09-01",
     readingMinutes: 3,
     status: "draft",
@@ -5197,7 +5195,7 @@ const rawArticles: Article[] = [
     title: "診療記録の開示請求：自分の記録を受け取る",
     description:
       "カルテ開示の手続きと、記録の活かし方をまとめます。",
-    category: "treatment",
+    category: "cost-access",
     updatedAt: "2026-09-01",
     readingMinutes: 3,
     status: "draft",
@@ -5234,10 +5232,9 @@ const rawArticles: Article[] = [
   },
   {
     slug: "hospital-choice",
-    title: "病院選びの視点：症例数と連携を見る",
-    description:
-      "専門性・実績・通いやすさを比べるための視点を紹介します。",
-    category: "treatment",
+    title: "幹細胞治療のクリニック選びで確認すべきこと",
+    description: "提供計画の届出、説明の質、費用の透明性。幹細胞治療を提供するクリニックを比較するときの確認点を整理します。",
+    category: "cost-access",
     updatedAt: "2026-09-01",
     readingMinutes: 3,
     status: "draft",
@@ -5250,21 +5247,21 @@ const rawArticles: Article[] = [
     sections: [
       {
         id: "results",
-        title: "実績の見方",
+        title: "幹細胞治療のクリニック選びで確認すべきこと",
         paragraphs: [
           "対象疾患の診療実績や専門医の配置、設備を確認します。件数だけでなく、合併症への対応体制も見ましょう。",
         ],
       },
       {
         id: "fit",
-        title: "相性の見極め",
+        title: "幹細胞治療のクリニック選びで確認すべきこと",
         paragraphs: [
           "説明の丁寧さ、質問のしやすさ、待ち時間や予約の取りやすさも大切です。初診の印象を記録しておきましょう。",
         ],
       },
       {
         id: "access",
-        title: "通院の現実味",
+        title: "幹細胞治療のクリニック選びで確認すべきこと",
         paragraphs: [
           "距離、交通手段、付き添いの可否を含めて考えます。遠方の場合は近隣との連携を確認しましょう。",
         ],
@@ -5277,7 +5274,7 @@ const rawArticles: Article[] = [
     title: "救急とのかかわり：いざというときの備え",
     description:
       "救急車を呼ぶ目安と、持病の伝え方をまとめます。",
-    category: "treatment",
+    category: "cost-access",
     updatedAt: "2026-09-01",
     readingMinutes: 3,
     status: "draft",
@@ -5317,7 +5314,7 @@ const rawArticles: Article[] = [
     title: "薬局・薬剤師の活用：薬の相談役",
     description:
       "お薬手帳の使い方と、飲み合わせ相談のコツを紹介します。",
-    category: "treatment",
+    category: "cost-access",
     updatedAt: "2026-09-02",
     readingMinutes: 3,
     status: "draft",
@@ -5357,7 +5354,7 @@ const rawArticles: Article[] = [
     title: "看護・介護との連携：暮らしを支える体制",
     description:
       "訪問看護やケアマネジャーとの協働の仕組みを紹介します。",
-    category: "treatment",
+    category: "cost-access",
     updatedAt: "2026-09-02",
     readingMinutes: 3,
     status: "draft",
@@ -5397,7 +5394,7 @@ const rawArticles: Article[] = [
     title: "在宅医療の基礎：家で受ける医療",
     description:
       "訪問診療と往診の違い、利用の流れを整理します。",
-    category: "treatment",
+    category: "cost-access",
     updatedAt: "2026-09-02",
     readingMinutes: 3,
     status: "draft",
@@ -5437,7 +5434,7 @@ const rawArticles: Article[] = [
     title: "治療と仕事の両立：両立支援の使い方",
     description:
       "休暇制度や主治医との連携など、働きながらの治療の工夫です。",
-    category: "treatment",
+    category: "cost-access",
     updatedAt: "2026-09-02",
     readingMinutes: 3,
     status: "draft",
@@ -5477,7 +5474,7 @@ const rawArticles: Article[] = [
     title: "費用シミュレーションの作り方：総額を見通す",
     description:
       "検査・通院・付き添いまで含めた見積もり表の作り方を紹介します。",
-    category: "treatment",
+    category: "cost-access",
     updatedAt: "2026-09-03",
     readingMinutes: 3,
     status: "draft",
@@ -5517,7 +5514,7 @@ const rawArticles: Article[] = [
     title: "高額療養費制度：医療費の上限の仕組み",
     description:
       "自己負担に上限を設ける制度の概要と手続きを解説します。",
-    category: "treatment",
+    category: "cost-access",
     updatedAt: "2026-09-03",
     readingMinutes: 3,
     status: "draft",
@@ -5557,7 +5554,7 @@ const rawArticles: Article[] = [
     title: "医療費控除：確定申告での手続き",
     description:
       "対象になる費用と、領収書管理のコツをまとめます。",
-    category: "treatment",
+    category: "cost-access",
     updatedAt: "2026-09-03",
     readingMinutes: 3,
     status: "draft",
@@ -5597,7 +5594,7 @@ const rawArticles: Article[] = [
     title: "民間保険の見直し方：保障と必要額",
     description:
       "医療保険・がん保険を見直すときの視点を整理します。",
-    category: "treatment",
+    category: "cost-access",
     updatedAt: "2026-09-03",
     readingMinutes: 3,
     status: "draft",
@@ -5637,7 +5634,7 @@ const rawArticles: Article[] = [
     title: "意思決定支援ツール：比べる表の使い方",
     description:
       "選択肢を整理するディシジョンエイドの活用法を紹介します。",
-    category: "treatment",
+    category: "cost-access",
     updatedAt: "2026-09-04",
     readingMinutes: 3,
     status: "draft",
@@ -5677,7 +5674,7 @@ const rawArticles: Article[] = [
     title: "患者会・ピアサポート：経験者とつながる",
     description:
       "当事者同士の支え合いの探し方と、付き合い方のコツです。",
-    category: "treatment",
+    category: "cost-access",
     updatedAt: "2026-09-04",
     readingMinutes: 3,
     status: "draft",
@@ -5717,7 +5714,7 @@ const rawArticles: Article[] = [
     title: "医療相談支援：メディエーションと相談窓口",
     description:
       "医師との行き違いを調整する仕組みと窓口を紹介します。",
-    category: "treatment",
+    category: "cost-access",
     updatedAt: "2026-09-04",
     readingMinutes: 3,
     status: "draft",
@@ -5757,7 +5754,7 @@ const rawArticles: Article[] = [
     title: "緩和ケアの考え方：つらさを和らげる",
     description:
       "痛みや不安への早期からの対応と、利用の仕方を解説します。",
-    category: "treatment",
+    category: "cost-access",
     updatedAt: "2026-09-04",
     readingMinutes: 3,
     status: "draft",
@@ -5797,7 +5794,7 @@ const rawArticles: Article[] = [
     title: "術後リハビリ計画：回復の道筋",
     description:
       "目標設定と段階的な負荷、継続のコツをまとめます。",
-    category: "treatment",
+    category: "cost-access",
     updatedAt: "2026-09-05",
     readingMinutes: 3,
     status: "draft",
@@ -5837,7 +5834,7 @@ const rawArticles: Article[] = [
     title: "治療中の口腔ケア：口の健康を守る",
     description:
       "感染症予防と栄養摂取のための、口のケアを紹介します。",
-    category: "treatment",
+    category: "cost-access",
     updatedAt: "2026-09-05",
     readingMinutes: 3,
     status: "draft",
@@ -5877,7 +5874,7 @@ const rawArticles: Article[] = [
     title: "遠方通院・宿泊：負担を減らす工夫",
     description:
       "交通・宿泊・付き添いの計画と、利用できる支援をまとめます。",
-    category: "treatment",
+    category: "cost-access",
     updatedAt: "2026-09-05",
     readingMinutes: 3,
     status: "draft",
@@ -5917,7 +5914,7 @@ const rawArticles: Article[] = [
     title: "やさしい日本語・多言語：伝わる工夫",
     description:
       "言葉の壁を下げる伝え方と、通訳利用の方法を紹介します。",
-    category: "treatment",
+    category: "cost-access",
     updatedAt: "2026-09-05",
     readingMinutes: 3,
     status: "draft",
@@ -5957,7 +5954,7 @@ const rawArticles: Article[] = [
     title: "治療日記のつけ方：変化を見える化する",
     description:
       "症状・服薬・生活の記録法と、診察での活かし方をまとめます。",
-    category: "treatment",
+    category: "cost-access",
     updatedAt: "2026-09-06",
     readingMinutes: 3,
     status: "draft",
@@ -5997,7 +5994,7 @@ const rawArticles: Article[] = [
     title: "治療を見直す・やめる判断：立ち止まる勇気",
     description:
       "効果がないときの見直し方と、中止の進め方を整理します。",
-    category: "treatment",
+    category: "cost-access",
     updatedAt: "2026-09-06",
     readingMinutes: 3,
     status: "draft",
@@ -6037,7 +6034,7 @@ const rawArticles: Article[] = [
     title: "育児・介護との両立：治療中の暮らし",
     description:
       "預け先やサービスの確保など、両立のための準備をまとめます。",
-    category: "treatment",
+    category: "cost-access",
     updatedAt: "2026-09-06",
     readingMinutes: 3,
     status: "draft",
@@ -6077,7 +6074,7 @@ const rawArticles: Article[] = [
     title: "医療費の支払い相談：困ったときの窓口",
     description:
       "分割や猶予、支援制度など、支払いに困ったときの道筋です。",
-    category: "treatment",
+    category: "cost-access",
     updatedAt: "2026-09-06",
     readingMinutes: 3,
     status: "draft",
@@ -6117,7 +6114,7 @@ const rawArticles: Article[] = [
     title: "細胞の大きさ比べ：卵子から血小板まで",
     description:
       "目に見えない細胞の世界のスケール感をつかみます。",
-    category: "basics",
+    category: "stem-basics",
     updatedAt: "2026-09-07",
     readingMinutes: 3,
     status: "draft",
@@ -6157,7 +6154,7 @@ const rawArticles: Article[] = [
     title: "血液型の仕組み：ABO式と輸血の関係",
     description:
       "赤血球の目印の違いと、輸血で適合を見る理由を整理します。",
-    category: "basics",
+    category: "stem-basics",
     updatedAt: "2026-09-07",
     readingMinutes: 3,
     status: "draft",
@@ -6197,7 +6194,7 @@ const rawArticles: Article[] = [
     title: "体の水分と電解質：脱水を防ぐ考え方",
     description:
       "体重の約6割を占める水分の役割と、補給の基本をまとめます。",
-    category: "basics",
+    category: "stem-basics",
     updatedAt: "2026-09-07",
     readingMinutes: 3,
     status: "draft",
@@ -6237,7 +6234,7 @@ const rawArticles: Article[] = [
     title: "リンパの仕組み：むくみと免疫の通り道",
     description:
       "血管と並ぶ循環のもう一つの流れを整理します。",
-    category: "basics",
+    category: "stem-basics",
     updatedAt: "2026-09-07",
     readingMinutes: 3,
     status: "draft",
@@ -6277,7 +6274,7 @@ const rawArticles: Article[] = [
     title: "腸内細菌と体：共生する微生物の話",
     description:
       "100兆個ともいわれる腸内細菌の働きと付き合い方を紹介します。",
-    category: "basics",
+    category: "stem-basics",
     updatedAt: "2026-09-08",
     readingMinutes: 4,
     status: "draft",
@@ -6317,7 +6314,7 @@ const rawArticles: Article[] = [
     title: "熱が出る仕組み：発熱と解熱の考え方",
     description:
       "体温を上げる体の判断と、対処の目安を整理します。",
-    category: "basics",
+    category: "stem-basics",
     updatedAt: "2026-09-08",
     readingMinutes: 3,
     status: "draft",
@@ -6357,7 +6354,7 @@ const rawArticles: Article[] = [
     title: "痛みの仕組み：信号と感じ方の違い",
     description:
       "痛みが伝わる経路と、感じ方が変わる理由を紹介します。",
-    category: "basics",
+    category: "stem-basics",
     updatedAt: "2026-09-08",
     readingMinutes: 3,
     status: "draft",
@@ -6397,7 +6394,7 @@ const rawArticles: Article[] = [
     title: "関節の仕組み：動く連結部の構造",
     description:
       "骨と骨をつなぐ関節のつくりと、動きの種類を整理します。",
-    category: "basics",
+    category: "stem-basics",
     updatedAt: "2026-09-08",
     readingMinutes: 3,
     status: "draft",
@@ -6437,7 +6434,7 @@ const rawArticles: Article[] = [
     title: "骨折の治り方：骨がつながるまで",
     description:
       "骨が修復される段階と、治療中の過ごし方を紹介します。",
-    category: "basics",
+    category: "stem-basics",
     updatedAt: "2026-09-09",
     readingMinutes: 3,
     status: "draft",
@@ -6477,7 +6474,7 @@ const rawArticles: Article[] = [
     title: "貧血とは：酸素不足のサイン",
     description:
       "めまいや疲れの背景にある貧血の基本と受診の目安です。",
-    category: "basics",
+    category: "stem-basics",
     updatedAt: "2026-09-09",
     readingMinutes: 3,
     status: "draft",
@@ -6517,7 +6514,7 @@ const rawArticles: Article[] = [
     title: "血圧の仕組み：数値の読み方",
     description:
       "上と下の数値の意味と、測り方のコツを整理します。",
-    category: "basics",
+    category: "stem-basics",
     updatedAt: "2026-09-09",
     readingMinutes: 3,
     status: "draft",
@@ -6557,7 +6554,7 @@ const rawArticles: Article[] = [
     title: "コレステロールとは：善玉・悪玉の話",
     description:
       "体に必要な脂質の役割と、検査値の見方を紹介します。",
-    category: "basics",
+    category: "stem-basics",
     updatedAt: "2026-09-09",
     readingMinutes: 3,
     status: "draft",
@@ -6597,7 +6594,7 @@ const rawArticles: Article[] = [
     title: "脱水と熱中症：夏の備えと応急対応",
     description:
       "暑い時期の体調不良を防ぐ工夫と、重症度の見分け方です。",
-    category: "basics",
+    category: "stem-basics",
     updatedAt: "2026-09-10",
     readingMinutes: 3,
     status: "draft",
@@ -6637,7 +6634,7 @@ const rawArticles: Article[] = [
     title: "細胞バンクの種類：公的と民間の違い",
     description:
       "臍帯血・骨髄・iPSの保管の仕組みと選び方を整理します。",
-    category: "stem-cells",
+    category: "cell-types",
     updatedAt: "2026-09-10",
     readingMinutes: 3,
     status: "draft",
@@ -6677,7 +6674,7 @@ const rawArticles: Article[] = [
     title: "培養液とは：細胞の食事と環境",
     description:
       "細胞を育てる液体の中身と管理の基本を紹介します。",
-    category: "stem-cells",
+    category: "cell-types",
     updatedAt: "2026-09-10",
     readingMinutes: 3,
     status: "draft",
@@ -6717,7 +6714,7 @@ const rawArticles: Article[] = [
     title: "細胞の選別：マーカーとセルソーター",
     description:
       "目的の細胞だけを取り出す技術の基本を整理します。",
-    category: "stem-cells",
+    category: "cell-types",
     updatedAt: "2026-09-10",
     readingMinutes: 3,
     status: "draft",
@@ -6757,7 +6754,7 @@ const rawArticles: Article[] = [
     title: "胎盤・羊膜由来の細胞：出産時の組織の活用",
     description:
       "出産に伴い得られる組織の研究と利用の実際を紹介します。",
-    category: "stem-cells",
+    category: "cell-types",
     updatedAt: "2026-09-11",
     readingMinutes: 3,
     status: "draft",
@@ -6797,7 +6794,7 @@ const rawArticles: Article[] = [
     title: "膵臓の再生研究：β細胞を目指して",
     description:
       "インスリンを出す細胞の再生と移植研究の現状を整理します。",
-    category: "stem-cells",
+    category: "mechanisms",
     updatedAt: "2026-09-11",
     readingMinutes: 4,
     status: "draft",
@@ -6837,7 +6834,7 @@ const rawArticles: Article[] = [
     title: "腎臓の再生研究：透析と再生の間",
     description:
       "腎機能の回復を目指す研究と、現在の治療の位置づけを紹介します。",
-    category: "stem-cells",
+    category: "mechanisms",
     updatedAt: "2026-09-11",
     readingMinutes: 4,
     status: "draft",
@@ -6877,7 +6874,7 @@ const rawArticles: Article[] = [
     title: "肺の再生研究：呼吸を取り戻す挑戦",
     description:
       "ガス交換の仕組みを守る・戻す研究の現状を整理します。",
-    category: "stem-cells",
+    category: "mechanisms",
     updatedAt: "2026-09-11",
     readingMinutes: 3,
     status: "draft",
@@ -6917,7 +6914,7 @@ const rawArticles: Article[] = [
     title: "椎間板の再生研究：腰痛との関係",
     description:
       "背骨のクッションの変性と、再生への挑戦を紹介します。",
-    category: "stem-cells",
+    category: "mechanisms",
     updatedAt: "2026-09-12",
     readingMinutes: 3,
     status: "draft",
@@ -6957,7 +6954,7 @@ const rawArticles: Article[] = [
     title: "血管の再生：足りない血流を補う",
     description:
       "閉塞性動脈疾患などを対象とする血管再生の考え方を整理します。",
-    category: "stem-cells",
+    category: "mechanisms",
     updatedAt: "2026-09-12",
     readingMinutes: 3,
     status: "draft",
@@ -6997,7 +6994,7 @@ const rawArticles: Article[] = [
     title: "3Dバイオプリンティング：印刷する組織",
     description:
       "細胞を材料に立体組織を作る技術の現状と課題を紹介します。",
-    category: "stem-cells",
+    category: "mechanisms",
     updatedAt: "2026-09-12",
     readingMinutes: 3,
     status: "draft",
@@ -7037,7 +7034,7 @@ const rawArticles: Article[] = [
     title: "臓器移植の基礎：提供と分配の仕組み",
     description:
       "ドナーからの提供と公平な分配を支える制度を紹介します。",
-    category: "stem-cells",
+    category: "mechanisms",
     updatedAt: "2026-09-12",
     readingMinutes: 4,
     status: "draft",
@@ -7077,7 +7074,7 @@ const rawArticles: Article[] = [
     title: "iPSの提供ドナーとは：協力の仕組みと流れ",
     description:
       "研究やストックのための血液提供と、その後の扱いを解説します。",
-    category: "stem-cells",
+    category: "cell-types",
     updatedAt: "2026-09-13",
     readingMinutes: 3,
     status: "draft",
@@ -7117,7 +7114,7 @@ const rawArticles: Article[] = [
     title: "事前指示書の書き方：延命治療と意思表示",
     description:
       "いざというときの希望を伝える文書の作り方と使い方です。",
-    category: "treatment",
+    category: "cost-access",
     updatedAt: "2026-09-13",
     readingMinutes: 3,
     status: "draft",
@@ -7157,7 +7154,7 @@ const rawArticles: Article[] = [
     title: "患者の権利：知っておきたい基本",
     description:
       "説明を受ける権利や自己決定など、医療における基本的な権利を整理します。",
-    category: "treatment",
+    category: "cost-access",
     updatedAt: "2026-09-13",
     readingMinutes: 3,
     status: "draft",
@@ -7197,7 +7194,7 @@ const rawArticles: Article[] = [
     title: "ジェネリック医薬品：後発品の選び方",
     description:
       "先発品との違いと、切り替えるときの確認点をまとめます。",
-    category: "treatment",
+    category: "cost-access",
     updatedAt: "2026-09-13",
     readingMinutes: 3,
     status: "draft",
@@ -7237,7 +7234,7 @@ const rawArticles: Article[] = [
     title: "保険証とマイナ保険証：受診時の使い方",
     description:
       "受診に必要な確認と、マイナ保険証の利用方法を紹介します。",
-    category: "treatment",
+    category: "cost-access",
     updatedAt: "2026-09-14",
     readingMinutes: 3,
     status: "draft",
@@ -7277,7 +7274,7 @@ const rawArticles: Article[] = [
     title: "要介護認定の流れ：申請からサービスまで",
     description:
       "介護が必要になったときの申請手順とサービスの種類を整理します。",
-    category: "treatment",
+    category: "cost-access",
     updatedAt: "2026-09-14",
     readingMinutes: 4,
     status: "draft",
@@ -7317,7 +7314,7 @@ const rawArticles: Article[] = [
     title: "病気と運転：免許と安全の考え方",
     description:
       "治療中の運転の注意と、免許に関わる制度を紹介します。",
-    category: "treatment",
+    category: "cost-access",
     updatedAt: "2026-09-14",
     readingMinutes: 3,
     status: "draft",
@@ -7357,7 +7354,7 @@ const rawArticles: Article[] = [
     title: "労災と傷病手当：働けなくなったときの保障",
     description:
       "仕事が原因のけが・病気と、それ以外の休業の保障を整理します。",
-    category: "treatment",
+    category: "cost-access",
     updatedAt: "2026-09-14",
     readingMinutes: 4,
     status: "draft",
@@ -7397,7 +7394,7 @@ const rawArticles: Article[] = [
     title: "医療事故調査制度：仕組みと相談先",
     description:
       "予期せぬ死亡などが起きたときの調査と支援の枠組みを紹介します。",
-    category: "treatment",
+    category: "cost-access",
     updatedAt: "2026-09-15",
     readingMinutes: 3,
     status: "draft",
@@ -7437,7 +7434,7 @@ const rawArticles: Article[] = [
     title: "薬のアレルギーと副作用の記録：伝え方",
     description:
       "飲み合わせや副作用の情報を整理し、安全につなげる方法です。",
-    category: "treatment",
+    category: "cost-access",
     updatedAt: "2026-09-15",
     readingMinutes: 3,
     status: "draft",
@@ -7477,7 +7474,7 @@ const rawArticles: Article[] = [
     title: "大人の予防接種：種類と受け方",
     description:
       "成人に勧められる予防接種と、接種前の確認点をまとめます。",
-    category: "treatment",
+    category: "cost-access",
     updatedAt: "2026-09-15",
     readingMinutes: 3,
     status: "draft",
@@ -7517,7 +7514,7 @@ const rawArticles: Article[] = [
     title: "歯科受診の進め方：検診と治療の流れ",
     description:
       "歯科の初診から治療完了までの流れと準備を紹介します。",
-    category: "treatment",
+    category: "cost-access",
     updatedAt: "2026-09-15",
     readingMinutes: 3,
     status: "draft",
@@ -7557,7 +7554,7 @@ const rawArticles: Article[] = [
     title: "補装具の作り方：義肢・装具と費用",
     description:
       "体を支える用具の種類と、作製・支給の流れを整理します。",
-    category: "treatment",
+    category: "cost-access",
     updatedAt: "2026-09-16",
     readingMinutes: 3,
     status: "draft",
@@ -7597,7 +7594,7 @@ const rawArticles: Article[] = [
     title: "高齢者の家の安全：転倒予防の工夫",
     description:
       "住まいの危険箇所の見直しと、転倒を防ぐ工夫をまとめます。",
-    category: "treatment",
+    category: "cost-access",
     updatedAt: "2026-09-16",
     readingMinutes: 3,
     status: "draft",
@@ -7637,7 +7634,7 @@ const rawArticles: Article[] = [
     title: "ハゲタカジャーナルとは：粗悪誌の見分け方",
     description:
       "お金を払えば載る雑誌の特徴と、論文の質の見極めを紹介します。",
-    category: "research",
+    category: "efficacy",
     updatedAt: "2026-09-16",
     readingMinutes: 3,
     status: "draft",
@@ -7677,7 +7674,7 @@ const rawArticles: Article[] = [
     title: "論文撤回とは：撤回理由の読み方",
     description:
       "取り下げられた論文の意味と、撤回情報の探し方を整理します。",
-    category: "research",
+    category: "efficacy",
     updatedAt: "2026-09-16",
     readingMinutes: 3,
     status: "draft",
@@ -7717,7 +7714,7 @@ const rawArticles: Article[] = [
     title: "オープンアクセスとは：誰でも読める論文",
     description:
       "無料公開の仕組みと、購読誌との違いを紹介します。",
-    category: "research",
+    category: "efficacy",
     updatedAt: "2026-09-17",
     readingMinutes: 3,
     status: "draft",
@@ -7757,7 +7754,7 @@ const rawArticles: Article[] = [
     title: "インパクトファクターの読み方：数字の意味と限界",
     description:
       "雑誌の影響指標の仕組みと、誤用への注意を整理します。",
-    category: "research",
+    category: "efficacy",
     updatedAt: "2026-09-17",
     readingMinutes: 3,
     status: "draft",
@@ -7797,7 +7794,7 @@ const rawArticles: Article[] = [
     title: "診療ガイドラインの読み方：推奨の強さを知る",
     description:
       "推奨度とエビデンスレベルの表記の読み方を紹介します。",
-    category: "research",
+    category: "efficacy",
     updatedAt: "2026-09-17",
     readingMinutes: 4,
     status: "draft",
@@ -7837,7 +7834,7 @@ const rawArticles: Article[] = [
     title: "添付文書の読み方：薬の説明書を活用する",
     description:
       "効能・用法・副作用の記載の読み方と注意点をまとめます。",
-    category: "research",
+    category: "efficacy",
     updatedAt: "2026-09-17",
     readingMinutes: 3,
     status: "draft",
@@ -7877,7 +7874,7 @@ const rawArticles: Article[] = [
     title: "リアルワールドデータとは：日常診療の記録の活用",
     description:
       "治験以外のデータの役割と読み方の注意を紹介します。",
-    category: "research",
+    category: "efficacy",
     updatedAt: "2026-09-18",
     readingMinutes: 3,
     status: "draft",
@@ -7917,7 +7914,7 @@ const rawArticles: Article[] = [
     title: "拡大治験とコンパッショネートユース：未承認薬への道",
     description:
       "承認前の薬にアクセスする制度と考え方を整理します。",
-    category: "research",
+    category: "efficacy",
     updatedAt: "2026-09-18",
     readingMinutes: 4,
     status: "draft",
@@ -7957,7 +7954,7 @@ const rawArticles: Article[] = [
     title: "ファーストインヒューマン試験とは：人で初めて試す段階",
     description:
       "最初期の臨床試験の目的と参加の考え方を紹介します。",
-    category: "research",
+    category: "efficacy",
     updatedAt: "2026-09-18",
     readingMinutes: 3,
     status: "draft",
@@ -7997,7 +7994,7 @@ const rawArticles: Article[] = [
     title: "分散型治験（DCT）とは：来院しない治験",
     description:
       "オンラインや訪問を組み合わせた新しい治験の形を整理します。",
-    category: "research",
+    category: "efficacy",
     updatedAt: "2026-09-18",
     readingMinutes: 3,
     status: "draft",
@@ -8037,7 +8034,7 @@ const rawArticles: Article[] = [
     title: "バスケット試験・アンブレラ試験とは：遺伝子で分ける治験",
     description:
       "臓器ではなく特徴で分ける新しい治験デザインを紹介します。",
-    category: "research",
+    category: "efficacy",
     updatedAt: "2026-09-19",
     readingMinutes: 4,
     status: "draft",
@@ -8077,7 +8074,7 @@ const rawArticles: Article[] = [
     title: "デジタル療法（DTx）とは：アプリで治す時代",
     description:
       "治療用アプリの仕組みと、薬との違いを整理します。",
-    category: "research",
+    category: "efficacy",
     updatedAt: "2026-09-19",
     readingMinutes: 3,
     status: "draft",
@@ -8117,7 +8114,7 @@ const rawArticles: Article[] = [
     title: "体温計の使い方：脇・耳・おでこの違い",
     description:
       "部位による違いと、正しく測るコツを紹介するコラムです。",
-    category: "basics",
+    category: "stem-basics",
     updatedAt: "2026-09-26",
     readingMinutes: 3,
     status: "draft",
@@ -8158,7 +8155,7 @@ const rawArticles: Article[] = [
     title: "献血の流れと条件：初めての方へ",
     description:
       "献血の種類・条件・当日の流れをまとめたコラムです。",
-    category: "basics",
+    category: "stem-basics",
     updatedAt: "2026-10-03",
     readingMinutes: 3,
     status: "draft",
@@ -8199,7 +8196,7 @@ const rawArticles: Article[] = [
     title: "顕微鏡でのぞく世界：細胞観察入門",
     description:
       "顕微鏡の種類と、細胞の見え方の基本を紹介するコラムです。",
-    category: "basics",
+    category: "stem-basics",
     updatedAt: "2026-10-10",
     readingMinutes: 3,
     status: "draft",
@@ -8240,7 +8237,7 @@ const rawArticles: Article[] = [
     title: "iPS細胞とノーベル賞：2012年の出来事",
     description:
       "山中伸弥教授の受賞の背景と、その後の歩みをたどるコラムです。",
-    category: "stem-cells",
+    category: "mechanisms",
     updatedAt: "2026-10-17",
     readingMinutes: 4,
     status: "draft",
@@ -8281,7 +8278,7 @@ const rawArticles: Article[] = [
     title: "オルガノイドと意識の議論：脳モデルの倫理",
     description:
       "ミニ臓器をめぐる倫理的な問いを紹介するコラムです。",
-    category: "stem-cells",
+    category: "mechanisms",
     updatedAt: "2026-10-24",
     readingMinutes: 3,
     status: "draft",
@@ -8322,7 +8319,7 @@ const rawArticles: Article[] = [
     title: "自宅で細胞培養はできません：誤解と理由",
     description:
       "培養に必要な条件を整理し、安易な試みへの注意をまとめたコラムです。",
-    category: "stem-cells",
+    category: "mechanisms",
     updatedAt: "2026-10-31",
     readingMinutes: 3,
     status: "draft",
@@ -8363,7 +8360,7 @@ const rawArticles: Article[] = [
     title: "応急手当の基礎：止血と119番",
     description:
       "けがや急病の現場でできることをまとめたコラムです。",
-    category: "treatment",
+    category: "cost-access",
     updatedAt: "2026-11-07",
     readingMinutes: 3,
     status: "draft",
@@ -8404,7 +8401,7 @@ const rawArticles: Article[] = [
     title: "薬の保管方法：期限と置き場所",
     description:
       "薬の品質を保つ保管のコツと、残薬の扱いを紹介するコラムです。",
-    category: "treatment",
+    category: "cost-access",
     updatedAt: "2026-11-14",
     readingMinutes: 3,
     status: "draft",
@@ -8445,7 +8442,7 @@ const rawArticles: Article[] = [
     title: "ノーベル生理学・医学賞の読み方",
     description:
       "受賞研究の意味と、報道との付き合い方を紹介するコラムです。",
-    category: "research",
+    category: "mechanisms",
     updatedAt: "2026-11-21",
     readingMinutes: 3,
     status: "draft",
@@ -8486,7 +8483,7 @@ const rawArticles: Article[] = [
     title: "科学イベントの探し方：公開講座と見学会",
     description:
       "研究に触れられる場の種類と探し方をまとめたコラムです。",
-    category: "research",
+    category: "mechanisms",
     updatedAt: "2026-11-28",
     readingMinutes: 3,
     status: "draft",
@@ -8527,7 +8524,7 @@ const rawArticles: Article[] = [
     title: "骨粗しょう症とは：骨が弱くなる仕組みと骨折予防",
     description:
       "骨密度が下がって骨折しやすくなる仕組みと、日常でできる予防の考え方を整理します。",
-    category: "basics",
+    category: "stem-basics",
     updatedAt: "2026-09-23",
     readingMinutes: 3,
     status: "draft",
@@ -8572,7 +8569,7 @@ const rawArticles: Article[] = [
     title: "甲状腺の病気の基礎：バセドウ病と橋本病",
     description:
       "甲状腺ホルモンが働き過ぎる病気と、働きが弱まる病気の違いを整理します。",
-    category: "basics",
+    category: "stem-basics",
     updatedAt: "2026-09-23",
     readingMinutes: 3,
     status: "draft",
@@ -8616,7 +8613,7 @@ const rawArticles: Article[] = [
     slug: "dementia-basics",
     title: "認知症の基礎：早期発見と受診の目安",
     description: "認知症の特徴と、早期受診が勧められる理由を整理します。",
-    category: "basics",
+    category: "stem-basics",
     updatedAt: "2026-09-23",
     readingMinutes: 3,
     status: "draft",
@@ -8661,7 +8658,7 @@ const rawArticles: Article[] = [
     title: "脳卒中の基礎：突然の症状とACT-FAST",
     description:
       "脳卒中で見られる突然の症状と、迷わず救急要請する目安を整理します。",
-    category: "basics",
+    category: "stem-basics",
     updatedAt: "2026-09-23",
     readingMinutes: 3,
     status: "draft",
@@ -8705,7 +8702,7 @@ const rawArticles: Article[] = [
     slug: "heart-attack-basics",
     title: "心筋梗塞の基礎：胸の症状と救急要請の目安",
     description: "心筋梗塞で見られる症状と、救急車を呼ぶ目安を整理します。",
-    category: "basics",
+    category: "stem-basics",
     updatedAt: "2026-09-23",
     readingMinutes: 3,
     status: "draft",
@@ -8750,7 +8747,7 @@ const rawArticles: Article[] = [
     title: "臍帯組織由来の幹細胞：ワルトンゼリーの特徴",
     description:
       "へその緒に含まれる組織由来の間葉系幹細胞の特徴と研究の位置づけを整理します。",
-    category: "stem-cells",
+    category: "cell-types",
     updatedAt: "2026-09-23",
     readingMinutes: 3,
     status: "draft",
@@ -8793,10 +8790,9 @@ const rawArticles: Article[] = [
   },
   {
     slug: "prp-therapy-basics",
-    title: "PRP療法とは：多血小板血漿を使う治療の位置づけ",
-    description:
-      "自分の血液から作るPRPを使う治療の仕組みと、確認しておきたい手続きを整理します。",
-    category: "stem-cells",
+    title: "PRPと幹細胞治療は何が違う？自分の血液と自分の細胞",
+    description: "自分の血液を使うPRP療法と、細胞を採取・培養して使う幹細胞治療。仕組みと位置づけの違いを整理します。",
+    category: "compare-therapies",
     updatedAt: "2026-09-23",
     readingMinutes: 3,
     status: "draft",
@@ -8809,21 +8805,21 @@ const rawArticles: Article[] = [
     sections: [
       {
         id: "what",
-        title: "PRPとは",
+        title: "PRPと幹細胞治療は何が違う？自分の血液と自分の細胞",
         paragraphs: [
           "PRP（多血小板血漿）は、患者自身の血液を採取して血小板を濃縮した血液成分です。血小板に含まれる成長因子などの働きを利用し、腱や関節などの軟部組織の治療に使われることがあります。",
         ],
       },
       {
         id: "use",
-        title: "使われ方の例",
+        title: "PRPと幹細胞治療は何が違う？自分の血液と自分の細胞",
         paragraphs: [
           "国内で公開されている再生医療等提供計画には、PRPを使った整形外科領域の軟部組織治療の説明が含まれ、非ステロイド性抗炎症薬の内服や物理的治療などに代わる選択肢として位置づけられている例があります。自己の血液を使うため身体への負担は比較的少ないとされますが、効果を保証するものではなく、注射に伴う痛みや感染などの可能性も説明されています。",
         ],
       },
       {
         id: "procedure",
-        title: "確認しておきたい手続き",
+        title: "PRPと幹細胞治療は何が違う？自分の血液と自分の細胞",
         paragraphs: [
           "PRP療法は再生医療等安全性確保法に基づく再生医療等技術に区分され、実施医療機関は認定再生医療等委員会の意見を聴いた上で再生医療等提供計画を厚生労働大臣に提出する義務があります。治療を検討する際は、計画が届出済みであることや、効果・リスク・費用についての説明内容を確認することが勧められます。",
         ],
@@ -8831,7 +8827,7 @@ const rawArticles: Article[] = [
     ],
     references: [
       {
-        title: "厚生労働省：再生医療等提供計画の提出等について（概要）",
+        title: "PRPと幹細胞治療は何が違う？自分の血液と自分の細胞",
         url: "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/iryou/saisei_iryou/plan.html",
       },
     ],
@@ -8841,7 +8837,7 @@ const rawArticles: Article[] = [
     title: "幹細胞治療の投与経路：点滴・局所投与・動脈投与の違い",
     description:
       "幹細胞を体に入れる方法にはいくつかの経路があり、想定される作用や負担が異なります。",
-    category: "stem-cells",
+    category: "in-body",
     updatedAt: "2026-09-23",
     readingMinutes: 3,
     status: "draft",
@@ -8883,10 +8879,9 @@ const rawArticles: Article[] = [
   },
   {
     slug: "exosome-cosmetic-claims",
-    title: "エクソソーム美容医療の科学的検証と注意点",
-    description:
-      "美容医療で使われるエクソソームについて、承認状況と厚生労働省の注意喚起を整理します。",
-    category: "stem-cells",
+    title: "幹細胞・エクソソームを使った美容医療の効果と注意点",
+    description: "美容医療で使われる幹細胞関連の治療とエクソソーム製剤。期待される効果と科学的な検証状況、注意点を整理します。",
+    category: "anti-aging",
     updatedAt: "2026-09-23",
     readingMinutes: 3,
     status: "draft",
@@ -8899,21 +8894,21 @@ const rawArticles: Article[] = [
     sections: [
       {
         id: "what",
-        title: "エクソソームとは",
+        title: "幹細胞・エクソソームを使った美容医療の効果と注意点",
         paragraphs: [
           "エクソソームは、細胞が分泌する細胞外小胞と呼ばれる小さな粒子の一種で、他の細胞との情報伝達に関わるとされ研究が進められています。幹細胞の培養液（培養上清）にも含まれる可能性があるとされます。",
         ],
       },
       {
         id: "caution",
-        title: "厚生労働省の注意喚起",
+        title: "幹細胞・エクソソームを使った美容医療の効果と注意点",
         paragraphs: [
           "厚生労働省は2024年7月、美容目的などで広がるエクソソームを用いた自由診療について、薬事承認を受けた医薬品は存在せず、有効性・安全性が確認されたものではないと注意喚起しました。医薬品的な効果効能をうたう製品の広告・販売については、都道府県に指導・取締りの徹底を要請しています。",
         ],
       },
       {
         id: "check",
-        title: "確認しておきたいこと",
+        title: "幹細胞・エクソソームを使った美容医療の効果と注意点",
         paragraphs: [
           "自由診療であること自体は違法ではありませんが、保険診療のように有効性・安全性が公的に検証された治療とは異なります。製品の由来や品質管理、無菌性の確認方法、想定される副作用、費用、トラブル時の相談先などを施術前に確認することが勧められます。消費者庁や国民生活センターにも美容医療に関する相談窓口があります。",
         ],
@@ -8921,7 +8916,7 @@ const rawArticles: Article[] = [
     ],
     references: [
       {
-        title: "厚生労働省：幹細胞培養上清液及びエクソソーム等を用いる医療について",
+        title: "幹細胞・エクソソームを使った美容医療の効果と注意点",
         url: "https://www.mhlw.go.jp/content/001281987.pdf",
       },
     ],
@@ -8931,7 +8926,7 @@ const rawArticles: Article[] = [
     title: "特定細胞加工物の製造許可の仕組み",
     description:
       "再生医療で使う細胞加工物の製造に必要な届出・許可の仕組みを整理します。",
-    category: "stem-cells",
+    category: "cell-types",
     updatedAt: "2026-09-23",
     readingMinutes: 3,
     status: "draft",
@@ -8976,7 +8971,7 @@ const rawArticles: Article[] = [
     title: "再生医療の提供計画：治療を受けるまでの手続きの流れ",
     description:
       "再生医療等を受けるまでに医療機関がとる手続きの区分と流れを整理します。",
-    category: "treatment",
+    category: "cost-access",
     updatedAt: "2026-09-23",
     readingMinutes: 3,
     status: "draft",
@@ -9021,7 +9016,7 @@ const rawArticles: Article[] = [
     title: "医薬品副作用被害救済制度とは",
     description:
       "医薬品を適正に使って生じた副作用による健康被害を救済する公的制度を整理します。",
-    category: "treatment",
+    category: "safety",
     updatedAt: "2026-09-23",
     readingMinutes: 3,
     status: "draft",
@@ -9066,7 +9061,7 @@ const rawArticles: Article[] = [
     title: "医療広告のビフォーアフター規制の要点",
     description:
       "治療の前後の写真や体験談の広告がなぜ規制されているのかを整理します。",
-    category: "treatment",
+    category: "cost-access",
     updatedAt: "2026-09-23",
     readingMinutes: 3,
     status: "draft",
@@ -9112,7 +9107,7 @@ const rawArticles: Article[] = [
     title: "動物実験と3Rの原則",
     description:
       "研究における動物実験で守られるべき3R（代替・削減・改善）の考え方を整理します。",
-    category: "research",
+    category: "mechanisms",
     updatedAt: "2026-09-23",
     readingMinutes: 3,
     status: "draft",
@@ -9157,7 +9152,7 @@ const rawArticles: Article[] = [
     title: "バイオバンクの仕組み：試料と情報を研究に活かす",
     description:
       "研究のために保管される生体試料や健康情報を管理するバイオバンクの仕組みを整理します。",
-    category: "research",
+    category: "mechanisms",
     updatedAt: "2026-09-23",
     readingMinutes: 3,
     status: "draft",
@@ -9197,9 +9192,1185 @@ const rawArticles: Article[] = [
       },
     ],
   },
+  {
+    slug: "what-is-stem-cell",
+    title: "幹細胞とは？再生医療で注目される理由をわかりやすく解説",
+    description:
+      "幹細胞の2つの能力「自己複製」と「分化」。普通の細胞との違いと、再生医療で注目される理由を整理します。",
+    category: "stem-basics",
+    updatedAt: "2026-09-25",
+    readingMinutes: 4,
+    status: "draft",
+    illustration: "network",
+    points: [
+      "幹細胞は、自分と同じ細胞を作る力（自己複製）と、別の種類の細胞になる力（分化）を持つ細胞です。",
+      "皮膚や血液の細胞など、役割が決まった細胞とは性質が異なります。",
+      "幹細胞という言葉だけでは、その治療の効果や安全性は判断できません。",
+    ],
+    sections: [
+      {
+        id: "definition",
+        title: "幹細胞の定義：2つの能力",
+        paragraphs: [
+          "幹細胞とは、分裂して自分と同じ性質の幹細胞を作り出す能力（自己複製）と、筋肉や骨、血液など別の種類の細胞へ変わる能力（分化）をあわせ持つ細胞を指します。体の組織の「もと」になる細胞、と捉えるとイメージしやすいでしょう。",
+          "この定義は研究の世界で共有されていますが、「幹細胞」という呼び名は一つの種類の細胞を指すわけではありません。由来や作り方、分化できる範囲によって性質が大きく異なります。",
+        ],
+      },
+      {
+        id: "difference",
+        title: "普通の細胞と何が違うのか",
+        paragraphs: [
+          "皮膚の細胞や赤血球のような体の細胞は、すでに役割が決まっています。増えても同じ役割の細胞になるだけで、骨や神経になることはありません。一方の幹細胞は、役割を持つ前の段階にあり、条件によって複数の種類の細胞になり得ます。",
+          "ただし、どの幹細胞も無限に何にでもなれるわけではありません。iPS細胞やES細胞のように広い範囲に分化できるもの（多能性幹細胞）と、骨髄や脂肪にある幹細胞のように限られた範囲に分化するもの（体性幹細胞）では、使われ方も期待される働きも異なります。",
+        ],
+      },
+      {
+        id: "why-attention",
+        title: "再生医療で注目される理由",
+        paragraphs: [
+          "失われたり傷ついたりした細胞を補う、あるいは細胞が出す信号を通じて体の修復を助ける、といった考え方から、幹細胞は再生医療の中核として研究されてきました。造血幹細胞移植のように長い実績を持つ治療もあれば、検証が進められている段階のものもあります。",
+          "一方で「幹細胞を使う」という説明だけでは、何が体に入れられ、どの仕組みで働くと想定されているかは分かりません。細胞の由来、加工、投与方法、対象疾患を個別に確認することが大切です。",
+        ],
+      },
+      {
+        id: "check",
+        title: "説明を受けたときの確認ポイント",
+        paragraphs: [
+          "説明資料に「幹細胞」とだけ書かれている場合は、由来する組織、自分の細胞か他人由来か、培養されているか、何を対象とした治療かを尋ねましょう。細胞の種類名は効果の証明ではなく、治療ごとの検証が必要です。",
+          "研究の段階にある治療と、制度上の手続きを経て提供される治療では、根拠の強さが異なります。分からない点は主治医にも確認してください。",
+        ],
+      },
+    ],
+    references: [cira, patient, mhlw],
+  },
+  {
+    slug: "stem-cell-treatment-contents",
+    title: "幹細胞治療では、実際に何を体に入れているの？",
+    description:
+      "点滴や注射で投与される「幹細胞治療」の中身。細胞以外に含まれるもの、投与経路ごとの違いを整理します。",
+    category: "stem-basics",
+    updatedAt: "2026-09-25",
+    readingMinutes: 4,
+    status: "draft",
+    illustration: "network",
+    points: [
+      "幹細胞治療で投与されるのは、培養した細胞を液体に混ぜた製剤です。",
+      "細胞のほかに、輸液成分や保存のための添加物が含まれることがあります。",
+      "投与経路（点滴・局所注射など）によって、内容物の確認点が変わります。",
+    ],
+    sections: [
+      {
+        id: "what-is-inside",
+        title: "投与される製剤の中身",
+        paragraphs: [
+          "幹細胞治療で体に入れるのは、採取・培養された細胞を生理食塩水などの液体に懸濁した製剤です。「幹細胞」という成分名ではなく、細胞そのものが主成分です。細胞数、由来組織、自家（自分由来）か他家（他人由来）かは治療ごとに異なります。",
+          "製剤には細胞以外の成分も含まれ得ます。保存や安定化のための添加物、凍結保存された製剤では凍結保護剤（DMSOなど）が残ることがあります。含まれる成分と、それらに対するアレルギーの可能性は、投与前の説明で確認できます。",
+        ],
+      },
+      {
+        id: "culture-history",
+        title: "細胞がどう作られたかも内容の一部",
+        paragraphs: [
+          "同じ「脂肪由来幹細胞」でも、採取後にそのまま使われるものと、数週間かけて培養・増殖させたものでは、細胞の状態も含まれる物質も異なります。培養には培地や血清などの材料が使われ、最終製剤に微量が残る場合があります。",
+          "治療の説明を受けるときは「何を入れるのか」だけでなく「その細胞がどう作られたか」を確認しましょう。採取から投与までの工程を書面で示してもらうと、理解しやすくなります。",
+        ],
+      },
+      {
+        id: "routes",
+        title: "投与経路によって入り方は異なる",
+        paragraphs: [
+          "静脈点滴では製剤が血流に乗って全身を巡り、関節内注射や皮下注射では患部の周辺に留まります。経路によって細胞の行き先も、想定されるリスクも変わります。",
+          "「点滴だから全身に効く」という説明は、体内での分布の実態とは一致しないことが研究で示されています。投与経路ごとの体内での動きは、別記事「体の中での動き」カテゴリで詳しく扱います。",
+        ],
+      },
+    ],
+    references: [mhlw, pmda, patient],
+  },
+  {
+    slug: "iv-stem-cell-journey",
+    title: "幹細胞を点滴すると、体の中で何が起こる？",
+    description:
+      "静脈点滴で投与された幹細胞は、まず肺に集まります。投与直後から消失までの体内での流れを、研究で分かっている範囲で解説します。",
+    category: "in-body",
+    updatedAt: "2026-09-25",
+    readingMinutes: 5,
+    status: "draft",
+    illustration: "network",
+    points: [
+      "静脈に投与された幹細胞は、最初に肺の毛細血管に多く集まります（肺ファーストパス）。",
+      "投与された細胞の多くは、数日から数週間のうちに体から消失すると考えられています。",
+      "細胞が長く残らなくても、分泌される物質を介した作用が想定されています。",
+    ],
+    sections: [
+      {
+        id: "right-after",
+        title: "投与直後：細胞はまず肺へ",
+        paragraphs: [
+          "静脈に入った細胞は、血液に乗って右心房・右心室を通り、最初に肺へ到達します。幹細胞は毛細血管の直径より大きいため、多くが肺の細い血管に一時的に捕捉されます。これは「肺ファーストパス（pulmonary first-pass）」と呼ばれる現象です。",
+          "つまり、点滴した幹細胞が全身の組織に均等に広がるわけではありません。分布のパターンは細胞の大きさや状態、投与方法によって変わることが動物研究で繰り返し報告されています。",
+        ],
+      },
+      {
+        id: "in-lung",
+        title: "肺に留まるあいだに起きること",
+        paragraphs: [
+          "肺に捕捉された細胞はすぐに死滅するのではなく、そこで活動し、抗炎症性の物質などを分泌すると考えられています。マウスの研究では、肺に捕捉された幹細胞がTSG-6と呼ばれる抗炎症タンパク質を分泌し、全身の炎症に影響した例が報告されています。",
+          "「細胞が患部に到達する」だけが作用の経路ではなく、肺に留まった細胞が出す信号が全身に働きかける可能性が研究されています。",
+        ],
+      },
+      {
+        id: "after-lung",
+        title: "その後：再分布と消失",
+        paragraphs: [
+          "時間が経つと肺の細胞の一部は血液に戻り、肝臓や脾臓などへ移動しますが、割合は限定的です。研究では、静脈投与された間葉系幹細胞の多くが肺を超えて長期に分布しないことが示されています。",
+          "数日から数週間のうちに投与細胞のシグナルは検出されなくなる報告が多く、「投与した細胞がずっと体に残る」という想定は支持されていません。",
+        ],
+      },
+      {
+        id: "meaning",
+        title: "「消える」は「意味がない」ではない",
+        paragraphs: [
+          "細胞が長期間残らないことと、治療として意味を持つかは別の問題です。現在の研究では、投与された細胞が出す分泌物や、細胞が処理される過程で起きる免疫への働きかけが、作用の一部を担うという考え方が主流です。",
+          "治療の説明で「幹細胞が○○に行って修復する」とだけ聞いた場合は、投与経路・分布・消失についての根拠を尋ねてみましょう。",
+        ],
+      },
+    ],
+    references: [patient, mhlw],
+  },
+  {
+    slug: "stem-cell-biodistribution",
+    title: "点滴した幹細胞はどこへ行く？肺・肝臓・脳への体内分布",
+    description:
+      "投与された幹細胞の行き先を追跡した研究から分かる、肺・肝臓・脾臓・損傷組織への分布の実際を解説します。",
+    category: "in-body",
+    updatedAt: "2026-09-25",
+    readingMinutes: 6,
+    status: "draft",
+    illustration: "network",
+    points: [
+      "静脈投与では多くの細胞がまず肺に捕捉され、肝臓・脾臓へは一部が再分布します。",
+      "傷ついた組織への集積（ホーミング）は報告されますが、到達する割合は一般に小さいとされます。",
+      "分布の実態は動物実験や画像研究に基づく推定で、人での定量データは限られます。",
+    ],
+    sections: [
+      {
+        id: "how-tracked",
+        title: "分布はどうやって調べるのか",
+        paragraphs: [
+          "細胞の行き先は、蛍光や発光、放射性物質で標識した細胞を投与し、画像や組織検査で追跡して調べられます。多くのデータはマウスなどの動物実験によるもので、人での全身分布を直接測定した研究は限られます。",
+          "そのため「分布」の説明は、動物モデルや限定的な臨床データからの推定である、という前提で読む必要があります。",
+        ],
+      },
+      {
+        id: "lung-first",
+        title: "肺・肝臓・脾臓への分布",
+        paragraphs: [
+          "静脈投与の直後、細胞の多くは肺の毛細血管に捕捉されます。その後、一部の細胞は肺を離れ、肝臓や脾臓など網内系の臓器に再分布します。肺のシグナルが時間とともに減り、肝・脾の割合が上がる経過が、複数の動物研究で描かれています。",
+          "脳への到達はさらに限定的です。血液脳関門があり、静脈投与で脳組織へ届く細胞は少量にとどまると考えられています。",
+        ],
+      },
+      {
+        id: "injured-tissue",
+        title: "傷ついた組織には集まるのか",
+        paragraphs: [
+          "損傷や炎症のある組織では、細胞が集まりやすくなる現象（ホーミング）が報告されています。ただし報告された集積量は全投与量の一部で、「投与した細胞のほとんどが患部に届く」という理解は成り立ちません。",
+          "集まる割合は、細胞の種類や前処理、投与のタイミング、対象の病気によって変わります。研究ごとの条件を確認して読みましょう。",
+        ],
+      },
+      {
+        id: "factors",
+        title: "分布を左右する要因",
+        paragraphs: [
+          "細胞の直径、培養条件、投与量、投与経路（静脈・動脈・局所）によって分布は変わります。細胞表面の状態を変えて肺通過を高めようとする研究や、動脈内投与で標的臓器への到達を増やす検討もあります。",
+          "クリニックの説明で「○○に届く」と言われた場合は、その説明がどの研究・どの投与経路に基づくかを確認してください。経路が違えば分布は同じになりません。",
+        ],
+      },
+    ],
+    references: [patient, mhlw],
+  },
+  {
+    slug: "stem-cell-survival",
+    title: "幹細胞は体の中でどれくらい生きている？定着と消失",
+    description:
+      "投与された幹細胞はどのくらい体内に残るのか。追跡研究が示す細胞の寿命と、「定着する・消える」の意味を整理します。",
+    category: "in-body",
+    updatedAt: "2026-09-25",
+    readingMinutes: 5,
+    status: "draft",
+    illustration: "network",
+    points: [
+      "静脈投与された間葉系幹細胞は、数日〜数週間で多くが消失すると報告されています。",
+      "長期にわたる定着・分化を前提としない作用（分泌物による働きかけ）が想定されています。",
+      "「残っている期間」と「効果が続く期間」は別の話として分けて考えます。",
+    ],
+    sections: [
+      {
+        id: "engraft-or-vanish",
+        title: "「定着する」はどういう意味か",
+        paragraphs: [
+          "定着（エングラフトメント）とは、投与された細胞が組織に取り込まれ、生き続けて働き続ける状態を指します。造血幹細胞移植のように定着が前提の治療もあれば、間葉系幹細胞の静脈投与のように、長期の定着を想定していないものもあります。",
+          "「細胞が残るかどうか」は、治療の仕組みが何を前提にしているかで意味が変わります。説明を受ける際は「この治療は細胞の定着を前提にしていますか」と聞いてみましょう。",
+        ],
+      },
+      {
+        id: "tracking-evidence",
+        title: "追跡研究が示すもの",
+        paragraphs: [
+          "動物実験では、静脈投与された間葉系幹細胞のシグナルが肺で短期間で減少し、数日〜数週間で検出限界を下回る報告が繰り返されています。定着した細胞が分化して組織の一部になる、という描写を裏付けるデータは乏しいのが実情です。",
+          "一方で、消失までの時間は細胞の種類や状態、投与経路、対象動物で異なります。一律に「何日で消える」とは言えません。",
+        ],
+      },
+      {
+        id: "death-is-not-failure",
+        title: "消失＝効果なし、ではない理由",
+        paragraphs: [
+          "投与された細胞が死んでも、細胞が出した分泌物や、死んだ細胞を体内の免疫細胞が処理する過程で生じる反応が、治療的な働きに関与すると考えられています。作用機序が「細胞の置き換え」ではない場合、生存期間の短さは設計と矛盾しません。",
+          "重要なのは、「残ること」を売りにした説明かどうかを見極めることです。定着を謳う治療には定着の根拠を、分泌物を謳う治療には分泌物の根拠を求めましょう。",
+        ],
+      },
+    ],
+    references: [patient, mhlw],
+  },
+  {
+    slug: "stem-cell-homing",
+    title: "幹細胞は傷ついた組織をどうやって見つける？ホーミングの仕組み",
+    description:
+      "投与された幹細胞が損傷組織へ集まる「ホーミング」。血管での接着から組織への移行までの仕組みと、その限界を解説します。",
+    category: "in-body",
+    updatedAt: "2026-09-25",
+    readingMinutes: 5,
+    status: "draft",
+    illustration: "network",
+    points: [
+      "ホーミングとは、細胞が血流から傷ついた組織へ移動する一連の過程です。",
+      "損傷組織が出す信号と、細胞表面の分子の組み合わせで起きると考えられています。",
+      "ホーミングで患部に届く細胞はごく一部で、「ほぼ全てが患部に届く」わけではありません。",
+    ],
+    sections: [
+      {
+        id: "what-is-homing",
+        title: "ホーミングとは",
+        paragraphs: [
+          "ホーミングは、白血病細胞の輸血・免疫細胞の移動でも使われる用語で、血液中の細胞が特定の組織へ向かう現象を指します。幹細胞の文脈では、投与された細胞が損傷・炎症部位に集まることを意味します。",
+          "体には、傷ついた組織がケモカインなどの信号を出す仕組みがあり、細胞表面の受容体がその信号に反応すると考えられています。",
+        ],
+      },
+      {
+        id: "adhesion-cascade",
+        title: "血管壁から組織へ：接着カスケード",
+        paragraphs: [
+          "細胞が組織へ入るには、血管内を流れる→血管壁に弱く接する（ローリング）→しっかり接着する→血管壁の細胞の間を抜ける（遊走・浸潤）という段階を踏みます。これは白血球の移動と似た過程で、「接着カスケード」と呼ばれます。",
+          "間葉系幹細胞は白血球ほどこの過程が効率的ではないとされ、それが患部への到達量が限られる一因と考えられています。",
+        ],
+      },
+      {
+        id: "how-much",
+        title: "実際に集まる量はどのくらいか",
+        paragraphs: [
+          "動物研究では、損傷組織への集積が通常の組織より多いことが報告されていますが、集積する細胞は投与量の一部にとどまります。集まりやすさを高めるため、細胞表面を酵素処理したり、標的分子を増やしたりする工夫が研究されています。",
+          "「傷ついた場所に幹細胞が集まる」という説明は方向としては研究に基づきますが、届く量・タイミング・効果のつながりは治療ごとに確認が必要です。",
+        ],
+      },
+      {
+        id: "limits",
+        title: "ホーミングの限界",
+        paragraphs: [
+          "ホーミングの効率は細胞の種類、損傷の時期、投与経路で変わります。損傷から時間が経ちすぎると信号が弱まる、静脈投与ではまず肺で捕捉される、といった制約があります。",
+          "集積の多さと症状の改善は同じではありません。集まった細胞が何をしているか（分泌・炎症調整など）もあわせて問われるべき点です。",
+        ],
+      },
+    ],
+    references: [patient, mhlw],
+  },
+  {
+    slug: "stem-cell-brain-bbb",
+    title: "幹細胞は血液から脳に届くの？血液脳関門との関係",
+    description:
+      "静脈に入れた幹細胞が脳へ届くかは、血液脳関門（BBB）が鍵です。研究で分かっていることと、脳疾患を謳う説明の読み方を整理します。",
+    category: "in-body",
+    updatedAt: "2026-09-25",
+    readingMinutes: 5,
+    status: "draft",
+    illustration: "network",
+    points: [
+      "血液脳関門は物質の脳への侵入を制限する仕組みで、大きな細胞の通過はさらに限定的です。",
+      "静脈投与で脳組織に到達する細胞はごく少量と考えられています。",
+      "「脳に届く」と謳う治療には、投与経路と根拠の確認が必要です。",
+    ],
+    sections: [
+      {
+        id: "what-is-bbb",
+        title: "血液脳関門（BBB）とは",
+        paragraphs: [
+          "脳の血管は、脳を守るために物質の通過を厳しく制限する構造（血液脳関門）を持ちます。多くの薬や物質、病原体が通れない設計で、細胞のような大きな構造物の通過はさらに困難です。",
+          "脳卒中や外傷などで関門の機能が低下する状況では、通過量が増える可能性が研究されていますが、健常な脳とは状況が異なります。",
+        ],
+      },
+      {
+        id: "what-studies-show",
+        title: "研究が示す到達の実態",
+        paragraphs: [
+          "静脈投与の追跡研究では、脳組織に検出される細胞は少量にとどまる報告が一般的です。動物の脳卒中モデルでは、静脈投与後に脳への少量の集積や、脳への作用が分泌物を介する可能性が検討されています。",
+          "つまり「静脈投与した幹細胞が脳へ移動して神経に変わる」という単純な図式は、現在の研究では支持されていません。",
+        ],
+      },
+      {
+        id: "other-routes",
+        title: "他の投与経路の研究",
+        paragraphs: [
+          "脳への到達を目指す研究では、動脈内投与や髄腔内投与、鼻腔経路などが検討されています。これらは静脈点滴とは侵入性もリスクも異なる方法で、多くが研究段階です。",
+          "経路が変われば分布もリスクも変わります。経路ごとのエビデンスと危険性を分けて確認してください。",
+        ],
+      },
+      {
+        id: "how-to-read-claims",
+        title: "「脳に届く」という説明の読み方",
+        paragraphs: [
+          "脳梗塞や認知症などを対象に幹細胞治療が案内されることがあります。説明を受ける際は、投与経路、脳への到達を示す根拠（動物か人か）、実際に評価された効果を分けて尋ねましょう。",
+          "到達量が小さくても分泌物による作用はあり得ますが、それは別の根拠が必要な話です。混同しないことが大切です。",
+        ],
+      },
+    ],
+    references: [patient, mhlw],
+  },
+  {
+    slug: "stem-cell-antiaging-evidence",
+    title: "幹細胞治療で本当に若返る？科学的にわかっていること",
+    description:
+      "「幹細胞＝若返り」というイメージと、臨床研究で実際に検証されていることの距離を整理します。",
+    category: "anti-aging",
+    updatedAt: "2026-09-25",
+    readingMinutes: 5,
+    status: "draft",
+    illustration: "scope",
+    points: [
+      "「若返り」の意味はあいまいで、見た目の変化と身体機能の改善は別々に評価する必要があります。",
+      "高齢者の身体機能を対象にした小規模な臨床研究は存在しますが、限定的です。",
+      "「若返る」という表現そのものを根拠に治療を選ぶのは危険です。",
+    ],
+    sections: [
+      {
+        id: "what-is-rejuvenation",
+        title: "「若返り」を分解して考える",
+        paragraphs: [
+          "若返りという言葉には、肌の見た目の変化、歩行速度などの身体機能の改善、血液検査の値の変化など、異なる意味が混ざります。どの「若返り」を指しているかで、参照すべき研究も評価方法も変わります。",
+          "広告的な表現としての「若返り」と、臨床研究で測定された特定の指標の改善を分けて考えましょう。",
+        ],
+      },
+      {
+        id: "clinical-evidence",
+        title: "臨床研究で検証されていること",
+        paragraphs: [
+          "加齢に伴う虚弱（フレイルティ）を対象に、他家由来の間葉系幹細胞を点滴で投与する小規模な臨床試験があり、歩行距離など一部の指標で改善が報告されています。ただし参加者数が少なく、評価期間も限られており、効果が一般化できる段階ではありません。",
+          "肌の若返りに関しても、細胞や分泌物を使った小規模な研究はありますが、大規模で比較を伴う試験による確証は乏しい状況です。",
+        ],
+      },
+      {
+        id: "what-is-not-known",
+        title: "まだ分かっていないこと",
+        paragraphs: [
+          "効果がどのくらい続くのか、どんな人に向くのか、長期的な安全性はどうか——これらはいずれも検証の途中です。特に美容目的での使用は、疾病治療と比べて利益とリスクのバランスの考え方が異なります。",
+          "「研究がある」ことと「あなたに効果がある」ことは別です。研究の対象・規模・評価項目を確認してください。",
+        ],
+      },
+      {
+        id: "reading-claims",
+        title: "若返りを謳う説明の読み方",
+        paragraphs: [
+          "「幹細胞で若返る」という説明には、測定された指標と期間、対象者が添えられているかを確認します。写真や体験談は、効果の証明として扱いません。",
+          "加齢は病気ではないため、「治療としての若返り」の評価軸は定まっていません。期待値と費用・リスクのバランスを冷静に検討しましょう。",
+        ],
+      },
+    ],
+    references: [fdaPatient, patient, mhlw],
+  },
+  {
+    slug: "stem-cell-skin-aging",
+    title: "幹細胞は肌の老化にどう作用する？シワ・たるみとの関係",
+    description:
+      "肌の老化の仕組みと、幹細胞・その分泌物が肌にどう関わると考えられているか。研究段階と注意点を整理します。",
+    category: "anti-aging",
+    updatedAt: "2026-09-25",
+    readingMinutes: 5,
+    status: "draft",
+    illustration: "scope",
+    points: [
+      "肌の老化は、線維芽細胞の機能低下やコラーゲンの減少など、細胞レベルの変化を含みます。",
+      "幹細胞やその分泌物が肌の細胞に働きかける可能性が研究されています。",
+      "美容としての効果を示す確かな臨床エビデンスはまだ限定的です。",
+    ],
+    sections: [
+      {
+        id: "how-skin-ages",
+        title: "肌の老化で起きていること",
+        paragraphs: [
+          "加齢や紫外線（光老化）によって、皮膚の線維芽細胞の働きが低下し、コラーゲンやエラスチンなどの細胞外基質が減少・変性します。これがシワやたるみ、弾力低下の基盤です。",
+          "肌の細胞レベルの変化が背景にあるため、「細胞や分泌物で働きかける」という発想自体は研究テーマとして成り立ちます。",
+        ],
+      },
+      {
+        id: "what-research-shows",
+        title: "幹細胞と肌への働きかけの研究",
+        paragraphs: [
+          "脂肪由来幹細胞やその分泌物が、紫外線で傷ついた皮膚モデルで線維芽細胞の働きやコラーゲン産生に影響するという研究が報告されています。多くは培養実験や動物実験、小規模な観察で、人の見た目の改善を確実に示す段階ではありません。",
+          "細胞そのものではなく、分泌物（培養上清やエクソソーム含有製剤）を使うアプローチも研究・提供されていますが、成分の品質や標準化が課題です。",
+        ],
+      },
+      {
+        id: "products-and-claims",
+        title: "提供されているものと注意点",
+        paragraphs: [
+          "美容医療では幹細胞治療、幹細胞培養上清、エクソソーム製剤などが提供されています。名称が似ていても中身は異なり、細胞が入っている製剤と分泌物だけの製剤では想定される作用もリスクも違います。",
+          "「シワが消える」「若返る」と説明された場合は、対象となった評価（肌水分、弾力、画像評価など）、期間、比較群の有無を尋ねましょう。",
+        ],
+      },
+    ],
+    references: [fdaExosome, patient],
+  },
+  {
+    slug: "stem-cell-cosmetic-medicine",
+    title: "幹細胞を使った美容医療にはどんな効果が期待されている？",
+    description:
+      "美容医療で提供される幹細胞関連の治療の種類と、期待される効果、科学的な検証状況、制度上の注意点を整理します。",
+    category: "anti-aging",
+    updatedAt: "2026-09-25",
+    readingMinutes: 5,
+    status: "draft",
+    illustration: "scope",
+    points: [
+      "美容目的の幹細胞治療には、脂肪由来幹細胞や培養上清など複数の種類があります。",
+      "期待される効果の多くは研究段階で、確立した標準治療ではありません。",
+      "海外では未承認の幹細胞製品による健康被害が報告されています。",
+    ],
+    sections: [
+      {
+        id: "what-is-offered",
+        title: "美容医療で提供されるもの",
+        paragraphs: [
+          "美容領域では、自分の脂肪から採取・培養した幹細胞の投与、脂肪組織由来の細胞集団（SVF：間質血管細胞分画）、幹細胞培養上清やエクソソーム製剤などが提供されています。目的は肌質の改善や瘢痕への対応などとされます。",
+          "これらは名前が似ていても、生きた細胞を含むものと含まないもので、想定される作用・リスク・管理の必要性が異なります。",
+        ],
+      },
+      {
+        id: "evidence-status",
+        title: "効果の検証状況",
+        paragraphs: [
+          "小規模な臨床研究や症例報告はありますが、美容効果を確立する大規模な比較試験は乏しい状況です。「脂肪由来幹細胞」という名称の使用と、実際の美容効果の確証は別の問題です。",
+          "提供側の説明で使われる「研究で効果」という表現が、細胞実験・動物実験・小規模観察・比較試験のどの段階を指すかを確認してください。",
+        ],
+      },
+      {
+        id: "risks-reported",
+        title: "報告されているリスク",
+        paragraphs: [
+          "米国では、承認されていない幹細胞製品・エクソソーム製品の投与後に重篤な有害事象（細菌感染を含む）が当局に報告され、患者向けの注意喚起が出されています。日本でも自由診療として提供される治療は、承認薬のような品質・効能の公的確認を経ていません。",
+          "美容目的は病気の治療よりも「受けなくてもよい」選択肢であるため、小さなリスクもより慎重に比較する必要があります。",
+        ],
+      },
+      {
+        id: "decision-points",
+        title: "検討するときの確認点",
+        paragraphs: [
+          "提供計画の届出状況、製剤の内容（細胞・上清・エクソソームの区別）、製造施設の管理、想定される効果の根拠、費用と返金条件を書面で確認しましょう。",
+          "効果が得られない場合の対応、合併症時の連絡先も事前に確認してください。",
+        ],
+      },
+    ],
+    references: [fdaPatient, fdaExosome, mhlw],
+  },
+  {
+    slug: "stem-cell-efficacy-evidence",
+    title: "幹細胞治療は本当に効果がある？現在わかっていること",
+    description:
+      "幹細胞治療の効果は対象と治療ごとに評価されます。確立しているもの、検証中のもの、証明されていないものを分けて整理します。",
+    category: "efficacy",
+    updatedAt: "2026-09-25",
+    readingMinutes: 5,
+    status: "draft",
+    illustration: "scope",
+    points: [
+      "「幹細胞治療の効果」は一括りにできず、対象疾患と治療内容ごとに評価されます。",
+      "造血幹細胞移植のように確立した治療と、検証中の治療があります。",
+      "承認・保険適用・臨床研究・自由診療の位置づけを分けて確認しましょう。",
+    ],
+    sections: [
+      {
+        id: "spectrum",
+        title: "「効果がある」は一つの答えではない",
+        paragraphs: [
+          "幹細胞治療は一つの治療法の名前ではなく、細胞の種類・由来・加工・投与方法・対象疾患の組み合わせ全体を指します。ある組み合わせで効果が確かめられても、別の組み合わせに同じ結論は当てはまりません。",
+          "したがって「幹細胞治療は効くか」ではなく「この治療は、この病気に、どの程度の根拠があるか」と問うのが適切です。",
+        ],
+      },
+      {
+        id: "established",
+        title: "確立しているもの",
+        paragraphs: [
+          "白血病などに対する造血幹細胞移植は、長い検証を経て確立した細胞治療です。日本では再生医療等製品として承認され保険適用される製品もありますが、対象疾患は限定的です。",
+          "確立した治療であっても効果やリスクは個別に評価され、誰にでも等しく有効という意味ではありません。",
+        ],
+      },
+      {
+        id: "investigational",
+        title: "検証中のもの",
+        paragraphs: [
+          "膝の変形性関節症や心疾患、脳卒中後などを対象にした臨床試験では、一部の指標で改善が報告される一方、結果が一貫しない・効果が限定的という報告もあります。メタ解析では安全性は比較的許容されるとする一方、有効性の確証には追加の試験が必要とされています。",
+          "自由診療で提供される治療は、この「検証中」の位置づけにある場合が多く、公的な承認や保険適用を経たものではありません。",
+        ],
+      },
+      {
+        id: "how-to-evaluate",
+        title: "効果を示す情報の読み方",
+        paragraphs: [
+          "効果の説明を受けたら、①対象は人か動物か、②比較群はあるか、③評価された項目（画像・症状・検査値）は何か、④追跡期間はどれくらいか、を確認します。",
+          "「論文がある」ことと「あなたの病気への効果が証明されている」ことは別です。具体の根拠を、説明者に言葉で示してもらいましょう。",
+        ],
+      },
+    ],
+    references: [pmdaApproved, mhlw, jrct, fdaPatient],
+  },
+  {
+    slug: "stem-cell-effect-duration",
+    title: "幹細胞治療の効果はどのくらい続く？",
+    description:
+      "治療効果の持続期間は、対象疾患・評価指標・追跡期間によってしか答えられません。研究で観察された期間と、持続を左右する要因を整理します。",
+    category: "efficacy",
+    updatedAt: "2026-09-25",
+    readingMinutes: 4,
+    status: "draft",
+    illustration: "scope",
+    points: [
+      "効果の持続は治療・疾患・評価指標ごとに異なり、一律の期間はありません。",
+      "多くの臨床研究の追跡期間は数か月〜1年程度で、長期の持続は未検証の場合があります。",
+      "細胞が体内に残る期間と、効果が続く期間は一致しません。",
+    ],
+    sections: [
+      {
+        id: "what-duration-means",
+        title: "「効果が続く」を測る",
+        paragraphs: [
+          "効果の持続を問うには、何を測るか（痛み、機能、画像所見など）と、いつまで観察したかが必要です。投与直後の短期的な変化と、1年後・数年後の状態は別の問題として評価されます。",
+          "研究論文の「効果」は、その研究が観察した期間の中の話です。追跡期間を超えて効果が続くかは、その研究だけでは分かりません。",
+        ],
+      },
+      {
+        id: "study-followup",
+        title: "研究で観察されている期間",
+        paragraphs: [
+          "変形性関節症への関節内投与の試験では、6か月〜1年程度の追跡で疼痛や機能の改善が報告されるものがありますが、その先の持続は試験ごとにまちまちです。全身投与の試験でも、観察期間は数か月単位のものが多く見られます。",
+          "「一生効く」「何年も効く」という説明は、それを裏付ける追跡データがあるか確認が必要です。",
+        ],
+      },
+      {
+        id: "cells-vs-effect",
+        title: "細胞の残存期間と効果の期間は別",
+        paragraphs: [
+          "投与された細胞が数日〜数週間で消失しても、分泌物による作用や免疫への働きかけが残れば、効果は細胞の生存期間より長く続き得ます。逆に、細胞が残っても効果が続くとは限りません。",
+          "「効果はどのくらい続きますか」「その根拠はどの研究ですか」と、説明者に尋ねてみましょう。",
+        ],
+      },
+      {
+        id: "factors",
+        title: "持続を左右するもの",
+        paragraphs: [
+          "疾患の進行、投与量、繰り返し投与の有無、生活習慣などが影響します。効果が薄れた場合の対応や追加投与の条件は、契約前に確認しておきたい点です。",
+        ],
+      },
+    ],
+    references: [jrct, patient],
+  },
+  {
+    slug: "iv-stem-cell-safety",
+    title: "幹細胞を点滴すると危険？静脈投与の安全性を整理する",
+    description:
+      "静脈点滴での幹細胞投与で想定されるリスクと、臨床試験のメタ解析が示す安全性の実態を整理します。",
+    category: "safety",
+    updatedAt: "2026-09-25",
+    readingMinutes: 5,
+    status: "draft",
+    illustration: "cross",
+    points: [
+      "静脈投与には、発熱やアレルギー反応、微小な血管への詰まりなどの懸念が議論されています。",
+      "臨床試験のメタ解析では重大な有害事象との明確な関連は示されていませんが、対象や条件は限定的です。",
+      "製剤の品質管理と、投与時の監視体制が安全性を左右します。",
+    ],
+    sections: [
+      {
+        id: "theoretical-risks",
+        title: "想定されるリスク",
+        paragraphs: [
+          "静脈に細胞を入れるため、細胞が肺などの細い血管に一時的に詰まる可能性、投与に伴う発熱やアレルギー様反応、製剤の汚染に由来するリスクが考慮されます。細胞の大きさや凝集の傾向が安全性に関係するとの検討もあります。",
+          "これらは「必ず起きる」ものではありませんが、起こり得る事象として監視の対象になります。",
+        ],
+      },
+      {
+        id: "meta-analysis",
+        title: "臨床試験の集計が示すもの",
+        paragraphs: [
+          "間葉系間質細胞を用いた臨床試験を集めたメタ解析（SafeCell）では、急性の毒性・臓器合併症・死亡・悪性腫瘍との関連は検出されず、一過性の発熱との関連が示唆されました。ただし対象は臨床試験の参加者で、自由診療のすべての提供をカバーするものではありません。",
+          "メタ解析の結果は「試験で観察された範囲では」という限定つきで読む必要があります。試験外の製剤・施設・投与方法にそのまま当てはめられません。",
+        ],
+      },
+      {
+        id: "quality-matters",
+        title: "安全性を左右するもの",
+        paragraphs: [
+          "細胞の製造・品質管理、投与量と速度、投与中のバイタル監視、異常時の対応体制が安全性を支えます。どのような監視が行われるか、異常時にどこへ連絡・搬送されるかを事前に確認しましょう。",
+        ],
+      },
+      {
+        id: "who-needs-care",
+        title: "特に注意が必要な状態",
+        paragraphs: [
+          "重い心肺疾患や凝固異常、活動性の感染症などがある場合、静脈投与の負担が問題になることがあります。持病や使用中の薬は必ず伝え、適否は医師の個別評価に委ねてください。",
+        ],
+      },
+    ],
+    references: [mhlw, patient, fdaPatient],
+  },
+  {
+    slug: "autologous-safety",
+    title: "自分の細胞なら安全？「自家細胞」でも知っておきたいこと",
+    description:
+      "自分の細胞を使う自家治療の利点と、それでも残るリスク。「自分のものだから安全」で判断しないための視点を整理します。",
+    category: "safety",
+    updatedAt: "2026-09-25",
+    readingMinutes: 4,
+    status: "draft",
+    illustration: "cross",
+    points: [
+      "自家細胞は他人由来の免疫拒絶やドナー感染症のリスクを避けられます。",
+      "採取・培養・投与それぞれの工程に、自家でも残るリスクがあります。",
+      "「自分の細胞だから副作用はない」は成り立ちません。",
+    ],
+    sections: [
+      {
+        id: "advantages",
+        title: "自家細胞の利点",
+        paragraphs: [
+          "自分の細胞を使う自家治療では、他人の細胞に対する免疫拒絶や、ドナー由来の感染症伝播のリスクを原理的に避けられます。免疫抑制剤が不要なケースが多いのも利点です。",
+          "この利点は「他人由来と比べて」という相対的なもので、リスクがゼロになる意味ではありません。",
+        ],
+      },
+      {
+        id: "process-risks",
+        title: "工程ごとに残るリスク",
+        paragraphs: [
+          "脂肪や骨髄の採取は侵襲を伴う手技で、出血・感染・麻酔関連のリスクがあります。培養では外部からの微生物混入や、長期培養に伴う細胞の変化が課題になります。投与では、点滴や注射そのもののリスクと、製剤の品質が問題になります。",
+          "つまり「自分の細胞」はリスクを減らしますが、工程の安全性は別途管理される必要があります。",
+        ],
+      },
+      {
+        id: "what-to-check",
+        title: "確認したいこと",
+        paragraphs: [
+          "採取の方法と侵襲、培養の期間と品質検査、製剤の最終検査（無菌性など）、投与後の経過観察を尋ねましょう。「自家だから安全です」という説明だけでなく、各工程の管理が書面で示されるかがポイントです。",
+        ],
+      },
+    ],
+    references: [mhlw, patient],
+  },
+  {
+    slug: "stem-cell-infection-risk",
+    title: "幹細胞治療で感染症のリスクはある？",
+    description:
+      "細胞製剤の汚染や採取・投与手技に伴う感染リスク、実際に報告された事例と、リスクを下げる管理のポイントを整理します。",
+    category: "safety",
+    updatedAt: "2026-09-25",
+    readingMinutes: 4,
+    status: "draft",
+    illustration: "cross",
+    points: [
+      "細胞製剤は滅菌・無菌管理が前提で、管理が不十分だと感染症につながり得ます。",
+      "海外では汚染した細胞製剤の投与後に細菌感染が起きた事例が報告されています。",
+      "製造施設の管理体制と無菌検査の有無を確認することが大切です。",
+    ],
+    sections: [
+      {
+        id: "routes",
+        title: "感染リスクの経路",
+        paragraphs: [
+          "感染は複数の経路で起こり得ます。採取・注射の手技による創部感染、培養工程での微生物混入、他家製剤でのドナー由来病原体、凍結・輸送・調製時の汚染などです。",
+          "「細胞を使う治療」というより「医療行為＋生体材料の管理」全体に感染リスクが関わる、と捉えるのが正確です。",
+        ],
+      },
+      {
+        id: "reported-cases",
+        title: "実際に報告された事例",
+        paragraphs: [
+          "米国では、汚染された臍帯血由来の細胞製品を受けた患者に細菌感染が起きた事例が、当局の週報（MMWR）で報告されています。細胞・組織製品を介した感染症伝播のリスクは以前から知られており、ドナー検査と製造管理の重要性が指摘されてきました。",
+          "これらは「すべての幹細胞治療が危険」という意味ではなく、管理が不十分な場合に実害が起こり得ることを示しています。",
+        ],
+      },
+      {
+        id: "controls",
+        title: "リスクを下げる管理",
+        paragraphs: [
+          "細胞加工施設の基準、無菌試験・エンドトキシン試験・マイコプラズマ試験などの品質検査、ドナースクリーニング、工程の記録が管理の柱です。どの検査を行い、結果をどう説明するかを尋ねてみましょう。",
+        ],
+      },
+      {
+        id: "questions",
+        title: "施設への確認",
+        paragraphs: [
+          "「細胞はどこで加工されますか」「無菌検査は何をしていますか」「投与後に発熱した場合の連絡先は」——これらは感染リスクを考えるうえで基本的な質問です。",
+        ],
+      },
+    ],
+    references: [mhlw, fdaPatient, patient],
+  },
+  {
+    slug: "stem-cell-contraindications",
+    title: "幹細胞治療を受けられない人はいる？確認したい条件",
+    description:
+      "治療の適否は個別の評価ですが、慎重な検討が必要となる条件や、説明で確認すべき事項を整理します。",
+    category: "safety",
+    updatedAt: "2026-09-25",
+    readingMinutes: 4,
+    status: "draft",
+    illustration: "cross",
+    points: [
+      "治療の適否は疾患・全身状態・薬剤の個別評価で決まります。",
+      "活動性のがん、感染症、妊娠、免疫抑制状態などは特に慎重な評価が必要です。",
+      "「受けられるか」の判断は、提供施設だけでなく主治医とも相談しましょう。",
+    ],
+    sections: [
+      {
+        id: "individual-evaluation",
+        title: "一律の禁忌リストはない",
+        paragraphs: [
+          "幹細胞治療は一つの標準的な治療法ではないため、全治療に共通の禁忌リストはありません。適否は対象疾患、細胞の種類、投与方法、患者の状態で個別に評価されます。",
+          "臨床試験では除外条件（除斥基準）が定められており、そこに挙がる条件は「評価が難しい・リスクが高い可能性がある」状態の目安になります。",
+        ],
+      },
+      {
+        id: "conditions",
+        title: "慎重な評価が必要となる状態の例",
+        paragraphs: [
+          "活動性の悪性腫瘍（幹細胞が増殖に関わるとの懸念）、活動性の感染症、妊娠・授乳、重い心肺機能障害、凝固異常や抗凝固薬の使用、免疫抑制治療中などは、一般的に慎重評価の対象です。",
+          "これらは「絶対に受けられない」の意味ではなく、利益とリスクの比較が特に必要な状態です。自己判断で決めず、情報を共有して医師と相談してください。",
+        ],
+      },
+      {
+        id: "screening",
+        title: "適格性の確認プロセス",
+        paragraphs: [
+          "適切な提供では、採血・画像・既往歴の確認を経て適否が判断されます。検査を十分にせず「誰でも受けられる」と説明する提供は注意が必要です。",
+        ],
+      },
+      {
+        id: "consult",
+        title: "主治医との連携",
+        paragraphs: [
+          "持病のある方は、幹細胞治療の提供施設だけでなく、かかりつけ医や主治医にも相談しましょう。別々の医師が異なる情報を持っていると、適否の判断が難しくなります。",
+        ],
+      },
+    ],
+    references: [mhlw, patient],
+  },
+  {
+    slug: "bone-marrow-vs-adipose",
+    title: "骨髄由来幹細胞と脂肪由来幹細胞の違い",
+    description:
+      "2つの代表的な間葉系幹細胞の由来。採取方法、細胞の性質、研究での比較結果を整理します。",
+    category: "cell-types",
+    updatedAt: "2026-09-25",
+    readingMinutes: 5,
+    status: "draft",
+    illustration: "cells",
+    points: [
+      "骨髄と脂肪は、間葉系幹細胞の代表的な採取源です。",
+      "採取の負担や得られる細胞数は異なりますが、細胞の性質には共通点も多くあります。",
+      "どちらが優れているかは用途・条件次第で、一律の優劣はつきません。",
+    ],
+    sections: [
+      {
+        id: "two-sources",
+        title: "2つの採取源",
+        paragraphs: [
+          "骨髄由来幹細胞は腸骨などから骨髄液を吸引して得られます。脂肪由来幹細胞は皮下脂肪の吸引で得られます。骨髄穿刺は比較的侵襲が大きく、脂肪吸引は量が取りやすい一方で、どちらも採取手技のリスクはあります。",
+          "採取された組織から、接着性の細胞を培養して間葉系幹細胞を得る工程は共通です。",
+        ],
+      },
+      {
+        id: "comparison-studies",
+        title: "性質の比較研究",
+        paragraphs: [
+          "同一ドナーから骨髄と脂肪の両方を採って比較した研究では、表面マーカーや分化能など多くの点で類似が報告される一方、増殖のしやすさや分化の傾向に違いが指摘されることがあります。「どちらが良い」というより、目的と条件で適性が変わるという理解が妥当です。",
+          "これらの比較は主に培養条件での評価で、治療としての優劣を直接示すものではありません。",
+        ],
+      },
+      {
+        id: "clinical-use",
+        title: "使われ方の違い",
+        paragraphs: [
+          "脂肪由来は美容・再生医療の自由診療で使われることが多く、骨髄由来は整形領域や臨床研究での使用例があります。使われ方の違いは、細胞の性質だけでなく採取のしやすさや歴史的経緯も反映しています。",
+        ],
+      },
+      {
+        id: "what-to-ask",
+        title: "説明で確認する点",
+        paragraphs: [
+          "由来が違えば採取の負担や得られる量が変わります。「なぜこの由来を使うのか」「採取に伴う負担とリスクは何か」を確認しましょう。由来名だけで効果の優劣は判断できません。",
+        ],
+      },
+    ],
+    references: [cira, patient],
+  },
+  {
+    slug: "stem-cell-sources",
+    title: "幹細胞はどこから採取する？脂肪・骨髄・臍帯の違い",
+    description:
+      "脂肪・骨髄・臍帯・歯髄など、幹細胞の採取源の違い。採取の負担、細胞の特徴、自家・他家の関係を整理します。",
+    category: "cell-types",
+    updatedAt: "2026-09-25",
+    readingMinutes: 5,
+    status: "draft",
+    illustration: "cells",
+    points: [
+      "幹細胞は脂肪、骨髄、臍帯（へその緒）、歯髄などから採取されます。",
+      "採取源によって、採取の負担と得られる細胞の性質が異なります。",
+      "臍帯由来は出産時の組織を使うため自家では使えず、他家（ドナー由来）になります。",
+    ],
+    sections: [
+      {
+        id: "main-sources",
+        title: "主な採取源",
+        paragraphs: [
+          "脂肪は吸引で採れ量が取りやすいため自由診療で多用されます。骨髄は穿刺吸引で採り、侵襲は大きいですが長い研究歴があります。臍帯（ワルトンゼリー）は出産後の組織を利用するため、採取時の侵襲はありませんがドナー由来になります。歯髄（抜歯した歯）も採取源として研究されています。",
+          "採取源が違えば、細胞の増殖特性や分泌する因子の傾向も変わると報告されています。",
+        ],
+      },
+      {
+        id: "burden",
+        title: "採取の負担の違い",
+        paragraphs: [
+          "自家採取では本人が採取手技（脂肪吸引や骨髄穿刺）を受ける必要があり、負担とリスクが伴います。他家由来では採取時の負担は本人にありませんが、ドナー検査・適合・製造管理が課題になります。",
+          "「採取が簡単」は治療の良さではなく、採取の負担と細胞の適性を分けて考えましょう。",
+        ],
+      },
+      {
+        id: "self-vs-donor",
+        title: "採取源と自家・他家の関係",
+        paragraphs: [
+          "脂肪・骨髄は本人から採れば自家、ドナーから採れば他家になり得ます。臍帯・臍帯血・胎盤由来は実質的に他家です。自分の細胞か他人由来かは、免疫・感染症・準備期間の違いに関わります。",
+        ],
+      },
+      {
+        id: "check",
+        title: "確認ポイント",
+        paragraphs: [
+          "「どこから採った細胞ですか」「自家ですか他家ですか」「採取にどんな負担・リスクがありますか」——これらは治療の説明で最初に確認したい項目です。",
+        ],
+      },
+    ],
+    references: [cira, patient, mhlw],
+  },
+  {
+    slug: "stemcell-exosome-prp",
+    title: "幹細胞・エクソソーム・PRPの違いをわかりやすく解説",
+    description:
+      "再生医療・美容医療で並べて語られる3つの言葉。何を使う治療で、どう違うのかを比較します。",
+    category: "compare-therapies",
+    updatedAt: "2026-09-25",
+    readingMinutes: 5,
+    status: "draft",
+    illustration: "scope",
+    points: [
+      "幹細胞治療は細胞そのもの、エクソソーム治療は細胞の分泌物、PRPは自分の血液中の血小板を使います。",
+      "3つは材料も想定される作用も異なり、同じ「再生医療」という言葉でまとめられがちです。",
+      "何を体に入れるかが分かれば、比較の土台ができます。",
+    ],
+    sections: [
+      {
+        id: "three-therapies",
+        title: "3つの治療は何を使うか",
+        paragraphs: [
+          "幹細胞治療は、採取・培養した生きた細胞を投与します。エクソソーム治療は、細胞が分泌した細胞外小胞（エクソソーム）を含む製剤を使い、細胞そのものは入りません。PRP（多血小板血漿）は自分の血液を遠心分離して血小板を濃縮したもので、細胞培養を伴いません。",
+          "「細胞が入るか」「自分由来か」「培養を経るか」がまず分かれる点です。",
+        ],
+      },
+      {
+        id: "mechanism-difference",
+        title: "想定される作用の違い",
+        paragraphs: [
+          "幹細胞治療は細胞による分泌作用（パラクリン）や組織への関与が想定されます。エクソソーム治療はその分泌成分の一部を使う考え方で、細胞を使わない分管理が異なります。PRPは血小板が放出する成長因子による局所の修復促進を目指します。",
+          "いずれも「傷ついた組織が再生する」という単純な図式ではなく、想定される作用は治療ごとに検証中です。",
+        ],
+      },
+      {
+        id: "evidence-position",
+        title: "エビデンスと制度の位置づけ",
+        paragraphs: [
+          "PRPは整形領域などで比較的研究が進んでいますが、適応ごとの評価は分かれます。幹細胞治療は疾患によって研究段階が異なります。エクソソーム製剤は新しく、規制上の位置づけや品質基準が整備途上の領域です。",
+          "名称の似た治療でも、根拠の蓄積と規制上の扱いは異なります。混同して比較しないことが大切です。",
+        ],
+      },
+      {
+        id: "how-to-compare",
+        title: "比較するときの確認点",
+        paragraphs: [
+          "「何を入れるか」「自分由来か」「どう作られるか」「どんな根拠があるか」「費用とリスクは」——この順で確認すると、異なる治療でも比較の土台が揃います。",
+        ],
+      },
+    ],
+    references: [fdaExosome, patient, mhlw],
+  },
+  {
+    slug: "five-points-before-treatment",
+    title: "幹細胞治療を受ける前に確認したい5つのポイント",
+    description:
+      "治療を検討するとき、説明や契約の前に確認したい5つの基本的なポイントを整理します。",
+    category: "cost-access",
+    updatedAt: "2026-09-25",
+    readingMinutes: 4,
+    status: "draft",
+    illustration: "cross",
+    points: [
+      "対象となる自分の状態に、どの根拠があるかを確認します。",
+      "リスク・代替案・費用・提供体制を、書面で確認します。",
+      "急いで決めず、主治医や第三者にも相談します。",
+    ],
+    sections: [
+      {
+        id: "point-1",
+        title: "1. 自分の状態への根拠",
+        paragraphs: [
+          "「私のこの病気・状態に対して、どんな研究がありますか」。対象疾患、対象者条件、評価された指標を尋ねましょう。他の病気の研究結果は、そのまま自分に当てはまりません。",
+        ],
+      },
+      {
+        id: "point-2",
+        title: "2. リスクと代替案",
+        paragraphs: [
+          "起こり得る副作用・合併症、効果が出ない可能性、そして他の治療の選択肢を聞きます。「この治療をしなかった場合の経過」も比較の材料です。",
+        ],
+      },
+      {
+        id: "point-3",
+        title: "3. 費用の全体像",
+        paragraphs: [
+          "採取・培養・投与・通院・検査を含む総額と、追加費用、中止時・効果がない場合の扱いを書面で確認します。高額であることは効果の証明ではありません。",
+        ],
+      },
+      {
+        id: "point-4",
+        title: "4. 提供体制と届出",
+        paragraphs: [
+          "再生医療等安全性確保法に基づく提供計画の届出状況、細胞の加工施設、緊急時の対応体制を確認します。届出があることは効果の保証ではありませんが、確認の第一歩です。",
+        ],
+      },
+      {
+        id: "point-5",
+        title: "5. 持ち帰って考える",
+        paragraphs: [
+          "説明資料を持ち帰り、主治医や家族、セカンドオピニオンに相談します。その場で契約を急がせる姿勢は、それ自体が注意信号です。",
+        ],
+      },
+    ],
+    references: [mhlw, patient, fdaPatient],
+  },
+  {
+    slug: "paracrine-effect",
+    title: "幹細胞のパラクリン作用とは？再生医療を理解する重要なポイント",
+    description:
+      "幹細胞治療の効果は「細胞が置き換わる」だけではありません。分泌される物質が周囲の細胞に働きかける「パラクリン作用」を解説します。",
+    category: "mechanisms",
+    updatedAt: "2026-09-25",
+    readingMinutes: 5,
+    status: "draft",
+    illustration: "network",
+    points: [
+      "パラクリン作用は、細胞が分泌する物質が近くの細胞に働きかける現象です。",
+      "間葉系幹細胞の作用は、細胞の置き換えより分泌物によるものが主だという考え方が広まっています。",
+      "この理解が、エクソソームなど「細胞を使わない」アプローチの背景にあります。",
+    ],
+    sections: [
+      {
+        id: "what-is-paracrine",
+        title: "パラクリン作用とは",
+        paragraphs: [
+          "細胞はホルモンやサイトカイン、成長因子、細胞外小胞（エクソソームなど）を分泌します。これらの物質が周囲の細胞に働きかけ、炎症を抑えたり修復を促したりする作用がパラクリン作用です。",
+          "ホルモンのような血流で全身に届く「エンドクリン」作用と違い、主に局所の細胞への働きかけを指します。",
+        ],
+      },
+      {
+        id: "shift-in-understanding",
+        title: "考え方の移り変わり",
+        paragraphs: [
+          "初期の研究では、投与した細胞が組織に定着して新しい細胞になることが期待されていました。しかし追跡研究で定着が限定的と分かり、細胞が出す分泌因子による作用（パラクリン仮説）が注目されるようになりました。",
+          "マウスの研究では、肺に捕捉された幹細胞が抗炎症タンパク質を分泌し、遠くの心筋梗塞に影響した例が報告されています。",
+        ],
+      },
+      {
+        id: "what-is-secreted",
+        title: "分泌されるもの",
+        paragraphs: [
+          "成長因子（VEGF、HGFなど）、サイトカイン（IL-6など）、抗炎症物質（TSG-6、PGE2など）、細胞外小胞（エクソソーム）が代表的です。どれが効果に関わるかは、疾患モデルや条件で異なります。",
+          "分泌物の組み合わせは細胞の由来や培養条件で変わるため、一律に「パラクリン作用が効く」とは言えません。",
+        ],
+      },
+      {
+        id: "implications",
+        title: "治療理解への示唆",
+        paragraphs: [
+          "パラクリン作用が主なら、「細胞が残るか」より「何を分泌するか」が重要になります。同時に、細胞を使わず分泌物だけを使う治療（上清、エクソソーム製剤）の根拠にもなります。",
+          "どちらのアプローチも、効果は治療・疾患ごとに検証されるものです。機序の説明は効果の証明ではありません。",
+        ],
+      },
+    ],
+    references: [patient, mhlw],
+  },
+  {
+    slug: "msc-secretome",
+    title: "幹細胞が分泌するサイトカインとエクソソームとは？",
+    description:
+      "幹細胞が放出する分泌物全体「セクレトーム」。サイトカイン、成長因子、エクソソームの役割と、分泌物を使う治療の位置づけを整理します。",
+    category: "mechanisms",
+    updatedAt: "2026-09-25",
+    readingMinutes: 5,
+    status: "draft",
+    illustration: "network",
+    points: [
+      "幹細胞の分泌物全体は「セクレトーム」と呼ばれ、サイトカイン・成長因子・細胞外小胞を含みます。",
+      "エクソソームは、細胞間の情報伝達を担う小さな膜の袋です。",
+      "分泌物を使う治療は細胞治療とは別の評価が必要です。",
+    ],
+    sections: [
+      {
+        id: "secretome",
+        title: "セクレトームとは",
+        paragraphs: [
+          "細胞が分泌する物質全体を指す言葉で、可溶性のタンパク質（サイトカイン、成長因子）と、細胞外小胞（エクソソームなど）を含みます。培養上清はセクレトームを含む液体として使われます。",
+          "セクレトームの組成は、細胞の由来・培養条件・刺激の有無で変わります。同じ「上清」でも中身は一定ではありません。",
+        ],
+      },
+      {
+        id: "cytokines",
+        title: "サイトカイン・成長因子",
+        paragraphs: [
+          "間葉系幹細胞は、血管新生に関わるVEGF、修復に関わるHGF、炎症を調整するIL-6やTGF-β、抗炎症のPGE2・TSG-6などを分泌すると報告されています。これらが周囲の細胞の挙動を変えることが、パラクリン作用の中身です。",
+        ],
+      },
+      {
+        id: "exosomes",
+        title: "エクソソーム",
+        paragraphs: [
+          "エクソソームは細胞が放出する直径数十〜百数十ナノメートルの膜小胞で、miRNAやタンパク質を運びます。細胞間の「荷物の受け渡し」の役割を果たし、受け取った細胞の挙動を変えます。",
+          "細胞そのものを使わない「細胞フリー」治療として研究が進みますが、製剤の標準化・品質管理・規制上の扱いは発展途上です。",
+        ],
+      },
+      {
+        id: "products",
+        title: "分泌物を使う製剤の位置づけ",
+        paragraphs: [
+          "幹細胞培養上清やエクソソーム製剤は美容医療などで提供されていますが、成分の定量・品質の一貫性・根拠となる研究段階は個別に確認が必要です。「幹細胞」が入っていない製剤を幹細胞治療と呼ぶことは適切ではありません。",
+        ],
+      },
+    ],
+    references: [fdaExosome, patient],
+  },
+  {
+    slug: "msc-immunomodulation",
+    title: "MSC（間葉系幹細胞）は免疫にどのように作用する？",
+    description:
+      "間葉系幹細胞が免疫細胞の働きを調整する「免疫調節作用」。その仕組みと、治療への応用として研究されていることを整理します。",
+    category: "mechanisms",
+    updatedAt: "2026-09-25",
+    readingMinutes: 5,
+    status: "draft",
+    illustration: "network",
+    points: [
+      "MSCはT細胞・B細胞・NK細胞・マクロファージなどの働きを調整すると報告されています。",
+      "この性質が、移植免疫や炎症性疾患への応用として研究されています。",
+      "「免疫を抑える」ことは利益とリスクの両面を持ちます。",
+    ],
+    sections: [
+      {
+        id: "immunomodulation",
+        title: "免疫調節作用とは",
+        paragraphs: [
+          "MSCは、過剰な免疫反応を抑える方向に免疫細胞の働きを調整する性質を持つと報告されています。T細胞の増殖を抑えたり、炎症を起こす細胞と制御する細胞のバランスを変えたりする作用が、培養実験や動物実験で示されてきました。",
+          "これは「免疫力を高める」ではなく「免疫のバランスを調整する」という方向の作用です。",
+        ],
+      },
+      {
+        id: "mechanisms",
+        title: "作用の経路",
+        paragraphs: [
+          "PGE2やIDO（インドールアミン2,3-ジオキシゲナーゼ）、TGF-β、細胞外小胞などを介した作用が報告されています。また、投与されたMSCが死んだあと、それを処理する免疫細胞が変化する経路も研究されています。",
+          "作用の強さは細胞の状態・由来・環境の炎症の程度で変わるため、「いつも同じように働く」わけではありません。",
+        ],
+      },
+      {
+        id: "applications",
+        title: "応用として研究されていること",
+        paragraphs: [
+          "移植後の拒絶やGVHD（移植片対宿主病）、炎症性疾患への応用が臨床研究で検討されています。MSCが「他家でも使いやすい」とされる背景の一つが、この免疫との関わり方です。",
+        ],
+      },
+      {
+        id: "caution",
+        title: "「免疫を抑える」の両面",
+        paragraphs: [
+          "免疫を調整する作用は、過剰な炎症を抑える利益になり得る一方、必要な防御を弱める可能性も理論上あります。活動性の感染症や悪性腫瘍がある場合の適否は特に慎重な評価が必要です。",
+        ],
+      },
+    ],
+    references: [patient, mhlw],
+  },
+  {
+    slug: "stem-cell-mechanism",
+    title: "幹細胞治療の作用機序：「分化」と「パラクリン作用」から考える",
+    description:
+      "幹細胞治療がどう効くと考えられているか。「細胞が置き換わる」モデルと「分泌物が働く」モデルの2つの考え方を整理します。",
+    category: "mechanisms",
+    updatedAt: "2026-09-25",
+    readingMinutes: 5,
+    status: "draft",
+    illustration: "network",
+    points: [
+      "幹細胞治療の作用には「細胞の置き換え（分化）」と「分泌物による働きかけ（パラクリン）」の2つの考え方があります。",
+      "現在の研究では、多くの静脈投与ではパラクリン作用が主要な経路と考えられています。",
+      "作用機序の説明は効果の証明ではなく、治療ごとの検証が必要です。",
+    ],
+    sections: [
+      {
+        id: "two-models",
+        title: "2つの作用モデル",
+        paragraphs: [
+          "一つ目は、投与した細胞が組織に定着し、必要な種類の細胞に分化して置き換わる「細胞置換モデル」です。二つ目は、投与した細胞が分泌物を放出し、周囲の細胞や免疫に働きかける「パラクリン（分泌物）モデル」です。",
+          "同じ「幹細胞治療」でも、前提としているモデルによって「効く」という言葉の意味が変わります。",
+        ],
+      },
+      {
+        id: "engraftment",
+        title: "分化・置き換えは実際に起きるか",
+        paragraphs: [
+          "造血幹細胞移植では、定着と再構築が実際の作用です。一方、間葉系幹細胞の静脈投与では、追跡研究で長期の定着・分化が限定的であることが示されています。",
+          "「細胞が変わって組織を作る」説明には、定着の根拠が別途必要です。",
+        ],
+      },
+      {
+        id: "paracrine-model",
+        title: "分泌物モデルが注目される理由",
+        paragraphs: [
+          "定着が限定的でも効果らしきものが観察される研究があったため、分泌物による作用が主要な経路だという理解が広まりました。肺に留まった細胞が遠くの臓器に影響する例も報告されています。",
+          "このモデルでは「細胞がどこに定着するか」より「何を分泌するか・どの信号に反応するか」が問われます。",
+        ],
+      },
+      {
+        id: "how-to-read",
+        title: "「作用機序が分かっている」の読み方",
+        paragraphs: [
+          "機序の説明は「なぜ効きそうか」の仮説で、効果そのものの証明ではありません。機序が示唆されていても、臨床での有効性は別途試験で確かめられます。",
+          "説明を受けたら、その治療がどのモデルを前提にしているか、その根拠はどの研究かを尋ねましょう。",
+        ],
+      },
+    ],
+    references: [patient, mhlw],
+  },
 ];
-
-// Article-specific literature, source mapping and corrections are managed in evidence/*.json.
 export const articles: Article[] = rawArticles.map((article, index) => {
   const evidence = articleEvidence[article.slug];
   const record = reviewSchedule[article.slug];

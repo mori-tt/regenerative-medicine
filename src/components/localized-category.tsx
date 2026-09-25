@@ -7,16 +7,26 @@ import { Breadcrumbs } from "./content";
 
 const categoryDescriptions = {
   en: {
-    basics: "Start with the essential concepts and vocabulary.",
-    "stem-cells": "Learn how iPS cells, ES cells, and somatic stem cells differ.",
-    treatment: "Questions about evidence, safety, cost, and consent.",
-    research: "How to read research results without overestimating them.",
+    "stem-basics": "What stem cells are, how they differ from ordinary cells, and how they relate to regenerative medicine.",
+    "in-body": "Where administered stem cells travel, how they distribute, and how long they persist.",
+    "anti-aging": "What science does and does not show about rejuvenation, skin aging, and cosmetic claims.",
+    efficacy: "How firmly treatment benefits are demonstrated, and how to read the research behind them.",
+    safety: "Side effects, infection, contraindications, and questions to ask before treatment.",
+    "cell-types": "Adipose, bone marrow, and umbilical cord sources; autologous vs donor; how cells are cultured.",
+    "compare-therapies": "The differences between stem cells, exosomes, PRP, and related offerings.",
+    "cost-access": "Fees, insurance, clinic selection, and what an adequate explanation should cover.",
+    mechanisms: "Homing, paracrine signaling, immunomodulation, and how to read the underlying research.",
   },
   zh: {
-    basics: "从基本概念和常用词汇开始。",
-    "stem-cells": "了解 iPS 细胞、ES 细胞和体性干细胞的区别。",
-    treatment: "整理证据、安全性、费用和知情同意相关问题。",
-    research: "学习如何阅读研究结果，避免过度解读。",
+    "stem-basics": "什么是干细胞、与普通细胞的差异，以及与再生医学的关系。",
+    "in-body": "输注的干细胞到达哪里、如何分布、能存续多久。",
+    "anti-aging": "关于年轻化、皮肤老化与美容主张，科学上已知与未知的部分。",
+    efficacy: "治疗获益被验证到何种程度，以及如何解读背后的研究。",
+    safety: "副作用、感染、禁忌，以及治疗前想问的问题。",
+    "cell-types": "脂肪、骨髓、脐带来源的差异；自体与异体；细胞的培养方式。",
+    "compare-therapies": "干细胞、外泌体、PRP 等相关疗法的区别。",
+    "cost-access": "费用、保险、诊所选择，以及充分说明应包含的内容。",
+    mechanisms: "归巢、旁分泌信号、免疫调节，以及底层研究的阅读方法。",
   },
 } as const;
 

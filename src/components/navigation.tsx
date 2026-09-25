@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef } from "react";
 import { categories } from "@/content/categories";
-import { localizedShell, type SiteLocale } from "@/content/locales";
+import { localizedCategoryName, localizedShell, type SiteLocale } from "@/content/locales";
 
 function localeFromPath(pathname: string): SiteLocale | "ja" {
   if (pathname.startsWith("/en")) return "en";
@@ -23,14 +23,7 @@ export function MainNavigation() {
     { href: `${prefix}/articles/`, label: copy?.articles || "記事一覧" },
     ...categories.map((c) => ({
       href: `${prefix}/categories/${c.slug}/`,
-      label: copy
-        ? {
-            basics: copy.basics,
-            "stem-cells": copy.stemCells,
-            treatment: copy.treatment,
-            research: copy.research,
-          }[c.slug]
-        : c.label,
+      label: copy ? localizedCategoryName(locale as SiteLocale, c.slug) : c.label,
     })),
     { href: `${prefix}/about/`, label: copy?.about || "このサイトについて" },
   ];
@@ -140,14 +133,7 @@ export function MobileMenu() {
             href={`${prefix}/categories/${c.slug}/`}
             onClick={close}
           >
-            {copy
-              ? {
-                  basics: copy.basics,
-                  "stem-cells": copy.stemCells,
-                  treatment: copy.treatment,
-                  research: copy.research,
-                }[c.slug]
-              : c.label}
+            {copy ? localizedCategoryName(locale as SiteLocale, c.slug) : c.label}
           </Link>
         ))}
         <Link href={`${prefix}/editorial-policy/`} onClick={close}>

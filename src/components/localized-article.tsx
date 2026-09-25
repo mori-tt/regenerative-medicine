@@ -9,6 +9,7 @@ import { articleBodiesBasicsA } from "@/content/article-bodies-basics-a";
 import { articleBodiesBasicsB } from "@/content/article-bodies-basics-b";
 import { articleBodiesExtraA } from "@/content/article-bodies-extra";
 import { articleBodiesColumns } from "@/content/article-bodies-columns";
+import { articleBodiesStemTopics } from "@/content/article-bodies-stem-topics";
 import { articleImageAlt } from "@/content/article-images";
 import { localizedArticle, localizedCategoryName, type SiteLocale } from "@/content/locales";
 import type { ArticleBodyLocale } from "@/content/article-bodies-research";
@@ -39,6 +40,7 @@ const bodyBySlug: Record<string, { en: ArticleBodyLocale; zh: ArticleBodyLocale 
   ...articleBodiesBasicsB,
   ...articleBodiesExtraA,
   ...articleBodiesColumns,
+  ...articleBodiesStemTopics,
 };
 
 export type LocalizedSection = { title: string; paragraphs: string[]; paragraphReferences?: string[][] };
@@ -136,13 +138,23 @@ export function LocalizedArticleCard({
   const scheduled = articleBuildMode === "all" && Boolean(source.publishAt && source.publishAt > new Date().toISOString().slice(0, 10));
   const typeLabel = source.kind === "column"
     ? locale === "en" ? "Column" : "专栏"
-    : source.category === "treatment"
-      ? locale === "en" ? "Before treatment" : "治疗前确认"
-      : source.category === "research"
-        ? locale === "en" ? "Reading research" : "研究阅读"
-        : source.category === "stem-cells"
-          ? locale === "en" ? "Cells and basics" : "细胞・基础"
-          : locale === "en" ? "The basics" : "基础知识";
+    : source.category === "cost-access"
+      ? locale === "en" ? "Cost & access" : "费用・就诊"
+      : source.category === "safety"
+        ? locale === "en" ? "Safety" : "安全性"
+        : source.category === "efficacy"
+          ? locale === "en" ? "Evidence" : "证据解读"
+          : source.category === "mechanisms"
+            ? locale === "en" ? "Mechanisms" : "机制・研究"
+            : source.category === "compare-therapies"
+              ? locale === "en" ? "Comparisons" : "疗法比较"
+              : source.category === "in-body"
+                ? locale === "en" ? "Inside the body" : "体内动态"
+                : source.category === "anti-aging"
+                  ? locale === "en" ? "Beauty & aging" : "美容・抗衰老"
+                  : source.category === "cell-types"
+                    ? locale === "en" ? "Cell types" : "细胞种类"
+                    : locale === "en" ? "The basics" : "基础知识";
   return (
     <article className={`article-card ${compact ? "compact" : ""}`}>
       <div className="article-card-body">

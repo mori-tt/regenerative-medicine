@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { localizedHome, type SiteLocale } from "@/content/locales";
-import { articles, visibleArticles } from "@/content/articles";
+import { articles, categories, visibleArticles } from "@/content/articles";
 import { LocalizedArticleCard } from "./localized-article";
 import { CellArt, Icon } from "./visuals";
 
@@ -8,7 +8,7 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
   const copy = localizedHome[locale];
   const en = locale === "en";
   const featuredHref = `/${locale}/guide/`;
-  const categoryLinks = ["basics", "stem-cells", "treatment", "research"];
+  const categoryLinks = categories.map((c) => c.slug);
   return (
     <div lang={en ? "en" : "zh-CN"} className="localized-page">
       <section className="hero container">
@@ -58,17 +58,16 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
           {copy.categories.map(([label, description], index) => (
             <Link
               href={`/${locale}/categories/${categoryLinks[index]}/`}
-              className={`category-card ${["green", "blue", "sand", "purple"][index]}`}
+              className={`category-card ${categories[index].color}`}
               key={label}
             >
               <div className="category-top">
                 <span className="category-icon">
-                  <Icon
-                    name={["cells", "network", "cross", "scope"][index]}
-                    size={31}
-                  />
+                  <Icon name={categories[index].icon} size={31} />
                 </span>
-                <span className="category-number">0{index + 1}</span>
+                <span className="category-number">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
               </div>
               <h3>{label}</h3>
               <p>{description}</p>

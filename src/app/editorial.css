@@ -84,6 +84,11 @@ h1, h2 { text-wrap: balance; }
 .article-card .category-label.blue { background: #eaf2f5; color: #31596a; }
 .article-card .category-label.sand { background: #f4f0e4; color: #71562e; }
 .article-card .category-label.purple { background: #f0edf5; color: #635075; }
+.article-card .category-label.teal { background: #e7f1ee; color: #35665b; }
+.article-card .category-label.rose { background: #f6ecea; color: #8a554c; }
+.article-card .category-label.amber { background: #f6efdd; color: #7c6134; }
+.article-card .category-label.slate { background: #ebeef2; color: #4a5a70; }
+.article-card .category-label.olive { background: #edf1df; color: #5b683d; }
 .article-card .card-kicker { display: inline; font-size: 11px; font-weight: 500; letter-spacing: .03em; color: var(--muted); margin: 0; }
 .article-card .article-meta, .listing-grid .article-meta { font-size: 11px; line-height: 1.7; gap: 5px 14px; flex-wrap: wrap; justify-content: flex-start; margin-top: 16px; color: var(--muted); }
 .article-card h3, .listing-grid .article-card h3 { font-family: var(--heading); font-size: 18px; line-height: 1.8; font-weight: 500; letter-spacing: .01em; margin-top: 12px; overflow-wrap: anywhere; }

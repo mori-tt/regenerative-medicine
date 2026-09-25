@@ -1,15 +1,32 @@
 export type SiteLocale = "en" | "zh";
 
 const categoryNamesZh = {
-  basics: "再生医学基础",
-  "stem-cells": "认识干细胞",
-  treatment: "考虑治疗时",
-  research: "研究与新闻",
+  "stem-basics": "干细胞基础",
+  "in-body": "体内的动向",
+  "anti-aging": "美容・抗衰老",
+  efficacy: "疗效与证据",
+  safety: "安全性与风险",
+  "cell-types": "干细胞的种类",
+  "compare-therapies": "疗法比较",
+  "cost-access": "费用与就诊准备",
+  mechanisms: "作用机制与研究",
+} as const;
+
+const categoryNamesEn = {
+  "stem-basics": "Stem cell basics",
+  "in-body": "Inside the body",
+  "anti-aging": "Beauty & aging",
+  efficacy: "Evidence & benefit",
+  safety: "Safety & risks",
+  "cell-types": "Stem cell types",
+  "compare-therapies": "Comparing therapies",
+  "cost-access": "Cost & access",
+  mechanisms: "Mechanisms & research",
 } as const;
 
 export function localizedCategoryName(locale: SiteLocale, slug: keyof typeof categoryNamesZh): string {
   if (locale === "en") {
-    return { basics: "The basics", "stem-cells": "Stem cells", treatment: "Considering treatment", research: "Research & news" }[slug];
+    return categoryNamesEn[slug];
   }
   return categoryNamesZh[slug];
 }
@@ -20,14 +37,14 @@ export const localizedHome = {
     title: ["Regenerative", "medicine,", "made clearer."],
     intro: "Clear, careful information about regenerative medicine and stem cells—what is known, what is still being studied, and what to ask your doctor.",
     start: "Start with the basics", footnote: "Understanding comes before making a medical decision.", visual: "Abstract cell illustration", floating: "Complex ideas, explained clearly.", floatingSmall: "A reader-first guide to regenerative medicine", topics: "Explore topics", topicTitle: "Learn at your own pace.", topicCaption: "Choose a subject to begin.", guideEyebrow: "START HERE", guideTitle: "What is regenerative medicine?", guideBody: "A careful introduction to the difference between research, approved products, and individual treatment decisions.", guideLink: "Read the introduction", journal: "Build your understanding step by step.", promise: "Evidence, limitations, and questions to ask are shown together.", disclaimer: "This site provides general information, not diagnosis or treatment. Please consult a qualified healthcare professional for personal medical decisions.",
-    categories: [["The basics", "Start with the essential concepts and vocabulary."], ["Stem cells", "Learn how iPS cells, ES cells, and somatic stem cells differ."], ["Considering treatment", "Questions about evidence, safety, cost, and consent."], ["Research & news", "How to read research results without overestimating them."]],
+    categories: [["Stem cell basics", "What stem cells are and how they differ from ordinary cells."], ["Inside the body", "Where infused stem cells go and what they do."], ["Beauty & aging", "Separating anti-aging hopes from current evidence."], ["Evidence & benefit", "How firmly stem-cell treatment effects are demonstrated."], ["Safety & risks", "Side effects, infection, and who should avoid treatment."], ["Stem cell types", "Adipose, bone marrow, umbilical cord; autologous vs donor."], ["Comparing therapies", "Stem cells, exosomes, and PRP side by side."], ["Cost & access", "Fees, insurance, clinics, and questions to ask."], ["Mechanisms & research", "Homing, paracrine signaling, and how to read studies."]],
   },
   zh: {
     eyebrow: "KNOWLEDGE FOR YOUR NEXT STEP",
     title: ["读懂再生医学，", "从理解", "开始。"],
     intro: "用清晰、谨慎的方式介绍再生医学与干细胞：哪些已经明确，哪些仍在研究，以及就诊时可以询问什么。",
     start: "从基础开始", footnote: "充分了解，是做出医疗决定的第一步。", visual: "细胞主题的抽象插画", floating: "把复杂内容讲清楚。", floatingSmall: "以读者为中心的再生医学指南", topics: "探索主题", topicTitle: "按照自己的节奏学习。", topicCaption: "选择一个主题开始阅读。", guideEyebrow: "从这里开始", guideTitle: "什么是再生医学？", guideBody: "介绍研究、已批准产品和个人治疗决定之间的重要区别。", guideLink: "阅读入门文章", journal: "一步一步加深理解。", promise: "同时说明证据、局限性以及可以向医生询问的问题。", disclaimer: "本网站提供一般性信息，不构成诊断或治疗建议。涉及个人医疗决定时，请咨询有资质的医疗专业人员。",
-    categories: [["再生医学基础", "从基本概念和常用词汇开始。"], ["认识干细胞", "了解 iPS 细胞、ES 细胞和体性干细胞的区别。"], ["考虑治疗时", "整理证据、安全性、费用和知情同意相关问题。"], ["研究与新闻", "学习如何阅读研究结果，避免过度解读。"]],
+    categories: [["干细胞基础", "什么是干细胞，与普通细胞及再生医学的关系。"], ["体内的动向", "输注的干细胞去往何处、如何分布与发挥作用。"], ["美容・抗衰老", "区分对年轻化与皮肤的期待和目前明确的科学事实。"], ["疗效与证据", "治疗有效性被科学验证到什么程度，如何解读研究。"], ["安全性与风险", "副作用、感染、禁忌等接受治疗前需要了解的风险。"], ["干细胞的种类", "比较脂肪、骨髓、脐带来源，以及自体与异体、采集培养。"], ["疗法比较", "整理干细胞、外泌体、PRP等易混淆疗法的区别。"], ["费用与就诊准备", "费用、保险、诊所选择与说明听取方式等实用信息。"], ["作用机制与研究", "归巢、旁分泌作用、免疫作用及研究解读方法。"]],
   },
 } as const;
 
