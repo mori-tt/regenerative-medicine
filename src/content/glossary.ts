@@ -135,6 +135,58 @@ export const glossaryGroups: GlossaryGroup[] = [
         ja: ["樹状細胞", "異物の情報をT細胞に伝える免疫細胞。免疫応答の司令塔に相当します。"],
         en: ["Dendritic cell", "An immune cell that presents foreign material to T cells — the command center of immune responses."],
         zh: ["树突状细胞", "向T细胞呈递异物信息的免疫细胞，相当于免疫反应的指挥中枢。"],
+      },
+      {
+        ja: ["白血球", "免疫を担う血液細胞の総称。リンパ球・マクロファージ・顆粒球などを含みます。"],
+        en: ["White blood cell", "Blood cells responsible for immunity, including lymphocytes, macrophages, and granulocytes."],
+        zh: ["白细胞", "负责免疫的血细胞总称，包括淋巴细胞、巨噬细胞、粒细胞等。"],
+      },
+      {
+        ja: ["リンパ球", "白血球の一種。T細胞・B細胞・NK細胞を含み、獲得免疫の中核です。"],
+        en: ["Lymphocyte", "A white blood cell type including T, B, and NK cells — central to adaptive immunity."],
+        zh: ["淋巴细胞", "白细胞的一种，包括T细胞、B细胞、NK细胞，是获得性免疫的核心。"],
+      },
+      {
+        ja: ["B細胞", "抗体を作るリンパ球。体液性免疫を担います。"],
+        en: ["B cell", "A lymphocyte that produces antibodies — central to humoral immunity."],
+        zh: ["B细胞", "产生抗体的淋巴细胞，承担体液免疫。"],
+      },
+      {
+        ja: ["NK細胞", "ウイルス感染細胞やがん細胞を事前の感作なしに攻撃するリンパ球。"],
+        en: ["NK cell", "A lymphocyte that attacks virus-infected or cancerous cells without prior sensitization."],
+        zh: ["NK细胞（自然杀伤细胞）", "无需事先致敏即可攻击病毒感染细胞或癌细胞的淋巴细胞。"],
+      },
+      {
+        ja: ["上皮細胞", "皮膚や粘膜、臓器の表面を覆う細胞。角膜上皮や腸上皮などがあります。"],
+        en: ["Epithelial cell", "Cells lining the skin, mucosa, and organ surfaces, such as corneal and intestinal epithelium."],
+        zh: ["上皮细胞", "覆盖皮肤、黏膜和器官表面的细胞，如角膜上皮和肠上皮。"],
+      },
+      {
+        ja: ["血管内皮細胞", "血管の内側を覆う細胞。血液との接触面を作り、透過や凝固を調節します。"],
+        en: ["Endothelial cell", "Cells lining the inside of blood vessels, regulating permeability and coagulation."],
+        zh: ["血管内皮细胞", "覆盖血管内壁的细胞，调节通透性和凝血。"],
+      },
+      {
+        ja: ["骨芽細胞", "骨を作る細胞。骨の形成と修復に関わります。"],
+        en: ["Osteoblast", "The bone-forming cell, involved in bone formation and repair."],
+        zh: ["成骨细胞", "制造骨的细胞，参与骨的形成和修复。"],
+      },
+      {
+        ja: ["軟骨細胞", "軟骨を構成し、軟骨基質を作る細胞。"],
+        en: ["Chondrocyte", "The cell that builds and maintains cartilage matrix."],
+        zh: ["软骨细胞", "构成软骨并生成软骨基质的细胞。"],
+        link: "cartilage-repair-deep",
+      },
+      {
+        ja: ["筋衛星細胞", "骨格筋にある幹細胞。筋肉の修復に関わります。"],
+        en: ["Satellite cell", "A stem cell in skeletal muscle involved in muscle repair."],
+        zh: ["肌卫星细胞", "骨骼肌中的干细胞，参与肌肉修复。"],
+        link: "satellite-cells",
+      },
+      {
+        ja: ["造血前駆細胞", "造血幹細胞から各種血液細胞へ向かう途中段階の細胞。"],
+        en: ["Hematopoietic progenitor cell", "An intermediate cell on the way from hematopoietic stem cells to mature blood cells."],
+        zh: ["造血祖细胞", "由造血干细胞走向各种成熟血细胞的中间阶段细胞。"],
       }
     ],
   },
@@ -241,6 +293,56 @@ export const glossaryGroups: GlossaryGroup[] = [
         en: ["Culture supernatant", "The liquid fraction after cell culture — contains cell-secreted factors and is studied as a source for exosome preparations."],
         zh: ["培养上清", "细胞培养后的液体部分，含有细胞分泌成分，正在研究用作外泌体制剂的原料。"],
         link: "msc-secretome",
+      },
+      {
+        ja: ["非対称分裂", "幹細胞が分裂し、片方は幹細胞のまま、もう片方は分化に進む分裂様式。"],
+        en: ["Asymmetric division", "A stem-cell division producing one stem cell and one differentiating cell."],
+        zh: ["不对称分裂", "干细胞分裂为一个干细胞和一个走向分化的细胞的方式。"],
+      },
+      {
+        ja: ["継代（パッセージ）", "培養した細胞を新しい容器に移して培養を続ける操作。回数を重ねると性質が変わることがあります。"],
+        en: ["Passage (subculture)", "Transferring cultured cells to a new vessel to continue growth; properties can drift over passages."],
+        zh: ["传代（继代培养）", "将培养的细胞移到新容器继续培养的操作，传代次数增加可能导致性质变化。"],
+      },
+      {
+        ja: ["凍結保存", "細胞を低温で保存し、活性を保っておく技術。細胞バンクの基本です。"],
+        en: ["Cryopreservation", "Storing cells at low temperature to preserve viability — the basis of cell banking."],
+        zh: ["冷冻保存", "低温保存细胞以保持活性的技术，是细胞库的基础。"],
+        link: "cell-banks-guide",
+      },
+      {
+        ja: ["培地", "細胞を培養するための栄養液。成分や由来の違いが品質管理の対象です。"],
+        en: ["Culture medium", "The nutrient solution used to grow cells; its composition and origin are quality-control matters."],
+        zh: ["培养基", "培养细胞用的营养液，其成分和来源是质量管理的对象。"],
+        link: "culture-media",
+      },
+      {
+        ja: ["無血清培養", "動物由来の血清を使わない培養方法。安全性と再現性の面で検討されます。"],
+        en: ["Serum-free culture", "Culture without animal-derived serum, considered for safety and reproducibility."],
+        zh: ["无血清培养", "不使用动物血清的培养方法，在安全性和再现性方面受到关注。"],
+        link: "culture-media",
+      },
+      {
+        ja: ["細胞外小胞（EV）", "細胞が分泌する膜で包まれた小胞の総称。エクソソームなどを含みます。"],
+        en: ["Extracellular vesicle (EV)", "Membrane-bound vesicles secreted by cells, including exosomes."],
+        zh: ["细胞外囊泡（EV）", "细胞分泌的膜性小囊泡总称，包括外泌体。"],
+        link: "exosomes-notes",
+      },
+      {
+        ja: ["セクレトーム", "細胞が分泌する物質の全体。サイトカイン・成長因子・細胞外小胞を含みます。"],
+        en: ["Secretome", "The full set of substances a cell secretes — cytokines, growth factors, and vesicles."],
+        zh: ["分泌组", "细胞分泌物质的总体，包括细胞因子、生长因子和细胞外囊泡。"],
+        link: "msc-secretome",
+      },
+      {
+        ja: ["免疫原性", "移植した細胞が受け手の免疫反応を起こしやすい性質。他家移植で評価されます。"],
+        en: ["Immunogenicity", "How likely administered cells are to trigger the recipient's immune response — assessed for donor-derived cells."],
+        zh: ["免疫原性", "移植细胞引起受者免疫反应的可能性，异体移植中需评估。"],
+      },
+      {
+        ja: ["免疫回避", "細胞や組織を免疫反応から逃れさせる工夫。ゲノム編集による調整が研究されています。"],
+        en: ["Immune evasion", "Strategies to help cells or tissues escape immune attack; genome-editing approaches are under study."],
+        zh: ["免疫逃逸", "使细胞或组织躲避免疫反应的技术，正在研究基因编辑等调整方法。"],
       }
     ],
   },
@@ -336,6 +438,71 @@ export const glossaryGroups: GlossaryGroup[] = [
         en: ["Long-term registry follow-up", "Collecting safety data over years after treatment — increasingly important for newer therapies."],
         zh: ["长期随访登记", "治疗后长期收集数据以确认安全性的机制，对新型治疗尤为重要。"],
         link: "case-reports-registries",
+      },
+      {
+        ja: ["動脈投与", "カテーテルなどで動脈から細胞を送る方法。標的臓器への到達を目指しますが侵襲が伴います。"],
+        en: ["Intra-arterial administration", "Delivering cells via catheter into an artery to reach a target organ; more invasive."],
+        zh: ["动脉给药", "经导管从动脉输送细胞以到达靶器官的方法，创伤较大。"],
+        link: "stem-cell-administration-routes",
+      },
+      {
+        ja: ["局所投与", "皮膚・関節・組織など目的の場所へ直接注射する方法。"],
+        en: ["Local administration", "Injecting cells directly into the target site such as skin, joint, or tissue."],
+        zh: ["局部给药", "直接向皮肤、关节、组织等目标部位注射的方法。"],
+        link: "stem-cell-administration-routes",
+      },
+      {
+        ja: ["点滴（静脈内輸液）", "静脈から時間をかけて液を投与する方法。細胞製剤の投与にも使われます。"],
+        en: ["IV drip", "Slow intravenous delivery of fluid — also used for cell preparations."],
+        zh: ["输液（静脉输液）", "经静脉缓慢输注液体的方法，也用于细胞制剂的给药。"],
+      },
+      {
+        ja: ["有害事象", "治療中に起きた望ましくない出来事。治療との因果関係があるかは別に検討します。"],
+        en: ["Adverse event", "An unwanted occurrence during treatment; whether it was caused by the treatment is assessed separately."],
+        zh: ["不良事件", "治疗过程中发生的不良事件，是否与治疗相关需另行评估。"],
+      },
+      {
+        ja: ["副作用", "治療と因果関係があると考えられる望ましくない作用。"],
+        en: ["Side effect", "An unwanted effect considered causally related to the treatment."],
+        zh: ["副作用", "被认为与治疗有因果关系的不良作用。"],
+      },
+      {
+        ja: ["合併症", "病気や治療に伴って起きる別の病気や状態。"],
+        en: ["Complication", "An additional condition arising from a disease or its treatment."],
+        zh: ["并发症", "伴随疾病或治疗发生的其他疾病或状态。"],
+      },
+      {
+        ja: ["リスクベネフィット", "期待される利益と起こり得る害を比較して考えること。医療判断の基本です。"],
+        en: ["Risk-benefit", "Weighing expected benefits against possible harms — the basis of medical decisions."],
+        zh: ["风险-获益比", "比较预期获益与可能的伤害，是医疗判断的基础。"],
+      },
+      {
+        ja: ["微細肺塞栓", "静脈投与された細胞などが肺の毛細血管を一時的に詰まらせること。投与量や速度と関係します。"],
+        en: ["Micro pulmonary embolism", "Temporary blockage of lung capillaries by administered cells; related to dose and infusion speed."],
+        zh: ["微小肺栓塞", "静脉给药的细胞等暂时堵塞肺毛细血管，与剂量和输注速度相关。"],
+        link: "iv-stem-cell-safety",
+      },
+      {
+        ja: ["異所性組織形成", "投与した細胞が意図しない場所で組織を形成してしまうこと。安全性評価の対象です。"],
+        en: ["Ectopic tissue formation", "Administered cells forming tissue in unintended locations — a focus of safety evaluation."],
+        zh: ["异位组织形成", "给药的细胞在非预期部位形成组织，是安全性评估的对象。"],
+      },
+      {
+        ja: ["コールドチェーン", "細胞・製剤を低温で輸送・保存する一貫した管理体制。"],
+        en: ["Cold chain", "A continuous low-temperature system for transporting and storing cells and products."],
+        zh: ["冷链", "对细胞和制剂进行低温运输与保存的一体化管理体制。"],
+        link: "cell-banks-guide",
+      },
+      {
+        ja: ["HLA（白血球型）", "免疫が「自己」と「非自己」を見分ける目印になる分子。移植の適合性に関わります。"],
+        en: ["HLA", "Molecules the immune system uses to distinguish self from non-self — central to transplant matching."],
+        zh: ["HLA（白细胞抗原）", "免疫区分自身与异物的标志性分子，与移植配型相关。"],
+        link: "self-vs-donor-cells",
+      },
+      {
+        ja: ["アナフィラキシー", "重い急性アレルギー反応。投与直後の観察体制が求められる理由の一つです。"],
+        en: ["Anaphylaxis", "A severe acute allergic reaction — one reason observation after administration is required."],
+        zh: ["过敏性休克", "严重的急性过敏反应，是给药后需要观察的原因之一。"],
       }
     ],
   },
@@ -478,6 +645,64 @@ export const glossaryGroups: GlossaryGroup[] = [
         en: ["Consumer affairs center", "A public contact point for disputes over private care contracts and advertising (via the 188 consumer hotline)."],
         zh: ["消费者生活中心", "处理自费诊疗合同与宣传等消费纠纷的咨询窗口，可拨打188消费者热线。"],
         link: "trouble-help",
+      },
+      {
+        ja: ["標準治療", "エビデンスに基づき、現時点で最良と認められている治療。研究段階の治療との比較対象です。"],
+        en: ["Standard of care", "The treatment currently recognized as best based on evidence — the benchmark for research-stage therapies."],
+        zh: ["标准治疗", "基于证据、当前被认为是最佳的治疗，是与研究阶段治疗比较的基准。"],
+      },
+      {
+        ja: ["診療ガイドライン", "学会などが推奨する診断・治療の指針。エビデンスの強さを踏まえて作られます。"],
+        en: ["Clinical practice guideline", "Recommendations on diagnosis and treatment issued by societies, based on evidence strength."],
+        zh: ["诊疗指南", "学会等机构发布的诊断与治疗方针，基于证据强度制定。"],
+      },
+      {
+        ja: ["混合診療", "保険診療と自由診療を併せて行うこと。原則として制限があり、先進医療などの例外があります。"],
+        en: ["Mixed care", "Combining insured and uninsured care — generally restricted, with exceptions such as advanced medical care."],
+        zh: ["混合诊疗", "医保诊疗与自费诊疗并用，原则上受限制，先进医疗等为例外。"],
+        link: "cost-and-insurance",
+      },
+      {
+        ja: ["第2種・第3種再生医療", "再生医療等安全性確保法でのリスク区分。第1種ほどリスクが高く、審査の厳しさが異なります。"],
+        en: ["Class II / Class III regenerative medicine", "Risk classes under Japan's safety act — higher classes face stricter review."],
+        zh: ["第二类・第三类再生医疗", "《再生医疗等安全性确保法》的风险分级，第一类风险最高，审查严格度不同。"],
+        ref: { title: "厚生労働省「再生医療等の安全性の確保等に関する法律」", url: "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/iryou/saisei/" },
+      },
+      {
+        ja: ["研究倫理指針", "人を対象とする医学研究に従うべき倫理上のルール。国や機関が定めます。"],
+        en: ["Ethical guidelines for research", "Rules that medical research involving people must follow, set by national bodies and institutions."],
+        zh: ["研究伦理指南", "以人为对象的医学研究应遵守的伦理规则，由国家或机构制定。"],
+      },
+      {
+        ja: ["かかりつけ医", "身近な症状で最初に相談する主治医。新しい治療の検討時にも相談相手になります。"],
+        en: ["Primary care physician", "The family doctor consulted first for health concerns — also a sounding board for new treatments."],
+        zh: ["家庭医生（主治医生）", "日常症状首先咨询的医生，也可在考虑新治疗时作为商量对象。"],
+      },
+      {
+        ja: ["契約書面", "自由診療では費用・内容・リスク・解除条件を書面で交わすことが重要です。"],
+        en: ["Written contract", "For private care, fees, content, risks, and cancellation terms should be documented in writing."],
+        zh: ["书面合同", "自费诊疗时，费用、内容、风险及解约条件以书面确认很重要。"],
+        link: "jibihi-contract",
+      },
+      {
+        ja: ["医師法", "医師の免許や職務を定める法律。医師でない者が医業を行うことは原則禁止です。"],
+        en: ["Medical Practitioners' Act", "The law governing physician licensing and duties; practicing medicine without a license is prohibited."],
+        zh: ["医师法", "规定医师执照与职务的法律，非医师从医原则上被禁止。"],
+      },
+      {
+        ja: ["オフラベル使用", "承認された適応以外に医薬品等を使うこと。個別の判断と情報提供が求められます。"],
+        en: ["Off-label use", "Using an approved drug outside its authorized indications, requiring careful judgment and disclosure."],
+        zh: ["超说明书用药", "将获批药品用于批准适应证之外的用途，需要谨慎判断和告知。"],
+      },
+      {
+        ja: ["消費者庁", "消費者を守る行政機関。景品表示法による広告の規制などを所管します。"],
+        en: ["Consumer Affairs Agency", "The agency protecting consumers, overseeing advertising rules under the misleading-representations law."],
+        zh: ["消费者厅", "保护消费者的行政机关，负责依据《景品表示法》等规制广告。"],
+      },
+      {
+        ja: ["個人情報保護法", "個人の情報を適切に取り扱うための法律。医療情報は要配慮個人情報です。"],
+        en: ["Act on the Protection of Personal Information", "Japan's privacy law; medical information is treated as specially protected data."],
+        zh: ["个人信息保护法", "规范个人信息处理的日本法律，医疗信息属于需特殊保护的信息。"],
       }
     ],
   },
@@ -577,6 +802,85 @@ export const glossaryGroups: GlossaryGroup[] = [
         en: ["Relative vs absolute risk", "Relative risk is a ratio; absolute risk is the real difference in rates. Ads tend to highlight relative figures."],
         zh: ["相对风险与绝对风险", "相对风险是倍数，绝对风险是实际比例的差，广告往往强调相对数值。"],
         link: "reading-research-news",
+      },
+      {
+        ja: ["二重盲検", "参加者も医療者も割付を知らない状態での試験。バイアスを最も減らせる設計の一つです。"],
+        en: ["Double-blind trial", "A trial where neither participants nor clinicians know the assignment — minimizes bias."],
+        zh: ["双盲试验", "受试者和医务人员均不知分组的试验，可最大程度减少偏倚。"],
+        link: "randomized-trials",
+      },
+      {
+        ja: ["オープンラベル", "割付を参加者にも医療者にも公開する試験。主観的な評価ではバイアスに注意します。"],
+        en: ["Open-label trial", "A trial where assignment is known to all — subjective outcomes need care."],
+        zh: ["开放标签试验", "受试者和医务人员都知道分组的试验，主观评价需注意偏倚。"],
+      },
+      {
+        ja: ["対照群（コントロール群）", "比較の基準になる群。標準治療やプラセボを割り当てます。"],
+        en: ["Control group", "The comparison group — receiving standard care or placebo."],
+        zh: ["对照组", "作为比较基准的组，接受标准治疗或安慰剂。"],
+      },
+      {
+        ja: ["主要評価項目", "試験が最初から測ると決めた主な指標。結果の解釈の土台です。"],
+        en: ["Primary endpoint", "The main outcome a trial set out to measure — the basis for interpreting results."],
+        zh: ["主要终点指标", "试验事先确定的主要评价指标，是解读结果的基础。"],
+      },
+      {
+        ja: ["交絡因子", "治療と結果の両方に影響する第三の要因。観察研究では調整が必要です。"],
+        en: ["Confounder", "A third factor affecting both treatment and outcome — must be adjusted in observational studies."],
+        zh: ["混杂因素", "同时影响治疗和结果的第三因素，观察性研究需要校正。"],
+      },
+      {
+        ja: ["出版バイアス", "良い結果の研究ほど発表されやすい傾向。エビデンス全体を見る際の注意点です。"],
+        en: ["Publication bias", "The tendency for positive results to be published more often — a caveat when judging the evidence."],
+        zh: ["发表偏倚", "阳性结果的研究更容易发表的倾向，评估整体证据时需注意。"],
+      },
+      {
+        ja: ["追試（再現性）", "別の研究者が同じ条件で確かめること。一つの結果だけで断定しないための考え方です。"],
+        en: ["Replication", "Independent researchers repeating a study — the reason a single result should not be treated as final."],
+        zh: ["重复验证（可重复性）", "由其他研究者在相同条件下确认结果，避免仅凭单一研究下结论。"],
+      },
+      {
+        ja: ["p値", "差が偶然に起きる確率を見る指標。小さいほど偶然では説明しにくいです。"],
+        en: ["P-value", "A measure of how likely a difference is by chance alone — smaller means less easily explained by chance."],
+        zh: ["P值", "衡量差异由偶然导致的概率指标，越小越难以偶然解释。"],
+        link: "statistics-intro",
+      },
+      {
+        ja: ["症例シリーズ", "複数の症例をまとめた報告。比較群がないため効果の断定はできません。"],
+        en: ["Case series", "A report collecting multiple cases; without a comparison group, efficacy cannot be concluded."],
+        zh: ["病例系列", "汇总多个病例的报告，因无对照组不能断定疗效。"],
+      },
+      {
+        ja: ["プレプリント", "査読前に公開される論文原稿。情報は速い一方、内容は未確定です。"],
+        en: ["Preprint", "A paper posted before peer review — fast but not yet validated."],
+        zh: ["预印本", "未经同行评审即公开的论文稿，传播快但内容未定稿。"],
+      },
+      {
+        ja: ["重篤な有害事象（SAE）", "死亡・入院・重い障害などを伴う有害事象。臨床研究で特に注目されます。"],
+        en: ["Serious adverse event (SAE)", "An adverse event involving death, hospitalization, or serious disability — closely tracked in trials."],
+        zh: ["严重不良事件（SAE）", "伴有死亡、住院或严重残疾的不良事件，在临床研究中受到重点关注。"],
+      },
+      {
+        ja: ["ITT解析", "割り付けられた群のまま全員を含めて解析する方法。途中脱落の影響を抑えます。"],
+        en: ["Intention-to-treat (ITT) analysis", "Analyzing all participants in their assigned groups, reducing dropout bias."],
+        zh: ["意向性治疗分析（ITT）", "按分配组别纳入全部受试者的分析方法，可减少脱落偏倚。"],
+      },
+      {
+        ja: ["第I相・II相・III相試験", "治験の段階。I相は安全性、II相は有効性の兆し、III相は大規模な比較を見ます。"],
+        en: ["Phase I/II/III trials", "Trial stages — I looks at safety, II at signs of efficacy, III at large-scale comparison."],
+        zh: ["I期、II期、III期试验", "临床试验阶段，I期看安全性、II期看有效性迹象、III期进行大规模比较。"],
+        link: "stages-of-research",
+      },
+      {
+        ja: ["システマティックレビュー", "定めた方法で複数の研究を集めて評価するレビュー。メタ解析を伴うこともあります。"],
+        en: ["Systematic review", "A structured review collecting multiple studies by a defined method, sometimes with meta-analysis."],
+        zh: ["系统综述", "按既定方法汇总多项研究进行评价，可附带荟萃分析。"],
+      },
+      {
+        ja: ["参加者の権利", "研究参加は自由意思・いつでも辞退可能・情報へのアクセスなどの権利があります。"],
+        en: ["Participants' rights", "Research participation is voluntary, can be withdrawn anytime, and comes with rights to information."],
+        zh: ["受试者权利", "研究参与出于自愿、可随时退出，并享有获取信息等权利。"],
+        link: "clinical-trials-guide",
       }
     ],
   },
@@ -672,6 +976,139 @@ export const glossaryGroups: GlossaryGroup[] = [
         ja: ["受容体", "細胞表面で特定の物質を受け取る構造。細胞間の情報伝達の入口です。"],
         en: ["Receptor", "A structure on the cell surface that binds specific molecules — the entry point of cell signaling."],
         zh: ["受体", "细胞表面接收特定物质的结构，是细胞间信息传递的入口。"],
+      },
+      {
+        ja: ["骨髄", "骨の内部にある造血の場。造血幹細胞や間葉系幹細胞が存在します。"],
+        en: ["Bone marrow", "The blood-forming tissue inside bones, home to hematopoietic and mesenchymal stem cells."],
+        zh: ["骨髓", "骨内部的造血场所，存在造血干细胞和间充质干细胞。"],
+        link: "bone-marrow-vs-adipose",
+      },
+      {
+        ja: ["臍帯（へその緒）", "胎児と胎盤をつなぐ組織。幹細胞の採取源の一つです。"],
+        en: ["Umbilical cord", "The tissue linking fetus and placenta — one source of stem cells."],
+        zh: ["脐带", "连接胎儿与胎盘的组织，是干细胞的采集来源之一。"],
+        link: "stem-cell-sources",
+      },
+      {
+        ja: ["骨", "体を支える組織。絶えず作り替えられ、骨芽細胞と破骨細胞の働きで保たれます。"],
+        en: ["Bone", "Structural tissue constantly remodeled by osteoblasts and osteoclasts."],
+        zh: ["骨", "支撑身体的组织，由成骨细胞与破骨细胞不断重塑。"],
+        link: "skin-bone-cartilage",
+      },
+      {
+        ja: ["筋肉（骨格筋）", "体を動かす筋肉。衛星細胞が修復に関わります。"],
+        en: ["Skeletal muscle", "The muscle that moves the body; satellite cells take part in its repair."],
+        zh: ["骨骼肌", "使身体运动的肌肉，卫星细胞参与其修复。"],
+        link: "satellite-cells",
+      },
+      {
+        ja: ["神経", "体の指令を伝える組織。一度大きく傷つくと再生しにくいとされます。"],
+        en: ["Nerve", "Tissue carrying the body's signals; once badly damaged it regenerates poorly."],
+        zh: ["神经", "传递身体指令的组织，严重损伤后难以再生。"],
+      },
+      {
+        ja: ["動脈と静脈", "動脈は心臓から全身へ血液を送り、静脈は心臓へ戻します。投与経路としての意味が異なります。"],
+        en: ["Arteries & veins", "Arteries carry blood from the heart to the body, veins return it — different implications as delivery routes."],
+        zh: ["动脉与静脉", "动脉把血液从心脏送往全身，静脉把血液送回心脏，作为给药途径意义不同。"],
+      },
+      {
+        ja: ["リンパ管とリンパ節", "組織液や免疫細胞が流れる系。免疫反応の拠点です。"],
+        en: ["Lymphatic vessels & nodes", "The network carrying tissue fluid and immune cells — hubs of immune responses."],
+        zh: ["淋巴管与淋巴结", "组织液和免疫细胞流动的系统，是免疫反应的枢纽。"],
+        link: "lymph-system",
+      },
+      {
+        ja: ["脾臓", "血液を濾過し、免疫に関わる臓器。造血にも関係します。"],
+        en: ["Spleen", "An organ that filters blood and participates in immunity and hematopoiesis."],
+        zh: ["脾脏", "过滤血液并参与免疫和造血的器官。"],
+      },
+      {
+        ja: ["肝臓", "代謝・解毒の中心の臓器。再生能力が比較的高いことで知られます。"],
+        en: ["Liver", "The central organ of metabolism and detoxification, known for relatively high regenerative capacity."],
+        zh: ["肝脏", "代谢与解毒的核心器官，以再生能力较强著称。"],
+      },
+      {
+        ja: ["腎臓", "血液を濾過して尿を作る臓器。機能低下は透析の対象になります。"],
+        en: ["Kidney", "The organ that filters blood to make urine; failure may require dialysis."],
+        zh: ["肾脏", "过滤血液生成尿液的器官，功能下降时可需透析。"],
+      },
+      {
+        ja: ["膵臓", "血糖を調整するインスリンを作る臓器。β細胞の枯渇が糖尿病に関わります。"],
+        en: ["Pancreas", "The organ producing insulin to regulate blood sugar; beta-cell loss relates to diabetes."],
+        zh: ["胰腺", "产生调节血糖的胰岛素的器官，β细胞枯竭与糖尿病相关。"],
+      },
+      {
+        ja: ["脳", "指令塔となる臓器。血液脳関門で保護され、神経再生は限定的とされます。"],
+        en: ["Brain", "The command-center organ protected by the blood-brain barrier; neural regeneration is limited."],
+        zh: ["脑", "作为指令中枢的器官，受血脑屏障保护，神经再生有限。"],
+        link: "stem-cell-brain-bbb",
+      },
+      {
+        ja: ["血液脳関門（BBB）", "血液と脳組織の間の関所。治療用の細胞や物質の到達を制限します。"],
+        en: ["Blood-brain barrier (BBB)", "The gate between blood and brain tissue, limiting what administered cells or substances can reach."],
+        zh: ["血脑屏障（BBB）", "血液与脑组织之间的关口，限制治疗细胞或物质的到达。"],
+        link: "stem-cell-brain-bbb",
+      },
+      {
+        ja: ["角膜", "目の表面の透明な組織。角膜上皮の再生医療で実績があります。"],
+        en: ["Cornea", "The transparent surface of the eye — a field where epithelial regeneration has clinical results."],
+        zh: ["角膜", "眼球表面的透明组织，角膜上皮再生医疗已有应用。"],
+        link: "corneal-regeneration",
+      },
+      {
+        ja: ["網膜", "光を感知する目の奥の組織。iPS細胞由来の移植が研究されています。"],
+        en: ["Retina", "The light-sensing tissue at the back of the eye; iPS-derived grafts are under study."],
+        zh: ["视网膜", "眼球内部感知光的组织，正在研究iPS细胞来源的移植。"],
+      },
+      {
+        ja: ["インスリン", "血糖を下げるホルモン。膵臓のβ細胞から分泌されます。"],
+        en: ["Insulin", "The hormone lowering blood sugar, secreted by pancreatic beta cells."],
+        zh: ["胰岛素", "降低血糖的激素，由胰腺β细胞分泌。"],
+      },
+      {
+        ja: ["タンパク質", "細胞の働きを担う分子。酵素・抗体・成長因子などはタンパク質です。"],
+        en: ["Protein", "Molecules doing the cell's work — enzymes, antibodies, growth factors are proteins."],
+        zh: ["蛋白质", "承担细胞功能的分子，酶、抗体、生长因子都属于蛋白质。"],
+      },
+      {
+        ja: ["アミノ酸", "タンパク質の構成単位。食事から摂取する必要があるもの（必須アミノ酸）があります。"],
+        en: ["Amino acid", "The building blocks of proteins; some (essential amino acids) must come from food."],
+        zh: ["氨基酸", "构成蛋白质的单位，其中必需氨基酸需从饮食中摄取。"],
+      },
+      {
+        ja: ["酵素", "体内の化学反応を助けるタンパク質。消化や代謝に関わります。"],
+        en: ["Enzyme", "Proteins that facilitate chemical reactions in the body, involved in digestion and metabolism."],
+        zh: ["酶", "促进体内化学反应的蛋白质，参与消化与代谢。"],
+      },
+      {
+        ja: ["ホルモン", "体内の情報伝達物質。血流を介して遠くの臓器に働きかけます。"],
+        en: ["Hormone", "Signaling molecules that act on distant organs via the bloodstream."],
+        zh: ["激素", "体内信息传递物质，经血流作用于远处器官。"],
+      },
+      {
+        ja: ["免疫グロブリン（抗体）", "異物に結合するタンパク質。B細胞が作ります。"],
+        en: ["Immunoglobulin (antibody)", "Proteins that bind foreign material — made by B cells."],
+        zh: ["免疫球蛋白（抗体）", "结合异物的蛋白质，由B细胞产生。"],
+      },
+      {
+        ja: ["炎症性サイトカイン", "炎症を促す信号物質。過剰に出ると組織を傷つけることがあります。"],
+        en: ["Inflammatory cytokine", "Signaling molecules that promote inflammation; in excess they can damage tissue."],
+        zh: ["炎症性细胞因子", "促进炎症的信号物质，过量分泌可能损伤组织。"],
+      },
+      {
+        ja: ["グルコース（血糖）", "血液中の糖分。細胞のエネルギー源です。"],
+        en: ["Glucose (blood sugar)", "Sugar in the blood — a basic energy source for cells."],
+        zh: ["葡萄糖（血糖）", "血液中的糖分，是细胞的基本能量来源。"],
+      },
+      {
+        ja: ["酸素化・虚血", "酸素化は組織への酸素供給、虚血は血流不足による組織の障害です。"],
+        en: ["Oxygenation & ischemia", "Oxygenation is the supply of oxygen to tissue; ischemia is tissue damage from insufficient blood flow."],
+        zh: ["氧合与缺血", "氧合是向组织供氧，缺血是血流不足导致的组织障碍。"],
+      },
+      {
+        ja: ["粘液（ムコ）", "粘膜表面を保護する分泌物。腸や気道で異物の侵入を防ぎます。"],
+        en: ["Mucus", "A secretion protecting mucosal surfaces, blocking foreign entry in the gut and airways."],
+        zh: ["黏液", "保护黏膜表面的分泌物，在肠道和气道阻止异物侵入。"],
       }
     ],
   },
@@ -719,6 +1156,50 @@ export const glossaryGroups: GlossaryGroup[] = [
         en: ["Conditional early approval", "A pathway granting early approval on limited safety data, with re-evaluation using post-market data."],
         zh: ["有条件提前批准", "安全性获得一定确认即可提前批准，上市后再用数据重新评估的制度。"],
       },
+      {
+        ja: ["GMP基準", "医薬品等の製造・品質管理の基準。細胞製剤の安全を支えるルールです。"],
+        en: ["GMP standards", "Manufacturing and quality-control standards for drugs and related products, supporting cell-product safety."],
+        zh: ["GMP标准", "药品等的生产与质量管理标准，支撑细胞制剂的安全。"],
+      },
+      {
+        ja: ["無菌試験", "細胞製剤に細菌や真菌が混入していないか確認する試験。出荷前の品質管理です。"],
+        en: ["Sterility test", "Checking that a cell product is free of bacteria and fungi — a pre-release quality test."],
+        zh: ["无菌检验", "确认细胞制剂未混入细菌或真菌的检验，是出厂前的质量管理。"],
+      },
+      {
+        ja: ["核型解析（カリオタイプ）", "染色体の異常がないか調べる検査。培養した細胞の安全性確認に使われます。"],
+        en: ["Karyotype analysis", "A test checking chromosomes for abnormalities — used to confirm cultured cells' safety."],
+        zh: ["核型分析", "检查染色体有无异常的检验，用于确认培养细胞的安全性。"],
+      },
+      {
+        ja: ["セルソーティング", "細胞を性質の目印で分け取る技術。目的の細胞だけを集めるために使います。"],
+        en: ["Cell sorting", "Separating cells by characteristic markers to isolate the target population."],
+        zh: ["细胞分选", "按特性标志分离细胞以获取目标细胞的技术。"],
+        link: "cell-sorting",
+      },
+      {
+        ja: ["セルシート", "培養した細胞を薄いシート状にして貼る再生医療技術。心臓や角膜で研究されています。"],
+        en: ["Cell sheet", "A regenerative technology layering cultured cells as thin sheets — studied for heart and cornea."],
+        zh: ["细胞薄片", "将培养细胞制成薄片贴敷的再生医疗技术，正在心脏和角膜领域研究。"],
+        link: "heart-sheet-detail",
+      },
+      {
+        ja: ["バイオリアクター", "細胞を大量に培養する装置。製造の工業化に向けた技術です。"],
+        en: ["Bioreactor", "A device for culturing cells at scale — technology for industrialized cell manufacturing."],
+        zh: ["生物反应器", "大规模培养细胞的装置，是制造工业化所需的技术。"],
+      },
+      {
+        ja: ["iPS細胞ストック", "HLA型の組み合わせで拒絶が起きにくいドナーのiPS細胞を備蓄する仕組み。"],
+        en: ["iPS cell stock", "Banked iPS cells from donors with HLA combinations less likely to be rejected."],
+        zh: ["iPS细胞储备", "储存HLA配型不易引起排斥的供者iPS细胞的机制。"],
+        link: "ips-stock",
+      },
+      {
+        ja: ["創薬への応用", "iPS細胞由来の細胞で病気のモデルを作り、薬の候補を試す研究の進め方です。"],
+        en: ["Drug-discovery applications", "Using iPS-derived cells to model disease and test drug candidates."],
+        zh: ["药物研发应用", "用iPS细胞来源的细胞建立疾病模型并测试候选药物的研究方式。"],
+        link: "ips-drug-discovery",
+      }
     ],
   },
   {
@@ -753,6 +1234,68 @@ export const glossaryGroups: GlossaryGroup[] = [
         zh: ["感染检查", "对供者细胞或采集细胞进行病毒、细菌检查，是保障安全的基础。"],
         link: "stem-cell-infection-risk",
       },
+      {
+        ja: ["心電図", "心臓の電気活動を記録する検査。治療前の心機能確認に使われます。"],
+        en: ["ECG", "A recording of the heart's electrical activity, used to check cardiac function before treatment."],
+        zh: ["心电图", "记录心脏电活动的检查，用于治疗前的心功能确认。"],
+      },
+      {
+        ja: ["CT・MRI", "CTはX線で、MRIは磁気で体の断面を写します。目的に応じて選ばれます。"],
+        en: ["CT & MRI", "CT uses X-rays and MRI uses magnetic fields to image body slices; the choice depends on the purpose."],
+        zh: ["CT与MRI", "CT用X线、MRI用磁场拍摄身体断层图像，根据目的选择。"],
+      },
+      {
+        ja: ["エコー（超音波）", "音波の反射で臓器や血管を写す検査。侵襲が少ないのが特徴です。"],
+        en: ["Ultrasound", "Imaging organs and vessels via reflected sound waves — a low-invasiveness test."],
+        zh: ["超声检查", "利用声波反射观察脏器和血管的检查，创伤小。"],
+      },
+      {
+        ja: ["病理検査", "採取した組織や細胞を顕微鏡で調べる検査。病気の確定に用いられます。"],
+        en: ["Pathology exam", "Microscopic examination of sampled tissue or cells to confirm a diagnosis."],
+        zh: ["病理检查", "将采集的组织或细胞进行显微镜观察的检查，用于确诊。"],
+      },
+      {
+        ja: ["腫瘍マーカー", "腫瘍に関連して血液中で上昇する物質。単独では診断を確定しません。"],
+        en: ["Tumor marker", "A substance rising in blood in relation to tumors; alone it does not confirm diagnosis."],
+        zh: ["肿瘤标志物", "与肿瘤相关、血中可升高的物质，单独不能确诊。"],
+      },
+      {
+        ja: ["CRP・炎症反応", "炎症の強さを示す血液検査の指標の一つ。治療後の確認に使われることがあります。"],
+        en: ["CRP / inflammatory markers", "Blood-test indicators of inflammation, sometimes used to monitor post-treatment status."],
+        zh: ["CRP等炎症指标", "反映炎症强度的血液检查指标之一，可用于治疗后确认。"],
+      },
+      {
+        ja: ["カテーテル", "血管内に入れる細い管。動脈投与や造影検査に使われます。"],
+        en: ["Catheter", "A thin tube inserted into vessels, used for intra-arterial delivery or contrast studies."],
+        zh: ["导管", "插入血管的细管，用于动脉给药或造影检查。"],
+      },
+      {
+        ja: ["遺伝子検査", "遺伝子の状態を調べる検査。がんの性質把握や適合性判断に使われることがあります。"],
+        en: ["Genetic testing", "Testing of genes — used to characterize cancers or assess compatibility."],
+        zh: ["基因检测", "检查基因状态的检验，可用于了解肿瘤性质或判断适配性。"],
+      },
+      {
+        ja: ["穿刺・採取", "骨髄や組織を針で採る操作。出血や痛みの管理が必要です。"],
+        en: ["Puncture & harvest", "Needle-based collection of marrow or tissue, requiring bleeding and pain management."],
+        zh: ["穿刺与采集", "用针采集骨髓或组织的操作，需要处理出血和疼痛。"],
+        link: "bone-marrow-vs-adipose",
+      },
+      {
+        ja: ["感染症検査（ウイルス・細菌）", "細胞製剤やドナーの感染症を確認する検査。治療の安全性の基盤です。"],
+        en: ["Infectious-disease testing", "Screening of cell products and donors for viruses and bacteria — fundamental to treatment safety."],
+        zh: ["感染症检验（病毒・细菌）", "对细胞制剂或供者进行感染的检查，是治疗安全的基础。"],
+        link: "stem-cell-infection-risk",
+      },
+      {
+        ja: ["免疫染色", "細胞の中の特定の成分を色付けして確認する検査。細胞の性質の判定に使います。"],
+        en: ["Immunostaining", "Staining specific components in cells to confirm identity — used to characterize cell types."],
+        zh: ["免疫染色", "为细胞中特定成分着色以确认的检查，用于判定细胞性质。"],
+      },
+      {
+        ja: ["PET（陽電子放出断層撮影）", "代謝の活動を画像で見る検査。がんなどの評価に使われます。"],
+        en: ["PET scan", "Imaging metabolic activity, used in cancer evaluation and other assessments."],
+        zh: ["PET检查", "通过影像观察代谢活动的检查，用于肿瘤等的评估。"],
+      }
     ],
   },
   {
@@ -801,6 +1344,312 @@ export const glossaryGroups: GlossaryGroup[] = [
         ja: ["パーキンソン病", "ドーパミンを作る神経が減る病気。iPS細胞由来の細胞移植が臨床研究で試みられています。"],
         en: ["Parkinson's disease", "Loss of dopamine-producing neurons; iPS-derived cell transplantation is being studied in clinical trials."],
         zh: ["帕金森病", "产生多巴胺的神经细胞减少的疾病，iPS细胞来源的细胞移植正在临床研究中。"],
+      },
+      {
+        ja: ["白血病・リンパ腫", "血液のがん。造血幹細胞移植が実績のある領域です。"],
+        en: ["Leukemia & lymphoma", "Blood cancers — a field where hematopoietic stem cell transplantation has an established record."],
+        zh: ["白血病与淋巴瘤", "血液肿瘤，造血干细胞移植已有临床实绩。"],
+        link: "hematopoietic-transplant",
+      },
+      {
+        ja: ["再生不良性貧血", "骨髄の造血が低下する病気。造血幹細胞移植の対象になることがあります。"],
+        en: ["Aplastic anemia", "Reduced blood formation in bone marrow; hematopoietic transplant may be indicated."],
+        zh: ["再生障碍性贫血", "骨髓造血功能下降的疾病，造血干细胞移植可能成为适应症。"],
+      },
+      {
+        ja: ["骨粗鬆症", "骨の密度が下がりもろくなる病気。骨折リスクを高めます。"],
+        en: ["Osteoporosis", "Bone density loss making bones fragile and raising fracture risk."],
+        zh: ["骨质疏松症", "骨密度下降、骨变脆的疾病，骨折风险升高。"],
+      },
+      {
+        ja: ["関節リウマチ", "免疫が関節を攻撃する自己免疫疾患。炎症の制御が治療の中心です。"],
+        en: ["Rheumatoid arthritis", "An autoimmune disease where immunity attacks joints; controlling inflammation is central."],
+        zh: ["类风湿关节炎", "免疫攻击关节的自身免疫病，控制炎症是治疗核心。"],
+      },
+      {
+        ja: ["熱傷（やけど）", "皮膚が熱で傷つく外傷。皮膚の再生医療が研究・実用化された領域です。"],
+        en: ["Burns", "Thermal injury to skin — a field where skin regeneration has been studied and applied."],
+        zh: ["烧伤", "热造成的皮肤外伤，皮肤再生医疗已有研究和临床应用。"],
+        link: "skin-bone-cartilage",
+      },
+      {
+        ja: ["難治性潰瘍", "治りにくい皮膚のただれ。血流不足などが関係し、再生医療の対象になることがあります。"],
+        en: ["Refractory ulcer", "A hard-to-heal skin sore, often linked to poor blood flow — a target of regenerative approaches."],
+        zh: ["难治性溃疡", "不易愈合的皮肤溃烂，常与血流不足相关，可成为再生医疗对象。"],
+      },
+      {
+        ja: ["心筋梗塞", "心臓の血管が詰まり心筋が障害される病気。心筋の修復が研究対象です。"],
+        en: ["Myocardial infarction", "A blocked cardiac vessel damaging heart muscle; myocardial repair is a research target."],
+        zh: ["心肌梗死", "心脏血管堵塞导致心肌受损的疾病，心肌修复是研究对象。"],
+        link: "heart-attack-basics",
+      },
+      {
+        ja: ["末梢動脈疾患", "手足の血流が悪くなる病気。血管新生を促す研究がされています。"],
+        en: ["Peripheral artery disease", "Poor blood flow to limbs; research explores promoting vessel growth."],
+        zh: ["外周动脉疾病", "四肢血流变差的疾病，正在研究促进血管新生。"],
+      },
+      {
+        ja: ["アルツハイマー病", "記憶などが徐々に失われる神経変性疾患。幹細胞による回復は研究段階です。"],
+        en: ["Alzheimer's disease", "A neurodegenerative disease with progressive memory loss; stem-cell approaches remain investigational."],
+        zh: ["阿尔茨海默病", "记忆等逐渐丧失的神经变性疾病，干细胞治疗尚在研究阶段。"],
+      },
+      {
+        ja: ["黄斑変性", "網膜の中心部が障害される目の病気。iPS細胞由来の移植が研究されています。"],
+        en: ["Macular degeneration", "Damage to the central retina; iPS-derived grafts are under study."],
+        zh: ["黄斑变性", "视网膜中心部位受损的眼病，正在研究iPS细胞来源的移植。"],
+      },
+      {
+        ja: ["腎不全", "腎臓の機能が低下する状態。透析や移植の対象になります。"],
+        en: ["Kidney failure", "Reduced kidney function; may lead to dialysis or transplantation."],
+        zh: ["肾功能衰竭", "肾脏功能下降的状态，可能需要透析或移植。"],
+      },
+      {
+        ja: ["多発性硬化症（MS）", "免疫が神経を傷つける自己免疫疾患。免疫を調整する治療が中心です。"],
+        en: ["Multiple sclerosis (MS)", "An autoimmune disease attacking nerves; treatment centers on immune regulation."],
+        zh: ["多发性硬化症（MS）", "免疫损伤神经的自身免疫病，治疗以调节免疫为主。"],
+      },
+      {
+        ja: ["筋萎縮性側索硬化症（ALS）", "運動神経が徐々に失われる難病。幹細胞による治療は研究段階です。"],
+        en: ["ALS", "A disease progressively losing motor neurons; stem-cell therapy is investigational."],
+        zh: ["肌萎缩侧索硬化症（ALS）", "运动神经逐渐丧失的疑难病，干细胞治疗处于研究阶段。"],
+      },
+      {
+        ja: ["アトピー性皮膚炎", "皮膚の炎症が続く病気。免疫の関わりが大きく、炎症の制御が治療の柱です。"],
+        en: ["Atopic dermatitis", "Persistent skin inflammation with strong immune involvement; controlling inflammation is key."],
+        zh: ["特应性皮炎", "皮肤持续炎症的疾病，免疫参与较大，控制炎症是治疗支柱。"],
+      },
+      {
+        ja: ["COPD（慢性閉塞性肺疾患）", "肺の機能が低下する病気。肺組織の修復は研究対象です。"],
+        en: ["COPD", "A disease of declining lung function; lung-tissue repair is under study."],
+        zh: ["慢阻肺（COPD）", "肺功能下降的疾病，肺组织修复是研究对象。"],
+      },
+      {
+        ja: ["角膜上皮幹細胞疲弊症", "角膜の幹細胞が失われ、角膜が濁る病気。上皮細胞の再生医療の対象です。"],
+        en: ["Limbal stem-cell deficiency", "Loss of corneal stem cells clouding the cornea — a target of epithelial regenerative therapy."],
+        zh: ["角膜缘干细胞衰竭症", "角膜干细胞丧失、角膜混浊的疾病，是上皮细胞再生医疗的对象。"],
+        link: "corneal-regeneration",
+      }
+    ],
+  },
+  {
+    ja: "薬と一般診療",
+    en: "Drugs & general care",
+    zh: "药物与一般诊疗",
+    terms: [
+      {
+        ja: ["処方箋医薬品", "医師の処方が必要な医薬品。一般用医薬品とは区別されます。"],
+        en: ["Prescription drug", "A medicine requiring a physician's prescription — distinct from over-the-counter drugs."],
+        zh: ["处方药", "需医生处方的药品，与非处方药相区别。"],
+      },
+      {
+        ja: ["抗生物質", "細菌感染症を治す薬。ウイルスには効きません。"],
+        en: ["Antibiotic", "A drug that treats bacterial infections — it does not work on viruses."],
+        zh: ["抗生素", "治疗细菌感染的药物，对病毒无效。"],
+      },
+      {
+        ja: ["ステロイド", "炎症や免疫を抑える薬の総称。効果と副作用の両方があります。"],
+        en: ["Steroid", "A class of drugs suppressing inflammation and immunity — with both benefits and side effects."],
+        zh: ["类固醇", "抑制炎症和免疫的一类药物，兼具疗效与副作用。"],
+      },
+      {
+        ja: ["免疫抑制薬", "拒絶や自己免疫疾患で免疫を抑える薬。感染症リスクが上がります。"],
+        en: ["Immunosuppressant", "A drug suppressing immunity for rejection prevention or autoimmune disease; raises infection risk."],
+        zh: ["免疫抑制剂", "用于预防排斥或自身免疫病、抑制免疫的药物，会增加感染风险。"],
+      },
+      {
+        ja: ["抗凝固薬", "血液を固まりにくくする薬。出血しやすくなるため、採取や手術前の確認が必要です。"],
+        en: ["Anticoagulant", "A drug that slows clotting — raises bleeding tendency, so procedures need prior review."],
+        zh: ["抗凝药", "使血液不易凝固的药物，出血倾向增加，采集或手术前需确认。"],
+      },
+      {
+        ja: ["鎮痛薬", "痛みを和らげる薬。採取・注射時の疼痛管理に使われます。"],
+        en: ["Analgesic", "Pain-relieving medicine used for pain control during collection or injections."],
+        zh: ["镇痛药", "缓解疼痛的药物，用于采集或注射时的疼痛管理。"],
+      },
+      {
+        ja: ["麻酔", "痛みを感じないようにする処置。局所麻酔と全身麻酔など種類があります。"],
+        en: ["Anesthesia", "Measures to prevent pain — types include local and general anesthesia."],
+        zh: ["麻醉", "使不痛的处理，有局部麻醉和全身麻醉等种类。"],
+      },
+      {
+        ja: ["輸血", "他人の血液成分を体内に入れる治療。感染症検査を経た製剤が使われます。"],
+        en: ["Blood transfusion", "Giving blood components from donors; products undergo infection screening."],
+        zh: ["输血", "将他人血液成分输入体内的治疗，使用经感染检查的制剂。"],
+      },
+      {
+        ja: ["外来と入院", "外来は通院での診療、入院は病床での診療。治療ごとに形態が異なります。"],
+        en: ["Outpatient vs inpatient", "Outpatient care means visiting; inpatient care means staying. Formats differ by treatment."],
+        zh: ["门诊与住院", "门诊为来院诊疗，住院为病床诊疗，不同治疗形式不同。"],
+      },
+      {
+        ja: ["紹介状", "別の医療機関に診療を依頼する際の文書。セカンドオピニオンでも使われます。"],
+        en: ["Referral letter", "A document referring a patient to another institution — also used for second opinions."],
+        zh: ["转诊介绍信", "向其他医疗机构委托诊疗的文件，也用于第二诊疗意见。"],
+      },
+      {
+        ja: ["再診・経過観察", "治療後の状態を定期的に確認する通院。異変の早期発見のための枠組みです。"],
+        en: ["Follow-up visits", "Regular check-ins after treatment to catch changes early."],
+        zh: ["复诊与随访", "治疗后定期确认状态的就诊，用于及早发现异常。"],
+      },
+      {
+        ja: ["ワクチン", "感染症の予防のために免疫を作る製剤。基礎疾患や免疫抑制時の接種は相談が必要です。"],
+        en: ["Vaccine", "A preparation that builds immunity against infections; timing around immunosuppression needs consultation."],
+        zh: ["疫苗", "为预防感染而建立免疫的制剂，有基础疾病或免疫抑制时接种需咨询。"],
+      },
+      {
+        ja: ["抗菌・抗ウイルス薬", "細菌やウイルスに作用する薬。対象によって使い分けられます。"],
+        en: ["Antibacterial & antiviral drugs", "Drugs acting on bacteria or viruses, chosen by target."],
+        zh: ["抗菌药与抗病毒药", "针对细菌或病毒的药物，按对象分别使用。"],
+      },
+    ],
+  },
+  {
+    ja: "生活と健康",
+    en: "Lifestyle & health",
+    zh: "生活与健康",
+    terms: [
+      {
+        ja: ["生活習慣病", "食事・運動・喫煙など生活習慣が関係して起きる病気の総称。"],
+        en: ["Lifestyle-related disease", "Illnesses related to diet, exercise, smoking, and other habits."],
+        zh: ["生活习惯病", "与饮食、运动、吸烟等生活习惯相关疾病的总称。"],
+      },
+      {
+        ja: ["フレイル", "加齢で心身が弱くなる状態。早めの対策で回復の余地がある段階です。"],
+        en: ["Frailty", "Age-related decline in body and mind — a stage where early measures can help recovery."],
+        zh: ["衰弱（frailty）", "因衰老身心变弱的状态，早期干预尚有恢复余地。"],
+      },
+      {
+        ja: ["サルコペニア", "加齢などで筋肉量が減る状態。転倒や生活機能の低下につながります。"],
+        en: ["Sarcopenia", "Age-related loss of muscle mass, contributing to falls and loss of function."],
+        zh: ["肌少症", "因衰老等导致肌肉量减少的状态，会增加跌倒和生活功能下降风险。"],
+      },
+      {
+        ja: ["ADL（日常生活動作）", "食事・移動・着替えなど日常生活の基本動作の自立度。"],
+        en: ["ADL (activities of daily living)", "Basic self-care actions — eating, moving, dressing — and their level of independence."],
+        zh: ["ADL（日常生活活动）", "进食、移动、更衣等基本生活动作的自理程度。"],
+      },
+      {
+        ja: ["QOL（生活の質）", "身体的・精神的・社会的な生活の質。治療評価の指標の一つです。"],
+        en: ["QOL (quality of life)", "Physical, mental, and social quality of life — one of the treatment evaluation measures."],
+        zh: ["QOL（生活质量）", "身体、精神、社会层面的生活质量，是治疗评价的指标之一。"],
+        link: "hospital-words",
+      },
+      {
+        ja: ["リハビリテーション", "機能の回復を目指す訓練・支援。治療後の経過を支えます。"],
+        en: ["Rehabilitation", "Training and support aimed at restoring function, supporting post-treatment recovery."],
+        zh: ["康复训练", "以恢复功能为目标的训练与支持，支撑治疗后的恢复过程。"],
+        link: "rehabilitation-basics",
+      },
+      {
+        ja: ["運動療法", "計画的な運動で体の機能を改善する治療的アプローチ。"],
+        en: ["Exercise therapy", "A therapeutic approach improving body function through structured exercise."],
+        zh: ["运动疗法", "通过有计划的锻炼改善身体功能的治疗方法。"],
+      },
+      {
+        ja: ["栄養状態", "タンパク質やビタミンなどの摂取バランス。治療や回復に影響します。"],
+        en: ["Nutritional status", "The balance of protein, vitamins, and other intake — affects treatment and recovery."],
+        zh: ["营养状态", "蛋白质、维生素等摄入的平衡状况，影响治疗与恢复。"],
+      },
+      {
+        ja: ["睡眠", "回復と健康維持の基盤。質と時間の両方が問われます。"],
+        en: ["Sleep", "The foundation of recovery and health — both quality and duration matter."],
+        zh: ["睡眠", "恢复与健康维持的基础，质量与时长都很重要。"],
+      },
+      {
+        ja: ["喫煙", "血管や免疫に影響し、治療効果や合併症リスクに関わる生活因子です。"],
+        en: ["Smoking", "A lifestyle factor affecting vessels and immunity, related to treatment effects and complication risk."],
+        zh: ["吸烟", "影响血管和免疫的生活因素，与治疗效果和并发症风险相关。"],
+      },
+      {
+        ja: ["肥満", "体脂肪の過剰な蓄積。関節への負荷や代謝への影響があります。"],
+        en: ["Obesity", "Excess body fat — placing load on joints and affecting metabolism."],
+        zh: ["肥胖", "体脂肪过度蓄积的状态，增加关节负荷并影响代谢。"],
+      },
+      {
+        ja: ["慢性炎症", "低い炎症が長期間続く状態。生活習慣や加齢と関係するとされます。"],
+        en: ["Chronic inflammation", "Low-grade inflammation persisting over time — linked to lifestyle and aging."],
+        zh: ["慢性炎症", "低度炎症长期持续的状态，被认为与生活习惯和衰老相关。"],
+      },
+      {
+        ja: ["基礎疾患", "糖尿病・高血圧など持病のこと。治療適否の判断材料になります。"],
+        en: ["Underlying condition", "Chronic illnesses such as diabetes or hypertension — factors in treatment eligibility."],
+        zh: ["基础疾病", "糖尿病、高血压等既有疾病，是治疗适否判断的依据。"],
+        link: "stem-cell-contraindications",
+      },
+      {
+        ja: ["介護", "生活の動作を支える支援。ADLの低下に対応する制度があります。"],
+        en: ["Long-term care", "Support for daily activities; systems exist for reduced ADL."],
+        zh: ["护理", "支持日常生活动作的照护，有对应ADL下降的制度。"],
+      },
+      {
+        ja: ["健診・検診", "症状のない段階で状態を調べる検査。異常時は精密検査につながります。"],
+        en: ["Health check & screening", "Tests done before symptoms appear; abnormal results lead to further examination."],
+        zh: ["体检与筛查", "在无症状阶段检查状态的检验，异常时转介精密检查。"],
+        link: "health-checkups",
+      },
+      {
+        ja: ["メタボリックシンドローム", "内臓脂肪の蓄積に血圧・血糖・脂質の異常が重なった状態。"],
+        en: ["Metabolic syndrome", "Visceral fat combined with abnormal blood pressure, glucose, or lipids."],
+        zh: ["代谢综合征", "内脏脂肪堆积并伴有血压、血糖、血脂异常的状态。"],
+      },
+    ],
+  },
+  {
+    ja: "皮膚・美容の言葉",
+    en: "Skin & aesthetics",
+    zh: "皮肤与美容相关用语",
+    terms: [
+      {
+        ja: ["ヒアルロン酸", "水分を保つ成分。皮膚の潤いに関係し、注入製剤にも使われます。"],
+        en: ["Hyaluronic acid", "A moisture-retaining substance relevant to skin hydration; also used in injectable products."],
+        zh: ["透明质酸", "保持水分的成分，与皮肤水润相关，也用于注射制剂。"],
+      },
+      {
+        ja: ["エラスチン", "皮膚に弾力を与えるタンパク質。加齢で減少します。"],
+        en: ["Elastin", "The protein giving skin its elasticity; declines with age."],
+        zh: ["弹性蛋白", "赋予皮肤弹性的蛋白质，随年龄减少。"],
+      },
+      {
+        ja: ["角質層", "皮膚の最表面のバリア層。外部刺激から体を守ります。"],
+        en: ["Stratum corneum", "The skin's outermost barrier layer protecting the body."],
+        zh: ["角质层", "皮肤最表面的屏障层，保护身体免受外界刺激。"],
+      },
+      {
+        ja: ["メラニン", "皮膚の色を作る色素。紫外線への防御に関わります。"],
+        en: ["Melanin", "The pigment determining skin color, involved in UV defense."],
+        zh: ["黑色素", "决定皮肤颜色的色素，参与紫外线防御。"],
+      },
+      {
+        ja: ["ターンオーバー", "皮膚の細胞が生まれ変わる周期。加齢で遅くなるとされます。"],
+        en: ["Skin turnover", "The cycle by which skin cells renew; tends to slow with age."],
+        zh: ["新陈代谢（皮肤更新）", "皮肤细胞更新的周期，随年龄变慢。"],
+        link: "stem-cell-skin-aging",
+      },
+      {
+        ja: ["紫外線（UV）", "皮膚老化に影響する光。UVAとUVBがあり、防御が重要です。"],
+        en: ["Ultraviolet (UV)", "Light affecting skin aging — UVA and UVB exist; protection matters."],
+        zh: ["紫外线（UV）", "影响皮肤老化的光线，有UVA和UVB，防护很重要。"],
+      },
+      {
+        ja: ["光老化", "長期の紫外線暴露による皮膚の変化。自然老化と区別されます。"],
+        en: ["Photoaging", "Skin change from long-term UV exposure, distinct from natural aging."],
+        zh: ["光老化", "长期紫外线照射引起的皮肤变化，与自然老化相区分。"],
+        link: "stem-cell-skin-aging",
+      },
+      {
+        ja: ["抗酸化", "活性酸素による細胞への負担を抑える働き。食品成分として注目されます。"],
+        en: ["Antioxidant", "A property limiting oxidative stress on cells — a focus in nutrition."],
+        zh: ["抗氧化", "减轻活性氧对细胞负担的作用，作为食品成分受到关注。"],
+      },
+      {
+        ja: ["保湿", "皮膚の水分を保つこと。バリア機能を支える基本的なケアです。"],
+        en: ["Moisturizing", "Keeping skin hydrated — basic care supporting the barrier."],
+        zh: ["保湿", "保持皮肤水分，是维持屏障功能的基础护理。"],
+      },
+      {
+        ja: ["皮脂", "皮膚から分泌される脂分。バリアの一部として働きます。"],
+        en: ["Sebum", "Oil secreted by the skin, acting as part of its barrier."],
+        zh: ["皮脂", "皮肤分泌的油脂，作为屏障的一部分发挥作用。"],
       },
     ],
   },
