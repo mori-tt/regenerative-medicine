@@ -7,6 +7,7 @@ import { ReviewerProfile } from "@/components/reviewer-profile";
 import { medicalReviewer, publication } from "@/lib/site-config";
 import { ContactForm } from "@/components/contact-form";
 import { SourceDirectory } from "@/components/source-directory";
+import { Glossary } from "@/components/glossary";
 export const dynamicParams = false;
 export function generateStaticParams() {
   return infoPages.map((p) => ({ page: p.slug }));
@@ -40,7 +41,8 @@ export default async function InfoPage({
       <div className="prose">
         {page === "sources" && <SourceDirectory />}
         {page === "supervision" && (medicalReviewer.enabled || medicalReviewer.planned) && <ReviewerProfile />}
-        {page !== "sources" && (page !== "supervision" || (!medicalReviewer.enabled && !medicalReviewer.planned)) && info.sections.map((s) => (
+        {page === "glossary" && <Glossary />}
+        {page !== "sources" && page !== "glossary" && (page !== "supervision" || (!medicalReviewer.enabled && !medicalReviewer.planned)) && info.sections.map((s) => (
           <section key={s.title}>
             <h2>{s.title}</h2>
             {s.paragraphs.map((p) => (

@@ -5,6 +5,7 @@ import { Breadcrumbs } from "./content";
 import { ReviewerProfile } from "./reviewer-profile";
 import { SourceDirectory } from "./source-directory";
 import { ContactForm } from "./contact-form";
+import { Glossary } from "./glossary";
 import { site } from "@/lib/site";
 import { medicalReviewer, publication } from "@/lib/site-config";
 
@@ -51,7 +52,8 @@ export function LocalizedInfo({ locale, slug }: { locale: SiteLocale; slug: Info
         <div className="prose">
           {slug === "sources" && <SourceDirectory locale={locale} />}
           {slug === "supervision" && (medicalReviewer.enabled || medicalReviewer.planned) && <ReviewerProfile locale={locale} />}
-          {slug !== "sources" && (slug !== "supervision" || (!medicalReviewer.enabled && !medicalReviewer.planned)) && content.sections.map((section) => (
+          {slug === "glossary" && <Glossary locale={locale} />}
+          {slug !== "sources" && slug !== "glossary" && (slug !== "supervision" || (!medicalReviewer.enabled && !medicalReviewer.planned)) && content.sections.map((section) => (
             <section key={section.title}>
               <h2>{section.title}</h2>
               {section.paragraphs.map((paragraph) => (
