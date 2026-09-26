@@ -9,6 +9,15 @@ export const categories = [
     color: "green",
   },
   {
+    slug: "health-basics",
+    label: "体と健康の基礎",
+    en: "BODY & HEALTH",
+    description:
+      "細胞・臓器の働き、身近な病気、検査や暮らしの健康知識。再生医療を読む土台になる体の話。",
+    icon: "cross",
+    color: "slate",
+  },
+  {
     slug: "in-body",
     label: "体の中での動き",
     en: "INSIDE THE BODY",

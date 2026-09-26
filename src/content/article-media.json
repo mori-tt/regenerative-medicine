@@ -82,15 +82,66 @@
     }
   },
   "categoryDefaults": {
-    "stem-basics": ["microscope", "doctor-consultation", "laboratory", "medical-research"],
-    "in-body": ["microscope", "medical-research", "laboratory", "researcher"],
-    "anti-aging": ["medical-research", "doctor-consultation", "microscope", "hospital-care"],
-    "efficacy": ["laboratory", "medical-research", "researcher", "microscope"],
-    "safety": ["doctor-consultation", "hospital-care", "medical-team", "medical-research"],
-    "cell-types": ["microscope", "laboratory", "researcher", "medical-research"],
-    "compare-therapies": ["laboratory", "microscope", "medical-research", "doctor-consultation"],
-    "cost-access": ["doctor-consultation", "hospital-care", "medical-team", "laboratory"],
-    "mechanisms": ["laboratory", "researcher", "microscope", "medical-team"]
+    "stem-basics": [
+      "microscope",
+      "doctor-consultation",
+      "laboratory",
+      "medical-research"
+    ],
+    "in-body": [
+      "microscope",
+      "medical-research",
+      "laboratory",
+      "researcher"
+    ],
+    "anti-aging": [
+      "medical-research",
+      "doctor-consultation",
+      "microscope",
+      "hospital-care"
+    ],
+    "efficacy": [
+      "laboratory",
+      "medical-research",
+      "researcher",
+      "microscope"
+    ],
+    "safety": [
+      "doctor-consultation",
+      "hospital-care",
+      "medical-team",
+      "medical-research"
+    ],
+    "cell-types": [
+      "microscope",
+      "laboratory",
+      "researcher",
+      "medical-research"
+    ],
+    "compare-therapies": [
+      "laboratory",
+      "microscope",
+      "medical-research",
+      "doctor-consultation"
+    ],
+    "cost-access": [
+      "doctor-consultation",
+      "hospital-care",
+      "medical-team",
+      "laboratory"
+    ],
+    "mechanisms": [
+      "laboratory",
+      "researcher",
+      "microscope",
+      "medical-team"
+    ],
+    "health-basics": [
+      "microscope",
+      "doctor-consultation",
+      "laboratory",
+      "medical-research"
+    ]
   },
   "assignments": {}
 }

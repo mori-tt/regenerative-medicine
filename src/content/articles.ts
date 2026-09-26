@@ -1258,7 +1258,7 @@ const rawArticles: Article[] = [
     title: "血液の基礎：赤血球・白血球・血小板と造血",
     description:
       "細胞治療の原点である血液の仕組みから、体の細胞社会をのぞきます。",
-    category: "stem-basics",
+    category: "health-basics",
     updatedAt: "2026-08-07",
     readingMinutes: 3,
     status: "draft",
@@ -1338,7 +1338,7 @@ const rawArticles: Article[] = [
     title: "神経・筋・心臓の特徴：再生が難しいとされる臓器",
     description:
       "一度失われると戻りにくい組織の事情と、研究の方向性を紹介します。",
-    category: "stem-basics",
+    category: "health-basics",
     updatedAt: "2026-08-08",
     readingMinutes: 3,
     status: "draft",
@@ -3180,7 +3180,7 @@ const rawArticles: Article[] = [
     title: "DNAの基礎：設計情報の読み方",
     description:
       "二重らせんから遺伝子、染色体まで。最小限の言葉で整理します。",
-    category: "stem-basics",
+    category: "health-basics",
     updatedAt: "2026-08-19",
     readingMinutes: 3,
     status: "draft",
@@ -3220,7 +3220,7 @@ const rawArticles: Article[] = [
     title: "タンパク質の基礎：体の働き手",
     description:
       "酵素・抗体・シグナルなど、タンパク質の役割を身近に紹介します。",
-    category: "stem-basics",
+    category: "health-basics",
     updatedAt: "2026-08-19",
     readingMinutes: 3,
     status: "draft",
@@ -3260,7 +3260,7 @@ const rawArticles: Article[] = [
     title: "消化と吸収：栄養が体になるまで",
     description:
       "口から腸までの旅をたどり、治療中の栄養の大切さを考えます。",
-    category: "stem-basics",
+    category: "health-basics",
     updatedAt: "2026-08-20",
     readingMinutes: 3,
     status: "draft",
@@ -3300,7 +3300,7 @@ const rawArticles: Article[] = [
     title: "循環の仕組み：血液が巡る道",
     description:
       "心臓・血管・血液の連携を整理し、細胞の届け方を考えます。",
-    category: "stem-basics",
+    category: "health-basics",
     updatedAt: "2026-08-20",
     readingMinutes: 3,
     status: "draft",
@@ -3340,7 +3340,7 @@ const rawArticles: Article[] = [
     title: "呼吸の仕組み：酸素と二酸化炭素の交換",
     description:
       "肺の構造とガス交換の仕組みを、身近な例で解説します。",
-    category: "stem-basics",
+    category: "health-basics",
     updatedAt: "2026-08-20",
     readingMinutes: 3,
     status: "draft",
@@ -3380,7 +3380,7 @@ const rawArticles: Article[] = [
     title: "腎臓と肝臓：老廃物処理と代謝の要",
     description:
       "沈黙の臓器とも呼ばれる2つの働きと、治療時の注意をまとめます。",
-    category: "stem-basics",
+    category: "health-basics",
     updatedAt: "2026-08-20",
     readingMinutes: 3,
     status: "draft",
@@ -3420,7 +3420,7 @@ const rawArticles: Article[] = [
     title: "脳の基礎：指令塔のつくりと働き",
     description:
       "神経細胞とグリア、部位ごとの役割を大まかに紹介します。",
-    category: "stem-basics",
+    category: "health-basics",
     updatedAt: "2026-08-21",
     readingMinutes: 3,
     status: "draft",
@@ -3460,7 +3460,7 @@ const rawArticles: Article[] = [
     title: "目と耳：感覚器の仕組みと再生研究",
     description:
       "視覚と聴覚の入り口の構造と、再生への挑戦を紹介します。",
-    category: "stem-basics",
+    category: "health-basics",
     updatedAt: "2026-08-21",
     readingMinutes: 3,
     status: "draft",
@@ -3500,7 +3500,7 @@ const rawArticles: Article[] = [
     title: "歯と骨の成長：子どもの体の変化",
     description:
       "成長期の体の作り替えと、歯・骨の再生研究の話題を整理します。",
-    category: "stem-basics",
+    category: "health-basics",
     updatedAt: "2026-08-21",
     readingMinutes: 3,
     status: "draft",
@@ -3540,7 +3540,7 @@ const rawArticles: Article[] = [
     title: "ホルモンの基礎：全身の連絡網",
     description:
       "血液で運ばれる信号の仕組みと、代表的な例を紹介します。",
-    category: "stem-basics",
+    category: "health-basics",
     updatedAt: "2026-08-21",
     readingMinutes: 3,
     status: "draft",
@@ -3580,7 +3580,7 @@ const rawArticles: Article[] = [
     title: "抗体とワクチン：免疫の記憶の仕組み",
     description:
       "感染から守る記憶の仕組みと、細胞治療との違いを整理します。",
-    category: "stem-basics",
+    category: "health-basics",
     updatedAt: "2026-08-22",
     readingMinutes: 3,
     status: "draft",
@@ -3620,7 +3620,7 @@ const rawArticles: Article[] = [
     title: "アレルギーの基礎：過剰な防御反応",
     description:
       "花粉症や食物アレルギーを例に、免疫の誤作動を解説します。",
-    category: "stem-basics",
+    category: "health-basics",
     updatedAt: "2026-08-22",
     readingMinutes: 3,
     status: "draft",
@@ -3660,7 +3660,7 @@ const rawArticles: Article[] = [
     title: "がんの基礎知識：細胞の増殖の暴走",
     description:
       "がんの成り立ちと、再生医療との関係・違いを整理します。",
-    category: "stem-basics",
+    category: "health-basics",
     updatedAt: "2026-08-22",
     readingMinutes: 3,
     status: "draft",
@@ -3700,7 +3700,7 @@ const rawArticles: Article[] = [
     title: "生活習慣病と細胞：糖尿病を例に",
     description:
       "膵臓のβ細胞と血糖の関係から、慢性疾患の付き合い方を考えます。",
-    category: "stem-basics",
+    category: "health-basics",
     updatedAt: "2026-08-22",
     readingMinutes: 3,
     status: "draft",
@@ -3820,7 +3820,7 @@ const rawArticles: Article[] = [
     title: "障害と支援制度：医療と暮らしの橋渡し",
     description:
       "障害者手帳や福祉サービスなど、暮らしを支える制度の入り口です。",
-    category: "stem-basics",
+    category: "health-basics",
     updatedAt: "2026-08-23",
     readingMinutes: 3,
     status: "draft",
@@ -3860,7 +3860,7 @@ const rawArticles: Article[] = [
     title: "リハビリの基礎：回復を支える訓練",
     description:
       "理学・作業・言語療法の役割と、再生医療との組み合わせを解説します。",
-    category: "stem-basics",
+    category: "health-basics",
     updatedAt: "2026-08-23",
     readingMinutes: 3,
     status: "draft",
@@ -3900,7 +3900,7 @@ const rawArticles: Article[] = [
     title: "栄養の基礎：5大栄養素と体の材料",
     description:
       "治療中の体を支える栄養の考え方を、基本から整理します。",
-    category: "stem-basics",
+    category: "health-basics",
     updatedAt: "2026-08-24",
     readingMinutes: 3,
     status: "draft",
@@ -3940,7 +3940,7 @@ const rawArticles: Article[] = [
     title: "運動と体：筋肉・骨・心肺への効果",
     description:
       "無理のない運動の考え方と、治療中の注意をまとめます。",
-    category: "stem-basics",
+    category: "health-basics",
     updatedAt: "2026-08-24",
     readingMinutes: 3,
     status: "draft",
@@ -3980,7 +3980,7 @@ const rawArticles: Article[] = [
     title: "睡眠と修復：眠りが体を整える",
     description:
       "睡眠の役割と、質を上げる生活習慣を紹介します。",
-    category: "stem-basics",
+    category: "health-basics",
     updatedAt: "2026-08-24",
     readingMinutes: 3,
     status: "draft",
@@ -4020,7 +4020,7 @@ const rawArticles: Article[] = [
     title: "心の健康と意思決定：不安と向き合う",
     description:
       "治療選択のストレスへの対処と、相談先の使い方をまとめます。",
-    category: "stem-basics",
+    category: "health-basics",
     updatedAt: "2026-08-24",
     readingMinutes: 3,
     status: "draft",
@@ -4060,7 +4060,7 @@ const rawArticles: Article[] = [
     title: "健診・検診の活かし方：結果の読み方",
     description:
       "特定健診とがん検診の違い、要精密検査への対応を整理します。",
-    category: "stem-basics",
+    category: "health-basics",
     updatedAt: "2026-08-25",
     readingMinutes: 3,
     status: "draft",
@@ -4100,7 +4100,7 @@ const rawArticles: Article[] = [
     title: "かかりつけ医の持ち方：相談の起点",
     description:
       "かかりつけ医の役割と、上手な付き合い方を紹介します。",
-    category: "stem-basics",
+    category: "health-basics",
     updatedAt: "2026-08-25",
     readingMinutes: 3,
     status: "draft",
@@ -6138,7 +6138,7 @@ const rawArticles: Article[] = [
     title: "細胞の大きさ比べ：卵子から血小板まで",
     description:
       "目に見えない細胞の世界のスケール感をつかみます。",
-    category: "stem-basics",
+    category: "health-basics",
     updatedAt: "2026-09-07",
     readingMinutes: 3,
     status: "draft",
@@ -6178,7 +6178,7 @@ const rawArticles: Article[] = [
     title: "血液型の仕組み：ABO式と輸血の関係",
     description:
       "赤血球の目印の違いと、輸血で適合を見る理由を整理します。",
-    category: "stem-basics",
+    category: "health-basics",
     updatedAt: "2026-09-07",
     readingMinutes: 3,
     status: "draft",
@@ -6218,7 +6218,7 @@ const rawArticles: Article[] = [
     title: "体の水分と電解質：脱水を防ぐ考え方",
     description:
       "体重の約6割を占める水分の役割と、補給の基本をまとめます。",
-    category: "stem-basics",
+    category: "health-basics",
     updatedAt: "2026-09-07",
     readingMinutes: 3,
     status: "draft",
@@ -6258,7 +6258,7 @@ const rawArticles: Article[] = [
     title: "リンパの仕組み：むくみと免疫の通り道",
     description:
       "血管と並ぶ循環のもう一つの流れを整理します。",
-    category: "stem-basics",
+    category: "health-basics",
     updatedAt: "2026-09-07",
     readingMinutes: 3,
     status: "draft",
@@ -6298,7 +6298,7 @@ const rawArticles: Article[] = [
     title: "腸内細菌と体：共生する微生物の話",
     description:
       "100兆個ともいわれる腸内細菌の働きと付き合い方を紹介します。",
-    category: "stem-basics",
+    category: "health-basics",
     updatedAt: "2026-09-08",
     readingMinutes: 4,
     status: "draft",
@@ -6338,7 +6338,7 @@ const rawArticles: Article[] = [
     title: "熱が出る仕組み：発熱と解熱の考え方",
     description:
       "体温を上げる体の判断と、対処の目安を整理します。",
-    category: "stem-basics",
+    category: "health-basics",
     updatedAt: "2026-09-08",
     readingMinutes: 3,
     status: "draft",
@@ -6378,7 +6378,7 @@ const rawArticles: Article[] = [
     title: "痛みの仕組み：信号と感じ方の違い",
     description:
       "痛みが伝わる経路と、感じ方が変わる理由を紹介します。",
-    category: "stem-basics",
+    category: "health-basics",
     updatedAt: "2026-09-08",
     readingMinutes: 3,
     status: "draft",
@@ -6418,7 +6418,7 @@ const rawArticles: Article[] = [
     title: "関節の仕組み：動く連結部の構造",
     description:
       "骨と骨をつなぐ関節のつくりと、動きの種類を整理します。",
-    category: "stem-basics",
+    category: "health-basics",
     updatedAt: "2026-09-08",
     readingMinutes: 3,
     status: "draft",
@@ -6458,7 +6458,7 @@ const rawArticles: Article[] = [
     title: "骨折の治り方：骨がつながるまで",
     description:
       "骨が修復される段階と、治療中の過ごし方を紹介します。",
-    category: "stem-basics",
+    category: "health-basics",
     updatedAt: "2026-09-09",
     readingMinutes: 3,
     status: "draft",
@@ -6498,7 +6498,7 @@ const rawArticles: Article[] = [
     title: "貧血とは：酸素不足のサイン",
     description:
       "めまいや疲れの背景にある貧血の基本と受診の目安です。",
-    category: "stem-basics",
+    category: "health-basics",
     updatedAt: "2026-09-09",
     readingMinutes: 3,
     status: "draft",
@@ -6538,7 +6538,7 @@ const rawArticles: Article[] = [
     title: "血圧の仕組み：数値の読み方",
     description:
       "上と下の数値の意味と、測り方のコツを整理します。",
-    category: "stem-basics",
+    category: "health-basics",
     updatedAt: "2026-09-09",
     readingMinutes: 3,
     status: "draft",
@@ -6578,7 +6578,7 @@ const rawArticles: Article[] = [
     title: "コレステロールとは：善玉・悪玉の話",
     description:
       "体に必要な脂質の役割と、検査値の見方を紹介します。",
-    category: "stem-basics",
+    category: "health-basics",
     updatedAt: "2026-09-09",
     readingMinutes: 3,
     status: "draft",
@@ -6618,7 +6618,7 @@ const rawArticles: Article[] = [
     title: "脱水と熱中症：夏の備えと応急対応",
     description:
       "暑い時期の体調不良を防ぐ工夫と、重症度の見分け方です。",
-    category: "stem-basics",
+    category: "health-basics",
     updatedAt: "2026-09-10",
     readingMinutes: 3,
     status: "draft",
@@ -8138,7 +8138,7 @@ const rawArticles: Article[] = [
     title: "体温計の使い方：脇・耳・おでこの違い",
     description:
       "部位による違いと、正しく測るコツを紹介するコラムです。",
-    category: "stem-basics",
+    category: "health-basics",
     updatedAt: "2026-09-26",
     readingMinutes: 3,
     status: "draft",
@@ -8179,7 +8179,7 @@ const rawArticles: Article[] = [
     title: "献血の流れと条件：初めての方へ",
     description:
       "献血の種類・条件・当日の流れをまとめたコラムです。",
-    category: "stem-basics",
+    category: "health-basics",
     updatedAt: "2026-10-03",
     readingMinutes: 3,
     status: "draft",
@@ -8220,7 +8220,7 @@ const rawArticles: Article[] = [
     title: "顕微鏡でのぞく世界：細胞観察入門",
     description:
       "顕微鏡の種類と、細胞の見え方の基本を紹介するコラムです。",
-    category: "stem-basics",
+    category: "health-basics",
     updatedAt: "2026-10-10",
     readingMinutes: 3,
     status: "draft",
@@ -8548,7 +8548,7 @@ const rawArticles: Article[] = [
     title: "骨粗しょう症とは：骨が弱くなる仕組みと骨折予防",
     description:
       "骨密度が下がって骨折しやすくなる仕組みと、日常でできる予防の考え方を整理します。",
-    category: "stem-basics",
+    category: "health-basics",
     updatedAt: "2026-09-23",
     readingMinutes: 3,
     status: "draft",
@@ -8593,7 +8593,7 @@ const rawArticles: Article[] = [
     title: "甲状腺の病気の基礎：バセドウ病と橋本病",
     description:
       "甲状腺ホルモンが働き過ぎる病気と、働きが弱まる病気の違いを整理します。",
-    category: "stem-basics",
+    category: "health-basics",
     updatedAt: "2026-09-23",
     readingMinutes: 3,
     status: "draft",
@@ -8637,7 +8637,7 @@ const rawArticles: Article[] = [
     slug: "dementia-basics",
     title: "認知症の基礎：早期発見と受診の目安",
     description: "認知症の特徴と、早期受診が勧められる理由を整理します。",
-    category: "stem-basics",
+    category: "health-basics",
     updatedAt: "2026-09-23",
     readingMinutes: 3,
     status: "draft",
@@ -8682,7 +8682,7 @@ const rawArticles: Article[] = [
     title: "脳卒中の基礎：突然の症状とACT-FAST",
     description:
       "脳卒中で見られる突然の症状と、迷わず救急要請する目安を整理します。",
-    category: "stem-basics",
+    category: "health-basics",
     updatedAt: "2026-09-23",
     readingMinutes: 3,
     status: "draft",
@@ -8726,7 +8726,7 @@ const rawArticles: Article[] = [
     slug: "heart-attack-basics",
     title: "心筋梗塞の基礎：胸の症状と救急要請の目安",
     description: "心筋梗塞で見られる症状と、救急車を呼ぶ目安を整理します。",
-    category: "stem-basics",
+    category: "health-basics",
     updatedAt: "2026-09-23",
     readingMinutes: 3,
     status: "draft",

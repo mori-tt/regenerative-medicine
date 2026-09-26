@@ -9,6 +9,7 @@ import { Breadcrumbs } from "./content";
 const categoryDescriptions = {
   en: {
     "stem-basics": "What stem cells are, how they differ from ordinary cells, and how they relate to regenerative medicine.",
+    "health-basics": "How cells and organs work, common conditions, tests, and everyday health — the grounding for reading about regenerative medicine.",
     "in-body": "Where administered stem cells travel, how they distribute, and how long they persist.",
     "anti-aging": "What science does and does not show about rejuvenation, skin aging, and cosmetic claims.",
     efficacy: "How firmly treatment benefits are demonstrated, and how to read the research behind them.",
@@ -20,6 +21,7 @@ const categoryDescriptions = {
   },
   zh: {
     "stem-basics": "什么是干细胞、与普通细胞的差异，以及与再生医学的关系。",
+    "health-basics": "细胞与器官的工作原理、常见疾病、检查与日常健康知识——理解再生医学的基础。",
     "in-body": "输注的干细胞到达哪里、如何分布、能存续多久。",
     "anti-aging": "关于年轻化、皮肤老化与美容主张，科学上已知与未知的部分。",
     efficacy: "治疗获益被验证到何种程度，以及如何解读背后的研究。",

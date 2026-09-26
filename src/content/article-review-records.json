@@ -928,7 +928,7 @@
   "blood-basics": {
     "slug": "blood-basics",
     "title": "血液の基礎：赤血球・白血球・血小板と造血",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "laboratory",
     "publishAt": "2026-12-19",
     "publishedAt": "",
@@ -953,7 +953,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "94f43df05c2031829a0b7670077b437057771bc03f676fd3387f6a8197981724",
+      "contentHash": "bec1df8cca73b11e023a875196554817305662a3787a0cc18b02022640b15b44",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -998,7 +998,7 @@
   "nerve-muscle-heart": {
     "slug": "nerve-muscle-heart",
     "title": "神経・筋・心臓の特徴：再生が難しいとされる臓器",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "microscope",
     "publishAt": "2026-12-25",
     "publishedAt": "",
@@ -1022,7 +1022,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "454f14706a030276e76a555e103181003dc4493ffca698204ad220f122b3840f",
+      "contentHash": "cc46afed4f360b7f291c7a80142156e5b2b9474c90d55873ff36da02da8b83fb",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 4,
@@ -2611,7 +2611,7 @@
   "dna-basics": {
     "slug": "dna-basics",
     "title": "DNAの基礎：設計情報の読み方",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "laboratory",
     "publishAt": "2027-05-13",
     "publishedAt": "",
@@ -2633,7 +2633,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "9385c1278f8b54e5d1c632bac400ffc0f7acd638a1ab6339445fbe183f4942a3",
+      "contentHash": "2f329084128b5e700f4ab8403d651005a5c7d4165a96d6f41e31003b21daed2b",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -2643,7 +2643,7 @@
   "proteins-basics": {
     "slug": "proteins-basics",
     "title": "タンパク質の基礎：体の働き手",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "medical-research",
     "publishAt": "2027-05-16",
     "publishedAt": "",
@@ -2665,7 +2665,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "9be86384a48fd38e9f5c52fa0d0605602cd52640ff1bb880bc5a1a22f20802b5",
+      "contentHash": "ebf3127918ab8fb3720ef9dc2f5227c19210c07e97f1a94e9022727f96be8864",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -2675,7 +2675,7 @@
   "digestion-absorption": {
     "slug": "digestion-absorption",
     "title": "消化と吸収：栄養が体になるまで",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "microscope",
     "publishAt": "2027-05-19",
     "publishedAt": "",
@@ -2699,7 +2699,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "623f1b15a9b63d3b4fc1f1da7a9c1f9c0c9d48850e08898914cfbfcd6321654e",
+      "contentHash": "189028f1536667809bb7fd72e5f4dfd25b3c155d3bcf0ea315a1f2e495b32d24",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -2709,7 +2709,7 @@
   "circulation": {
     "slug": "circulation",
     "title": "循環の仕組み：血液が巡る道",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "doctor-consultation",
     "publishAt": "2027-05-22",
     "publishedAt": "",
@@ -2733,7 +2733,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "b8541c7716570fec33d45bc29573bc195655b0bf1b0d730aea31f55023fe2134",
+      "contentHash": "b076c25f822ccc2d0ad05eb2eb8418d414fb81a01a338b27eaab192bccf961ba",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -2743,7 +2743,7 @@
   "respiration": {
     "slug": "respiration",
     "title": "呼吸の仕組み：酸素と二酸化炭素の交換",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "laboratory",
     "publishAt": "2027-05-25",
     "publishedAt": "",
@@ -2765,7 +2765,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "ca94ca4282d0b30d00aef9735868cb4bc5ec101855144c05ff610dea21c9fdc3",
+      "contentHash": "5fac91571ada812ec4a79b308e9e707b2c42f85efcc2b3eb720a7cadafac7a4c",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -2775,7 +2775,7 @@
   "kidney-liver": {
     "slug": "kidney-liver",
     "title": "腎臓と肝臓：老廃物処理と代謝の要",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "medical-research",
     "publishAt": "2027-05-28",
     "publishedAt": "",
@@ -2799,7 +2799,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "c808655a17fca349378dbb59856c9258486e5e57f4ef714d7349f2da809789a3",
+      "contentHash": "ae1b6aac444b2be9e85970a4fbe1a0a01f397bb0b625339c2daafa9f10d44ecc",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -2809,7 +2809,7 @@
   "brain-basics": {
     "slug": "brain-basics",
     "title": "脳の基礎：指令塔のつくりと働き",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "microscope",
     "publishAt": "2027-06-01",
     "publishedAt": "",
@@ -2831,7 +2831,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "3ed0e28a3515699ccc10f1f6adea93773021fab358a3f5768a6680d2ea6900fe",
+      "contentHash": "d42799414d46434de5dbd8a18c2367ecf7a9b9765bd78a3c29410474f441cf0c",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -2841,7 +2841,7 @@
   "senses": {
     "slug": "senses",
     "title": "目と耳：感覚器の仕組みと再生研究",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "doctor-consultation",
     "publishAt": "2027-06-04",
     "publishedAt": "",
@@ -2863,7 +2863,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "c2f3bd6639740d43a164418baac52a2d6ef2bb51c44c39cb46b9cbfb648b468a",
+      "contentHash": "46e139c7a38ed1555927a2f3b8ba486acc1cad4216859bfad42e45bbdf2ce173",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -2873,7 +2873,7 @@
   "teeth-bones-growth": {
     "slug": "teeth-bones-growth",
     "title": "歯と骨の成長：子どもの体の変化",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "laboratory",
     "publishAt": "2027-06-07",
     "publishedAt": "",
@@ -2897,7 +2897,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "f5932047ef02ac40cd7fe6b24c086cdc838098263f73f20a505e8affbb0c70f2",
+      "contentHash": "96d83c49a537587c983cc2cadff0ddf88ca95bb8593ae04e48e36ce96a5dcd29",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 4,
@@ -2907,7 +2907,7 @@
   "hormones": {
     "slug": "hormones",
     "title": "ホルモンの基礎：全身の連絡網",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "medical-research",
     "publishAt": "2027-06-10",
     "publishedAt": "",
@@ -2931,7 +2931,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "98521711066109c7d5dd451dcd2c2efe36ff9311348c8c034fa2a2808ea032db",
+      "contentHash": "ddfd5e415e1206d4ec7b6323a3e0f7c3ba74488514cd937abc35c1deeff514ec",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -2941,7 +2941,7 @@
   "antibodies-vaccines": {
     "slug": "antibodies-vaccines",
     "title": "抗体とワクチン：免疫の記憶の仕組み",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "microscope",
     "publishAt": "2027-06-13",
     "publishedAt": "",
@@ -2966,7 +2966,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "af0da146fc9a5948330871a4bf474aad95e9f393890fa09bafa31257c48fdccd",
+      "contentHash": "11a4b74564b235c27b9c3225ee57cd4cf5453c721658b3a35af00049d970103a",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -2976,7 +2976,7 @@
   "allergy-basics": {
     "slug": "allergy-basics",
     "title": "アレルギーの基礎：過剰な防御反応",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "doctor-consultation",
     "publishAt": "2027-06-16",
     "publishedAt": "",
@@ -3001,7 +3001,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "12fef68ae6c49bbd4f940e97515dc0851760f7bd1ea159437d1f3548303aba49",
+      "contentHash": "a1becc44899e3ca00f3dbf02415edd475ff03a79d3d8bf78241c34a5476bf275",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -3011,7 +3011,7 @@
   "cancer-basics": {
     "slug": "cancer-basics",
     "title": "がんの基礎知識：細胞の増殖の暴走",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "laboratory",
     "publishAt": "2027-06-19",
     "publishedAt": "",
@@ -3037,7 +3037,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "15c01b858ebd0b7f2697d60b274ffd087d97d31c6496b4140f9bf46ebddf3847",
+      "contentHash": "8f49ec608332e80687c63d9077e77709d880d1f1ac707daa8bf75f3000126776",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -3047,7 +3047,7 @@
   "diabetes-lifestyle": {
     "slug": "diabetes-lifestyle",
     "title": "糖尿病と細胞：1型・2型とインスリンの働き",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "medical-research",
     "publishAt": "2027-06-22",
     "publishedAt": "",
@@ -3072,7 +3072,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "bb52f339b83aff8c6b8d69849eaa59c39fc779172b43c56f9582dc50430ae910",
+      "contentHash": "0ce8e086cfd1f513e1139efb0c5ced999ce7c5065705dd63967cf84676f9b9d2",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -3150,7 +3150,7 @@
   "disabilities-support": {
     "slug": "disabilities-support",
     "title": "障害と支援制度：医療と暮らしの橋渡し",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "laboratory",
     "publishAt": "2027-07-01",
     "publishedAt": "",
@@ -3174,7 +3174,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "efd89ff5547ff3d7b826e0bfdfcfe4546a80ff12b2bd09ecf565ce6dc3c4c9f1",
+      "contentHash": "43cdbf0fdeaaffdfc3f9ba5080bcfdbec38bc15eef1048dd08f1b2801f7ffbd3",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -3184,7 +3184,7 @@
   "rehabilitation-basics": {
     "slug": "rehabilitation-basics",
     "title": "リハビリの基礎：回復を支える訓練",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "medical-research",
     "publishAt": "2027-07-04",
     "publishedAt": "",
@@ -3208,7 +3208,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "1271d4c1dac4e31be2d4e75d374bbe3763575fb4c96f82b55850d16138f10b25",
+      "contentHash": "2068abfd14b0ede49940bcb2b01be2996495b93410dc44ad818eb79dd48e9916",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -3218,7 +3218,7 @@
   "nutrition-basics": {
     "slug": "nutrition-basics",
     "title": "栄養の基礎：5大栄養素と体の材料",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "microscope",
     "publishAt": "2027-07-07",
     "publishedAt": "",
@@ -3242,7 +3242,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "d65b6007b50ab7359ee93ddf2284b431fb62cb0a379238193fca5fe8b1ef5789",
+      "contentHash": "5acfa07dd0ff1d08a8c8f63c037c41b5c38ef16eec623b09b2661f160633912f",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -3252,7 +3252,7 @@
   "exercise-basics": {
     "slug": "exercise-basics",
     "title": "運動と体：筋肉・骨・心肺への効果",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "doctor-consultation",
     "publishAt": "2027-07-10",
     "publishedAt": "",
@@ -3276,7 +3276,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "e22d2bde2ce49db57b8ab710fbada0b2a58a642bb1739da87cca26528c50b6ed",
+      "contentHash": "072541b9c4dd38ecfee636fc1f994a8b4b9861925d936110e94317b289f4843f",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -3286,7 +3286,7 @@
   "sleep-basics": {
     "slug": "sleep-basics",
     "title": "睡眠と修復：眠りが体を整える",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "laboratory",
     "publishAt": "2027-07-13",
     "publishedAt": "",
@@ -3310,7 +3310,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "26a1b1aac316809d23c1f08d33749a3d056e39c30dd8718b38d5da24161b75d4",
+      "contentHash": "1e3777dac77fa95ed99d45dab6dd9d427da30d3121e12116d406b6c56077f7dd",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -3320,7 +3320,7 @@
   "mental-health-decision": {
     "slug": "mental-health-decision",
     "title": "心の健康と意思決定：不安と向き合う",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "medical-research",
     "publishAt": "2027-07-16",
     "publishedAt": "",
@@ -3344,7 +3344,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "f8d260a91a5d56fd5b2861681de992a258874c7bbedade978f95f955e3b05401",
+      "contentHash": "79351e1e45e2306bc3ab4f7f39f1ce602e883c87be5901bc48b3e711cdbd2b38",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -3354,7 +3354,7 @@
   "health-checkups": {
     "slug": "health-checkups",
     "title": "健診・検診の活かし方：結果の読み方",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "microscope",
     "publishAt": "2027-07-19",
     "publishedAt": "",
@@ -3376,7 +3376,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "05b7d5f49975f84e453899fef15220cd9b4ace329fec0c55454e46c92e0faac7",
+      "contentHash": "1a0182bac20c3f21bcfa8be2ba916e3c538866a27cd3f90ea53d175f2cfad8a6",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -3386,7 +3386,7 @@
   "family-doctor": {
     "slug": "family-doctor",
     "title": "かかりつけ医の持ち方：相談の起点",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "doctor-consultation",
     "publishAt": "2027-07-22",
     "publishedAt": "",
@@ -3410,7 +3410,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "c22792316456f686f9010c3c7a209c769a6ec685828388b6c315f173ba40fb79",
+      "contentHash": "fa692d01bef1cc475041aba4059060cafd60d4eecbc683ed2dbdeb88daae7b70",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -5147,7 +5147,7 @@
   "cell-sizes": {
     "slug": "cell-sizes",
     "title": "細胞の大きさ比べ：卵子から血小板まで",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "microscope",
     "publishAt": "2027-12-25",
     "publishedAt": "",
@@ -5169,7 +5169,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "6e35b55d7ccb503e300b7c0485e280fb633599583f765128b92b258beedd664d",
+      "contentHash": "69b63b2d074129f74a3dae19acadaee4df9d8848bb5e5f9e9bfe5f5907b15642",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -5179,7 +5179,7 @@
   "blood-types": {
     "slug": "blood-types",
     "title": "血液型の仕組み：ABO式と輸血の関係",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "doctor-consultation",
     "publishAt": "2027-12-28",
     "publishedAt": "",
@@ -5203,7 +5203,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "2912e9eceefdd862c1f5ee46345c93673e0f59d51393e2243cd9673a5453638d",
+      "contentHash": "1d9a45410dedb174a332c79c5426b30563e1c3e7e3d79e9a8303c1c4981bbf94",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 4,
@@ -5213,7 +5213,7 @@
   "body-water": {
     "slug": "body-water",
     "title": "体の水分と電解質：脱水を防ぐ考え方",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "laboratory",
     "publishAt": "2028-01-01",
     "publishedAt": "",
@@ -5235,7 +5235,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "57d9c27a86fe44e0e6026564f9ba2aaeeaf29a3cf0bdf90218ebfc1278be58c4",
+      "contentHash": "9fa46acabab60a01b536f9f6e4711d51e317a579c53ee10be3c4f519a4331a92",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -5245,7 +5245,7 @@
   "lymph-system": {
     "slug": "lymph-system",
     "title": "リンパの仕組み：むくみと免疫の通り道",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "medical-research",
     "publishAt": "2028-01-04",
     "publishedAt": "",
@@ -5270,7 +5270,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "5a7fc3639385494496d3a3e9bde4d40569a66f200a5241ae72b9c7d28cef4f6a",
+      "contentHash": "1bcbeae65f61675edfac8a7d8d0a58013ec869e0094f3e0d3107b45c268877eb",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -5280,7 +5280,7 @@
   "microbiome": {
     "slug": "microbiome",
     "title": "腸内細菌と体：共生する微生物の話",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "microscope",
     "publishAt": "2028-01-07",
     "publishedAt": "",
@@ -5305,7 +5305,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "1989f627540a6aae7437e46795bef9142b84f4554ca4e13c99f85a91d06e9e1c",
+      "contentHash": "51b8636d5e944ca39d6915425f848797bd9f9dc7f6b1698a939c81f1ab98daad",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -5315,7 +5315,7 @@
   "fever-basics": {
     "slug": "fever-basics",
     "title": "熱が出る仕組み：発熱と解熱の考え方",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "doctor-consultation",
     "publishAt": "2028-01-10",
     "publishedAt": "",
@@ -5340,7 +5340,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "63860caa025178a1db26074e5237677cacf48cc7679f2b4a10da5b46b9b7b1b1",
+      "contentHash": "80dae265b97acd8c189ca81cfa6431b9763b6530853f76e6755dda3a62e64bd8",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -5350,7 +5350,7 @@
   "pain-basics": {
     "slug": "pain-basics",
     "title": "痛みの仕組み：信号と感じ方の違い",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "laboratory",
     "publishAt": "2028-01-13",
     "publishedAt": "",
@@ -5374,7 +5374,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "3bfd4e8af905dc3a2406dc9684ba5a307d1ada106eded2de3c571c357bc313b7",
+      "contentHash": "eb1c926903a1f4b188f8092efc346175c91ddab7dc8a36f00009912d4e158557",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -5384,7 +5384,7 @@
   "joints-basics": {
     "slug": "joints-basics",
     "title": "関節の仕組み：動く連結部の構造",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "medical-research",
     "publishAt": "2028-01-16",
     "publishedAt": "",
@@ -5406,7 +5406,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "bf756332cee353777b57bafdc2460d7828673e78fc527a66eec40f63c95732b4",
+      "contentHash": "aca1c4489c9c6bef28f76a4921f9a6f9159ca8a9d3cbe7dc4349fa870df2d46f",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -5416,7 +5416,7 @@
   "fracture-healing": {
     "slug": "fracture-healing",
     "title": "骨折の治り方：骨がつながるまで",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "microscope",
     "publishAt": "2028-01-19",
     "publishedAt": "",
@@ -5440,7 +5440,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "c9c1bf82e65ad1149a6d0e42ba06895c6af26963b3b33d71f1fa5cf72aaa7473",
+      "contentHash": "add95c41e1dc10123f7d24a04ceb659ccdeeea420ab3bd3b2c8ea92d88a461cb",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -5450,7 +5450,7 @@
   "anemia-basics": {
     "slug": "anemia-basics",
     "title": "貧血とは：酸素不足のサイン",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "doctor-consultation",
     "publishAt": "2028-01-22",
     "publishedAt": "",
@@ -5472,7 +5472,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "4059cfb7653ac597acdae4b8d297d94ae1d2ddf63a23840d928dbe7231e08ce5",
+      "contentHash": "0fcc866f3572d33320b75bf36192c35576802d4da38b39582c36fec848d7f30a",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -5482,7 +5482,7 @@
   "blood-pressure-basics": {
     "slug": "blood-pressure-basics",
     "title": "血圧の仕組み：数値の読み方",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "laboratory",
     "publishAt": "2028-01-25",
     "publishedAt": "",
@@ -5506,7 +5506,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "e891bce6b0a4aae2d8ac38881c727978f1cc079d3a764df8f603778d24f89231",
+      "contentHash": "6b3236d10ea22bdde789d41d6c9b6284e576c575a0029b2926eb65e11a30d499",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -5516,7 +5516,7 @@
   "cholesterol-basics": {
     "slug": "cholesterol-basics",
     "title": "コレステロールとは：善玉・悪玉の話",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "medical-research",
     "publishAt": "2028-01-28",
     "publishedAt": "",
@@ -5540,7 +5540,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "48fa05592518e5efac5f2b662f51616fa949776284f7e1e1d5c483247f0d4a72",
+      "contentHash": "41fd76d8e845816c3cae703600209e8171def30da5faad4581ede943421f822b",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -5550,7 +5550,7 @@
   "heatstroke-dehydration": {
     "slug": "heatstroke-dehydration",
     "title": "脱水と熱中症：夏の備えと応急対応",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "microscope",
     "publishAt": "2028-02-01",
     "publishedAt": "",
@@ -5575,7 +5575,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "bc8dd5b3364e0d4b13bed378bef9765f44acb8bff47e22b46ef8bc358c8fdbbe",
+      "contentHash": "ebbc836459b228902c7a0bfceb57065a644f00c996f98fdebb10a2b8bfc58deb",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -6877,7 +6877,7 @@
   "thermometer-guide": {
     "slug": "thermometer-guide",
     "title": "体温計の使い方：脇・耳・おでこの違い",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "laboratory",
     "publishAt": "2028-05-25",
     "publishedAt": "",
@@ -6901,7 +6901,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "2b420992e7821bb4a5ab928044d970018e073628fbb6d9ae4efe72c93071b1b8",
+      "contentHash": "6f017016964493ccc94ffed6ddc0c25037578cdc3576476c0641ce41363cd670",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -6911,7 +6911,7 @@
   "blood-donation-basics": {
     "slug": "blood-donation-basics",
     "title": "献血の流れと条件：初めての方へ",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "medical-research",
     "publishAt": "2028-05-28",
     "publishedAt": "",
@@ -6935,7 +6935,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "dd5c9887dc8be58f23da1e056bd115258e95f1b84f5e19979124ccd381bbff51",
+      "contentHash": "b44c39edc114343a324de9a0ef83d5aae24c04cb72d44eb35519b4e3fb624cd2",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -6945,7 +6945,7 @@
   "microscope-world": {
     "slug": "microscope-world",
     "title": "顕微鏡でのぞく世界：細胞観察入門",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "microscope",
     "publishAt": "2028-06-01",
     "publishedAt": "",
@@ -6967,7 +6967,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "3211b7388f0f76d1dafcd6e025b97b275c128483fa4f9ea5150a1417263a9793",
+      "contentHash": "96434a1f2c7102368938d96ea609fa7e7abfd7eaeaa5fc743e507eb028a314b9",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -7215,7 +7215,7 @@
   "osteoporosis-basics": {
     "slug": "osteoporosis-basics",
     "title": "骨粗しょう症とは：骨が弱くなる仕組みと骨折予防",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "microscope",
     "publishAt": "2028-06-25",
     "publishedAt": "",
@@ -7230,7 +7230,7 @@
     "referenceCount": 4,
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "b8788d3771c3377904dd0241bf5d19ec54d6f2600199fd6a9fa53cc1a4e37564",
+      "contentHash": "5d0f8efac06b91c1de7fb3d0f4ce8cc3f5c26861c22d910d826a0bb70066b70a",
       "checkedAt": "2026-09-23",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -7249,7 +7249,7 @@
   "thyroid-disease-basics": {
     "slug": "thyroid-disease-basics",
     "title": "甲状腺の病気の基礎：バセドウ病と橋本病",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "doctor-consultation",
     "publishAt": "2028-06-28",
     "publishedAt": "",
@@ -7265,7 +7265,7 @@
     "referenceCount": 3,
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "9d62e4348baf637ff15f1c9684460f4aa6bdefea1cebde2d25b3ccc7f48ff051",
+      "contentHash": "ce9a15299fa674c8bb36a93a74267e4fa6458d4af38656c13d9c0f0ea32db4b4",
       "checkedAt": "2026-09-23",
       "status": "editorial_source_review",
       "sourceCount": 2,
@@ -7284,7 +7284,7 @@
   "dementia-basics": {
     "slug": "dementia-basics",
     "title": "認知症の基礎：早期発見と受診の目安",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "laboratory",
     "publishAt": "2028-07-01",
     "publishedAt": "",
@@ -7299,7 +7299,7 @@
     "referenceCount": 3,
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "047a34b42a3ab8573b2dab261483036f217ce3d99afbe3492f53a251130e7ec3",
+      "contentHash": "00789df9ff129bfba60c5fbedeb016fdad4d92328b11dc31d789fe24c9cefd64",
       "checkedAt": "2026-09-23",
       "status": "editorial_source_review",
       "sourceCount": 2,
@@ -7318,7 +7318,7 @@
   "stroke-basics": {
     "slug": "stroke-basics",
     "title": "脳卒中の基礎：突然の症状とACT-FAST",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "medical-research",
     "publishAt": "2028-07-04",
     "publishedAt": "",
@@ -7334,7 +7334,7 @@
     "referenceCount": 3,
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "94b85bbb0960672da1c6afb4a5bdbb5b0f2fca2b4279c378f044d04e3f03c56f",
+      "contentHash": "23788ad6394ed195bf9933673cb34e37e77d6119cbe470b705df2c2278efa4c3",
       "checkedAt": "2026-09-23",
       "status": "editorial_source_review",
       "sourceCount": 2,
@@ -7353,7 +7353,7 @@
   "heart-attack-basics": {
     "slug": "heart-attack-basics",
     "title": "心筋梗塞の基礎：胸の症状と救急要請の目安",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "microscope",
     "publishAt": "2028-07-07",
     "publishedAt": "",
@@ -7369,7 +7369,7 @@
     "referenceCount": 3,
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "c1461058dc63e4a05293e9fb1c192abdcaf4b0d1dac0656ca448f48470d8f613",
+      "contentHash": "e1bf385c760ba69936ba5a91dfb4b7adb542d041cefc83a913f534457689f30c",
       "checkedAt": "2026-09-23",
       "status": "editorial_source_review",
       "sourceCount": 2,

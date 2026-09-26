@@ -17,6 +17,7 @@ const copy = {
     ],
     closing: {
       "stem-basics": "基礎概念が固まったら、次は「どう使われているか（投与方法・体内での動き）」「どこまで証明されているか（エビデンス）」の記事に進むと、説明資料を見たときに違和感に気づきやすくなります。",
+      "health-basics": "体のしくみを知ると、再生医療の説明資料がずっと読みやすくなります。関連する基礎記事や、病気・検査の記事から順に進んでください。",
       "in-body": "投与された細胞の行方は研究で一部解明されていますが、「どこに届くか＝そこで働くか」は同じではありません。効果の説明と体内分布の知見を分けて考えることが大切です。",
       "anti-aging": "若返り・美容をうたう提供には慎重さが必要です。「研究で示されたこと」と「臨床で確かめられたこと」の違いを確認し、誇大な表現は広告規制の観点からも疑ってかかりましょう。",
       "efficacy": "効果の判断はエビデンスの質と量に基づきます。単一の報告や体験談ではなく、比較試験や系統的レビューの蓄積を確認することが、誤った期待を避ける基本です。",
@@ -39,6 +40,7 @@ const copy = {
     ],
     closing: {
       "stem-basics": "Once the basics are clear, move on to how cells are used and how much has been proven — you'll spot overstated claims more easily.",
+      "health-basics": "Knowing how the body works makes regenerative-medicine material much easier to read — keep going through the related basics articles.",
       "in-body": "Where administered cells go and whether they act there are separate questions — keep biodistribution findings apart from efficacy claims.",
       "anti-aging": "Be cautious of rejuvenation claims. Distinguish what research showed from what clinical care has established, and view exaggerated advertising critically.",
       "efficacy": "Judge efficacy by the quality and weight of evidence — comparative trials and reviews, not single reports or testimonials.",
@@ -61,6 +63,7 @@ const copy = {
     ],
     closing: {
       "stem-basics": "掌握基础概念后，建议继续阅读投与方式和证据强度相关内容，更容易发现夸大宣传。",
+      "health-basics": "了解身体机制后，再生医学的资料会更容易读懂，请按顺序阅读相关基础文章。",
       "in-body": "细胞到达哪里与是否发挥作用是两个问题，请将体内分布知识与疗效主张分开判断。",
       "anti-aging": "对“返老还童”“美容”类宣传需保持谨慎，区分研究阶段与临床确立的内容。",
       "efficacy": "疗效判断基于证据的质量与数量，请参考对照试验和系统综述而非单一报告或体验谈。",

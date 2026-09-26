@@ -9,6 +9,7 @@ const categoryNames: Record<SiteLocale, Record<string, string>> = {
   en: {
     all: "All",
     "stem-basics": "Stem cell basics",
+    "health-basics": "Body & health",
     "in-body": "Inside the body",
     "anti-aging": "Beauty & aging",
     efficacy: "Evidence & benefit",
@@ -21,6 +22,7 @@ const categoryNames: Record<SiteLocale, Record<string, string>> = {
   zh: {
     all: "全部",
     "stem-basics": "干细胞基础",
+    "health-basics": "身体与健康",
     "in-body": "体内的动向",
     "anti-aging": "美容・抗衰老",
     efficacy: "疗效与证据",

@@ -2734,3 +2734,11 @@ section[id^="sub-"] { scroll-margin-top: 80px; }
 }
 .article-note-title { margin: 0 0 4px; font-weight: 700; color: var(--green); }
 .article-note p:last-child { margin: 0; }
+
+.glossary-search { display: flex; align-items: center; gap: 12px; margin: 6px 0 12px; }
+.glossary-search input {
+  flex: 1; max-width: 480px; padding: 10px 14px; font-size: 15px;
+  border: 1px solid var(--line); border-radius: 999px; background: #fff;
+}
+.glossary-search input:focus { outline: 2px solid var(--green); outline-offset: 1px; }
+.glossary-hits { font-size: 13px; color: var(--muted); white-space: nowrap; }

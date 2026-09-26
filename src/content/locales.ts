@@ -2,6 +2,7 @@ export type SiteLocale = "en" | "zh";
 
 const categoryNamesZh = {
   "stem-basics": "干细胞基础",
+  "health-basics": "身体与健康基础",
   "in-body": "体内的动向",
   "anti-aging": "美容・抗衰老",
   efficacy: "疗效与证据",
@@ -14,6 +15,7 @@ const categoryNamesZh = {
 
 const categoryNamesEn = {
   "stem-basics": "Stem cell basics",
+  "health-basics": "Body & health basics",
   "in-body": "Inside the body",
   "anti-aging": "Beauty & aging",
   efficacy: "Evidence & benefit",
