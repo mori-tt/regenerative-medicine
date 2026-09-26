@@ -382,10 +382,10 @@ export function LocalizedArticle({ locale, source }: { locale: SiteLocale; sourc
         {(prevArticle || nextArticle) && (
           <nav className="article-pager" aria-label={en ? "Adjacent articles" : "同类相邻文章"}>
             {prevArticle ? (
-              <a href={`/${locale}/articles/${prevArticle.slug}/`}><small>{en ? "Previous" : "上一篇"}</small>← {localizedArticleFor(locale, prevArticle).title}</a>
+              <Link href={`/${locale}/articles/${prevArticle.slug}/`}><small>{en ? "Previous" : "上一篇"}</small>← {localizedArticleFor(locale, prevArticle).title}</Link>
             ) : <span />}
             {nextArticle ? (
-              <a className="next" href={`/${locale}/articles/${nextArticle.slug}/`}><small>{en ? "Next" : "下一篇"}</small>{localizedArticleFor(locale, nextArticle).title} →</a>
+              <Link className="next" href={`/${locale}/articles/${nextArticle.slug}/`}><small>{en ? "Next" : "下一篇"}</small>{localizedArticleFor(locale, nextArticle).title} →</Link>
             ) : <span />}
           </nav>
         )}

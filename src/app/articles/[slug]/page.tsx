@@ -222,10 +222,10 @@ export default async function ArticlePage({
       {(prevArticle || nextArticle) && (
         <nav className="article-pager" aria-label="このカテゴリの前後の記事">
           {prevArticle ? (
-            <a href={`/articles/${prevArticle.slug}/`}><small>前の記事</small>← {prevArticle.title}</a>
+            <Link href={`/articles/${prevArticle.slug}/`}><small>前の記事</small>← {prevArticle.title}</Link>
           ) : <span />}
           {nextArticle ? (
-            <a className="next" href={`/articles/${nextArticle.slug}/`}><small>次の記事</small>{nextArticle.title} →</a>
+            <Link className="next" href={`/articles/${nextArticle.slug}/`}><small>次の記事</small>{nextArticle.title} →</Link>
           ) : <span />}
         </nav>
       )}

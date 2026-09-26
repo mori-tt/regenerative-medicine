@@ -100,7 +100,7 @@ export default async function CategoryPage({
           {group.keywords && (
             <div className="kw-chips" aria-label="関連キーワード">
               {group.keywords.ja.map((kw) => (
-                <a key={kw} className="kw-chip" href={`/search/?q=${encodeURIComponent(kw)}`}>{kw}</a>
+                <Link key={kw} className="kw-chip" href={`/search/?q=${encodeURIComponent(kw)}`}>{kw}</Link>
               ))}
             </div>
           )}
