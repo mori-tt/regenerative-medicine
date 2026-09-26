@@ -298,3 +298,12 @@ FTPSでレンタルサーバーの公開フォルダへ
 - `deployDate` は `src/content/site-config.json` の `deployDate`（環境変数 `NEXT_PUBLIC_DEPLOY_DATE` で上書き可）。現在は仮置き `2026-10-01`。
 - デプロイ日まで本番ビルドでは記事非表示、プレビュー（`NEXT_PUBLIC_ARTICLE_BUILD_MODE=all`）では全表示。デプロイ日以降に再ビルドすると一斉公開される。
 - 旧来の段階公開スケジュール（review-records.json の publishAt）は廃止し、新規記事は同じ変数で管理する。
+
+## 33. タイポグラフィ間隔の調整（2026-09-26 追記18）
+
+- 実ブラウザで全ページ種の縦間隔をスキャンし、密着箇所を修正。
+- `.listing-lead` のネガティブマージン（-8px）を解消して見出し下に適切な間隔を確保。
+- `.listing-grid` 内カードの h3・説明文・メタ行・下部日付行の間隔を拡大。
+- `.article-meta` に `align-items: center` を追加しチップと文字の縦揃えを改善。
+- `.section-heading h2` / `.preview-status` / `.card-bottom` の上マージンを微増。
+- 監修者プロフィールの資格・経歴リストに `li + li` 間隔とline-heightを追加、モバイルで経歴カラムを1列化。
