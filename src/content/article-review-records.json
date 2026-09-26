@@ -107,7 +107,7 @@
   "stem-cell-types": {
     "slug": "stem-cell-types",
     "title": "幹細胞にはどんな種類がある？ES細胞・iPS細胞・間葉系幹細胞の違い",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "researcher",
     "publishAt": "2026-09-30",
     "publishedAt": "",
@@ -132,7 +132,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "ee13232f10009a92a62f654ea0a0e7b9bb163a5c9d50d6ce2f1d29345ce4e3f2",
+      "contentHash": "c3555752024d5a32489ca6d488851eb1302150ce1593f8a993bbe87e0dd63aca",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -213,7 +213,7 @@
   "questions-before-treatment": {
     "slug": "questions-before-treatment",
     "title": "幹細胞治療を受ける前に知っておきたいこと",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "medical-research",
     "publishAt": "2026-10-09",
     "publishedAt": "",
@@ -226,6 +226,7 @@
       "effect_or_treatment_claim",
       "safety_or_risk_claim",
       "cost_or_system_claim",
+      "regulatory_or_advertising_claim",
       "individual_decision_context"
     ],
     "referenceCount": 5,
@@ -240,7 +241,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "6771b7538cc40953628195017b649cbdd57df212e6145a4f187c9ab416a447e7",
+      "contentHash": "acdf597cfe6f76700889a35a788d530e649c3b48f75e166d06cd61e7fca98451",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -616,7 +617,7 @@
   "reading-research-news": {
     "slug": "reading-research-news",
     "title": "再生医療のニュースを読むための、3つの視点",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "laboratory",
     "publishAt": "2026-11-22",
     "publishedAt": "",
@@ -640,7 +641,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "0ffe512a8815e2f4a5eaf9ddd554627f483ed013764afa9d17c1198525f3fc0f",
+      "contentHash": "d1423c01a7477877f3f588eebd0bfe58326258c3535c9d219c56c33aed220028",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -756,7 +757,7 @@
   "body-repair-mechanisms": {
     "slug": "body-repair-mechanisms",
     "title": "幹細胞はどうやって体の組織を修復するの？",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "doctor-consultation",
     "publishAt": "2026-12-04",
     "publishedAt": "",
@@ -781,7 +782,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "7ee91c6e1082cb5575f6d8a73ce98a07e528eb940050add69a97d6e440854f17",
+      "contentHash": "412239917f2d44ae902197495e2d390db579fb223fa6e2a56d6a40af8d8d2268",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 4,
@@ -827,7 +828,7 @@
   "differentiation-basics": {
     "slug": "differentiation-basics",
     "title": "分化・脱分化・リプログラミング：細胞の変化を表す言葉",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "medical-research",
     "publishAt": "2026-12-10",
     "publishedAt": "",
@@ -836,7 +837,10 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": [],
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
     "referenceCount": 4,
     "reviewer": {
       "status": "planned",
@@ -849,7 +853,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "de69705b985ab52aa7a4d1866c11410267489d849d09c2600d93599d84234dc4",
+      "contentHash": "73f9195c58f0d5a576c7d85ed49847d6a107f957c834d2009da24e33acc46853",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -893,7 +897,7 @@
   "immune-basics": {
     "slug": "immune-basics",
     "title": "免疫の基礎と拒絶：他人の細胞が排除される理由",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "doctor-consultation",
     "publishAt": "2026-12-16",
     "publishedAt": "",
@@ -918,7 +922,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "caf059be4ac4b7b3b864fbad58e8becb7365d6482f848c467b2741b3dbaf0aae",
+      "contentHash": "8e286fbe09acf88cf37a17eb2315e34a3db4c9f71f4c7b1c69198f30aa353796",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -1209,7 +1213,7 @@
   "hematopoietic-transplant": {
     "slug": "hematopoietic-transplant",
     "title": "造血幹細胞移植：確立した細胞治療の代表例",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "researcher",
     "publishAt": "2027-01-13",
     "publishedAt": "",
@@ -1234,7 +1238,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "42ff403bb74132788cb62f77535ccd7fa4c36cb3e39d6d7505e06f5633bcb190",
+      "contentHash": "cfb7bb05e20bba0c634cb0f629937714093194b3aa37a22f018211206b0394b1",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -1456,7 +1460,7 @@
   "autologous-allogeneic": {
     "slug": "autologous-allogeneic",
     "title": "自家幹細胞と他家幹細胞の違いとは？",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "laboratory",
     "publishAt": "2027-02-04",
     "publishedAt": "",
@@ -1482,7 +1486,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "c34ac0c6743a4cf3f39945d1c944c5f385f33aafa0cffec6a5f0309da8a63d76",
+      "contentHash": "887e5bf50603d51ea84f4ef4ff8c937b8afbf3b1853f5969013185468928af90",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -1598,7 +1602,7 @@
   "organoids-intro": {
     "slug": "organoids-intro",
     "title": "オルガノイド入門：ミニ臓器で何が分かるか",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "laboratory",
     "publishAt": "2027-02-16",
     "publishedAt": "",
@@ -1623,7 +1627,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "3338835e33942165739c711052bb654567a133c6dcdc8ae8746399d05e27cd3c",
+      "contentHash": "6afe2bf83a95958fa349de11aab461bf7b4125b6f7c96f47a2017b1566c18ed1",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 1,
@@ -1776,7 +1780,7 @@
   "insurance-care": {
     "slug": "insurance-care",
     "title": "幹細胞治療は保険適用される？自由診療との違い",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "medical-team",
     "publishAt": "2027-03-01",
     "publishedAt": "",
@@ -1803,7 +1807,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "e170b8d68ab0e8d7f3eb859d56365a65ed4e154d4750ae82d440431a4601cd14",
+      "contentHash": "5f7f0a45710c3f7297fc0731dfff29f411a9b468d42d99c7cb184c9d90c460ad",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 4,
@@ -1813,7 +1817,7 @@
   "jibihi-contract": {
     "slug": "jibihi-contract",
     "title": "自由診療の契約書の読み方：署名前に見る点",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "medical-research",
     "publishAt": "2027-03-04",
     "publishedAt": "",
@@ -1823,6 +1827,7 @@
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
     "riskFlags": [
+      "effect_or_treatment_claim",
       "safety_or_risk_claim",
       "cost_or_system_claim",
       "regulatory_or_advertising_claim",
@@ -1840,7 +1845,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "685e95afda6fbf8d5e68e0d661209dea77225c7f17a793da56cdf2f30b201ae9",
+      "contentHash": "8c2c09cc6d677c7c03359c62be019b307cd058a89ab15df8a7e78b57141e6ece",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 4,
@@ -1888,7 +1893,7 @@
   "trouble-help": {
     "slug": "trouble-help",
     "title": "トラブル時の相談先：困ったときの連絡順",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "hospital-care",
     "publishAt": "2027-03-10",
     "publishedAt": "",
@@ -1898,6 +1903,8 @@
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
     "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim",
       "cost_or_system_claim",
       "regulatory_or_advertising_claim",
       "individual_decision_context"
@@ -1914,7 +1921,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "799ae0366a8f763898823278c95bacd27f123a576ef636bdb153dfa245c89276",
+      "contentHash": "d604c2223d3a3faf4da2e87c8c9c7aef7103ea946c4ca288f430503006461002",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 6,

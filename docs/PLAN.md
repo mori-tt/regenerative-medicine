@@ -253,3 +253,9 @@ FTPSでレンタルサーバーの公開フォルダへ
 - `faqSectionsFor` に category 引数を追加しフォールバック解決。
 - 印刷スタイル（@media print）を追加：ヘッダー・広告・図版・関連記事を非表示にし、本文・FAQ・免責・参考文献のみ出力。印刷して医療機関に持参する用途に対応。
 - アクセシビリティ確認：スキップリンク・lang属性・目次アンカーは既に整備済み。
+
+## 26. 個別記事本文の拡充（2026-09-26 追記11）
+
+- 薄かった12記事の原稿（`sections`）を実質的に書き足し。生成テンプレートではなく記事固有の内容で3〜4セクションずつ追加：
+  questions-before-treatment / stem-cell-types / body-repair-mechanisms / differentiation-basics / immune-basics / hematopoietic-transplant / autologous-allogeneic / insurance-care / jibihi-contract / trouble-help / organoids-intro / reading-research-news
+- 内容は「確認できること・確認の仕方・限界」の3点で構成し、断定表現を避けた。
