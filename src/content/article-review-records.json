@@ -792,7 +792,7 @@
   "self-vs-donor-cells": {
     "slug": "self-vs-donor-cells",
     "title": "自家と他家：誰の細胞を使うかの違い",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "laboratory",
     "publishAt": "2026-12-07",
     "publishedAt": "",
@@ -818,7 +818,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "6fb9e0259e09824adf11c6584a2fbec93d89afc91c84fcf8bd121d50bc14d510",
+      "contentHash": "f64f7d63954e88bd20520bbfa1dedef35e19505ede31afc63b9277f82e603ae5",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -863,7 +863,7 @@
   "genes-and-cells": {
     "slug": "genes-and-cells",
     "title": "遺伝子と細胞の関係：設計図と働き手の入門",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "microscope",
     "publishAt": "2026-12-13",
     "publishedAt": "",
@@ -887,7 +887,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "87fce272f23b156752919d4796380a8ed8267b1e6b30a0d476bd5c40e10187a7",
+      "contentHash": "220c0d27b81503641d8b2ee630aa07e37919882658724b6cd55fcd13101d9fe9",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -943,7 +943,8 @@
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
     "riskFlags": [
       "effect_or_treatment_claim",
-      "safety_or_risk_claim"
+      "safety_or_risk_claim",
+      "public_health_instruction"
     ],
     "referenceCount": 5,
     "reviewer": {
@@ -957,7 +958,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "bec1df8cca73b11e023a875196554817305662a3787a0cc18b02022640b15b44",
+      "contentHash": "dbea514ed0f75fb039e0de39d44ebde10796cfc7b97b176e133e1e391bae8442",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -967,7 +968,7 @@
   "skin-bone-cartilage": {
     "slug": "skin-bone-cartilage",
     "title": "皮膚・骨・軟骨の再生：身近な組織の例",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "medical-research",
     "publishAt": "2026-12-22",
     "publishedAt": "",
@@ -992,7 +993,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "c691c460a69e43bbb201761a48b1a92b1859630dfa56023fa4e0b2438670e15a",
+      "contentHash": "eb67f4e225eac8b5629536111b9460939b6ec258743d0cc95c0ed246d156d542",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 4,
@@ -1026,7 +1027,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "cc46afed4f360b7f291c7a80142156e5b2b9474c90d55873ff36da02da8b83fb",
+      "contentHash": "f1fcb1d30af0c293ff5a4964aaa4b70ea1a49232494b002b7a6cbf7760206ca7",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 4,
@@ -1036,7 +1037,7 @@
   "age-and-regeneration": {
     "slug": "age-and-regeneration",
     "title": "年齢と再生力：子どもの治りと大人の治りの違い",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "doctor-consultation",
     "publishAt": "2026-12-28",
     "publishedAt": "",
@@ -1046,7 +1047,8 @@
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
     "riskFlags": [
-      "effect_or_treatment_claim"
+      "effect_or_treatment_claim",
+      "regulatory_or_advertising_claim"
     ],
     "referenceCount": 5,
     "reviewer": {
@@ -1060,7 +1062,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "bd4acb8d1b6ba1c533cc1276817ca7ef198e5261ee623af0bcc12012fb6552ac",
+      "contentHash": "50ce351ae39b3aa561ba3cdcc195ce6a1887612a23bcf0f9eae9c6d369f4afe6",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -1070,7 +1072,7 @@
   "drugs-surgery-comparison": {
     "slug": "drugs-surgery-comparison",
     "title": "薬・手術との比較：再生医療の位置づけ",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "laboratory",
     "publishAt": "2027-01-01",
     "publishedAt": "",
@@ -1096,7 +1098,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "dc683e0182a9f7b2042187d80122a8a5b16e25bc2d2d2cb57f41cbd5cf6ec097",
+      "contentHash": "e35f627bc308116b468d08dac89290bcc494d81888b2a3810bd888d100e1d6f2",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -1106,7 +1108,7 @@
   "hospital-words": {
     "slug": "hospital-words",
     "title": "病院で聞く言葉：適応・禁忌・予後・QOL",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "medical-research",
     "publishAt": "2027-01-04",
     "publishedAt": "",
@@ -1117,6 +1119,8 @@
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
     "riskFlags": [
       "effect_or_treatment_claim",
+      "safety_or_risk_claim",
+      "regulatory_or_advertising_claim",
       "individual_decision_context"
     ],
     "referenceCount": 4,
@@ -1131,7 +1135,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "3430ae751c34a7d7851d31a2ac198803926853be54c09f3f674d0134e35b38c5",
+      "contentHash": "e8cb512c1c5156ee0e07322683b96f84744e6ae5b8fe40cf89c128c93370b099",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -1141,7 +1145,7 @@
   "family-discussion": {
     "slug": "family-discussion",
     "title": "家族との話し方：治療の選択を共有するために",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "microscope",
     "publishAt": "2027-01-07",
     "publishedAt": "",
@@ -1152,6 +1156,7 @@
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
     "riskFlags": [
       "effect_or_treatment_claim",
+      "safety_or_risk_claim",
       "cost_or_system_claim",
       "individual_decision_context"
     ],
@@ -1167,7 +1172,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "836181012e17ecb71eaede611ad5c0d4c484ab3f22dff25b75a643799b6efa05",
+      "contentHash": "4cb2a5fb166080ae874bd56357fac6550860cff5921a549c211f5f7533249d4d",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -1177,7 +1182,7 @@
   "next-steps-after-basics": {
     "slug": "next-steps-after-basics",
     "title": "基礎の次に読む順番：あなたに合った道案内",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "doctor-consultation",
     "publishAt": "2027-01-10",
     "publishedAt": "",
@@ -1189,7 +1194,8 @@
     "riskFlags": [
       "effect_or_treatment_claim",
       "safety_or_risk_claim",
-      "cost_or_system_claim"
+      "cost_or_system_claim",
+      "regulatory_or_advertising_claim"
     ],
     "referenceCount": 5,
     "reviewer": {
@@ -1203,7 +1209,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "daa79ccdb94231c0402cf2c7fb38558dc7e615562c18a0ab33c5b3723df1dc40",
+      "contentHash": "52fe926936a0da6806dc5c841b14b5823ad4a1e2edaca2c1c346207e84d6804e",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -1284,7 +1290,7 @@
   "neural-stem-cells": {
     "slug": "neural-stem-cells",
     "title": "神経系細胞の移植：研究と疾患ごとの臨床段階",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "microscope",
     "publishAt": "2027-01-19",
     "publishedAt": "",
@@ -1310,7 +1316,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "c45f28aa81fe6a986ae533a49490943525636339b928b011018502d38805e5f2",
+      "contentHash": "9ff031c90f37843433e457c963e8db95b141b5ada78256429ef490e7ab287481",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -1320,7 +1326,7 @@
   "tissue-stem-cells": {
     "slug": "tissue-stem-cells",
     "title": "組織幹細胞の世界：皮膚・腸・筋肉の維持役",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "laboratory",
     "publishAt": "2027-01-22",
     "publishedAt": "",
@@ -1345,7 +1351,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "d24e9660b67f6767d214078d6b9dabcf6dfc73e12a42562ffb73715e0596ec34",
+      "contentHash": "3a393825f6f21ae7f0d9caf9c1ca03d160d5bad37728a026432c650208ae5611",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 2,
@@ -1355,7 +1361,7 @@
   "ips-stock": {
     "slug": "ips-stock",
     "title": "iPS細胞ストック：備蓄細胞で迅速に届ける工夫",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "researcher",
     "publishAt": "2027-01-25",
     "publishedAt": "",
@@ -1365,6 +1371,7 @@
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
     "riskFlags": [
+      "effect_or_treatment_claim",
       "safety_or_risk_claim",
       "cost_or_system_claim"
     ],
@@ -1380,7 +1387,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "fc9ce75377f5e9503d76f477ae7351d530d4d1ac151c9defd2f064826a7a9590",
+      "contentHash": "c324d971579b7982176ee133b967be55771f19e4bb740b957c895a82b25b8d36",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 2,
@@ -1390,7 +1397,7 @@
   "differentiation-purification": {
     "slug": "differentiation-purification",
     "title": "分化誘導と純化：目的の細胞だけを取り出す技術",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "medical-research",
     "publishAt": "2027-01-28",
     "publishedAt": "",
@@ -1415,7 +1422,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "358b7b6644921b661b16bf0e54556f4352487a29b8ff68c58ef89668306f4085",
+      "contentHash": "2ec7b61c77e98975d7d061c7a7197e551e7df7cd66af74f30a4b5f5e96fc9eae",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 1,
@@ -1425,7 +1432,7 @@
   "genome-editing-difference": {
     "slug": "genome-editing-difference",
     "title": "ゲノム編集との違い：切る技術と育てる技術",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "microscope",
     "publishAt": "2027-02-01",
     "publishedAt": "",
@@ -1450,7 +1457,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "fc6653b3e2e9b2cd4fa28aa839a839cfeaa2c3c84270817d163f09db9759819e",
+      "contentHash": "e710b63db42e0911d560adeec31c66719e6cccd07fd8d9e744c19757e4f930af",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 2,
@@ -1496,7 +1503,7 @@
   "tumorigenicity-safety": {
     "slug": "tumorigenicity-safety",
     "title": "腫瘍化と安全性試験：増える力の裏側",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "researcher",
     "publishAt": "2027-02-07",
     "publishedAt": "",
@@ -1506,6 +1513,7 @@
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
     "riskFlags": [
+      "effect_or_treatment_claim",
       "safety_or_risk_claim",
       "individual_decision_context"
     ],
@@ -1521,7 +1529,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "2db470be57241d76d8b50de8e5a4cfc9b603e46c5f57812abb848429283ee96f",
+      "contentHash": "7bddb242394d8b57019ff455743a0169751a62830a5ba83bacdad2a94a09d9d4",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 1,
@@ -1531,7 +1539,7 @@
   "hla-rejection": {
     "slug": "hla-rejection",
     "title": "HLAと拒絶：型合わせの基本",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "medical-research",
     "publishAt": "2027-02-10",
     "publishedAt": "",
@@ -1557,7 +1565,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "07614bc32e8e28d97b5e0793fabaca9a467163ace726b65bf3cd710efd959425",
+      "contentHash": "2548d8fe55227f2604ed72aa209570633756b7492439fa7834b0776a2fd3bd1a",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -1567,7 +1575,7 @@
   "ips-drug-discovery": {
     "slug": "ips-drug-discovery",
     "title": "iPS創薬：移植だけではないiPSの使い道",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "microscope",
     "publishAt": "2027-02-13",
     "publishedAt": "",
@@ -1578,7 +1586,8 @@
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
     "riskFlags": [
       "effect_or_treatment_claim",
-      "safety_or_risk_claim"
+      "safety_or_risk_claim",
+      "regulatory_or_advertising_claim"
     ],
     "referenceCount": 3,
     "reviewer": {
@@ -1592,7 +1601,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "4b83c45fd850b91fb86d623e0c04c660e96e2daa4e46ff23839d025e6db5c237",
+      "contentHash": "ca104773abd31d1743795f20037ea3fad623540ee893cbc74e446edcb11a7ee8",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 1,
@@ -1637,7 +1646,7 @@
   "exosomes-notes": {
     "slug": "exosomes-notes",
     "title": "幹細胞治療とエクソソーム治療は何が違う？",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "researcher",
     "publishAt": "2027-02-19",
     "publishedAt": "",
@@ -1663,7 +1672,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "ea0d3509dce32779d0b28b70d19c8abd16032b65a83e0fdfa6e677495126a9c6",
+      "contentHash": "1c0520408ebe25b178960a0513d62e3fb5d7dfecaa72526afc059de9da6840ca",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 1,
@@ -1673,7 +1682,7 @@
   "first-visit-prep": {
     "slug": "first-visit-prep",
     "title": "初診の準備：持参物と伝え方の checklist",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "medical-research",
     "publishAt": "2027-02-22",
     "publishedAt": "",
@@ -1684,6 +1693,7 @@
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
     "riskFlags": [
       "effect_or_treatment_claim",
+      "cost_or_system_claim",
       "individual_decision_context"
     ],
     "referenceCount": 4,
@@ -1698,7 +1708,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "8a5eb116b060efc94a99f255371e2e1ffa237adb41587bf610c06e968c297ed3",
+      "contentHash": "9d7f742c0e0e5907560700f2267b7c9d40b13e7e715d5580554d043b46682975",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -1708,9 +1718,47 @@
   "informed-consent-howto": {
     "slug": "informed-consent-howto",
     "title": "再生医療を受けるなら、どんな説明を受けるべき？",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "doctor-consultation",
     "publishAt": "2027-02-25",
+    "publishedAt": "",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "topic_sources_mapped_professional_review_pending",
+    "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim",
+      "cost_or_system_claim",
+      "regulatory_or_advertising_claim",
+      "individual_decision_context"
+    ],
+    "referenceCount": 5,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
+    "editorialEvidence": {
+      "revision": "literature-v2",
+      "contentHash": "3d9f892188d49ced675beaf8465b90a8360052f00dfe2aaeee80658f991f74e6",
+      "checkedAt": "2026-09-22",
+      "status": "editorial_source_review",
+      "sourceCount": 3,
+      "note": "Reviewed all Japanese, English and Chinese points and paragraphs against Japanese consent rules, regenerative-product GCP guidance and Consumer Affairs Agency decision guidance. Original advice was broadly sound; no mandatory factual replacement identified. Added the research/clinical-care distinction, scope of written consent and comprehension checks. Trial-specific requirements are explicitly limited to trials; cosmetic guidance is identified as such. No trial efficacy estimate or individual treatment recommendation is inferred."
+    }
+  },
+  "treatment-flow": {
+    "slug": "treatment-flow",
+    "title": "相談から治療後までの流れ：全体像をつかむ",
+    "lastEditedAt": "2026-09-26",
+    "imageKey": "hospital-care",
+    "publishAt": "2027-02-28",
     "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
@@ -1735,42 +1783,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "3ddc3c46bba1c312803ec849cdb32284c130ac51941ee26f17ce36a9caa71552",
-      "checkedAt": "2026-09-22",
-      "status": "editorial_source_review",
-      "sourceCount": 3,
-      "note": "Reviewed all Japanese, English and Chinese points and paragraphs against Japanese consent rules, regenerative-product GCP guidance and Consumer Affairs Agency decision guidance. Original advice was broadly sound; no mandatory factual replacement identified. Added the research/clinical-care distinction, scope of written consent and comprehension checks. Trial-specific requirements are explicitly limited to trials; cosmetic guidance is identified as such. No trial efficacy estimate or individual treatment recommendation is inferred."
-    }
-  },
-  "treatment-flow": {
-    "slug": "treatment-flow",
-    "title": "相談から治療後までの流れ：全体像をつかむ",
-    "lastEditedAt": "2026-09-25",
-    "imageKey": "hospital-care",
-    "publishAt": "2027-02-28",
-    "publishedAt": "",
-    "releaseTrack": "scheduled",
-    "medicalStatus": "needs_medical_review",
-    "legalStatus": "needs_legal_editorial_review",
-    "evidenceStatus": "topic_sources_mapped_professional_review_pending",
-    "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": [
-      "effect_or_treatment_claim",
-      "individual_decision_context"
-    ],
-    "referenceCount": 5,
-    "reviewer": {
-      "status": "planned",
-      "name": "千原 良友",
-      "reviewedAt": "",
-      "scope": "",
-      "conflictOfInterest": ""
-    },
-    "publishGate": "review_record_required",
-    "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
-    "editorialEvidence": {
-      "revision": "literature-v2",
-      "contentHash": "99445abdb9c31f3da1fdf0d37978ebce045573fc2b7a4ac73c68dfe2f544e990",
+      "contentHash": "9ace0f435327dcae21ad523d7d21e8843e355f7bc39787512a7db50d1cb3470f",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -1855,7 +1868,7 @@
   "advertising-literacy": {
     "slug": "advertising-literacy",
     "title": "広告の見分け方：症例写真・体験談との付き合い方",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "doctor-consultation",
     "publishAt": "2027-03-07",
     "publishedAt": "",
@@ -1883,7 +1896,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "103e920fbee354b63948ba1edd8b63a3092f6c713ce8c95f21c57eed6551684a",
+      "contentHash": "373625403c661871269ca750efbd160c2c3e7f0200e9761fbdea58c6d81f17a3",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 4,
@@ -1931,7 +1944,7 @@
   "aftercare": {
     "slug": "aftercare",
     "title": "治療後の経過観察：通院・検査・生活の注意",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "medical-team",
     "publishAt": "2027-03-13",
     "publishedAt": "",
@@ -1942,6 +1955,7 @@
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
     "riskFlags": [
       "effect_or_treatment_claim",
+      "cost_or_system_claim",
       "individual_decision_context"
     ],
     "referenceCount": 8,
@@ -1956,7 +1970,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "70689d6b7059531300187d292d629265aa3b301603651f298ded59fc8a007af8",
+      "contentHash": "3df9340c95dfd1ebc283f0362cf1dc01508196520bbffb6ea43f03da17c41f4c",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 6,
@@ -1966,7 +1980,7 @@
   "pain-burden": {
     "slug": "pain-burden",
     "title": "痛み・入院・通院の負担：体と暮らしの見通し",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "medical-research",
     "publishAt": "2027-03-16",
     "publishedAt": "",
@@ -1991,7 +2005,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "49c2cdbeee4dd941f67e77035dd1184bb00c0a61ea4cb455e8e4b70071e8fc26",
+      "contentHash": "21a389406480bfac01df91f3ae0b07a7bac844b502183943997371ae59981bd7",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -2001,7 +2015,7 @@
   "family-decision": {
     "slug": "family-decision",
     "title": "家族と決める：代理判断が必要なとき",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "doctor-consultation",
     "publishAt": "2027-03-19",
     "publishedAt": "",
@@ -2012,6 +2026,7 @@
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
     "riskFlags": [
       "effect_or_treatment_claim",
+      "safety_or_risk_claim",
       "individual_decision_context"
     ],
     "referenceCount": 5,
@@ -2026,7 +2041,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "de8e4371264e51af74a89ba055542570b5a4c49ba75c7fc7b01fdb09f753d17a",
+      "contentHash": "f5e4fb3f032c400d9975c8a8735c7e832148084e89d936870e2c1d900dc0c3b0",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -2036,7 +2051,7 @@
   "elderly-points": {
     "slug": "elderly-points",
     "title": "高齢者が考えるときの注意：持病・薬・通院",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "hospital-care",
     "publishAt": "2027-03-22",
     "publishedAt": "",
@@ -2046,6 +2061,8 @@
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
     "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim",
       "individual_decision_context"
     ],
     "referenceCount": 5,
@@ -2060,7 +2077,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "13f5d3342ebcd6b7d213281de39687045070760e23b2d974e0e3c637cd2fd36e",
+      "contentHash": "56561dddba063c7f6102a1e93006018425eece44abb333043ed9ce7124b2fce0",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -2070,7 +2087,7 @@
   "children-points": {
     "slug": "children-points",
     "title": "子どもが対象のとき：成長への配慮と同意",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "medical-team",
     "publishAt": "2027-03-25",
     "publishedAt": "",
@@ -2081,6 +2098,7 @@
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
     "riskFlags": [
       "effect_or_treatment_claim",
+      "safety_or_risk_claim",
       "individual_decision_context"
     ],
     "referenceCount": 6,
@@ -2095,7 +2113,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "279a08d6bd0cf3b804c5c9844b4415ca39496db4efd5966ee82437f38e8997cd",
+      "contentHash": "c00fbbd9fde9732c67a1432d844c701743879f3bb6f6538572df9db89917f331",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 4,
@@ -2105,7 +2123,7 @@
   "final-checklist": {
     "slug": "final-checklist",
     "title": "幹細胞治療を受ける前に確認したいポイント：契約前チェックリスト",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "medical-research",
     "publishAt": "2027-03-28",
     "publishedAt": "",
@@ -2133,7 +2151,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "79501013b7a9fa1eb1e0d13fe267bc82ddefa8569548058472767d86e3c17bcb",
+      "contentHash": "60fe1ae393b042d05749298b5eabd910af982bb6a1cb3cd6897f3962ebaf2d73",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 5,
@@ -2143,7 +2161,7 @@
   "bench-to-bedside": {
     "slug": "bench-to-bedside",
     "title": "基礎と臨床の橋渡し：トランスレーショナルリサーチ",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "laboratory",
     "publishAt": "2027-04-01",
     "publishedAt": "",
@@ -2153,7 +2171,9 @@
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
     "riskFlags": [
-      "safety_or_risk_claim"
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim",
+      "cost_or_system_claim"
     ],
     "referenceCount": 6,
     "reviewer": {
@@ -2167,7 +2187,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "6999b1e225db81ed9284d7a9285b27f5b04e4b1419c5676c524b38c7b6395ec4",
+      "contentHash": "823ed586a8cae263517918dc002f24b951b18fa7a05a18bda629967703044d18",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 4,
@@ -2177,7 +2197,7 @@
   "randomized-trials": {
     "slug": "randomized-trials",
     "title": "ランダム化比較試験とは：公平に比べる工夫",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "researcher",
     "publishAt": "2027-04-04",
     "publishedAt": "",
@@ -2201,7 +2221,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "d380a1348e65cdabd6cbb78c0b9f41950f96db383f6bc9a84926b5e47e6c558c",
+      "contentHash": "e1741966cd8bb4f8f71dc070ff26fc07f6ed480b50f3e604915b507a6e91509b",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 2,
@@ -2211,9 +2231,44 @@
   "case-reports-registries": {
     "slug": "case-reports-registries",
     "title": "症例報告とレジストリ：一人ひとりの積み重ね",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "microscope",
     "publishAt": "2027-04-07",
+    "publishedAt": "",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "topic_sources_mapped_professional_review_pending",
+    "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "regulatory_or_advertising_claim"
+    ],
+    "referenceCount": 4,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
+    "editorialEvidence": {
+      "revision": "literature-v2",
+      "contentHash": "d7e882e6aaa098ccf1f146fa6880ab7ba86e6ee48d8cee2a055d853cef584246",
+      "checkedAt": "2026-09-22",
+      "status": "editorial_source_review",
+      "sourceCount": 2,
+      "note": "CARE and target-trial methodological abstracts inspected through Europe PMC. Registry timing examples are explicitly methodological illustrations, not results of a cell registry. PubMed-linked abstracts were retrieved and read as actual MEDLINE abstract records through Europe PMC; full-text tags identify separately retrieved article texts, not search snippets. This is a targeted editorial audit, not a systematic review."
+    }
+  },
+  "endpoints": {
+    "slug": "endpoints",
+    "title": "評価項目・エンドポイント：何をもって効いたとするか",
+    "lastEditedAt": "2026-09-26",
+    "imageKey": "medical-team",
+    "publishAt": "2027-04-10",
     "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
@@ -2235,39 +2290,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "9699c56ea4f513890a5b1921199a7a9efd42f61eb696f61a268473d16c4d345d",
-      "checkedAt": "2026-09-22",
-      "status": "editorial_source_review",
-      "sourceCount": 2,
-      "note": "CARE and target-trial methodological abstracts inspected through Europe PMC. Registry timing examples are explicitly methodological illustrations, not results of a cell registry. PubMed-linked abstracts were retrieved and read as actual MEDLINE abstract records through Europe PMC; full-text tags identify separately retrieved article texts, not search snippets. This is a targeted editorial audit, not a systematic review."
-    }
-  },
-  "endpoints": {
-    "slug": "endpoints",
-    "title": "評価項目・エンドポイント：何をもって効いたとするか",
-    "lastEditedAt": "2026-09-25",
-    "imageKey": "medical-team",
-    "publishAt": "2027-04-10",
-    "publishedAt": "",
-    "releaseTrack": "scheduled",
-    "medicalStatus": "needs_medical_review",
-    "legalStatus": "needs_legal_editorial_review",
-    "evidenceStatus": "topic_sources_mapped_professional_review_pending",
-    "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": [],
-    "referenceCount": 4,
-    "reviewer": {
-      "status": "planned",
-      "name": "千原 良友",
-      "reviewedAt": "",
-      "scope": "",
-      "conflictOfInterest": ""
-    },
-    "publishGate": "review_record_required",
-    "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
-    "editorialEvidence": {
-      "revision": "literature-v2",
-      "contentHash": "ed5217d12566a963dd397d3cc1166c211a54013b5d3bcf3fce06f20400994082",
+      "contentHash": "fdf2382b604fb3b036d2ed11ac81d3cbcdfa22b21583a108ec36f496ff7cdafa",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 2,
@@ -2277,7 +2300,7 @@
   "peer-review": {
     "slug": "peer-review",
     "title": "査読と論文誌：論文が世に出るまで",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "laboratory",
     "publishAt": "2027-04-13",
     "publishedAt": "",
@@ -2299,7 +2322,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "ac84bf6c90cd7c9794d406ec513cce8a32a428a7cec09eb8a37646f07015b1d9",
+      "contentHash": "f7499b393dbccae134367218f8d2ad84cc5b63fe7c911e986f518d5cf473401e",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -2309,7 +2332,7 @@
   "press-release-reading": {
     "slug": "press-release-reading",
     "title": "プレスリリースの読み方：発表文の裏側を読む",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "researcher",
     "publishAt": "2027-04-16",
     "publishedAt": "",
@@ -2319,6 +2342,7 @@
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
     "riskFlags": [
+      "effect_or_treatment_claim",
       "regulatory_or_advertising_claim"
     ],
     "referenceCount": 5,
@@ -2333,7 +2357,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "338db9fc4f7ffccee2fe7923ec2f7c2b324754a50051e8f0c489e10e288e3b82",
+      "contentHash": "29c49ad0de8f2bdff641c167bfd4e426270a61ec9a54148d8d91f852a1c3d938",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -2343,7 +2367,7 @@
   "statistics-intro": {
     "slug": "statistics-intro",
     "title": "統計の超入門：p値・信頼区間・ n数",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "microscope",
     "publishAt": "2027-04-19",
     "publishedAt": "",
@@ -2367,7 +2391,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "0400b753a5db2a6aa4525cad109f38bd906e3ab411ce33332b9ea6aa67fc1e82",
+      "contentHash": "1764084030bdd907238fae09ac2d048b9d4711e5b4140fa33a29131ad11afc06",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -2377,7 +2401,7 @@
   "conflict-of-interest": {
     "slug": "conflict-of-interest",
     "title": "利益相反の開示：誰が得をする研究か",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "medical-team",
     "publishAt": "2027-04-22",
     "publishedAt": "",
@@ -2386,7 +2410,9 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": [],
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
     "referenceCount": 6,
     "reviewer": {
       "status": "planned",
@@ -2399,7 +2425,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "2621b59727043451a3cf753734931fa8e6a28dfb05ebe95b4ea4fe198df024cf",
+      "contentHash": "18022b6533d34d11c08daa1c91d9696e802728a4229d958f40b5a4201950ca75",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -2409,7 +2435,7 @@
   "overseas-research": {
     "slug": "overseas-research",
     "title": "海外の研究を読む：国による制度の違い",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "laboratory",
     "publishAt": "2027-04-25",
     "publishedAt": "",
@@ -2435,7 +2461,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "7739eb3c19d82da0593f9d46792787ec25663bb5fc8c424761889888c44517a2",
+      "contentHash": "25df1c3d3919714d895c7c66015442d9f3fdb4cb7dd6cfee077d0809706c08ad",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 6,
@@ -2445,7 +2471,7 @@
   "negative-trials": {
     "slug": "negative-trials",
     "title": "うまくいかなかった研究の価値：陰性試験を読む",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "researcher",
     "publishAt": "2027-04-28",
     "publishedAt": "",
@@ -2469,7 +2495,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "ed33a9c83784ca24c785c867351cd753d0ddbbe95a76d34e9c184597dab7b158",
+      "contentHash": "9c60057886107d26d5679aad733e15f024887b9b3642bbb13b5b89c1aa706397",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 4,
@@ -2479,7 +2505,7 @@
   "long-term-followup": {
     "slug": "long-term-followup",
     "title": "長期追跡の重要性：年単位で見る安全性",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "microscope",
     "publishAt": "2027-05-01",
     "publishedAt": "",
@@ -2504,7 +2530,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "d371b6d62f6f232a9e839728ea4cad04889fb16fb28792039541e84c4d8badc5",
+      "contentHash": "99283a48e988a521199ca02112c95ac72924de04285a1d687d683f5eeae00cc8",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -2514,7 +2540,7 @@
   "how-to-find-trials": {
     "slug": "how-to-find-trials",
     "title": "治験を探す方法：登録情報の使い方",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "medical-team",
     "publishAt": "2027-05-04",
     "publishedAt": "",
@@ -2539,7 +2565,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "c086bc68b604cabcc6bc860769c3f2be41773fdfba37f52ca387e26f1fabe9e7",
+      "contentHash": "1f6138723b21cab9741a6b2ad0344a66646154d8f3c82df6fd9862a4a9e08d47",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 2,
@@ -2549,7 +2575,7 @@
   "world-products": {
     "slug": "world-products",
     "title": "世界の承認製品の調べ方：原資料にあたる",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "laboratory",
     "publishAt": "2027-05-07",
     "publishedAt": "",
@@ -2559,6 +2585,7 @@
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
     "riskFlags": [
+      "cost_or_system_claim",
       "regulatory_or_advertising_claim"
     ],
     "referenceCount": 8,
@@ -2573,7 +2600,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "31a9c5f637413d5e844e8df443c985ad97ffe442df401b868955c07d6f491560",
+      "contentHash": "632ef604826e66e689a0ac264b4383efd31fe036530f70a0b2608a281d463324",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 6,
@@ -2583,7 +2610,7 @@
   "cell-division": {
     "slug": "cell-division",
     "title": "細胞分裂の基礎：体が増え・入れ替わる仕組み",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "doctor-consultation",
     "publishAt": "2027-05-10",
     "publishedAt": "",
@@ -2608,7 +2635,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "0aa96cb7e28a5e63247f69c02818c4914b37f46681232919cc86dbf1eca1064c",
+      "contentHash": "f462c6a0d23dc9885a7c5a1db6c763c4f35070c5d0b1e7816f0f63220b9277e4",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -2627,7 +2654,10 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": [],
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
     "referenceCount": 5,
     "reviewer": {
       "status": "planned",
@@ -2640,7 +2670,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "2f329084128b5e700f4ab8403d651005a5c7d4165a96d6f41e31003b21daed2b",
+      "contentHash": "e3b1d1f887cc362d15479576d020600412f779444883781834ee837d68441a3c",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -2672,7 +2702,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "ebf3127918ab8fb3720ef9dc2f5227c19210c07e97f1a94e9022727f96be8864",
+      "contentHash": "8056bcfde68832772f03ef1c08b169c4377fcea2d4c7f86c8fdaf1be6d664436",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -2706,7 +2736,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "189028f1536667809bb7fd72e5f4dfd25b3c155d3bcf0ea315a1f2e495b32d24",
+      "contentHash": "6480cf2a34c58be92e96fd350d3cc0e7c990c1e4494e7ee2e4d755991265dd67",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -2719,6 +2749,41 @@
     "lastEditedAt": "2026-09-26",
     "imageKey": "doctor-consultation",
     "publishAt": "2027-05-22",
+    "publishedAt": "",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "topic_sources_mapped_professional_review_pending",
+    "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
+    "referenceCount": 4,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
+    "editorialEvidence": {
+      "revision": "literature-v2",
+      "contentHash": "a4bd5124a2142c14b42e108b9fddf9d3e78fdee1e11212cbd146fb0c357566c5",
+      "checkedAt": "2026-09-22",
+      "status": "editorial_source_review",
+      "sourceCount": 3,
+      "note": "既存9段落を確認。体循環と肺循環を省略した経路説明を明確化し、条件を示さない「1周約1分」を3言語で削除。肺での初回通過の根拠はラット実験であり、全細胞製品や患者の治療効果には一般化していない。 本文に対応するPOINTSの一般化も3言語で訂正。"
+    }
+  },
+  "respiration": {
+    "slug": "respiration",
+    "title": "呼吸の仕組み：酸素と二酸化炭素の交換",
+    "lastEditedAt": "2026-09-26",
+    "imageKey": "laboratory",
+    "publishAt": "2027-05-25",
     "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
@@ -2740,39 +2805,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "b076c25f822ccc2d0ad05eb2eb8418d414fb81a01a338b27eaab192bccf961ba",
-      "checkedAt": "2026-09-22",
-      "status": "editorial_source_review",
-      "sourceCount": 3,
-      "note": "既存9段落を確認。体循環と肺循環を省略した経路説明を明確化し、条件を示さない「1周約1分」を3言語で削除。肺での初回通過の根拠はラット実験であり、全細胞製品や患者の治療効果には一般化していない。 本文に対応するPOINTSの一般化も3言語で訂正。"
-    }
-  },
-  "respiration": {
-    "slug": "respiration",
-    "title": "呼吸の仕組み：酸素と二酸化炭素の交換",
-    "lastEditedAt": "2026-09-26",
-    "imageKey": "laboratory",
-    "publishAt": "2027-05-25",
-    "publishedAt": "",
-    "releaseTrack": "scheduled",
-    "medicalStatus": "needs_medical_review",
-    "legalStatus": "needs_legal_editorial_review",
-    "evidenceStatus": "topic_sources_mapped_professional_review_pending",
-    "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": [],
-    "referenceCount": 4,
-    "reviewer": {
-      "status": "planned",
-      "name": "千原 良友",
-      "reviewedAt": "",
-      "scope": "",
-      "conflictOfInterest": ""
-    },
-    "publishGate": "review_record_required",
-    "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
-    "editorialEvidence": {
-      "revision": "literature-v2",
-      "contentHash": "5fac91571ada812ec4a79b308e9e707b2c42f85efcc2b3eb720a7cadafac7a4c",
+      "contentHash": "bceaa338c40fa81adb57907289f612c5a143eed9459b8bcb616b34be00fbd486",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -2806,7 +2839,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "ae1b6aac444b2be9e85970a4fbe1a0a01f397bb0b625339c2daafa9f10d44ecc",
+      "contentHash": "3600d316bd6520608ef781c6029f7dc0d624322ed1b1db42d0301884c773b0c0",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -2825,7 +2858,9 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": [],
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
     "referenceCount": 5,
     "reviewer": {
       "status": "planned",
@@ -2838,7 +2873,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "d42799414d46434de5dbd8a18c2367ecf7a9b9765bd78a3c29410474f441cf0c",
+      "contentHash": "f0bc6bb19ddcdf44f610e73579f4bc41603a707225e9cfd304aefb9e04667409",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -2857,7 +2892,9 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": [],
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
     "referenceCount": 5,
     "reviewer": {
       "status": "planned",
@@ -2870,7 +2907,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "46e139c7a38ed1555927a2f3b8ba486acc1cad4216859bfad42e45bbdf2ce173",
+      "contentHash": "5d8da8cad654255996653a14ce80bc2e4a6453d659673c1f214a60d1112365a4",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -2904,7 +2941,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "96d83c49a537587c983cc2cadff0ddf88ca95bb8593ae04e48e36ce96a5dcd29",
+      "contentHash": "22695d63f5ffb65461017cfbc865da2f079a957a3309733e6f4603b81c39c717",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 4,
@@ -2938,7 +2975,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "ddfd5e415e1206d4ec7b6323a3e0f7c3ba74488514cd937abc35c1deeff514ec",
+      "contentHash": "ff6bd490f035af198da8e7e4f55fb3b2d89cdda3509ceba65d445c615b8a7831",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -2973,7 +3010,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "11a4b74564b235c27b9c3225ee57cd4cf5453c721658b3a35af00049d970103a",
+      "contentHash": "78c8fc5ce2d2bfccfa448397b7b9dcb1851c3cac6e4ecf1407ee2a0512e5d5f6",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -3008,7 +3045,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "a1becc44899e3ca00f3dbf02415edd475ff03a79d3d8bf78241c34a5476bf275",
+      "contentHash": "bc78536241019ba86d58f8db6957b33d3d0bb51e546dd55eb228619b1873e4de",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -3044,7 +3081,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "8f49ec608332e80687c63d9077e77709d880d1f1ac707daa8bf75f3000126776",
+      "contentHash": "3d1a1709096b0949ee52aec7f0130dd98b772b51d64d20c9dbea124c59ff1f15",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -3079,7 +3116,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "0ce8e086cfd1f513e1139efb0c5ced999ce7c5065705dd63967cf84676f9b9d2",
+      "contentHash": "c6c3d10732f68207efef754521c0c2dee8f0957d46bac27f9b047c55b68a3a5f",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -3089,7 +3126,7 @@
   "pregnancy-cordblood": {
     "slug": "pregnancy-cordblood",
     "title": "妊娠・出産と臍帯血：誕生時の細胞の活用",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "microscope",
     "publishAt": "2027-06-25",
     "publishedAt": "",
@@ -3099,6 +3136,7 @@
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
     "riskFlags": [
+      "effect_or_treatment_claim",
       "cost_or_system_claim"
     ],
     "referenceCount": 4,
@@ -3113,7 +3151,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "7cd4ac0242391719003ba039e46225f8f07db5e7ac98bfac9bc7da5162a724ae",
+      "contentHash": "4863d0f3e4f4e47f1ab3d4a50b71b94a1580dc58e2260dda5e9db92131f4c96b",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -3123,7 +3161,7 @@
   "aging-society": {
     "slug": "aging-society",
     "title": "超高齢社会と再生医療：期待の背景",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "doctor-consultation",
     "publishAt": "2027-06-28",
     "publishedAt": "",
@@ -3133,6 +3171,7 @@
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
     "riskFlags": [
+      "effect_or_treatment_claim",
       "cost_or_system_claim"
     ],
     "referenceCount": 5,
@@ -3147,7 +3186,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "4264494f898ed381b7f7883242b4beb51c19f53dbd4cb50205b0c496c5dba446",
+      "contentHash": "fdb4c251ed7891d133566b8edf5ed01172a757920cb3715a6de04c6de61e4b20",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -3167,7 +3206,8 @@
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
     "riskFlags": [
-      "effect_or_treatment_claim"
+      "effect_or_treatment_claim",
+      "cost_or_system_claim"
     ],
     "referenceCount": 4,
     "reviewer": {
@@ -3181,7 +3221,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "43cdbf0fdeaaffdfc3f9ba5080bcfdbec38bc15eef1048dd08f1b2801f7ffbd3",
+      "contentHash": "0cd7c633a21f2aafd06593f50d53999fdde7d8e037e425154b453ba9d745a049",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -3201,7 +3241,8 @@
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
     "riskFlags": [
-      "effect_or_treatment_claim"
+      "effect_or_treatment_claim",
+      "cost_or_system_claim"
     ],
     "referenceCount": 5,
     "reviewer": {
@@ -3215,7 +3256,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "2068abfd14b0ede49940bcb2b01be2996495b93410dc44ad818eb79dd48e9916",
+      "contentHash": "ab62c009c98ace69095110bfdd1eab5b66e2ffbe0f3c62892a4b91fcb93be51c",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -3235,7 +3276,8 @@
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
     "riskFlags": [
-      "effect_or_treatment_claim"
+      "effect_or_treatment_claim",
+      "regulatory_or_advertising_claim"
     ],
     "referenceCount": 4,
     "reviewer": {
@@ -3249,7 +3291,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "5acfa07dd0ff1d08a8c8f63c037c41b5c38ef16eec623b09b2661f160633912f",
+      "contentHash": "0714a5cfa7ba957a1d2c0c9127b95572f730f6ce3bd0d63f6789082b380006e1",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -3269,7 +3311,8 @@
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
     "riskFlags": [
-      "effect_or_treatment_claim"
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
     ],
     "referenceCount": 4,
     "reviewer": {
@@ -3283,7 +3326,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "072541b9c4dd38ecfee636fc1f994a8b4b9861925d936110e94317b289f4843f",
+      "contentHash": "e91007b0c68f1ef6bdd0c7151074c753a44dc08975f1a3091d63676626da548c",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -3303,6 +3346,7 @@
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
     "riskFlags": [
+      "effect_or_treatment_claim",
       "safety_or_risk_claim"
     ],
     "referenceCount": 4,
@@ -3317,7 +3361,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "1e3777dac77fa95ed99d45dab6dd9d427da30d3121e12116d406b6c56077f7dd",
+      "contentHash": "58e93134f5221b2ae2d13773d977a7f835b6e7c37de660486fb5c28686d90475",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -3351,7 +3395,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "79351e1e45e2306bc3ab4f7f39f1ce602e883c87be5901bc48b3e711cdbd2b38",
+      "contentHash": "380437bad80951fbdb0543cb08fe3ba5261d57641a28c75fc0b6e44f6dd9c939",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -3370,7 +3414,9 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": [],
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
     "referenceCount": 4,
     "reviewer": {
       "status": "planned",
@@ -3383,7 +3429,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "1a0182bac20c3f21bcfa8be2ba916e3c538866a27cd3f90ea53d175f2cfad8a6",
+      "contentHash": "c69182a90d2c6bec5d2aab52eb06178b8668fe45e914ea0152b90db6d49e4869",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -3403,7 +3449,8 @@
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
     "riskFlags": [
-      "effect_or_treatment_claim"
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
     ],
     "referenceCount": 5,
     "reviewer": {
@@ -3417,7 +3464,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "fa692d01bef1cc475041aba4059060cafd60d4eecbc683ed2dbdeb88daae7b70",
+      "contentHash": "2a98c7d332441ca13c1713926c0f10842bf8d80b2cc76c4cf52eece544d548c8",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -3427,7 +3474,7 @@
   "cell-cycle": {
     "slug": "cell-cycle",
     "title": "細胞周期：分裂と休止のリズム",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "researcher",
     "publishAt": "2027-07-25",
     "publishedAt": "",
@@ -3436,7 +3483,9 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": [],
+    "riskFlags": [
+      "safety_or_risk_claim"
+    ],
     "referenceCount": 2,
     "reviewer": {
       "status": "planned",
@@ -3449,7 +3498,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "48eabd452cd5aad926d5f0a9eaa11e421fc28d1222ca8572b94953cc85127268",
+      "contentHash": "b8770c8b434250b7bb315065389ebcb3f138e65a4573f58746109853f2ff1479",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 1,
@@ -3459,7 +3508,7 @@
   "asymmetric-division": {
     "slug": "asymmetric-division",
     "title": "非対称分裂：幹細胞を保つ分け方",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "medical-research",
     "publishAt": "2027-07-28",
     "publishedAt": "",
@@ -3468,7 +3517,9 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": [],
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
     "referenceCount": 3,
     "reviewer": {
       "status": "planned",
@@ -3481,7 +3532,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "d6e8e8a0294f18830841acb6c958279c23507d06bedc0dd91a3428035d0d4632",
+      "contentHash": "0752c1484ead760d6e37feaf7e80f6d6ac082215bd2bebe7739981aa6493c5a0",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 1,
@@ -3491,7 +3542,7 @@
   "stemcell-niche": {
     "slug": "stemcell-niche",
     "title": "ニッチ：幹細胞を支える微小環境",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "microscope",
     "publishAt": "2027-08-01",
     "publishedAt": "",
@@ -3500,7 +3551,9 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": [],
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
     "referenceCount": 3,
     "reviewer": {
       "status": "planned",
@@ -3513,7 +3566,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "52d89a82656543222b132b7709386503578fe85f46cbc3976c0d3117056f26b6",
+      "contentHash": "de7d9e0947c70cbab6046c5d7d8b85b45669c0b1b5b33555dfd32800f35f0137",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 1,
@@ -3523,7 +3576,7 @@
   "cell-signaling": {
     "slug": "cell-signaling",
     "title": "細胞間シグナル：連絡を取り合う仕組み",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "laboratory",
     "publishAt": "2027-08-04",
     "publishedAt": "",
@@ -3547,7 +3600,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "82060ce102137a54da3fa1affa4e0c7d0e8c902ceef356e5da8bd02ee297fcdf",
+      "contentHash": "f79edee5743f385b7f50e53bfc7d82711f82028123916ef1219725083496066c",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 1,
@@ -3557,7 +3610,7 @@
   "growth-factors": {
     "slug": "growth-factors",
     "title": "成長因子：増殖と分化の合図",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "researcher",
     "publishAt": "2027-08-07",
     "publishedAt": "",
@@ -3582,7 +3635,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "5e3eed07f71dc3e2ad27d7c21f9c1f39009bf352571232cc7b83e845a95c0dbc",
+      "contentHash": "3b1bd6bfb7d48d834e4ba9e5e88c438c45caf29f15d26947ce75ee346b99a8e2",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 1,
@@ -3592,7 +3645,7 @@
   "scaffolds": {
     "slug": "scaffolds",
     "title": "足場材料：細胞の家を設計する",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "medical-research",
     "publishAt": "2027-08-10",
     "publishedAt": "",
@@ -3602,6 +3655,7 @@
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
     "riskFlags": [
+      "effect_or_treatment_claim",
       "safety_or_risk_claim"
     ],
     "referenceCount": 3,
@@ -3616,7 +3670,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "884aee50ac0b26532086e6f69e181f21a76095930ae0bfafd06e87d7bee33832",
+      "contentHash": "95c79f9c5842e0d14deeeb77fc1f120febcb3ea23ce2e3a8195a6c64828d0774",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 1,
@@ -3626,7 +3680,7 @@
   "bioreactors": {
     "slug": "bioreactors",
     "title": "大量培養：バイオリアクターの役割",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "microscope",
     "publishAt": "2027-08-13",
     "publishedAt": "",
@@ -3636,7 +3690,8 @@
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
     "riskFlags": [
-      "effect_or_treatment_claim"
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
     ],
     "referenceCount": 4,
     "reviewer": {
@@ -3650,7 +3705,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "b8272f4fc410f4a031ca2152fd35da19590fd89209bcb09464b467b91c91dff9",
+      "contentHash": "aea8509b43a9565fba92a4a4ccc91fdb9063e2272bc2428d555e8d425bb75212",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 2,
@@ -3660,7 +3715,7 @@
   "cryopreservation": {
     "slug": "cryopreservation",
     "title": "凍結保存：細胞を止めて運ぶ技術",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "laboratory",
     "publishAt": "2027-08-16",
     "publishedAt": "",
@@ -3669,7 +3724,9 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": [],
+    "riskFlags": [
+      "cost_or_system_claim"
+    ],
     "referenceCount": 3,
     "reviewer": {
       "status": "planned",
@@ -3682,7 +3739,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "d69caffac927c2208b2557b369d87b60015ff9abd91375e218063f6dda5c52cf",
+      "contentHash": "9a9d1f068e6f4118897fd0ad3241928f5b8e32e5a1817c502ead054a6d510450",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 1,
@@ -3692,7 +3749,7 @@
   "cord-blood-cells": {
     "slug": "cord-blood-cells",
     "title": "臍帯血の細胞：採取から利用まで",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "researcher",
     "publishAt": "2027-08-19",
     "publishedAt": "",
@@ -3701,7 +3758,9 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": [],
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
     "referenceCount": 3,
     "reviewer": {
       "status": "planned",
@@ -3714,7 +3773,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "f77e1b0d390f40843343e48e30636869f91df8188db96745c7f9b86f7b09ddda",
+      "contentHash": "c4b482063ceb7118749631868cd1167459fd4b7127894c0aee19483d87e10eda",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 2,
@@ -3724,7 +3783,7 @@
   "dental-pulp-stem": {
     "slug": "dental-pulp-stem",
     "title": "歯髄幹細胞：抜いた歯の活用",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "medical-research",
     "publishAt": "2027-08-22",
     "publishedAt": "",
@@ -3749,7 +3808,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "42553bc22c6f865c27db774c394df01a610ae72d4749b692fdc8c6ea5aba53b4",
+      "contentHash": "b4df4118ede86d50dc210234e5f8025496802e8f65e082e5bd332c36f6464179",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 1,
@@ -3759,7 +3818,7 @@
   "adipose-stem": {
     "slug": "adipose-stem",
     "title": "脂肪由来幹細胞とは？美容・再生医療で使われる理由",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "microscope",
     "publishAt": "2027-08-25",
     "publishedAt": "",
@@ -3785,7 +3844,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "5de773f17917a4300f61f90999ab33b81803fa5c3883dd9f3a1d40aa537d0bd8",
+      "contentHash": "1084ec59c4d93f24418487ba0daf4645b086c2d57304a8dde55d59c1bbefca2c",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 2,
@@ -3795,7 +3854,7 @@
   "bone-marrow-system": {
     "slug": "bone-marrow-system",
     "title": "骨髄の仕組み：血を作る工場",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "laboratory",
     "publishAt": "2027-08-28",
     "publishedAt": "",
@@ -3804,7 +3863,9 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": [],
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
     "referenceCount": 4,
     "reviewer": {
       "status": "planned",
@@ -3817,7 +3878,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "97aab231d3b8573af03645bacac0d3e7239d1a385c6b453a30d2d5ce78c7971b",
+      "contentHash": "b5edceda06608794cadbbc56cfbdf991ba9e29ce9971cb33e0dc7cf76d7107c0",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -3827,7 +3888,7 @@
   "satellite-cells": {
     "slug": "satellite-cells",
     "title": "筋サテライト細胞：筋肉の控え選手",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "researcher",
     "publishAt": "2027-09-01",
     "publishedAt": "",
@@ -3851,7 +3912,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "6e9cc289bc78b8871d5e9d98ba0fc1d3742521f6b19e29da9128e0a580ef8d54",
+      "contentHash": "da0872067f41273135dec0d9f981d421c2fc6603f3d896a2fbcb7e89a1b126ac",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 1,
@@ -3861,7 +3922,7 @@
   "intestinal-stem": {
     "slug": "intestinal-stem",
     "title": "腸管上皮幹細胞：毎日生まれ変わる仕組み",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "medical-research",
     "publishAt": "2027-09-04",
     "publishedAt": "",
@@ -3885,7 +3946,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "f89407562f96c2bc206689a56662caca1fc2146c4e50c656338e9d20080b32d6",
+      "contentHash": "6c30f45602f1f228cfffd807a041538d6a45c2fa3409e9cd8c487245cee44fca",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 1,
@@ -3895,7 +3956,7 @@
   "liver-progenitor": {
     "slug": "liver-progenitor",
     "title": "肝臓の再生と前駆細胞：強い回復力の源",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "microscope",
     "publishAt": "2027-09-07",
     "publishedAt": "",
@@ -3904,7 +3965,9 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": [],
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
     "referenceCount": 3,
     "reviewer": {
       "status": "planned",
@@ -3917,7 +3980,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "dc5a26cebda9b20029ef1dfc3d00541b31061ce3dcfea0608b85555fdd59b79e",
+      "contentHash": "e4b5d09a2d32eba00cf17e7eb008bc2cebf71812c1d1550aad9fbf93a398f5b3",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 1,
@@ -3927,7 +3990,7 @@
   "corneal-regeneration": {
     "slug": "corneal-regeneration",
     "title": "角膜・上皮の再生：輪部幹細胞の働き",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "laboratory",
     "publishAt": "2027-09-10",
     "publishedAt": "",
@@ -3936,7 +3999,10 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": [],
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "regulatory_or_advertising_claim"
+    ],
     "referenceCount": 4,
     "reviewer": {
       "status": "planned",
@@ -3949,7 +4015,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "d4a0982d433087ccfd921b0a5d67a13c43aa4c69623b2145b9c751dd18b0d086",
+      "contentHash": "e9476dfd06a4ee1c7ad3d9702c9fe8fc7b6193d43e11db5f5c9aa5acbdbe5298",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 2,
@@ -3959,7 +4025,7 @@
   "cartilage-repair-deep": {
     "slug": "cartilage-repair-deep",
     "title": "軟骨再生の深掘り：なぜ難しいか",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "researcher",
     "publishAt": "2027-09-13",
     "publishedAt": "",
@@ -3983,7 +4049,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "3693630f53ba718661d79db21b497990cb9fb5639c16330d10d18467db84da94",
+      "contentHash": "cee03e1a8c45e261168506a74a878a2b864f058b80f85f760611c1b289aefd03",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 2,
@@ -3993,7 +4059,7 @@
   "tendon-ligament": {
     "slug": "tendon-ligament",
     "title": "腱・靭帯：つなぐ組織の修復",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "medical-research",
     "publishAt": "2027-09-16",
     "publishedAt": "",
@@ -4017,7 +4083,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "8f82e674195de5103168c15df6e9ccef9e930dee9cd1429bee60c475a49c9478",
+      "contentHash": "693f8db8fc05240d2958460a14d21dde68c4774905ffb82a57c84cad62124e44",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 1,
@@ -4027,7 +4093,7 @@
   "hair-regeneration": {
     "slug": "hair-regeneration",
     "title": "毛髪再生の研究：毛包の仕組み",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "microscope",
     "publishAt": "2027-09-19",
     "publishedAt": "",
@@ -4054,7 +4120,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "64c1198a5d0118797c9c2014de16f5acebfbe14b7685780d2668ccaab0b5bbb9",
+      "contentHash": "703ad7b3fb845f90e33844447a14f1bf0a09fc2dc8d86982f082358b381a21f9",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 1,
@@ -4064,7 +4130,7 @@
   "tooth-regeneration": {
     "slug": "tooth-regeneration",
     "title": "歯の再生研究：失った歯を取り戻せるか",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "laboratory",
     "publishAt": "2027-09-22",
     "publishedAt": "",
@@ -4088,7 +4154,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "965c02a6493615a35c89aa0f4c0492b94dd093861b350ba3b295eca9bdda52b2",
+      "contentHash": "d8f1707964e1bc615f49fe8feb4c0a2ea28f61c937e442258a78360a0ec792fe",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 1,
@@ -4098,7 +4164,7 @@
   "inner-ear-regeneration": {
     "slug": "inner-ear-regeneration",
     "title": "内耳・聴覚の再生研究：有毛細胞を目指して",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "researcher",
     "publishAt": "2027-09-25",
     "publishedAt": "",
@@ -4123,7 +4189,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "71d00a5936612b3075feec46dd0f2f53f74dfbbd46359a3cc50427ae3c076bc1",
+      "contentHash": "02311d56e06a1afd1e737c0fda479e7ba27d28c7381422725d0f4c1ffa131bbe",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 1,
@@ -4133,7 +4199,7 @@
   "retina-regeneration": {
     "slug": "retina-regeneration",
     "title": "網膜の再生研究：見る力を守る挑戦",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "medical-research",
     "publishAt": "2027-09-28",
     "publishedAt": "",
@@ -4143,7 +4209,8 @@
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
     "riskFlags": [
-      "effect_or_treatment_claim"
+      "effect_or_treatment_claim",
+      "regulatory_or_advertising_claim"
     ],
     "referenceCount": 4,
     "reviewer": {
@@ -4157,7 +4224,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "ccbeef937adb7b37c36bf3dd154c4694c01fa19294bb9bdd1a2238a2a790249a",
+      "contentHash": "98ccc915522e093fe997660f1e13893efa3097130233e547bfc16e08d0c5ab87",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 1,
@@ -4167,7 +4234,7 @@
   "spinal-cord-detail": {
     "slug": "spinal-cord-detail",
     "title": "脊髄損傷の治療研究：神経をつなぐ挑戦",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "microscope",
     "publishAt": "2027-10-01",
     "publishedAt": "",
@@ -4193,7 +4260,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "19127d55a0071ffb51c0b47dc556e2566a85f7ff71bae07b7ea96aa5ec9fbca8",
+      "contentHash": "829bd3a1b0ae25c0a21eba6c26847e8d7e6b876ae5a116c96c1f7b7a02bf7622",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 1,
@@ -4203,7 +4270,7 @@
   "heart-sheet-detail": {
     "slug": "heart-sheet-detail",
     "title": "心筋シート：初期研究と限定された承認の範囲",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "laboratory",
     "publishAt": "2027-10-04",
     "publishedAt": "",
@@ -4213,7 +4280,8 @@
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
     "riskFlags": [
-      "effect_or_treatment_claim"
+      "effect_or_treatment_claim",
+      "regulatory_or_advertising_claim"
     ],
     "referenceCount": 4,
     "reviewer": {
@@ -4227,7 +4295,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "0206a672e09009816c18168451717a82d75056388c8f18e22eb1cde486ac3739",
+      "contentHash": "e03c1f16a9aeb9a998abd1caba43b0e4fca276ea42f6a9a52db8ac56639f3bcb",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 2,
@@ -4237,7 +4305,7 @@
   "direct-reprogramming": {
     "slug": "direct-reprogramming",
     "title": "ダイレクトリプログラミング：経由しない変換",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "researcher",
     "publishAt": "2027-10-07",
     "publishedAt": "",
@@ -4248,7 +4316,8 @@
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
     "riskFlags": [
       "effect_or_treatment_claim",
-      "safety_or_risk_claim"
+      "safety_or_risk_claim",
+      "regulatory_or_advertising_claim"
     ],
     "referenceCount": 4,
     "reviewer": {
@@ -4262,7 +4331,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "3e6363236585beaad9b145565ee1ac6a4af58576b6b6fb4c2ebf7cd5581a1a04",
+      "contentHash": "05b3f8069bfb86eb9291024eccf2dce1b070595ad14948ff64df129315b45b2f",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 1,
@@ -4272,7 +4341,7 @@
   "online-care": {
     "slug": "online-care",
     "title": "オンライン診療との付き合い方：遠方の相談に",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "medical-research",
     "publishAt": "2027-10-10",
     "publishedAt": "",
@@ -4282,6 +4351,8 @@
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
     "riskFlags": [
+      "effect_or_treatment_claim",
+      "cost_or_system_claim",
       "individual_decision_context"
     ],
     "referenceCount": 7,
@@ -4296,7 +4367,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "84b2610678454844009f9d0a6cb54e3aee84a9356e478a6e9c11ee665cab935c",
+      "contentHash": "be9a4211048a38c11bbac5194df00c2674e6375d64a087e4ac43da5f35faded8",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 5,
@@ -4306,7 +4377,7 @@
   "referral-letters": {
     "slug": "referral-letters",
     "title": "紹介状・逆紹介：医療機関をつなぐ文書",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "doctor-consultation",
     "publishAt": "2027-10-13",
     "publishedAt": "",
@@ -4332,7 +4403,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "1676e062eebb3c16bc0b299b97ef610b2020ef921b53f1c4369c1a2b7ae0ff0a",
+      "contentHash": "9527e5ba6d012f872c24d63122177dff2488b43f3760883a94b942b409bdda54",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 6,
@@ -4342,7 +4413,7 @@
   "medical-records": {
     "slug": "medical-records",
     "title": "診療記録の開示請求：自分の記録を受け取る",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "hospital-care",
     "publishAt": "2027-10-16",
     "publishedAt": "",
@@ -4368,7 +4439,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "b0fc450d62ca3e4bcc2df8e00ec675b7e6b617de5e4b317326fdbe748e7163ed",
+      "contentHash": "7985d154363af6fa1f4b668d8a44cc7038b17166e4b705bfe2e5d8de6fcc1485",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 4,
@@ -4378,7 +4449,7 @@
   "hospital-choice": {
     "slug": "hospital-choice",
     "title": "幹細胞治療のクリニック選びで確認すべきこと",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "medical-team",
     "publishAt": "2027-10-19",
     "publishedAt": "",
@@ -4406,7 +4477,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "5c3a7f6cb7ca5c6603805cd3e078d4c7356128f98a2a0c171fbb43e1ecbfc973",
+      "contentHash": "52ff1d9695dc04881402c735368b1680322d811117bc220c5f572cdac7fd2c60",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 4,
@@ -4416,7 +4487,7 @@
   "emergency-care": {
     "slug": "emergency-care",
     "title": "救急とのかかわり：いざというときの備え",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "medical-research",
     "publishAt": "2027-10-22",
     "publishedAt": "",
@@ -4444,7 +4515,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "d9d17d73d2c2c579231963df990b7a082cfe7f1664ee037e0bf9fb7d82cdf033",
+      "contentHash": "971fa663bdba0b58c66352e9445ce9a3ba1e35bfd8413d6e0b95a43dea62d480",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 5,
@@ -4454,7 +4525,7 @@
   "pharmacy-use": {
     "slug": "pharmacy-use",
     "title": "薬局・薬剤師の活用：薬の相談役",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "doctor-consultation",
     "publishAt": "2027-10-25",
     "publishedAt": "",
@@ -4464,6 +4535,7 @@
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
     "riskFlags": [
+      "effect_or_treatment_claim",
       "safety_or_risk_claim",
       "individual_decision_context"
     ],
@@ -4479,7 +4551,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "c950c78e61efb102378a143a7048fd03f3053c9964271ce88408131743489de4",
+      "contentHash": "78ce20d814b7af2e489ee97228c81115cacfb36c54c2543f391343bca5178779",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 5,
@@ -4489,9 +4561,45 @@
   "nursing-care-link": {
     "slug": "nursing-care-link",
     "title": "看護・介護との連携：暮らしを支える体制",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "hospital-care",
     "publishAt": "2027-10-28",
+    "publishedAt": "",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "topic_sources_mapped_professional_review_pending",
+    "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "cost_or_system_claim",
+      "individual_decision_context"
+    ],
+    "referenceCount": 4,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
+    "editorialEvidence": {
+      "revision": "literature-v2",
+      "contentHash": "35faac6635f064293e923e0b8172989c9b4d23faee43ecb2afc757683f61359b",
+      "checkedAt": "2026-09-22",
+      "status": "editorial_source_review",
+      "sourceCount": 3,
+      "note": "Compared all three locale bodies and points with municipal guidance and national care-management standards. Added role distinctions, certification pathways and consent requirements. The original coordination advice was broadly sound; the information-sharing paragraph needed an explicit consent boundary. This is a service-system audit, not evidence of a regenerative treatment benefit or an assessment of any individual provider."
+    }
+  },
+  "home-care": {
+    "slug": "home-care",
+    "title": "在宅医療の基礎：家で受ける医療",
+    "lastEditedAt": "2026-09-26",
+    "imageKey": "medical-team",
+    "publishAt": "2027-11-01",
     "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
@@ -4514,41 +4622,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "666ee07ca859bb17809c14832eac7ee702f4bada19da8e8da7cb03ce80716f27",
-      "checkedAt": "2026-09-22",
-      "status": "editorial_source_review",
-      "sourceCount": 3,
-      "note": "Compared all three locale bodies and points with municipal guidance and national care-management standards. Added role distinctions, certification pathways and consent requirements. The original coordination advice was broadly sound; the information-sharing paragraph needed an explicit consent boundary. This is a service-system audit, not evidence of a regenerative treatment benefit or an assessment of any individual provider."
-    }
-  },
-  "home-care": {
-    "slug": "home-care",
-    "title": "在宅医療の基礎：家で受ける医療",
-    "lastEditedAt": "2026-09-25",
-    "imageKey": "medical-team",
-    "publishAt": "2027-11-01",
-    "publishedAt": "",
-    "releaseTrack": "scheduled",
-    "medicalStatus": "needs_medical_review",
-    "legalStatus": "needs_legal_editorial_review",
-    "evidenceStatus": "topic_sources_mapped_professional_review_pending",
-    "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": [
-      "individual_decision_context"
-    ],
-    "referenceCount": 4,
-    "reviewer": {
-      "status": "planned",
-      "name": "千原 良友",
-      "reviewedAt": "",
-      "scope": "",
-      "conflictOfInterest": ""
-    },
-    "publishGate": "review_record_required",
-    "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
-    "editorialEvidence": {
-      "revision": "literature-v2",
-      "contentHash": "7373f2fd4f0354245f8b18c44b1882663063958853a5835c2009a67628b80af6",
+      "contentHash": "ec9a4ebca01ee4824b252e75ff6a5705daf50943bf40af15f3ccedd8e3cbdea2",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -4558,7 +4632,7 @@
   "work-balance": {
     "slug": "work-balance",
     "title": "治療と仕事の両立：両立支援の使い方",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "medical-research",
     "publishAt": "2027-11-04",
     "publishedAt": "",
@@ -4583,7 +4657,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "b2e02c229b3974fd15097d351905059918ff8fb93b046c4455d9a38f75c1573a",
+      "contentHash": "db3781231ba4659b191dbd95023440ed8413b320f417db0d3a3144c31da39b5c",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -4593,7 +4667,7 @@
   "cost-simulation": {
     "slug": "cost-simulation",
     "title": "費用シミュレーションの作り方：総額を見通す",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "doctor-consultation",
     "publishAt": "2027-11-07",
     "publishedAt": "",
@@ -4618,7 +4692,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "719f3d26b135738ec5ec4c97c314e9fe150771dc0c5f58de61cd0be363c88097",
+      "contentHash": "4944672cbec0eff57b933313848d5142614a94ce4290edc416b5201644445bc9",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 4,
@@ -4628,7 +4702,7 @@
   "high-cost-care": {
     "slug": "high-cost-care",
     "title": "高額療養費制度：医療費の上限の仕組み",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "hospital-care",
     "publishAt": "2027-11-10",
     "publishedAt": "",
@@ -4638,6 +4712,7 @@
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
     "riskFlags": [
+      "effect_or_treatment_claim",
       "cost_or_system_claim",
       "individual_decision_context"
     ],
@@ -4653,7 +4728,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "8dd420e76f591d371129f12acf9e42402816a378ebcf42ec0ce9611ebc75c800",
+      "contentHash": "cd94b33abebf65f784d3428d6ce2a27caed9227b1e8949cc883258254cdfe2bf",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 4,
@@ -4663,7 +4738,7 @@
   "tax-deduction": {
     "slug": "tax-deduction",
     "title": "医療費控除：確定申告での手続き",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "medical-team",
     "publishAt": "2027-11-13",
     "publishedAt": "",
@@ -4689,7 +4764,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "72e3e8b379946d3778aa9d9747543ac7daad900648f4a8ff1fd4d357c7200023",
+      "contentHash": "d5c6820ec8e3667100203136234e48a29d1b532b429437c27d42986e19b484ab",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -4699,7 +4774,7 @@
   "insurance-review": {
     "slug": "insurance-review",
     "title": "民間保険の見直し方：保障と必要額",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "medical-research",
     "publishAt": "2027-11-16",
     "publishedAt": "",
@@ -4725,7 +4800,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "f8d0560cc8b852726b9c4d9a42bb8f4ffbb76cde2e475d9b5c94f3352fb04099",
+      "contentHash": "6b8110ae91f5ae3da943cbd8a4f1abb44da20159f6f1438958c118bf3c2aa932",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 4,
@@ -4735,7 +4810,7 @@
   "decision-aids": {
     "slug": "decision-aids",
     "title": "意思決定支援ツール：比べる表の使い方",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "doctor-consultation",
     "publishAt": "2027-11-19",
     "publishedAt": "",
@@ -4746,6 +4821,7 @@
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
     "riskFlags": [
       "effect_or_treatment_claim",
+      "safety_or_risk_claim",
       "individual_decision_context"
     ],
     "referenceCount": 5,
@@ -4760,7 +4836,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "33d654617e27578977139ea25391b21117e2d5431c4676f36fdfa619fca8700b",
+      "contentHash": "7e0c879c0b8673d0def466632910fc019c20d4d9a6b25578d797d63c044c107d",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -4770,7 +4846,7 @@
   "patient-groups": {
     "slug": "patient-groups",
     "title": "患者会・ピアサポート：経験者とつながる",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "hospital-care",
     "publishAt": "2027-11-22",
     "publishedAt": "",
@@ -4795,7 +4871,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "b0066c5b348b3b44143a0493543e8185da0c89166cb3ceb774f3b0218d841c94",
+      "contentHash": "aa5fd1c314e8a8fea4b5082e42e9e640a7417e1ff3b374d05fb6952f45d9f822",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -4805,7 +4881,7 @@
   "counseling-support": {
     "slug": "counseling-support",
     "title": "医療相談支援：メディエーションと相談窓口",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "medical-team",
     "publishAt": "2027-11-25",
     "publishedAt": "",
@@ -4815,7 +4891,9 @@
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
     "riskFlags": [
+      "effect_or_treatment_claim",
       "safety_or_risk_claim",
+      "cost_or_system_claim",
       "individual_decision_context"
     ],
     "referenceCount": 5,
@@ -4830,7 +4908,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "6507be6cc002776337b7a59fe2121aa58edf15cd55d65e427630f6099fc14c2b",
+      "contentHash": "ee6dc0098f84ec7fcb0eabab9983bad06bdea799439bf51b8f27be8b3f577985",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 4,
@@ -4840,7 +4918,7 @@
   "palliative-care": {
     "slug": "palliative-care",
     "title": "緩和ケアの考え方：つらさを和らげる",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "medical-research",
     "publishAt": "2027-11-28",
     "publishedAt": "",
@@ -4865,7 +4943,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "78c4f7c794c16c83d900f14481bee3d0c590f06efba8a5b57b753c362d4f1356",
+      "contentHash": "8bf94db99e63faf165c371ca36aadfa242796ef9a110f44acaf7bc0adb64a19a",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -4875,7 +4953,7 @@
   "rehab-after-treatment": {
     "slug": "rehab-after-treatment",
     "title": "術後リハビリ計画：回復の道筋",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "doctor-consultation",
     "publishAt": "2027-12-01",
     "publishedAt": "",
@@ -4885,6 +4963,8 @@
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
     "riskFlags": [
+      "effect_or_treatment_claim",
+      "cost_or_system_claim",
       "individual_decision_context"
     ],
     "referenceCount": 6,
@@ -4899,7 +4979,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "0222590320f2b8a7ef8ff76b7a0fbc06e4abdd4423ac7f3a12598db50e49f088",
+      "contentHash": "d3dd49fdd1deb1832da3a1b213a97bd05d2341d6c416bff4313e43944c287bfd",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 4,
@@ -4909,7 +4989,7 @@
   "oral-care-during": {
     "slug": "oral-care-during",
     "title": "治療中の口腔ケア：口の健康を守る",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "hospital-care",
     "publishAt": "2027-12-04",
     "publishedAt": "",
@@ -4935,7 +5015,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "010d77b5722f3d7536c0d89b4242729b8bb881f975e7a065193f6f68087bbabf",
+      "contentHash": "1489925d62def4053f172dd594c5bf4826f0109c80b9a37b8ba58645e4defccb",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 4,
@@ -4945,7 +5025,7 @@
   "distant-travel-care": {
     "slug": "distant-travel-care",
     "title": "遠方通院・宿泊：負担を減らす工夫",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "medical-team",
     "publishAt": "2027-12-07",
     "publishedAt": "",
@@ -4955,6 +5035,8 @@
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
     "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim",
       "individual_decision_context"
     ],
     "referenceCount": 5,
@@ -4969,7 +5051,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "300ae7ff696201c8d4eb555c001f41d3d453b4259159e5e01d319e5d77c7c0e2",
+      "contentHash": "78bffbb41ccfcc2d99eb414e6c51a957c163fc262f7953c19543ffd5cc2612ea",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -4979,7 +5061,7 @@
   "language-support": {
     "slug": "language-support",
     "title": "やさしい日本語・多言語：伝わる工夫",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "medical-research",
     "publishAt": "2027-12-10",
     "publishedAt": "",
@@ -5003,7 +5085,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "9ba1272ff1540308de756cdae61543432adda100759891c43023eafebcb4932f",
+      "contentHash": "724842b1d8b4c7a31f096a758bee1817557bb383dfa92a7421c3cfb48765e0fc",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -5013,7 +5095,7 @@
   "treatment-diary": {
     "slug": "treatment-diary",
     "title": "治療日記のつけ方：変化を見える化する",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "doctor-consultation",
     "publishAt": "2027-12-13",
     "publishedAt": "",
@@ -5038,7 +5120,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "eb207dde9bb0f7e89cf821488e192a150a56aaa1aae3474061db57e8d57f35cd",
+      "contentHash": "a65ce17b434c1091f4cfd2ac18a7e495a236f360cda812106091170592462c19",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 4,
@@ -5048,7 +5130,7 @@
   "reviewing-treatment": {
     "slug": "reviewing-treatment",
     "title": "治療を見直す・やめる判断：立ち止まる勇気",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "hospital-care",
     "publishAt": "2027-12-16",
     "publishedAt": "",
@@ -5059,6 +5141,7 @@
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
     "riskFlags": [
       "effect_or_treatment_claim",
+      "safety_or_risk_claim",
       "cost_or_system_claim",
       "individual_decision_context"
     ],
@@ -5074,7 +5157,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "c469536503e1644a2ea989aa830414568a1623f66d3eaa73ac59590ef4b66406",
+      "contentHash": "355c0f32e66e56cfa2f1e2b3e6528d67d10bcf80bc05dc99156e961d6fcb3087",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -5084,7 +5167,7 @@
   "childcare-balance": {
     "slug": "childcare-balance",
     "title": "育児・介護との両立：治療中の暮らし",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "medical-team",
     "publishAt": "2027-12-19",
     "publishedAt": "",
@@ -5109,7 +5192,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "48c36741f19aa8a03ecfb9807ddb04235dc942c1f0236dffe5fa6948cb6cdb2c",
+      "contentHash": "64c4b36d0a36812c02589d2337c8aa072bc158756a910a60e51a5c41b476cf74",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 5,
@@ -5119,7 +5202,7 @@
   "medical-payment-help": {
     "slug": "medical-payment-help",
     "title": "医療費の支払い相談：困ったときの窓口",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "medical-research",
     "publishAt": "2027-12-22",
     "publishedAt": "",
@@ -5144,7 +5227,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "f60c5aa250ecdfa552aa1f08f1c5959235f0ed78e8ddb7a177da7c7319e8a71c",
+      "contentHash": "ea46e8594090e3dc135c5c58dcbf2d7893424b4a7b41e1075e28f82424e2cd1a",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 5,
@@ -5163,7 +5246,9 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": [],
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
     "referenceCount": 4,
     "reviewer": {
       "status": "planned",
@@ -5176,7 +5261,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "69b63b2d074129f74a3dae19acadaee4df9d8848bb5e5f9e9bfe5f5907b15642",
+      "contentHash": "3e7a0863f6f4e0bd73e24391c89660e33b51f1651a958516317d0ece10b1b75a",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -5196,6 +5281,7 @@
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
     "riskFlags": [
+      "effect_or_treatment_claim",
       "safety_or_risk_claim"
     ],
     "referenceCount": 5,
@@ -5210,7 +5296,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "1d9a45410dedb174a332c79c5426b30563e1c3e7e3d79e9a8303c1c4981bbf94",
+      "contentHash": "fd25d2c91f69cc0aeecfeae4b21527209fb392ea07425e7e31d1b60fac263c28",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 4,
@@ -5229,7 +5315,9 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": [],
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
     "referenceCount": 4,
     "reviewer": {
       "status": "planned",
@@ -5242,7 +5330,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "9fa46acabab60a01b536f9f6e4711d51e317a579c53ee10be3c4f519a4331a92",
+      "contentHash": "137f9aed5e486cb73e898da5f6c54f51a52325e775e722e18d5e5d26587dca43",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -5277,7 +5365,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "1bcbeae65f61675edfac8a7d8d0a58013ec869e0094f3e0d3107b45c268877eb",
+      "contentHash": "6b5d215b17432d3102d53899520b73832952b6f1655d57c9c6a3b98605e844e3",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -5312,7 +5400,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "51b8636d5e944ca39d6915425f848797bd9f9dc7f6b1698a939c81f1ab98daad",
+      "contentHash": "d1e89c0076107f96c2bacdb65df3d313fd0ce30399303d6b58c6065f9af0a9da",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -5347,7 +5435,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "80dae265b97acd8c189ca81cfa6431b9763b6530853f76e6755dda3a62e64bd8",
+      "contentHash": "36a9436fee56424f5ac41a9b6b4dd7cb978bd605cfd5b2fd90ca5da4407acd95",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -5381,7 +5469,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "eb1c926903a1f4b188f8092efc346175c91ddab7dc8a36f00009912d4e158557",
+      "contentHash": "5b9af17abb4b34f3cbc17abdfaaec333096c5ec7fed6d6ca9b2b0c853cd53e0f",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -5400,7 +5488,9 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": [],
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
     "referenceCount": 4,
     "reviewer": {
       "status": "planned",
@@ -5413,7 +5503,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "aca1c4489c9c6bef28f76a4921f9a6f9159ca8a9d3cbe7dc4349fa870df2d46f",
+      "contentHash": "5d592408cdb653c33fe7207b3850a0850d05dc48c86c6540194dc3a3c592a548",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -5447,7 +5537,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "add95c41e1dc10123f7d24a04ceb659ccdeeea420ab3bd3b2c8ea92d88a461cb",
+      "contentHash": "a5b03d252a04397e420431ec61017559a025674b90e45adc88df64c088152cf3",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -5460,38 +5550,6 @@
     "lastEditedAt": "2026-09-26",
     "imageKey": "doctor-consultation",
     "publishAt": "2028-01-22",
-    "publishedAt": "",
-    "releaseTrack": "scheduled",
-    "medicalStatus": "needs_medical_review",
-    "legalStatus": "needs_legal_editorial_review",
-    "evidenceStatus": "topic_sources_mapped_professional_review_pending",
-    "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": [],
-    "referenceCount": 4,
-    "reviewer": {
-      "status": "planned",
-      "name": "千原 良友",
-      "reviewedAt": "",
-      "scope": "",
-      "conflictOfInterest": ""
-    },
-    "publishGate": "review_record_required",
-    "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
-    "editorialEvidence": {
-      "revision": "literature-v2",
-      "contentHash": "0fcc866f3572d33320b75bf36192c35576802d4da38b39582c36fec848d7f30a",
-      "checkedAt": "2026-09-22",
-      "status": "editorial_source_review",
-      "sourceCount": 3,
-      "note": "日英中各3段落を確認。原因の多様性と異常値の受診勧奨は維持。英語stall・中国語停滞は酸素供給が停止する印象が強いため、日本語も合わせて酸素運搬能力の低下と症状の個人差を明確化した。"
-    }
-  },
-  "blood-pressure-basics": {
-    "slug": "blood-pressure-basics",
-    "title": "血圧の仕組み：数値の読み方",
-    "lastEditedAt": "2026-09-26",
-    "imageKey": "laboratory",
-    "publishAt": "2028-01-25",
     "publishedAt": "",
     "releaseTrack": "scheduled",
     "medicalStatus": "needs_medical_review",
@@ -5513,7 +5571,42 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "6b3236d10ea22bdde789d41d6c9b6284e576c575a0029b2926eb65e11a30d499",
+      "contentHash": "256c5b11a50d4e2f5dd2891435316fd54609b3190b508cd0d5838874bcda26d2",
+      "checkedAt": "2026-09-22",
+      "status": "editorial_source_review",
+      "sourceCount": 3,
+      "note": "日英中各3段落を確認。原因の多様性と異常値の受診勧奨は維持。英語stall・中国語停滞は酸素供給が停止する印象が強いため、日本語も合わせて酸素運搬能力の低下と症状の個人差を明確化した。"
+    }
+  },
+  "blood-pressure-basics": {
+    "slug": "blood-pressure-basics",
+    "title": "血圧の仕組み：数値の読み方",
+    "lastEditedAt": "2026-09-26",
+    "imageKey": "laboratory",
+    "publishAt": "2028-01-25",
+    "publishedAt": "",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "topic_sources_mapped_professional_review_pending",
+    "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
+    "referenceCount": 4,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
+    "editorialEvidence": {
+      "revision": "literature-v2",
+      "contentHash": "e2bdb9427f1585cbbc6af8676c704564e2e7a21132abc53054a70b2a4cf02171",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -5533,6 +5626,7 @@
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
     "riskFlags": [
+      "effect_or_treatment_claim",
       "safety_or_risk_claim"
     ],
     "referenceCount": 4,
@@ -5547,7 +5641,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "41fd76d8e845816c3cae703600209e8171def30da5faad4581ede943421f822b",
+      "contentHash": "23a264ed40c5afb9ac5f8a3b47016a3d6fda4e57bed459e745b2d3ed6d3a07c4",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -5582,7 +5676,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "ebbc836459b228902c7a0bfceb57065a644f00c996f98fdebb10a2b8bfc58deb",
+      "contentHash": "13199a092c0d14d5cf0d42e0ee6dc63021b8e1b010966498269e8ccda853b0f8",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -5592,7 +5686,7 @@
   "cell-banks-guide": {
     "slug": "cell-banks-guide",
     "title": "細胞バンクの種類：公的と民間の違い",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "laboratory",
     "publishAt": "2028-02-04",
     "publishedAt": "",
@@ -5602,6 +5696,7 @@
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
     "riskFlags": [
+      "effect_or_treatment_claim",
       "cost_or_system_claim"
     ],
     "referenceCount": 4,
@@ -5616,7 +5711,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "57932fa67930d43289c0de479a42efe62911db2a3cbc94957fdf6c2a0b705e0e",
+      "contentHash": "5a13120b9a917dffed9ab2ca6b609508c0997b2600daffc21effe41d40bb0920",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -5626,7 +5721,7 @@
   "culture-media": {
     "slug": "culture-media",
     "title": "培養液とは：細胞の食事と環境",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "researcher",
     "publishAt": "2028-02-07",
     "publishedAt": "",
@@ -5651,7 +5746,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "4d92e61b6bcdd15ab41a4923f2c1985d9fb323071d56990e16772826a8914068",
+      "contentHash": "b643ba34495c2403d12d2578c608ce5d0926e2b173b4e06aac31a6ac07d9609c",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -5661,7 +5756,7 @@
   "cell-sorting": {
     "slug": "cell-sorting",
     "title": "細胞の選別：マーカーとセルソーター",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "medical-research",
     "publishAt": "2028-02-10",
     "publishedAt": "",
@@ -5671,7 +5766,8 @@
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
     "riskFlags": [
-      "effect_or_treatment_claim"
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
     ],
     "referenceCount": 3,
     "reviewer": {
@@ -5685,7 +5781,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "14a6b0bfff691a67abc238f6912ef305505750419d6efae1e2420128431fd0ba",
+      "contentHash": "6f1f0b8bb0d9642472911cb72ad1bee210f4427ae634fb57a5fd6745bc070934",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 2,
@@ -5695,7 +5791,7 @@
   "placenta-cells": {
     "slug": "placenta-cells",
     "title": "胎盤・羊膜由来の細胞：出産時の組織の活用",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "microscope",
     "publishAt": "2028-02-13",
     "publishedAt": "",
@@ -5721,7 +5817,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "70eaf89f8355f15a1f0dd91b90bb43a9ac57735d162d67d49d3694da63c35971",
+      "contentHash": "b1b24d0d5f068e3d1d84e575e19ee4f85e6ffc3e011bf8d582afbc1a8642458d",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 2,
@@ -5731,7 +5827,7 @@
   "pancreas-progenitor": {
     "slug": "pancreas-progenitor",
     "title": "膵臓の再生研究：β細胞を目指して",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "laboratory",
     "publishAt": "2028-02-16",
     "publishedAt": "",
@@ -5756,7 +5852,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "a4ec2f754ff0c0b6493a8cb81b625499fe1a54595da2031afa96bb626c69a846",
+      "contentHash": "69ce46625b38a6965bc7cb453dd737ff5b2bc0decd43a62ba403962052ff3f29",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 2,
@@ -5766,7 +5862,7 @@
   "kidney-progenitor": {
     "slug": "kidney-progenitor",
     "title": "腎臓の再生研究：透析と再生の間",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "researcher",
     "publishAt": "2028-02-19",
     "publishedAt": "",
@@ -5790,7 +5886,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "051fca183aec3d57f65b6a0539d667476440225649fa5ca80d1f8b1bc1353c96",
+      "contentHash": "d76a3ff33935ff1767319a19608a22b2fdf1e7dbdafa01fdbd8d445e52f22420",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 2,
@@ -5800,7 +5896,7 @@
   "lung-regeneration": {
     "slug": "lung-regeneration",
     "title": "肺の再生研究：呼吸を取り戻す挑戦",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "medical-research",
     "publishAt": "2028-02-22",
     "publishedAt": "",
@@ -5825,7 +5921,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "233b4d7a7bb7a0c5bee589f2adf20b5bd4d1d3834bd50df1b0eb5c497a2bb5ab",
+      "contentHash": "179532d65f9b8088e059aac348ea44bad66a8e7adbbf250e1f40c61c782d43d9",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 2,
@@ -5835,7 +5931,7 @@
   "disc-regeneration": {
     "slug": "disc-regeneration",
     "title": "椎間板の再生研究：腰痛との関係",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "microscope",
     "publishAt": "2028-02-25",
     "publishedAt": "",
@@ -5844,7 +5940,9 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": [],
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
     "referenceCount": 4,
     "reviewer": {
       "status": "planned",
@@ -5857,7 +5955,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "e6465ce6fa55ceedb1a932030b926c5e66973ebb2d331245d69c9d8eb1e6195b",
+      "contentHash": "fbcec749bdb6325d15bdfeca941a38ce738c892c7db3a2256d5e0518e4247764",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 2,
@@ -5867,7 +5965,7 @@
   "vessel-regeneration": {
     "slug": "vessel-regeneration",
     "title": "血管の再生：足りない血流を補う",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "laboratory",
     "publishAt": "2028-02-28",
     "publishedAt": "",
@@ -5891,7 +5989,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "44426c188bbfe6ec80ad3893019a50006f48513c981e34a4db7d32edf8bb0f7f",
+      "contentHash": "2b0f3ca3d0151b900b81ec16ade921d3544146151afe8beaab592712ce42c372",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 2,
@@ -5901,7 +5999,7 @@
   "bioprinting": {
     "slug": "bioprinting",
     "title": "3Dバイオプリンティング：印刷する組織",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "researcher",
     "publishAt": "2028-03-01",
     "publishedAt": "",
@@ -5925,7 +6023,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "2b2de59796c8fdb6585ab9bf1cb38a6342743d87bd163fc7705b00b5e2ba877b",
+      "contentHash": "c103c8f164bf1c6fbba216c6dd3e4bf52fceb18057166fc714ffa2f7e84d96c4",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 2,
@@ -5935,7 +6033,7 @@
   "organ-transplant-basics": {
     "slug": "organ-transplant-basics",
     "title": "臓器移植の基礎：提供と分配の仕組み",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "medical-research",
     "publishAt": "2028-03-04",
     "publishedAt": "",
@@ -5945,6 +6043,7 @@
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
     "riskFlags": [
+      "effect_or_treatment_claim",
       "safety_or_risk_claim",
       "cost_or_system_claim"
     ],
@@ -5960,7 +6059,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "bd1defaa43a141d751899093547725fc5c1acea994453bddef91a0c4b7d77584",
+      "contentHash": "ed2c0de25a0e10b6d6b5881e347a8514262ffa6521bc90b2f8ead81a6e4f9a13",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -5970,7 +6069,7 @@
   "ips-donation": {
     "slug": "ips-donation",
     "title": "iPSの提供ドナーとは：協力の仕組みと流れ",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "microscope",
     "publishAt": "2028-03-07",
     "publishedAt": "",
@@ -5995,7 +6094,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "74340d078f849972a2d0705b3f9991f7501f3fac2b0261907fc1c617412e4518",
+      "contentHash": "494409216b5f7db655a57e753ba89e9ee8136b0b250c89a20facefb236769f9d",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 2,
@@ -6005,7 +6104,7 @@
   "advance-directives": {
     "slug": "advance-directives",
     "title": "事前指示書の書き方：延命治療と意思表示",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "hospital-care",
     "publishAt": "2028-03-10",
     "publishedAt": "",
@@ -6030,7 +6129,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "15ffb7a9a2ccb64130189d1fe8fdd989dd3eae9e60e15c6da812910069c700ee",
+      "contentHash": "aff69070426c1fcffeac276e937fc5a592add443f5b3887265bbec79c7f5e1f9",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 4,
@@ -6040,7 +6139,7 @@
   "patient-rights": {
     "slug": "patient-rights",
     "title": "患者の権利：知っておきたい基本",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "medical-team",
     "publishAt": "2028-03-13",
     "publishedAt": "",
@@ -6066,7 +6165,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "e03c4468af4c49474dabdcc59e8ec243571ff42b2f930f4462ba72cc3081c33c",
+      "contentHash": "fdafa392c07c68f42127ba3be7ffdc42f3001c68c045f3ba383587153a312785",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 4,
@@ -6076,7 +6175,7 @@
   "generic-drugs": {
     "slug": "generic-drugs",
     "title": "ジェネリック医薬品：後発品の選び方",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "medical-research",
     "publishAt": "2028-03-16",
     "publishedAt": "",
@@ -6088,6 +6187,7 @@
     "riskFlags": [
       "effect_or_treatment_claim",
       "safety_or_risk_claim",
+      "cost_or_system_claim",
       "regulatory_or_advertising_claim",
       "individual_decision_context"
     ],
@@ -6103,7 +6203,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "694f3dd22c80426b08ec9fd290ad78a9b714dee8a9d09947e2af534837d9ffaf",
+      "contentHash": "e6397fd3d13b575aed5a2754b4b51645f4b484a25f084fa9d0267718b41d4942",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 4,
@@ -6113,7 +6213,7 @@
   "insurance-card-guide": {
     "slug": "insurance-card-guide",
     "title": "保険証とマイナ保険証：受診時の使い方",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "doctor-consultation",
     "publishAt": "2028-03-19",
     "publishedAt": "",
@@ -6123,6 +6223,7 @@
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
     "riskFlags": [
+      "effect_or_treatment_claim",
       "cost_or_system_claim",
       "individual_decision_context"
     ],
@@ -6138,7 +6239,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "ef8ebd1f82bb10f4eb5c85162c7af10a34006f66b5eb7b1a8ffd27945fff7ce7",
+      "contentHash": "0df6e6c7fa545f6a778da60bf62a2957b8662314f1fb9439a18fe78766a4ebd3",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 4,
@@ -6148,7 +6249,7 @@
   "nursing-care-certification": {
     "slug": "nursing-care-certification",
     "title": "要介護認定の流れ：申請からサービスまで",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "hospital-care",
     "publishAt": "2028-03-22",
     "publishedAt": "",
@@ -6158,6 +6259,8 @@
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
     "riskFlags": [
+      "effect_or_treatment_claim",
+      "cost_or_system_claim",
       "individual_decision_context"
     ],
     "referenceCount": 6,
@@ -6172,7 +6275,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "7df2ae80ce054c2be6a4eac6aeedaabe8ed96e489d6e7470d4fe5d3105b2d6ef",
+      "contentHash": "2f367e879f8da75c8be40607ae2fe000f7a18bbdda389d1f27056ab693de7633",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 5,
@@ -6182,7 +6285,7 @@
   "driving-illness": {
     "slug": "driving-illness",
     "title": "病気と運転：免許と安全の考え方",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "medical-team",
     "publishAt": "2028-03-25",
     "publishedAt": "",
@@ -6208,7 +6311,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "6d65729d5eda20bce7e15edaec63dd04fdef2a795d7a6f266bdac8371184ef05",
+      "contentHash": "0c097297e55442ad4637e34eba1c49f3cd69640582a0627732830239249a8c41",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 4,
@@ -6218,7 +6321,7 @@
   "work-injury-insurance": {
     "slug": "work-injury-insurance",
     "title": "労災と傷病手当：働けなくなったときの保障",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "medical-research",
     "publishAt": "2028-03-28",
     "publishedAt": "",
@@ -6244,7 +6347,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "823311299f182e3d16bdffb61f0623876a40b1913d309df81ec765774cc7eee0",
+      "contentHash": "4dda896b9cc2cea15f94b6a249d8eabb67ac489f46f24083d0a64896494c7a1b",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 4,
@@ -6254,7 +6357,7 @@
   "medical-accident-system": {
     "slug": "medical-accident-system",
     "title": "医療事故調査制度：仕組みと相談先",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "doctor-consultation",
     "publishAt": "2028-04-01",
     "publishedAt": "",
@@ -6264,6 +6367,7 @@
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
     "riskFlags": [
+      "effect_or_treatment_claim",
       "safety_or_risk_claim",
       "individual_decision_context"
     ],
@@ -6279,7 +6383,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "0c6dd9e646f6858fc132c58f2f6519a277f28d18e4f43fe8291e32c01f13fa27",
+      "contentHash": "61a471f397f31dc1ce91ccb6ad4e1ce3a7af15cbdd8b4325defc07a73043761a",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 4,
@@ -6289,7 +6393,7 @@
   "drug-allergy-record": {
     "slug": "drug-allergy-record",
     "title": "薬のアレルギーと副作用の記録：伝え方",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "hospital-care",
     "publishAt": "2028-04-04",
     "publishedAt": "",
@@ -6299,6 +6403,7 @@
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
     "riskFlags": [
+      "effect_or_treatment_claim",
       "safety_or_risk_claim",
       "public_health_instruction",
       "individual_decision_context"
@@ -6315,7 +6420,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "7f3fb5b02ea85d0ce54b902bce71ff476c3530be3b86c5d7f9b2a14434184f62",
+      "contentHash": "748eb46cc6269f7b01e687cdbbd86a4f49d08d8449501e19c8d42475147d683e",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 4,
@@ -6325,7 +6430,7 @@
   "vaccination-adult": {
     "slug": "vaccination-adult",
     "title": "大人の予防接種：種類と受け方",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "medical-team",
     "publishAt": "2028-04-07",
     "publishedAt": "",
@@ -6352,7 +6457,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "9525f8e6ced9ccdc26b65ba4ef16f725c9f9a6693ad9cc78dcdf81d78363bf2f",
+      "contentHash": "a5b3f6fe8b8980df3233bdba406e4c0791b7375125209ba4088ae8d434689d54",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 4,
@@ -6362,7 +6467,7 @@
   "dental-visit-guide": {
     "slug": "dental-visit-guide",
     "title": "歯科受診の進め方：検診と治療の流れ",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "medical-research",
     "publishAt": "2028-04-10",
     "publishedAt": "",
@@ -6373,6 +6478,7 @@
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
     "riskFlags": [
       "effect_or_treatment_claim",
+      "safety_or_risk_claim",
       "cost_or_system_claim",
       "individual_decision_context"
     ],
@@ -6388,7 +6494,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "d8c60fb123620553803aa2d757210ec4f5b66d529a979cf62d5e3b0b9e8dc2c0",
+      "contentHash": "99322668e5a196435a47ee03e373e9e6f0c16e4aaf3b4bc359d28b5dd509956b",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 4,
@@ -6398,7 +6504,7 @@
   "assistive-devices": {
     "slug": "assistive-devices",
     "title": "補装具の作り方：義肢・装具と費用",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "doctor-consultation",
     "publishAt": "2028-04-13",
     "publishedAt": "",
@@ -6408,6 +6514,8 @@
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
     "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim",
       "cost_or_system_claim",
       "individual_decision_context"
     ],
@@ -6423,7 +6531,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "9f8b9f0323043fb85cacf3b2d3882845518629d8a1023cae1b3b86b54bfb1807",
+      "contentHash": "739a8c5264999f31e689282be9eb6b8eb5ac7618fefdfd93fe5c8a8626921cd5",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 4,
@@ -6433,7 +6541,7 @@
   "home-safety-elderly": {
     "slug": "home-safety-elderly",
     "title": "高齢者の家の安全：転倒予防の工夫",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "hospital-care",
     "publishAt": "2028-04-16",
     "publishedAt": "",
@@ -6460,7 +6568,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "c56fd4891746c6a454ac9d3071dc076444664db43815727bf7c88235a4e053e5",
+      "contentHash": "9d6d578bfe3bae35b0e0a6b8bde5672a52ae288dbbc37ee305f6c4bd970beeb8",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 4,
@@ -6470,7 +6578,7 @@
   "predatory-journals": {
     "slug": "predatory-journals",
     "title": "ハゲタカジャーナルとは：粗悪誌の見分け方",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "microscope",
     "publishAt": "2028-04-19",
     "publishedAt": "",
@@ -6492,7 +6600,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "3c88a9b6b8b47d43200a9a74460d9f06bc2a616a6fd9cf9c789c21eb08828b05",
+      "contentHash": "dc932e5047b809e2e492b78f2ee5af4f29b3a8ee41ecdf06c6ae164aa6f79f8d",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -6502,7 +6610,7 @@
   "retractions": {
     "slug": "retractions",
     "title": "論文撤回とは：撤回理由の読み方",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "medical-team",
     "publishAt": "2028-04-22",
     "publishedAt": "",
@@ -6511,7 +6619,9 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": [],
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
     "referenceCount": 4,
     "reviewer": {
       "status": "planned",
@@ -6524,7 +6634,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "cc8c9f1dc5a635066ddedb29b40ba4b4e36308876987dc2bf49c44266acdf6fc",
+      "contentHash": "a8664de47d8962881006e2a9370293937a4e99dfe5938dae9a1c41276acd031c",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 2,
@@ -6534,7 +6644,7 @@
   "open-access": {
     "slug": "open-access",
     "title": "オープンアクセスとは：誰でも読める論文",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "laboratory",
     "publishAt": "2028-04-25",
     "publishedAt": "",
@@ -6558,7 +6668,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "66a25c6def50ca4902d68233f7d8d6abd6d755651f393613dca39fa81ea55839",
+      "contentHash": "2e5753921c67da712431d6e1cf8d80b90f2e11071bbe5d0ae2c0eed5f68fb0ef",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -6568,7 +6678,7 @@
   "impact-factor": {
     "slug": "impact-factor",
     "title": "インパクトファクターの読み方：数字の意味と限界",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "researcher",
     "publishAt": "2028-04-28",
     "publishedAt": "",
@@ -6593,7 +6703,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "de356f107cb663931ef24082140fc330f0dc2f91c09749ca04daa4254fe2be98",
+      "contentHash": "0384f8fbb467d4a5a9db4473b3e4992afd5fbd304779e03de25d27c636db935f",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 2,
@@ -6603,7 +6713,7 @@
   "guideline-reading": {
     "slug": "guideline-reading",
     "title": "診療ガイドラインの読み方：推奨の強さを知る",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "microscope",
     "publishAt": "2028-05-01",
     "publishedAt": "",
@@ -6612,41 +6722,8 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": [],
-    "referenceCount": 5,
-    "reviewer": {
-      "status": "planned",
-      "name": "千原 良友",
-      "reviewedAt": "",
-      "scope": "",
-      "conflictOfInterest": ""
-    },
-    "publishGate": "review_record_required",
-    "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
-    "editorialEvidence": {
-      "revision": "literature-v2",
-      "contentHash": "1119564034e9102ee8c270abbbf1113343db847c38b7b84a18c60fb51575e826",
-      "checkedAt": "2026-09-22",
-      "status": "editorial_source_review",
-      "sourceCount": 3,
-      "note": "Actual GRADE series abstracts and PRISMA full text inspected. Replaces simplistic low-certainty/small-harm explanation; no guideline recommendation issued by this audit. PubMed-linked abstracts were retrieved and read as actual MEDLINE abstract records through Europe PMC; full-text tags identify separately retrieved article texts, not search snippets. This is a targeted editorial audit, not a systematic review."
-    }
-  },
-  "package-insert": {
-    "slug": "package-insert",
-    "title": "添付文書の読み方：薬の説明書を活用する",
-    "lastEditedAt": "2026-09-25",
-    "imageKey": "medical-team",
-    "publishAt": "2028-05-04",
-    "publishedAt": "",
-    "releaseTrack": "scheduled",
-    "medicalStatus": "needs_medical_review",
-    "legalStatus": "needs_legal_editorial_review",
-    "evidenceStatus": "topic_sources_mapped_professional_review_pending",
-    "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
     "riskFlags": [
-      "effect_or_treatment_claim",
-      "safety_or_risk_claim"
+      "effect_or_treatment_claim"
     ],
     "referenceCount": 5,
     "reviewer": {
@@ -6660,7 +6737,44 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "ac6544f740a968f2c1c20f62ce2d3e19da5844df3382a6e98a46cc616246f8f2",
+      "contentHash": "8c151937245650a216c42f4192ed233ae297445a4b491cb291e74b105a5a5d86",
+      "checkedAt": "2026-09-22",
+      "status": "editorial_source_review",
+      "sourceCount": 3,
+      "note": "Actual GRADE series abstracts and PRISMA full text inspected. Replaces simplistic low-certainty/small-harm explanation; no guideline recommendation issued by this audit. PubMed-linked abstracts were retrieved and read as actual MEDLINE abstract records through Europe PMC; full-text tags identify separately retrieved article texts, not search snippets. This is a targeted editorial audit, not a systematic review."
+    }
+  },
+  "package-insert": {
+    "slug": "package-insert",
+    "title": "添付文書の読み方：薬の説明書を活用する",
+    "lastEditedAt": "2026-09-26",
+    "imageKey": "medical-team",
+    "publishAt": "2028-05-04",
+    "publishedAt": "",
+    "releaseTrack": "scheduled",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
+    "evidenceStatus": "topic_sources_mapped_professional_review_pending",
+    "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim",
+      "cost_or_system_claim",
+      "regulatory_or_advertising_claim"
+    ],
+    "referenceCount": 5,
+    "reviewer": {
+      "status": "planned",
+      "name": "千原 良友",
+      "reviewedAt": "",
+      "scope": "",
+      "conflictOfInterest": ""
+    },
+    "publishGate": "review_record_required",
+    "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
+    "editorialEvidence": {
+      "revision": "literature-v2",
+      "contentHash": "7d1f1783faefe8cac9d8f1ac7369cdf7e84c9f7d40ed208ec752e3a8c1232a34",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 4,
@@ -6670,7 +6784,7 @@
   "rwd-basics": {
     "slug": "rwd-basics",
     "title": "リアルワールドデータとは：日常診療の記録の活用",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "laboratory",
     "publishAt": "2028-05-07",
     "publishedAt": "",
@@ -6696,7 +6810,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "e027062829110bf44c78ee50c186f30acca8588ce4b06fae9b6c5fb2c74aeda1",
+      "contentHash": "c3dfec49bcf63385acb292e446b2dd42c15b84f884ccdcce2de5b5fd21068ca0",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 2,
@@ -6706,7 +6820,7 @@
   "expanded-access": {
     "slug": "expanded-access",
     "title": "拡大治験とコンパッショネートユース：未承認薬への道",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "researcher",
     "publishAt": "2028-05-10",
     "publishedAt": "",
@@ -6733,7 +6847,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "c9d447f46d76b7127064ae44b02acb61f810902bb3d0f6c1dfa0824427c6e6f9",
+      "contentHash": "bfe6493e06b14d20a2ef1aab57c4eee0f655aa0c6294d3d5b372a9e83415a1a3",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -6743,7 +6857,7 @@
   "first-in-human": {
     "slug": "first-in-human",
     "title": "ファーストインヒューマン試験とは：人で初めて試す段階",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "microscope",
     "publishAt": "2028-05-13",
     "publishedAt": "",
@@ -6769,7 +6883,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "5d53bc0671626fc1b8d287f0412d27f4f15be61cccbe947377a6fd9a0b0d224f",
+      "contentHash": "badf2a364eb61fef9f0f2ad72f79f835bcb514d3f20c3767f3a1986b530cfe94",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -6779,7 +6893,7 @@
   "decentralized-trials": {
     "slug": "decentralized-trials",
     "title": "分散型治験（DCT）とは：来院しない治験",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "medical-team",
     "publishAt": "2028-05-16",
     "publishedAt": "",
@@ -6789,6 +6903,8 @@
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
     "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim",
       "regulatory_or_advertising_claim"
     ],
     "referenceCount": 4,
@@ -6803,7 +6919,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "4969b8b5bd6e61f22d81e57e0032f1c122eb0cb57778e3c981ab824a42449140",
+      "contentHash": "802181f57825eb7fe955abbea848968a49325350a5ae41967d6d0b142c8122aa",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 2,
@@ -6813,7 +6929,7 @@
   "basket-trials": {
     "slug": "basket-trials",
     "title": "バスケット試験・アンブレラ試験とは：遺伝子で分ける治験",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "laboratory",
     "publishAt": "2028-05-19",
     "publishedAt": "",
@@ -6823,6 +6939,7 @@
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
     "riskFlags": [
+      "effect_or_treatment_claim",
       "regulatory_or_advertising_claim"
     ],
     "referenceCount": 5,
@@ -6837,7 +6954,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "a20c66091c4176188b660c910e7db7809782c548abf034c4e82a48eb96228ca8",
+      "contentHash": "3089151c1bc7086a942005ff68311fe25e6c45e2da2cceca2fb42358e1f6dcbc",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -6847,7 +6964,7 @@
   "digital-therapeutics": {
     "slug": "digital-therapeutics",
     "title": "デジタル療法（DTx）とは：アプリで治す時代",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "researcher",
     "publishAt": "2028-05-22",
     "publishedAt": "",
@@ -6874,7 +6991,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "3cba76418cbe14544f87958ad94df02015ef29ac1a4114cfccfe57ffd75c178a",
+      "contentHash": "c0826a1afbb7274c1620adc9d670f0ffe361c6c33b565d1056c9267c1bdbf4f8",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -6908,7 +7025,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "6f017016964493ccc94ffed6ddc0c25037578cdc3576476c0641ce41363cd670",
+      "contentHash": "277a02a2932fab63ef6b2c6515007dc57a394e35c828776aa2c0755c9ca0e3c1",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -6928,6 +7045,7 @@
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
     "riskFlags": [
+      "effect_or_treatment_claim",
       "public_health_instruction"
     ],
     "referenceCount": 4,
@@ -6942,7 +7060,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "b44c39edc114343a324de9a0ef83d5aae24c04cb72d44eb35519b4e3fb624cd2",
+      "contentHash": "90dd1cb83364f0d4301f2553a2a93cf64a1f477c8c963a8909c0a4925684e14e",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -6961,7 +7079,9 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": [],
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
     "referenceCount": 4,
     "reviewer": {
       "status": "planned",
@@ -6974,7 +7094,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "96434a1f2c7102368938d96ea609fa7e7abfd7eaeaa5fc743e507eb028a314b9",
+      "contentHash": "f3cc5da6242966e88881fd18eba5bd7f39f6c71f816fa14757602dd1461f1419",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -6984,7 +7104,7 @@
   "ips-nobel-story": {
     "slug": "ips-nobel-story",
     "title": "iPS細胞とノーベル賞：2012年の出来事",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "laboratory",
     "publishAt": "2028-06-04",
     "publishedAt": "",
@@ -7009,7 +7129,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "b54c8ff3a9181f06fe72152309e845fad6222c2076947fccf915c3af1e7a0b6f",
+      "contentHash": "5dd02ae7a3d5c636f1fcc6496cce235dbeeb8348699647c6b094c5eb9df0e9bd",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 4,
@@ -7019,7 +7139,7 @@
   "organoid-ethics": {
     "slug": "organoid-ethics",
     "title": "オルガノイドと意識の議論：脳モデルの倫理",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "researcher",
     "publishAt": "2028-06-07",
     "publishedAt": "",
@@ -7028,7 +7148,9 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": [],
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
     "referenceCount": 5,
     "reviewer": {
       "status": "planned",
@@ -7041,7 +7163,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "de5de1fe9de3d3371950690939ebe1c2220910c7d61b324aee4d801558199bd2",
+      "contentHash": "330ec18ba5f0bb0990fab29810d745e4ee6972d4c00034c69154b6cadda25e9f",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -7051,7 +7173,7 @@
   "home-culture-myth": {
     "slug": "home-culture-myth",
     "title": "自宅での細胞培養と自己投与：安全性の誤解",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "medical-research",
     "publishAt": "2028-06-10",
     "publishedAt": "",
@@ -7061,6 +7183,7 @@
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
     "riskFlags": [
+      "effect_or_treatment_claim",
       "safety_or_risk_claim"
     ],
     "referenceCount": 5,
@@ -7075,7 +7198,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "633965f6d1f248a5ae9f85bab3aa298afcdff7155b8d004b9120c7b76a82d9ee",
+      "contentHash": "e35764a60a9e34a0d7efd2c6daae33a7dbde3cd9ee670106500ca341431b45ca",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -7085,7 +7208,7 @@
   "first-aid-basics": {
     "slug": "first-aid-basics",
     "title": "応急手当の基礎：止血と119番",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "doctor-consultation",
     "publishAt": "2028-06-13",
     "publishedAt": "",
@@ -7095,6 +7218,7 @@
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
     "riskFlags": [
+      "effect_or_treatment_claim",
       "safety_or_risk_claim",
       "public_health_instruction",
       "individual_decision_context"
@@ -7111,7 +7235,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "abf132dee23b163fe3815d606fbc2b8c6455c3008f0ebccd8d94ee5232a9f9ba",
+      "contentHash": "cb017d64e605f39695c4a904eb1be8918262e58007b06d0099e708a00bf9acd1",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 5,
@@ -7121,7 +7245,7 @@
   "medicine-storage": {
     "slug": "medicine-storage",
     "title": "薬の保管方法：期限と置き場所",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "hospital-care",
     "publishAt": "2028-06-16",
     "publishedAt": "",
@@ -7131,6 +7255,7 @@
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
     "riskFlags": [
+      "effect_or_treatment_claim",
       "public_health_instruction",
       "individual_decision_context"
     ],
@@ -7146,7 +7271,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "2ea102e080d0c20eb37b2560ff5ab6dca569864bb714aca4f765e82abb3eb5ad",
+      "contentHash": "7e1e3854ae024cb685d92d555d518d19f012045ad6fa2924894dc6dd3f6cf858",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 5,
@@ -7156,7 +7281,7 @@
   "nobel-prize-guide": {
     "slug": "nobel-prize-guide",
     "title": "ノーベル生理学・医学賞の読み方",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "microscope",
     "publishAt": "2028-06-19",
     "publishedAt": "",
@@ -7180,7 +7305,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "0edb8006c315645e54c3fdacbf365aa9071a8cf3d85bf37016c8b45cc3ba2d5a",
+      "contentHash": "dff35c73d554be7cbadfb17ba3d79e27868f6f4b0fbb9acabfaec07760abfd14",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 4,
@@ -7190,7 +7315,7 @@
   "science-events": {
     "slug": "science-events",
     "title": "科学イベントの探し方：公開講座と見学会",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "medical-team",
     "publishAt": "2028-06-22",
     "publishedAt": "",
@@ -7212,7 +7337,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "62d8c3c303ca9ea8ce8b6dfbe9be65f0e6877de8bbc8c88ac6a021808f6cc825",
+      "contentHash": "dbe27a4635c0cd8d29821f97c0fbaab9b7668aef3e25d9fd73c1a8d2de0a62e9",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 2,
@@ -7232,12 +7357,13 @@
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
     "riskFlags": [
-      "effect_or_treatment_claim"
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
     ],
     "referenceCount": 4,
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "5d0f8efac06b91c1de7fb3d0f4ce8cc3f5c26861c22d910d826a0bb70066b70a",
+      "contentHash": "d5a9b52725d7d65e26d33b1de819f258e0486613f0fd7c71914e439bb359bdc1",
       "checkedAt": "2026-09-23",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -7272,7 +7398,7 @@
     "referenceCount": 3,
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "ce9a15299fa674c8bb36a93a74267e4fa6458d4af38656c13d9c0f0ea32db4b4",
+      "contentHash": "82e0fba6fa7cd1dcac6069618c631cd0c2d6c5321ad87bdce5131a14e7dae49f",
       "checkedAt": "2026-09-23",
       "status": "editorial_source_review",
       "sourceCount": 2,
@@ -7301,12 +7427,13 @@
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
     "riskFlags": [
-      "effect_or_treatment_claim"
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
     ],
     "referenceCount": 3,
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "00789df9ff129bfba60c5fbedeb016fdad4d92328b11dc31d789fe24c9cefd64",
+      "contentHash": "0bd3d64623b0f6d0cb9e9a144967ee6f55d672605e9e733cc285f2831f2c72a9",
       "checkedAt": "2026-09-23",
       "status": "editorial_source_review",
       "sourceCount": 2,
@@ -7341,7 +7468,7 @@
     "referenceCount": 3,
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "23788ad6394ed195bf9933673cb34e37e77d6119cbe470b705df2c2278efa4c3",
+      "contentHash": "674334154e1f82ff80f01f9b5afea40ff8d2140adf78771b6816fe93e8688dd6",
       "checkedAt": "2026-09-23",
       "status": "editorial_source_review",
       "sourceCount": 2,
@@ -7376,7 +7503,7 @@
     "referenceCount": 3,
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "e1bf385c760ba69936ba5a91dfb4b7adb542d041cefc83a913f534457689f30c",
+      "contentHash": "5142a220fbc782122e3fc20840d04f6d52be3c37dec09adca869a1cb965daeca",
       "checkedAt": "2026-09-23",
       "status": "editorial_source_review",
       "sourceCount": 2,
@@ -7395,7 +7522,7 @@
   "umbilical-cord-tissue-cells": {
     "slug": "umbilical-cord-tissue-cells",
     "title": "臍帯組織由来の幹細胞：ワルトンゼリーの特徴",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "laboratory",
     "publishAt": "2028-07-10",
     "publishedAt": "",
@@ -7405,13 +7532,14 @@
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
     "riskFlags": [
+      "effect_or_treatment_claim",
       "safety_or_risk_claim",
       "cost_or_system_claim"
     ],
     "referenceCount": 3,
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "79f253b3a667a2443905e22f591a26fde98dd9c639339d40498b487043682abf",
+      "contentHash": "b6692fb67664ced56ced36bd47b829483bd57c36e0efbeb22622349b1c51c151",
       "checkedAt": "2026-09-23",
       "status": "editorial_source_review",
       "sourceCount": 2,
@@ -7430,7 +7558,7 @@
   "prp-therapy-basics": {
     "slug": "prp-therapy-basics",
     "title": "PRPと幹細胞治療は何が違う？自分の血液と自分の細胞",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "researcher",
     "publishAt": "2028-07-13",
     "publishedAt": "",
@@ -7448,7 +7576,7 @@
     "referenceCount": 4,
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "bb1d4c7135f7237f3a0fc721465f1df3f0c1eed9a9a43cadfd97c7baffda4ba0",
+      "contentHash": "f89b7b0ea654e9fa38113ec224f37afd87d55d63b1fc36e64611a92a942dfc96",
       "checkedAt": "2026-09-23",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -7503,7 +7631,7 @@
   "exosome-cosmetic-claims": {
     "slug": "exosome-cosmetic-claims",
     "title": "幹細胞・エクソソームを使った美容医療の効果と注意点",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "microscope",
     "publishAt": "2028-07-19",
     "publishedAt": "",
@@ -7521,7 +7649,7 @@
     "referenceCount": 2,
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "5ca2840e38a496faebcdf6498bf54600837567b005e670433b5a5d9b807277c2",
+      "contentHash": "a282f5978622f9b24a12e4d41ffa397b763237cd5c3067b4550c2286adf7d686",
       "checkedAt": "2026-09-23",
       "status": "editorial_source_review",
       "sourceCount": 2,
@@ -7540,7 +7668,7 @@
   "cell-processing-license-system": {
     "slug": "cell-processing-license-system",
     "title": "特定細胞加工物の製造許可の仕組み",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "laboratory",
     "publishAt": "2028-07-22",
     "publishedAt": "",
@@ -7556,7 +7684,7 @@
     "referenceCount": 2,
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "b3f0742dffb3423f2a7906e551ddbb770a2db7b4a8e85d5d9ce349fc372d6de7",
+      "contentHash": "79175414ba3d68820e091d2117fcda96c2edebf497f18e04e373e796185a242b",
       "checkedAt": "2026-09-23",
       "status": "editorial_source_review",
       "sourceCount": 2,
@@ -7575,7 +7703,7 @@
   "treatment-eligibility-process": {
     "slug": "treatment-eligibility-process",
     "title": "再生医療の提供計画：治療を受けるまでの手続きの流れ",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "medical-team",
     "publishAt": "2028-07-25",
     "publishedAt": "",
@@ -7593,7 +7721,7 @@
     "referenceCount": 3,
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "6ac2e503a65eb507b995716979c796893ac8f956a746c4ce96d043e76d415649",
+      "contentHash": "120bd7a463a98a39b23722af93d4d6b1de900394d8e21bf3fa193255b3ec4f25",
       "checkedAt": "2026-09-23",
       "status": "editorial_source_review",
       "sourceCount": 2,
@@ -7612,7 +7740,7 @@
   "drug-side-effect-relief-system": {
     "slug": "drug-side-effect-relief-system",
     "title": "医薬品副作用被害救済制度とは",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "medical-research",
     "publishAt": "2028-07-28",
     "publishedAt": "",
@@ -7624,12 +7752,13 @@
     "riskFlags": [
       "effect_or_treatment_claim",
       "safety_or_risk_claim",
+      "cost_or_system_claim",
       "individual_decision_context"
     ],
     "referenceCount": 3,
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "e564d217a980d967681e53ed62d818dd05d78a6f78e04882a354cd00e989819b",
+      "contentHash": "4e3bdce8a449174b92de9df58805053ecb2bf1063ce0f8c3a6c728540f5e2ab6",
       "checkedAt": "2026-09-23",
       "status": "editorial_source_review",
       "sourceCount": 2,
@@ -7648,7 +7777,7 @@
   "before-after-ad-regulation": {
     "slug": "before-after-ad-regulation",
     "title": "医療広告のビフォーアフター規制の要点",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "doctor-consultation",
     "publishAt": "2028-08-01",
     "publishedAt": "",
@@ -7665,7 +7794,7 @@
     "referenceCount": 2,
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "44d57c891de18ef1d04d893906a758bda0e1167fdc60316c1e8c2e10952d3ba0",
+      "contentHash": "92bc5c9c08faba4d28a2afb76d8f3c0bc1d0750aef78619a82be63f9fe0c2043",
       "checkedAt": "2026-09-23",
       "status": "editorial_source_review",
       "sourceCount": 2,
@@ -7684,7 +7813,7 @@
   "animal-testing-3rs": {
     "slug": "animal-testing-3rs",
     "title": "動物実験と3Rの原則",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "researcher",
     "publishAt": "2028-08-04",
     "publishedAt": "",
@@ -7700,7 +7829,7 @@
     "referenceCount": 3,
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "5bae1072f9e8661d9cb0a0f3f8c7a1f13d48c8e09d2a54bfc66c7a10a060a911",
+      "contentHash": "2c628b6037324a71c08b35a79408384322e969c9d0002af09bc04591c8c3c3a9",
       "checkedAt": "2026-09-23",
       "status": "editorial_source_review",
       "sourceCount": 2,
@@ -7719,7 +7848,7 @@
   "biobank-basics": {
     "slug": "biobank-basics",
     "title": "バイオバンクの仕組み：試料と情報を研究に活かす",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "microscope",
     "publishAt": "2028-08-07",
     "publishedAt": "",
@@ -7729,12 +7858,13 @@
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
     "riskFlags": [
+      "effect_or_treatment_claim",
       "cost_or_system_claim"
     ],
     "referenceCount": 3,
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "273ac7ae6be80843bd3fe5e31902fe998886183678937661ff6f9e55d166d39b",
+      "contentHash": "9139445ab242f4e016da7ce7189f4d61ba6590cc87661cb00c8f50cbc75169ba",
       "checkedAt": "2026-09-23",
       "status": "editorial_source_review",
       "sourceCount": 2,

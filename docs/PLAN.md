@@ -259,3 +259,9 @@ FTPSでレンタルサーバーの公開フォルダへ
 - 薄かった12記事の原稿（`sections`）を実質的に書き足し。生成テンプレートではなく記事固有の内容で3〜4セクションずつ追加：
   questions-before-treatment / stem-cell-types / body-repair-mechanisms / differentiation-basics / immune-basics / hematopoietic-transplant / autologous-allogeneic / insurance-care / jibihi-contract / trouble-help / organoids-intro / reading-research-news
 - 内容は「確認できること・確認の仕方・限界」の3点で構成し、断定表現を避けた。
+
+## 27. 全記事の個別リライト完了（2026-09-26 追記12）
+
+- 3段落だった191記事すべてに、記事固有のセクションを追加。テンプレートではなく各記事のテーマに沿った内容で拡充。
+- cell-types(22) / stem-basics(5) / health-basics(45) / anti-aging(2) / compare-therapies(3) / cost-access(54) / mechanisms(34) / safety(3) / efficacy(23)。
+- 全記事が原稿5-7段落＋証拠・深掘り・FAQ・用語集・まとめの構成に。
