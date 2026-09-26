@@ -2708,16 +2708,17 @@ section[id^="sub-"] { scroll-margin-top: 80px; }
 }
 .glossary-item dd {
   margin: 0;
+  min-width: 0;
   font-size: 12.5px;
   line-height: 1.7;
   color: var(--ink);
+  overflow-wrap: break-word;
 }
 .glossary-link {
   display: inline-block;
   margin-left: 8px;
   font-size: 11px;
   color: var(--green);
-  white-space: nowrap;
 }
 .glossary-note {
   margin-top: 22px;
