@@ -19,6 +19,7 @@ import { CellArt, Icon } from "@/components/visuals";
 import { ArticleVisual } from "@/components/article-visuals";
 import { ArticleTerms } from "./article-terms";
 import { ArticleClosing } from "./article-closing";
+import { ArticleFeedback } from "./article-feedback";
 import { absolute, publicAsset, site } from "@/lib/site";
 import { publication } from "@/lib/site-config";
 import { correctArticleText, correctArticleSections, evidenceSectionsFor } from "@/content/article-evidence";
@@ -178,7 +179,9 @@ export function LocalizedArticleCard({
           {badge && <span className="card-badge">{badge}</span>}
         </div>
         <div className="article-meta">
-          <span>{isReviewed(source) ? copy.editorialManuscript : `${copy.editorialManuscript} · ${copy.translatedVersion}`}</span>
+          <span className={`review-chip ${isReviewed(source) ? "reviewed" : "editorial"}`}>
+            {isReviewed(source) ? copy.editorialManuscript : `${copy.editorialManuscript} · ${copy.translatedVersion}`}
+          </span>
           <span>{copy.readMinutes(source.readingMinutes)}</span>
         </div>
         {scheduled && <span className="preview-status">{copy.previewStatus} · {copy.scheduled(source.publishAt!.replaceAll("-", "."))}</span>}
@@ -354,6 +357,7 @@ export function LocalizedArticle({ locale, source }: { locale: SiteLocale; sourc
               </section>
             ) : null}
             <p className="disclaimer">{copy.disclaimer}</p>
+            {source && <ArticleFeedback slug={source.slug} locale={locale} />}
           </article>
           <aside className="article-sidebar">
             <nav className="toc" aria-label={copy.toc}>

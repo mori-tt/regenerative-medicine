@@ -10,7 +10,7 @@ const chrome = {
     error: "送信できませんでした。入力内容を確認するか、時間をおいて再度お試しください。",
     name: "お名前（必須）", email: "メールアドレス（必須）", category: "お問い合わせの種類（必須）",
     choose: "選択してください",
-    options: [["article", "記事内容について"], ["review", "監修・取材について"], ["advertising", "広告・提携について"], ["operations", "運営について"], ["other", "その他"]],
+    options: [["article", "記事内容について"], ["correction", "誤記・修正のご指摘"], ["review", "監修・取材について"], ["advertising", "広告・提携について"], ["operations", "運営について"], ["other", "その他"]],
     message: "お問い合わせ内容（必須）", messagePlaceholder: "記事URLや該当箇所があればご記入ください。診療情報・検査結果は送信しないでください。",
     consent: "個人情報の取り扱いに同意します", privacy: "プライバシーポリシー", submit: "送信する",
   },
@@ -19,7 +19,7 @@ const chrome = {
     error: "Sending failed. Check your input or try again later.",
     name: "Name (required)", email: "Email address (required)", category: "Inquiry type (required)",
     choose: "Select",
-    options: [["article", "About article content"], ["review", "About review and interviews"], ["advertising", "About advertising and partnerships"], ["operations", "About site operations"], ["other", "Other"]],
+    options: [["article", "About article content"], ["correction", "Report an error or correction"], ["review", "About review and interviews"], ["advertising", "About advertising and partnerships"], ["operations", "About site operations"], ["other", "Other"]],
     message: "Message (required)", messagePlaceholder: "Include the article URL and relevant passage if any. Do not send medical or test information.",
     consent: "I agree to the handling of personal information", privacy: "Privacy policy", submit: "Send",
   },
@@ -28,7 +28,7 @@ const chrome = {
     error: "发送失败。请检查输入内容或稍后再试。",
     name: "姓名（必填）", email: "邮箱（必填）", category: "咨询类别（必填）",
     choose: "请选择",
-    options: [["article", "关于文章内容"], ["review", "关于审核与采访"], ["advertising", "关于广告与合作"], ["operations", "关于网站运营"], ["other", "其他"]],
+    options: [["article", "关于文章内容"], ["correction", "报告错误或修正"], ["review", "关于审核与采访"], ["advertising", "关于广告与合作"], ["operations", "关于网站运营"], ["other", "其他"]],
     message: "咨询内容（必填）", messagePlaceholder: "如有文章URL与相关位置请填写。不要发送诊疗与检查信息。",
     consent: "同意个人信息处理", privacy: "隐私政策", submit: "发送",
   },
@@ -38,6 +38,8 @@ export function ContactForm({ locale = "ja" }: { locale?: SiteLocale | "ja" } = 
   const copy = chrome[locale];
   const [startedAt, setStartedAt] = useState("");
   const [result, setResult] = useState<"sent" | "error" | "">("");
+  const [categoryValue, setCategoryValue] = useState("");
+  const [messageValue, setMessageValue] = useState("");
   const returnPath = locale === "ja" ? "/contact/" : `/${locale}/contact/`;
 
   useEffect(() => {
@@ -45,7 +47,25 @@ export function ContactForm({ locale = "ja" }: { locale?: SiteLocale | "ja" } = 
     const params = new URLSearchParams(window.location.search);
     const status = params.get("sent") === "1" ? "sent" : params.get("error") === "1" ? "error" : "";
     setResult(status);
-  }, []);
+    const cat = params.get("category");
+    if (cat && copy.options.some(([v]) => v === cat)) setCategoryValue(cat);
+    const article = params.get("article");
+    if (article) {
+      setMessageValue(
+        locale === "ja"
+          ? `対象記事: /articles/${article}/
+
+内容：`
+          : locale === "en"
+            ? `Article: /articles/${article}/
+
+Details:`
+            : `相关文章: /articles/${article}/
+
+内容：`,
+      );
+    }
+  }, [copy]);
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     if (!startedAt) {
@@ -65,8 +85,8 @@ export function ContactForm({ locale = "ja" }: { locale?: SiteLocale | "ja" } = 
         <div className="contact-trap" aria-hidden="true"><label>Website<input name="website" tabIndex={-1} autoComplete="off" /></label></div>
         <label>{copy.name}<input name="name" required maxLength={80} autoComplete="name" /></label>
         <label>{copy.email}<input type="email" name="email" required maxLength={254} autoComplete="email" /></label>
-        <label>{copy.category}<select name="category" required defaultValue=""><option value="" disabled>{copy.choose}</option>{copy.options.map(([value, label]) => <option key={value} value={value}>{label}</option>)}</select></label>
-        <label>{copy.message}<textarea name="message" required minLength={10} maxLength={5000} rows={8} placeholder={copy.messagePlaceholder} /></label>
+        <label>{copy.category}<select name="category" required value={categoryValue} onChange={(e) => setCategoryValue(e.target.value)}><option value="" disabled>{copy.choose}</option>{copy.options.map(([value, label]) => <option key={value} value={value}>{label}</option>)}</select></label>
+        <label>{copy.message}<textarea name="message" required minLength={10} maxLength={5000} rows={8} placeholder={copy.messagePlaceholder} value={messageValue} onChange={(e) => setMessageValue(e.target.value)} /></label>
         <label className="contact-consent"><input type="checkbox" name="consent" value="1" required /> {copy.consent}（<a href={publicAsset(locale === "ja" ? "/privacy/" : `/${locale}/privacy/`)}>{copy.privacy}</a>）</label>
         <button className="button" type="submit">{copy.submit}</button>
       </form>

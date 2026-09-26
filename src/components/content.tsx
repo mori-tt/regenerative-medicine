@@ -85,7 +85,9 @@ export function ArticleCard({
           {badge && <span className="card-badge">{badge}</span>}
         </div>
         <div className="article-meta">
-          <span>{isReviewed(article) ? "医師監修済み" : "一般情報・編集部記事"}</span>
+          <span className={`review-chip ${isReviewed(article) ? "reviewed" : "editorial"}`}>
+            {isReviewed(article) ? "医師監修済み" : "一般情報・編集部記事"}
+          </span>
           <span>約{article.readingMinutes}分で読める</span>
         </div>
         {scheduled && <span className="preview-status">公開予定：{article.publishAt?.replaceAll("-", ".")}｜確認用</span>}

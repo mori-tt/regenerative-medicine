@@ -7,6 +7,7 @@ import { CellArt } from "@/components/visuals";
 import { ArticleVisual } from "@/components/article-visuals";
 import { ArticleTerms } from "@/components/article-terms";
 import { ArticleClosing } from "@/components/article-closing";
+import { ArticleFeedback } from "@/components/article-feedback";
 import { publicAsset } from "@/lib/site";
 import { publication } from "@/lib/site-config";
 import { absolute, pageMetadata, site } from "@/lib/site";
@@ -196,6 +197,7 @@ export default async function ArticlePage({
           <p className="disclaimer">
             この記事は一般的な情報提供を目的としています。個別の診断や治療については医師にご相談ください。
           </p>
+          <ArticleFeedback slug={slug} locale="ja" />
         </article>
         <aside className="article-sidebar">
           <nav className="toc" aria-label="この記事の目次">
