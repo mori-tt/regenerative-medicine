@@ -17,9 +17,7 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
             <span /> {copy.eyebrow}
           </div>
           <h1>
-            {copy.title[0]}
-            <br />
-            {copy.title[1]}
+            {copy.title[0]}{en ? " " : ""}{copy.title[1]}
             <br />
             <em>{copy.title[2]}</em>
           </h1>
