@@ -3,7 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { categories } from "@/content/categories";
 import { glossaryGroups, glossaryTermId } from "@/content/glossary";
-import { Breadcrumbs } from "./content";
+import { Breadcrumbs, Marked } from "./content";
 import type { SiteLocale } from "@/content/locales";
 
 const categoryNames: Record<SiteLocale, Record<string, string>> = {
@@ -129,9 +129,9 @@ export function LocalizedSearch({ locale, items }: { locale: SiteLocale; items: 
               <article className="article-card" key={source.slug}>
                 <div className="article-card-body">
                   <h2>
-                    <Link href={`/${locale}/articles/${source.slug}/`}>{article.title}</Link>
+                    <Link href={`/${locale}/articles/${source.slug}/`}><Marked text={article.title} terms={terms} /></Link>
                   </h2>
-                  <p>{article.description}</p>
+                  <p><Marked text={article.description} terms={terms} /></p>
                 </div>
               </article>
             );

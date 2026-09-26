@@ -80,7 +80,7 @@ export function ArticleSearch({ items }: { items: (Article & { searchText: strin
       {results.length ? (
         <div className="listing-grid">
           {results.map((a) => (
-            <ArticleCard article={a} key={a.slug} />
+            <ArticleCard article={a} key={a.slug} highlight={terms} />
           ))}
         </div>
       ) : (

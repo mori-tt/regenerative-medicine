@@ -60,14 +60,30 @@ export function Breadcrumbs({
     </>
   );
 }
+export function Marked({ text, terms }: { text: string; terms: string[] }) {
+  if (!terms.length) return <>{text}</>;
+  const esc = (t: string) => t.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const re = new RegExp(`(${terms.map(esc).join("|")})`, "gi");
+  const parts = text.split(re);
+  return (
+    <>
+      {parts.map((part, i) =>
+        i % 2 === 1 ? <mark key={i}>{part}</mark> : part,
+      )}
+    </>
+  );
+}
+
 export function ArticleCard({
   article,
   compact = false,
   badge,
+  highlight = [],
 }: {
   article: Article;
   compact?: boolean;
   badge?: string;
+  highlight?: string[];
 }) {
   const cat = categoryFor(article.category);
   const isColumn = article.kind === "column";
@@ -92,9 +108,9 @@ export function ArticleCard({
         </div>
         {scheduled && <span className="preview-status">公開予定：{article.publishAt?.replaceAll("-", ".")}｜確認用</span>}
         <h3>
-          <Link href={`/articles/${article.slug}/`}>{article.title}</Link>
+          <Link href={`/articles/${article.slug}/`}><Marked text={article.title} terms={highlight} /></Link>
         </h3>
-        {!compact && <p>{article.description}</p>}
+        {!compact && <p><Marked text={article.description} terms={highlight} /></p>}
         <div className="card-bottom">
           <span>{article.publishedAt ? `公開 ${article.publishedAt.replaceAll("-", ".")}` : `最終編集 ${article.updatedAt.replaceAll("-", ".")}`}</span>
           <Icon name="arrow" size={19} />

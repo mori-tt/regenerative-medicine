@@ -307,3 +307,10 @@ FTPSでレンタルサーバーの公開フォルダへ
 - `.article-meta` に `align-items: center` を追加しチップと文字の縦揃えを改善。
 - `.section-heading h2` / `.preview-status` / `.card-bottom` の上マージンを微増。
 - 監修者プロフィールの資格・経歴リストに `li + li` 間隔とline-heightを追加、モバイルで経歴カラムを1列化。
+
+## 34. UIUX改善一式（2026-09-26 追記19）
+
+- 可読性：メタ行9→11px、カード下部9→11px、フィルター12→13px、キッカー9→10px、免責文9→10.5px等、小さすぎる文字を底上げ。グレー文字を濃くしてコントラスト改善。focus-visibleのフォーカスリングを追加。
+- 読み心地：読了プログレスバー、ページ上部へ戻るボタン、目次scrollspy（IntersectionObserver）、見出しアンカー(#)、前の記事/次の記事ナビ（`ReadingTools`＋`article-pager`、ja/en/zh）。
+- ナビ：PCヘッダーにカテゴリドロップダウンを追加。検索結果にキーワード`<mark>`ハイライト。
+- その他：印刷CSS（@media printで余計な要素を非表示）、用語集各グループ末尾に「索引に戻る」リンク。

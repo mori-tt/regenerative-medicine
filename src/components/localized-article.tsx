@@ -20,6 +20,7 @@ import { ArticleVisual } from "@/components/article-visuals";
 import { ArticleTerms } from "./article-terms";
 import { ArticleClosing } from "./article-closing";
 import { ArticleFeedback } from "./article-feedback";
+import { ReadingTools } from "./reading-tools";
 import { absolute, publicAsset, site } from "@/lib/site";
 import { publication } from "@/lib/site-config";
 import { correctArticleText, correctArticleSections, evidenceSectionsFor } from "@/content/article-evidence";
@@ -216,6 +217,10 @@ export function LocalizedArticle({ locale, source }: { locale: SiteLocale; sourc
   const reviewed = source ? isReviewed(source) : false;
   const scheduled = Boolean(source && articleBuildMode === "all" && source.publishAt && source.publishAt > new Date().toISOString().slice(0, 10));
   const sectionIds = base.sections.map((_, index) => `section-${index + 1}`);
+  const catArticles = source ? articles.filter((x) => x.category === source.category && isVisibleArticle(x)) : [];
+  const artIdx = catArticles.findIndex((x) => x.slug === source?.slug);
+  const prevArticle = artIdx > 0 ? catArticles[artIdx - 1] : undefined;
+  const nextArticle = artIdx >= 0 && artIdx < catArticles.length - 1 ? catArticles[artIdx + 1] : undefined;
   return (
     <div lang={en ? "en" : "zh-CN"} className="localized-page">
       <div className="container inner-page">
@@ -316,7 +321,7 @@ export function LocalizedArticle({ locale, source }: { locale: SiteLocale; sourc
             <div className="article-body">
               {base.sections.map((section, index) => (
                 <section id={sectionIds[index]} key={section.title} className={section.id === "faq" ? "faq-section" : section.id === "checklist" ? "checklist-section" : undefined}>
-                  <h2>{section.title}</h2>
+                  <h2>{section.title}<a className="heading-anchor" href={`#${sectionIds[index]}`} aria-label={en ? "Link to this heading" : "链接到本节"}>#</a></h2>
                   {section.paragraphs.map((paragraph, paragraphIndex) => (
                     <p key={paragraphIndex} className={section.id === "faq" ? (paragraphIndex % 2 === 0 ? "faq-q" : "faq-a") : undefined}>{paragraph}<CitationLinks ids={section.paragraphReferences?.[paragraphIndex]} references={base.references} locale={locale} /></p>
                   ))}
@@ -358,6 +363,7 @@ export function LocalizedArticle({ locale, source }: { locale: SiteLocale; sourc
             ) : null}
             <p className="disclaimer">{copy.disclaimer}</p>
             {source && <ArticleFeedback slug={source.slug} locale={locale} />}
+            <ReadingTools labelTop={en ? "Back to top" : "回到顶部"} />
           </article>
           <aside className="article-sidebar">
             <nav className="toc" aria-label={copy.toc}>
@@ -373,6 +379,16 @@ export function LocalizedArticle({ locale, source }: { locale: SiteLocale; sourc
             <AdSlot compact locale={locale} />
           </aside>
         </div>
+        {(prevArticle || nextArticle) && (
+          <nav className="article-pager" aria-label={en ? "Adjacent articles" : "同类相邻文章"}>
+            {prevArticle ? (
+              <a href={`/${locale}/articles/${prevArticle.slug}/`}><small>{en ? "Previous" : "上一篇"}</small>← {localizedArticleFor(locale, prevArticle).title}</a>
+            ) : <span />}
+            {nextArticle ? (
+              <a className="next" href={`/${locale}/articles/${nextArticle.slug}/`}><small>{en ? "Next" : "下一篇"}</small>{localizedArticleFor(locale, nextArticle).title} →</a>
+            ) : <span />}
+          </nav>
+        )}
         {source && (
           <section className="related">
             <h2>{copy.related}</h2>

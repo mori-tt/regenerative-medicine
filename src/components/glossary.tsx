@@ -43,7 +43,7 @@ export function Glossary({ locale = "ja" }: { locale?: GlossLocale }) {
         />
         {q ? <span className="glossary-hits">{matchCount}{copy.hits}</span> : null}
       </div>
-      <nav className="filter-links" aria-label={copy.index}>
+      <nav className="filter-links" id="glossary-index" aria-label={copy.index}>
         {glossaryGroups.map((group, i) => (
           <a key={group.ja} href={`#${gid(group, i)}`}>{locale === "ja" ? group.ja : locale === "en" ? group.en : group.zh}</a>
         ))}
@@ -88,6 +88,9 @@ export function Glossary({ locale = "ja" }: { locale?: GlossLocale }) {
               );
             })}
           </dl>
+          <a className="back-to-index" href="#glossary-index">
+            {locale === "ja" ? "索引に戻る ↑" : locale === "en" ? "Back to index ↑" : "返回索引 ↑"}
+          </a>
         </section>
         );
       })}

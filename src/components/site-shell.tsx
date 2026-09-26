@@ -6,7 +6,8 @@ import { MobileMenu } from "./navigation";
 import { site } from "@/lib/site";
 import { Icon } from "./visuals";
 import { LanguageSwitcher } from "./language-switcher";
-import { localizedShell, type SiteLocale } from "@/content/locales";
+import { localizedCategoryName, localizedShell, type SiteLocale } from "@/content/locales";
+import { categories } from "@/content/categories";
 import { publication } from "@/lib/site-config";
 
 function localeFromPath(pathname: string): SiteLocale | "ja" {
@@ -57,6 +58,16 @@ export function Header() {
               {copy?.supervision || "医師監修について"} <span>↗</span>
             </Link>
           </div>
+          <details className="cat-dropdown">
+            <summary>{locale === "ja" ? "カテゴリ" : locale === "en" ? "Categories" : "分类"}</summary>
+            <nav aria-label={locale === "ja" ? "カテゴリ一覧" : locale === "en" ? "Categories" : "分类"}>
+              {categories.map((c) => (
+                <Link key={c.slug} href={locale === "ja" ? `/categories/${c.slug}/` : `/${locale}/categories/${c.slug}/`}>
+                  {locale === "ja" ? c.label : localizedCategoryName(locale, c.slug)}
+                </Link>
+              ))}
+            </nav>
+          </details>
           <Link className="search-link" href={locale === "ja" ? "/search/" : `/${locale}/search/`} aria-label={copy?.searchAria || "記事を検索"}>
             <Icon name="search" />
             <span>{copy?.search || "記事を探す"}</span>

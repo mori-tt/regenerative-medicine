@@ -8,6 +8,7 @@ import { ArticleVisual } from "@/components/article-visuals";
 import { ArticleTerms } from "@/components/article-terms";
 import { ArticleClosing } from "@/components/article-closing";
 import { ArticleFeedback } from "@/components/article-feedback";
+import { ReadingTools } from "@/components/reading-tools";
 import { publicAsset } from "@/lib/site";
 import { publication } from "@/lib/site-config";
 import { absolute, pageMetadata, site } from "@/lib/site";
@@ -43,6 +44,10 @@ export default async function ArticlePage({
   const cat = categoryFor(article.category);
   const reviewed = isReviewed(article);
   const scheduled = articleBuildMode === "all" && Boolean(article.publishAt && article.publishAt > new Date().toISOString().slice(0, 10));
+  const catArticles = articles.filter((x) => x.category === article.category && isVisibleArticle(x));
+  const idx = catArticles.findIndex((x) => x.slug === slug);
+  const prevArticle = idx > 0 ? catArticles[idx - 1] : undefined;
+  const nextArticle = idx >= 0 && idx < catArticles.length - 1 ? catArticles[idx + 1] : undefined;
   return (
     <div className="container inner-page">
       <Breadcrumbs
@@ -158,7 +163,7 @@ export default async function ArticlePage({
           <div className="article-body">
             {article.sections.map((section, sectionIndex) => (
               <section id={section.id} key={section.id} className={section.id === "faq" ? "faq-section" : section.id === "checklist" ? "checklist-section" : undefined}>
-                <h2>{section.title}</h2>
+                <h2>{section.title}<a className="heading-anchor" href={`#${section.id}`} aria-label="この見出しへのリンク">#</a></h2>
                 {section.paragraphs.map((p, paragraphIndex) => (
                   <p key={paragraphIndex} className={section.id === "faq" ? (p.startsWith("Q.") ? "faq-q" : "faq-a") : undefined}>{p}<CitationLinks ids={section.paragraphReferences?.[paragraphIndex]} references={article.references} locale="ja" /></p>
                 ))}
@@ -198,6 +203,7 @@ export default async function ArticlePage({
             この記事は一般的な情報提供を目的としています。個別の診断や治療については医師にご相談ください。
           </p>
           <ArticleFeedback slug={slug} locale="ja" />
+          <ReadingTools />
         </article>
         <aside className="article-sidebar">
           <nav className="toc" aria-label="この記事の目次">
@@ -213,6 +219,16 @@ export default async function ArticlePage({
           <AdSlot compact />
         </aside>
       </div>
+      {(prevArticle || nextArticle) && (
+        <nav className="article-pager" aria-label="このカテゴリの前後の記事">
+          {prevArticle ? (
+            <a href={`/articles/${prevArticle.slug}/`}><small>前の記事</small>← {prevArticle.title}</a>
+          ) : <span />}
+          {nextArticle ? (
+            <a className="next" href={`/articles/${nextArticle.slug}/`}><small>次の記事</small>{nextArticle.title} →</a>
+          ) : <span />}
+        </nav>
+      )}
       <section className="related">
         <h2>あわせて読みたい</h2>
         <div className="article-grid">
