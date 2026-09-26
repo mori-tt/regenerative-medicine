@@ -152,6 +152,7 @@ export const glossaryGroups: GlossaryGroup[] = [
         en: ["Dendritic cell", "An immune cell that presents foreign material to T cells — the command center of immune responses."],
         zh: ["树突状细胞", "向T细胞呈递异物信息的免疫细胞，相当于免疫反应的指挥中枢。"],
         ref: { title: "厚生労働省 e-ヘルスネット", url: "https://www.e-healthnet.mhlw.go.jp/" },
+        link: "immune-basics",
       },
       {
         ja: ["白血球", "免疫を担う血液細胞の総称。リンパ球・マクロファージ・顆粒球などを含みます。"],
@@ -235,11 +236,13 @@ export const glossaryGroups: GlossaryGroup[] = [
         en: ["Blastocyst", "A stage of embryo development; its inner cell mass is the source material of ES cells."],
         zh: ["胚泡", "胚胎发育的一个阶段，其内部细胞团是ES细胞的原料。"],
         link: "es-cells-explained",
+        ref: { title: "CiRA（京都大学iPS細胞研究所）", url: "https://www.cira.kyoto-u.ac.jp/j/faq/faq_index.html" },
       },
       {
         ja: ["生殖細胞系列", "卵子・精子など次の世代に情報を伝える細胞の系統。遺伝子操作には国際的な議論があります。"],
         en: ["Germline", "The cell lineage transmitting information to the next generation (eggs, sperm). Editing it is internationally debated."],
         zh: ["生殖系细胞", "向下一代传递遗传信息的细胞系（卵子、精子等），对其进行基因编辑存在国际性争议。"],
+        link: "genome-editing-difference",
         ref: { title: "CiRA（京都大学iPS細胞研究所）", url: "https://www.cira.kyoto-u.ac.jp/j/faq/faq_index.html" },
       }
     ],
@@ -254,6 +257,7 @@ export const glossaryGroups: GlossaryGroup[] = [
         en: ["Self-renewal", "The ability to divide and produce more stem cells of the same kind. Differentiation alone does not make a stem cell."],
         zh: ["自我复制", "分裂产生与自己相同性质干细胞的能力。仅具备分化能力不足以称为干细胞。"],
         ref: { title: "CiRA（京都大学iPS細胞研究所）", url: "https://www.cira.kyoto-u.ac.jp/j/faq/faq_index.html" },
+        link: "cell-division",
       },
       {
         ja: ["分化", "幹細胞が筋肉・神経・血液など、特定の役割を持つ細胞に変わること。"],
@@ -267,12 +271,14 @@ export const glossaryGroups: GlossaryGroup[] = [
         en: ["Reprogramming", "Resetting a differentiated body cell back to an immature state such as an iPS cell."],
         zh: ["重编程", "将已分化的体细胞逆转为iPS细胞等未成熟状态。"],
         ref: { title: "CiRA（京都大学iPS細胞研究所）", url: "https://www.cira.kyoto-u.ac.jp/j/faq/faq_index.html" },
+        link: "ips-cells-explained",
       },
       {
         ja: ["培養", "体外で細胞を増やすこと。温度・栄養・無菌管理など品質管理が問われます。"],
         en: ["Culture", "Growing cells outside the body. Requires quality control of temperature, nutrients, and sterility."],
         zh: ["培养", "在体外扩增细胞，需要温度、营养、无菌等质量管理。"],
         ref: { title: "日本再生医療学会", url: "https://jsrm.jp/" },
+        link: "cell-culture-and-quality",
       },
       {
         ja: ["ニッチ", "幹細胞が存在し、働きを保つための周囲の微小環境。組織内の幹細胞の「住みか」に相当します。"],
@@ -321,12 +327,14 @@ export const glossaryGroups: GlossaryGroup[] = [
         en: ["Apoptosis", "Programmed cell death — an orderly way for unneeded cells to disappear."],
         zh: ["细胞凋亡", "细胞的程序性死亡，使不再需要的细胞有序消失。"],
         ref: { title: "日本再生医療学会", url: "https://jsrm.jp/" },
+        link: "cell-cycle",
       },
       {
         ja: ["転分化（直接リプログラミング）", "ある種類の分化細胞を、幹細胞を経ずに別の種類の細胞へ変換すること。研究段階の技術です。"],
         en: ["Transdifferentiation (direct reprogramming)", "Converting one differentiated cell type directly into another, without a stem-cell stage. A research-stage technique."],
         zh: ["转分化（直接重编程）", "不经过干细胞阶段，将一种分化细胞直接转换为另一种细胞的研究阶段技术。"],
         ref: { title: "日本再生医療学会", url: "https://jsrm.jp/" },
+        link: "direct-reprogramming",
       },
       {
         ja: ["細胞培養加工施設（CPC）", "細胞の採取・加工・培養を行う施設。無菌管理などの品質体制が問われます。"],
@@ -732,6 +740,7 @@ export const glossaryGroups: GlossaryGroup[] = [
         en: ["Pharmaceuticals and Medical Devices Act", "The Japanese law regulating the quality, efficacy, and safety of drugs, devices, and regenerative-medicine products — the basis for approvals."],
         zh: ["《医药品医疗器械等法》（药机法）", "规制药品、医疗器械、再生医疗等产品之质量、有效性、安全性的日本法律，是批准的依据。"],
         ref: { title: "e-Gov法令検索「医薬品、医療機器等の品質、有効性及び安全性の確保等に関する法律」", url: "https://laws.e-gov.go.jp/law/335AC0000000145" },
+        link: "approved-products-japan",
       },
       {
         ja: ["医療広告ガイドライン", "医療機関の広告に関する厚生労働省の指針。誇大な効果表現やビフォーアフター写真の無断使用などに制限があります。"],
@@ -745,12 +754,14 @@ export const glossaryGroups: GlossaryGroup[] = [
         en: ["Advanced medical care (senshin iryo)", "Advanced technologies recognized by MHLW, allowing limited combination with insured care."],
         zh: ["先进医疗", "厚生劳动省认可的先进医疗技术，允许与医保诊疗并用的特殊框架。"],
         ref: { title: "厚生労働省「先進医療の概要」", url: "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/iryouhoken/sensiniryo/index.html" },
+        link: "insurance-care",
       },
       {
         ja: ["保険外併用療養費", "保険診療と保険外診療を併用する際の制度。先進医療などの例外に対応します。"],
         en: ["Extra-billing scheme", "The framework allowing insured care to be combined with certain uninsured care such as advanced treatments."],
         zh: ["保险外并用疗养费制度", "允许医保诊疗与保险外诊疗并用的制度，对应先进医疗等例外。"],
         ref: { title: "厚生労働省「先進医療の概要」", url: "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/iryouhoken/sensiniryo/index.html" },
+        link: "insurance-care",
       },
       {
         ja: ["医療広告のビフォーアフター", "広告に術前後の写真を掲載する場合の規制。条件を満たさない掲載は虚偽広告になり得ます。"],
@@ -764,6 +775,7 @@ export const glossaryGroups: GlossaryGroup[] = [
         en: ["Medical Care Act", "The law governing hospitals and clinics, including advertising rules."],
         zh: ["医疗法", "规定医院、诊所运营与广告等事项的法律，是广告规制的依据之一。"],
         ref: { title: "e-Gov法令検索「医療法」", url: "https://laws.e-gov.go.jp/law/323AC0000000205" },
+        link: "before-after-ad-regulation",
       },
       {
         ja: ["倫理審査委員会（IRB）", "臨床研究が倫理的に適切か審査する委員会。参加者の権利と安全を守る仕組みです。"],
@@ -930,6 +942,7 @@ export const glossaryGroups: GlossaryGroup[] = [
         ja: ["PMDA（医薬品医療機器総合機構）", "医薬品等の承認審査・安全対策を担う独立行政法人。"],
         en: ["PMDA", "Japan's agency handling review and safety of drugs, devices, and related products."],
         zh: ["PMDA（医药品医疗器械综合机构）", "负责药品等审批与安全对策的独立行政法人。"],
+        link: "approved-products-japan",
         ref: { title: "PMDA", url: "https://www.pmda.go.jp/" },
       }
     ],
@@ -965,12 +978,14 @@ export const glossaryGroups: GlossaryGroup[] = [
         en: ["Randomized controlled trial (RCT)", "A trial assigning participants randomly to groups to compare treatment effects while reducing bias."],
         zh: ["随机对照试验（RCT）", "将参与者随机分组比较疗效的试验，可减少偏倚。"],
         ref: { title: "Cochrane 用語集", url: "https://www.cochrane.org/glossary" },
+        link: "randomized-trials",
       },
       {
         ja: ["プラセボ（偽薬）", "有効成分を含まない対照。本物の治療との差を測るために使います。"],
         en: ["Placebo", "An inactive comparator used to measure the true effect of a treatment."],
         zh: ["安慰剂", "不含有效成分的对照，用于衡量真实疗效。"],
         ref: { title: "Cochrane 用語集", url: "https://www.cochrane.org/glossary" },
+        link: "randomized-trials",
       },
       {
         ja: ["系統的レビュー・メタ解析", "複数の研究を定めた方法で集めて統合する評価。最も信頼性の高い根拠の一つです。"],
@@ -1011,6 +1026,8 @@ export const glossaryGroups: GlossaryGroup[] = [
         ja: ["バイアス", "研究結果を偏らせる要因。対象の選ばれ方や測定の仕方などで生じます。"],
         en: ["Bias", "Factors that skew study results — arising from how participants are selected or outcomes measured."],
         zh: ["偏倚", "使研究结果产生偏差的因素，源于对象选择或测量方式等。"],
+        link: "evidence-levels",
+        ref: { title: "Cochrane 用語集", url: "https://www.cochrane.org/glossary" },
       },
       {
         ja: ["統計的有意差", "差が偶然だけでは説明しにくいことを示す統計の判定。効果の大きさとは別の指標です。"],
@@ -1171,12 +1188,14 @@ export const glossaryGroups: GlossaryGroup[] = [
         en: ["Outcome measure", "A result measure used to evaluate treatment — survival, symptom scores, and more."],
         zh: ["结局指标", "衡量治疗效果的结果指标，如生存率、症状评分等。"],
         link: "endpoints",
+        ref: { title: "Cochrane 用語集", url: "https://www.cochrane.org/glossary" },
       },
       {
         ja: ["奏効率", "治療に一定の効果が見られた人の割合。基準の厳しさは研究ごとに異なります。"],
         en: ["Response rate", "The proportion of participants showing a defined response; criteria vary by study."],
         zh: ["有效率", "治疗中显示一定效果的人的比例，判定标准因研究而异。"],
         link: "statistics-intro",
+        ref: { title: "Cochrane 用語集", url: "https://www.cochrane.org/glossary" },
       }
     ],
   },
@@ -1204,6 +1223,7 @@ export const glossaryGroups: GlossaryGroup[] = [
         en: ["Cytokine", "Signaling molecules secreted by cells that regulate inflammation and immunity — the core of paracrine action."],
         zh: ["细胞因子", "细胞分泌的信号分子，调节炎症与免疫，是旁分泌作用的核心。"],
         ref: { title: "日本再生医療学会", url: "https://jsrm.jp/" },
+        link: "msc-secretome",
       },
       {
         ja: ["抗原・抗体", "抗原は異物を標識する分子、抗体はそれに結合して免疫を誘導するたんぱく質。"],
@@ -1273,6 +1293,7 @@ export const glossaryGroups: GlossaryGroup[] = [
         en: ["Fibrosis", "Tissue stiffening after inflammation or injury, reducing organ function — a target of regenerative research."],
         zh: ["纤维化", "炎症或损伤后组织变硬的变化，会导致器官功能下降，是再生医疗的研究对象。"],
         ref: { title: "厚生労働省 e-ヘルスネット", url: "https://www.e-healthnet.mhlw.go.jp/" },
+        link: "body-repair-mechanisms",
       },
       {
         ja: ["DNA・遺伝子", "DNAは遺伝情報を担う物質、遺伝子はその中の機能的な単位。細胞の性質を形づくります。"],
@@ -1286,12 +1307,14 @@ export const glossaryGroups: GlossaryGroup[] = [
         en: ["Growth factor", "Proteins that promote cell growth and differentiation, involved in repair and regeneration."],
         zh: ["生长因子", "促进细胞增殖和分化的蛋白质，参与修复与再生。"],
         ref: { title: "日本再生医療学会", url: "https://jsrm.jp/" },
+        link: "growth-factors",
       },
       {
         ja: ["受容体", "細胞表面で特定の物質を受け取る構造。細胞間の情報伝達の入口です。"],
         en: ["Receptor", "A structure on the cell surface that binds specific molecules — the entry point of cell signaling."],
         zh: ["受体", "细胞表面接收特定物质的结构，是细胞间信息传递的入口。"],
         ref: { title: "日本再生医療学会", url: "https://jsrm.jp/" },
+        link: "cell-signaling",
       },
       {
         ja: ["骨髄", "骨の内部にある造血の場。造血幹細胞や間葉系幹細胞が存在します。"],
@@ -1480,18 +1503,21 @@ export const glossaryGroups: GlossaryGroup[] = [
         en: ["Genome", "The complete set of genetic information a cell carries."],
         zh: ["基因组", "细胞所携带遗传信息的整体。"],
         link: "dna-basics",
+        ref: { title: "厚生労働省 e-ヘルスネット", url: "https://www.e-healthnet.mhlw.go.jp/" },
       },
       {
         ja: ["mRNA", "遺伝子の情報をタンパク質の合成に運ぶ分子。遺伝情報の働き手です。"],
         en: ["mRNA", "The molecule carrying gene instructions for protein synthesis — a worker of genetic information."],
         zh: ["mRNA（信使RNA）", "将基因信息传递给蛋白质合成的分子，是遗传信息的工作单元。"],
         link: "proteins-basics",
+        ref: { title: "厚生労働省 e-ヘルスネット", url: "https://www.e-healthnet.mhlw.go.jp/" },
       },
       {
         ja: ["エピジェネティクス", "遺伝子の働き方がDNAの配列を変えずに調整される仕組み。細胞の個性に関わります。"],
         en: ["Epigenetics", "How gene activity is tuned without changing the DNA sequence — related to cell identity."],
         zh: ["表观遗传学", "在不改变DNA序列的情况下调节基因作用的机制，与细胞个性相关。"],
         link: "genes-and-cells",
+        ref: { title: "日本再生医療学会", url: "https://jsrm.jp/" },
       },
       {
         ja: ["敗血症", "感染に対する全身の強い反応で、重篤化しうる状態。早期対応が重要です。"],
@@ -1582,6 +1608,7 @@ export const glossaryGroups: GlossaryGroup[] = [
         en: ["Cell sorting", "Separating cells by characteristic markers to isolate the target population."],
         zh: ["细胞分选", "按特性标志分离细胞以获取目标细胞的技术。"],
         link: "cell-sorting",
+        ref: { title: "日本再生医療学会", url: "https://jsrm.jp/" },
       },
       {
         ja: ["セルシート", "培養した細胞を薄いシート状にして貼る再生医療技術。心臓や角膜で研究されています。"],
@@ -1630,6 +1657,7 @@ export const glossaryGroups: GlossaryGroup[] = [
         en: ["Imaging", "X-ray, CT, MRI, or ultrasound used to examine the body, including checking treatment effects."],
         zh: ["影像检查", "X线、CT、MRI、超声等观察体内的检查，也用于确认治疗效果。"],
         ref: { title: "厚生労働省 e-ヘルスネット", url: "https://www.e-healthnet.mhlw.go.jp/" },
+        link: "health-checkups",
       },
       {
         ja: ["バイオマーカー", "病気や治療効果を測るための体内の指標。血液検査や画像で測定します。"],
@@ -1733,6 +1761,7 @@ export const glossaryGroups: GlossaryGroup[] = [
         ja: ["PET（陽電子放出断層撮影）", "代謝の活動を画像で見る検査。がんなどの評価に使われます。"],
         en: ["PET scan", "Imaging metabolic activity, used in cancer evaluation and other assessments."],
         zh: ["PET检查", "通过影像观察代谢活动的检查，用于肿瘤等的评估。"],
+        link: "health-checkups",
         ref: { title: "厚生労働省 e-ヘルスネット", url: "https://www.e-healthnet.mhlw.go.jp/" },
       }
     ],
@@ -1789,12 +1818,14 @@ export const glossaryGroups: GlossaryGroup[] = [
         en: ["Corneal disease", "Clouding or loss of the cornea — a field where corneal epithelial regeneration has a clinical track record."],
         zh: ["角膜疾病", "角膜混浊或缺失的疾病，角膜上皮再生医疗已有临床应用。"],
         ref: { title: "難病情報センター", url: "https://www.nanbyou.or.jp/" },
+        link: "corneal-regeneration",
       },
       {
         ja: ["パーキンソン病", "ドーパミンを作る神経が減る病気。iPS細胞由来の細胞移植が臨床研究で試みられています。"],
         en: ["Parkinson's disease", "Loss of dopamine-producing neurons; iPS-derived cell transplantation is being studied in clinical trials."],
         zh: ["帕金森病", "产生多巴胺的神经细胞减少的疾病，iPS细胞来源的细胞移植正在临床研究中。"],
         ref: { title: "難病情報センター", url: "https://www.nanbyou.or.jp/" },
+        link: "neural-stem-cells",
       },
       {
         ja: ["白血病・リンパ腫", "血液のがん。造血幹細胞移植が実績のある領域です。"],
