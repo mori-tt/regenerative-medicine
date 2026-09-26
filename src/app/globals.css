@@ -2547,3 +2547,11 @@ section[id^="sub-"] { scroll-margin-top: 80px; }
   padding: 2px 8px;
   white-space: nowrap;
 }
+
+.visual-svg {
+  display: block;
+  width: 100%;
+  max-width: 680px;
+  margin-inline: auto;
+  height: auto;
+}

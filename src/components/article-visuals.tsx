@@ -67,6 +67,29 @@ const visualBySlug: Record<string, VisualKind> = {
 const copy = {
   ja: {
     label: "理解のための模式図",
+    titles: {
+      approaches: "再生医療の3つのアプローチ",
+      flow: "治療の流れ",
+      evidence: "研究の段階と確かさ",
+      comparison: "自分の細胞と他人由来の細胞の比較",
+      safety: "確認したい安全性のポイント",
+      biodistribution: "点滴した細胞の行き先（動物実験をもとにした概念図）",
+      homing: "細胞が血管から組織へ入る流れ",
+      paracrine: "分泌される物質が周りの細胞に働きかける",
+      bbb: "血液脳関門が細胞の通過を制限する",
+      therapies: "幹細胞・エクソソーム・PRPの違い",
+      celltypes: "代表的な幹細胞の3つの種類",
+      contents: "製剤に含まれるものと投与経路",
+      cost: "費用の構成",
+      checkpoints: "確認したい5つのポイント",
+      repair: "組織が修復される流れ",
+      skinaging: "皮膚の老化と研究アプローチ",
+      routes: "投与経路の3つのパターン",
+      sources: "細胞の採取源の比較",
+      positioning: "薬・手術・再生医療の位置づけ",
+      riskchain: "感染が起こり得る工程",
+      eligibility: "治療の適否を考える枠組み",
+    },
     note: "概念を整理するための図です。具体的な適応、効果、リスク、費用は治療ごとの説明資料で確認してください。",
     approaches: ["細胞を補う", "足場と組み合わせる", "体の修復を促す"],
     flow: ["相談・検査", "説明・同意", "採取・製造・投与", "経過観察"],
@@ -155,9 +178,35 @@ const copy = {
       ["確認すること", "持病・服用薬の申告、採血や画像などの適否評価"],
       ["相談する人", "提供施設だけでなく主治医にも相談"],
     ],
+    vessel: "血管内",
+    tissue: "組織",
+    brain: "脳組織",
   },
   en: {
     label: "Conceptual diagram",
+    titles: {
+      approaches: "Three approaches in regenerative medicine",
+      flow: "The treatment process",
+      evidence: "Research stages and certainty",
+      comparison: "Your own cells vs donor cells",
+      safety: "Safety points to check",
+      biodistribution: "Where infused cells go (conceptual diagram based on animal studies)",
+      homing: "How cells move from a vessel into tissue",
+      paracrine: "Secreted substances act on neighboring cells",
+      bbb: "The blood-brain barrier limits cell passage",
+      therapies: "Stem cells, exosomes, and PRP compared",
+      celltypes: "Three representative types of stem cells",
+      contents: "What a product contains and how it is given",
+      cost: "How costs add up",
+      checkpoints: "Five points to check",
+      repair: "How tissue repair proceeds",
+      skinaging: "Skin aging and the research approach",
+      routes: "Three administration routes",
+      sources: "Where stem cells are collected",
+      positioning: "Drugs, surgery, and regenerative medicine",
+      riskchain: "Where infection can enter the process",
+      eligibility: "How treatment eligibility is considered",
+    },
     note: "This diagram organizes concepts. Confirm treatment-specific eligibility, benefits, risks, and costs in the provider's materials.",
     approaches: ["Replace cells", "Combine with a scaffold", "Stimulate repair"],
     flow: ["Consultation and tests", "Explanation and consent", "Collection, manufacture, and administration", "Follow-up"],
@@ -242,9 +291,35 @@ const copy = {
       ["What is checked", "Disclosure of conditions and medicines; blood tests, imaging"],
       ["Who to consult", "Your own doctors, not only the provider"],
     ],
+    vessel: "Inside the vessel",
+    tissue: "Tissue",
+    brain: "Brain tissue",
   },
   zh: {
     label: "理解用概念图",
+    titles: {
+      approaches: "再生医学的三种路径",
+      flow: "治疗流程",
+      evidence: "研究阶段与证据强度",
+      comparison: "自体细胞与异体细胞的比较",
+      safety: "需要确认的安全性要点",
+      biodistribution: "输注细胞的去向（基于动物实验的概念图）",
+      homing: "细胞从血管进入组织的过程",
+      paracrine: "分泌物质作用于邻近细胞",
+      bbb: "血脑屏障限制细胞通过",
+      therapies: "干细胞、外泌体与PRP的区别",
+      celltypes: "三种代表性干细胞",
+      contents: "制剂所含成分与给药途径",
+      cost: "费用的构成",
+      checkpoints: "需要确认的五个要点",
+      repair: "组织修复的过程",
+      skinaging: "皮肤老化与研究思路",
+      routes: "三种给药途径",
+      sources: "干细胞采集来源的比较",
+      positioning: "药物、手术与再生医学的定位",
+      riskchain: "可能发生感染的环节",
+      eligibility: "治疗适用性的判断框架",
+    },
     note: "本图用于整理概念。具体适用性、获益、风险和费用请确认每项治疗的说明资料。",
     approaches: ["补充细胞", "与支架结合", "促进身体修复"],
     flow: ["咨询与检查", "说明与同意", "采集、制造与给药", "随访观察"],
@@ -329,6 +404,9 @@ const copy = {
       ["确认内容", "申报病情与用药，进行血液、影像等适用性评估"],
       ["咨询对象", "除提供机构外也应咨询自己的主治医生"],
     ],
+    vessel: "血管内",
+    tissue: "组织",
+    brain: "脑组织",
   },
 } as const;
 
@@ -340,7 +418,7 @@ export function ArticleVisual({ slug, locale = "ja" }: { slug: string; locale?: 
   return (
     <figure className={`article-visual article-visual-${kind}`}>
       <div className="article-visual-heading">
-        <span>{text.label}</span>
+        <span>{text.titles[kind] ?? text.label}</span>
       </div>
       {kind === "approaches" && (
         <div className="visual-cards visual-cards-three">
@@ -366,36 +444,10 @@ export function ArticleVisual({ slug, locale = "ja" }: { slug: string; locale?: 
         </div>
       )}
       {kind === "safety" && <div className="visual-cards visual-cards-four">{text.safety.map((item) => <div className="visual-card" key={item}><span>{item}</span></div>)}</div>}
-      {kind === "biodistribution" && (
-        <div className="visual-dist">
-          {text.distribution.map(([place, desc, scale]) => (
-            <div className="visual-dist-row" key={place}>
-              <b>{place}</b>
-              <span>{desc}</span>
-              <em>{scale}</em>
-            </div>
-          ))}
-        </div>
-      )}
-      {kind === "homing" && (
-        <div className="visual-flow visual-flow-five">
-          {text.homingSteps.map((item, index) => <div className="visual-flow-step" key={item}><b>{index + 1}</b><span>{item}</span></div>)}
-        </div>
-      )}
-      {kind === "paracrine" && (
-        <div className="visual-paracrine">
-          <div className="visual-card"><b>1</b><span>{text.paracrineLeft}</span></div>
-          <div className="visual-paracrine-arrow">→</div>
-          <div className="visual-card"><b>2</b><span>{text.paracrineCenter}</span></div>
-          <div className="visual-paracrine-arrow">→</div>
-          <div className="visual-card"><b>3</b><span>{text.paracrineRight}</span></div>
-        </div>
-      )}
-      {kind === "bbb" && (
-        <div className="visual-flow">
-          {text.bbbSteps.map((item, index) => <div className="visual-flow-step" key={item}><b>{index + 1}</b><span>{item}</span></div>)}
-        </div>
-      )}
+      {kind === "biodistribution" && <BiodistributionDiagram text={text} />}
+      {kind === "homing" && <HomingDiagram text={text} />}
+      {kind === "paracrine" && <ParacrineDiagram text={text} />}
+      {kind === "bbb" && <BbbDiagram text={text} />}
       {kind === "therapies" && (
         <div className="visual-table-wrap">
           <table className="visual-table">
@@ -462,5 +514,165 @@ export function ArticleVisual({ slug, locale = "ja" }: { slug: string; locale?: 
         </div>
       )}
     </figure>
+  );
+}
+
+type VisualCopy = (typeof copy)[keyof typeof copy];
+
+function BiodistributionDiagram({ text }: { text: VisualCopy }) {
+  const rows = text.distribution;
+  return (
+    <svg className="visual-svg" viewBox="0 0 680 250" role="img" aria-label={text.titles.biodistribution}>
+      {/* 点滴 */}
+      <g>
+        <rect x="38" y="52" width="40" height="56" rx="7" fill="#e8efe4" stroke="#718b68" strokeWidth="1.5" />
+        <line x1="58" y1="52" x2="58" y2="38" stroke="#718b68" strokeWidth="2" />
+        <line x1="58" y1="108" x2="58" y2="150" stroke="#718b68" strokeWidth="2" />
+        <path d="M58 150 l-6 14 l6 8 l6 -8 z" fill="#718b68" />
+        <text x="58" y="88" textAnchor="middle" fontSize="11" fill="#4f614b">{rows[0][0]}</text>
+      </g>
+      {/* 肺への太い矢印（大部分） */}
+      <path d="M92 122 L178 122" stroke="#718b68" strokeWidth="7" fill="none" markerEnd="url(#arrowBig)" />
+      {/* 肺 */}
+      <g>
+        <ellipse cx="222" cy="105" rx="34" ry="46" fill="#d9e8d5" stroke="#718b68" strokeWidth="1.5" />
+        <ellipse cx="272" cy="105" rx="34" ry="46" fill="#d9e8d5" stroke="#718b68" strokeWidth="1.5" />
+        <ellipse cx="230" cy="96" rx="4" ry="4" fill="#718b68" />
+        <ellipse cx="262" cy="112" rx="4" ry="4" fill="#718b68" />
+        <ellipse cx="243" cy="126" rx="4" ry="4" fill="#718b68" />
+        <ellipse cx="255" cy="86" rx="4" ry="4" fill="#718b68" />
+        <text x="247" y="180" textAnchor="middle" fontSize="14" fontWeight="700" fill="#4f614b">{rows[1][0]}</text>
+        <text x="247" y="200" textAnchor="middle" fontSize="11" fill="#718b68">{rows[1][1]}（{rows[1][2]}）</text>
+      </g>
+      {/* 肝・脾への中程度の矢印（一部） */}
+      <path d="M300 122 L388 122" stroke="#9caf91" strokeWidth="4" fill="none" markerEnd="url(#arrowMid)" strokeDasharray="none" />
+      {/* 肝臓・脾臓 */}
+      <g>
+        <rect x="400" y="86" width="104" height="66" rx="14" fill="#eef3e9" stroke="#9caf91" strokeWidth="1.5" />
+        <ellipse cx="428" cy="116" rx="4" ry="4" fill="#9caf91" />
+        <ellipse cx="466" cy="126" rx="4" ry="4" fill="#9caf91" />
+        <text x="452" y="180" textAnchor="middle" fontSize="14" fontWeight="700" fill="#4f614b">{rows[2][0]}</text>
+        <text x="452" y="200" textAnchor="middle" fontSize="11" fill="#718b68">{rows[2][1]}（{rows[2][2]}）</text>
+      </g>
+      {/* 損傷組織への細い破線矢印（ごく一部） */}
+      <path d="M516 122 L566 122" stroke="#c2cdb8" strokeWidth="2" strokeDasharray="6 5" fill="none" markerEnd="url(#arrowSmall)" />
+      {/* 損傷組織 */}
+      <g>
+        <path d="M604 92 l8 16 18 2 -13 12 4 18 -17 -9 -17 9 4 -18 -13 -12 18 -2 z" fill="#fdf0d8" stroke="#c9a24a" strokeWidth="1.5" />
+        <text x="604" y="180" textAnchor="middle" fontSize="14" fontWeight="700" fill="#4f614b">{rows[3][0]}</text>
+        <text x="604" y="200" textAnchor="middle" fontSize="11" fill="#718b68">{rows[3][1]}（{rows[3][2]}）</text>
+      </g>
+      <defs>
+        <marker id="arrowBig" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#718b68" /></marker>
+        <marker id="arrowMid" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#9caf91" /></marker>
+        <marker id="arrowSmall" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#c2cdb8" /></marker>
+      </defs>
+    </svg>
+  );
+}
+
+function HomingDiagram({ text }: { text: VisualCopy }) {
+  const steps = text.homingSteps;
+  const cellXs = [95, 235, 375, 515];
+  return (
+    <svg className="visual-svg" viewBox="0 0 680 250" role="img" aria-label={text.titles.homing}>
+      {/* 血管 */}
+      <rect x="20" y="52" width="600" height="92" fill="#fbf6ee" stroke="#d8ccb8" strokeWidth="1" />
+      <rect x="20" y="52" width="600" height="7" fill="#d8ccb8" />
+      <rect x="20" y="137" width="600" height="7" fill="#d8ccb8" />
+      <text x="30" y="46" fontSize="11" fill="#a08d6f">{text.vessel}</text>
+      {/* 組織 */}
+      <rect x="20" y="168" width="600" height="52" fill="#f0e9df" />
+      <text x="30" y="196" fontSize="11" fill="#a08d6f">{text.tissue}</text>
+      {/* 細胞：移動→弱接着→強接着→通過 */}
+      {cellXs.map((x, i) => (
+        <g key={x}>
+          <circle cx={x} cy={i === 0 ? 96 : i === 1 ? 108 : i === 2 ? 116 : 128} r="16" fill="#dfe9d8" stroke="#718b68" strokeWidth="1.5" />
+          <circle cx={x} cy={i === 0 ? 96 : i === 1 ? 108 : i === 2 ? 116 : 128} r="7" fill="#9caf91" />
+          <circle cx={x} cy={72} r="10" fill="#718b68" />
+          <text x={x} y={76} textAnchor="middle" fontSize="11" fill="#fff" fontWeight="700">{i + 1}</text>
+          <text x={x} y={i === 3 ? 158 : i === 0 ? 88 : 84} textAnchor="middle" fontSize="10" fill="#5b6b57">
+            {steps[i]}
+          </text>
+          {i < 3 && <path d={`M${x + 20} ${i === 0 ? 96 : i === 1 ? 108 : 116} L${cellXs[i + 1] - 22} ${i + 1 === 1 ? 108 : i + 1 === 2 ? 116 : 128}`} stroke="#b7c4ae" strokeWidth="1.5" strokeDasharray="4 4" />}
+        </g>
+      ))}
+      {/* 組織への移行 */}
+      <path d="M515 148 L515 186" stroke="#718b68" strokeWidth="2" markerEnd="url(#arrowMid)" />
+      <circle cx="515" cy="196" r="14" fill="#dfe9d8" stroke="#718b68" strokeWidth="1.5" />
+      <circle cx="515" cy="196" r="6" fill="#9caf91" />
+      <circle cx="515" cy="72" r="10" fill="#718b68" />
+      <text x="515" y="76" textAnchor="middle" fontSize="11" fill="#fff" fontWeight="700">5</text>
+      <text x="560" y="196" fontSize="10" fill="#5b6b57">{steps[4]}</text>
+      <defs>
+        <marker id="arrowMid" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#718b68" /></marker>
+      </defs>
+    </svg>
+  );
+}
+
+function ParacrineDiagram({ text }: { text: VisualCopy }) {
+  return (
+    <svg className="visual-svg" viewBox="0 0 680 240" role="img" aria-label={text.titles.paracrine}>
+      {/* 投与された細胞 */}
+      <g>
+        <circle cx="110" cy="105" r="54" fill="#d9e8d5" stroke="#718b68" strokeWidth="2" />
+        <circle cx="110" cy="105" r="24" fill="#9caf91" />
+        <text x="110" y="196" textAnchor="middle" fontSize="12" fontWeight="700" fill="#4f614b">{text.paracrineLeft}</text>
+      </g>
+      {/* 分泌される物質 */}
+      <g fill="#718b68">
+        <circle cx="210" cy="76" r="4" /><circle cx="240" cy="64" r="4" />
+        <circle cx="222" cy="104" r="4" /><circle cx="258" cy="98" r="4" />
+        <circle cx="206" cy="134" r="4" /><circle cx="246" cy="142" r="4" />
+        <circle cx="292" cy="70" r="4" /><circle cx="310" cy="112" r="4" /><circle cx="288" cy="148" r="4" />
+      </g>
+      <path d="M180 82 C 260 60, 330 62, 430 78" stroke="#9caf91" strokeWidth="2" fill="none" markerEnd="url(#arrowMid)" />
+      <path d="M180 128 C 260 150, 330 148, 430 132" stroke="#9caf91" strokeWidth="2" fill="none" markerEnd="url(#arrowMid)" />
+      <text x="305" y="40" textAnchor="middle" fontSize="11" fill="#5b6b57">{text.paracrineCenter}</text>
+      {/* 周囲の細胞 */}
+      <g>
+        <circle cx="500" cy="72" r="30" fill="#eef3e9" stroke="#9caf91" strokeWidth="1.5" />
+        <circle cx="500" cy="72" r="12" fill="#c2cdb8" />
+        <circle cx="512" cy="146" r="30" fill="#eef3e9" stroke="#9caf91" strokeWidth="1.5" />
+        <circle cx="512" cy="146" r="12" fill="#c2cdb8" />
+        <text x="506" y="196" textAnchor="middle" fontSize="12" fontWeight="700" fill="#4f614b">{text.paracrineRight}</text>
+      </g>
+      <defs>
+        <marker id="arrowMid" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#9caf91" /></marker>
+      </defs>
+    </svg>
+  );
+}
+
+function BbbDiagram({ text }: { text: VisualCopy }) {
+  return (
+    <svg className="visual-svg" viewBox="0 0 680 240" role="img" aria-label={text.titles.bbb}>
+      {/* 血管 */}
+      <rect x="60" y="46" width="520" height="80" fill="#fbf6ee" stroke="#d8ccb8" strokeWidth="1" />
+      <text x="70" y="40" fontSize="11" fill="#a08d6f">{text.vessel}</text>
+      {/* BBBの壁 */}
+      <rect x="60" y="126" width="520" height="14" fill="#c9a24a" opacity="0.85" />
+      <text x="72" y="136" fontSize="10" fill="#fff" fontWeight="700">{text.bbbSteps[1]}</text>
+      {/* 脳組織 */}
+      <rect x="60" y="170" width="520" height="50" fill="#eef3e9" rx="10" />
+      <text x="72" y="199" fontSize="11" fill="#5b6b57">{text.brain}</text>
+      {/* 血管内の細胞（ほとんどが通過できない） */}
+      <g>
+        <circle cx="180" cy="86" r="16" fill="#dfe9d8" stroke="#718b68" strokeWidth="1.5" />
+        <circle cx="180" cy="86" r="7" fill="#9caf91" />
+        <circle cx="300" cy="96" r="16" fill="#dfe9d8" stroke="#718b68" strokeWidth="1.5" />
+        <circle cx="300" cy="96" r="7" fill="#9caf91" />
+        <circle cx="420" cy="86" r="16" fill="#dfe9d8" stroke="#718b68" strokeWidth="1.5" />
+        <circle cx="420" cy="86" r="7" fill="#9caf91" />
+        {/* 通過を妨げられる印 */}
+        <text x="300" y="126" textAnchor="middle" fontSize="16" fill="#c9a24a" fontWeight="700">✕</text>
+        {/* ごく一部が通過 */}
+        <circle cx="520" cy="158" r="7" fill="#dfe9d8" stroke="#718b68" strokeWidth="1.5" />
+        <circle cx="520" cy="196" r="7" fill="#dfe9d8" stroke="#718b68" strokeWidth="1.5" />
+      </g>
+      <text x="180" y="60" fontSize="10" fill="#5b6b57">{text.bbbSteps[0]}</text>
+      <text x="560" y="196" fontSize="10" fill="#5b6b57">{text.bbbSteps[2]}</text>
+    </svg>
   );
 }
