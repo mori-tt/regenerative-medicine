@@ -1,13 +1,13 @@
 import Link from "next/link";
-import { glossaryGroups } from "@/content/glossary";
+import { glossaryGroups, glossaryTermId } from "@/content/glossary";
 import type { SiteLocale } from "@/content/locales";
 
 type GlossLocale = SiteLocale | "ja";
 
 const labels = {
-  ja: { index: "分類から探す", more: "関連記事", note: "用語の意味は文脈で変わることがあります。治療の説明で分からない言葉があれば、その場で医療者に確認しましょう。" },
-  en: { index: "Browse by group", more: "Related article", note: "Word meanings can shift with context. If a term in a treatment explanation is unclear, ask the provider directly." },
-  zh: { index: "按分类查找", more: "相关文章", note: "术语的含义可能因语境而异。治疗说明中如有不明白的词，请当场向医务人员确认。" },
+  ja: { index: "分類から探す", more: "関連記事", source: "出典", note: "用語の意味は文脈で変わることがあります。治療の説明で分からない言葉があれば、その場で医療者に確認しましょう。" },
+  en: { index: "Browse by group", more: "Related article", source: "Source", note: "Word meanings can shift with context. If a term in a treatment explanation is unclear, ask the provider directly." },
+  zh: { index: "按分类查找", more: "相关文章", source: "出处", note: "术语的含义可能因语境而异。治疗说明中如有不明白的词，请当场向医务人员确认。" },
 } as const;
 
 function gid(group: { ja: string }, index: number) {
@@ -32,10 +32,10 @@ export function Glossary({ locale = "ja" }: { locale?: GlossLocale }) {
             <span className="listing-count">{group.terms.length}</span>
           </h2>
           <dl className="glossary-list">
-            {group.terms.map((term) => {
+            {group.terms.map((term, ti) => {
               const [t, d] = locale === "ja" ? term.ja : locale === "en" ? term.en : term.zh;
               return (
-                <div className="glossary-item" key={t}>
+                <div className="glossary-item" key={t} id={glossaryTermId(i, ti)}>
                   <dt>{t}</dt>
                   <dd>
                     {d}
@@ -43,6 +43,11 @@ export function Glossary({ locale = "ja" }: { locale?: GlossLocale }) {
                       <Link className="glossary-link" href={articleHref(term.link)}>
                         {copy.more} →
                       </Link>
+                    )}
+                    {term.ref && (
+                      <a className="glossary-link glossary-source" href={term.ref.url} target="_blank" rel="noopener noreferrer">
+                        {copy.source}：{term.ref.title} ↗
+                      </a>
                     )}
                   </dd>
                 </div>

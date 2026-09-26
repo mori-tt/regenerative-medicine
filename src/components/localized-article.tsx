@@ -17,6 +17,7 @@ import type { ArticleBodyLocale } from "@/content/article-bodies-research";
 import { AdSlot, Breadcrumbs, JsonLd } from "@/components/content";
 import { CellArt, Icon } from "@/components/visuals";
 import { ArticleVisual } from "@/components/article-visuals";
+import { ArticleTerms } from "./article-terms";
 import { absolute, publicAsset, site } from "@/lib/site";
 import { publication } from "@/lib/site-config";
 import { correctArticleText, correctArticleSections, evidenceSectionsFor } from "@/content/article-evidence";
@@ -313,6 +314,15 @@ export function LocalizedArticle({ locale, source }: { locale: SiteLocale; sourc
                 </section>
               ))}
             </div>
+            <ArticleTerms
+              locale={locale}
+              text={[
+                base.title,
+                base.description,
+                ...base.points,
+                ...base.sections.flatMap((s) => [s.title, ...s.paragraphs]),
+              ].join("\n")}
+            />
             {source && <ArticleVisual slug={source.slug} locale={locale} category={source.category} index={2} />}
             <ArticleReferences references={base.references} locale={locale} />
             {reviewed && source?.reviewer ? (

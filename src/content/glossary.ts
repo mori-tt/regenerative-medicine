@@ -5,6 +5,8 @@ type Term = {
   zh: [string, string];
   /** 関連記事のスラッグ（あれば詳しく読める内部リンク） */
   link?: string;
+  /** 定義の根拠となる外部出典（公的機関・学術機関など） */
+  ref?: { title: string; url: string };
 };
 
 export type GlossaryGroup = {
@@ -13,6 +15,33 @@ export type GlossaryGroup = {
   zh: string;
   terms: Term[];
 };
+
+/** 記事ページから用語への逆リンクに使う安定ID（グループ順・用語順）。 */
+export function glossaryTermId(groupIndex: number, termIndex: number) {
+  return `gt-${groupIndex}-${termIndex}`;
+}
+
+type GlossLocale = "ja" | "en" | "zh";
+
+/** 記事本文のテキストに登場する用語を抽出（最大 limit 件、用語集の並び順）。 */
+export function termsInText(text: string, locale: GlossLocale, limit = 6): { id: string; term: string }[] {
+  const found: { id: string; term: string }[] = [];
+  const lower = text.toLowerCase();
+  glossaryGroups.forEach((group, gi) => {
+    group.terms.forEach((term, ti) => {
+      const [t] = locale === "ja" ? term.ja : locale === "en" ? term.en : term.zh;
+      if (!t) return;
+      const hit = locale === "ja" || locale === "zh"
+        ? text.includes(t)
+        : new RegExp(`\\b${t.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\b`, "i").test(lower);
+      if (hit) found.push({ id: glossaryTermId(gi, ti), term: t });
+    });
+  });
+  // 汎用語（短い和文語）のヒットを絞る：4文字以上 or link/ref 付きを優先
+  const score = (t: string) => (t.length >= 4 ? 1 : 0);
+  found.sort((a, b) => score(b.term) - score(a.term));
+  return found.slice(0, limit);
+}
 
 export const glossaryGroups: GlossaryGroup[] = [
   {
@@ -25,6 +54,7 @@ export const glossaryGroups: GlossaryGroup[] = [
         en: ["Stem cell", "A cell able to make copies of itself (self-renewal) and become other cell types (differentiation). Properties differ by source and differentiation range."],
         zh: ["干细胞", "具有自我复制和分化能力的细胞总称。因来源和分化范围不同，性质差异很大。"],
         link: "what-is-stem-cell",
+        ref: { title: "CiRA（京都大学iPS細胞研究所）解説", url: "https://www.cira.kyoto-u.ac.jp/j/faq/faq_index.html" },
       },
       {
         ja: ["多能性幹細胞", "体のさまざまな種類の細胞に分化できる幹細胞。ES細胞とiPS細胞が代表例です。"],
@@ -41,6 +71,7 @@ export const glossaryGroups: GlossaryGroup[] = [
         en: ["iPS cell", "Pluripotent stem cells created artificially from body cells such as skin or blood. Research explores making them from a patient's own cells."],
         zh: ["iPS细胞", "由皮肤或血液等体细胞人工制备的多能性干细胞，正在研究使用患者自身细胞制备的可能性。"],
         link: "ips-cells-explained",
+        ref: { title: "CiRA「iPS細胞とは」", url: "https://www.cira.kyoto-u.ac.jp/j/faq/faq_index.html" },
       },
       {
         ja: ["体性幹細胞", "成体の組織（骨髄・脂肪・血液など）に存在する幹細胞。分化できる範囲は限られます。"],
@@ -64,6 +95,24 @@ export const glossaryGroups: GlossaryGroup[] = [
         en: ["Cancer stem cell", "Cells within tumors thought to self-renew and contribute to recurrence or metastasis. A research concept."],
         zh: ["肿瘤干细胞", "肿瘤中持续自我复制、被认为与复发和转移相关的细胞，是研究中的概念。"],
       },
+      {
+        ja: ["脂肪由来幹細胞", "脂肪組織から採取される間葉系幹細胞。採取の負担が比較的小さいとされますが、量や質には個人差があります。"],
+        en: ["Adipose-derived stem cell", "MSCs harvested from fat tissue. Collection burden is relatively low, though quantity and quality vary by person."],
+        zh: ["脂肪来源干细胞", "从脂肪组织采集的间充质干细胞，采集负担相对较小，但数量和质量因人而异。"],
+        link: "adipose-stem",
+      },
+      {
+        ja: ["神経幹細胞", "脳や神経組織に存在し、神経系の細胞を生み出す幹細胞。再生医療での応用が研究されています。"],
+        en: ["Neural stem cell", "Stem cells in the brain and nervous tissue that give rise to neural cells. Studied for regenerative applications."],
+        zh: ["神经干细胞", "存在于脑和神经组织、能产生神经系统细胞的干细胞，正在研究其再生医疗应用。"],
+        link: "neural-stem-cells",
+      },
+      {
+        ja: ["前駆細胞", "幹細胞から分化が進み、特定の系列の細胞になる途中段階の細胞。自己複製の力は限られます。"],
+        en: ["Progenitor cell", "An intermediate cell committed to a specific lineage. Its self-renewal capacity is limited."],
+        zh: ["祖细胞（前驱细胞）", "由干细胞分化、迈向特定细胞系的中间阶段细胞，自我复制能力有限。"],
+        link: "differentiation-basics",
+      }
     ],
   },
   {
@@ -120,6 +169,34 @@ export const glossaryGroups: GlossaryGroup[] = [
         en: ["Engraftment", "Transplanted cells or tissue settling in and functioning long-term. Administered stem cells often fail to engraft and disappear relatively quickly."],
         zh: ["植入（生着）", "移植的细胞在体内定着并持续发挥功能。投与的干细胞常难以植入、短期内消失。"],
       },
+      {
+        ja: ["細胞周期", "細胞が分裂から次の分裂まで進む周期。DNAの複製と分配を繰り返します。"],
+        en: ["Cell cycle", "The cycle a cell goes through from one division to the next, repeating DNA replication and segregation."],
+        zh: ["细胞周期", "细胞从一次分裂到下一次分裂的周期，反复进行DNA复制与分配。"],
+        link: "cell-division-cycle",
+      },
+      {
+        ja: ["アポトーシス", "細胞の「計画的な死」。不要になった細胞が秩序だった形で消える仕組みです。"],
+        en: ["Apoptosis", "Programmed cell death — an orderly way for unneeded cells to disappear."],
+        zh: ["细胞凋亡", "细胞的程序性死亡，使不再需要的细胞有序消失。"],
+      },
+      {
+        ja: ["転分化（直接リプログラミング）", "ある種類の分化細胞を、幹細胞を経ずに別の種類の細胞へ変換すること。研究段階の技術です。"],
+        en: ["Transdifferentiation (direct reprogramming)", "Converting one differentiated cell type directly into another, without a stem-cell stage. A research-stage technique."],
+        zh: ["转分化（直接重编程）", "不经过干细胞阶段，将一种分化细胞直接转换为另一种细胞的研究阶段技术。"],
+      },
+      {
+        ja: ["細胞培養加工施設（CPC）", "細胞の採取・加工・培養を行う施設。無菌管理などの品質体制が問われます。"],
+        en: ["Cell processing center (CPC)", "The facility that collects, processes, and cultures cells. Sterility and quality systems matter."],
+        zh: ["细胞培养加工设施（CPC）", "进行细胞采集、加工、培养的设施，需具备无菌等质量管理体系。"],
+        link: "cell-quality-culture",
+      },
+      {
+        ja: ["細胞バンク", "細胞を検査・凍結して保管し、必要時に提供する仕組み。提供者の検査記録とともに管理されます。"],
+        en: ["Cell bank", "A system that tests, freezes, and stores cells for future use, managed together with donor records."],
+        zh: ["细胞库", "对细胞进行检验、冷冻保存并在需要时提供的机制，与供者检查记录一起管理。"],
+        link: "cell-source-options",
+      }
     ],
   },
   {
@@ -173,6 +250,24 @@ export const glossaryGroups: GlossaryGroup[] = [
         en: ["Tumor lysis syndrome", "A serious complication in which rapid destruction of tumor cells floods the body with metabolites. Known in cancer care."],
         zh: ["肿瘤溶解综合征", "大量肿瘤细胞坏死时代谢物涌入体内的严重合并症，是癌症治疗中的概念。"],
       },
+      {
+        ja: ["ドナー適格性", "細胞の提供者に求められる条件。感染症検査や健康状態の確認が含まれます。"],
+        en: ["Donor eligibility", "The criteria a cell donor must meet, including infection screening and health checks."],
+        zh: ["供者适格性", "细胞提供者需满足的条件，包括感染检查与健康状况确认。"],
+        link: "cell-source-options",
+      },
+      {
+        ja: ["アレルギー反応", "体の免疫が過剰に反応して起こる症状。投与直後に起きることがあり、監視体制が重要です。"],
+        en: ["Allergic reaction", "An excessive immune response that can occur right after administration — monitoring is essential."],
+        zh: ["过敏反应", "免疫过度反应引发的症状，可在给药后立即发生，监测体制很重要。"],
+        link: "iv-stem-cell-safety",
+      },
+      {
+        ja: ["フォローアップ（経過観察）", "治療後の症状や検査値を追跡する期間。長期的な追跡が求められる治療もあります。"],
+        en: ["Follow-up", "The period of tracking symptoms and tests after treatment. Some treatments require long-term monitoring."],
+        zh: ["随访", "治疗后追踪症状与检查值的期间，部分治疗需要长期随访。"],
+        link: "aftercare",
+      }
     ],
   },
   {
@@ -190,21 +285,25 @@ export const glossaryGroups: GlossaryGroup[] = [
         en: ["Regenerative medicine product", "A category of products using cells, approved under Japan's Pharmaceuticals and Medical Devices Act."],
         zh: ["再生医疗等产品", "根据日本《医药品医疗器械等法》批准的细胞类产品的类别。"],
         link: "approved-products-japan",
+        ref: { title: "厚生労働省「再生医療等の安全性の確保等に関する法律」", url: "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/iryou/saisei/" },
       },
       {
         ja: ["再生医療等安全性確保法", "自由診療などで細胞治療を提供する際の計画届出・審査の手続きを定める法律。届出は効果の保証ではありません。"],
         en: ["Act on the Safety of Regenerative Medicine", "Japanese law governing notification and review procedures for cell therapies outside insurance. Filing does not mean proven efficacy."],
         zh: ["再生医疗等安全性确保法", "规定自费诊疗等细胞治疗提供计划申报与审查程序的法律，申报不等于疗效保证。"],
+        ref: { title: "厚生労働省「再生医療等の安全性の確保等に関する法律」", url: "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/iryou/saisei/" },
       },
       {
         ja: ["提供計画", "医療機関が細胞治療を行う際に届け出る計画。審査委員会の確認を経ますが、効果の承認とは別の手続きです。"],
         en: ["Provision plan", "The filing a clinic must submit to offer cell therapies, reviewed by a certified committee. Separate from efficacy approval."],
         zh: ["提供计划", "医疗机构实施细胞治疗前需申报的计划，须经委员会审查，但不同于疗效批准。"],
+        ref: { title: "厚生労働省「再生医療等の安全性の確保等に関する法律」", url: "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/iryou/saisei/" },
       },
       {
         ja: ["治験", "医薬品・医療機器等の承認を目指して行われる臨床試験。事前の説明と同意が必要です。"],
         en: ["Clinical trial (chiken)", "A trial conducted to seek regulatory approval, requiring prior explanation and consent."],
         zh: ["临床试验（治验）", "为获得药品医疗器械批准而进行的试验，需要事先说明并征得同意。"],
+        ref: { title: "PMDA（医薬品医療機器総合機構）", url: "https://www.pmda.go.jp/" },
       },
       {
         ja: ["臨床研究", "人を対象とする医学研究の総称。治験と観察研究・介入研究などを含み、目的やルールが異なります。"],
@@ -248,7 +347,39 @@ export const glossaryGroups: GlossaryGroup[] = [
         ja: ["認定再生医療等委員会", "再生医療等安全性確保法に基づき、提供計画を審査する委員会。"],
         en: ["Certified committee for regenerative medicine", "The committee that reviews provision plans under the regenerative-medicine safety act."],
         zh: ["认定再生医疗等委员会", "依据《再生医疗等安全性确保法》审查提供计划的委员会。"],
+        ref: { title: "厚生労働省「再生医療等の安全性の確保等に関する法律」", url: "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/iryou/saisei/" },
       },
+      {
+        ja: ["医薬品医療機器等法（薬機法）", "医薬品・医療機器・再生医療等製品の品質・有効性・安全性を規制する法律。承認の根拠となる法律です。"],
+        en: ["Pharmaceuticals and Medical Devices Act", "The Japanese law regulating the quality, efficacy, and safety of drugs, devices, and regenerative-medicine products — the basis for approvals."],
+        zh: ["《医药品医疗器械等法》（药机法）", "规制药品、医疗器械、再生医疗等产品之质量、有效性、安全性的日本法律，是批准的依据。"],
+        ref: { title: "e-Gov法令検索「医薬品、医療機器等の品質、有効性及び安全性の確保等に関する法律」", url: "https://laws.e-gov.go.jp/law/335AC0000000145" },
+      },
+      {
+        ja: ["医療広告ガイドライン", "医療機関の広告に関する厚生労働省の指針。誇大な効果表現やビフォーアフター写真の無断使用などに制限があります。"],
+        en: ["Medical Advertising Guidelines", "MHLW rules for medical advertising, restricting exaggerated efficacy claims and unauthorized before/after imagery."],
+        zh: ["医疗广告指南", "厚生劳动省关于医疗机构广告的指针，限制夸大疗效表述和未经许可的术前术后照片等。"],
+        ref: { title: "厚生労働省「医療法における病院等の広告規制」", url: "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/iryou/kokokukisei/" },
+        link: "before-after-ad-regulation",
+      },
+      {
+        ja: ["先進医療", "厚生労働省が認めた先進的な医療技術。保険診療との併用が認められる特別な枠組みです。"],
+        en: ["Advanced medical care (senshin iryo)", "Advanced technologies recognized by MHLW, allowing limited combination with insured care."],
+        zh: ["先进医疗", "厚生劳动省认可的先进医疗技术，允许与医保诊疗并用的特殊框架。"],
+        ref: { title: "厚生労働省「先進医療について」", url: "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/iryou/senshiniryou/" },
+      },
+      {
+        ja: ["保険外併用療養費", "保険診療と保険外診療を併用する際の制度。先進医療などの例外に対応します。"],
+        en: ["Extra-billing scheme", "The framework allowing insured care to be combined with certain uninsured care such as advanced treatments."],
+        zh: ["保险外并用疗养费制度", "允许医保诊疗与保险外诊疗并用的制度，对应先进医疗等例外。"],
+      },
+      {
+        ja: ["医療広告のビフォーアフター", "広告に術前後の写真を掲載する場合の規制。条件を満たさない掲載は虚偽広告になり得ます。"],
+        en: ["Before/after imagery rules", "Restrictions on using pre/post-procedure photos in medical ads — non-compliant use can constitute false advertising."],
+        zh: ["广告中的术前术后照", "关于在医疗广告中使用术前术后照片的限制，不合规刊登可能构成虚假广告。"],
+        link: "before-after-ad-regulation",
+        ref: { title: "厚生労働省「医療法における病院等の広告規制」", url: "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/iryou/kokokukisei/" },
+      }
     ],
   },
   {
@@ -276,6 +407,7 @@ export const glossaryGroups: GlossaryGroup[] = [
         ja: ["ランダム化比較試験（RCT）", "参加者を無作為に群に分けて治療効果を比較する試験。バイアスを減らせる設計です。"],
         en: ["Randomized controlled trial (RCT)", "A trial assigning participants randomly to groups to compare treatment effects while reducing bias."],
         zh: ["随机对照试验（RCT）", "将参与者随机分组比较疗效的试验，可减少偏倚。"],
+        ref: { title: "厚生労働省「治験・臨床研究の解説」", url: "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/fukyu/kenkyu/index.html" },
       },
       {
         ja: ["プラセボ（偽薬）", "有効成分を含まない対照。本物の治療との差を測るために使います。"],
@@ -304,6 +436,22 @@ export const glossaryGroups: GlossaryGroup[] = [
         zh: ["新闻稿", "机构发布的研究公告，需确认是否为同行评审论文及其阶段。"],
         link: "press-release-reading",
       },
+      {
+        ja: ["コホート研究", "特定の集団を追跡して要因と結果の関係を調べる観察研究。"],
+        en: ["Cohort study", "An observational study that follows a defined group to examine links between factors and outcomes."],
+        zh: ["队列研究", "追踪特定群体、考察因素与结果关系的观察性研究。"],
+      },
+      {
+        ja: ["バイアス", "研究結果を偏らせる要因。対象の選ばれ方や測定の仕方などで生じます。"],
+        en: ["Bias", "Factors that skew study results — arising from how participants are selected or outcomes measured."],
+        zh: ["偏倚", "使研究结果产生偏差的因素，源于对象选择或测量方式等。"],
+      },
+      {
+        ja: ["統計的有意差", "差が偶然だけでは説明しにくいことを示す統計の判定。効果の大きさとは別の指標です。"],
+        en: ["Statistical significance", "A test indicating a difference is unlikely explained by chance alone — distinct from effect size."],
+        zh: ["统计学显著性", "表明差异难以仅用偶然解释的统计判定，与效应大小是不同的指标。"],
+        link: "statistics-intro",
+      }
     ],
   },
   {
@@ -337,6 +485,35 @@ export const glossaryGroups: GlossaryGroup[] = [
         en: ["Thrombus & embolism", "A thrombus is a blood clot in a vessel; an embolism is clot material traveling and blocking a vessel."],
         zh: ["血栓与栓塞", "血栓是血管内形成的血块，栓塞指其随血流堵塞血管。"],
       },
+      {
+        ja: ["血小板", "止血や血管修復に働く血液成分。成長因子を多く含み、PRP治療の主体です。"],
+        en: ["Platelet", "The blood component that stops bleeding and repairs vessels; rich in growth factors and central to PRP therapy."],
+        zh: ["血小板", "参与止血和血管修复的血液成分，富含生长因子，是PRP疗法的核心。"],
+        link: "prp-therapy-basics",
+      },
+      {
+        ja: ["血漿", "血液の液体成分。血小板やタンパク質を運びます。"],
+        en: ["Plasma", "The liquid component of blood that carries platelets and proteins."],
+        zh: ["血浆", "血液的液体成分，运送血小板和蛋白质。"],
+      },
+      {
+        ja: ["PRP（多血小板血漿）", "自分の血液から血小板を濃縮した製剤。局所の修復を促す目的で研究・提供されています。"],
+        en: ["PRP (platelet-rich plasma)", "A preparation concentrating platelets from one's own blood, used to promote local repair."],
+        zh: ["PRP（富血小板血浆）", "从自身血液浓缩血小板制成的制剂，用于促进局部修复。"],
+        link: "prp-therapy-basics",
+      },
+      {
+        ja: ["コラーゲン", "皮膚や骨、軟骨の主成分となるタンパク質。加齢で減少し、美容医療の指標として注目されます。"],
+        en: ["Collagen", "A main protein of skin, bone, and cartilage. Declines with age and is a common marker in cosmetic medicine."],
+        zh: ["胶原蛋白", "皮肤、骨骼、软骨的主要蛋白成分，随年龄减少，是美容医疗的常用指标。"],
+        link: "stem-cell-skin-aging",
+      },
+      {
+        ja: ["軟骨", "関節の表面を覆い、衝撃を吸収する組織。血管がなく再生しにくいとされます。"],
+        en: ["Cartilage", "Tissue covering joint surfaces that absorbs impact. It has no blood vessels and regenerates poorly."],
+        zh: ["软骨", "覆盖关节表面、吸收冲击的组织，无血管、再生能力差。"],
+        link: "cartilage-regeneration",
+      }
     ],
   },
 ];

@@ -2675,3 +2675,40 @@ section[id^="sub-"] { scroll-margin-top: 80px; }
 @media (max-width: 640px) {
   .glossary-item { grid-template-columns: 1fr; gap: 4px; }
 }
+
+.article-terms {
+  margin: 26px 0 6px;
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fbfdf9;
+}
+.article-terms-heading {
+  margin: 0 0 10px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  color: var(--green);
+}
+.article-terms ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+.article-terms ul a {
+  display: inline-block;
+  padding: 4px 12px;
+  border: 1px solid #dfe7d8;
+  border-radius: 999px;
+  background: #fff;
+  font-size: 12px;
+  color: #5b6b57;
+  text-decoration: none;
+}
+.article-terms ul a:hover { background: #eef4ea; color: var(--green); border-color: #c3d0bd; }
+.article-terms-all a { background: #eef4ea; }
+.glossary-item { scroll-margin-top: 80px; }
+.glossary-source { display: block; margin: 4px 0 0; color: #8a9a85; }
