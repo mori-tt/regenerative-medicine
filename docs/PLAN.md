@@ -239,3 +239,10 @@ FTPSでレンタルサーバーの公開フォルダへ
   安全性（risks-and-safety）、制度・費用（insurance-care / cost-and-insurance / hospital-choice / questions-before-treatment / clinical-trials-guide / five-points-before-treatment）。
 - 深掘りセクションの後・まとめの前に挿入。Q/A形式で読者の素朴な疑問に直接応答。
 - すべて「断定表現なし・研究段階を明示・確認の導線を示す」方針で統一。
+
+## 24. FAQ拡充・手続き確認リスト・構造化データ（2026-09-26 追記9）
+
+- FAQを42記事に拡大：全31サブカテゴリの先頭記事＋検索意図の強い記事をカバー。
+- `article-checklist.ts` 新設：契約書・説明文書・提供計画で確認すべき項目の例を7記事に追加（jibihi-contract / informed-consent-howto / treatment-eligibility-process / treatment-flow / hospital-choice / first-visit-prep）。
+- FAQ・チェックリストはセクションID別の専用スタイル（Q太字・A左線・カード背景）。
+- FAQページに `FAQPage` JSON-LD構造化データを付与（検索結果での表示改善）。

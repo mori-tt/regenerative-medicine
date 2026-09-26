@@ -75,6 +75,27 @@ export default async function ArticlePage({
           }}
         />
       )}
+      {(() => {
+        const faq = article.sections.find((s) => s.id === "faq");
+        if (!faq) return null;
+        const pairs: [string, string][] = [];
+        for (let i = 0; i + 1 < faq.paragraphs.length; i += 2) {
+          pairs.push([faq.paragraphs[i].replace(/^Q\.\s*/, ""), faq.paragraphs[i + 1].replace(/^A\.\s*/, "")]);
+        }
+        return (
+          <JsonLd
+            data={{
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: pairs.map(([q, a]) => ({
+                "@type": "Question",
+                name: q,
+                acceptedAnswer: { "@type": "Answer", text: a },
+              })),
+            }}
+          />
+        );
+      })()}
       {!reviewed && publication.showPreparationNotices && (
         <div className="draft-notice">
           この記事は一般的な情報整理を目的としており、個別の診断・治療の根拠や推奨を示すものではありません。医学的な判断は、最新の公的情報と医療専門家への相談に基づいてください。
@@ -135,10 +156,10 @@ export default async function ArticlePage({
           </details>
           <div className="article-body">
             {article.sections.map((section, sectionIndex) => (
-              <section id={section.id} key={section.id}>
+              <section id={section.id} key={section.id} className={section.id === "faq" ? "faq-section" : section.id === "checklist" ? "checklist-section" : undefined}>
                 <h2>{section.title}</h2>
                 {section.paragraphs.map((p, paragraphIndex) => (
-                  <p key={paragraphIndex}>{p}<CitationLinks ids={section.paragraphReferences?.[paragraphIndex]} references={article.references} locale="ja" /></p>
+                  <p key={paragraphIndex} className={section.id === "faq" ? (p.startsWith("Q.") ? "faq-q" : "faq-a") : undefined}>{p}<CitationLinks ids={section.paragraphReferences?.[paragraphIndex]} references={article.references} locale="ja" /></p>
                 ))}
                 {sectionIndex === 1 && <ArticleVisual slug={article.slug} category={article.category} index={1} />}
               </section>

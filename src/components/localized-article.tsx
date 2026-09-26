@@ -24,6 +24,7 @@ import { publication } from "@/lib/site-config";
 import { correctArticleText, correctArticleSections, evidenceSectionsFor } from "@/content/article-evidence";
 import { deepenSectionsFor } from "@/content/article-deepen";
 import { faqSectionsFor } from "@/content/article-faq";
+import { checklistSectionsFor } from "@/content/article-checklist";
 import { CitationLinks, ArticleReferences } from "./article-references";
 
 const englishTerms: Record<string, string> = {
@@ -48,7 +49,7 @@ const bodyBySlug: Record<string, { en: ArticleBodyLocale; zh: ArticleBodyLocale 
   ...articleBodiesStemTopics,
 };
 
-export type LocalizedSection = { title: string; paragraphs: string[]; paragraphReferences?: string[][] };
+export type LocalizedSection = { id?: string; title: string; paragraphs: string[]; paragraphReferences?: string[][] };
 
 function tupleSections(sections: [string, string, string][]): LocalizedSection[] {
   return sections.map(([title, first, second]) => ({
@@ -119,6 +120,7 @@ export function localizedArticleFor(locale: SiteLocale, source: Article) {
     ...evidenceSectionsFor(source.slug, locale),
     ...deepenSectionsFor(source.category, source.slug, locale),
     ...faqSectionsFor(source.slug, locale),
+    ...checklistSectionsFor(source.slug, locale),
   ];
   return {
     title: correctArticleText(source.slug, locale, special?.title ?? translated?.title ?? topic),
@@ -310,10 +312,10 @@ export function LocalizedArticle({ locale, source }: { locale: SiteLocale; sourc
             </details>
             <div className="article-body">
               {base.sections.map((section, index) => (
-                <section id={sectionIds[index]} key={section.title}>
+                <section id={sectionIds[index]} key={section.title} className={section.id === "faq" ? "faq-section" : section.id === "checklist" ? "checklist-section" : undefined}>
                   <h2>{section.title}</h2>
                   {section.paragraphs.map((paragraph, paragraphIndex) => (
-                    <p key={paragraphIndex}>{paragraph}<CitationLinks ids={section.paragraphReferences?.[paragraphIndex]} references={base.references} locale={locale} /></p>
+                    <p key={paragraphIndex} className={section.id === "faq" ? (paragraphIndex % 2 === 0 ? "faq-q" : "faq-a") : undefined}>{paragraph}<CitationLinks ids={section.paragraphReferences?.[paragraphIndex]} references={base.references} locale={locale} /></p>
                   ))}
                   {index === 1 && source && <ArticleVisual slug={source.slug} locale={locale} category={source.category} index={1} />}
                 </section>

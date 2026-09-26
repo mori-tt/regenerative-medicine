@@ -351,6 +351,363 @@ const faqs: Record<string, FaqEntry> = {
       ["采集会疼吗？", "采用局部麻醉，但部位和采集量会影响负担，请向机构确认。"],
     ],
   },
+  "cell-division": {
+    ja: [
+      ["細胞はずっと増え続ける？", "いいえ。多くの細胞は分裂回数に上限があり、分裂を止める時期があります。無制限に増えるのはがん細胞などの異常な状態です。"],
+      ["分裂が止まるとどうなる？", "細胞は老化（senescence）したり、役目を終えて死ぬ（アポトーシス）ことがあります。増えるだけが細胞の働きではありません。"],
+      ["再生医療と関係ある？", "細胞を増やす培養の仕組みの基礎です。「どうやって増やすか」は治療の品質に直結します。"],
+    ],
+    en: [
+      ["Do cells divide forever?", "No — most cells have a division limit. Uncontrolled growth is abnormal, as in cancer."],
+      ["What happens when division stops?", "Cells may senesce or die by apoptosis — growth isn't their only function."],
+      ["Why does it matter for regenerative medicine?", "It's the basis of cell culture — how cells are grown directly affects treatment quality."],
+    ],
+    zh: [
+      ["细胞会一直分裂吗？", "不会，多数细胞有分裂上限，失控增殖是癌症等异常状态。"],
+      ["停止分裂后会怎样？", "细胞可能老化或凋亡，增殖不是细胞的唯一功能。"],
+      ["与再生医学有关吗？", "是细胞培养的基础——如何扩增直接影响治疗质量。"],
+    ],
+  },
+  "aging-society": {
+    ja: [
+      ["なぜ高齢化と再生医療が関係ある？", "加齢で失われる機能を細胞で補う発想が背景にあります。ただし期待と実現は別で、多くは研究段階です。"],
+      ["高齢者でも受けられる？", "年齢だけでは決まりません。持病・薬・体力などの総合評価が前提です。"],
+      ["介護との関係は？", "治療と介護は別の制度です。暮らしの支援は介護保険等の既存制度が主体になります。"],
+    ],
+    en: [
+      ["Why does aging matter here?", "Regenerative medicine aims to restore function lost with age — but expectation and realization differ, and much is still research-stage."],
+      ["Can older people receive it?", "Age alone doesn't decide — conditions, medications, and general health are all assessed."],
+      ["How does it relate to caregiving?", "Treatment and long-term care are separate systems; daily support mainly relies on existing care insurance."],
+    ],
+    zh: [
+      ["老龄化与再生医学有何关系？", "其背景是用细胞补充随年龄丧失的功能，但期待与实现不同，多数仍在研究阶段。"],
+      ["高龄者能接受吗？", "不只由年龄决定，需综合评估既往病史、用药和体力。"],
+      ["和护理是什么关系？", "治疗与护理是不同制度，日常支援主要依靠护理保险等现有制度。"],
+    ],
+  },
+  "blood-basics": {
+    ja: [
+      ["血液と細胞治療の関係は？", "造血幹細胞移植は血液を作る細胞を移植する治療で、細胞治療の原点です。血液の基礎を知ると治療の説明が分かりやすくなります。"],
+      ["骨髄移植は血液の病気だけ？", "主に白血病など血液疾患で使われますが、適応は拡大も縮小もしています。対象かどうかは主治医に確認を。"],
+      ["献血と関係ある？", "献血は成分献血などで細胞の一部を提供する仕組みです。治療とは目的が違いますが、細胞の提供という点では関係があります。"],
+    ],
+    en: [
+      ["How does blood relate to cell therapy?", "Bone-marrow transplantation — a cornerstone of cell therapy — transplants blood-forming cells, so blood basics make treatment explanations clearer."],
+      ["Is bone-marrow transplant only for blood diseases?", "Mainly used for leukemia and similar conditions, though indications change — confirm with your doctor."],
+      ["Related to blood donation?", "Donation provides blood components — different purpose, but shares the idea of supplying cells."],
+    ],
+    zh: [
+      ["血液与细胞治疗的关系？", "造血干细胞移植是细胞治疗的代表，移植的是造血细胞，理解血液基础有助于理解治疗说明。"],
+      ["骨髓移植只用于血液病吗？", "主要用于白血病等血液疾病，适应范围会变，请与主治医生确认。"],
+      ["和献血有关吗？", "献血提供血液成分，目的不同但都属于细胞供给的概念。"],
+    ],
+  },
+  "cancer-basics": {
+    ja: [
+      ["がんと幹細胞は関係ある？", "がん幹細胞の研究や、がん治療後の造血幹細胞移植など接点があります。一方で細胞を増やす技術が腫瘍化と無関係とは言えません。"],
+      ["がんに幹細胞治療は効く？", "確立した治療は造血幹細胞移植など一部です。他の「がんに効く幹細胞」の多くは研究段階で、効果の根拠を個別に確認してください。"],
+      ["がんがあると受けられない？", "活動性のがんは慎重評価の対象です。主治医と相談の上で適否が判断されます。"],
+    ],
+    en: [
+      ["Is cancer related to stem cells?", "Yes — cancer stem cell research and post-treatment transplants are connections, and cell-growing technologies aren't unrelated to tumor risk."],
+      ["Do stem cells treat cancer?", "Established uses are limited to hematopoietic transplants and similar — most other claims are research-stage, so check the evidence."],
+      ["Does having cancer disqualify me?", "Active cancer is a reason for careful evaluation — eligibility is decided with your physician."],
+    ],
+    zh: [
+      ["癌症与干细胞有关吗？", "有癌症干细胞研究、治疗后造血干细胞移植等关联，细胞增殖技术与肿瘤化也并非无关。"],
+      ["干细胞能治癌吗？", "确立的仅限造血干细胞移植等少数，其他多为研究阶段，请逐项确认疗效依据。"],
+      ["有癌症就不能接受吗？", "活动性癌症属于需慎重评估的情况，请与主治医生商量。"],
+    ],
+  },
+  "nutrition-basics": {
+    ja: [
+      ["栄養と治療は関係ある？", "治療中の回復力や免疫に関わります。特別な食事が必要なわけではありませんが、偏りは避けるべきです。"],
+      ["サプリは効く？", "特定のサプリが幹細胞治療の効果を高める確かな根拠はありません。飲んでいるものは主治医に伝えましょう。"],
+      ["治療中に注意することは？", "極端な食事制限や過度なサプリは避け、主治医や栄養士に相談するのが基本です。"],
+    ],
+    en: [
+      ["Does nutrition matter during treatment?", "It relates to recovery and immunity — no special diet is required, but avoid imbalance."],
+      ["Do supplements help?", "No solid evidence that any supplement boosts stem-cell treatment — tell your doctor what you take."],
+      ["Anything to avoid?", "Avoid extreme restriction or excessive supplements; ask your physician or dietitian."],
+    ],
+    zh: [
+      ["营养与治疗有关吗？", "关系到恢复力和免疫，无需特殊饮食但应避免失衡。"],
+      ["补充剂有效吗？", "没有确切证据表明某种补充剂能增强干细胞治疗效果，请向医生告知正在服用的产品。"],
+      ["治疗中注意什么？", "避免极端节食或过量补充剂，请咨询医生或营养师。"],
+    ],
+  },
+  "iv-stem-cell-journey": {
+    ja: [
+      ["点滴後すぐに効果が出る？", "すぐに効果が実感できるとは限りません。細胞が体内でどう動くかは研究中で、効果の有無は別の問題です。"],
+      ["点滴中に注意することは？", "発熱・寒気・動悸などの変化があればすぐに伝えます。観察時間と緊急時の体制を事前に確認しておきましょう。"],
+      ["体に残る？", "長期間残るとは限りません。定着期間や繰り返し投与の見通しは説明を確認してください。"],
+    ],
+    en: [
+      ["Do effects appear right after infusion?", "Not necessarily — how cells behave in the body is under study, and whether benefit occurs is a separate question."],
+      ["What should I watch during infusion?", "Report fever, chills, or palpitations immediately — confirm observation time and emergency arrangements beforehand."],
+      ["Do cells stay in the body?", "Not necessarily long-term — check the expected persistence and whether repeat doses are planned."],
+    ],
+    zh: [
+      ["输注后马上见效吗？", "不一定——细胞在体内的动向仍在研究中，是否有效是另一回事。"],
+      ["输注中要注意什么？", "出现发热、寒战、心悸等立即告知，提前确认观察时间和应急体制。"],
+      ["细胞会留在体内吗？", "不一定长期存留，请确认定着期和是否需反复给药。"],
+    ],
+  },
+  "stem-cell-homing": {
+    ja: [
+      ["ホーミングとは？", "投与された細胞が損傷部位などに集まるとされる性質です。「届く」ことを示しますが「働く」かどうかは別です。"],
+      ["確かめられている？", "動物実験や一部の人での観察がありますが、すべての治療で同じように起きるとは限りません。"],
+      ["説明で聞くべきことは？", "「この治療でホーミングが確認された研究はあるか」を聞くと、説明の根拠が見えやすくなります。"],
+    ],
+    en: [
+      ["What is homing?", "The tendency of administered cells to gather at injury sites — it shows arrival, not necessarily action."],
+      ["Is it proven?", "Animal and limited human data exist, but it isn't guaranteed to happen the same way in every treatment."],
+      ["What should I ask?", "Whether homing has been confirmed for the specific therapy — that reveals the basis of the explanation."],
+    ],
+    zh: [
+      ["什么是归巢？", "输注细胞聚集于损伤部位的性质——说明“到达”，但不等于“起作用”。"],
+      ["已被证实吗？", "有动物和部分人体观察数据，但每种治疗未必同样发生。"],
+      ["该问什么？", "询问该治疗是否有归巢被确认的研究，可以看出说明的依据。"],
+    ],
+  },
+  "stem-cell-cosmetic-medicine": {
+    ja: [
+      ["美容目的の幹細胞は実際どう？", "「若返り」をうたう提供は増えていますが、確立した効果として認められたものは限られます。届出の有無と根拠を確認してください。"],
+      ["広告は信用できる？", "症例写真や体験談は医療広告の規制対象です。「劇的」「必ず」などの表現は警戒しましょう。"],
+      ["トラブルがあったら？", "施設への相談、消費生活センター（188）、医療安全支援センターなどの窓口があります。記録は残しておきましょう。"],
+    ],
+    en: [
+      ["Are cosmetic stem-cell offerings reliable?", "Rejuvenation claims are growing, but established benefits are limited — check filing status and evidence."],
+      ["Can I trust the advertising?", "Testimonial photos and stories are regulated; watch for words like “dramatic” or “guaranteed.”"],
+      ["What if something goes wrong?", "Options include the clinic, consumer hotline (188), and medical safety support centers — keep records."],
+    ],
+    zh: [
+      ["美容用干细胞实际如何？", "“抗衰老”类服务在增加，但被认可的确定疗效有限，请确认申报和依据。"],
+      ["广告可信吗？", "病例照片和体验谈属规制对象，对“戏剧性”“一定”等表述要保持警惕。"],
+      ["出现纠纷怎么办？", "可咨询机构、消费者热线（188）或医疗安全支援中心，请保留记录。"],
+    ],
+  },
+  "stages-of-research": {
+    ja: [
+      ["「治験」と「臨床研究」は違う？", "治験は承認を目指す試験、臨床研究はより広い概念です。再生医療のニュースで混同されやすいので分けて読みましょう。"],
+      ["「成功しました」はどう読む？", "どの段階の成功かを確認します。動物実験の成功と人での確立は別です。"],
+      ["第III相とは？", "多数の人での最終確認に近い段階です。ここまで進んだものは比較的確かですが、承認とはまだ違います。"],
+    ],
+    en: [
+      ["Are trials and clinical research different?", "Trials aim for approval; clinical research is broader. News often conflates them — read them separately."],
+      ["How should I read “succeeded”?", "Check which stage — animal success isn't human proof."],
+      ["What is Phase III?", "A near-final confirmatory stage in many participants — stronger evidence, but still not approval."],
+    ],
+    zh: [
+      ["“临床试验”和“临床研究”不同吗？", "临床试验以获批为目标，临床研究范围更广，新闻中常混淆，请分开解读。"],
+      ["如何理解“成功了”？", "确认是哪个阶段的成功——动物成功不等于人体确证。"],
+      ["什么是III期？", "在多数人中进行接近最终确认的阶段，证据较强但仍不等于获批。"],
+    ],
+  },
+  "reading-research-news": {
+    ja: [
+      ["研究ニュースをどう読む？", "「動物か人か」「段階はどこか」「比較対象があるか」の3点を押さえると、過大解釈を防げます。"],
+      ["プレスリリースは信じていい？", "発表段階の速報です。論文化・査読・追試の確認を待つのが安全です。"],
+      ["悪い結果は出ない？", "うまくいかなかった研究は表に出にくい傾向があります。一つの発表で断定しないことが大切です。"],
+    ],
+    en: [
+      ["How should I read research news?", "Ask: animal or human? Which stage? Was there a comparison? These three checks prevent over-interpretation."],
+      ["Can I trust press releases?", "They're early announcements — safer to wait for publication, peer review, and replication."],
+      ["Do negative results get published?", "Less often — don't draw conclusions from a single announcement."],
+    ],
+    zh: [
+      ["如何读研究新闻？", "把握“动物还是人体”“处于哪个阶段”“有无对照”三点，可避免过度解读。"],
+      ["新闻稿可信吗？", "是发表阶段的速报，等待论文发表、同行评审和重复验证更稳妥。"],
+      ["负面结果会发表吗？", "不顺利的研究较少被公开，不要凭一则报道就下结论。"],
+    ],
+  },
+  "stem-cell-contraindications": {
+    ja: [
+      ["受けられない条件は？", "活動性の感染症・がん・妊娠中等は慎重評価の対象です。「絶対に受けられない」ではなく、利益とリスクの比較で判断されます。"],
+      ["検査なしで「受けられる」と言われたら？", "注意が必要です。適否は検査と確認を経て判断されるべきものです。"],
+      ["主治医に相談すべき？", "はい。既存の治療との関係を主治医と共有するのが前提です。"],
+    ],
+    en: [
+      ["What conditions exclude treatment?", "Active infection, cancer, and pregnancy call for careful evaluation — not automatic exclusion, but a risk-benefit judgment."],
+      ["What if I'm told “anyone can do it” without tests?", "Be cautious — eligibility should follow adequate testing."],
+      ["Should I consult my doctor?", "Yes — sharing the plan with your physician is a prerequisite."],
+    ],
+    zh: [
+      ["哪些情况不能接受？", "活动性感染、癌症、妊娠等需慎重评估——并非绝对禁忌，而是权衡利弊后判断。"],
+      ["不检查就说“可以做”怎么办？", "要警惕——应否接受应经检查和确认后判断。"],
+      ["需要咨询主治医生吗？", "需要——与主治医生共享与现有治疗的关系是前提。"],
+    ],
+  },
+  "trouble-help": {
+    ja: [
+      ["困ったときの最初の相談先は？", "まず施設に確認し、応じない場合は消費生活センター（188）や医療安全支援センターが窓口になります。"],
+      ["副作用が疑われるときは？", "医療機関での診察が優先です。PMDAの副作用被害救済制度など、救済の仕組みもあります。"],
+      ["証拠は何を残すべき？", "契約書・説明文書・領収書・経過の記録です。書面が残っていると相談が進みやすくなります。"],
+    ],
+    en: [
+      ["Where should I turn first?", "Start with the clinic; if unresolved, consumer centers (188) or medical safety support centers are next."],
+      ["What if I suspect a side effect?", "Get examined at a medical institution first — relief systems such as PMDA's adverse-reaction scheme also exist."],
+      ["What records should I keep?", "Contracts, explanation documents, receipts, and a log of your course — written records help consultations."],
+    ],
+    zh: [
+      ["首先该找谁咨询？", "先找机构，若无回应可联系消费者生活中心（188）或医疗安全支援中心。"],
+      ["怀疑有副作用怎么办？", "先去医疗机构就诊，也可利用PMDA副作用被害救济等制度。"],
+      ["该保留什么证据？", "合同、说明文件、收据和治疗经过记录，书面材料有助于咨询。"],
+    ],
+  },
+  "stem-cell-sources": {
+    ja: [
+      ["採取元で何が違う？", "脂肪・骨髄・臍帯で採取の負担・細胞の性質・量が違います。「どこから採るか」は説明資料で確認してください。"],
+      ["どれが一番いい？", "一律の優劣はありません。目的の病気や施設の体制で向き不向きが変わります。"],
+      ["自分の細胞と他人の細胞は？", "採取元と別の軸です。自家か他家かで必要な検査や説明が変わるため、両方を確認しましょう。"],
+    ],
+    en: [
+      ["What differs by source?", "Fat, bone marrow, and cord differ in collection burden, cell properties, and yield — check the stated source."],
+      ["Which source is best?", "There's no universal ranking — the right choice depends on the disease and the facility."],
+      ["Own cells vs donor cells?", "A separate axis from the source — autologous vs allogeneic changes the tests and explanations needed."],
+    ],
+    zh: [
+      ["采集来源有何区别？", "脂肪、骨髓、脐带在采集负担、细胞性质、数量上不同，请确认资料中的来源。"],
+      ["哪种最好？", "没有绝对的优劣——取决于病种和机构条件。"],
+      ["自体和异体呢？", "这是与来源不同的维度——自体/异体会改变所需检测和说明，两方面都要确认。"],
+    ],
+  },
+  "cell-culture-and-quality": {
+    ja: [
+      ["培養はなぜ大事？", "細胞を増やす過程の品質が安全に直結します。無菌管理・細胞状態の確認・記録体制が重要です。"],
+      ["届出済みなら安心？", "届出は手続きの確認です。実際の培養管理体制は施設に個別確認する価値があります。"],
+      ["培養に期間は？", "細胞の種類や量で変わります。採取から投与までの期間と、その間の管理を確認しましょう。"],
+    ],
+    en: [
+      ["Why does culture matter?", "The quality of cell expansion directly affects safety — sterility, cell-condition checks, and records all count."],
+      ["Does a filed plan mean it's safe?", "Filing is procedural — it's still worth asking how the facility manages culture."],
+      ["How long does culture take?", "It varies by cell type and amount — check the timeline from collection to administration."],
+    ],
+    zh: [
+      ["为什么培养很重要？", "细胞扩增过程的质量直接关系到安全——无菌管理、细胞状态确认、记录体制都很重要。"],
+      ["申报了就安心吗？", "申报只是程序确认，实际培养管理仍值得向机构个别确认。"],
+      ["培养需要多久？", "因细胞种类和数量而异，请确认从采集到给药的周期及其管理。"],
+    ],
+  },
+  "drugs-surgery-comparison": {
+    ja: [
+      ["薬や手術との違いは？", "症状を抑える・取り除くのとは別に、組織を再生させる発想です。ただし代替できるとは限りません。"],
+      ["標準治療をやめていい？", "既存の治療を中断して新しい治療に移ることはリスクがあります。主治医と相談せずに止めないでください。"],
+      ["併用はできる？", "可能な場合もありますが、相互作用や負担の確認が前提です。併用か代替かを資料で確認しましょう。"],
+    ],
+    en: [
+      ["How does it differ from drugs or surgery?", "It aims to regenerate rather than suppress or remove — but it isn't always a substitute."],
+      ["Can I stop standard care?", "Stopping established treatment to switch carries risk — don't discontinue without consulting your doctor."],
+      ["Can they be combined?", "Sometimes, but interactions and burden must be checked — confirm whether it's adjunctive or a replacement."],
+    ],
+    zh: [
+      ["与药物、手术有何不同？", "它以再生组织为思路，而非抑制或去除症状——但未必能替代。"],
+      ["可以停掉标准治疗吗？", "中断现有治疗转用新疗法有风险，请勿在未经医生同意下停药。"],
+      ["可以并用吗？", "有时可以，但需确认相互作用和负担——请确认资料中是并用还是替代。"],
+    ],
+  },
+  "advertising-literacy": {
+    ja: [
+      ["広告で見るべき点は？", "届出の有無・効果の断定表現・症例写真の使い方・費用の明記です。派手な表現は規制対象です。"],
+      ["「効果あり」と書いてあったら？", "断定表現自体が広告規制に触れる可能性があります。根拠の説明がなければ疑ってかかりましょう。"],
+      ["口コミは？", "個人の体験は一般化できません。複数の情報源と照らし合わせる姿勢が大切です。"],
+    ],
+    en: [
+      ["What should I check in ads?", "Filing status, absolute claims, use of before/after photos, and fee transparency — exaggerated wording is regulated."],
+      ["If it says “proven effective”?", "Absolute claims may violate advertising rules — without evidence, treat them skeptically."],
+      ["What about reviews?", "Personal accounts can't be generalized — compare across multiple sources."],
+    ],
+    zh: [
+      ["看广告要看什么？", "申报情况、疗效断定表述、病例照片使用方式、费用明示——夸张表述属规制对象。"],
+      ["写着“有效”怎么办？", "断定表述本身可能违反广告规制，没有依据说明时应保持怀疑。"],
+      ["口碑呢？", "个人体验无法推广，应与多种信息来源对照。"],
+    ],
+  },
+  "aftercare": {
+    ja: [
+      ["治療後に確認することは？", "経過観察の予定・異常時の連絡先・検査の間隔を書面で確認しておきましょう。"],
+      ["効果の判定はいつ？", "すぐに判定できない場合が多いです。経過観察のスケジュールで確認するのが基本です。"],
+      ["体調の変化は？", "発熱・痛み・腫れなどは速やかに報告を。日記で記録しておくと伝えやすくなります。"],
+    ],
+    en: [
+      ["What should I confirm after treatment?", "Follow-up schedule, emergency contacts, and test intervals — in writing."],
+      ["When is the outcome judged?", "Often not immediately — the follow-up schedule defines when benefit is assessed."],
+      ["What about physical changes?", "Report fever, pain, or swelling promptly — a diary makes it easier to communicate."],
+    ],
+    zh: [
+      ["治疗后要确认什么？", "随访安排、异常时联系方式、检查间隔——请以书面确认。"],
+      ["何时判定疗效？", "多数不能立即判定，按随访计划确认是基本做法。"],
+      ["身体变化怎么办？", "发热、疼痛、肿胀等请及时报告，记录日记便于沟通。"],
+    ],
+  },
+  "family-discussion": {
+    ja: [
+      ["家族にどう伝える？", "治療の内容・根拠・リスク・費用を分けて説明するのが基本です。資料を見せて一緒に考えるのも有効です。"],
+      ["意見が分かれたら？", "急がず、セカンドオピニオンや相談窓口を使って整理するのも一つの方法です。"],
+      ["代理で決める場合は？", "本人の意思を確認できる範囲で確認し、医療者と相談しながら進めます。"],
+    ],
+    en: [
+      ["How do I explain it to family?", "Separately cover the treatment, its basis, risks, and costs — sharing the materials helps."],
+      ["What if opinions differ?", "Don't rush — a second opinion or consultation service can help organize the decision."],
+      ["Deciding on someone's behalf?", "Confirm the person's wishes as far as possible and proceed with the care team."],
+    ],
+    zh: [
+      ["怎么向家人说明？", "分开说明治疗内容、依据、风险和费用，展示资料一起讨论也有效。"],
+      ["意见分歧怎么办？", "不急，可借助第二意见或咨询窗口来整理。"],
+      ["代为决定时？", "尽可能确认本人意愿，与医务人员商量推进。"],
+    ],
+  },
+  "stem-cell-mechanism": {
+    ja: [
+      ["どうやって効くと考えられている？", "「分化して置き換わる」説と「分泌する物質で働きかける」説の2つの考え方があります。どちらが主かは研究中です。"],
+      ["仕組みが分かると何が変わる？", "効果の説明が「なぜ効くか」で読めるようになり、過大な主張と根拠ある説明を分けられます。"],
+      ["まだ分かっていないことは？", "多くあります。どの経路でどう働くかは疾患ごとに検討中で、確定していない部分を隠さない説明が誠実です。"],
+    ],
+    en: [
+      ["How are they thought to work?", "Two ideas — replacing tissue by differentiation, and acting via secreted substances — and which dominates is under study."],
+      ["What does knowing the mechanism change?", "It lets you read benefit claims mechanistically and separate grounded explanation from overreach."],
+      ["What's still unknown?", "Plenty — how cells act in each disease is still being worked out; honest explanations say so."],
+    ],
+    zh: [
+      ["认为如何起作用？", "有“分化替代”和“分泌物质起作用”两种假说，何者为主仍在研究中。"],
+      ["了解机制有什么用？", "能从“为何有效”的角度解读疗效说明，区分有据说明与夸大主张。"],
+      ["还有哪些不清楚？", "很多——各病种中细胞如何起作用仍在研究，诚实的说明不会隐瞒未定部分。"],
+    ],
+  },
+  "future-perspectives": {
+    ja: [
+      ["将来どこまでできる？", "オルガノイド・臓器再生・個別化医療などが研究されていますが、実用化までの距離は部位や技術で異なります。"],
+      ["今受けられるのは？", "承認済みの製品は一部に限られます。将来の研究と現在使える治療は分けて考えてください。"],
+      ["期待しすぎは危険？", "将来の可能性と現在の確かさを混同すると誤った判断につながります。段階を意識して情報を読みましょう。"],
+    ],
+    en: [
+      ["What might be possible later?", "Organoids, organ regeneration, and personalized medicine are studied, but distance to practice varies by field."],
+      ["What's available now?", "Only some approved products — keep future research separate from current care."],
+      ["Is over-expectation risky?", "Conflating future possibility with present certainty leads to poor decisions — read for stage."],
+    ],
+    zh: [
+      ["将来能做到什么程度？", "类器官、器官再生、个体化医疗等在研究中，但距离实用化因领域而异。"],
+      ["现在能用的是什么？", "仅限部分获批产品——请将未来研究与现有治疗分开考虑。"],
+      ["过度期待有风险吗？", "把未来可能与现在确凿混淆会导致误判，请按阶段解读信息。"],
+    ],
+  },
+  "japanese-society-for-regenerative-medicine": {
+    ja: [
+      ["学会の情報は信頼できる？", "公式の見解や用語集は参考になりますが、個別の治療の効果を保証するものではありません。"],
+      ["認定制度とは？", "委員会や施設の認定は手続きの適正さを確認する仕組みで、効果の承認ではありません。"],
+      ["他に見るべき情報源は？", "厚生労働省・PMDA・e-ヘルスネット・がん情報サービスなど公的な情報を併用するとバランスが取れます。"],
+    ],
+    en: [
+      ["Is society information reliable?", "Official statements and glossaries are useful references but don't guarantee outcomes of individual treatments."],
+      ["What is the certification system?", "Committee and facility certifications verify procedural propriety — they are not efficacy approvals."],
+      ["What else should I check?", "MHLW, PMDA, e-Health Net, and the cancer information service add balance."],
+    ],
+    zh: [
+      ["学会的信息可信吗？", "官方见解和术语集有参考价值，但不保证个体治疗的效果。"],
+      ["什么是认定制度？", "委员会和机构认定是确认程序正当性的机制，不等于疗效批准。"],
+      ["还应看哪些信息源？", "结合厚生劳动省、PMDA、e-健康网、癌症信息服务等官方来源更均衡。"],
+    ],
+  },
   "stem-cell-survival": {
     ja: [
       ["細胞はどのくらい残る？", "数週間から数か月とされる研究が多く、永続的に残るとは限りません。定着期間の説明を確認しましょう。"],

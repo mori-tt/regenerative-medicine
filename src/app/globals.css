@@ -2742,3 +2742,9 @@ section[id^="sub-"] { scroll-margin-top: 80px; }
 }
 .glossary-search input:focus { outline: 2px solid var(--green); outline-offset: 1px; }
 .glossary-hits { font-size: 13px; color: var(--muted); white-space: nowrap; }
+
+.faq-section { background: #fbfaf6; border: 1px solid var(--line); border-radius: 14px; padding: 18px 20px; margin: 18px 0; }
+.faq-q { font-weight: 700; margin-bottom: 4px; color: var(--ink); }
+.faq-a { margin: 0 0 14px; padding-left: 14px; border-left: 2px solid var(--green); }
+.checklist-section { background: #f6f8fb; border: 1px solid var(--line); border-radius: 14px; padding: 18px 20px; margin: 18px 0; }
+.checklist-section p { margin: 4px 0; font-size: 14.5px; }

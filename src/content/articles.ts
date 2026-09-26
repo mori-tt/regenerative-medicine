@@ -4,6 +4,7 @@ import reviewRecords from "./article-review-records.json";
 import { articleEvidence, correctArticleText, correctArticleSections, evidenceSectionsFor, type CitedSection, type EvidenceSource } from "./article-evidence";
 import { deepenSectionsFor } from "./article-deepen";
 import { faqSectionsFor } from "./article-faq";
+import { checklistSectionsFor } from "./article-checklist";
 import { reviewRecordReady, type ArticleReviewRecord } from "@/lib/article-review";
 const reviewSchedule = reviewRecords as Record<string, ArticleReviewRecord>;
 import type { CategorySlug } from "./categories";
@@ -10455,6 +10456,7 @@ export const articles: Article[] = rawArticles.map((article, index) => {
     ...evidenceSectionsFor(article.slug, "ja"),
     ...deepenSectionsFor(article.category, article.slug, "ja"),
     ...faqSectionsFor(article.slug, "ja"),
+    ...checklistSectionsFor(article.slug, "ja"),
   ];
   const editedAt = reviewSchedule[article.slug]?.lastEditedAt ?? article.updatedAt;
   const points = article.points.map((text) => correctArticleText(article.slug, "ja", text));
