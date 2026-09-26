@@ -6,3 +6,6 @@ out/
 *.tsbuildinfo
 .DS_Store
 .playwright-mcp/
+
+# playwright screenshots saved at repo root
+/*.png
