@@ -888,17 +888,19 @@ const copy = {
   },
 } as const;
 
-export function ArticleVisual({ slug, locale = "ja", category }: { slug: string; locale?: ArticleVisualLocale; category?: string }) {
+export function ArticleVisual({ slug, locale = "ja", category, index }: { slug: string; locale?: ArticleVisualLocale; category?: string; index?: number }) {
   const spec = visualBySlug[slug];
   let kinds: VisualKind[];
   if (spec) {
-    kinds = Array.isArray(spec) ? spec : [spec];
+    kinds = Array.isArray(spec)
+      ? spec
+      : [spec, ...(category ? defaultVisualFor(category, slug).filter(isVisualKind).filter((k) => k !== spec) : [])];
   } else if (category) {
-    const fallback = defaultVisualFor(category, slug);
-    kinds = fallback && isVisualKind(fallback) ? [fallback] : [];
+    kinds = defaultVisualFor(category, slug).filter(isVisualKind);
   } else {
     kinds = [];
   }
+  if (index !== undefined) kinds = kinds.slice(index, index + 1);
   if (kinds.length === 0) return null;
   const text = copy[locale];
 

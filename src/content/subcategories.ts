@@ -550,40 +550,40 @@ export function subcategoryOf(category: string, slug: string): SubcategoryGroup 
 }
 
 /** サブカテゴリごとのデフォルト図版（article-visuals の VisualKind 名）。 */
-const subcategoryVisual: Record<string, string> = {
-  "stem-basics/stem-cell-fundamentals": "celltypes",
-  "stem-basics/body-mechanisms": "bodymap",
-  "stem-basics/common-diseases": "disease",
-  "stem-basics/health-and-life": "lifestyle",
-  "in-body/how-administered": "routes",
-  "in-body/after-infusion": "biodistribution",
-  "in-body/where-they-reach": "homing",
-  "anti-aging/scientific-evidence": "skinaging",
-  "anti-aging/aesthetic-offerings": "checkpoints",
-  "efficacy/efficacy-status": "evidence",
-  "efficacy/research-stages": "evidence",
-  "efficacy/reading-research": "evidence",
-  "safety/treatment-risks": "riskchain",
-  "safety/eligibility": "eligibility",
-  "safety/trouble-and-relief": "support",
-  "cell-types/cell-kinds": "celltypes",
-  "cell-types/collection-sources": "sources",
-  "cell-types/self-vs-donor": "comparison",
-  "cell-types/culture-and-quality": "pipeline",
-  "compare-therapies/cell-free-therapies": "therapies",
-  "compare-therapies/vs-conventional": "positioning",
-  "cost-access/cost-and-coverage": "cost",
-  "cost-access/before-consultation": "checkpoints",
-  "cost-access/spotting-ads": "checkpoints",
-  "cost-access/during-and-after": "support",
-  "cost-access/life-and-support": "support",
-  "mechanisms/cell-mechanisms": "paracrine",
-  "mechanisms/regeneration-research": "repair",
-  "mechanisms/science-and-society": "science",
+const subcategoryVisual: Record<string, string[]> = {
+  "stem-basics/stem-cell-fundamentals": ["celltypes", "levels"],
+  "stem-basics/body-mechanisms": ["bodymap", "levels"],
+  "stem-basics/common-diseases": ["disease", "support"],
+  "stem-basics/health-and-life": ["lifestyle", "support"],
+  "in-body/how-administered": ["routes", "biodistribution"],
+  "in-body/after-infusion": ["biodistribution", "homing"],
+  "in-body/where-they-reach": ["homing", "biodistribution"],
+  "anti-aging/scientific-evidence": ["skinaging", "evidence"],
+  "anti-aging/aesthetic-offerings": ["checkpoints", "therapies"],
+  "efficacy/efficacy-status": ["evidence", "repair"],
+  "efficacy/research-stages": ["evidence", "timeline"],
+  "efficacy/reading-research": ["evidence", "science"],
+  "safety/treatment-risks": ["riskchain", "eligibility"],
+  "safety/eligibility": ["eligibility", "checkpoints"],
+  "safety/trouble-and-relief": ["support", "checkpoints"],
+  "cell-types/cell-kinds": ["celltypes", "differentiation"],
+  "cell-types/collection-sources": ["sources", "bank"],
+  "cell-types/self-vs-donor": ["comparison", "bank"],
+  "cell-types/culture-and-quality": ["pipeline", "bank"],
+  "compare-therapies/cell-free-therapies": ["therapies", "paracrine"],
+  "compare-therapies/vs-conventional": ["positioning", "repair"],
+  "cost-access/cost-and-coverage": ["cost", "checkpoints"],
+  "cost-access/before-consultation": ["checkpoints", "eligibility"],
+  "cost-access/spotting-ads": ["checkpoints", "evidence"],
+  "cost-access/during-and-after": ["support", "repair"],
+  "cost-access/life-and-support": ["support", "lifestyle"],
+  "mechanisms/cell-mechanisms": ["paracrine", "differentiation"],
+  "mechanisms/regeneration-research": ["repair", "science"],
+  "mechanisms/science-and-society": ["science", "evidence"],
 };
 
-/** 記事固有の指定がない場合の図版をサブカテゴリから引く。 */
-export function defaultVisualFor(category: string, slug: string): string | undefined {
+/** 記事固有の指定がない場合の図版をサブカテゴリから引く（先頭が冒頭用、2枚目は本文中）。 */
+export function defaultVisualFor(category: string, slug: string): string[] {
   const group = subcategoryOf(category, slug);
-  return group ? subcategoryVisual[`${category}/${group.key}`] : undefined;
+  return group ? (subcategoryVisual[`${category}/${group.key}`] ?? []) : [];
 }

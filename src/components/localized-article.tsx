@@ -295,7 +295,7 @@ export function LocalizedArticle({ locale, source }: { locale: SiteLocale; sourc
                 ))}
               </ul>
             </div>
-            {source && <ArticleVisual slug={source.slug} locale={locale} category={source.category} />}
+            {source && <ArticleVisual slug={source.slug} locale={locale} category={source.category} index={0} />}
             <details className="toc mobile-article-toc">
               <summary>{copy.toc}</summary>
               <nav aria-label={copy.toc}>
@@ -309,6 +309,7 @@ export function LocalizedArticle({ locale, source }: { locale: SiteLocale; sourc
                   {section.paragraphs.map((paragraph, paragraphIndex) => (
                     <p key={paragraphIndex}>{paragraph}<CitationLinks ids={section.paragraphReferences?.[paragraphIndex]} references={base.references} locale={locale} /></p>
                   ))}
+                  {index === 1 && source && <ArticleVisual slug={source.slug} locale={locale} category={source.category} index={1} />}
                 </section>
               ))}
             </div>

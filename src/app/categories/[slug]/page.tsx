@@ -63,13 +63,19 @@ export default async function CategoryPage({
           </Link>
         ))}
       </nav>
-      <nav className="filter-links subnav-links" aria-label="テーマから探す">
-        {groups.map(({ group, articles: groupArticles }) => (
-          <Link key={group.key} href={`#sub-${group.key}`}>
-            {group.ja}
-            <span className="chip-count">{groupArticles.length}</span>
-          </Link>
-        ))}
+      <nav className="topic-panel" aria-label="トピックから探す">
+        <p className="topic-panel-title">トピック別に読む</p>
+        <ol className="topic-panel-list">
+          {groups.map(({ group, articles: groupArticles }, index) => (
+            <li key={group.key}>
+              <Link href={`#sub-${group.key}`}>
+                <span className="topic-num" aria-hidden="true">{index + 1}</span>
+                <span className="topic-name">{group.ja}</span>
+                <span className="topic-count">{groupArticles.length}件</span>
+              </Link>
+            </li>
+          ))}
+        </ol>
       </nav>
       {featured.length > 0 && (
         <section aria-labelledby={`featured-${slug}`} className="featured-section">
@@ -83,9 +89,10 @@ export default async function CategoryPage({
           </div>
         </section>
       )}
-      {groups.map(({ group, articles: groupArticles }) => (
+      {groups.map(({ group, articles: groupArticles }, index) => (
         <section key={group.key} id={`sub-${group.key}`} aria-labelledby={`sub-heading-${group.key}`}>
           <h2 id={`sub-heading-${group.key}`} className="listing-heading">
+            <span className="topic-num" aria-hidden="true">{index + 1}</span>
             {group.ja}
             <span className="listing-count">{groupArticles.length}件</span>
           </h2>

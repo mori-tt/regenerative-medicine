@@ -122,7 +122,7 @@ export default async function ArticlePage({
               ))}
             </ul>
           </div>
-          <ArticleVisual slug={article.slug} category={article.category} />
+          <ArticleVisual slug={article.slug} category={article.category} index={0} />
           <details className="toc mobile-article-toc">
             <summary>この記事の目次</summary>
             <nav aria-label="この記事の目次">
@@ -132,12 +132,13 @@ export default async function ArticlePage({
             </nav>
           </details>
           <div className="article-body">
-            {article.sections.map((section) => (
+            {article.sections.map((section, sectionIndex) => (
               <section id={section.id} key={section.id}>
                 <h2>{section.title}</h2>
                 {section.paragraphs.map((p, paragraphIndex) => (
                   <p key={paragraphIndex}>{p}<CitationLinks ids={section.paragraphReferences?.[paragraphIndex]} references={article.references} locale="ja" /></p>
                 ))}
+                {sectionIndex === 1 && <ArticleVisual slug={article.slug} category={article.category} index={1} />}
               </section>
             ))}
           </div>

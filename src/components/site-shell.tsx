@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { MainNavigation, MobileMenu } from "./navigation";
+import { MobileMenu } from "./navigation";
 import { site } from "@/lib/site";
 import { Icon } from "./visuals";
 import { LanguageSwitcher } from "./language-switcher";
@@ -64,7 +64,6 @@ export function Header() {
           <LanguageSwitcher />
           <MobileMenu />
         </div>
-        <MainNavigation />
       </header>
     </>
   );
