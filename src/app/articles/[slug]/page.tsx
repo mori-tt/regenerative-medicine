@@ -122,7 +122,7 @@ export default async function ArticlePage({
               ))}
             </ul>
           </div>
-          <ArticleVisual slug={article.slug} />
+          <ArticleVisual slug={article.slug} category={article.category} />
           <details className="toc mobile-article-toc">
             <summary>この記事の目次</summary>
             <nav aria-label="この記事の目次">

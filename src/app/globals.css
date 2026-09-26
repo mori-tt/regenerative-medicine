@@ -2555,3 +2555,8 @@ section[id^="sub-"] { scroll-margin-top: 80px; }
   margin-inline: auto;
   height: auto;
 }
+
+.visual-cards { grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); }
+@media (max-width: 760px) {
+  .visual-cards { grid-template-columns: 1fr 1fr; }
+}

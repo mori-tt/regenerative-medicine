@@ -295,7 +295,7 @@ export function LocalizedArticle({ locale, source }: { locale: SiteLocale; sourc
                 ))}
               </ul>
             </div>
-            {source && <ArticleVisual slug={source.slug} locale={locale} />}
+            {source && <ArticleVisual slug={source.slug} locale={locale} category={source.category} />}
             <details className="toc mobile-article-toc">
               <summary>{copy.toc}</summary>
               <nav aria-label={copy.toc}>

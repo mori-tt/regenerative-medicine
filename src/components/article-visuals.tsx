@@ -1,7 +1,8 @@
 import type { SiteLocale } from "@/content/locales";
+import { defaultVisualFor } from "@/content/subcategories";
 import type { CSSProperties } from "react";
 
-type VisualKind = "approaches" | "flow" | "evidence" | "comparison" | "safety" | "biodistribution" | "homing" | "paracrine" | "bbb" | "therapies" | "celltypes" | "contents" | "cost" | "checkpoints" | "repair" | "skinaging" | "routes" | "sources" | "positioning" | "riskchain" | "eligibility";
+type VisualKind = "approaches" | "flow" | "evidence" | "comparison" | "safety" | "biodistribution" | "homing" | "paracrine" | "bbb" | "therapies" | "celltypes" | "contents" | "cost" | "checkpoints" | "repair" | "skinaging" | "routes" | "sources" | "positioning" | "riskchain" | "eligibility" | "bodymap" | "disease" | "lifestyle" | "support" | "science" | "levels" | "genepath" | "genome" | "organoid" | "niche" | "tumor" | "threer" | "division" | "pipeline" | "cellcycle" | "bloodflow" | "digestive" | "immune" | "healing" | "transplant" | "reprogram" | "printing" | "scaffold" | "bank" | "discovery" | "differentiation" | "timeline" | "donation";
 type ArticleVisualLocale = SiteLocale | "ja";
 
 const visualBySlug: Record<string, VisualKind> = {
@@ -52,7 +53,6 @@ const visualBySlug: Record<string, VisualKind> = {
   "stem-cell-contraindications": "eligibility",
   "iv-stem-cell-safety": "safety",
   "autologous-safety": "safety",
-  "tumorigenicity-safety": "safety",
   "stem-cell-antiaging-evidence": "evidence",
   "stem-cell-efficacy-evidence": "evidence",
   "stem-cell-effect-duration": "evidence",
@@ -61,8 +61,78 @@ const visualBySlug: Record<string, VisualKind> = {
   "negative-trials": "evidence",
   "guideline-reading": "evidence",
   "treatment-eligibility-process": "flow",
-  "ips-donation": "flow",
+  "ips-donation": "bank",
+  "cells-tissues-organs": "levels",
+  "genes-and-cells": "genepath",
+  "dna-basics": "genepath",
+  "proteins-basics": "genepath",
+  "cell-division": "cellcycle",
+  "cell-cycle": "cellcycle",
+  "blood-basics": "bloodflow",
+  "blood-types": "bloodflow",
+  "circulation": "bloodflow",
+  "respiration": "bloodflow",
+  "digestion-absorption": "digestive",
+  "microbiome": "digestive",
+  "immune-basics": "immune",
+  "antibodies-vaccines": "immune",
+  "allergy-basics": "immune",
+  "hla-rejection": "immune",
+  "fracture-healing": "healing",
+  "age-and-regeneration": "healing",
+  "regenerative-medicine-history": "timeline",
+  "blood-donation-basics": "donation",
+  "hematopoietic-transplant": "transplant",
+  "organ-transplant-basics": "transplant",
+  "tumorigenicity-safety": "tumor",
+  "genome-editing-difference": "genome",
+  "organoids-intro": "organoid",
+  "direct-reprogramming": "reprogram",
+  "differentiation-basics": "differentiation",
+  "asymmetric-division": "division",
+  "stemcell-niche": "niche",
+  "bioprinting": "printing",
+  "scaffolds": "scaffold",
+  "ips-stock": "bank",
+  "cell-banks-guide": "bank",
+  "biobank-basics": "bank",
+  "cryopreservation": "bank",
+  "ips-drug-discovery": "discovery",
+  "animal-testing-3rs": "threer",
+  "microscope-world": "science",
+  "bench-to-bedside": "evidence",
+  "overseas-research": "science",
+  "health-checkups": "support",
+  "family-doctor": "support",
+  "mental-health-decision": "support",
+  "disabilities-support": "support",
+  "rehabilitation-basics": "support",
 };
+
+/** 汎用カードレンダリング（値は [ラベル, 説明] の配列）。既存の専用ブロックで描画される種別は含めない。 */
+const CARD_KINDS = ["disease", "lifestyle", "support", "science", "levels", "genepath", "genome", "organoid", "niche", "tumor", "threer", "division"] as const;
+type CardKind = (typeof CARD_KINDS)[number];
+
+/** 汎用番号フローレンダリング（値は文字列配列）。既存の専用ブロックで描画される種別は含めない。 */
+const FLOW_KINDS = ["pipeline", "cellcycle", "bloodflow", "digestive", "immune", "healing", "transplant", "reprogram", "printing", "scaffold", "bank", "discovery", "differentiation", "timeline", "donation"] as const;
+type FlowKind = (typeof FLOW_KINDS)[number];
+
+function isCardKind(kind: VisualKind): kind is CardKind {
+  return (CARD_KINDS as readonly string[]).includes(kind);
+}
+function isFlowKind(kind: VisualKind): kind is FlowKind {
+  return (FLOW_KINDS as readonly string[]).includes(kind);
+}
+
+const ALL_KINDS: ReadonlySet<string> = new Set([
+  "approaches", "flow", "evidence", "comparison", "safety", "biodistribution", "homing", "paracrine", "bbb", "therapies",
+  "celltypes", "contents", "cost", "checkpoints", "repair", "skinaging", "routes", "sources", "positioning", "riskchain", "eligibility",
+  "bodymap", "disease", "lifestyle", "support", "science", "levels", "genepath", "genome", "organoid", "niche", "tumor", "threer", "division",
+  "pipeline", "cellcycle", "bloodflow", "digestive", "immune", "healing", "transplant", "reprogram", "printing", "scaffold", "bank", "discovery", "differentiation", "timeline", "donation",
+]);
+function isVisualKind(value: string): value is VisualKind {
+  return ALL_KINDS.has(value);
+}
 
 const copy = {
   ja: {
@@ -89,6 +159,34 @@ const copy = {
       positioning: "薬・手術・再生医療の位置づけ",
       riskchain: "感染が起こり得る工程",
       eligibility: "治療の適否を考える枠組み",
+      bodymap: "体の主な部位と役割",
+      disease: "病気を考える枠組み",
+      lifestyle: "体を整える基本",
+      support: "相談できる相手と窓口",
+      science: "科学が進む手順",
+      levels: "細胞から体への階層",
+      genepath: "遺伝情報から体の働きへ",
+      genome: "ゲノム編集と細胞技術の違い",
+      organoid: "オルガノイドをつくる",
+      niche: "幹細胞を支える「ニッチ」",
+      tumor: "腫瘍化のリスクを考える",
+      threer: "動物実験の3R原則",
+      division: "非対称分裂で幹細胞を保つ",
+      pipeline: "細胞の加工・品質の流れ",
+      cellcycle: "細胞分裂の流れ",
+      bloodflow: "血液の循環",
+      digestive: "食べ物が体になるまで",
+      immune: "免疫がはたらく流れ",
+      healing: "組織が治る流れ",
+      transplant: "細胞・臓器移植の流れ",
+      reprogram: "細胞を別の細胞に変える",
+      printing: "組織を「印刷」する流れ",
+      scaffold: "足場と細胞で組織をつくる",
+      bank: "細胞・試料の保存と供給",
+      discovery: "細胞を使った創薬の流れ",
+      differentiation: "幹細胞が分化する",
+      timeline: "細胞治療の歩み",
+      donation: "献血の流れ",
     },
     note: "概念を整理するための図です。具体的な適応、効果、リスク、費用は治療ごとの説明資料で確認してください。",
     approaches: ["細胞を補う", "足場と組み合わせる", "体の修復を促す"],
@@ -181,6 +279,93 @@ const copy = {
     vessel: "血管内",
     tissue: "組織",
     brain: "脳組織",
+    bodymap: [
+      ["脳", "指令塔。神経系の中枢"],
+      ["心臓", "血液を送るポンプ"],
+      ["肺", "酸素を取り込む臓器"],
+      ["肝臓・腎臓", "代謝と老廃物の処理"],
+      ["腸", "栄養の吸収と免疫"],
+      ["骨・筋肉", "体を支え動かす組織"],
+    ],
+    disease: [
+      ["要因", "遺伝・生活習慣・加齢などの背景"],
+      ["体の変化", "細胞や組織に起きる変化"],
+      ["症状", "表面に現れるサイン"],
+      ["相談・治療", "受診の目安と治療の選択肢"],
+    ],
+    lifestyle: [
+      ["食事", "体の材料をととのえる"],
+      ["運動", "筋肉・骨・心肺を保つ"],
+      ["睡眠", "修復と休息の時間"],
+      ["健診", "異変を早く見つける"],
+    ],
+    support: [
+      ["自分で確認", "信頼できる情報源で調べる"],
+      ["家族に相談", "考え方や体調を共有する"],
+      ["制度・窓口", "公的な支援と相談窓口"],
+      ["医療機関", "かかりつけ医・専門医に相談"],
+    ],
+    science: [
+      ["観察", "現象を記録する"],
+      ["仮説", "説明できる考えを立てる"],
+      ["検証", "実験・研究で確かめる"],
+      ["共有", "結果を論文などで公開する"],
+    ],
+    levels: [
+      ["細胞", "体の最小の働き手"],
+      ["組織", "似た細胞の集まり"],
+      ["臓器", "複数の組織が働き合う"],
+      ["個体", "臓器が協調して生命を維持"],
+    ],
+    genepath: [
+      ["DNA", "遺伝情報の設計図"],
+      ["タンパク質", "体の働きを担う分子"],
+      ["細胞の働き", "組織や臓器の活動になる"],
+    ],
+    genome: [
+      ["ゲノム編集", "DNAの配列を書き換える技術"],
+      ["細胞技術", "細胞を採取・培養して使う技術"],
+    ],
+    organoid: [
+      ["幹細胞", "出発点となる細胞"],
+      ["立体培養", "条件を整え立体的に育てる"],
+      ["ミニ臓器", "病気のモデルや薬の評価に使う"],
+    ],
+    niche: [
+      ["幹細胞", "分かれて供給を担う細胞"],
+      ["周囲の細胞・基質", "支えて信号を出す環境"],
+      ["ニッチ", "幹細胞の働きを保つ微小環境"],
+    ],
+    tumor: [
+      ["増殖の力", "増える性質は治療の鍵でもある"],
+      ["残存・腫瘍リスク", "想定外の増殖が起きる可能性"],
+      ["安全性試験", "腫瘍化の有無を事前に評価する"],
+    ],
+    threer: [
+      ["Replacement", "代替法の利用"],
+      ["Reduction", "動物の数を減らす"],
+      ["Refinement", "苦痛を軽減する"],
+    ],
+    division: [
+      ["分裂前", "1個の幹細胞"],
+      ["非対称分裂", "2種類の細胞に分かれる"],
+      ["分裂後", "幹細胞1個＋分化する細胞1個"],
+    ],
+    pipeline: ["採取", "培養", "品質確認", "投与"],
+    cellcycle: ["DNAの複製", "分裂の準備", "細胞の分裂", "2つの細胞へ"],
+    bloodflow: ["肺で酸素を得る", "心臓から送り出す", "全身を巡る", "心臓へ戻る"],
+    digestive: ["食べる", "消化する", "吸収する", "体の材料になる"],
+    immune: ["異物の侵入", "免疫細胞の検知", "攻撃・調整", "記憶して備える"],
+    healing: ["損傷", "炎症", "細胞の再生", "成熟（リモデリング）"],
+    transplant: ["提供・採取", "適合の評価", "輸注・移植", "経過観察と生着"],
+    reprogram: ["体の細胞", "因子や薬剤で変換", "目的の細胞へ"],
+    printing: ["細胞と材料", "3Dデータで設計", "印刷する", "品質を評価"],
+    scaffold: ["足場材料", "細胞の定着", "組織らしい構造へ"],
+    bank: ["提供", "検査と記録", "凍結保存", "必要時に配布"],
+    discovery: ["患者由来の細胞", "薬の候補を評価", "毒性を確認", "治験へ"],
+    differentiation: ["幹細胞", "未熟な細胞", "組織をつくる細胞へ"],
+    timeline: ["輸血", "臓器移植", "骨髄移植", "細胞治療の時代へ"],
+    donation: ["申し込み", "健康チェック", "採血", "患者への輸血に使われる"],
   },
   en: {
     label: "Conceptual diagram",
@@ -206,6 +391,34 @@ const copy = {
       positioning: "Drugs, surgery, and regenerative medicine",
       riskchain: "Where infection can enter the process",
       eligibility: "How treatment eligibility is considered",
+      bodymap: "Main parts of the body and their roles",
+      disease: "A framework for thinking about illness",
+      lifestyle: "Daily habits that keep the body running",
+      support: "People and desks you can consult",
+      science: "How science advances",
+      levels: "From cells to the whole body",
+      genepath: "From genetic information to body function",
+      genome: "Genome editing vs cell technology",
+      organoid: "How organoids are made",
+      niche: "The niche that supports stem cells",
+      tumor: "Thinking about tumor risk",
+      threer: "The 3Rs of animal research",
+      division: "Keeping stem cells by asymmetric division",
+      pipeline: "Cell processing and quality",
+      cellcycle: "The cell division cycle",
+      bloodflow: "Blood circulation",
+      digestive: "From food to body material",
+      immune: "How immunity works",
+      healing: "How tissue heals",
+      transplant: "Cell and organ transplantation",
+      reprogram: "Converting one cell type into another",
+      printing: "Printing tissue",
+      scaffold: "Building tissue on a scaffold",
+      bank: "Storing and supplying cells and samples",
+      discovery: "Drug discovery using cells",
+      differentiation: "How stem cells differentiate",
+      timeline: "The path to cell therapy",
+      donation: "The blood donation process",
     },
     note: "This diagram organizes concepts. Confirm treatment-specific eligibility, benefits, risks, and costs in the provider's materials.",
     approaches: ["Replace cells", "Combine with a scaffold", "Stimulate repair"],
@@ -294,6 +507,93 @@ const copy = {
     vessel: "Inside the vessel",
     tissue: "Tissue",
     brain: "Brain tissue",
+    bodymap: [
+      ["Brain", "The command center of the nervous system"],
+      ["Heart", "The pump that moves blood"],
+      ["Lungs", "Take in oxygen"],
+      ["Liver and kidneys", "Metabolism and waste handling"],
+      ["Gut", "Nutrient absorption and immunity"],
+      ["Bone and muscle", "Tissues that support and move the body"],
+    ],
+    disease: [
+      ["Causes", "Backgrounds such as genes, lifestyle, and age"],
+      ["Changes in the body", "What happens to cells and tissues"],
+      ["Symptoms", "Signs that appear on the surface"],
+      ["Consultation and treatment", "When to seek care and the options"],
+    ],
+    lifestyle: [
+      ["Diet", "Supplies the body's building blocks"],
+      ["Exercise", "Keeps muscle, bone, and heart-lung function"],
+      ["Sleep", "Time for repair and rest"],
+      ["Checkups", "Find changes early"],
+    ],
+    support: [
+      ["Check yourself", "Look up reliable sources"],
+      ["Talk with family", "Share your thinking and condition"],
+      ["Systems and desks", "Public support and consultation services"],
+      ["Medical providers", "Ask your own doctors and specialists"],
+    ],
+    science: [
+      ["Observation", "Record the phenomenon"],
+      ["Hypothesis", "Form an explanation to test"],
+      ["Verification", "Test it in experiments and studies"],
+      ["Sharing", "Publish results in papers and reports"],
+    ],
+    levels: [
+      ["Cells", "The smallest workers of the body"],
+      ["Tissues", "Groups of similar cells"],
+      ["Organs", "Several tissues working together"],
+      ["Organism", "Organs in coordination sustaining life"],
+    ],
+    genepath: [
+      ["DNA", "The blueprint of genetic information"],
+      ["Proteins", "Molecules that do the body's work"],
+      ["Cell activity", "Becomes the function of tissues and organs"],
+    ],
+    genome: [
+      ["Genome editing", "Rewrites the DNA sequence"],
+      ["Cell technology", "Collects and cultures cells for use"],
+    ],
+    organoid: [
+      ["Stem cells", "The starting cells"],
+      ["3D culture", "Grown under tuned conditions"],
+      ["Mini-organ", "Used to model disease and evaluate drugs"],
+    ],
+    niche: [
+      ["Stem cell", "Divides to supply new cells"],
+      ["Surrounding cells and matrix", "Support and send signals"],
+      ["The niche", "A microenvironment that keeps stemness"],
+    ],
+    tumor: [
+      ["Growth potential", "The ability to multiply is also therapeutic"],
+      ["Residual tumor risk", "Unintended growth is possible"],
+      ["Safety testing", "Tumorigenicity is evaluated beforehand"],
+    ],
+    threer: [
+      ["Replacement", "Use alternatives where possible"],
+      ["Reduction", "Use fewer animals"],
+      ["Refinement", "Reduce distress"],
+    ],
+    division: [
+      ["Before division", "One stem cell"],
+      ["Asymmetric division", "Splits into two different cells"],
+      ["After division", "One stem cell plus one differentiating cell"],
+    ],
+    pipeline: ["Collection", "Culture", "Quality checks", "Administration"],
+    cellcycle: ["DNA replication", "Preparing to divide", "Cell division", "Two cells"],
+    bloodflow: ["Oxygen in the lungs", "Pumped out by the heart", "Circulates the body", "Returns to the heart"],
+    digestive: ["Eating", "Digestion", "Absorption", "Becomes body material"],
+    immune: ["Invaders enter", "Immune cells detect", "Attack and regulate", "Memory is formed"],
+    healing: ["Injury", "Inflammation", "Cell regrowth", "Maturation (remodeling)"],
+    transplant: ["Donation and collection", "Compatibility evaluation", "Infusion or grafting", "Follow-up and engraftment"],
+    reprogram: ["Body cells", "Conversion by factors or drugs", "Becoming target cells"],
+    printing: ["Cells and materials", "Design with 3D data", "Print", "Evaluate quality"],
+    scaffold: ["Scaffold material", "Cells attach", "Becomes tissue-like structure"],
+    bank: ["Donation", "Testing and records", "Frozen storage", "Distributed when needed"],
+    discovery: ["Patient-derived cells", "Evaluate drug candidates", "Check toxicity", "Toward clinical trials"],
+    differentiation: ["Stem cells", "Immature cells", "Becoming tissue cells"],
+    timeline: ["Blood transfusion", "Organ transplantation", "Bone marrow transplant", "The era of cell therapy"],
+    donation: ["Sign up", "Health checks", "Blood draw", "Used for patient transfusion"],
   },
   zh: {
     label: "理解用概念图",
@@ -319,6 +619,34 @@ const copy = {
       positioning: "药物、手术与再生医学的定位",
       riskchain: "可能发生感染的环节",
       eligibility: "治疗适用性的判断框架",
+      bodymap: "身体的主要部位与功能",
+      disease: "理解疾病的框架",
+      lifestyle: "维持身体的基本生活习惯",
+      support: "可以咨询的对象与渠道",
+      science: "科学研究推进的步骤",
+      levels: "从细胞到个体的层级",
+      genepath: "从遗传信息到身体功能",
+      genome: "基因组编辑与细胞技术的区别",
+      organoid: "类器官的制备",
+      niche: "支撑干细胞的微环境",
+      tumor: "成瘤风险的思考",
+      threer: "动物实验的3R原则",
+      division: "通过非对称分裂保留干细胞",
+      pipeline: "细胞加工与质量流程",
+      cellcycle: "细胞分裂的过程",
+      bloodflow: "血液循环",
+      digestive: "食物成为身体材料的过程",
+      immune: "免疫发挥作用的过程",
+      healing: "组织愈合的过程",
+      transplant: "细胞与器官移植的流程",
+      reprogram: "将细胞转变为另一种细胞",
+      printing: "「打印」组织的过程",
+      scaffold: "用支架与细胞构建组织",
+      bank: "细胞与样本的保存和供应",
+      discovery: "利用细胞进行药物研发",
+      differentiation: "干细胞的分化",
+      timeline: "细胞治疗的发展历程",
+      donation: "献血的流程",
     },
     note: "本图用于整理概念。具体适用性、获益、风险和费用请确认每项治疗的说明资料。",
     approaches: ["补充细胞", "与支架结合", "促进身体修复"],
@@ -407,11 +735,102 @@ const copy = {
     vessel: "血管内",
     tissue: "组织",
     brain: "脑组织",
+    bodymap: [
+      ["脑", "神经系统的中枢"],
+      ["心脏", "输送血液的泵"],
+      ["肺", "摄入氧气的器官"],
+      ["肝脏・肾脏", "代谢与废物处理"],
+      ["肠道", "营养吸收与免疫"],
+      ["骨骼・肌肉", "支撑并驱动身体的组织"],
+    ],
+    disease: [
+      ["诱因", "遗传、生活习惯、年龄等背景"],
+      ["身体的变化", "细胞和组织发生的变化"],
+      ["症状", "表现在外的信号"],
+      ["就诊与治疗", "就诊的时机与治疗选择"],
+    ],
+    lifestyle: [
+      ["饮食", "提供身体的原材料"],
+      ["运动", "保持肌肉、骨骼与心肺功能"],
+      ["睡眠", "修复与休息的时间"],
+      ["体检", "及早发现异常"],
+    ],
+    support: [
+      ["自己确认", "查阅可靠的信息来源"],
+      ["与家人商量", "分享想法与身体状况"],
+      ["制度与咨询", "公共支持与咨询渠道"],
+      ["医疗机构", "咨询自己的主治医生和专家"],
+    ],
+    science: [
+      ["观察", "记录现象"],
+      ["假设", "提出可以检验的解释"],
+      ["验证", "通过实验与研究确认"],
+      ["分享", "以论文等形式公开结果"],
+    ],
+    levels: [
+      ["细胞", "身体最小的工作者"],
+      ["组织", "相似细胞的集合"],
+      ["器官", "多种组织协同工作"],
+      ["个体", "器官协调维持生命"],
+    ],
+    genepath: [
+      ["DNA", "遗传信息的设计图"],
+      ["蛋白质", "承担身体功能的分子"],
+      ["细胞活动", "形成组织与器官的功能"],
+    ],
+    genome: [
+      ["基因组编辑", "改写DNA序列的技术"],
+      ["细胞技术", "采集、培养细胞用于医疗"],
+    ],
+    organoid: [
+      ["干细胞", "作为起点的细胞"],
+      ["立体培养", "在调控条件下立体生长"],
+      ["迷你器官", "用于疾病模型与药物评估"],
+    ],
+    niche: [
+      ["干细胞", "分裂并负责供应的细胞"],
+      ["周围细胞与基质", "提供支持与信号的环境"],
+      ["微环境", "维持干细胞功能的微小环境"],
+    ],
+    tumor: [
+      ["增殖能力", "增殖既是治疗的关键"],
+      ["残留・肿瘤风险", "可能发生预期外的增殖"],
+      ["安全性试验", "事先评估是否成瘤"],
+    ],
+    threer: [
+      ["Replacement", "尽可能使用替代方法"],
+      ["Reduction", "减少动物数量"],
+      ["Refinement", "减轻动物痛苦"],
+    ],
+    division: [
+      ["分裂前", "一个干细胞"],
+      ["非对称分裂", "分成两种不同的细胞"],
+      ["分裂后", "一个干细胞＋一个分化细胞"],
+    ],
+    pipeline: ["采集", "培养", "质量确认", "给药"],
+    cellcycle: ["DNA复制", "分裂准备", "细胞分裂", "成为两个细胞"],
+    bloodflow: ["在肺获得氧", "由心脏泵出", "流经全身", "回到心脏"],
+    digestive: ["进食", "消化", "吸收", "成为身体的材料"],
+    immune: ["异物侵入", "免疫细胞发现", "攻击与调节", "形成记忆以备下次"],
+    healing: ["损伤", "炎症", "细胞再生", "成熟（重塑）"],
+    transplant: ["捐献・采集", "相容性评估", "输注・移植", "随访与植入"],
+    reprogram: ["体细胞", "经因子或药物转化", "成为目标细胞"],
+    printing: ["细胞与材料", "用3D数据设计", "打印", "评估质量"],
+    scaffold: ["支架材料", "细胞附着", "形成类组织结构"],
+    bank: ["捐献", "检测与记录", "冷冻保存", "需要时配发"],
+    discovery: ["患者来源细胞", "评估候选药物", "确认毒性", "走向临床试验"],
+    differentiation: ["干细胞", "未成熟细胞", "成为组织细胞"],
+    timeline: ["输血", "器官移植", "骨髓移植", "进入细胞治疗时代"],
+    donation: ["报名", "健康检查", "采血", "用于患者输血"],
   },
 } as const;
 
-export function ArticleVisual({ slug, locale = "ja" }: { slug: string; locale?: ArticleVisualLocale }) {
-  const kind = visualBySlug[slug];
+export function ArticleVisual({ slug, locale = "ja", category }: { slug: string; locale?: ArticleVisualLocale; category?: string }) {
+  let kind = visualBySlug[slug];
+  if (!kind && category) {
+    const fallback = defaultVisualFor(category, slug);
+    if (fallback && isVisualKind(fallback)) kind = fallback;
+  }
   if (!kind) return null;
   const text = copy[locale];
 
@@ -489,6 +908,22 @@ export function ArticleVisual({ slug, locale = "ja" }: { slug: string; locale?: 
       {kind === "repair" && (
         <div className="visual-flow">
           {text.repair.map((item, index) => <div className="visual-flow-step" key={item}><b>{index + 1}</b><span>{item}</span></div>)}
+        </div>
+      )}
+      {kind === "bodymap" && <BodymapDiagram text={text} />}
+      {isCardKind(kind) && (
+        <div className="visual-cards">
+          {text[kind].map(([label, desc]) => (
+            <div className="visual-card visual-card-labeled" key={label}>
+              <b>{label}</b>
+              <span>{desc}</span>
+            </div>
+          ))}
+        </div>
+      )}
+      {isFlowKind(kind) && (
+        <div className="visual-flow">
+          {text[kind].map((item: string, index: number) => <div className="visual-flow-step" key={item}><b>{index + 1}</b><span>{item}</span></div>)}
         </div>
       )}
       <figcaption>{text.note}</figcaption>
@@ -641,6 +1076,47 @@ function ParacrineDiagram({ text }: { text: VisualCopy }) {
       <defs>
         <marker id="arrowMid" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#9caf91" /></marker>
       </defs>
+    </svg>
+  );
+}
+
+function BodymapDiagram({ text }: { text: VisualCopy }) {
+  const labels = text.bodymap;
+  return (
+    <svg className="visual-svg" viewBox="0 0 680 250" role="img" aria-label={text.titles.bodymap}>
+      {/* 人体シルエット */}
+      <g fill="#d9e8d5" stroke="#718b68" strokeWidth="1.5">
+        <circle cx="95" cy="44" r="26" />
+        <path d="M65 78 q30 -10 60 0 l6 78 q0 14 -10 22 l-4 56 q-2 10 -12 10 h-20 q-10 0 -12 -10 l-4 -56 q-10 -8 -10 -22 z" />
+        <rect x="44" y="82" width="14" height="78" rx="7" />
+        <rect x="132" y="82" width="14" height="78" rx="7" />
+      </g>
+      {/* 臓器ドット */}
+      <g>
+        <circle cx="95" cy="46" r="7" fill="#9caf91" />
+        <circle cx="95" cy="104" r="7" fill="#9caf91" />
+        <circle cx="95" cy="128" r="7" fill="#9caf91" />
+        <circle cx="95" cy="154" r="7" fill="#9caf91" />
+        <circle cx="95" cy="208" r="7" fill="#9caf91" />
+        <circle cx="139" cy="116" r="7" fill="#9caf91" />
+      </g>
+      {/* 引き出し線とラベル（左列3、右列3） */}
+      <g fontSize="12">
+        {labels.map(([name, desc], i) => {
+          const col = i < 3 ? 0 : 1;
+          const row = i % 3;
+          const x = 210 + col * 235;
+          const y = 62 + row * 62;
+          return (
+            <g key={name}>
+              <rect x={x} y={y - 24} width="215" height="46" rx="8" fill="#f6f8f2" stroke="#dfe7d8" />
+              <circle cx={x + 16} cy={y - 1} r="6" fill="#718b68" />
+              <text x={x + 30} y={y - 5} fontWeight="700" fill="#4f614b">{name}</text>
+              <text x={x + 30} y={y + 13} fill="#718b68" fontSize="10">{desc}</text>
+            </g>
+          );
+        })}
+      </g>
     </svg>
   );
 }
