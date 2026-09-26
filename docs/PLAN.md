@@ -229,3 +229,13 @@ FTPSでレンタルサーバーの公開フォルダへ
 
 - `article-deepen.ts` を新設：サブカテゴリ別（31種）の「掘り下げ」セクションを全記事末尾に追加。2段落×3言語の手書き文。データ変更不要で JA/EN/ZH すべてに適用。
 - 用語集の欠損メタを完全網羅：301語中 link=301 / ref=301 / 壊れリンク0。
+
+## 23. 優先記事へのFAQ追加（2026-09-26 追記8）
+
+- `article-faq.ts` を新設。22記事に記事固有の「よくある質問」セクション（各3問×日英中）を追加：
+  幹細胞の基礎（what-is-stem-cell / what-is-regenerative-medicine / stem-cell-treatment-contents / ips-cells-explained / mesenchymal-basics / adipose-stem / autologous-allogeneic）、
+  体内分布（iv-stem-cell-safety / stem-cell-administration-routes / stem-cell-biodistribution / stem-cell-survival）、
+  効果（stem-cell-efficacy-evidence）、比較（stemcell-exosome-prp）、美容（stem-cell-antiaging-evidence）、
+  安全性（risks-and-safety）、制度・費用（insurance-care / cost-and-insurance / hospital-choice / questions-before-treatment / clinical-trials-guide / five-points-before-treatment）。
+- 深掘りセクションの後・まとめの前に挿入。Q/A形式で読者の素朴な疑問に直接応答。
+- すべて「断定表現なし・研究段階を明示・確認の導線を示す」方針で統一。

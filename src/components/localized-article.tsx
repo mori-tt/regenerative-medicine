@@ -23,6 +23,7 @@ import { absolute, publicAsset, site } from "@/lib/site";
 import { publication } from "@/lib/site-config";
 import { correctArticleText, correctArticleSections, evidenceSectionsFor } from "@/content/article-evidence";
 import { deepenSectionsFor } from "@/content/article-deepen";
+import { faqSectionsFor } from "@/content/article-faq";
 import { CitationLinks, ArticleReferences } from "./article-references";
 
 const englishTerms: Record<string, string> = {
@@ -117,6 +118,7 @@ export function localizedArticleFor(locale: SiteLocale, source: Article) {
     ...correctArticleSections(source.slug, locale, originalSections),
     ...evidenceSectionsFor(source.slug, locale),
     ...deepenSectionsFor(source.category, source.slug, locale),
+    ...faqSectionsFor(source.slug, locale),
   ];
   return {
     title: correctArticleText(source.slug, locale, special?.title ?? translated?.title ?? topic),
