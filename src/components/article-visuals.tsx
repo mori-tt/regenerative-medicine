@@ -1,12 +1,14 @@
 import type { SiteLocale } from "@/content/locales";
 import { defaultVisualFor } from "@/content/subcategories";
+import { VisualIcon, type IconName } from "./visual-icons";
 import type { CSSProperties } from "react";
 
 type VisualKind = "approaches" | "flow" | "evidence" | "comparison" | "safety" | "biodistribution" | "homing" | "paracrine" | "bbb" | "therapies" | "celltypes" | "contents" | "cost" | "checkpoints" | "repair" | "skinaging" | "routes" | "sources" | "positioning" | "riskchain" | "eligibility" | "bodymap" | "disease" | "lifestyle" | "support" | "science" | "levels" | "genepath" | "genome" | "organoid" | "niche" | "tumor" | "threer" | "division" | "pipeline" | "cellcycle" | "bloodflow" | "digestive" | "immune" | "healing" | "transplant" | "reprogram" | "printing" | "scaffold" | "bank" | "discovery" | "differentiation" | "timeline" | "donation";
 type ArticleVisualLocale = SiteLocale | "ja";
 
-const visualBySlug: Record<string, VisualKind> = {
-  "three-approaches": "approaches",
+type VisualSpec = VisualKind | VisualKind[];
+const visualBySlug: Record<string, VisualSpec> = {
+  "three-approaches": ["approaches", "celltypes"],
   "treatment-flow": "flow",
   "clinical-trials-guide": "flow",
   "stages-of-research": "evidence",
@@ -14,55 +16,58 @@ const visualBySlug: Record<string, VisualKind> = {
   "reading-research-news": "evidence",
   "randomized-trials": "evidence",
   "statistics-intro": "evidence",
-  "self-vs-donor-cells": "comparison",
-  "cost-and-insurance": "comparison",
-  "risks-and-safety": "safety",
-  "iv-stem-cell-journey": "biodistribution",
-  "stem-cell-biodistribution": "biodistribution",
-  "stem-cell-survival": "biodistribution",
-  "stem-cell-homing": "homing",
-  "stem-cell-brain-bbb": "bbb",
-  "paracrine-effect": "paracrine",
-  "msc-secretome": "paracrine",
-  "stem-cell-mechanism": "paracrine",
-  "stemcell-exosome-prp": "therapies",
-  "what-is-stem-cell": "celltypes",
-  "stem-cell-types": "celltypes",
-  "somatic-stem-cells": "celltypes",
-  "mesenchymal-basics": "celltypes",
-  "stem-cell-treatment-contents": "contents",
+  "self-vs-donor-cells": ["comparison", "bank"],
+  "cost-and-insurance": ["comparison", "cost"],
+  "risks-and-safety": ["safety", "riskchain"],
+  "iv-stem-cell-journey": ["biodistribution", "homing"],
+  "stem-cell-biodistribution": ["biodistribution", "homing"],
+  "stem-cell-survival": ["biodistribution", "immune"],
+  "stem-cell-homing": ["homing", "repair"],
+  "stem-cell-brain-bbb": ["bbb", "routes"],
+  "paracrine-effect": ["paracrine", "repair"],
+  "msc-secretome": ["paracrine", "immune"],
+  "msc-immunomodulation": ["immune", "paracrine"],
+  "stem-cell-mechanism": ["paracrine", "differentiation"],
+  "stemcell-exosome-prp": ["therapies", "celltypes"],
+  "what-is-stem-cell": ["celltypes", "levels"],
+  "what-is-regenerative-medicine": ["approaches", "celltypes"],
+  "stem-cell-types": ["celltypes", "levels"],
+  "somatic-stem-cells": ["celltypes", "cellcycle"],
+  "mesenchymal-basics": ["celltypes", "sources"],
+  "ips-cells-explained": ["celltypes", "reprogram"],
+  "stem-cell-treatment-contents": ["contents", "pipeline"],
   "insurance-care": "cost",
   "cost-simulation": "cost",
-  "five-points-before-treatment": "checkpoints",
-  "questions-before-treatment": "checkpoints",
-  "hospital-choice": "checkpoints",
-  "informed-consent-howto": "checkpoints",
+  "five-points-before-treatment": ["checkpoints", "eligibility"],
+  "questions-before-treatment": ["checkpoints", "eligibility"],
+  "hospital-choice": ["checkpoints", "support"],
+  "informed-consent-howto": ["checkpoints", "flow"],
   "final-checklist": "checkpoints",
-  "stem-cell-cosmetic-medicine": "checkpoints",
-  "exosome-cosmetic-claims": "checkpoints",
-  "body-repair-mechanisms": "repair",
-  "stem-cell-skin-aging": "skinaging",
-  "stem-cell-administration-routes": "routes",
-  "autologous-allogeneic": "comparison",
-  "bone-marrow-vs-adipose": "sources",
-  "stem-cell-sources": "sources",
-  "exosomes-notes": "therapies",
-  "prp-therapy-basics": "therapies",
+  "stem-cell-cosmetic-medicine": ["checkpoints", "skinaging"],
+  "exosome-cosmetic-claims": ["therapies", "checkpoints"],
+  "body-repair-mechanisms": ["repair", "paracrine"],
+  "stem-cell-skin-aging": ["skinaging", "healing"],
+  "stem-cell-administration-routes": ["routes", "biodistribution"],
+  "autologous-allogeneic": ["comparison", "bank"],
+  "bone-marrow-vs-adipose": ["sources", "comparison"],
+  "stem-cell-sources": ["sources", "bank"],
+  "exosomes-notes": ["therapies", "paracrine"],
+  "prp-therapy-basics": ["therapies", "bloodflow"],
   "drugs-surgery-comparison": "positioning",
-  "stem-cell-infection-risk": "riskchain",
-  "stem-cell-contraindications": "eligibility",
-  "iv-stem-cell-safety": "safety",
-  "autologous-safety": "safety",
-  "stem-cell-antiaging-evidence": "evidence",
-  "stem-cell-efficacy-evidence": "evidence",
-  "stem-cell-effect-duration": "evidence",
+  "stem-cell-infection-risk": ["riskchain", "safety"],
+  "stem-cell-contraindications": ["eligibility", "checkpoints"],
+  "iv-stem-cell-safety": ["safety", "biodistribution"],
+  "autologous-safety": ["safety", "comparison"],
+  "stem-cell-antiaging-evidence": ["evidence", "skinaging"],
+  "stem-cell-efficacy-evidence": ["evidence", "repair"],
+  "stem-cell-effect-duration": ["evidence", "biodistribution"],
   "press-release-reading": "evidence",
   "case-reports-registries": "evidence",
   "negative-trials": "evidence",
   "guideline-reading": "evidence",
   "treatment-eligibility-process": "flow",
   "ips-donation": "bank",
-  "cells-tissues-organs": "levels",
+  "cells-tissues-organs": ["levels", "bodymap"],
   "genes-and-cells": "genepath",
   "dna-basics": "genepath",
   "proteins-basics": "genepath",
@@ -74,7 +79,7 @@ const visualBySlug: Record<string, VisualKind> = {
   "respiration": "bloodflow",
   "digestion-absorption": "digestive",
   "microbiome": "digestive",
-  "immune-basics": "immune",
+  "immune-basics": ["immune", "bloodflow"],
   "antibodies-vaccines": "immune",
   "allergy-basics": "immune",
   "hla-rejection": "immune",
@@ -82,15 +87,15 @@ const visualBySlug: Record<string, VisualKind> = {
   "age-and-regeneration": "healing",
   "regenerative-medicine-history": "timeline",
   "blood-donation-basics": "donation",
-  "hematopoietic-transplant": "transplant",
+  "hematopoietic-transplant": ["transplant", "bank"],
   "organ-transplant-basics": "transplant",
   "tumorigenicity-safety": "tumor",
   "genome-editing-difference": "genome",
-  "organoids-intro": "organoid",
+  "organoids-intro": ["organoid", "levels"],
   "direct-reprogramming": "reprogram",
-  "differentiation-basics": "differentiation",
+  "differentiation-basics": ["differentiation", "levels"],
   "asymmetric-division": "division",
-  "stemcell-niche": "niche",
+  "stemcell-niche": ["niche", "cellcycle"],
   "bioprinting": "printing",
   "scaffolds": "scaffold",
   "ips-stock": "bank",
@@ -122,6 +127,58 @@ function isCardKind(kind: VisualKind): kind is CardKind {
 }
 function isFlowKind(kind: VisualKind): kind is FlowKind {
   return (FLOW_KINDS as readonly string[]).includes(kind);
+}
+
+/** カード・フローの各項目に表示するピクトグラム（要素順）。 */
+const ICONS_BY_KIND: Record<string, IconName[]> = {
+  approaches: ["cells", "mesh", "wound"],
+  flow: ["person", "clipboard", "flask", "calendar"],
+  safety: ["warning", "bug", "calendar", "eye"],
+  celltypes: ["cells", "dna", "organ"],
+  contents: ["cell", "tube", "syringe"],
+  cost: ["syringe", "flask", "drop", "calendar"],
+  checkpoints: ["book", "warning", "share", "money", "hospital"],
+  repair: ["wound", "send", "flask", "check"],
+  routes: ["drop", "heart", "syringe"],
+  sources: ["layers", "bone", "organ"],
+  positioning: ["pill", "scalpel", "cells"],
+  eligibility: ["warning", "clipboard", "hospital"],
+  riskchain: ["syringe", "flask", "tube", "phone"],
+  disease: ["person", "cells", "magnify", "hospital"],
+  lifestyle: ["food", "run", "moon", "calendar"],
+  support: ["book", "group", "gov", "hospital"],
+  science: ["eye", "bulb", "flask", "share"],
+  levels: ["cell", "cells", "organ", "person"],
+  genepath: ["dna", "layers", "cell"],
+  genome: ["dna", "flask"],
+  organoid: ["cell", "flask", "organ"],
+  niche: ["cell", "mesh", "dome"],
+  tumor: ["cells", "warning", "magnify"],
+  threer: ["flask", "check", "heart"],
+  division: ["cell", "split", "cells"],
+  pipeline: ["syringe", "flask", "check", "drop"],
+  cellcycle: ["dna", "clock", "split", "cells"],
+  bloodflow: ["drop", "heart", "person", "send"],
+  digestive: ["mouth", "flask", "drop", "person"],
+  immune: ["bug", "eye", "shield", "brain"],
+  healing: ["wound", "bug", "cells", "layers"],
+  transplant: ["group", "clipboard", "syringe", "heart"],
+  reprogram: ["cell", "send", "organ"],
+  printing: ["cells", "clipboard", "layers", "check"],
+  scaffold: ["mesh", "cell", "organ"],
+  bank: ["group", "clipboard", "snow", "send"],
+  discovery: ["cell", "flask", "check", "arrow"],
+  differentiation: ["cell", "split", "organ"],
+  timeline: ["drop", "organ", "cells", "flask"],
+  donation: ["person", "clipboard", "drop", "heart"],
+};
+
+function iconFor(kind: string, index: number): IconName {
+  return ICONS_BY_KIND[kind]?.[index] ?? "cell";
+}
+
+function StepIcon({ name }: { name: IconName }) {
+  return <span className="visual-icon" aria-hidden="true"><VisualIcon name={name} /></span>;
 }
 
 const ALL_KINDS: ReadonlySet<string> = new Set([
@@ -279,6 +336,8 @@ const copy = {
     vessel: "血管内",
     tissue: "組織",
     brain: "脳組織",
+    skinPanels: ["若い皮膚（イメージ）", "加齢した皮膚（イメージ）"],
+    skinLayers: ["表皮", "真皮（コラーゲンなど）"],
     bodymap: [
       ["脳", "指令塔。神経系の中枢"],
       ["心臓", "血液を送るポンプ"],
@@ -507,6 +566,8 @@ const copy = {
     vessel: "Inside the vessel",
     tissue: "Tissue",
     brain: "Brain tissue",
+    skinPanels: ["Younger skin (illustration)", "Aged skin (illustration)"],
+    skinLayers: ["Epidermis", "Dermis (collagen etc.)"],
     bodymap: [
       ["Brain", "The command center of the nervous system"],
       ["Heart", "The pump that moves blood"],
@@ -735,6 +796,8 @@ const copy = {
     vessel: "血管内",
     tissue: "组织",
     brain: "脑组织",
+    skinPanels: ["年轻的皮肤（示意）", "老化的皮肤（示意）"],
+    skinLayers: ["表皮", "真皮（胶原蛋白等）"],
     bodymap: [
       ["脑", "神经系统的中枢"],
       ["心脏", "输送血液的泵"],
@@ -826,14 +889,23 @@ const copy = {
 } as const;
 
 export function ArticleVisual({ slug, locale = "ja", category }: { slug: string; locale?: ArticleVisualLocale; category?: string }) {
-  let kind = visualBySlug[slug];
-  if (!kind && category) {
+  const spec = visualBySlug[slug];
+  let kinds: VisualKind[];
+  if (spec) {
+    kinds = Array.isArray(spec) ? spec : [spec];
+  } else if (category) {
     const fallback = defaultVisualFor(category, slug);
-    if (fallback && isVisualKind(fallback)) kind = fallback;
+    kinds = fallback && isVisualKind(fallback) ? [fallback] : [];
+  } else {
+    kinds = [];
   }
-  if (!kind) return null;
+  if (kinds.length === 0) return null;
   const text = copy[locale];
 
+  return <>{kinds.map((kind) => <VisualFigure key={kind} kind={kind} slug={slug} text={text} locale={locale} />)}</>;
+}
+
+function VisualFigure({ kind, slug, text, locale }: { kind: VisualKind; slug: string; text: VisualCopy; locale: ArticleVisualLocale }) {
   return (
     <figure className={`article-visual article-visual-${kind}`}>
       <div className="article-visual-heading">
@@ -841,12 +913,12 @@ export function ArticleVisual({ slug, locale = "ja", category }: { slug: string;
       </div>
       {kind === "approaches" && (
         <div className="visual-cards visual-cards-three">
-          {text.approaches.map((item, index) => <div className="visual-card" key={item}><b>{index + 1}</b><span>{item}</span></div>)}
+          {text.approaches.map((item, index) => <div className="visual-card" key={item}><b>{index + 1}</b><span><StepIcon name={iconFor(kind, index)} />{item}</span></div>)}
         </div>
       )}
       {kind === "flow" && (
         <div className="visual-flow">
-          {text.flow.map((item, index) => <div className="visual-flow-step" key={item}><b>{index + 1}</b><span>{item}</span></div>)}
+          {text.flow.map((item, index) => <div className="visual-flow-step" key={item}><b>{index + 1}</b><span><StepIcon name={iconFor(kind, index)} />{item}</span></div>)}
         </div>
       )}
       {kind === "evidence" && (
@@ -862,7 +934,7 @@ export function ArticleVisual({ slug, locale = "ja", category }: { slug: string;
           </table>
         </div>
       )}
-      {kind === "safety" && <div className="visual-cards visual-cards-four">{text.safety.map((item) => <div className="visual-card" key={item}><span>{item}</span></div>)}</div>}
+      {kind === "safety" && <div className="visual-cards visual-cards-four">{text.safety.map((item, index) => <div className="visual-card" key={item}><span><StepIcon name={iconFor(kind, index)} />{item}</span></div>)}</div>}
       {kind === "biodistribution" && <BiodistributionDiagram text={text} />}
       {kind === "homing" && <HomingDiagram text={text} />}
       {kind === "paracrine" && <ParacrineDiagram text={text} />}
@@ -875,11 +947,11 @@ export function ArticleVisual({ slug, locale = "ja", category }: { slug: string;
           </table>
         </div>
       )}
-      {(kind === "celltypes" || kind === "contents" || kind === "skinaging" || kind === "routes" || kind === "sources" || kind === "positioning" || kind === "eligibility") && (
+      {(kind === "celltypes" || kind === "contents" || kind === "routes" || kind === "sources" || kind === "positioning" || kind === "eligibility") && (
         <div className="visual-cards visual-cards-three">
-          {text[kind].map(([label, desc]) => (
+          {text[kind].map(([label, desc], index) => (
             <div className="visual-card visual-card-labeled" key={label}>
-              <b>{label}</b>
+              <b><StepIcon name={iconFor(kind, index)} />{label}</b>
               <span>{desc}</span>
             </div>
           ))}
@@ -887,9 +959,9 @@ export function ArticleVisual({ slug, locale = "ja", category }: { slug: string;
       )}
       {(kind === "cost" || kind === "riskchain") && (
         <div className="visual-cards visual-cards-four">
-          {text[kind].map(([label, desc]) => (
+          {text[kind].map(([label, desc], index) => (
             <div className="visual-card visual-card-labeled" key={label}>
-              <b>{label}</b>
+              <b><StepIcon name={iconFor(kind, index)} />{label}</b>
               <span>{desc}</span>
             </div>
           ))}
@@ -899,23 +971,24 @@ export function ArticleVisual({ slug, locale = "ja", category }: { slug: string;
         <div className="visual-cards visual-cards-five">
           {text.checkpoints.map(([label, desc], index) => (
             <div className="visual-card visual-card-labeled" key={label}>
-              <b><i>{index + 1}</i>{label}</b>
+              <b><i>{index + 1}</i><StepIcon name={iconFor(kind, index)} />{label}</b>
               <span>{desc}</span>
             </div>
           ))}
         </div>
       )}
+      {kind === "skinaging" && <SkinagingDiagram text={text} />}
       {kind === "repair" && (
         <div className="visual-flow">
-          {text.repair.map((item, index) => <div className="visual-flow-step" key={item}><b>{index + 1}</b><span>{item}</span></div>)}
+          {text.repair.map((item, index) => <div className="visual-flow-step" key={item}><b>{index + 1}</b><span><StepIcon name={iconFor(kind, index)} />{item}</span></div>)}
         </div>
       )}
       {kind === "bodymap" && <BodymapDiagram text={text} />}
       {isCardKind(kind) && (
         <div className="visual-cards">
-          {text[kind].map(([label, desc]) => (
+          {text[kind].map(([label, desc], index) => (
             <div className="visual-card visual-card-labeled" key={label}>
-              <b>{label}</b>
+              <b><StepIcon name={iconFor(kind, index)} />{label}</b>
               <span>{desc}</span>
             </div>
           ))}
@@ -923,7 +996,7 @@ export function ArticleVisual({ slug, locale = "ja", category }: { slug: string;
       )}
       {isFlowKind(kind) && (
         <div className="visual-flow">
-          {text[kind].map((item: string, index: number) => <div className="visual-flow-step" key={item}><b>{index + 1}</b><span>{item}</span></div>)}
+          {text[kind].map((item: string, index: number) => <div className="visual-flow-step" key={item}><b>{index + 1}</b><span><StepIcon name={iconFor(kind, index)} />{item}</span></div>)}
         </div>
       )}
       <figcaption>{text.note}</figcaption>
@@ -1117,6 +1190,36 @@ function BodymapDiagram({ text }: { text: VisualCopy }) {
           );
         })}
       </g>
+    </svg>
+  );
+}
+
+function SkinagingDiagram({ text }: { text: VisualCopy }) {
+  const young = Array.from({ length: 7 }, (_, i) => 58 + i * 16);
+  const aged = [64, 100, 134];
+  return (
+    <svg className="visual-svg" viewBox="0 0 680 220" role="img" aria-label={text.titles.skinaging}>
+      {[0, 1].map((panel) => {
+        const x = 40 + panel * 330;
+        const lines = panel === 0 ? young : aged;
+        return (
+          <g key={panel}>
+            {/* 表皮 */}
+            <rect x={x} y="30" width="260" height="26" fill="#e0bfa5" stroke="#c9a183" strokeWidth="1" />
+            <text x={x + 8} y="47" fontSize="11" fill="#6b4b32">{text.skinLayers[0]}</text>
+            {/* 真皮 */}
+            <rect x={x} y="56" width="260" height={panel === 0 ? 120 : 96} fill="#f7ece2" stroke="#dcc3ae" strokeWidth="1" />
+            <text x={x + 8} y="72" fontSize="11" fill="#a07050">{text.skinLayers[1]}</text>
+            {/* コラーゲン線（若い=密、加齢=疎） */}
+            {lines.map((ly) => (
+              <path key={ly} d={`M${x + 6} ${ly + 16} q16 -8 32 0 t32 0 t32 0 t32 0 t32 0 t32 0 t32 0 t32 0`} fill="none" stroke={panel === 0 ? "#b98a63" : "#d6b393"} strokeWidth={panel === 0 ? 3 : 2} opacity={panel === 0 ? 0.9 : 0.7} />
+            ))}
+            <text x={x + 130} y="200" fontSize="13" fontWeight="700" fill="#4f614b" textAnchor="middle">{text.skinPanels[panel]}</text>
+          </g>
+        );
+      })}
+      {/* 矢印 */}
+      <path d="M310 100 h40 m-8 -6 8 6 -8 6" stroke="#8aa381" strokeWidth="2" fill="none" />
     </svg>
   );
 }

@@ -2560,3 +2560,19 @@ section[id^="sub-"] { scroll-margin-top: 80px; }
 @media (max-width: 760px) {
   .visual-cards { grid-template-columns: 1fr 1fr; }
 }
+
+.visual-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 8px;
+  background: #eef4ea;
+  color: #5b7a56;
+  margin-right: 8px;
+  vertical-align: -6px;
+  flex: 0 0 auto;
+}
+.visual-card-labeled b { display: flex; align-items: center; }
+.visual-flow-step .visual-icon { width: 22px; height: 22px; vertical-align: -5px; margin-right: 6px; }
