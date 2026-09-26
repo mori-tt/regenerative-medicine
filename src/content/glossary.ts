@@ -112,6 +112,29 @@ export const glossaryGroups: GlossaryGroup[] = [
         en: ["Progenitor cell", "An intermediate cell committed to a specific lineage. Its self-renewal capacity is limited."],
         zh: ["祖细胞（前驱细胞）", "由干细胞分化、迈向特定细胞系的中间阶段细胞，自我复制能力有限。"],
         link: "differentiation-basics",
+      },
+      {
+        ja: ["線維芽細胞", "真皮などにある結合組織の細胞。コラーゲンなどを作り、iPS細胞の原料としても使われます。"],
+        en: ["Fibroblast", "A connective-tissue cell found in the dermis and elsewhere; produces collagen and can be used as source material for iPS cells."],
+        zh: ["成纤维细胞", "存在于真皮等结缔组织中的细胞，能产生胶原蛋白，也可用作iPS细胞的原料。"],
+        link: "ips-cells-explained",
+      },
+      {
+        ja: ["T細胞", "免疫を担う白血球の一種。ウイルス感染細胞やがん細胞を攻撃し、拒絶反応にも関わります。"],
+        en: ["T cell", "A type of white blood cell central to immunity; attacks infected or cancerous cells and drives rejection."],
+        zh: ["T细胞", "免疫系统的白细胞之一，攻击被感染细胞或癌细胞，并参与排斥反应。"],
+        link: "immune-basics",
+      },
+      {
+        ja: ["マクロファージ", "異物や死んだ細胞を取り込む免疫細胞。炎症の調整や組織修復にも関わります。"],
+        en: ["Macrophage", "An immune cell that engulfs foreign matter and dead cells; also regulates inflammation and tissue repair."],
+        zh: ["巨噬细胞", "吞噬异物和死亡细胞的免疫细胞，也参与炎症调节和组织修复。"],
+        link: "immune-basics",
+      },
+      {
+        ja: ["樹状細胞", "異物の情報をT細胞に伝える免疫細胞。免疫応答の司令塔に相当します。"],
+        en: ["Dendritic cell", "An immune cell that presents foreign material to T cells — the command center of immune responses."],
+        zh: ["树突状细胞", "向T细胞呈递异物信息的免疫细胞，相当于免疫反应的指挥中枢。"],
       }
     ],
   },
@@ -173,7 +196,7 @@ export const glossaryGroups: GlossaryGroup[] = [
         ja: ["細胞周期", "細胞が分裂から次の分裂まで進む周期。DNAの複製と分配を繰り返します。"],
         en: ["Cell cycle", "The cycle a cell goes through from one division to the next, repeating DNA replication and segregation."],
         zh: ["细胞周期", "细胞从一次分裂到下一次分裂的周期，反复进行DNA复制与分配。"],
-        link: "cell-division-cycle",
+        link: "cell-cycle",
       },
       {
         ja: ["アポトーシス", "細胞の「計画的な死」。不要になった細胞が秩序だった形で消える仕組みです。"],
@@ -189,13 +212,35 @@ export const glossaryGroups: GlossaryGroup[] = [
         ja: ["細胞培養加工施設（CPC）", "細胞の採取・加工・培養を行う施設。無菌管理などの品質体制が問われます。"],
         en: ["Cell processing center (CPC)", "The facility that collects, processes, and cultures cells. Sterility and quality systems matter."],
         zh: ["细胞培养加工设施（CPC）", "进行细胞采集、加工、培养的设施，需具备无菌等质量管理体系。"],
-        link: "cell-quality-culture",
+        link: "cell-culture-and-quality",
       },
       {
         ja: ["細胞バンク", "細胞を検査・凍結して保管し、必要時に提供する仕組み。提供者の検査記録とともに管理されます。"],
         en: ["Cell bank", "A system that tests, freezes, and stores cells for future use, managed together with donor records."],
         zh: ["细胞库", "对细胞进行检验、冷冻保存并在需要时提供的机制，与供者检查记录一起管理。"],
-        link: "cell-source-options",
+        link: "cell-banks-guide",
+      },
+      {
+        ja: ["増殖", "細胞が分裂して数を増やすこと。培養での増殖能力は治療用細胞の供給を左右します。"],
+        en: ["Proliferation", "Cell multiplication through division. Culture proliferation capacity shapes how many treatment cells can be supplied."],
+        zh: ["增殖", "细胞分裂增殖的过程，培养中的增殖能力影响治疗用细胞的供应。"],
+        link: "cell-cycle",
+      },
+      {
+        ja: ["細胞老化", "細胞が分裂できない状態に入ること。老化した細胞は炎症を促す物質を出すことがあります。"],
+        en: ["Cellular senescence", "A state in which cells stop dividing. Senescent cells can release inflammation-promoting substances."],
+        zh: ["细胞衰老", "细胞进入无法分裂的状态，衰老细胞可能分泌促炎物质。"],
+      },
+      {
+        ja: ["細胞外基質", "細胞の周囲にある支持構造。コラーゲンなどのタンパク質が組織の形を保ちます。"],
+        en: ["Extracellular matrix", "The supporting structure around cells — proteins such as collagen that maintain tissue shape."],
+        zh: ["细胞外基质", "细胞周围的支持结构，胶原蛋白等蛋白维持组织形态。"],
+      },
+      {
+        ja: ["培地上清", "細胞培養後の液体部分。細胞が分泌した成分を含み、エクソソーム治療の材料として研究されています。"],
+        en: ["Culture supernatant", "The liquid fraction after cell culture — contains cell-secreted factors and is studied as a source for exosome preparations."],
+        zh: ["培养上清", "细胞培养后的液体部分，含有细胞分泌成分，正在研究用作外泌体制剂的原料。"],
+        link: "msc-secretome",
       }
     ],
   },
@@ -254,7 +299,7 @@ export const glossaryGroups: GlossaryGroup[] = [
         ja: ["ドナー適格性", "細胞の提供者に求められる条件。感染症検査や健康状態の確認が含まれます。"],
         en: ["Donor eligibility", "The criteria a cell donor must meet, including infection screening and health checks."],
         zh: ["供者适格性", "细胞提供者需满足的条件，包括感染检查与健康状况确认。"],
-        link: "cell-source-options",
+        link: "cell-banks-guide",
       },
       {
         ja: ["アレルギー反応", "体の免疫が過剰に反応して起こる症状。投与直後に起きることがあり、監視体制が重要です。"],
@@ -267,6 +312,30 @@ export const glossaryGroups: GlossaryGroup[] = [
         en: ["Follow-up", "The period of tracking symptoms and tests after treatment. Some treatments require long-term monitoring."],
         zh: ["随访", "治疗后追踪症状与检查值的期间，部分治疗需要长期随访。"],
         link: "aftercare",
+      },
+      {
+        ja: ["出血・血腫", "採取や注射の際に起こりうる合併症。抗凝固薬の使用中は特に確認が必要です。"],
+        en: ["Bleeding & hematoma", "Possible complications of collection or injection. Especially relevant when taking anticoagulants."],
+        zh: ["出血与血肿", "采集或注射时可能出现的合并症，使用抗凝药时尤其需要确认。"],
+        link: "risks-and-safety",
+      },
+      {
+        ja: ["発熱・炎症反応", "投与後に起きうる体の反応。程度は治療や細胞の種類によって異なります。"],
+        en: ["Fever & inflammatory response", "A reaction that can occur after administration; severity varies by treatment and cell type."],
+        zh: ["发热与炎症反应", "给药后可能出现的身体反应，程度因治疗和细胞种类而异。"],
+        link: "risks-and-safety",
+      },
+      {
+        ja: ["免疫抑制", "移植後の拒絶を抑えるため免疫を弱めること。感染症のリスクが上がります。"],
+        en: ["Immunosuppression", "Weakening the immune system to prevent rejection after transplant; raises infection risk."],
+        zh: ["免疫抑制", "为预防移植后排斥而抑制免疫，会增加感染风险。"],
+        link: "hematopoietic-transplant",
+      },
+      {
+        ja: ["長期追跡（レジストリ）", "治療後も長期間データを集めて安全性を確認する仕組み。新しい治療ほど重要です。"],
+        en: ["Long-term registry follow-up", "Collecting safety data over years after treatment — increasingly important for newer therapies."],
+        zh: ["长期随访登记", "治疗后长期收集数据以确认安全性的机制，对新型治疗尤为重要。"],
+        link: "case-reports-registries",
       }
     ],
   },
@@ -379,6 +448,36 @@ export const glossaryGroups: GlossaryGroup[] = [
         zh: ["广告中的术前术后照", "关于在医疗广告中使用术前术后照片的限制，不合规刊登可能构成虚假广告。"],
         link: "before-after-ad-regulation",
         ref: { title: "厚生労働省「医療法における病院等の広告規制」", url: "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/iryou/kokokukisei/" },
+      },
+      {
+        ja: ["医療法", "病院やクリニックの運営・広告などを定める法律。広告規制の根拠の一つです。"],
+        en: ["Medical Care Act", "The law governing hospitals and clinics, including advertising rules."],
+        zh: ["医疗法", "规定医院、诊所运营与广告等事项的法律，是广告规制的依据之一。"],
+        ref: { title: "e-Gov法令検索「医療法」", url: "https://laws.e-gov.go.jp/law/323AC0000000205" },
+      },
+      {
+        ja: ["倫理審査委員会（IRB）", "臨床研究が倫理的に適切か審査する委員会。参加者の権利と安全を守る仕組みです。"],
+        en: ["Ethics review board (IRB)", "A committee that reviews the ethics of clinical research, protecting participants' rights and safety."],
+        zh: ["伦理审查委员会（IRB）", "审查临床研究伦理性的委员会，保护受试者权利与安全。"],
+        link: "clinical-trials-guide",
+      },
+      {
+        ja: ["説明義務", "医療者が治療の内容・リスク・代替案を説明する義務。説明が不十分な同意は問題になり得ます。"],
+        en: ["Duty of disclosure", "The provider's obligation to explain the treatment, its risks, and alternatives. Consent without adequate explanation is problematic."],
+        zh: ["说明义务", "医务人员对治疗内容、风险和替代方案进行说明的义务，说明不充分下的同意可能存在问题。"],
+        link: "questions-before-treatment",
+      },
+      {
+        ja: ["同意書", "治療内容・リスク・費用を書面で確認し署名する書類。口頭だけでなく書面で残ることが重要です。"],
+        en: ["Consent form", "A written document confirming the treatment, risks, and costs — written records matter beyond verbal explanation."],
+        zh: ["知情同意书", "以书面确认治疗内容、风险和费用并签署的文件，书面留存非常重要。"],
+        link: "jibihi-contract",
+      },
+      {
+        ja: ["消費生活センター", "自由診療の契約や表示など、消費者トラブルの相談窓口。188（消費者ホットライン）で案内されます。"],
+        en: ["Consumer affairs center", "A public contact point for disputes over private care contracts and advertising (via the 188 consumer hotline)."],
+        zh: ["消费者生活中心", "处理自费诊疗合同与宣传等消费纠纷的咨询窗口，可拨打188消费者热线。"],
+        link: "trouble-help",
       }
     ],
   },
@@ -451,6 +550,33 @@ export const glossaryGroups: GlossaryGroup[] = [
         en: ["Statistical significance", "A test indicating a difference is unlikely explained by chance alone — distinct from effect size."],
         zh: ["统计学显著性", "表明差异难以仅用偶然解释的统计判定，与效应大小是不同的指标。"],
         link: "statistics-intro",
+      },
+      {
+        ja: ["症例対照研究", "治療を受けた人と受けていない人を後から比較する観察研究。因果の推論には注意が必要です。"],
+        en: ["Case-control study", "An observational study comparing people who received a treatment with those who did not, retrospectively."],
+        zh: ["病例对照研究", "事后比较接受治疗与未接受治疗人群的观察性研究，因果推断需谨慎。"],
+      },
+      {
+        ja: ["前向き・後向き研究", "前向きは今後の経過を追い、後向きは過去の記録を分析します。設計の違いで証拠の強さが変わります。"],
+        en: ["Prospective vs retrospective", "Prospective studies follow outcomes forward; retrospective ones analyze existing records. Design affects evidence strength."],
+        zh: ["前瞻性与回顾性研究", "前瞻性追踪未来经过，回顾性分析既有记录，设计差异影响证据强度。"],
+      },
+      {
+        ja: ["サンプルサイズ", "研究に参加した対象の数。小さすぎると偶然の差を「効果」と見誤りやすくなります。"],
+        en: ["Sample size", "The number of participants. If too small, chance differences can be mistaken for effects."],
+        zh: ["样本量", "研究对象的数量，过小容易把偶然差异误认为疗效。"],
+        link: "statistics-intro",
+      },
+      {
+        ja: ["信頼区間", "推定値が取りうる範囲。幅が広いほど不確実性が大きいことを示します。"],
+        en: ["Confidence interval", "The range in which an estimate is likely to lie; a wide interval means greater uncertainty."],
+        zh: ["置信区间", "估计值可能的范围，区间越宽不确定性越大。"],
+      },
+      {
+        ja: ["相対リスクと絶対リスク", "相対リスクは「何倍」、絶対リスクは実際の割合の差。広告では相対数値だけが強調されがちです。"],
+        en: ["Relative vs absolute risk", "Relative risk is a ratio; absolute risk is the real difference in rates. Ads tend to highlight relative figures."],
+        zh: ["相对风险与绝对风险", "相对风险是倍数，绝对风险是实际比例的差，广告往往强调相对数值。"],
+        link: "reading-research-news",
       }
     ],
   },
@@ -512,8 +638,170 @@ export const glossaryGroups: GlossaryGroup[] = [
         ja: ["軟骨", "関節の表面を覆い、衝撃を吸収する組織。血管がなく再生しにくいとされます。"],
         en: ["Cartilage", "Tissue covering joint surfaces that absorbs impact. It has no blood vessels and regenerates poorly."],
         zh: ["软骨", "覆盖关节表面、吸收冲击的组织，无血管、再生能力差。"],
-        link: "cartilage-regeneration",
+        link: "cartilage-repair-deep",
+      },
+      {
+        ja: ["表皮と真皮", "皮膚の構造。表皮は表面のバリア、真皮はコラーゲンなどの支持層で、老化の違いに関係します。"],
+        en: ["Epidermis & dermis", "The two skin layers — the epidermis is the surface barrier; the dermis provides collagen-rich support. Relevant to aging differences."],
+        zh: ["表皮与真皮", "皮肤的结构，表皮是表面屏障，真皮是富含胶原蛋白的支撑层，与老化差异相关。"],
+        link: "stem-cell-skin-aging",
+      },
+      {
+        ja: ["毛細血管", "動脈と静脈をつなぐ細い血管。静脈投与された細胞がここに捕捉されることがあります。"],
+        en: ["Capillary", "Fine vessels linking arteries and veins. Administered cells can be trapped here — notably in the lungs."],
+        zh: ["毛细血管", "连接动脉与静脉的细小血管，静脉投与的细胞可能在此被截留。"],
+        link: "stem-cell-biodistribution",
+      },
+      {
+        ja: ["線維化", "炎症や損傷の後に組織が硬くなる変化。臓器の機能低下につながり、再生医療の研究対象です。"],
+        en: ["Fibrosis", "Tissue stiffening after inflammation or injury, reducing organ function — a target of regenerative research."],
+        zh: ["纤维化", "炎症或损伤后组织变硬的变化，会导致器官功能下降，是再生医疗的研究对象。"],
+      },
+      {
+        ja: ["DNA・遺伝子", "DNAは遺伝情報を担う物質、遺伝子はその中の機能的な単位。細胞の性質を形づくります。"],
+        en: ["DNA & genes", "DNA carries genetic information; genes are its functional units, shaping cell properties."],
+        zh: ["DNA与基因", "DNA承载遗传信息，基因是其中的功能单位，决定细胞性质。"],
+        link: "genes-and-cells",
+      },
+      {
+        ja: ["成長因子", "細胞の増殖や分化を促すタンパク質。修復や再生に関わります。"],
+        en: ["Growth factor", "Proteins that promote cell growth and differentiation, involved in repair and regeneration."],
+        zh: ["生长因子", "促进细胞增殖和分化的蛋白质，参与修复与再生。"],
+      },
+      {
+        ja: ["受容体", "細胞表面で特定の物質を受け取る構造。細胞間の情報伝達の入口です。"],
+        en: ["Receptor", "A structure on the cell surface that binds specific molecules — the entry point of cell signaling."],
+        zh: ["受体", "细胞表面接收特定物质的结构，是细胞间信息传递的入口。"],
       }
+    ],
+  },
+  {
+    ja: "再生医療の技術",
+    en: "Regenerative technologies",
+    zh: "再生医疗技术",
+    terms: [
+      {
+        ja: ["組織工学（ティッシュエンジニアリング）", "細胞・足場材料・成長因子を組み合わせて組織を作る考え方。"],
+        en: ["Tissue engineering", "An approach that combines cells, scaffolds, and growth factors to build tissue."],
+        zh: ["组织工程学", "将细胞、支架材料与生长因子结合来构建组织的方法。"],
+        link: "scaffolds",
+      },
+      {
+        ja: ["スキャフォールド（足場材料）", "細胞が定着するための支持材料。生分解性の材料などが研究されています。"],
+        en: ["Scaffold", "A supporting material on which cells attach; biodegradable materials are under study."],
+        zh: ["支架材料", "供细胞附着的支持材料，可降解材料等正在研究中。"],
+        link: "scaffolds",
+      },
+      {
+        ja: ["バイオプリンティング", "細胞や材料を3Dプリンタのように積層して組織を作る技術。研究段階です。"],
+        en: ["Bioprinting", "Printing layers of cells and materials like a 3D printer to form tissue — a research-stage technology."],
+        zh: ["生物打印", "像3D打印一样将细胞与材料逐层堆积以构建组织的技术，尚处研究阶段。"],
+        link: "bioprinting",
+      },
+      {
+        ja: ["オルガノイド", "幹細胞から作られる小さな三次元組織。病気のモデルや薬の評価に使われます。"],
+        en: ["Organoid", "A small three-dimensional tissue grown from stem cells, used to model disease and test drugs."],
+        zh: ["类器官", "由干细胞制备的小型三维组织，用于疾病建模和药物评价。"],
+        link: "future-perspectives",
+      },
+      {
+        ja: ["遺伝子治療", "遺伝子を体内に導入して病気を治療する方法。承認された製品もあります。"],
+        en: ["Gene therapy", "Introducing genetic material into the body to treat disease; some approved products exist."],
+        zh: ["基因治疗", "将基因导入体内治疗疾病的方法，已有获批产品。"],
+      },
+      {
+        ja: ["ゲノム編集", "DNAの特定の場所を書き換える技術。iPS細胞との組み合わせが研究されています。"],
+        en: ["Genome editing", "Techniques that rewrite DNA at specific sites — studied in combination with iPS cells."],
+        zh: ["基因组编辑", "改写DNA特定位点的技术，正在研究与iPS细胞的结合应用。"],
+      },
+      {
+        ja: ["条件付き早期承認", "限られたデータでも安全性が確認できれば早期に承認し、使用後のデータで再評価する制度。"],
+        en: ["Conditional early approval", "A pathway granting early approval on limited safety data, with re-evaluation using post-market data."],
+        zh: ["有条件提前批准", "安全性获得一定确认即可提前批准，上市后再用数据重新评估的制度。"],
+      },
+    ],
+  },
+  {
+    ja: "検査と診断",
+    en: "Tests & diagnosis",
+    zh: "检查与诊断",
+    terms: [
+      {
+        ja: ["血液検査", "血球数・炎症指標・肝腎機能などを調べる基本的な検査。治療前後の確認に使われます。"],
+        en: ["Blood test", "A basic test covering blood counts, inflammatory markers, and liver/kidney function — used before and after treatment."],
+        zh: ["血液检查", "检查血球计数、炎症指标、肝肾功能等的基本检查，用于治疗前后的确认。"],
+        link: "health-checkups",
+      },
+      {
+        ja: ["画像検査", "X線・CT・MRI・エコーなどで体の中を調べる検査。治療効果の確認にも使われます。"],
+        en: ["Imaging", "X-ray, CT, MRI, or ultrasound used to examine the body, including checking treatment effects."],
+        zh: ["影像检查", "X线、CT、MRI、超声等观察体内的检查，也用于确认治疗效果。"],
+      },
+      {
+        ja: ["バイオマーカー", "病気や治療効果を測るための体内の指標。血液検査や画像で測定します。"],
+        en: ["Biomarker", "A measurable indicator in the body used to assess disease or treatment response."],
+        zh: ["生物标志物", "用于衡量疾病或治疗效果的体内指标。"],
+      },
+      {
+        ja: ["生検（バイオプシー）", "組織の一部を採って顕微鏡で調べる検査。診断の確定に使われます。"],
+        en: ["Biopsy", "Removing a small tissue sample for microscopic examination to confirm a diagnosis."],
+        zh: ["活检", "取部分组织进行显微镜检查，用于确诊。"],
+      },
+      {
+        ja: ["感染症検査", "ドナー細胞や採取細胞のウイルス・細菌チェック。安全性確保の基本です。"],
+        en: ["Infection screening", "Virus/bacteria testing of donor or harvested cells — fundamental to safety."],
+        zh: ["感染检查", "对供者细胞或采集细胞进行病毒、细菌检查，是保障安全的基础。"],
+        link: "stem-cell-infection-risk",
+      },
+    ],
+  },
+  {
+    ja: "主な対象疾患（研究対象を含む）",
+    en: "Key conditions (incl. research targets)",
+    zh: "主要对象疾病（含研究对象）",
+    terms: [
+      {
+        ja: ["変形性関節症", "関節の軟骨がすり減って痛みや変形が生じる病気。幹細胞・PRPの研究対象です。"],
+        en: ["Osteoarthritis", "Degeneration of joint cartilage causing pain and deformity — a research target for stem cells and PRP."],
+        zh: ["骨关节炎", "关节软骨磨损导致疼痛和变形的疾病，是干细胞和PRP的研究对象。"],
+        link: "cartilage-repair-deep",
+      },
+      {
+        ja: ["脊髄損傷", "脊髄が損傷して麻痺や感覚障害が起きる状態。再生医療での回復が研究されています。"],
+        en: ["Spinal cord injury", "Damage causing paralysis and sensory loss — regeneration is under study."],
+        zh: ["脊髓损伤", "脊髓损伤导致麻痹和感觉障碍的状态，正在研究再生医疗的修复。"],
+        link: "spinal-cord-detail",
+      },
+      {
+        ja: ["糖尿病", "血糖値が高くなる病気。膵臓のβ細胞に関わるため、細胞治療の研究対象です。"],
+        en: ["Diabetes", "A condition of elevated blood sugar involving pancreatic beta cells — a cell-therapy research target."],
+        zh: ["糖尿病", "血糖升高的疾病，涉及胰岛β细胞，是细胞治疗的研究对象。"],
+      },
+      {
+        ja: ["脳卒中", "脳の血管が詰まる・破れる病気。損傷した神経の回復に関する研究が進められています。"],
+        en: ["Stroke", "A blocked or ruptured brain vessel; recovery of damaged nerve tissue is under study."],
+        zh: ["脑卒中", "脑血管堵塞或破裂的疾病，正在研究受损神经的恢复。"],
+      },
+      {
+        ja: ["心不全", "心臓のポンプ機能が低下する病気。心筋の修復に関する研究が続いています。"],
+        en: ["Heart failure", "Reduced pumping function of the heart; myocardial repair is a research focus."],
+        zh: ["心力衰竭", "心脏泵血功能下降的疾病，心肌修复是研究重点。"],
+      },
+      {
+        ja: ["肝硬変", "肝臓が線維化して硬くなる病気。線維化を抑える研究が進められています。"],
+        en: ["Liver cirrhosis", "Fibrotic stiffening of the liver; antifibrotic approaches are under study."],
+        zh: ["肝硬化", "肝脏纤维化变硬的疾病，抑制纤维化的研究正在进行。"],
+      },
+      {
+        ja: ["角膜疾患", "角膜が濁る・失われる病気。角膜上皮の再生医療で実績がある領域です。"],
+        en: ["Corneal disease", "Clouding or loss of the cornea — a field where corneal epithelial regeneration has a clinical track record."],
+        zh: ["角膜疾病", "角膜混浊或缺失的疾病，角膜上皮再生医疗已有临床应用。"],
+      },
+      {
+        ja: ["パーキンソン病", "ドーパミンを作る神経が減る病気。iPS細胞由来の細胞移植が臨床研究で試みられています。"],
+        en: ["Parkinson's disease", "Loss of dopamine-producing neurons; iPS-derived cell transplantation is being studied in clinical trials."],
+        zh: ["帕金森病", "产生多巴胺的神经细胞减少的疾病，iPS细胞来源的细胞移植正在临床研究中。"],
+      },
     ],
   },
 ];
