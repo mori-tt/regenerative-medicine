@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { categories } from "@/content/categories";
 import { glossaryGroups, glossaryTermId } from "@/content/glossary";
@@ -39,6 +39,10 @@ export function LocalizedSearch({ locale, items }: { locale: SiteLocale; items: 
   const en = locale === "en";
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState("all");
+  useEffect(() => {
+    const q = new URLSearchParams(window.location.search).get("q");
+    if (q) setQuery(q);
+  }, []);
   const terms = query
     .normalize("NFKC")
     .toLocaleLowerCase("en")

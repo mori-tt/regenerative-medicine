@@ -97,6 +97,13 @@ export default async function CategoryPage({
             <span className="listing-count">{groupArticles.length}件</span>
           </h2>
           {group.desc && <p className="listing-lead">{group.desc.ja}</p>}
+          {group.keywords && (
+            <div className="kw-chips" aria-label="関連キーワード">
+              {group.keywords.ja.map((kw) => (
+                <a key={kw} className="kw-chip" href={`/search/?q=${encodeURIComponent(kw)}`}>{kw}</a>
+              ))}
+            </div>
+          )}
           <div className="listing-grid">
             {groupArticles.map((a) => (
               <ArticleCard key={a.slug} article={a} badge={featuredSet.has(a.slug) ? "おすすめ" : undefined} />

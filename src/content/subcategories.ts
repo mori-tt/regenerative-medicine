@@ -9,6 +9,8 @@ export type SubcategoryGroup = {
   en: string;
   zh: string;
   desc?: { ja: string; en: string; zh: string };
+  /** 有名な検索キーワード（サイト内検索への導線チップ） */
+  keywords?: { ja: string[]; en: string[]; zh: string[] };
   slugs: string[];
 };
 
@@ -16,6 +18,7 @@ export const subcategories: Record<string, SubcategoryGroup[]> = {
   "stem-basics": [
     {
       key: "stem-cell-fundamentals",
+      keywords: { ja: ["幹細胞とは", "iPS細胞", "ES細胞", "再生医療"], en: ["stem cells", "iPS cells", "ES cells", "regenerative medicine"], zh: ["干细胞", "iPS细胞", "ES细胞", "再生医学"] },
       ja: "幹細胞と再生医療の基本",
       en: "Stem cells and regenerative medicine",
       zh: "干细胞与再生医学基础",
@@ -36,6 +39,7 @@ export const subcategories: Record<string, SubcategoryGroup[]> = {
     },
     {
       key: "body-mechanisms",
+      keywords: { ja: ["細胞分裂", "遺伝子", "組織修復"], en: ["cell division", "genes", "tissue repair"], zh: ["细胞分裂", "基因", "组织修复"] },
       ja: "体のしくみの基礎",
       en: "How the body works",
       zh: "身体机制基础",
@@ -48,6 +52,7 @@ export const subcategories: Record<string, SubcategoryGroup[]> = {
     },
     {
       key: "health-and-life",
+      keywords: { ja: ["高齢化社会", "健康寿命"], en: ["aging society", "healthy lifespan"], zh: ["老龄化社会", "健康寿命"] },
       ja: "健康と暮らし",
       en: "Health and daily life",
       zh: "健康与日常生活",
@@ -60,6 +65,7 @@ export const subcategories: Record<string, SubcategoryGroup[]> = {
   "health-basics": [
     {
       key: "body-systems",
+      keywords: { ja: ["骨髄", "免疫系", "皮膚"], en: ["bone marrow", "immune system", "skin"], zh: ["骨髓", "免疫系统", "皮肤"] },
       ja: "体のしくみと器官",
       en: "Body systems & organs",
       zh: "身体机制与器官",
@@ -74,6 +80,7 @@ export const subcategories: Record<string, SubcategoryGroup[]> = {
     },
     {
       key: "common-illness",
+      keywords: { ja: ["糖尿病", "関節炎", "心疾患"], en: ["diabetes", "arthritis", "heart disease"], zh: ["糖尿病", "关节炎", "心脏病"] },
       ja: "身近な病気とけが",
       en: "Common conditions & injuries",
       zh: "常见疾病与外伤",
@@ -87,6 +94,7 @@ export const subcategories: Record<string, SubcategoryGroup[]> = {
     },
     {
       key: "daily-health",
+      keywords: { ja: ["生活習慣", "睡眠", "運動"], en: ["lifestyle", "sleep", "exercise"], zh: ["生活习惯", "睡眠", "运动"] },
       ja: "暮らしと健康習慣",
       en: "Daily health & lifestyle",
       zh: "日常生活与健康习惯",
@@ -101,6 +109,7 @@ export const subcategories: Record<string, SubcategoryGroup[]> = {
   "in-body": [
     {
       key: "how-administered",
+      keywords: { ja: ["点滴投与", "静脈注射", "局所注射"], en: ["IV infusion", "intravenous injection", "local injection"], zh: ["点滴输注", "静脉注射", "局部注射"] },
       ja: "投与方法と経路",
       en: "How cells are administered",
       zh: "给药方式与途径",
@@ -109,6 +118,7 @@ export const subcategories: Record<string, SubcategoryGroup[]> = {
     },
     {
       key: "after-infusion",
+      keywords: { ja: ["体内分布", "生着", "排出"], en: ["biodistribution", "engraftment", "clearance"], zh: ["体内分布", "植入", "清除"] },
       ja: "投与後の体内での動き",
       en: "What happens after infusion",
       zh: "输注后的体内动向",
@@ -121,6 +131,7 @@ export const subcategories: Record<string, SubcategoryGroup[]> = {
     },
     {
       key: "where-they-reach",
+      keywords: { ja: ["ホーミング", "肺", "肝臓"], en: ["homing", "lungs", "liver"], zh: ["归巢", "肺", "肝脏"] },
       ja: "行き先と届き方",
       en: "Where cells reach and how",
       zh: "到达部位与机制",
@@ -135,6 +146,7 @@ export const subcategories: Record<string, SubcategoryGroup[]> = {
   "anti-aging": [
     {
       key: "scientific-evidence",
+      keywords: { ja: ["臨床試験", "論文", "エビデンス"], en: ["clinical trials", "papers", "evidence"], zh: ["临床试验", "论文", "证据"] },
       ja: "科学的な検証状況",
       en: "Scientific evidence",
       zh: "科学验证现状",
@@ -143,6 +155,7 @@ export const subcategories: Record<string, SubcategoryGroup[]> = {
     },
     {
       key: "aesthetic-offerings",
+      keywords: { ja: ["幹細胞美容", "肌再生", "アンチエイジング"], en: ["stem cell beauty", "skin regeneration", "anti-aging"], zh: ["干细胞美容", "皮肤再生", "抗衰老"] },
       ja: "美容医療の実態",
       en: "Aesthetic offerings",
       zh: "美容医疗的实际情况",
@@ -157,6 +170,7 @@ export const subcategories: Record<string, SubcategoryGroup[]> = {
   efficacy: [
     {
       key: "efficacy-status",
+      keywords: { ja: ["効果の根拠", "承認治療", "研究段階"], en: ["evidence for efficacy", "approved treatments", "research stage"], zh: ["疗效依据", "获批治疗", "研究阶段"] },
       ja: "効果の検証状況",
       en: "Evidence for effectiveness",
       zh: "疗效的验证现状",
@@ -171,6 +185,7 @@ export const subcategories: Record<string, SubcategoryGroup[]> = {
     },
     {
       key: "research-stages",
+      keywords: { ja: ["第1相試験", "第2相試験", "承認"], en: ["phase 1", "phase 2", "approval"], zh: ["I期试验", "II期试验", "获批"] },
       ja: "研究の段階と種類",
       en: "Research stages and types",
       zh: "研究阶段与类型",
@@ -192,6 +207,7 @@ export const subcategories: Record<string, SubcategoryGroup[]> = {
     },
     {
       key: "reading-research",
+      keywords: { ja: ["論文の読み方", "症例報告", "メタ分析"], en: ["reading papers", "case reports", "meta-analysis"], zh: ["论文阅读", "病例报告", "荟萃分析"] },
       ja: "研究情報の読み方",
       en: "How to read research",
       zh: "研究信息的阅读方法",
@@ -216,6 +232,7 @@ export const subcategories: Record<string, SubcategoryGroup[]> = {
   safety: [
     {
       key: "treatment-risks",
+      keywords: { ja: ["副作用", "腫瘍化リスク", "感染"], en: ["side effects", "tumor risk", "infection"], zh: ["副作用", "肿瘤风险", "感染"] },
       ja: "治療のリスク",
       en: "Treatment risks",
       zh: "治疗风险",
@@ -231,6 +248,7 @@ export const subcategories: Record<string, SubcategoryGroup[]> = {
     },
     {
       key: "eligibility",
+      keywords: { ja: ["適格性", "持病", "年齢制限"], en: ["eligibility", "existing conditions", "age limits"], zh: ["适用条件", "基础疾病", "年龄限制"] },
       ja: "受けられるかの判断",
       en: "Eligibility",
       zh: "适用性判断",
@@ -239,6 +257,7 @@ export const subcategories: Record<string, SubcategoryGroup[]> = {
     },
     {
       key: "trouble-and-relief",
+      keywords: { ja: ["トラブル時の相談", "相談窓口"], en: ["troubleshooting", "consultation"], zh: ["问题咨询", "咨询窗口"] },
       ja: "トラブル時と救済制度",
       en: "Troubles and relief systems",
       zh: "出现问题与救济制度",
@@ -249,6 +268,7 @@ export const subcategories: Record<string, SubcategoryGroup[]> = {
   "cell-types": [
     {
       key: "cell-kinds",
+      keywords: { ja: ["間葉系幹細胞", "造血幹細胞", "iPS細胞"], en: ["mesenchymal stem cells", "hematopoietic stem cells", "iPS cells"], zh: ["间充质干细胞", "造血干细胞", "iPS细胞"] },
       ja: "細胞の種類",
       en: "Types of cells",
       zh: "细胞的种类",
@@ -267,6 +287,7 @@ export const subcategories: Record<string, SubcategoryGroup[]> = {
     },
     {
       key: "collection-sources",
+      keywords: { ja: ["骨髄由来", "脂肪由来", "臍帯血"], en: ["bone marrow", "adipose-derived", "cord blood"], zh: ["骨髓来源", "脂肪来源", "脐带血"] },
       ja: "採取源の違い",
       en: "Collection sources",
       zh: "采集来源的差异",
@@ -283,6 +304,7 @@ export const subcategories: Record<string, SubcategoryGroup[]> = {
     },
     {
       key: "self-vs-donor",
+      keywords: { ja: ["自家移植", "同種移植", "拒絶反応"], en: ["autologous", "allogeneic", "rejection"], zh: ["自体移植", "异体移植", "排异反应"] },
       ja: "自家と他家",
       en: "Autologous vs allogeneic",
       zh: "自体与异体",
@@ -297,6 +319,7 @@ export const subcategories: Record<string, SubcategoryGroup[]> = {
     },
     {
       key: "culture-and-quality",
+      keywords: { ja: ["細胞培養", "品質管理", "GMP"], en: ["cell culture", "quality control", "GMP"], zh: ["细胞培养", "质量控制", "GMP"] },
       ja: "培養と品質管理",
       en: "Culture and quality",
       zh: "培养与质量管理",
@@ -315,6 +338,7 @@ export const subcategories: Record<string, SubcategoryGroup[]> = {
   "compare-therapies": [
     {
       key: "cell-free-therapies",
+      keywords: { ja: ["エクソソーム", "培養上清", "PRP"], en: ["exosomes", "culture supernatant", "PRP"], zh: ["外泌体", "培养上清", "PRP"] },
       ja: "細胞なし・血液由来の治療",
       en: "Cell-free and blood-derived therapies",
       zh: "无细胞与血液来源疗法",
@@ -323,6 +347,7 @@ export const subcategories: Record<string, SubcategoryGroup[]> = {
     },
     {
       key: "vs-conventional",
+      keywords: { ja: ["標準治療", "保険適用", "先進医療"], en: ["standard care", "insurance", "advanced medicine"], zh: ["标准治疗", "保险适用", "先进医疗"] },
       ja: "従来治療との比較",
       en: "Compared with standard care",
       zh: "与常规疗法的比较",
@@ -333,6 +358,7 @@ export const subcategories: Record<string, SubcategoryGroup[]> = {
   "cost-access": [
     {
       key: "cost-and-coverage",
+      keywords: { ja: ["費用", "保険", "医療費控除"], en: ["cost", "insurance", "tax deduction"], zh: ["费用", "保险", "医疗扣除"] },
       ja: "費用と保険",
       en: "Costs and coverage",
       zh: "费用与保险",
@@ -352,6 +378,7 @@ export const subcategories: Record<string, SubcategoryGroup[]> = {
     },
     {
       key: "before-consultation",
+      keywords: { ja: ["再生医療等計画", "届出", "確認事項"], en: ["regenerative medicine plan", "filing", "checklist"], zh: ["再生医疗计划", "备案", "确认事项"] },
       ja: "受診前の準備と確認",
       en: "Preparation before visiting",
       zh: "就诊前的准备与确认",
@@ -376,6 +403,7 @@ export const subcategories: Record<string, SubcategoryGroup[]> = {
     },
     {
       key: "spotting-ads",
+      keywords: { ja: ["広告の見分け方", "根拠の確認"], en: ["spotting ads", "verifying claims"], zh: ["广告辨别", "核实依据"] },
       ja: "広告・情報の見分け方",
       en: "Reading ads and claims",
       zh: "广告与信息的辨别",
@@ -384,6 +412,7 @@ export const subcategories: Record<string, SubcategoryGroup[]> = {
     },
     {
       key: "during-and-after",
+      keywords: { ja: ["アフターケア", "経過観察"], en: ["aftercare", "follow-up"], zh: ["术后护理", "随访"] },
       ja: "治療中・治療後",
       en: "During and after treatment",
       zh: "治疗中与治疗后",
@@ -403,6 +432,7 @@ export const subcategories: Record<string, SubcategoryGroup[]> = {
     },
     {
       key: "life-and-support",
+      keywords: { ja: ["相談支援", "セカンドオピニオン"], en: ["support", "second opinion"], zh: ["支持", "第二意见"] },
       ja: "暮らし・制度・支援",
       en: "Daily life and support systems",
       zh: "生活・制度与支持",
@@ -437,6 +467,7 @@ export const subcategories: Record<string, SubcategoryGroup[]> = {
   mechanisms: [
     {
       key: "cell-mechanisms",
+      keywords: { ja: ["パラクリン効果", "分化", "免疫調節"], en: ["paracrine effect", "differentiation", "immunomodulation"], zh: ["旁分泌效应", "分化", "免疫调节"] },
       ja: "細胞の働きと作用機序",
       en: "Cellular mechanisms",
       zh: "细胞的作用机制",
@@ -457,6 +488,7 @@ export const subcategories: Record<string, SubcategoryGroup[]> = {
     },
     {
       key: "regeneration-research",
+      keywords: { ja: ["オーガノイド", "臓器再生", "iPS創薬"], en: ["organoids", "organ regeneration", "iPS drug discovery"], zh: ["类器官", "器官再生", "iPS药物研发"] },
       ja: "再生の研究テーマ",
       en: "Regeneration research topics",
       zh: "再生研究主题",
@@ -490,6 +522,7 @@ export const subcategories: Record<string, SubcategoryGroup[]> = {
     },
     {
       key: "science-and-society",
+      keywords: { ja: ["倫理", "制度", "社会的課題"], en: ["ethics", "regulation", "society"], zh: ["伦理", "制度", "社会议题"] },
       ja: "科学との関わり方",
       en: "Engaging with science",
       zh: "与科学的关系",

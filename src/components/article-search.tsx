@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import type { Article } from "@/content/articles";
 import { categories } from "@/content/categories";
@@ -10,6 +10,10 @@ import { Icon } from "./visuals";
 export function ArticleSearch({ items }: { items: (Article & { searchText: string })[] }) {
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState("all");
+  useEffect(() => {
+    const q = new URLSearchParams(window.location.search).get("q");
+    if (q) setQuery(q);
+  }, []);
   const glossaryIndex = glossaryGroups.flatMap((g, gi) =>
     g.terms.map((t, ti) => ({
       id: glossaryTermId(gi, ti),
