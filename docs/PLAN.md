@@ -291,3 +291,10 @@ FTPSでレンタルサーバーの公開フォルダへ
 
 - `/glossary/` で定義文（dd）が隣カラムの用語（dt）に水平方向で重なっていた問題を修正。原因は `.glossary-link` の `white-space: nowrap` がddのmin-content幅を押し広げ、グリッドアイテムの `min-width: auto` でトラックから溢れていたこと（127箇所で検出）。
 - `dd { min-width: 0; overflow-wrap: break-word }` を追加し、リンクのnowrapを解除。実ブラウザで ja/en/zh・デスクトップ/モバイル共に重なり0を確認。
+
+## 32. 一斉公開日の変数化（2026-09-26 追記17）
+
+- 全記事の `publishAt`/`publishedAt` を `deployDate` で統一管理に変更。
+- `deployDate` は `src/content/site-config.json` の `deployDate`（環境変数 `NEXT_PUBLIC_DEPLOY_DATE` で上書き可）。現在は仮置き `2026-10-01`。
+- デプロイ日まで本番ビルドでは記事非表示、プレビュー（`NEXT_PUBLIC_ARTICLE_BUILD_MODE=all`）では全表示。デプロイ日以降に再ビルドすると一斉公開される。
+- 旧来の段階公開スケジュール（review-records.json の publishAt）は廃止し、新規記事は同じ変数で管理する。

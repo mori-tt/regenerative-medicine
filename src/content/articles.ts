@@ -1,5 +1,5 @@
 import { articleImageFor } from "./article-images";
-import { medicalReviewer, publication } from "@/lib/site-config";
+import { deployDate, medicalReviewer, publication } from "@/lib/site-config";
 import reviewRecords from "./article-review-records.json";
 import { articleEvidence, correctArticleText, correctArticleSections, evidenceSectionsFor, type CitedSection, type EvidenceSource } from "./article-evidence";
 import { deepenSectionsFor } from "./article-deepen";
@@ -13817,7 +13817,7 @@ export const articles: Article[] = rawArticles.map((article, index) => {
     title: correctArticleText(article.slug, "ja", article.title),
     description: correctArticleText(article.slug, "ja", article.description),
     points,
-    publishAt: reviewSchedule[article.slug]?.publishAt ?? article.publishAt,
+    publishAt: deployDate,
     updatedAt: editedAt,
     image: articleImageFor(article.category, index, reviewSchedule[article.slug]?.imageKey).src,
     imageAlt: articleImageFor(article.category, index, reviewSchedule[article.slug]?.imageKey).alt,
@@ -13831,7 +13831,7 @@ export const articles: Article[] = rawArticles.map((article, index) => {
       reviewedAt: record.reviewer!.reviewedAt!,
       scope: record.reviewer!.scope,
     } : undefined,
-    publishedAt: reviewSchedule[article.slug]?.publishedAt || undefined,
+    publishedAt: deployDate,
     readingMinutes: Math.max(2, Math.ceil((points.join("").length + sections.map((section) => section.paragraphs.join("")).join("").length) / 450)),
     sections,
     references: Array.from(new Map(
