@@ -1,6 +1,6 @@
 # 再生医療ガイド（仮称）
 
-再生医療・幹細胞に関する日本語ポータルのNext.js静的サイト雛形です。スマートフォン対応のトップ、4カテゴリ、4本のサンプル記事、記事検索、編集・監修方針、運営・広告・問い合わせ案内を実装しています。
+再生医療・幹細胞に関する日本語ポータルのNext.js静的サイト雛形です。スマートフォン対応のトップ、検索意図別9カテゴリ（各カテゴリにサブカテゴリ）、247本の記事（うち24本は監修・公開待ちの予約記事）、記事検索、日英中の多言語化、編集・監修方針、運営・広告・問い合わせ案内を実装しています。
 
 **全体計画は [docs/PLAN.md](docs/PLAN.md)、レンタルサーバーへの配置は [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md) を参照してください。**
 
@@ -30,8 +30,9 @@ npm run preview
 
 ```text
 src/app/                 各ページ、メタデータ、sitemap、robots
-src/components/          共通UI、記事カード、検索、SVGイラスト
+src/components/          共通UI、記事カード、検索、記事内模式図（SVG）
 src/content/articles.ts  記事・カテゴリ・監修情報
+src/content/subcategories.ts  カテゴリ内のサブカテゴリと記事優先度
 src/content/pages.ts     編集方針などの案内原稿
 src/content/ads.ts       将来の静的バナー広告設定
 src/lib/site.ts          サイト名・URL・検索公開設定
