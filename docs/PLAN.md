@@ -327,3 +327,9 @@ FTPSでレンタルサーバーの公開フォルダへ
 - 用語集グリッドを最大4列・gap16pxに修正（行間gap:0で縦が詰まっていた）。1000px以下は2列、560px以下は1列。
 - キーワードチップ・前後記事ナビを `<a>` から `<Link>` に修正。GitHub Pages の basePath（/regenerative-medicine）で素の `<a href>` は404になるため。
 - カードのラベル行に下ボーダー＋余白を追加し、`.card-subcat` をチップ化して統一。
+
+## 37. グリッド・余白の最終調整（2026-09-26 追記22）
+
+- 記事カード `.listing-grid` を `repeat(auto-fill, minmax(260px,1fr))` に変更（画面幅に応じ最大4列、モバイルは1列）。
+- 用語集 `.glossary-list`/`.glossary-flat` も `auto-fill minmax(240px,1fr)` にして画面幅追従。
+- サブカテゴリ見出しと記事カードの間隔を拡大（listing-heading margin 48/22、listing-lead 下26px、kw-chips 下28px）。
