@@ -2486,3 +2486,64 @@ section[id^="sub-"] { scroll-margin-top: 80px; }
 @media (max-width: 760px) {
   .visual-cards-five { grid-template-columns: 1fr 1fr; }
 }
+
+.main-nav .nav-item { position: relative; display: flex; }
+.main-nav .nav-panel {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 230px;
+  padding: 8px 0;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  box-shadow: 0 12px 30px rgba(50, 70, 50, .12);
+  z-index: 60;
+}
+.main-nav .nav-item:hover .nav-panel,
+.main-nav .nav-item:focus-within .nav-panel { display: block; }
+.main-nav .nav-panel-link {
+  display: block;
+  padding: 9px 18px;
+  font-size: 12px;
+  color: #42503f;
+}
+.main-nav .nav-panel-link:hover { background: #f2f6ee; color: #2c4436; }
+.main-nav .nav-panel-link::before {
+  content: "–";
+  margin-right: 8px;
+  color: #9caf91;
+}
+
+.subnav-links a {
+  font-size: 11px;
+  padding: 6px 12px;
+  border: 1px solid #dfe7d8;
+  border-radius: 999px;
+  background: #fbfcf8;
+  color: #5b6b57;
+}
+.subnav-links a .chip-count {
+  margin-left: 6px;
+  color: #9caf91;
+  font-size: 10px;
+}
+.listing-heading .listing-count {
+  margin-left: 10px;
+  padding: 2px 10px;
+  border-radius: 999px;
+  background: #eef3e9;
+  color: #718b68;
+  font-size: 11px;
+  font-weight: 600;
+  vertical-align: middle;
+}
+.card-subcat {
+  font-size: 10px;
+  color: #718b68;
+  border: 1px solid #dfe7d8;
+  border-radius: 999px;
+  padding: 2px 8px;
+  white-space: nowrap;
+}

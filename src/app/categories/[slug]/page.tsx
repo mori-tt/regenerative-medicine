@@ -64,9 +64,10 @@ export default async function CategoryPage({
         ))}
       </nav>
       <nav className="filter-links subnav-links" aria-label="テーマから探す">
-        {groups.map(({ group }) => (
+        {groups.map(({ group, articles: groupArticles }) => (
           <Link key={group.key} href={`#sub-${group.key}`}>
             {group.ja}
+            <span className="chip-count">{groupArticles.length}</span>
           </Link>
         ))}
       </nav>
@@ -84,7 +85,10 @@ export default async function CategoryPage({
       )}
       {groups.map(({ group, articles: groupArticles }) => (
         <section key={group.key} id={`sub-${group.key}`} aria-labelledby={`sub-heading-${group.key}`}>
-          <h2 id={`sub-heading-${group.key}`} className="listing-heading">{group.ja}</h2>
+          <h2 id={`sub-heading-${group.key}`} className="listing-heading">
+            {group.ja}
+            <span className="listing-count">{groupArticles.length}件</span>
+          </h2>
           <div className="listing-grid">
             {groupArticles.map((a) => (
               <ArticleCard key={a.slug} article={a} badge={featuredSet.has(a.slug) ? "おすすめ" : undefined} />

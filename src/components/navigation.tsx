@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef } from "react";
 import { categories } from "@/content/categories";
+import { subcategories } from "@/content/subcategories";
 import { localizedCategoryName, localizedShell, type SiteLocale } from "@/content/locales";
 
 function localeFromPath(pathname: string): SiteLocale | "ja" {
@@ -17,16 +18,20 @@ export function MainNavigation() {
   const locale = localeFromPath(pathname);
   const copy = locale === "ja" ? null : localizedShell[locale];
   const prefix = locale === "ja" ? "" : `/${locale}`;
-  const links = [
+  const plainLinks = [
     { href: `${prefix}/`, label: copy?.home || "ホーム" },
     { href: `${prefix}/guide/`, label: copy?.guide || "はじめての方へ" },
     { href: `${prefix}/articles/`, label: copy?.articles || "記事一覧" },
-    ...categories.map((c) => ({
-      href: `${prefix}/categories/${c.slug}/`,
-      label: copy ? localizedCategoryName(locale as SiteLocale, c.slug) : c.label,
-    })),
+  ];
+  const tailLinks = [
     { href: `${prefix}/about/`, label: copy?.about || "このサイトについて" },
   ];
+  const isCurrent = (href: string) =>
+    pathname.replace(/\/$/, "") === href.replace(/\/$/, "");
+  const linkProps = (href: string) => ({
+    className: isCurrent(href) ? "current" : undefined,
+    "aria-current": isCurrent(href) ? ("page" as const) : undefined,
+  });
   return (
     <nav
       className="main-nav container"
@@ -38,21 +43,38 @@ export function MainNavigation() {
             : "メインナビゲーション"
       }
     >
-      {links.map((link) => (
-        <Link
-          key={link.href}
-          href={link.href}
-          className={
-            pathname.replace(/\/$/, "") === link.href.replace(/\/$/, "")
-              ? "current"
-              : undefined
-          }
-          aria-current={
-            pathname.replace(/\/$/, "") === link.href.replace(/\/$/, "")
-              ? "page"
-              : undefined
-          }
-        >
+      {plainLinks.map((link) => (
+        <Link key={link.href} href={link.href} {...linkProps(link.href)}>
+          {link.label}
+        </Link>
+      ))}
+      {categories.map((c) => {
+        const href = `${prefix}/categories/${c.slug}/`;
+        const label = copy ? localizedCategoryName(locale as SiteLocale, c.slug) : c.label;
+        const groups = subcategories[c.slug] ?? [];
+        return (
+          <div className="nav-item" key={c.slug}>
+            <Link href={href} {...linkProps(href)}>
+              {label}
+            </Link>
+            {groups.length > 0 && (
+              <div className="nav-panel">
+                {groups.map((g) => (
+                  <Link
+                    key={g.key}
+                    href={`${href}#sub-${g.key}`}
+                    className="nav-panel-link"
+                  >
+                    {locale === "ja" ? g.ja : locale === "en" ? g.en : g.zh}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+        );
+      })}
+      {tailLinks.map((link) => (
+        <Link key={link.href} href={link.href} {...linkProps(link.href)}>
           {link.label}
         </Link>
       ))}

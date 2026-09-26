@@ -543,3 +543,8 @@ export function featuredSlugs(category: string, picks = 3): string[] {
   }
   return out;
 }
+
+/** 記事が属するサブカテゴリを返す（未定義なら undefined）。 */
+export function subcategoryOf(category: string, slug: string): SubcategoryGroup | undefined {
+  return (subcategories[category] ?? []).find((g) => g.slugs.includes(slug));
+}

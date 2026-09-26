@@ -10,6 +10,7 @@ import { articleBodiesBasicsB } from "@/content/article-bodies-basics-b";
 import { articleBodiesExtraA } from "@/content/article-bodies-extra";
 import { articleBodiesColumns } from "@/content/article-bodies-columns";
 import { articleBodiesStemTopics } from "@/content/article-bodies-stem-topics";
+import { subcategoryOf } from "@/content/subcategories";
 import { articleImageAlt } from "@/content/article-images";
 import { localizedArticle, localizedCategoryName, type SiteLocale } from "@/content/locales";
 import type { ArticleBodyLocale } from "@/content/article-bodies-research";
@@ -163,6 +164,9 @@ export function LocalizedArticleCard({
         <div className="card-label-row">
           <span className={`category-label ${cat.color}`}>{article.category}</span>
           <span className="card-kicker">{typeLabel}</span>
+          {subcategoryOf(source.category, source.slug) && (
+            <span className="card-subcat">{subcategoryOf(source.category, source.slug)![locale === "en" ? "en" : "zh"]}</span>
+          )}
           {badge && <span className="card-badge">{badge}</span>}
         </div>
         <div className="article-meta">

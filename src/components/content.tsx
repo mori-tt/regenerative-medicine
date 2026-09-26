@@ -3,6 +3,7 @@ import Image from "next/image";
 import { bannerAds } from "@/content/ads";
 import type { Article } from "@/content/articles";
 import { categoryFor } from "@/content/categories";
+import { subcategoryOf } from "@/content/subcategories";
 import { articleBuildMode, isReviewed } from "@/lib/article-state";
 import { absolute, publicAsset } from "@/lib/site";
 import { publication } from "@/lib/site-config";
@@ -78,6 +79,9 @@ export function ArticleCard({
         <div className="card-label-row">
           <span className={`category-label ${cat.color}`}>{cat.label}</span>
           <span className="card-kicker">{typeLabel}</span>
+          {subcategoryOf(article.category, article.slug) && (
+            <span className="card-subcat">{subcategoryOf(article.category, article.slug)!.ja}</span>
+          )}
           {badge && <span className="card-badge">{badge}</span>}
         </div>
         <div className="article-meta">
