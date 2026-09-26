@@ -250,7 +250,7 @@
   "cost-and-insurance": {
     "slug": "cost-and-insurance",
     "title": "幹細胞治療はいくらかかる？費用の仕組みと保険の扱い",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "doctor-consultation",
     "publishAt": "2026-10-12",
     "publishedAt": "",
@@ -278,7 +278,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "521633573b0a74bb135462ee86971b1e3720af5c8ea2d33831956cb8bb3a54cd",
+      "contentHash": "81eb05802abfd406231e0df35371470bd92bd59d6621d8e7156f079dec744700",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 5,
@@ -288,7 +288,7 @@
   "risks-and-safety": {
     "slug": "risks-and-safety",
     "title": "幹細胞治療は安全？知っておきたい副作用とリスク",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "hospital-care",
     "publishAt": "2026-10-15",
     "publishedAt": "",
@@ -315,7 +315,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "dbaef9c1a924bee2570bc87adf545dc1db2fa95a931e0d0d4a94723a20c9b88e",
+      "contentHash": "049076b6574f8b5b61b8c8631e0afab57589c219ef310edfe96f28f0959a9a78",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 4,
@@ -1244,7 +1244,7 @@
   "mesenchymal-basics": {
     "slug": "mesenchymal-basics",
     "title": "間葉系幹細胞（MSC）とは？再生医療で注目される理由",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "medical-research",
     "publishAt": "2027-01-16",
     "publishedAt": "",
@@ -1255,6 +1255,7 @@
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
     "riskFlags": [
       "effect_or_treatment_claim",
+      "safety_or_risk_claim",
       "cost_or_system_claim"
     ],
     "referenceCount": 5,
@@ -1269,7 +1270,7 @@
     "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "cd1a58656c7725cdb975de2110e89d2b06ed7ca7510a4118150325109edfc2a9",
+      "contentHash": "614724749645950e6c78cdfdb9504ac17e868c52092a1bccb36c8f80219683b6",
       "checkedAt": "2026-09-22",
       "status": "editorial_source_review",
       "sourceCount": 2,
@@ -7459,7 +7460,7 @@
   "stem-cell-administration-routes": {
     "slug": "stem-cell-administration-routes",
     "title": "幹細胞治療の投与経路：点滴・局所投与・動脈投与の違い",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "medical-research",
     "publishAt": "2028-07-16",
     "publishedAt": "",
@@ -7476,7 +7477,7 @@
     "referenceCount": 3,
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "2d1a51cd4387ddcab31220f15471f77e65c68647ba0ac6cf062f9947bc6848d1",
+      "contentHash": "bac158a189a04d541fa2202e940030742d008b80055a7f9c8dfaf5f80881f69f",
       "checkedAt": "2026-09-23",
       "status": "editorial_source_review",
       "sourceCount": 2,
@@ -7745,7 +7746,7 @@
   "what-is-stem-cell": {
     "slug": "what-is-stem-cell",
     "title": "幹細胞とは？再生医療で注目される理由をわかりやすく解説",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "medical-research",
     "publishAt": "2028-08-10",
     "publishedAt": "",
@@ -7761,7 +7762,7 @@
     "referenceCount": 4,
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "852cd27036d835f2e768b186ee5e7de2b18e12eae4a2699717426271813ae51a",
+      "contentHash": "437485d3c6d2a6cbdc5b9f36b9999e509115ef330a7828e916fc8d50d3f45159",
       "checkedAt": "2026-09-25",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -7987,7 +7988,7 @@
   "stem-cell-antiaging-evidence": {
     "slug": "stem-cell-antiaging-evidence",
     "title": "幹細胞治療で本当に若返る？科学的にわかっていること",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "microscope",
     "publishAt": "2028-09-01",
     "publishedAt": "",
@@ -8005,7 +8006,7 @@
     "referenceCount": 5,
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "4e0f0e62a69ad6322b8546542a5f503d49424bade4c315be5da166eb1cb63cc2",
+      "contentHash": "6680c8b58b8035d2737cd7e4ba3472ea2641c1b5cfc6fe71ea3121c49e5c08c6",
       "checkedAt": "2026-09-25",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -8096,7 +8097,7 @@
   "stem-cell-efficacy-evidence": {
     "slug": "stem-cell-efficacy-evidence",
     "title": "幹細胞治療は本当に効果がある？現在わかっていること",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "medical-research",
     "publishAt": "2028-09-10",
     "publishedAt": "",
@@ -8114,7 +8115,7 @@
     "referenceCount": 8,
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "cc19f9a37751d43e549b8b790c3dcd526ccd76abd5eb9bc76bf5a9741020ad9a",
+      "contentHash": "79d6fbf28f55a11aec01ca0ff69f89194cd0a1a8eb89f39567acb95af3813790",
       "checkedAt": "2026-09-25",
       "status": "editorial_source_review",
       "sourceCount": 4,
@@ -8387,7 +8388,7 @@
   "stemcell-exosome-prp": {
     "slug": "stemcell-exosome-prp",
     "title": "幹細胞・エクソソーム・PRPの違いをわかりやすく解説",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "microscope",
     "publishAt": "2028-10-04",
     "publishedAt": "",
@@ -8404,7 +8405,7 @@
     "referenceCount": 6,
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "69d024bd6d69121510d6e7447591578639d515821e758fc870f8a19c15b06b92",
+      "contentHash": "751a616f08ff218230544d85151b1e91bdae1bb40032e41c4034a70c41cff862",
       "checkedAt": "2026-09-25",
       "status": "editorial_source_review",
       "sourceCount": 3,
@@ -8566,7 +8567,7 @@
   "stem-cell-mechanism": {
     "slug": "stem-cell-mechanism",
     "title": "幹細胞治療の作用機序：「分化」と「パラクリン作用」から考える",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-26",
     "imageKey": "microscope",
     "publishAt": "2028-10-19",
     "publishedAt": "",
@@ -8582,7 +8583,7 @@
     "referenceCount": 6,
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "50d15d0f6f07a4046f3c8e1bd77c769bdf3b8ac36a377943754930670fb6f796",
+      "contentHash": "bad00aa3aa8e89d619f6bb675899372351ab03323a885c91e9d5fd09eb48a26c",
       "checkedAt": "2026-09-25",
       "status": "editorial_source_review",
       "sourceCount": 4,
