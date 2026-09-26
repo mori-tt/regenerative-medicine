@@ -2712,3 +2712,25 @@ section[id^="sub-"] { scroll-margin-top: 80px; }
 .article-terms-all a { background: #eef4ea; }
 .glossary-item { scroll-margin-top: 80px; }
 .glossary-source { display: block; margin: 4px 0 0; color: #8a9a85; }
+
+.article-closing {
+  margin-top: 8px;
+  padding: 20px 22px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #f7faf3;
+}
+.article-closing h2 { font-size: 18px; margin-bottom: 8px; }
+.article-closing p { margin: 0 0 12px; font-size: 14px; }
+.closing-links { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.closing-links a { font-size: 13px; color: var(--green); }
+.article-note {
+  margin-top: 14px;
+  padding: 14px 18px;
+  border-left: 3px solid var(--green);
+  background: #fafbf7;
+  font-size: 12.5px;
+  color: var(--muted);
+}
+.article-note-title { margin: 0 0 4px; font-weight: 700; color: var(--green); }
+.article-note p:last-child { margin: 0; }

@@ -6,6 +6,7 @@ import { ArticleCard, AdSlot, Breadcrumbs, JsonLd } from "@/components/content";
 import { CellArt } from "@/components/visuals";
 import { ArticleVisual } from "@/components/article-visuals";
 import { ArticleTerms } from "@/components/article-terms";
+import { ArticleClosing } from "@/components/article-closing";
 import { publicAsset } from "@/lib/site";
 import { publication } from "@/lib/site-config";
 import { absolute, pageMetadata, site } from "@/lib/site";
@@ -151,6 +152,7 @@ export default async function ArticlePage({
               ...article.sections.flatMap((s) => [s.title, ...s.paragraphs]),
             ].join("\n")}
           />
+          <ArticleClosing category={article.category} />
           <ArticleVisual slug={article.slug} category={article.category} index={2} />
           <ArticleReferences references={article.references} locale="ja" />
           {reviewed && article.reviewer ? (
