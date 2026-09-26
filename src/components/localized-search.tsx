@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { categories } from "@/content/categories";
+import { glossaryGroups, glossaryTermId } from "@/content/glossary";
 import { Breadcrumbs } from "./content";
 import type { SiteLocale } from "@/content/locales";
 
@@ -52,6 +53,18 @@ export function LocalizedSearch({ locale, items }: { locale: SiteLocale; items: 
       .toLocaleLowerCase("en");
     return terms.every((term) => haystack.includes(term));
   });
+  const termHits =
+    terms.length === 0
+      ? []
+      : glossaryGroups
+          .flatMap((g, gi) =>
+            g.terms.map((t, ti) => ({
+              id: glossaryTermId(gi, ti),
+              term: en ? t.en[0] : t.zh[0],
+              keywords: `${t.ja[0]} ${t.en[0]} ${t.zh[0]}`.toLocaleLowerCase("en"),
+            })),
+          )
+          .filter((g) => terms.every((term) => g.keywords.includes(term)));
   return (
     <div className="container inner-page">
       <Breadcrumbs
@@ -96,6 +109,18 @@ export function LocalizedSearch({ locale, items }: { locale: SiteLocale; items: 
           ? `${results.length} articles${query ? ` · results for “${query}”` : ""}`
           : `${results.length}篇文章${query ? ` · “${query}”的搜索结果` : ""}`}
       </p>
+      {termHits.length > 0 && (
+        <div className="search-term-hits">
+          <p className="search-term-label">{en ? "Related terms" : "相关术语"}</p>
+          <ul>
+            {termHits.slice(0, 10).map((t) => (
+              <li key={t.id}>
+                <Link href={`/${locale}/glossary/#${t.id}`}>{t.term}</Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
       {results.length ? (
         <div className="listing-grid">
           {results.map((source) => {

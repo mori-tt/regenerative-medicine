@@ -86,6 +86,51 @@ export default function Home() {
       <section className="section container">
         <div className="section-heading">
           <div>
+            <span className="eyebrow">YOUR SITUATION</span>
+            <h2>
+              あなたの状況から、探す<span className="heading-dot">。</span>
+            </h2>
+          </div>
+          <span className="section-caption">
+            どこから読めばいいか、迷ったときはこちら。
+          </span>
+        </div>
+        <div className="intent-grid">
+          <Link href="/categories/stem-basics/" className="intent-card">
+            <span className="intent-tag">はじめての方</span>
+            <strong>まず基本を知りたい</strong>
+            <p>幹細胞とは何か、再生医療の全体像をわかりやすく。</p>
+          </Link>
+          <Link href="/categories/cost-access/" className="intent-card">
+            <span className="intent-tag">治療を検討中</span>
+            <strong>受けるかどうか考えたい</strong>
+            <p>費用・届出・説明の受け方・確認すべきポイント。</p>
+          </Link>
+          <Link href="/categories/efficacy/" className="intent-card">
+            <span className="intent-tag">効果が気になる</span>
+            <strong>どこまで確かめられている？</strong>
+            <p>研究段階と承認の違い、エビデンスの読み方。</p>
+          </Link>
+          <Link href="/categories/safety/" className="intent-card">
+            <span className="intent-tag">安全性</span>
+            <strong>リスクと副作用を知りたい</strong>
+            <p>起こりうるリスク、適否の条件、困ったときの相談先。</p>
+          </Link>
+          <Link href="/categories/in-body/" className="intent-card">
+            <span className="intent-tag">仕組み</span>
+            <strong>体の中で何が起きる？</strong>
+            <p>細胞がどこに届き、どう働くと考えられているか。</p>
+          </Link>
+          <Link href="/glossary/" className="intent-card">
+            <span className="intent-tag">用語</span>
+            <strong>分からない言葉を調べたい</strong>
+            <p>301語の用語集。検索と関連記事へのリンク付き。</p>
+          </Link>
+        </div>
+      </section>
+      <section className="section container">
+        <div className="section-heading">
+          <div>
             <span className="eyebrow">EXPLORE THE TOPICS</span>
             <h2>
               知りたいことから、探す<span className="heading-dot">。</span>

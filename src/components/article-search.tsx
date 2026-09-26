@@ -1,13 +1,22 @@
 "use client";
 import { useState } from "react";
+import Link from "next/link";
 import type { Article } from "@/content/articles";
 import { categories } from "@/content/categories";
+import { glossaryGroups, glossaryTermId } from "@/content/glossary";
 import { ArticleCard } from "./content";
 import { Icon } from "./visuals";
 
 export function ArticleSearch({ items }: { items: (Article & { searchText: string })[] }) {
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState("all");
+  const glossaryIndex = glossaryGroups.flatMap((g, gi) =>
+    g.terms.map((t, ti) => ({
+      id: glossaryTermId(gi, ti),
+      term: t.ja[0],
+      keywords: `${t.ja[0]} ${t.en[0]} ${t.zh[0]}`.toLocaleLowerCase(),
+    })),
+  );
   const terms = query
     .normalize("NFKC")
     .toLocaleLowerCase("ja")
@@ -24,6 +33,10 @@ export function ArticleSearch({ items }: { items: (Article & { searchText: strin
           .includes(t),
       ),
   );
+  const termHits =
+    terms.length === 0
+      ? []
+      : glossaryIndex.filter((g) => terms.every((t) => g.keywords.includes(t)));
   return (
     <>
       <div className="search-form" role="search">
@@ -52,6 +65,18 @@ export function ArticleSearch({ items }: { items: (Article & { searchText: strin
       <p className="search-status" role="status" aria-live="polite">
         {results.length}件の記事{query && ` · 「${query}」の検索結果`}
       </p>
+      {termHits.length > 0 && (
+        <div className="search-term-hits">
+          <p className="search-term-label">関連する用語</p>
+          <ul>
+            {termHits.slice(0, 10).map((t) => (
+              <li key={t.id}>
+                <Link href={`/glossary/#${t.id}`}>{t.term}</Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
       {results.length ? (
         <div className="listing-grid">
           {results.map((a) => (

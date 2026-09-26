@@ -96,6 +96,7 @@ export default async function CategoryPage({
             {group.ja}
             <span className="listing-count">{groupArticles.length}件</span>
           </h2>
+          {group.desc && <p className="listing-lead">{group.desc.ja}</p>}
           <div className="listing-grid">
             {groupArticles.map((a) => (
               <ArticleCard key={a.slug} article={a} badge={featuredSet.has(a.slug) ? "おすすめ" : undefined} />
