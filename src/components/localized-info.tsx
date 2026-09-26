@@ -49,7 +49,7 @@ export function LocalizedInfo({ locale, slug }: { locale: SiteLocale; slug: Info
           <h1>{content.title}</h1>
           <p>{content.description}</p>
         </div>
-        <div className="prose">
+        <div className={slug === "glossary" ? "prose prose-full" : "prose"}>
           {slug === "sources" && <SourceDirectory locale={locale} />}
           {slug === "supervision" && (medicalReviewer.enabled || medicalReviewer.planned) && <ReviewerProfile locale={locale} />}
           {slug === "glossary" && <Glossary locale={locale} />}

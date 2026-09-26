@@ -333,3 +333,10 @@ FTPSでレンタルサーバーの公開フォルダへ
 - 記事カード `.listing-grid` を `repeat(auto-fill, minmax(260px,1fr))` に変更（画面幅に応じ最大4列、モバイルは1列）。
 - 用語集 `.glossary-list`/`.glossary-flat` も `auto-fill minmax(240px,1fr)` にして画面幅追従。
 - サブカテゴリ見出しと記事カードの間隔を拡大（listing-heading margin 48/22、listing-lead 下26px、kw-chips 下28px）。
+
+## 38. 用語集5列・サブカテゴリ見出しの余白修正（2026-09-26 追記23）
+
+- 用語集を `.prose`（780px制限）から `prose-full` で解放し `auto-fill minmax(200px)` → 約5列グリッドに。
+- `.listing-heading:first-child` が各 section 先頭の h2 に誤適用され余白・ボーダーが消えていたのを削除。margin-top 64px + padding-top 40px で上部コンテンツと十分な距離を確保。
+- EN/ZHヒーロータイトルを2行構成に整理。
+- EN版ヘッダーロゴの3行崩れを修正（PC1行/モバイル最大2行）。

@@ -1089,14 +1089,9 @@ svg {
   font-size: 21px;
   font-weight: 500;
   letter-spacing: 0.06em;
-  margin: 48px 0 22px;
-  padding-top: 34px;
+  margin: 64px 0 22px;
+  padding-top: 40px;
   border-top: 1px solid var(--line);
-}
-.listing-heading:first-child {
-  margin-top: 0;
-  padding-top: 0;
-  border-top: none;
 }
 .columns-section {
   margin-top: 34px;
@@ -2713,9 +2708,11 @@ section[id^="sub-"] { scroll-margin-top: 80px; }
 }
 
 .glossary-group { scroll-margin-top: 80px; }
+/* 用語集など横幅を使うコンテンツ用にproseの780px制限を外す */
+.prose-full { max-width: none; }
 .glossary-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 16px;
 }
 .glossary-item {
@@ -3082,7 +3079,7 @@ mark { background: #fdf3c9; color: inherit; padding: 0 1px; border-radius: 2px; 
   color: var(--ink);
 }
 .glossary-sort button.active { background: var(--green); color: #fff; border-color: var(--green); }
-.glossary-flat { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; }
+.glossary-flat { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; }
 .kw-chips {
   display: flex;
   flex-wrap: wrap;

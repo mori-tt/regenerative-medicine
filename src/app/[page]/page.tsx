@@ -38,7 +38,7 @@ export default async function InfoPage({
         <h1>{info.title}</h1>
         <p>{info.description}</p>
       </div>
-      <div className="prose">
+      <div className={page === "glossary" ? "prose prose-full" : "prose"}>
         {page === "sources" && <SourceDirectory />}
         {page === "supervision" && (medicalReviewer.enabled || medicalReviewer.planned) && <ReviewerProfile />}
         {page === "glossary" && <Glossary />}
