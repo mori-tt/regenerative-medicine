@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { articles, categories, columnArticles, coreArticles, visibleArticles } from "@/content/articles";
 import { ArticleCard, Breadcrumbs } from "@/components/content";
+import { featuredSlugs, groupArticlesBySubcategory } from "@/content/subcategories";
 import { pageMetadata } from "@/lib/site";
 export const dynamicParams = false;
 export function generateStaticParams() {
@@ -32,6 +33,15 @@ export default async function CategoryPage({
   const listed = visibleArticles(articles).filter((a) => a.category === slug);
   const core = coreArticles(listed);
   const columns = columnArticles(listed);
+  const groups = groupArticlesBySubcategory(slug, core, {
+    ja: "その他の記事",
+    en: "Other articles",
+    zh: "其他文章",
+  });
+  const featuredSet = new Set(featuredSlugs(slug));
+  const featured = featuredSlugs(slug)
+    .map((s) => core.find((a) => a.slug === s))
+    .filter((a) => a !== undefined);
   return (
     <div className="container inner-page">
       <Breadcrumbs items={[{ label: category.label }]} />
@@ -53,16 +63,35 @@ export default async function CategoryPage({
           </Link>
         ))}
       </nav>
-      <section aria-labelledby={`core-${slug}`}>
-        <span className="eyebrow">GUIDES</span>
-        <h2 id={`core-${slug}`} className="listing-heading">基本ガイド</h2>
-        <p className="listing-lead">再生医療を理解するための基本を、順番に学べます。</p>
-        <div className="listing-grid">
-          {core.map((a) => (
-            <ArticleCard key={a.slug} article={a} />
-          ))}
-        </div>
-      </section>
+      <nav className="filter-links subnav-links" aria-label="テーマから探す">
+        {groups.map(({ group }) => (
+          <Link key={group.key} href={`#sub-${group.key}`}>
+            {group.ja}
+          </Link>
+        ))}
+      </nav>
+      {featured.length > 0 && (
+        <section aria-labelledby={`featured-${slug}`} className="featured-section">
+          <span className="eyebrow">START HERE</span>
+          <h2 id={`featured-${slug}`} className="listing-heading">まずはここから</h2>
+          <p className="listing-lead">このカテゴリで最初に押さえておきたい記事です。</p>
+          <div className="listing-grid">
+            {featured.map((a) => (
+              <ArticleCard key={a.slug} article={a} badge="おすすめ" />
+            ))}
+          </div>
+        </section>
+      )}
+      {groups.map(({ group, articles: groupArticles }) => (
+        <section key={group.key} id={`sub-${group.key}`} aria-labelledby={`sub-heading-${group.key}`}>
+          <h2 id={`sub-heading-${group.key}`} className="listing-heading">{group.ja}</h2>
+          <div className="listing-grid">
+            {groupArticles.map((a) => (
+              <ArticleCard key={a.slug} article={a} badge={featuredSet.has(a.slug) ? "おすすめ" : undefined} />
+            ))}
+          </div>
+        </section>
+      ))}
       {(columns.length > 0) && (
         <section aria-labelledby={`columns-${slug}`} className="columns-section">
           <span className="eyebrow">COLUMN</span>

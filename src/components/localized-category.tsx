@@ -2,6 +2,7 @@ import Link from "next/link";
 import { articles, categories, columnArticles, coreArticles, visibleArticles } from "@/content/articles";
 import type { SiteLocale } from "@/content/locales";
 import { localizedCategoryName } from "@/content/locales";
+import { featuredSlugs, groupArticlesBySubcategory } from "@/content/subcategories";
 import { LocalizedArticleGrid } from "./localized-articles";
 import { Breadcrumbs } from "./content";
 
@@ -31,8 +32,8 @@ const categoryDescriptions = {
 } as const;
 
 const chrome = {
-  en: { home: "Home", eyebrow: "TOPIC", core: "Guides", columns: "Columns", coreEyebrow: "GUIDES", columnsEyebrow: "COLUMN", coreLead: "Learn the essentials for understanding regenerative medicine, in order.", columnsLead: "Lighter reads — stories behind the research and seasonal topics.", back: "Back to the home page", note: "Careful, source-based reading", noteBody: "Each article has a separate editorial manuscript in this language. Check the evidence, limitations, and medical questions before making a decision.", navLabel: "Browse by category", all: "All articles" },
-  zh: { home: "首页", eyebrow: "主题", core: "指南", columns: "专栏", coreEyebrow: "GUIDES", columnsEyebrow: "COLUMN", coreLead: "按顺序学习理解再生医学所需的基础知识。", columnsLead: "轻松阅读——研究花絮与时令话题等。", back: "返回首页", note: "基于来源的谨慎阅读", noteBody: "每篇文章都有单独的中文编辑原稿。做出决定前，请确认证据、局限性和需要向医生询问的问题。", navLabel: "按主题浏览", all: "全部文章" },
+  en: { home: "Home", eyebrow: "TOPIC", core: "Guides", columns: "Columns", coreEyebrow: "GUIDES", columnsEyebrow: "COLUMN", coreLead: "Learn the essentials for understanding regenerative medicine, in order.", columnsLead: "Lighter reads — stories behind the research and seasonal topics.", back: "Back to the home page", note: "Careful, source-based reading", noteBody: "Each article has a separate editorial manuscript in this language. Check the evidence, limitations, and medical questions before making a decision.", navLabel: "Browse by category", all: "All articles", featured: "Start here", featuredEyebrow: "START HERE", featuredLead: "Articles to read first in this category.", badge: "Featured", subnavLabel: "Browse by theme", others: "Other articles" },
+  zh: { home: "首页", eyebrow: "主题", core: "指南", columns: "专栏", coreEyebrow: "GUIDES", columnsEyebrow: "COLUMN", coreLead: "按顺序学习理解再生医学所需的基础知识。", columnsLead: "轻松阅读——研究花絮与时令话题等。", back: "返回首页", note: "基于来源的谨慎阅读", noteBody: "每篇文章都有单独的中文编辑原稿。做出决定前，请确认证据、局限性和需要向医生询问的问题。", navLabel: "按主题浏览", all: "全部文章", featured: "从这里开始", featuredEyebrow: "START HERE", featuredLead: "本主题中建议先读的文章。", badge: "推荐", subnavLabel: "按小主题浏览", others: "其他文章" },
 } as const;
 
 export type LocalizedCategorySlug = keyof typeof categoryDescriptions.en;
@@ -47,5 +48,14 @@ export function LocalizedCategory({ locale, slug }: { locale: SiteLocale; slug: 
   const listed = visibleArticles(articles).filter((article) => article.category === slug);
   const core = coreArticles(listed);
   const columns = columnArticles(listed);
-  return <div lang={locale === "en" ? "en" : "zh-CN"} className="localized-page"><div className="container inner-page"><Breadcrumbs homeLabel={copy.home} homeHref={`/${locale}/`} locale={locale} items={[{ label: title }]} /><div className="page-heading"><span className="eyebrow">{copy.eyebrow}</span><h1>{title}</h1><p>{description}</p></div><div className="question-box"><div><h2>{copy.note}</h2><p>{copy.noteBody}</p></div><Link className="button outline" href={`/${locale}/`}>{copy.back}</Link></div><nav className="filter-links" aria-label={copy.navLabel}><Link href={`/${locale}/articles/`}>{copy.all}</Link>{categories.map((item) => <Link key={item.slug} href={`/${locale}/categories/${item.slug}/`} className={item.slug === slug ? "active" : undefined} aria-current={item.slug === slug ? "page" : undefined}>{localizedCategoryName(locale, item.slug)}</Link>)}</nav><section aria-label={copy.core}><span className="eyebrow">{copy.coreEyebrow}</span><h2 className="listing-heading">{copy.core}</h2><p className="listing-lead">{copy.coreLead}</p><LocalizedArticleGrid locale={locale} list={core} /></section>{columns.length > 0 && <section aria-label={copy.columns} className="columns-section"><span className="eyebrow">{copy.columnsEyebrow}</span><h2 className="listing-heading">{copy.columns}</h2><p className="listing-lead">{copy.columnsLead}</p><LocalizedArticleGrid locale={locale} list={columns} /></section>}</div></div>;
+  const groups = groupArticlesBySubcategory(slug, core, {
+    ja: "その他の記事",
+    en: copy.others,
+    zh: copy.others,
+  });
+  const featuredSet = new Set(featuredSlugs(slug));
+  const featured = featuredSlugs(slug)
+    .map((s) => core.find((a) => a.slug === s))
+    .filter((a) => a !== undefined);
+  return <div lang={locale === "en" ? "en" : "zh-CN"} className="localized-page"><div className="container inner-page"><Breadcrumbs homeLabel={copy.home} homeHref={`/${locale}/`} locale={locale} items={[{ label: title }]} /><div className="page-heading"><span className="eyebrow">{copy.eyebrow}</span><h1>{title}</h1><p>{description}</p></div><div className="question-box"><div><h2>{copy.note}</h2><p>{copy.noteBody}</p></div><Link className="button outline" href={`/${locale}/`}>{copy.back}</Link></div><nav className="filter-links" aria-label={copy.navLabel}><Link href={`/${locale}/articles/`}>{copy.all}</Link>{categories.map((item) => <Link key={item.slug} href={`/${locale}/categories/${item.slug}/`} className={item.slug === slug ? "active" : undefined} aria-current={item.slug === slug ? "page" : undefined}>{localizedCategoryName(locale, item.slug)}</Link>)}</nav><nav className="filter-links subnav-links" aria-label={copy.subnavLabel}>{groups.map(({ group }) => <Link key={group.key} href={`#sub-${group.key}`}>{locale === "en" ? group.en : group.zh}</Link>)}</nav>{featured.length > 0 && <section aria-label={copy.featured} className="featured-section"><span className="eyebrow">{copy.featuredEyebrow}</span><h2 className="listing-heading">{copy.featured}</h2><p className="listing-lead">{copy.featuredLead}</p><LocalizedArticleGrid locale={locale} list={featured} badgeLabel={copy.badge} /></section>}{groups.map(({ group, articles: groupArticles }) => <section key={group.key} id={`sub-${group.key}`} aria-label={locale === "en" ? group.en : group.zh}><h2 className="listing-heading">{locale === "en" ? group.en : group.zh}</h2><LocalizedArticleGrid locale={locale} list={groupArticles} badgeLabel={copy.badge} badgeSlugs={featuredSet} /></section>)}{columns.length > 0 && <section aria-label={copy.columns} className="columns-section"><span className="eyebrow">{copy.columnsEyebrow}</span><h2 className="listing-heading">{copy.columns}</h2><p className="listing-lead">{copy.columnsLead}</p><LocalizedArticleGrid locale={locale} list={columns} /></section>}</div></div>;
 }

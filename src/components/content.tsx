@@ -62,9 +62,11 @@ export function Breadcrumbs({
 export function ArticleCard({
   article,
   compact = false,
+  badge,
 }: {
   article: Article;
   compact?: boolean;
+  badge?: string;
 }) {
   const cat = categoryFor(article.category);
   const isColumn = article.kind === "column";
@@ -76,6 +78,7 @@ export function ArticleCard({
         <div className="card-label-row">
           <span className={`category-label ${cat.color}`}>{cat.label}</span>
           <span className="card-kicker">{typeLabel}</span>
+          {badge && <span className="card-badge">{badge}</span>}
         </div>
         <div className="article-meta">
           <span>{isReviewed(article) ? "医師監修済み" : "一般情報・編集部記事"}</span>

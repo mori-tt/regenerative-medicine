@@ -127,10 +127,12 @@ export function LocalizedArticleCard({
   locale,
   source,
   compact = false,
+  badge,
 }: {
   locale: SiteLocale;
   source: Article;
   compact?: boolean;
+  badge?: string;
 }) {
   const copy = chrome[locale];
   const article = localizedArticleFor(locale, source);
@@ -161,6 +163,7 @@ export function LocalizedArticleCard({
         <div className="card-label-row">
           <span className={`category-label ${cat.color}`}>{article.category}</span>
           <span className="card-kicker">{typeLabel}</span>
+          {badge && <span className="card-badge">{badge}</span>}
         </div>
         <div className="article-meta">
           <span>{isReviewed(source) ? copy.editorialManuscript : `${copy.editorialManuscript} · ${copy.translatedVersion}`}</span>

@@ -2442,3 +2442,47 @@ section > .eyebrow + .listing-heading {
   .visual-paracrine { grid-template-columns: 1fr; }
   .visual-paracrine-arrow { transform: rotate(90deg); }
 }
+
+.card-badge {
+  margin-left: auto;
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: #fdf0d8;
+  color: #8a6210;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .05em;
+  white-space: nowrap;
+}
+.featured-section { scroll-margin-top: 80px; }
+section[id^="sub-"] { scroll-margin-top: 80px; }
+.subnav-links { margin-top: -8px; }
+
+.visual-cards-five { grid-template-columns: repeat(5, 1fr); }
+.visual-card-labeled { flex-direction: column; align-items: flex-start; gap: 6px; }
+.visual-card-labeled b {
+  display: block;
+  flex: none;
+  width: auto;
+  height: auto;
+  border-radius: 0;
+  background: none;
+  color: #4f614b;
+  font-size: 13px;
+}
+.visual-card-labeled b i {
+  display: inline-grid;
+  width: 22px;
+  height: 22px;
+  margin-right: 8px;
+  place-items: center;
+  border-radius: 50%;
+  background: #718b68;
+  color: #fff;
+  font-style: normal;
+  font-size: 12px;
+}
+.visual-card-labeled span { font-size: 12px; line-height: 1.6; }
+@media (max-width: 760px) {
+  .visual-cards-five { grid-template-columns: 1fr 1fr; }
+}

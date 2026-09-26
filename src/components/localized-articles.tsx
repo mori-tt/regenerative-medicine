@@ -32,9 +32,13 @@ const chrome = {
 export function LocalizedArticleGrid({
   locale,
   list,
+  badgeLabel,
+  badgeSlugs,
 }: {
   locale: SiteLocale;
   list: Article[];
+  badgeLabel?: string;
+  badgeSlugs?: Set<string>;
 }) {
   return (
     <ArticleBrowser
@@ -49,6 +53,7 @@ export function LocalizedArticleGrid({
           locale={locale}
           source={source}
           key={source.slug}
+          badge={badgeLabel && (!badgeSlugs || badgeSlugs.has(source.slug)) ? badgeLabel : undefined}
         />
       ))}
     </ArticleBrowser>
