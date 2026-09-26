@@ -313,6 +313,7 @@ export function LocalizedArticle({ locale, source }: { locale: SiteLocale; sourc
                 </section>
               ))}
             </div>
+            {source && <ArticleVisual slug={source.slug} locale={locale} category={source.category} index={2} />}
             <ArticleReferences references={base.references} locale={locale} />
             {reviewed && source?.reviewer ? (
               <section className="reviewer-box">

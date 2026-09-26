@@ -142,6 +142,7 @@ export default async function ArticlePage({
               </section>
             ))}
           </div>
+          <ArticleVisual slug={article.slug} category={article.category} index={2} />
           <ArticleReferences references={article.references} locale="ja" />
           {reviewed && article.reviewer ? (
             <section className="reviewer-box">

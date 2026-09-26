@@ -2595,3 +2595,39 @@ section[id^="sub-"] { scroll-margin-top: 80px; }
 }
 .visual-card-labeled b { display: flex; align-items: center; }
 .visual-flow-step .visual-icon { width: 22px; height: 22px; vertical-align: -5px; margin-right: 6px; }
+
+.visual-legend {
+  list-style: none;
+  margin: 12px 0 0;
+  padding: 10px 4px 2px;
+  border-top: 1px dashed var(--line);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 6px 16px;
+}
+.visual-legend li b {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12px;
+  color: #4f614b;
+}
+.visual-legend li b i {
+  display: inline-grid;
+  width: 20px;
+  height: 20px;
+  place-items: center;
+  border-radius: 50%;
+  background: #718b68;
+  color: #fff;
+  font-style: normal;
+  font-size: 11px;
+  flex: 0 0 auto;
+}
+.visual-legend li span {
+  display: block;
+  margin: 4px 0 0 34px;
+  font-size: 11px;
+  line-height: 1.55;
+  color: var(--muted);
+}
