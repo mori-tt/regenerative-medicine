@@ -2748,3 +2748,14 @@ section[id^="sub-"] { scroll-margin-top: 80px; }
 .faq-a { margin: 0 0 14px; padding-left: 14px; border-left: 2px solid var(--green); }
 .checklist-section { background: #f6f8fb; border: 1px solid var(--line); border-radius: 14px; padding: 18px 20px; margin: 18px 0; }
 .checklist-section p { margin: 4px 0; font-size: 14.5px; }
+
+@media print {
+  header.site-header, footer.site-footer, .ad-slot, .topic-nav, .filter-links,
+  .article-visual, .article-cover, .mobile-article-toc, .related-section,
+  .article-terms, .closing-links, .breadcrumb, .glossary-search { display: none !important; }
+  .article-body, .faq-section, .checklist-section, .article-closing, .article-note {
+    break-inside: avoid-page;
+  }
+  body { font-size: 12pt; color: #000; }
+  a { color: #000; text-decoration: none; }
+}

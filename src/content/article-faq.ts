@@ -3,6 +3,7 @@
 // 医療情報のため、断定表現・効果保証表現は使わず、段階や条件を明示する。
 
 import type { SiteLocale } from "./locales";
+import { subcategoryOf } from "./subcategories";
 
 type FaqEntry = {
   ja: [string, string][];
@@ -727,10 +728,267 @@ const faqs: Record<string, FaqEntry> = {
   },
 };
 
-export function faqSectionsFor(slug: string, locale: SiteLocale | "ja") {
+// 記事固有のFAQがない記事向けのサブカテゴリ別フォールバック（各2問）。
+const fallbackFaqs: Record<string, FaqEntry> = {
+  "stem-basics/stem-cell-fundamentals": {
+    ja: [["このテーマはどこまで確かめられている？", "基礎概念は確立していますが、治療への応用は部位や病気で研究段階が異なります。「概念」と「使える治療」は分けて考えてください。"],
+         ["次に読むべき記事は？", "カテゴリ内の「効果とエビデンス」「安全性とリスク」に進むと、基礎知識が治療の判断材料に変わります。"]],
+    en: [["How established is this topic?", "The concepts are established, but clinical application is at different stages by disease — keep concept and treatment separate."],
+         ["What should I read next?", "Move on to Evidence and Safety categories to turn the basics into judgment material."]],
+    zh: [["这个主题被证实到什么程度？", "基础概念已确立，但临床应用因病种处于不同阶段——请把“概念”和“可用治疗”分开。"],
+         ["接下来该读什么？", "请继续阅读「疗效与证据」「安全性与风险」，把基础知识转化为判断材料。"]],
+  },
+  "stem-basics/body-mechanisms": {
+    ja: [["再生医療と関係ある？", "細胞が増え・分化する仕組みは、細胞を増やして使う再生医療の土台です。"],
+         ["難しすぎる場合は？", "用語集で出てきた言葉を引きながら読み進めると理解しやすくなります。"]],
+    en: [["Is it related to regenerative medicine?", "How cells divide and differentiate is the foundation of cell-based therapies."],
+         ["Too difficult?", "Look up terms in the glossary as you read — that makes it easier."]],
+    zh: [["与再生医学有关吗？", "细胞增殖与分化的机制是细胞疗法的基础。"],
+         ["太难懂怎么办？", "边查术语集边读会更容易理解。"]],
+  },
+  "stem-basics/health-and-life": {
+    ja: [["社会の期待と実際は違う？", "はい。高齢化による期待と、実際に確立した治療の範囲は別です。"],
+         ["制度の記事も読むべき？", "はい。届出・承認・広告の仕組みの記事と合わせると判断材料が揃います。"]],
+    en: [["Are expectations and reality different?", "Yes — aging-driven expectations and the actual scope of established care are separate things."],
+         ["Should I read the system articles too?", "Yes — filing, approval, and advertising rules complete the picture."]],
+    zh: [["社会期待与实际有差距吗？", "有——老龄化带来的期待与已确立治疗的范围是两回事。"],
+         ["还需要读制度类文章吗？", "需要——申报、批准、广告规则的文章能补全判断依据。"]],
+  },
+  "health-basics/body-systems": {
+    ja: [["この記事は治療と関係ある？", "臓器の働きを知ると、再生医療の説明で出てくる「この部位を再生する」という言葉が具体的に理解できます。"],
+         ["全て覚える必要はある？", "いいえ。関連する記事で必要になったときに戻れば十分です。"]],
+    en: [["Is this related to treatment?", "Knowing organ mechanics makes claims like “regenerating this tissue” concrete."],
+         ["Do I need to memorize it?", "No — come back when related articles require it."]],
+    zh: [["这与治疗有关吗？", "了解器官机制后，治疗说明中“再生该部位”等表述会更具体。"],
+         ["需要全部记住吗？", "不需要，读到相关文章时再回来即可。"]],
+  },
+  "health-basics/common-illness": {
+    ja: [["この病気に幹細胞治療はある？", "疾患によって研究段階が違います。「研究対象」と「使える治療」を分けて確認してください。"],
+         ["受診の目安は？", "気になる症状があれば一般の医療機関を受診するのが先です。再生医療の検討はその後です。"]],
+    en: [["Is there a stem-cell treatment for this?", "Research stages vary by disease — distinguish research targets from available care."],
+         ["When should I see a doctor?", "For concerning symptoms, see a regular clinic first — regenerative options come later."]],
+    zh: [["这种疾病有干细胞治疗吗？", "因病种研究阶段不同，请区分“研究对象”与“可用治疗”。"],
+         ["何时就诊？", "如有症状先就诊普通医疗机构，再生医疗的考虑在其后。"]],
+  },
+  "health-basics/daily-health": {
+    ja: [["治療と関係ある？", "暮らしの習慣は治療の効果や回復に関わります。治療中の生活の土台です。"],
+         ["今すぐできることは？", "健診の確認・体調の記録・相談先の把握から始められます。"]],
+    en: [["Is it related to treatment?", "Daily habits affect outcomes and recovery — they're the foundation during treatment."],
+         ["What can I do today?", "Start by checking your checkup results, keeping a symptom log, and knowing your contacts."]],
+    zh: [["与治疗有关吗？", "日常习惯会影响疗效和恢复，是治疗期间的基础。"],
+         ["现在能做什么？", "从确认体检结果、记录身体状况、掌握咨询渠道开始。"]],
+  },
+  "in-body/how-administered": {
+    ja: [["どの経路が選ばれる？", "目的の部位と病気で決まります。施設に「この経路を選ぶ理由」を確認しましょう。"],
+         ["経路でリスクは変わる？", "はい。経路ごとの合併症を確認してください。"]],
+    en: [["How is the route chosen?", "By the target site and disease — ask the clinic why a route was chosen."],
+         ["Does risk change by route?", "Yes — check route-specific complications."]],
+    zh: [["如何选择给药途径？", "取决于目标部位与病种，请向机构确认选择理由。"],
+         ["途径会改变风险吗？", "会——请确认各途径的并发症。"]],
+  },
+  "in-body/after-infusion": {
+    ja: [["細胞は消える？", "長期間残るとは限りません。定着期間と繰り返し投与の見通しを確認してください。"],
+         ["届く＝効く？", "いいえ。分布の確認と効果の確認は別の問題です。"]],
+    en: [["Do cells disappear?", "Not necessarily permanent — confirm expected persistence and whether repeat dosing is planned."],
+         ["Does arriving mean working?", "No — distribution and efficacy are separate questions."]],
+    zh: [["细胞会消失吗？", "不一定长期存留，请确认定着期和反复给药的预期。"],
+         ["到达等于有效吗？", "不等于——分布确认与疗效确认是两个问题。"]],
+  },
+  "in-body/where-they-reach": {
+    ja: [["脳には届く？", "血液脳関門を越えるかは研究中の論点で、多くは動物実験の段階です。"],
+         ["「届く」報告はある？", "動物実験や一部の観察データがあります。人での確かさは別に確認してください。"]],
+    en: [["Do they reach the brain?", "Crossing the blood–brain barrier is still under study — much of the data is preclinical."],
+         ["Are there distribution reports?", "Animal and limited human data exist — confirm human-level evidence separately."]],
+    zh: [["能到达大脑吗？", "能否跨越血脑屏障仍在研究中，多为动物实验阶段。"],
+         ["有分布报告吗？", "有动物和有限人体数据，人体层面的确凿性请另行确认。"]],
+  },
+  "anti-aging/scientific-evidence": {
+    ja: [["「若返った」報告はある？", "研究段階の報告はありますが、確立した効果ではありません。段階の確認が大切です。"],
+         ["見分け方は？", "「どの段階の結果か」を聞くことと、出典を確認することが基本です。"]],
+    en: [["Are there “rejuvenation” reports?", "Research-stage reports exist but are not established benefits — check the stage."],
+         ["How do I tell?", "Ask which stage a result belongs to and check the source."]],
+    zh: [["有“变年轻”的报告吗？", "有研究阶段的报告，但不是确立的疗效，请确认所处阶段。"],
+         ["如何辨别？", "询问结果处于哪个阶段，并确认出处。"]],
+  },
+  "anti-aging/aesthetic-offerings": {
+    ja: [["届出はある？", "施設によって違います。届出番号を確認するか、説明で確かめてください。"],
+         ["契約前に必須の確認は？", "届出・効果の根拠・リスク説明・返金条件の書面確認です。"]],
+    en: [["Is there a filing?", "It varies by clinic — ask for the filing number or confirm in the explanation."],
+         ["What's essential before signing?", "Written confirmation of filing, evidence, risks, and refund conditions."]],
+    zh: [["有申报吗？", "因机构而异，请确认申报编号或在说明中核实。"],
+         ["签约前必须确认什么？", "书面确认申报、疗效依据、风险说明和退款条件。"]],
+  },
+  "efficacy/efficacy-status": {
+    ja: [["届出と承認の違いは？", "届出は手続きの確認、承認は有効性・安全性の審査です。届出は効果の保証ではありません。"],
+         ["効果の根拠をどう確認？", "「どの研究の結果か」を聞き、jRCTや論文でその段階を確認しましょう。"]],
+    en: [["Filing vs approval?", "Filing is procedural; approval is an efficacy and safety review — filing is not a guarantee of benefit."],
+         ["How do I check the evidence?", "Ask which study it's based on and verify the stage in jRCT or the papers."]],
+    zh: [["申报与批准的区别？", "申报是程序确认，批准是有效性安全性审查——申报不等于疗效保证。"],
+         ["如何确认疗效依据？", "询问基于哪项研究，到jRCT或论文中确认阶段。"]],
+  },
+  "efficacy/research-stages": {
+    ja: [["「成功」はどう読む？", "動物実験・第I相・第III相で意味が違います。段階を確認して読みましょう。"],
+         ["人での研究が始まったら？", "まだ確立ではありません。段階が進むほど確かさは増しますが、承認とは別です。"]],
+    en: [["How do I read a “success”?", "It means different things in animal work, Phase I, or Phase III — check the stage."],
+         ["If human research has begun?", "Still not established — certainty grows with stage, but approval is a separate step."]],
+    zh: [["如何解读“成功”？", "动物实验、I期、III期含义不同，请确认阶段后再读。"],
+         ["人体研究开始了呢？", "仍不等于确立——阶段越靠后越确凿，但批准另当别论。"]],
+  },
+  "efficacy/reading-research": {
+    ja: [["一次情報はどこ？", "論文と登録情報（jRCT・UMIN等）です。プレスリリースは速報として読みましょう。"],
+         ["撤回された論文は？", "撤回理由を確認します。撤回済みの内容を根拠にする説明は信頼できません。"]],
+    en: [["Where are primary sources?", "Papers and registries (jRCT, UMIN) — treat press releases as early announcements."],
+         ["What about retracted papers?", "Check the retraction reason — explanations citing retracted work are unreliable."]],
+    zh: [["一手信息在哪里？", "论文与注册库（jRCT、UMIN等）——新闻稿请当作速报。"],
+         ["被撤回的论文呢？", "确认撤回原因——以撤回内容为依据的说明不可信。"]],
+  },
+  "safety/treatment-risks": {
+    ja: [["一番のリスクは？", "細胞の種類・経路・培養で変わります。リスクの説明が一面的でないか確認してください。"],
+         ["「安全」と言われたら？", "起きた場合の対応と監視体制を確認しましょう。絶対の安全はありません。"]],
+    en: [["What's the biggest risk?", "It varies by cell type, route, and culture — check the explanation isn't one-sided."],
+         ["If told it's “safe”?", "Ask about the response plan and monitoring — nothing is absolutely safe."]],
+    zh: [["最大的风险是什么？", "因细胞种类、途径、培养而异——请确认风险说明是否片面。"],
+         ["说“安全”怎么办？", "确认发生时的应对与监测体制——不存在绝对安全。"]],
+  },
+  "safety/eligibility": {
+    ja: [["誰でも受けられる？", "いいえ。持病・薬・妊娠等で適否が変わります。検査を経た判断が前提です。"],
+         ["主治医に相談すべき？", "はい。既存の治療との関係を確認してもらうのが基本です。"]],
+    en: [["Can anyone receive it?", "No — conditions, medications, and pregnancy change eligibility. Testing comes first."],
+         ["Should I ask my doctor?", "Yes — have them check interactions with existing care."]],
+    zh: [["谁都能接受吗？", "不能——既往病史、用药、妊娠都会影响适用性，检查判断是前提。"],
+         ["需要咨询主治医生吗？", "需要——请确认与现有治疗的关系。"]],
+  },
+  "safety/trouble-and-relief": {
+    ja: [["最初の相談先は？", "まず施設、次に消費生活センター（188）や医療安全支援センターです。"],
+         ["救済制度は効果の保証？", "いいえ。被害の補償であって効果の保証ではありません。"]],
+    en: [["Where do I start?", "The clinic first, then consumer centers (188) or medical safety support centers."],
+         ["Do relief systems guarantee benefit?", "No — they compensate harm, not efficacy."]],
+    zh: [["首先找谁？", "先找机构，再是消费者生活中心（188）或医疗安全支援中心。"],
+         ["救济制度保证疗效吗？", "不保证——救济是补偿伤害，不是保证疗效。"]],
+  },
+  "cell-types/cell-kinds": {
+    ja: [["種類で何が変わる？", "研究段階・採取方法・費用・リスクが変わります。細胞名が書かれているか確認しましょう。"],
+         ["MSCなら安心？", "種類名だけでは効果は分かりません。疾患ごとのエビデンスを確認してください。"]],
+    en: [["What changes by type?", "Research stage, collection method, cost, and risk — check whether the cell type is named."],
+         ["Are MSCs safe by default?", "The name alone doesn't prove benefit — check disease-specific evidence."]],
+    zh: [["种类改变什么？", "研究阶段、采集方式、费用、风险都会变——请确认是否写明细胞名称。"],
+         ["MSC就安全吗？", "仅凭名称不能判断疗效，请确认该病种的证据。"]],
+  },
+  "cell-types/collection-sources": {
+    ja: [["採取元の確認方法は？", "資料の記載と、施設への直接の確認です。採取部位と量が書かれているか見ましょう。"],
+         ["他人の細胞は？", "感染症検査やHLA確認が前提です。検査の説明があるか確認してください。"]],
+    en: [["How do I confirm the source?", "Check the documents and ask directly — the site and amount should be stated."],
+         ["What about donor cells?", "Infection screening and HLA checks are prerequisites — confirm they're described."]],
+    zh: [["如何确认采集来源？", "看资料记载并直接向机构确认，确认是否写明部位与数量。"],
+         ["他人细胞呢？", "前提是感染筛查与HLA确认——请确认是否有这些说明。"]],
+  },
+  "cell-types/self-vs-donor": {
+    ja: [["どちらが使われる？", "病気と施設で変わります。自家か他家かを資料で確認しましょう。"],
+         ["他家の検査は？", "感染症検査とHLAの確認が前提です。検査体制の説明を確認してください。"]],
+    en: [["Which is used?", "Depends on disease and facility — confirm whether it's autologous or allogeneic."],
+         ["What tests for donor cells?", "Infection screening and HLA confirmation are prerequisites — check the explanation."]],
+    zh: [["会用哪一种？", "因病种和机构而异——请确认是自体还是异体。"],
+         ["异体的检测呢？", "前提是感染筛查与HLA确认，请确认相关说明。"]],
+  },
+  "cell-types/culture-and-quality": {
+    ja: [["品質はどう確かめる？", "培養期間・無菌検査・細胞の状態確認・記録の管理体制を尋ねます。"],
+         ["届出＝品質保証？", "いいえ。届出は手続きで、品質は施設の管理次第です。"]],
+    en: [["How do I check quality?", "Ask about culture time, sterility testing, cell-condition checks, and record management."],
+         ["Does filing mean quality?", "No — filing is procedural; quality depends on the facility's management."]],
+    zh: [["如何确认质量？", "询问培养周期、无菌检测、细胞状态确认和记录管理体制。"],
+         ["申报=质量保证吗？", "不是——申报是程序，质量取决于机构的管理水平。"]],
+  },
+  "compare-therapies/cell-free-therapies": {
+    ja: [["エクソソームは細胞治療？", "細胞そのものを入れないため別です。届出の対象かは提供形態によります。"],
+         ["PRPとの違いは？", "PRPは自分の血液由来です。由来が違うため性質も別です。"]],
+    en: [["Are exosomes cell therapy?", "No cells are administered — whether filings apply depends on how they're provided."],
+         ["How is PRP different?", "PRP comes from your own blood — a different source means different properties."]],
+    zh: [["外泌体算细胞治疗吗？", "不输入细胞本身所以不同——是否需申报取决于提供方式。"],
+         ["和PRP的区别？", "PRP来自自体血液——来源不同，性质也不同。"]],
+  },
+  "compare-therapies/vs-conventional": {
+    ja: [["標準治療は続ける？", "中断しないでください。併用か代替かは主治医と相談して決めます。"],
+         ["比較の基準は？", "「標準治療と比べてどうか」が基本です。単独の効果報告では比較になりません。"]],
+    en: [["Should I keep standard care?", "Don't interrupt it — combination vs replacement is decided with your doctor."],
+         ["What's the comparison benchmark?", "“Compared to standard care” — a standalone benefit report isn't a comparison."]],
+    zh: [["要继续标准治疗吗？", "请勿中断——并用还是替代要与主治医生商量。"],
+         ["比较的标准是什么？", "与标准治疗比较是基本——单独的疗效报告不构成比较。"]],
+  },
+  "cost-access/cost-and-coverage": {
+    ja: [["費用の内訳は？", "採取・培養・投与・経過観察を分けて書面確認しましょう。"],
+         ["保険は使える？", "承認品は一部対象ですが、自由診療は全額自己負担が一般的です。"]],
+    en: [["What's the cost breakdown?", "Get collection, culture, administration, and follow-up itemized in writing."],
+         ["Is insurance available?", "Some approved products qualify, but private care is usually fully self-paid."]],
+    zh: [["费用明细是什么？", "请书面确认采集、培养、给药、随访各项。"],
+         ["能用医保吗？", "部分获批产品可以，但自费诊疗一般全额自付。"]],
+  },
+  "cost-access/before-consultation": {
+    ja: [["初診で持参するものは？", "既往歴・薬の一覧・検査結果・聞きたいことのメモです。"],
+         ["説明を保留していい？", "はい。納得できるまで決断を急ぐ必要はありません。"]],
+    en: [["What should I bring to the first visit?", "History, medication list, test results, and a written list of questions."],
+         ["Can I defer the decision?", "Yes — there's no need to decide before you're satisfied."]],
+    zh: [["初诊要带什么？", "病史、用药清单、检查结果和想问的问题备忘录。"],
+         ["可以先不作决定吗？", "可以——在充分理解前不必急于决定。"]],
+  },
+  "cost-access/spotting-ads": {
+    ja: [["規制の対象は？", "症例写真・体験談・断定表現・煽り文句が規制の対象です。"],
+         ["信頼できる情報源は？", "公的機関のページと原論文・登録情報です。広告だけで判断しないでください。"]],
+    en: [["What's regulated?", "Before/after photos, testimonials, absolute claims, and pressure tactics."],
+         ["What are reliable sources?", "Official pages and primary research — don't decide on ads alone."]],
+    zh: [["规制对象是什么？", "病例照片、体验谈、断定表述和煽动性语句。"],
+         ["可信的信息源？", "官方页面与原始研究——不要仅凭广告判断。"]],
+  },
+  "cost-access/during-and-after": {
+    ja: [["経過観察は必須？", "効果とリスクの確認に必要です。予定を書面で確認しましょう。"],
+         ["生活の制限は？", "治療によって変わります。仕事・通院・運動の目安を確認してください。"]],
+    en: [["Is follow-up required?", "Yes — it's needed to confirm benefit and catch risk; get the schedule in writing."],
+         ["Any lifestyle limits?", "Depends on the treatment — confirm guidance on work, visits, and exercise."]],
+    zh: [["随访是必须的吗？", "是的——确认疗效与风险都需要，请书面确认计划。"],
+         ["生活上有限制吗？", "因治疗而异，请确认工作、复诊、运动的注意事项。"]],
+  },
+  "cost-access/life-and-support": {
+    ja: [["使える制度は？", "高額療養費・医療費控除・介護保険などがあります。窓口を確認しましょう。"],
+         ["相談先は？", "医療機関の相談室・消費生活センター・自治体の窓口があります。"]],
+    en: [["What systems can I use?", "High-cost caps, medical deductions, care insurance — check the right contact."],
+         ["Where can I consult?", "Hospital counseling rooms, consumer centers, and municipal offices."]],
+    zh: [["能用哪些制度？", "高额疗养费、医疗费扣除、护理保险等——请确认窗口。"],
+         ["咨询渠道？", "医院咨询室、消费者生活中心、地方政府窗口。"]],
+  },
+  "mechanisms/cell-mechanisms": {
+    ja: [["仕組みは確かめられている？", "一部は研究段階です。「分化して置き換わる」だけでなく「分泌で働く」説もあります。"],
+         ["仕組みと効果は別？", "はい。仕組みの説明があることと、効果が確かめられたことは別です。"]],
+    en: [["Is the mechanism confirmed?", "Partly still research-stage — secretion-based action is considered alongside differentiation."],
+         ["Is mechanism the same as efficacy?", "No — a mechanism story and proven benefit are different things."]],
+    zh: [["机制已确认吗？", "部分仍在研究阶段——除“分化替代”外还有“分泌起作用”的假说。"],
+         ["机制与疗效是一回事吗？", "不是——有机制解释不等于疗效已被确证。"]],
+  },
+  "mechanisms/regeneration-research": {
+    ja: [["臓器ごとの進み具合は？", "角膜・皮膚は進んでいますが、神経・心臓は難しい分野です。"],
+         ["報告の読み方は？", "動物実験か臨床かを確認すると解釈が変わります。"]],
+    en: [["How far along is each organ?", "Cornea and skin are ahead; nerve and heart remain difficult."],
+         ["How do I read reports?", "Check whether they're animal or clinical — the interpretation changes."]],
+    zh: [["各器官进展如何？", "角膜和皮肤进展靠前，神经和心脏仍是难域。"],
+         ["如何读报告？", "确认是动物实验还是临床研究，解读会不同。"]],
+  },
+  "mechanisms/science-and-society": {
+    ja: [["学会の情報は？", "参考になりますが、個別の効果を保証するものではありません。"],
+         ["倫理の議論は関係ある？", "はい。胚や遺伝子の議論は治療の社会的受容に関わります。"]],
+    en: [["Is society info reliable?", "Useful as reference, but it doesn't guarantee individual treatment outcomes."],
+         ["Do ethics debates matter?", "Yes — embryo and gene debates relate to how therapies are socially received."]],
+    zh: [["学会信息可信吗？", "可作参考，但不保证个体治疗效果。"],
+         ["伦理讨论有关吗？", "有关——胚胎与基因的争议关系到疗法的社会接受度。"]],
+  },
+};
+
+export function faqSectionsFor(slug: string, locale: SiteLocale | "ja", category?: string) {
   const entry = faqs[slug];
-  if (!entry) return [];
-  const list = locale === "ja" ? entry.ja : locale === "en" ? entry.en : entry.zh;
+  const fallback = category ? (subcategoryOf(category, slug) ? fallbackFaqs[`${category}/${subcategoryOf(category, slug)!.key}`] : undefined) : undefined;
+  const list = entry
+    ? (locale === "ja" ? entry.ja : locale === "en" ? entry.en : entry.zh)
+    : fallback
+      ? (locale === "ja" ? fallback.ja : locale === "en" ? fallback.en : fallback.zh)
+      : undefined;
+  if (!list) return [];
   const title = locale === "ja" ? "よくある質問" : locale === "en" ? "Common questions" : "常见问题";
   return [{
     id: "faq",
@@ -738,3 +996,4 @@ export function faqSectionsFor(slug: string, locale: SiteLocale | "ja") {
     paragraphs: list.flatMap(([q, a]) => [`Q. ${q}`, `A. ${a}`]),
   }];
 }
+

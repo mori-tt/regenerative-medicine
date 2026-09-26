@@ -10455,7 +10455,7 @@ export const articles: Article[] = rawArticles.map((article, index) => {
     ...correctArticleSections(article.slug, "ja", article.sections),
     ...evidenceSectionsFor(article.slug, "ja"),
     ...deepenSectionsFor(article.category, article.slug, "ja"),
-    ...faqSectionsFor(article.slug, "ja"),
+    ...faqSectionsFor(article.slug, "ja", article.category),
     ...checklistSectionsFor(article.slug, "ja"),
   ];
   const editedAt = reviewSchedule[article.slug]?.lastEditedAt ?? article.updatedAt;

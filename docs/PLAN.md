@@ -246,3 +246,10 @@ FTPSでレンタルサーバーの公開フォルダへ
 - `article-checklist.ts` 新設：契約書・説明文書・提供計画で確認すべき項目の例を7記事に追加（jibihi-contract / informed-consent-howto / treatment-eligibility-process / treatment-flow / hospital-choice / first-visit-prep）。
 - FAQ・チェックリストはセクションID別の専用スタイル（Q太字・A左線・カード背景）。
 - FAQページに `FAQPage` JSON-LD構造化データを付与（検索結果での表示改善）。
+
+## 25. 残タスクの一括対応（2026-09-26 追記10）
+
+- FAQの全記事化：記事固有FAQ（42記事）がない記事にはサブカテゴリ別フォールバックFAQ（各2問×日英中）を自動挿入。全247記事がFAQを持つ構成に。
+- `faqSectionsFor` に category 引数を追加しフォールバック解決。
+- 印刷スタイル（@media print）を追加：ヘッダー・広告・図版・関連記事を非表示にし、本文・FAQ・免責・参考文献のみ出力。印刷して医療機関に持参する用途に対応。
+- アクセシビリティ確認：スキップリンク・lang属性・目次アンカーは既に整備済み。

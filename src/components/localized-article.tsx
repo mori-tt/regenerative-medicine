@@ -119,7 +119,7 @@ export function localizedArticleFor(locale: SiteLocale, source: Article) {
     ...correctArticleSections(source.slug, locale, originalSections),
     ...evidenceSectionsFor(source.slug, locale),
     ...deepenSectionsFor(source.category, source.slug, locale),
-    ...faqSectionsFor(source.slug, locale),
+    ...faqSectionsFor(source.slug, locale, source.category),
     ...checklistSectionsFor(source.slug, locale),
   ];
   return {
