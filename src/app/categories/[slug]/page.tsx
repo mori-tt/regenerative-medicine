@@ -3,6 +3,12 @@ import { notFound } from "next/navigation";
 import { articles, categories, columnArticles, coreArticles, visibleArticles } from "@/content/articles";
 import { ArticleCard, Breadcrumbs } from "@/components/content";
 import { featuredSlugs, groupArticlesBySubcategory } from "@/content/subcategories";
+import {
+  FeaturedButton,
+  FeaturedHidden,
+  FeaturedOnlyGrid,
+  FeaturedScope,
+} from "@/components/featured-filter";
 import { pageMetadata } from "@/lib/site";
 export const dynamicParams = false;
 export function generateStaticParams() {
@@ -50,6 +56,7 @@ export default async function CategoryPage({
         <h1>{category.label}</h1>
         <p>{category.description}</p>
       </div>
+      <FeaturedScope>
       <nav className="filter-links" aria-label="カテゴリから探す">
         <Link href="/articles/">すべての記事</Link>
         {categories.map((c) => (
@@ -62,6 +69,7 @@ export default async function CategoryPage({
             {c.label}
           </Link>
         ))}
+        <FeaturedButton label="おすすめ" count={featured.length} />
       </nav>
       <nav className="topic-panel" aria-label="トピックから探す">
         <p className="topic-panel-title">トピック別に読む</p>
@@ -89,40 +97,49 @@ export default async function CategoryPage({
           </div>
         </section>
       )}
-      {groups.map(({ group, articles: groupArticles }, index) => (
-        <section key={group.key} id={`sub-${group.key}`} aria-labelledby={`sub-heading-${group.key}`}>
-          <h2 id={`sub-heading-${group.key}`} className="listing-heading">
-            <span className="topic-num" aria-hidden="true">{index + 1}</span>
-            {group.ja}
-            <span className="listing-count">{groupArticles.length}件</span>
-          </h2>
-          {group.desc && <p className="listing-lead">{group.desc.ja}</p>}
-          {group.keywords && (
-            <div className="kw-chips" aria-label="関連キーワード">
-              {group.keywords.ja.map((kw) => (
-                <Link key={kw} className="kw-chip" href={`/search/?q=${encodeURIComponent(kw)}`}>{kw}</Link>
+      {groups.map(({ group, articles: groupArticles }, index) => {
+        const flags = groupArticles.map((a) => featuredSet.has(a.slug));
+        return (
+          <FeaturedScope key={group.key}>
+            <section id={`sub-${group.key}`} aria-labelledby={`sub-heading-${group.key}`}>
+              <h2 id={`sub-heading-${group.key}`} className="listing-heading">
+                <span className="topic-num" aria-hidden="true">{index + 1}</span>
+                {group.ja}
+                <span className="listing-count">{groupArticles.length}件</span>
+                <FeaturedButton label="おすすめ" count={flags.filter(Boolean).length} />
+              </h2>
+              {group.desc && <p className="listing-lead">{group.desc.ja}</p>}
+              {group.keywords && (
+                <div className="kw-chips" aria-label="関連キーワード">
+                  {group.keywords.ja.map((kw) => (
+                    <Link key={kw} className="kw-chip" href={`/search/?q=${encodeURIComponent(kw)}`}>{kw}</Link>
+                  ))}
+                </div>
+              )}
+              <FeaturedOnlyGrid featured={flags} empty="このトピックのおすすめ記事はありません。">
+                {groupArticles.map((a) => (
+                  <ArticleCard key={a.slug} article={a} badge={featuredSet.has(a.slug) ? "おすすめ" : undefined} />
+                ))}
+              </FeaturedOnlyGrid>
+            </section>
+          </FeaturedScope>
+        );
+      })}
+      {(columns.length > 0) && (
+        <FeaturedHidden>
+          <section aria-labelledby={`columns-${slug}`} className="columns-section">
+            <span className="eyebrow">COLUMN</span>
+            <h2 id={`columns-${slug}`} className="listing-heading">コラム</h2>
+            <p className="listing-lead">研究のこぼれ話や季節の話題など、読みものとして楽しめる記事です。</p>
+            <div className="listing-grid">
+              {columns.map((a) => (
+                <ArticleCard key={a.slug} article={a} />
               ))}
             </div>
-          )}
-          <div className="listing-grid">
-            {groupArticles.map((a) => (
-              <ArticleCard key={a.slug} article={a} badge={featuredSet.has(a.slug) ? "おすすめ" : undefined} />
-            ))}
-          </div>
-        </section>
-      ))}
-      {(columns.length > 0) && (
-        <section aria-labelledby={`columns-${slug}`} className="columns-section">
-          <span className="eyebrow">COLUMN</span>
-          <h2 id={`columns-${slug}`} className="listing-heading">コラム</h2>
-          <p className="listing-lead">研究のこぼれ話や季節の話題など、読みものとして楽しめる記事です。</p>
-          <div className="listing-grid">
-            {columns.map((a) => (
-              <ArticleCard key={a.slug} article={a} />
-            ))}
-          </div>
-        </section>
+          </section>
+        </FeaturedHidden>
       )}
+      </FeaturedScope>
     </div>
   );
 }
