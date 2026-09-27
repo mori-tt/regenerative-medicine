@@ -349,3 +349,11 @@ FTPSでレンタルサーバーの公開フォルダへ
 - フィードバック「いいえ」投票後に理由チップ（内容が古い/分かりにくい/等）を提示し localStorage に保存。
 - `.kw-chip` の「→」矢印をリンクのみに限定（`a.kw-chip::after`）。ボタン型チップには付けない。
 - `docs/DEPLOY-CHECKLIST.md` に手作業のデプロイ前チェックリストを追加（本番URL・公開日・監修・OGP・フォーム・監視）。
+
+## 40. 記事セクション見出しの重複・プレースホルダ修正（2026-09-27 追記25）
+
+- 記事タイトル（h1）をそのまま見出しにしたプレースホルダセクションを、内容に即した見出しへ修正（18記事・52セクション）。
+- raw本文内で同一見出しが2回出るセクションを差別化した見出しへ修正（15記事）。
+- literature/deepen追加セクションとraw本文の見出し衝突を解消（`stem-cell-mechanism`・`stem-cell-infection-risk`・`stem-cell-effect-duration`。`evidence/*.json` の ja/en/zh タイトルを更新）。
+- **セクションIDの重複を解消**（`insurance-care`の`mixed`、`skin-bone-cartilage`の`cartilage`など11記事）。HTMLのid重複とReact key重複を解消し、アンカーリンクを正常化。
+- 全247記事×3言語で「h1と同一のh2」「記事内h2重複」「セクションid重複」がゼロであることをビルド出力で検証。
