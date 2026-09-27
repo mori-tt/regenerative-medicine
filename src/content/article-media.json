@@ -2,6 +2,8 @@
   "assets": {
     "doctor-consultation": {
       "src": "/images/articles/doctor-consultation.jpg",
+      "width": 1280,
+      "height": 853,
       "alt": "医師と患者が診察室で相談している様子",
       "altEn": "A doctor consulting with a patient in an examination room",
       "altZh": "医生与患者在诊室交谈的场景",
@@ -12,6 +14,8 @@
     },
     "microscope": {
       "src": "/images/articles/microscope.jpg",
+      "width": 1280,
+      "height": 1280,
       "alt": "蛍光染色された細胞の顕微鏡画像",
       "altEn": "Microscope image of fluorescently stained cells",
       "altZh": "荧光染色细胞的显微镜图像",
@@ -22,6 +26,8 @@
     },
     "laboratory": {
       "src": "/images/articles/laboratory.jpg",
+      "width": 1280,
+      "height": 853,
       "alt": "検査機器が並ぶ研究室",
       "altEn": "Laboratory lined with testing equipment",
       "altZh": "摆满检测仪器的实验室",
@@ -32,6 +38,8 @@
     },
     "medical-research": {
       "src": "/images/articles/medical-research.jpg",
+      "width": 1280,
+      "height": 1500,
       "alt": "画像を確認する医師と医療画像",
       "altEn": "A physician reviewing medical images",
       "altZh": "查看医学影像的医生",
@@ -42,6 +50,8 @@
     },
     "researcher": {
       "src": "/images/articles/researcher.jpg",
+      "width": 1280,
+      "height": 1280,
       "alt": "手術用ライトの下で見上げる医療チーム",
       "altEn": "Medical team looking up under surgical lights",
       "altZh": "手术灯下仰望的医疗团队",
@@ -52,6 +62,8 @@
     },
     "medical-team": {
       "src": "/images/articles/medical-team.jpg",
+      "width": 1280,
+      "height": 853,
       "alt": "スマートフォンで情報を確認する医師",
       "altEn": "A physician checking information on a smartphone",
       "altZh": "用智能手机确认信息的医生",
@@ -62,6 +74,8 @@
     },
     "msc-biodistribution-eggenhofer-2012": {
       "src": "/images/articles/msc-biodistribution-eggenhofer-2012.jpg",
+      "width": 389,
+      "height": 702,
       "alt": "マウスに51Cr標識間葉系幹細胞を静脈投与した後の各臓器の放射活性分布。投与1時間後は肺に60%以上、24時間後は肝臓への割合が増加する論文の棒グラフ",
       "altEn": "Bar charts from a paper showing organ distribution of radioactivity after IV infusion of Cr-51-labeled MSCs in mice: over 60% in lungs at 1 hour, rising liver share at 24 hours",
       "altZh": "论文柱状图：小鼠静脉输注51Cr标记间充质干细胞后各器官放射活性分布，1小时后肺占60%以上，24小时后肝占比上升",
@@ -72,6 +86,8 @@
     },
     "hospital-care": {
       "src": "/images/articles/hospital-care.jpg",
+      "width": 1280,
+      "height": 720,
       "alt": "医師の白衣と聴診器",
       "altEn": "A physician's white coat and stethoscope",
       "altZh": "医生的白大褂与听诊器",

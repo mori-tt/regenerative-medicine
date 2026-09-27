@@ -15,11 +15,8 @@ export default function ArticlesPage() {
       <Breadcrumbs items={[{ label: "記事一覧" }]} />
       <div className="page-heading">
         <span className="eyebrow">THE JOURNAL</span>
-        <h1>
-          <span className="heading-phrase">一つずつ、</span><wbr />
-          <span className="heading-phrase">理解を深める。</span>
-        </h1>
-        <p>気になるテーマから、あなたのペースで読み進めてください。</p>
+        <h1>記事一覧</h1>
+        <p>一つずつ、理解を深める。気になるテーマから、あなたのペースで読み進めてください。</p>
       </div>
       <nav className="filter-links" aria-label="カテゴリから探す">
         <Link href="/articles/" className="active" aria-current="page">

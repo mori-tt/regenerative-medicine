@@ -3,10 +3,27 @@ DirectoryIndex index.html
 ErrorDocument 404 /404.html
 Options -Indexes
 
+# テキスト系は圧縮して配信する（検索インデックスのJSONを含む）。
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/css text/xml application/xml application/json application/javascript image/svg+xml
+</IfModule>
+
 <IfModule mod_headers.c>
   Header always set X-Content-Type-Options "nosniff"
   Header always set Referrer-Policy "strict-origin-when-cross-origin"
-  <FilesMatch "\.(html|txt|xml)$">
+  # HTML・サイトマップ・検索インデックスはビルドごとに変わるので毎回確認させる。
+  <FilesMatch "\.(html|txt|xml|json)$">
     Header set Cache-Control "no-cache"
+  </FilesMatch>
+  # 検索インデックスは検索ページのJSが読む内部データ。検索結果には出さない。
+  <FilesMatch "^search-index\.[a-z]{2}\.json$">
+    Header set X-Robots-Tag "noindex"
+  </FilesMatch>
+  # _next/static のCSS・JSはファイル名にハッシュが入るため長期キャッシュできる。
+  <FilesMatch "\.(css|js)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.(jpe?g|png|gif|webp|avif|svg|ico)$">
+    Header set Cache-Control "public, max-age=604800"
   </FilesMatch>
 </IfModule>

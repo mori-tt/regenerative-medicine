@@ -4,30 +4,16 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef } from "react";
 import { categories } from "@/content/categories";
-import { localizedCategoryName, localizedShell, type SiteLocale } from "@/content/locales";
+import { localizedCategoryName, localizedShell } from "@/content/locales";
+import { localeFromPath, localePrefix } from "@/lib/locale-path";
 
-function localeFromPath(pathname: string): SiteLocale | "ja" {
-  if (pathname.startsWith("/en")) return "en";
-  if (pathname.startsWith("/zh")) return "zh";
-  return "ja";
-}
-
-export function MobileMenu() {
+/** `<details>` 製メニュー共通の挙動：外側クリック・Escape・リンク選択で閉じる。 */
+function useDismissibleDetails() {
   const details = useRef<HTMLDetailsElement>(null);
-  const pathname = usePathname();
-  const locale = localeFromPath(pathname);
-  const copy = locale === "ja" ? null : localizedShell[locale];
-  const prefix = locale === "ja" ? "" : `/${locale}`;
-  function close() {
-    details.current?.removeAttribute("open");
-  }
+  const close = () => details.current?.removeAttribute("open");
   useEffect(() => {
     function dismiss(event: PointerEvent) {
-      if (
-        event.target instanceof Node &&
-        !details.current?.contains(event.target)
-      )
-        close();
+      if (event.target instanceof Node && !details.current?.contains(event.target)) close();
     }
     function escape(event: KeyboardEvent) {
       if (event.key === "Escape" && details.current?.open) {
@@ -42,6 +28,36 @@ export function MobileMenu() {
       document.removeEventListener("keydown", escape);
     };
   }, []);
+  return { details, close };
+}
+
+const categoryLabel = { ja: "カテゴリ", en: "Categories", zh: "分类" } as const;
+const categoryNavLabel = { ja: "カテゴリ一覧", en: "Categories", zh: "分类" } as const;
+
+/** PCヘッダーのカテゴリドロップダウン。 */
+export function CategoryDropdown() {
+  const locale = localeFromPath(usePathname());
+  const prefix = localePrefix(locale);
+  const { details, close } = useDismissibleDetails();
+  return (
+    <details className="cat-dropdown" ref={details}>
+      <summary>{categoryLabel[locale]}</summary>
+      <nav aria-label={categoryNavLabel[locale]}>
+        {categories.map((c) => (
+          <Link key={c.slug} href={`${prefix}/categories/${c.slug}/`} onClick={close}>
+            {locale === "ja" ? c.label : localizedCategoryName(locale, c.slug)}
+          </Link>
+        ))}
+      </nav>
+    </details>
+  );
+}
+
+export function MobileMenu() {
+  const locale = localeFromPath(usePathname());
+  const copy = locale === "ja" ? null : localizedShell[locale];
+  const prefix = localePrefix(locale);
+  const { details, close } = useDismissibleDetails();
   return (
     <details className="mobile-menu" ref={details}>
       <summary
@@ -85,9 +101,12 @@ export function MobileMenu() {
             href={`${prefix}/categories/${c.slug}/`}
             onClick={close}
           >
-            {copy ? localizedCategoryName(locale as SiteLocale, c.slug) : c.label}
+            {locale === "ja" ? c.label : localizedCategoryName(locale, c.slug)}
           </Link>
         ))}
+        <Link href={`${prefix}/glossary/`} onClick={close}>
+          {copy?.glossary || "用語集"}
+        </Link>
         <Link href={`${prefix}/editorial-policy/`} onClick={close}>
           {copy?.editorial || "編集方針"}
         </Link>

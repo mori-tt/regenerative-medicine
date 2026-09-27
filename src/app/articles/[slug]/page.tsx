@@ -12,8 +12,10 @@ import { ReadingTools } from "@/components/reading-tools";
 import { publicAsset } from "@/lib/site";
 import { publication } from "@/lib/site-config";
 import { absolute, pageMetadata, site } from "@/lib/site";
+import { articleMetadataOptions } from "@/lib/article-metadata";
+import { adjacentArticles, relatedArticles } from "@/lib/related-articles";
 import { CitationLinks, ArticleReferences } from "@/components/article-references";
-import { subcategories } from "@/content/subcategories";
+import { subcategoryOf } from "@/content/subcategories";
 import { termsInText } from "@/content/glossary";
 import { linkTerms } from "@/components/inline-terms";
 export const dynamicParams = false;
@@ -29,12 +31,7 @@ export async function generateMetadata({
   const { slug } = await params;
   const a = articles.find((a) => a.slug === slug);
   if (!a || !isVisibleArticle(a)) notFound();
-  return pageMetadata(
-    a.title,
-    a.description,
-    `/articles/${a.slug}/`,
-    isReviewed(a),
-  );
+  return pageMetadata(a.title, a.description, `/articles/${a.slug}/`, isReviewed(a), "ja", articleMetadataOptions(a, "ja"));
 }
 export default async function ArticlePage({
   params,
@@ -47,11 +44,9 @@ export default async function ArticlePage({
   const cat = categoryFor(article.category);
   const reviewed = isReviewed(article);
   const scheduled = articleBuildMode === "all" && Boolean(article.publishAt && article.publishAt > new Date().toISOString().slice(0, 10));
-  const catArticles = articles.filter((x) => x.category === article.category && isVisibleArticle(x));
-  const idx = catArticles.findIndex((x) => x.slug === slug);
-  const prevArticle = idx > 0 ? catArticles[idx - 1] : undefined;
-  const nextArticle = idx >= 0 && idx < catArticles.length - 1 ? catArticles[idx + 1] : undefined;
-  const subcat = (subcategories[article.category] ?? []).find((g) => g.slugs.includes(slug));
+  const { prev: prevArticle, next: nextArticle } = adjacentArticles(article);
+  const related = relatedArticles(article);
+  const subcat = subcategoryOf(article.category, slug);
   const bodyTerms = termsInText(article.sections.map((x) => x.paragraphs.join(" ")).join(" "), "ja", 24);
   const linkedTermIds = new Set<string>();
   return (
@@ -74,6 +69,8 @@ export default async function ArticlePage({
             datePublished: article.publishedAt,
             dateModified: article.updatedAt,
             mainEntityOfPage: absolute(`/articles/${article.slug}/`),
+            articleSection: cat.label,
+            ...(article.image ? { image: [absolute(article.image)] } : {}),
             author: {
               "@type": "Organization",
               name: `${site.name}編集部`,
@@ -83,6 +80,7 @@ export default async function ArticlePage({
               "@type": "Organization",
               name: site.name,
               url: absolute(),
+              logo: { "@type": "ImageObject", url: absolute("/icon.svg") },
             },
             citation: article.references.map((r) => r.url),
           }}
@@ -144,6 +142,8 @@ export default async function ArticlePage({
                 alt={article.imageAlt ?? "記事のイメージ"}
                 width={1280}
                 height={853}
+                sizes="(max-width: 760px) 100vw, 800px"
+                priority
                 unoptimized
               />
             ) : (
@@ -236,17 +236,16 @@ export default async function ArticlePage({
           ) : <span />}
         </nav>
       )}
-      <section className="related">
-        <h2>あわせて読みたい</h2>
-        <div className="article-grid">
-          {articles
-            .filter((a) => a.slug !== slug && isVisibleArticle(a))
-            .slice(0, 3)
-            .map((a) => (
+      {related.length > 0 && (
+        <section className="related" aria-labelledby="related-title">
+          <h2 id="related-title">あわせて読みたい</h2>
+          <div className="article-grid">
+            {related.map((a) => (
               <ArticleCard article={a} key={a.slug} />
             ))}
-        </div>
-      </section>
+          </div>
+        </section>
+      )}
     </div>
   );
 }

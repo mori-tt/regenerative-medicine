@@ -2,26 +2,16 @@ import Link from "next/link";
 import { articles, categories, visibleArticles } from "@/content/articles";
 import { ArticleCard, AdSlot, JsonLd } from "@/components/content";
 import { CellArt, Icon } from "@/components/visuals";
-import { absolute, pageMetadata, site } from "@/lib/site";
+import { pageMetadata, site, siteTaglineFor } from "@/lib/site";
+import { siteGraph } from "@/lib/structured-data";
 
-export const metadata = pageMetadata(
-  "再生医療と幹細胞を、もっとわかりやすく。",
-  site.description,
-  "/",
-);
+export const metadata = pageMetadata(siteTaglineFor.ja, site.description, "/", true, "ja", { home: true });
 export default function Home() {
   const featuredHref = "/guide/";
+  const latest = visibleArticles(articles).slice(0, 4);
   return (
     <>
-      <JsonLd
-        data={{
-          "@context": "https://schema.org",
-          "@type": "WebSite",
-          name: site.name,
-          url: absolute(),
-          inLanguage: "ja",
-        }}
-      />
+      <JsonLd data={siteGraph("ja")} />
       <section className="hero container">
         <div className="hero-copy">
           <div className="eyebrow">
@@ -151,7 +141,7 @@ export default function Home() {
                 <span className="category-icon">
                   <Icon name={cat.icon} size={31} />
                 </span>
-                <span className="category-number">0{i + 1}</span>
+                <span className="category-number">{String(i + 1).padStart(2, "0")}</span>
               </div>
               <h3>{cat.label}</h3>
               <p>{cat.description}</p>
@@ -202,14 +192,14 @@ export default function Home() {
             記事をすべて見る <Icon name="arrow" size={18} />
           </Link>
         </div>
-        <div className="journal-layout">
-          <div className="article-grid">
-            {visibleArticles(articles)
-              .slice(0, 4)
-              .map((a) => (
+        <div className={`journal-layout${latest.length ? "" : " journal-layout-empty"}`}>
+          {latest.length > 0 && (
+            <div className="article-grid">
+              {latest.map((a) => (
                 <ArticleCard article={a} key={a.slug} />
               ))}
-          </div>
+            </div>
+          )}
           <aside className="journal-sidebar">
             <div className="editorial-note">
               <span className="eyebrow">編集方針</span>

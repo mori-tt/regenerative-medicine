@@ -1,7 +1,8 @@
 import { ArticleSearch } from "@/components/article-search";
 import { Breadcrumbs } from "@/components/content";
+import { categories } from "@/content/categories";
 import { pageMetadata } from "@/lib/site";
-import { articles, visibleArticles } from "@/content/articles";
+import { searchIndexPath } from "@/lib/search-index";
 export const metadata = pageMetadata(
   "記事を探す",
   "キーワードやカテゴリから、再生医療・幹細胞に関する記事を探せます。",
@@ -18,21 +19,9 @@ export default function SearchPage() {
         <p>キーワードとカテゴリを組み合わせて、記事を探せます。</p>
       </div>
       <ArticleSearch
-        items={visibleArticles(articles).map((article) => ({
-          ...article,
-          searchText: [
-            article.title,
-            article.description,
-            ...article.points,
-            ...article.sections.flatMap((section) => [
-              section.title,
-              ...section.paragraphs,
-            ]),
-          ].join(" "),
-          points: [],
-          sections: [],
-          references: [],
-        }))}
+        locale="ja"
+        indexUrl={searchIndexPath("ja")}
+        categories={categories.map((c) => ({ slug: c.slug, label: c.label }))}
       />
     </div>
   );

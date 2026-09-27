@@ -674,6 +674,13 @@ svg {
   grid-template-columns: 1fr 238px;
   gap: 27px;
 }
+/* 公開記事がまだ無いビルドでは編集方針カードだけを横長に表示する */
+.journal-layout-empty {
+  grid-template-columns: 1fr;
+}
+.journal-layout-empty .editorial-note {
+  max-width: 520px;
+}
 .article-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

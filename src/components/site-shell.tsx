@@ -2,28 +2,18 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { MobileMenu } from "./navigation";
+import { CategoryDropdown, MobileMenu } from "./navigation";
 import { site } from "@/lib/site";
+import { localeFromPath, localePrefix, type UiLocale } from "@/lib/locale-path";
 import { Icon } from "./visuals";
 import { LanguageSwitcher } from "./language-switcher";
-import { localizedCategoryName, localizedShell, type SiteLocale } from "@/content/locales";
-import { categories } from "@/content/categories";
+import { localizedShell } from "@/content/locales";
 import { publication } from "@/lib/site-config";
 
-function localeFromPath(pathname: string): SiteLocale | "ja" {
-  if (pathname.startsWith("/en")) return "en";
-  if (pathname.startsWith("/zh")) return "zh";
-  return "ja";
-}
-
-function localizedHomePath(locale: SiteLocale | "ja") {
-  return locale === "ja" ? "/" : `/${locale}/`;
-}
-
-export function Logo({ locale = "ja" }: { locale?: SiteLocale | "ja" }) {
+export function Logo({ locale = "ja" }: { locale?: UiLocale }) {
   const copy = locale === "ja" ? null : localizedShell[locale];
   return (
-    <Link href={localizedHomePath(locale)} className={`logo ${locale === "en" ? "logo-en" : locale === "zh" ? "logo-zh" : ""}`} aria-label={copy?.logoAria || "再生医療ガイド ホーム"}>
+    <Link href={`${localePrefix(locale)}/`} className={`logo ${locale === "en" ? "logo-en" : locale === "zh" ? "logo-zh" : ""}`} aria-label={copy?.logoAria || "再生医療ガイド ホーム"}>
       <span className="logo-mark">
         <Icon name="cells" size={32} />
       </span>
@@ -37,6 +27,7 @@ export function Logo({ locale = "ja" }: { locale?: SiteLocale | "ja" }) {
 export function Header() {
   const locale = localeFromPath(usePathname());
   const copy = locale === "ja" ? null : localizedShell[locale];
+  const path = (slug: string) => `${localePrefix(locale)}/${slug}/`;
   return (
     <>
       <div className="topline">
@@ -53,22 +44,13 @@ export function Header() {
         <div className="container header-main">
           <Logo locale={locale} />
           <div className="header-links">
-            <Link href={locale === "ja" ? "/editorial-policy/" : `/${locale}/editorial-policy/`}>{copy?.editorial || "私たちの編集方針"}</Link>
-            <Link href={locale === "ja" ? "/supervision/" : `/${locale}/supervision/`}>
-              {copy?.supervision || "医師監修について"} <span>↗</span>
+            <Link href={path("editorial-policy")}>{copy?.editorial || "私たちの編集方針"}</Link>
+            <Link href={path("supervision")}>
+              {copy?.supervision || "医師監修について"} <span aria-hidden="true">↗</span>
             </Link>
           </div>
-          <details className="cat-dropdown">
-            <summary>{locale === "ja" ? "カテゴリ" : locale === "en" ? "Categories" : "分类"}</summary>
-            <nav aria-label={locale === "ja" ? "カテゴリ一覧" : locale === "en" ? "Categories" : "分类"}>
-              {categories.map((c) => (
-                <Link key={c.slug} href={locale === "ja" ? `/categories/${c.slug}/` : `/${locale}/categories/${c.slug}/`}>
-                  {locale === "ja" ? c.label : localizedCategoryName(locale, c.slug)}
-                </Link>
-              ))}
-            </nav>
-          </details>
-          <Link className="search-link" href={locale === "ja" ? "/search/" : `/${locale}/search/`} aria-label={copy?.searchAria || "記事を検索"}>
+          <CategoryDropdown />
+          <Link className="search-link" href={path("search")} aria-label={copy?.searchAria || "記事を検索"}>
             <Icon name="search" />
             <span>{copy?.search || "記事を探す"}</span>
           </Link>
@@ -82,7 +64,7 @@ export function Header() {
 export function Footer() {
   const locale = localeFromPath(usePathname());
   const copy = locale === "ja" ? null : localizedShell[locale];
-  const path = (slug: string) => locale === "ja" ? `/${slug}/` : `/${locale}/${slug}/`;
+  const path = (slug: string) => `${localePrefix(locale)}/${slug}/`;
   return (
     <footer className="site-footer">
       <div className="container">

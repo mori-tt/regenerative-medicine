@@ -1,16 +1,19 @@
 import Link from "next/link";
-import { localizedHome, type SiteLocale } from "@/content/locales";
+import { localizedCategoryName, localizedHome, type SiteLocale } from "@/content/locales";
 import { articles, categories, visibleArticles } from "@/content/articles";
+import { siteGraph } from "@/lib/structured-data";
 import { LocalizedArticleCard } from "./localized-article";
+import { JsonLd } from "./content";
 import { CellArt, Icon } from "./visuals";
 
 export function LocalizedHome({ locale }: { locale: SiteLocale }) {
   const copy = localizedHome[locale];
   const en = locale === "en";
   const featuredHref = `/${locale}/guide/`;
-  const categoryLinks = categories.map((c) => c.slug);
+  const latest = visibleArticles(articles).slice(0, 4);
   return (
     <div lang={en ? "en" : "zh-CN"} className="localized-page">
+      <JsonLd data={siteGraph(locale)} />
       <section className="hero container">
         <div className="hero-copy">
           <div className="eyebrow">
@@ -96,22 +99,22 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
           <span className="section-caption">{copy.topicCaption}</span>
         </div>
         <div className="category-grid">
-          {copy.categories.map(([label, description], index) => (
+          {categories.map((category, index) => (
             <Link
-              href={`/${locale}/categories/${categoryLinks[index]}/`}
-              className={`category-card ${categories[index].color}`}
-              key={label}
+              href={`/${locale}/categories/${category.slug}/`}
+              className={`category-card ${category.color}`}
+              key={category.slug}
             >
               <div className="category-top">
                 <span className="category-icon">
-                  <Icon name={categories[index].icon} size={31} />
+                  <Icon name={category.icon} size={31} />
                 </span>
                 <span className="category-number">
                   {String(index + 1).padStart(2, "0")}
                 </span>
               </div>
-              <h3>{label}</h3>
-              <p>{description}</p>
+              <h3>{localizedCategoryName(locale, category.slug)}</h3>
+              <p>{copy.categoryDescriptions[category.slug]}</p>
               <div className="category-bottom">
                 <span>{en ? "Explore topic" : "了解更多"}</span>
                 <Icon name="arrow" size={21} />
@@ -155,18 +158,14 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
             <Icon name="arrow" size={18} />
           </Link>
         </div>
-        <div className="journal-layout">
-          <div className="article-grid">
-            {visibleArticles(articles)
-              .slice(0, 4)
-              .map((source) => (
-                <LocalizedArticleCard
-                  key={source.slug}
-                  source={source}
-                  locale={locale}
-                />
+        <div className={`journal-layout${latest.length ? "" : " journal-layout-empty"}`}>
+          {latest.length > 0 && (
+            <div className="article-grid">
+              {latest.map((source) => (
+                <LocalizedArticleCard key={source.slug} source={source} locale={locale} />
               ))}
-          </div>
+            </div>
+          )}
           <aside className="journal-sidebar">
             <div className="editorial-note">
               <span className="eyebrow">EDITORIAL PROMISE</span>

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
-import { articleBuildMode, articles, categoryFor, isReviewed, isVisibleArticle, type Article } from "@/content/articles";
+import { articleBuildMode, categoryFor, isReviewed, type Article } from "@/content/articles";
+import { adjacentArticles, relatedArticles } from "@/lib/related-articles";
 import { articleLocales } from "@/content/article-locales";
 import { articleBodiesResearch } from "@/content/article-bodies-research";
 import { articleBodiesTreatment } from "@/content/article-bodies-treatment";
@@ -14,8 +15,8 @@ import { subcategoryOf } from "@/content/subcategories";
 import { articleImageAlt } from "@/content/article-images";
 import { localizedArticle, localizedCategoryName, type SiteLocale } from "@/content/locales";
 import type { ArticleBodyLocale } from "@/content/article-bodies-research";
-import { AdSlot, Breadcrumbs, JsonLd } from "@/components/content";
-import { CellArt, Icon } from "@/components/visuals";
+import { AdSlot, ArticleCard, Breadcrumbs, JsonLd, toCardData, type ArticleCardData } from "@/components/content";
+import { CellArt } from "@/components/visuals";
 import { ArticleVisual } from "@/components/article-visuals";
 import { ArticleTerms } from "./article-terms";
 import { ArticleClosing } from "./article-closing";
@@ -93,7 +94,7 @@ const chrome = {
     reviewerPendingBody: "The medical content of this article is not labelled as reviewed until per-article review records are finalized.",
     reviewerPolicy: "Read the review policy", disclaimer: "This article provides general information. For individual diagnosis or treatment, consult a physician.",
     related: "Related reading", draftNotice: "This article organizes general information; it does not present grounds or recommendations for individual diagnosis or treatment. Base medical decisions on current public information and consultation with medical professionals.",
-    editorialManuscript: "Editorial manuscript", translatedVersion: "Translated version", readGuide: "Read the guide", previewStatus: "Scheduled · review preview", scheduled: (date: string) => `Scheduled for ${date}`,
+    readGuide: "Read the guide", previewStatus: "Scheduled · review preview", scheduled: (date: string) => `Scheduled for ${date}`,
   },
   zh: {
     home: "首页", editedBy: "编辑：再生医学指南编辑部", position: "定位：一般信息",
@@ -103,7 +104,7 @@ const chrome = {
     reviewerPendingBody: "本文的医学内容在按文章的审核记录确定前，不会标注为已审核。",
     reviewerPolicy: "阅读审核方针", disclaimer: "本文提供一般信息。个别诊断与治疗请咨询医生。",
     related: "相关阅读", draftNotice: "本文整理一般信息，不作为个别诊断与治疗的依据或推荐。医疗判断请基于最新公共信息与医疗专业人员咨询。",
-    editorialManuscript: "编辑原稿", translatedVersion: "翻译版", readGuide: "阅读指南", previewStatus: "预定发布・审核确认用", scheduled: (date: string) => `预定发布：${date}`,
+    readGuide: "阅读指南", previewStatus: "预定发布・审核确认用", scheduled: (date: string) => `预定发布：${date}`,
   },
 } as const;
 
@@ -136,6 +137,17 @@ export function localizedArticleFor(locale: SiteLocale, source: Article) {
   };
 }
 
+/** 翻訳済みタイトル・説明・分類名を載せたカード用データ（サーバー側でのみ解決する）。 */
+export function localizedCardData(locale: SiteLocale, source: Article): ArticleCardData {
+  const article = localizedArticleFor(locale, source);
+  return toCardData(source, locale, {
+    title: article.title,
+    description: article.description,
+    categoryLabel: article.category,
+    subcategory: subcategoryOf(source.category, source.slug)?.[locale],
+  });
+}
+
 export function LocalizedArticleCard({
   locale,
   source,
@@ -147,58 +159,7 @@ export function LocalizedArticleCard({
   compact?: boolean;
   badge?: string;
 }) {
-  const copy = chrome[locale];
-  const article = localizedArticleFor(locale, source);
-  const cat = categoryFor(source.category);
-  const scheduled = articleBuildMode === "all" && Boolean(source.publishAt && source.publishAt > new Date().toISOString().slice(0, 10));
-  const typeLabel = source.kind === "column"
-    ? locale === "en" ? "Column" : "专栏"
-    : source.category === "cost-access"
-      ? locale === "en" ? "Cost & access" : "费用・就诊"
-      : source.category === "safety"
-        ? locale === "en" ? "Safety" : "安全性"
-        : source.category === "efficacy"
-          ? locale === "en" ? "Evidence" : "证据解读"
-          : source.category === "mechanisms"
-            ? locale === "en" ? "Mechanisms" : "机制・研究"
-            : source.category === "compare-therapies"
-              ? locale === "en" ? "Comparisons" : "疗法比较"
-              : source.category === "in-body"
-                ? locale === "en" ? "Inside the body" : "体内动态"
-                : source.category === "anti-aging"
-                  ? locale === "en" ? "Beauty & aging" : "美容・抗衰老"
-                  : source.category === "cell-types"
-                    ? locale === "en" ? "Cell types" : "细胞种类"
-                    : locale === "en" ? "The basics" : "基础知识";
-  return (
-    <article className={`article-card ${compact ? "compact" : ""}`}>
-      <div className="article-card-body">
-        <div className="card-label-row">
-          <span className={`category-label ${cat.color}`}>{article.category}</span>
-          <span className="card-kicker">{typeLabel}</span>
-          {subcategoryOf(source.category, source.slug) && (
-            <span className="card-subcat">{subcategoryOf(source.category, source.slug)![locale === "en" ? "en" : "zh"]}</span>
-          )}
-          {badge && <span className="card-badge">{badge}</span>}
-        </div>
-        <div className="article-meta">
-          <span className={`review-chip ${isReviewed(source) ? "reviewed" : "editorial"}`}>
-            {isReviewed(source) ? copy.editorialManuscript : `${copy.editorialManuscript} · ${copy.translatedVersion}`}
-          </span>
-          <span>{copy.readMinutes(source.readingMinutes)}</span>
-        </div>
-        {scheduled && <span className="preview-status">{copy.previewStatus} · {copy.scheduled(source.publishAt!.replaceAll("-", "."))}</span>}
-        <h3>
-          <Link href={`/${locale}/articles/${source.slug}/`}>{article.title}</Link>
-        </h3>
-        {!compact && <p>{article.description}</p>}
-        <div className="card-bottom">
-          <span>{source.publishedAt ? `${source.publishedAt.replaceAll("-", ".")} · ${copy.published}` : `${source.updatedAt.replaceAll("-", ".")} · ${copy.updated}`}</span>
-          <Icon name="arrow" size={19} />
-        </div>
-      </div>
-    </article>
-  );
+  return <ArticleCard article={localizedCardData(locale, source)} compact={compact} badge={badge} />;
 }
 
 export function LocalizedArticle({ locale, source }: { locale: SiteLocale; source?: Article }) {
@@ -222,10 +183,8 @@ export function LocalizedArticle({ locale, source }: { locale: SiteLocale; sourc
   const bodyTerms = termsInText(base.sections.map((x) => x.paragraphs.join(" ")).join(" "), locale, 24);
   const linkedTermIds = new Set<string>();
   const subcat = cat && source ? subcategoryOf(source.category, source.slug) : undefined;
-  const catArticles = source ? articles.filter((x) => x.category === source.category && isVisibleArticle(x)) : [];
-  const artIdx = catArticles.findIndex((x) => x.slug === source?.slug);
-  const prevArticle = artIdx > 0 ? catArticles[artIdx - 1] : undefined;
-  const nextArticle = artIdx >= 0 && artIdx < catArticles.length - 1 ? catArticles[artIdx + 1] : undefined;
+  const { prev: prevArticle, next: nextArticle } = source ? adjacentArticles(source) : {};
+  const related = source ? relatedArticles(source) : [];
   return (
     <div lang={en ? "en" : "zh-CN"} className="localized-page">
       <div className="container inner-page">
@@ -252,15 +211,18 @@ export function LocalizedArticle({ locale, source }: { locale: SiteLocale; sourc
               datePublished: source.publishedAt,
               dateModified: source.updatedAt,
               mainEntityOfPage: absolute(`/${locale}/articles/${source.slug}/`),
+              articleSection: base.category,
+              ...(source.image ? { image: [absolute(source.image)] } : {}),
               author: {
                 "@type": "Organization",
-                name: "Regenerative Medicine Guide",
+                name: en ? site.nameEn : site.nameZh,
                 url: absolute(`/${locale}/about/`),
               },
               publisher: {
                 "@type": "Organization",
                 name: site.name,
                 url: absolute(),
+                logo: { "@type": "ImageObject", url: absolute("/icon.svg") },
               },
               citation: source.references.map((r) => r.url),
             }}
@@ -304,6 +266,8 @@ export function LocalizedArticle({ locale, source }: { locale: SiteLocale; sourc
                     alt={articleImageAlt(source.image, locale) ?? base.title}
                     width={1280}
                     height={853}
+                    sizes="(max-width: 760px) 100vw, 800px"
+                    priority
                     unoptimized
                   />
                 ) : (
@@ -397,16 +361,13 @@ export function LocalizedArticle({ locale, source }: { locale: SiteLocale; sourc
             ) : <span />}
           </nav>
         )}
-        {source && (
-          <section className="related">
-            <h2>{copy.related}</h2>
+        {related.length > 0 && (
+          <section className="related" aria-labelledby="related-title">
+            <h2 id="related-title">{copy.related}</h2>
             <div className="article-grid">
-              {articles
-                .filter((a) => a.slug !== source.slug && isVisibleArticle(a))
-                .slice(0, 3)
-                .map((a) => (
-                  <LocalizedArticleCard locale={locale} source={a} key={a.slug} />
-                ))}
+              {related.map((a) => (
+                <LocalizedArticleCard locale={locale} source={a} key={a.slug} />
+              ))}
             </div>
           </section>
         )}

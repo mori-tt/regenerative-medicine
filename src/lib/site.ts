@@ -82,36 +82,67 @@ export function siteNameFor(locale: SiteLocaleCode): string {
   return locale === "en" ? site.nameEn : locale === "zh" ? site.nameZh : site.name;
 }
 
+export const siteTaglineFor: Record<SiteLocaleCode, string> = {
+  ja: "再生医療と幹細胞を、もっとわかりやすく。",
+  en: "Regenerative medicine and stem cells, made clearer.",
+  zh: "让再生医学与干细胞更易理解。",
+};
+
+export type PageMetadataOptions = {
+  /** トップページ。タイトルは「サイト名 | タグライン」の形にする。 */
+  home?: boolean;
+  /** 記事ページ。OGP を article 型にして公開日・更新日・カテゴリを付ける。 */
+  article?: {
+    publishedTime?: string;
+    modifiedTime?: string;
+    section?: string;
+    tags?: string[];
+  };
+  /** ページ固有のOGP画像（記事のカバー画像など）。未指定時はサイト共通のカード。 */
+  image?: { url: string; width: number; height: number; alt: string };
+};
+
 export function pageMetadata(
   title: string,
   description: string,
   path: string,
   allowIndex = true,
   locale: SiteLocaleCode = "ja",
+  options: PageMetadataOptions = {},
 ): Metadata {
   const base = basePathOf(path);
   const canonical = absolute(localizedPath(base, locale));
   const siteName = siteNameFor(locale);
+  const fullTitle = options.home ? `${siteName} | ${siteTaglineFor[locale]}` : `${title} | ${siteName}`;
+  const image = options.image
+    ? { url: absolute(options.image.url), width: options.image.width, height: options.image.height, alt: options.image.alt }
+    : { url: absolute("/social-card.png"), width: 1200, height: 630, alt: siteName };
   return {
-    // NOTE: non-Japanese pages use absolute titles so the Japanese
-    // root-layout template ("%s | 再生医療ガイド") never leaks in.
-    title: locale === "ja" ? title : { absolute: `${title} | ${siteName}` },
+    // NOTE: the root-layout title template ("%s | 再生医療ガイド") only applies to
+    // child segments, so the home page and non-Japanese pages set absolute titles.
+    title: locale === "ja" && !options.home ? title : { absolute: fullTitle },
     description,
     alternates: {
       canonical,
-      languages: {
-        "ja-JP": absolute(localizedPath(base, "ja")),
-        en: absolute(localizedPath(base, "en")),
-        "zh-CN": absolute(localizedPath(base, "zh")),
-        "x-default": absolute(localizedPath(base, "ja")),
-      },
+      // hreflang は翻訳ページを検索公開している時だけ出す。noindex のページを
+      // 代替言語として案内しても検索エンジンには無視され、整合性の警告要因になる。
+      ...(localizedIndexable
+        ? {
+            languages: {
+              "ja-JP": absolute(localizedPath(base, "ja")),
+              en: absolute(localizedPath(base, "en")),
+              "zh-CN": absolute(localizedPath(base, "zh")),
+              "x-default": absolute(localizedPath(base, "ja")),
+            },
+          }
+        : {}),
     },
     robots: {
       index: publiclyIndexable && allowIndex && (locale === "ja" || localizedIndexable),
       follow: true,
     },
     openGraph: {
-      title: `${title} | ${siteName}`,
+      title: fullTitle,
       description,
       url: canonical,
       siteName,
@@ -119,21 +150,23 @@ export function pageMetadata(
       alternateLocale: (Object.values(ogLocaleFor) as string[]).filter(
         (value) => value !== ogLocaleFor[locale],
       ),
-      type: "website",
-      images: [
-        {
-          url: absolute("/social-card.png"),
-          width: 1200,
-          height: 630,
-          alt: siteName,
-        },
-      ],
+      images: [image],
+      ...(options.article
+        ? {
+            type: "article",
+            publishedTime: options.article.publishedTime,
+            modifiedTime: options.article.modifiedTime,
+            section: options.article.section,
+            tags: options.article.tags,
+            authors: [absolute(localizedPath("/about/", locale))],
+          }
+        : { type: "website" }),
     },
     twitter: {
       card: "summary_large_image",
-      title: `${title} | ${siteName}`,
+      title: fullTitle,
       description,
-      images: [absolute("/social-card.png")],
+      images: [image.url],
     },
   };
 }

@@ -2,11 +2,34 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { localeFromPath, stripLocale, type UiLocale } from "@/lib/locale-path";
 
-export function LanguageSwitcher({ current = "ja" }: { current?: "ja" | "en" | "zh" }) {
+const languages: { locale: UiLocale; label: string; lang: string }[] = [
+  { locale: "ja", label: "日本語", lang: "ja" },
+  { locale: "en", label: "English", lang: "en" },
+  { locale: "zh", label: "中文", lang: "zh-CN" },
+];
+
+export function LanguageSwitcher() {
   const pathname = usePathname();
-  const active = pathname.startsWith("/en") ? "en" : pathname.startsWith("/zh") ? "zh" : current;
-  const basePath = pathname.replace(/^\/(en|zh)(?=\/|$)/, "") || "/";
+  const active = localeFromPath(pathname);
+  const basePath = stripLocale(pathname);
   const safePath = /^\/(?:_not-found|404)(?:\/|$)/.test(basePath) ? "/" : basePath;
-  return <nav className="language-switcher" aria-label="Language selection"><span>LANGUAGE</span><Link href={safePath} className={active === "ja" ? "current" : undefined}>日本語</Link><Link href={`/en${safePath === "/" ? "/" : safePath}`} className={active === "en" ? "current" : undefined}>English</Link><Link href={`/zh${safePath === "/" ? "/" : safePath}`} className={active === "zh" ? "current" : undefined}>中文</Link></nav>;
+  return (
+    <nav className="language-switcher" aria-label="Language selection">
+      <span>LANGUAGE</span>
+      {languages.map(({ locale, label, lang }) => (
+        <Link
+          key={locale}
+          href={locale === "ja" ? safePath : `/${locale}${safePath}`}
+          lang={lang}
+          hrefLang={lang}
+          className={active === locale ? "current" : undefined}
+          aria-current={active === locale ? "true" : undefined}
+        >
+          {label}
+        </Link>
+      ))}
+    </nav>
+  );
 }

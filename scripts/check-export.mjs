@@ -157,6 +157,26 @@ await access(join(root, ".htaccess"));
 await access(join(root, "robots.txt"));
 await access(join(root, "contact.php"));
 await access(join(root, "composer.json"));
+// 検索インデックス（JSON）：公開記事ページと件数が一致し、カード表示に必要な項目を持つこと。
+for (const locale of ["ja", "en", "zh"]) {
+  const prefix = locale === "ja" ? "" : `${locale}/`;
+  const articlePages = pages.filter((f) =>
+    new RegExp(`^${prefix}articles/(?!__unpublished__)[^/]+/index\\.html$`).test(relative(root, f)),
+  );
+  const index = JSON.parse(await readFile(join(root, `search-index.${locale}.json`), "utf8"));
+  assert.equal(index.items.length, articlePages.length, `search-index.${locale}.json: item count must match article pages`);
+  for (const item of index.items) {
+    for (const key of ["slug", "href", "title", "description", "categoryLabel", "text"])
+      assert.ok(typeof item[key] === "string" && item[key], `search-index.${locale}.json: ${item.slug ?? "?"} missing ${key}`);
+    assert.ok(await targetForUrl(item.href), `search-index.${locale}.json: missing page for ${item.href}`);
+  }
+  assert.ok(index.terms.length > 0, `search-index.${locale}.json: glossary terms missing`);
+}
+// トップ：WebSite + SearchAction、記事：og:type=article が出ていること。
+assert.ok(home.includes('"@type":"WebSite"') && home.includes('"@type":"SearchAction"'), "home must emit WebSite/SearchAction JSON-LD");
+for (const path of pages.filter((f) => /^(?:en\/|zh\/)?articles\/(?!__unpublished__)[^/]+\/index\.html$/.test(relative(root, f))).slice(0, 5)) {
+  assert.match(await readFile(path, "utf8"), /<meta property="og:type" content="article"/, `${relative(root, path)}: og:type must be article`);
+}
 console.log("Rendered article literature coverage:", evidencePages);
 console.log(
   `Static export OK: ${pages.length} HTML pages, ${linkCount} local links/assets checked; mode=${isPreview ? "preview (noindex)" : "public"}.`,
