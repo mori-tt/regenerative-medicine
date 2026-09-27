@@ -24,7 +24,7 @@ npm run check:export
 npm run preview
 ```
 
-静的プレビュー：<http://127.0.0.1:4173>。配置するのは **`out/` の中身**です。Next.jsサーバーの起動は不要で、`next start` は使用しません。
+静的プレビュー：<http://127.0.0.1:4173>（ポートが使用中なら `PORT=4174 npm run preview` のように変更可）。配置するのは **`out/` の中身**です。Next.jsサーバーの起動は不要で、`next start` は使用しません。
 
 ## ファイル構成
 

@@ -2,6 +2,8 @@ import { createServer } from "node:http";
 import { readFile, stat } from "node:fs/promises";
 import { resolve, extname, sep } from "node:path";
 const root = resolve("out");
+// 既定は 4173。他のプロジェクトと衝突する場合は PORT=4174 npm run preview のように変更する。
+const port = Number(process.env.PORT) || 4173;
 const types = {
   ".html": "text/html; charset=utf-8",
   ".css": "text/css",
@@ -46,6 +48,6 @@ createServer(async (req, res) => {
       ),
     );
   }
-}).listen(4173, "127.0.0.1", () =>
-  console.log("Static preview: http://127.0.0.1:4173"),
+}).listen(port, "127.0.0.1", () =>
+  console.log(`Static preview: http://127.0.0.1:${port}`),
 );

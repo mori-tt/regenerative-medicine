@@ -8,6 +8,7 @@ if (!target || !["github-pages", "lolipop"].includes(target)) {
   process.exit(1);
 }
 
+const command = process.platform === "win32" ? "npm.cmd" : "npm";
 const env = { ...process.env };
 env.DEPLOY_TARGET = target;
 if (target === "github-pages") {
@@ -27,6 +28,5 @@ if (target === "github-pages") {
   }
 }
 
-const command = process.platform === "win32" ? "npm.cmd" : "npm";
 const result = spawnSync(command, ["run", "build"], { env, stdio: "inherit" });
 process.exit(result.status ?? 1);
