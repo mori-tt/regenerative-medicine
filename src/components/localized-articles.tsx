@@ -5,6 +5,7 @@ import {
   visibleArticles,
   type Article,
 } from "@/content/articles";
+import { allFeaturedSlugs } from "@/content/subcategories";
 import { LocalizedArticleCard, localizedArticleFor } from "./localized-article";
 import { ArticleBrowser } from "./article-browser";
 import { Breadcrumbs } from "./content";
@@ -18,6 +19,7 @@ const chrome = {
     lead: "Deepen your understanding, one step at a time. Start with topics that interest you, and read at your own pace.",
     navLabel: "Browse by category",
     all: "All articles",
+    badge: "Featured",
   },
   zh: {
     home: "首页",
@@ -26,6 +28,7 @@ const chrome = {
     lead: "一个一个加深理解。从感兴趣的主题开始，按自己的节奏阅读。",
     navLabel: "按主题浏览",
     all: "全部文章",
+    badge: "推荐",
   },
 } as const;
 
@@ -47,6 +50,9 @@ export function LocalizedArticleGrid({
         const article = localizedArticleFor(locale, source);
         return `${article.title} ${article.description}`;
       })}
+      featured={
+        badgeSlugs ? list.map((source) => badgeSlugs.has(source.slug)) : undefined
+      }
     >
       {list.map((source) => (
         <LocalizedArticleCard
@@ -73,6 +79,7 @@ export function LocalizedArticles({
   const list = allArticles.filter(
     (article) => !category || article.category === category,
   );
+  const featuredSet = allFeaturedSlugs();
   const copy = chrome[locale];
   return (
     <div className="container inner-page">
@@ -114,7 +121,12 @@ export function LocalizedArticles({
           </Link>
         ))}
       </nav>
-      <LocalizedArticleGrid locale={locale} list={list} />
+      <LocalizedArticleGrid
+        locale={locale}
+        list={list}
+        badgeLabel={copy.badge}
+        badgeSlugs={featuredSet}
+      />
     </div>
   );
 }

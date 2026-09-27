@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { articles, categories, visibleArticles } from "@/content/articles";
+import { allFeaturedSlugs } from "@/content/subcategories";
 import { ArticleCard, Breadcrumbs } from "@/components/content";
 import { pageMetadata } from "@/lib/site";
 import { ArticleBrowser } from "@/components/article-browser";
@@ -10,6 +11,7 @@ export const metadata = pageMetadata(
 );
 export default function ArticlesPage() {
   const list = visibleArticles(articles);
+  const featuredSet = allFeaturedSlugs();
   return (
     <div className="container inner-page">
       <Breadcrumbs items={[{ label: "記事一覧" }]} />
@@ -29,9 +31,16 @@ export default function ArticlesPage() {
           </Link>
         ))}
       </nav>
-      <ArticleBrowser terms={list.map((a) => `${a.title} ${a.description}`)}>
+      <ArticleBrowser
+        terms={list.map((a) => `${a.title} ${a.description}`)}
+        featured={list.map((a) => featuredSet.has(a.slug))}
+      >
         {list.map((a) => (
-          <ArticleCard key={a.slug} article={a} />
+          <ArticleCard
+            key={a.slug}
+            article={a}
+            badge={featuredSet.has(a.slug) ? "おすすめ" : undefined}
+          />
         ))}
       </ArticleBrowser>
     </div>

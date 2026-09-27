@@ -12,6 +12,7 @@ const copy = {
     count: (n: number, total: number) => `${total}本中 ${n}本を表示`,
     empty: "条件に一致する記事はありません。別の言葉でお試しください。",
     clear: "絞り込みを解除",
+    featuredOnly: "おすすめのみ",
   },
   en: {
     label: "Filter by title or summary",
@@ -20,6 +21,7 @@ const copy = {
     count: (n: number, total: number) => `${n} of ${total} articles`,
     empty: "No matching articles. Try another keyword.",
     clear: "Clear filter",
+    featuredOnly: "Featured only",
   },
   zh: {
     label: "按标题或摘要筛选",
@@ -28,6 +30,7 @@ const copy = {
     count: (n: number, total: number) => `显示 ${total} 篇中的 ${n} 篇`,
     empty: "没有符合条件的文章，请尝试其他关键词。",
     clear: "清除筛选",
+    featuredOnly: "仅显示推荐",
   },
 };
 
@@ -36,20 +39,26 @@ export function ArticleBrowser({
   children,
   terms,
   locale = "ja",
+  featured,
 }: {
   children: ReactNode;
   terms: string[];
   locale?: keyof typeof copy;
+  featured?: boolean[];
 }) {
   const [query, setQuery] = useState("");
+  const [featuredOnly, setFeaturedOnly] = useState(false);
   const input = useRef<HTMLInputElement>(null);
   const text = copy[locale];
   const normalize = (value: string) =>
     value.normalize("NFKC").toLocaleLowerCase(locale);
   const words = normalize(query).trim().split(/\s+/).filter(Boolean);
   const cards = Children.toArray(children);
-  const matches = cards.filter((_, index) =>
-    words.every((word) => normalize(terms[index] ?? "").includes(word)),
+  const hasFeatured = Boolean(featured?.some(Boolean));
+  const matches = cards.filter(
+    (_, index) =>
+      (!featuredOnly || featured?.[index]) &&
+      words.every((word) => normalize(terms[index] ?? "").includes(word)),
   );
   return (
     <>
@@ -64,6 +73,16 @@ export function ArticleBrowser({
             placeholder={text.placeholder}
           />
         </label>
+        {hasFeatured && (
+          <button
+            type="button"
+            className={`browser-featured${featuredOnly ? " active" : ""}`}
+            aria-pressed={featuredOnly}
+            onClick={() => setFeaturedOnly((v) => !v)}
+          >
+            {text.featuredOnly}
+          </button>
+        )}
         <Link href={`${locale === "ja" ? "" : `/${locale}`}/search/`}>
           {text.search}
           <Icon name="arrow" size={18} />
@@ -77,11 +96,12 @@ export function ArticleBrowser({
       ) : (
         <div className="empty-state">
           <p>{text.empty}</p>
-          {query && (
+          {(query || featuredOnly) && (
             <button
               type="button"
               onClick={() => {
                 setQuery("");
+                setFeaturedOnly(false);
                 input.current?.focus();
               }}
             >

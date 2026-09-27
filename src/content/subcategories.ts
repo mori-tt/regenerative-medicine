@@ -594,6 +594,15 @@ export function featuredSlugs(category: string, picks = 3): string[] {
   return out;
 }
 
+/** 全カテゴリの「まず読む」記事スラッグ集合（おすすめバッジ対象の一覧）。 */
+export function allFeaturedSlugs(picks = 3): Set<string> {
+  const out = new Set<string>();
+  for (const category of Object.keys(subcategories)) {
+    for (const slug of featuredSlugs(category, picks)) out.add(slug);
+  }
+  return out;
+}
+
 /** 記事が属するサブカテゴリを返す（未定義なら undefined）。 */
 export function subcategoryOf(category: string, slug: string): SubcategoryGroup | undefined {
   return (subcategories[category] ?? []).find((g) => g.slugs.includes(slug));
