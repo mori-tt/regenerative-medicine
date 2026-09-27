@@ -13,6 +13,9 @@ import { publicAsset } from "@/lib/site";
 import { publication } from "@/lib/site-config";
 import { absolute, pageMetadata, site } from "@/lib/site";
 import { CitationLinks, ArticleReferences } from "@/components/article-references";
+import { subcategories } from "@/content/subcategories";
+import { termsInText } from "@/content/glossary";
+import { linkTerms } from "@/components/inline-terms";
 export const dynamicParams = false;
 export function generateStaticParams() {
   const params = visibleArticles(articles).map((a) => ({ slug: a.slug }));
@@ -48,11 +51,15 @@ export default async function ArticlePage({
   const idx = catArticles.findIndex((x) => x.slug === slug);
   const prevArticle = idx > 0 ? catArticles[idx - 1] : undefined;
   const nextArticle = idx >= 0 && idx < catArticles.length - 1 ? catArticles[idx + 1] : undefined;
+  const subcat = (subcategories[article.category] ?? []).find((g) => g.slugs.includes(slug));
+  const bodyTerms = termsInText(article.sections.map((x) => x.paragraphs.join(" ")).join(" "), "ja", 24);
+  const linkedTermIds = new Set<string>();
   return (
     <div className="container inner-page">
       <Breadcrumbs
         items={[
           { label: cat.label, href: `/categories/${cat.slug}/` },
+          ...(subcat ? [{ label: subcat.ja, href: `/categories/${cat.slug}/#sub-${subcat.key}` }] : []),
           { label: article.title },
         ]}
       />
@@ -165,7 +172,7 @@ export default async function ArticlePage({
               <section id={section.id} key={section.id} className={section.id === "faq" ? "faq-section" : section.id === "checklist" ? "checklist-section" : undefined}>
                 <h2>{section.title}<a className="heading-anchor" href={`#${section.id}`} aria-label="この見出しへのリンク">#</a></h2>
                 {section.paragraphs.map((p, paragraphIndex) => (
-                  <p key={paragraphIndex} className={section.id === "faq" ? (p.startsWith("Q.") ? "faq-q" : "faq-a") : undefined}>{p}<CitationLinks ids={section.paragraphReferences?.[paragraphIndex]} references={article.references} locale="ja" /></p>
+                  <p key={paragraphIndex} className={section.id === "faq" ? (p.startsWith("Q.") ? "faq-q" : "faq-a") : undefined}>{linkTerms(p, bodyTerms, linkedTermIds, "")}<CitationLinks ids={section.paragraphReferences?.[paragraphIndex]} references={article.references} locale="ja" /></p>
                 ))}
                 {sectionIndex === 1 && <ArticleVisual slug={article.slug} category={article.category} index={1} />}
               </section>

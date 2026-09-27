@@ -4,7 +4,7 @@ import Link from "next/link";
 import { categories } from "@/content/categories";
 import { glossaryGroups, glossaryTermId } from "@/content/glossary";
 import { Breadcrumbs, Marked } from "./content";
-import type { SiteLocale } from "@/content/locales";
+import { localizedCategoryName, type SiteLocale } from "@/content/locales";
 
 const categoryNames: Record<SiteLocale, Record<string, string>> = {
   en: {
@@ -158,6 +158,20 @@ export function LocalizedSearch({ locale, items }: { locale: SiteLocale; items: 
               </>
             )}
           </p>
+          <div className="search-suggest">
+            <p className="search-suggest-label">{en ? "Popular keywords:" : "热门关键词："}</p>
+            <div className="kw-chips">
+              {(en ? ["stem cells", "iPS cells", "exosomes", "cost", "safety", "efficacy", "insurance", "anti-aging"] : ["干细胞", "iPS细胞", "外泌体", "费用", "安全性", "疗效", "保险", "抗衰老"]).map((kw) => (
+                <button key={kw} type="button" className="kw-chip" onClick={() => setQuery(kw)}>{kw}</button>
+              ))}
+            </div>
+            <p className="search-suggest-label">{en ? "Browse by category:" : "按分类浏览："}</p>
+            <div className="kw-chips">
+              {categories.slice(0, 9).map((c) => (
+                <Link key={c.slug} className="kw-chip" href={`/${locale}/categories/${c.slug}/`}>{localizedCategoryName(locale, c.slug)}</Link>
+              ))}
+            </div>
+          </div>
           <button
             type="button"
             onClick={() => {

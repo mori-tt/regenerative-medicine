@@ -3096,4 +3096,19 @@ mark { background: #fdf3c9; color: inherit; padding: 0 1px; border-radius: 2px; 
   background: #fafcf7;
 }
 .kw-chip:hover { border-color: var(--green); background: #eef3ea; }
-.kw-chip::after { content: " →"; font-size: 10px; color: #9aab8f; }
+a.kw-chip::after { content: " →"; font-size: 10px; color: #9aab8f; }
+
+/* inline glossary links in article body */
+a.term-link {
+  color: var(--green);
+  text-decoration: underline dotted #9fb493;
+  text-underline-offset: 3px;
+}
+a.term-link:hover { background: #eef3ea; }
+/* empty-state suggestions */
+.search-suggest { margin: 14px 0 6px; }
+.search-suggest-label { font-size: 12px; color: var(--muted); margin: 12px 0 0; }
+.search-suggest .kw-chip { cursor: pointer; }
+/* feedback reasons */
+.feedback-why { font-size: 13px; color: var(--muted); margin: 4px 0 0; }
+.feedback-reasons { margin-top: 8px; }

@@ -13,6 +13,8 @@ const copy = {
     detail: "詳しいご意見・ご質問はこちらから（3営業日以内に回答）",
     correction: "誤記・修正のご指摘",
     note: "個別の病状相談は受け付けていません。診療に関することは医療機関へご相談ください。",
+    whyAsk: "差し支えなければ、理由を教えてください",
+    reasons: ["内容が古い", "分かりにくい", "情報が足りない", "事実誤認がある", "その他"],
   },
   en: {
     ask: "Was this article helpful?",
@@ -22,6 +24,8 @@ const copy = {
     detail: "Share detailed comments or questions (we reply within 3 business days)",
     correction: "Report an error or correction",
     note: "We cannot answer individual medical consultations. Please consult your healthcare provider.",
+    whyAsk: "If you don't mind, tell us why",
+    reasons: ["Outdated content", "Hard to understand", "Not enough detail", "Factual error", "Other"],
   },
   zh: {
     ask: "这篇文章对您有帮助吗？",
@@ -31,6 +35,8 @@ const copy = {
     detail: "如需详细意见或咨询，请通过表单联系（3个工作日内回复）",
     correction: "报告错误或修正建议",
     note: "我们无法回答个人医疗咨询。请咨询您的医疗机构。",
+    whyAsk: "如方便，请告诉我们原因",
+    reasons: ["内容过时", "难以理解", "信息不足", "有事实错误", "其他"],
   },
 } as const;
 
@@ -43,11 +49,14 @@ export function ArticleFeedback({
 }) {
   const c = copy[locale];
   const [voted, setVoted] = useState<string | null>(null);
+  const [reason, setReason] = useState<string | null>(null);
 
   useEffect(() => {
     const key = `feedback-${slug}`;
     const stored = localStorage.getItem(key);
     if (stored) setVoted(stored);
+    const r = localStorage.getItem(`feedback-reason-${slug}`);
+    if (r) setReason(r);
   }, [slug]);
 
   function vote(value: "yes" | "no") {
@@ -78,6 +87,25 @@ export function ArticleFeedback({
           <button type="button" className="feedback-btn no" onClick={() => vote("no")}>
             {c.no}
           </button>
+        </div>
+      ) : voted === "no" && !reason ? (
+        <div className="feedback-reasons" role="group" aria-label={c.whyAsk}>
+          <p className="feedback-why">{c.whyAsk}</p>
+          <div className="kw-chips">
+            {c.reasons.map((r) => (
+              <button
+                key={r}
+                type="button"
+                className="kw-chip"
+                onClick={() => {
+                  localStorage.setItem(`feedback-reason-${slug}`, r);
+                  setReason(r);
+                }}
+              >
+                {r}
+              </button>
+            ))}
+          </div>
         </div>
       ) : (
         <p className="feedback-thanks" role="status">

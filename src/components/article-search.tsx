@@ -94,6 +94,20 @@ export function ArticleSearch({ items }: { items: (Article & { searchText: strin
             <br />
             別のキーワードでお試しください。
           </p>
+          <div className="search-suggest">
+            <p className="search-suggest-label">よく検索されるキーワード：</p>
+            <div className="kw-chips">
+              {["幹細胞", "iPS細胞", "エクソソーム", "費用", "副作用", "効果", "保険", "美容"].map((kw) => (
+                <button key={kw} type="button" className="kw-chip" onClick={() => setQuery(kw)}>{kw}</button>
+              ))}
+            </div>
+            <p className="search-suggest-label">カテゴリから探す：</p>
+            <div className="kw-chips">
+              {categories.slice(0, 9).map((c) => (
+                <Link key={c.slug} className="kw-chip" href={`/categories/${c.slug}/`}>{c.label}</Link>
+              ))}
+            </div>
+          </div>
           <button
             type="button"
             onClick={() => {

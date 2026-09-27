@@ -28,6 +28,8 @@ import { deepenSectionsFor } from "@/content/article-deepen";
 import { faqSectionsFor } from "@/content/article-faq";
 import { checklistSectionsFor } from "@/content/article-checklist";
 import { CitationLinks, ArticleReferences } from "./article-references";
+import { termsInText } from "@/content/glossary";
+import { linkTerms } from "./inline-terms";
 
 const englishTerms: Record<string, string> = {
   basics: "The Basics", stem: "Stem Cells", cell: "Cell", cells: "Cells", tissue: "Tissue", tissues: "Tissues", organ: "Organ", organs: "Organs", treatment: "Treatment", research: "Research", safety: "Safety", cost: "Cost", insurance: "Insurance", clinical: "Clinical", trials: "Trials", trial: "Trial", study: "Study", studies: "Studies", immune: "Immune System", blood: "Blood", bone: "Bone", skin: "Skin", heart: "Heart", nerve: "Nerve", brain: "Brain", gene: "Genes", genes: "Genes", genome: "Genome", culture: "Cell Culture", quality: "Quality", consent: "Informed Consent", followup: "Follow-up", aftercare: "Aftercare", decision: "Decision-making", family: "Family Support", doctor: "Doctor", hospital: "Hospital", rehabilitation: "Rehabilitation", statistics: "Statistics", evidence: "Evidence", future: "Future Research",
@@ -217,6 +219,9 @@ export function LocalizedArticle({ locale, source }: { locale: SiteLocale; sourc
   const reviewed = source ? isReviewed(source) : false;
   const scheduled = Boolean(source && articleBuildMode === "all" && source.publishAt && source.publishAt > new Date().toISOString().slice(0, 10));
   const sectionIds = base.sections.map((_, index) => `section-${index + 1}`);
+  const bodyTerms = termsInText(base.sections.map((x) => x.paragraphs.join(" ")).join(" "), locale, 24);
+  const linkedTermIds = new Set<string>();
+  const subcat = cat && source ? subcategoryOf(source.category, source.slug) : undefined;
   const catArticles = source ? articles.filter((x) => x.category === source.category && isVisibleArticle(x)) : [];
   const artIdx = catArticles.findIndex((x) => x.slug === source?.slug);
   const prevArticle = artIdx > 0 ? catArticles[artIdx - 1] : undefined;
@@ -230,6 +235,9 @@ export function LocalizedArticle({ locale, source }: { locale: SiteLocale; sourc
           locale={locale}
           items={[
             ...(cat && source ? [{ label: base.category, href: `/${locale}/categories/${cat.slug}/` }] : []),
+            ...(cat && subcat
+              ? [{ label: subcat[locale === "en" ? "en" : "zh"], href: `/${locale}/categories/${cat.slug}/#sub-${subcat.key}` }]
+              : []),
             { label: base.title },
           ]}
         />
@@ -323,7 +331,7 @@ export function LocalizedArticle({ locale, source }: { locale: SiteLocale; sourc
                 <section id={sectionIds[index]} key={section.title} className={section.id === "faq" ? "faq-section" : section.id === "checklist" ? "checklist-section" : undefined}>
                   <h2>{section.title}<a className="heading-anchor" href={`#${sectionIds[index]}`} aria-label={en ? "Link to this heading" : "链接到本节"}>#</a></h2>
                   {section.paragraphs.map((paragraph, paragraphIndex) => (
-                    <p key={paragraphIndex} className={section.id === "faq" ? (paragraphIndex % 2 === 0 ? "faq-q" : "faq-a") : undefined}>{paragraph}<CitationLinks ids={section.paragraphReferences?.[paragraphIndex]} references={base.references} locale={locale} /></p>
+                    <p key={paragraphIndex} className={section.id === "faq" ? (paragraphIndex % 2 === 0 ? "faq-q" : "faq-a") : undefined}>{linkTerms(paragraph, bodyTerms, linkedTermIds, `/${locale}`)}<CitationLinks ids={section.paragraphReferences?.[paragraphIndex]} references={base.references} locale={locale} /></p>
                   ))}
                   {index === 1 && source && <ArticleVisual slug={source.slug} locale={locale} category={source.category} index={1} />}
                 </section>
