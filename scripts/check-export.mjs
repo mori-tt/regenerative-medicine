@@ -103,13 +103,15 @@ for (const path of pages) {
     const locale = articleMatch[1] ?? "ja";
     const entry = evidence[articleMatch[2]];
     const document = html.replace(/<script\b[^>]*>[\s\S]*?<\/script>/g, "");
+    // 本文中の用語リンク等でテキストが要素分割されるため、テキスト比較はタグ除去後の文字列に対して行う。
+    const documentText = document.replace(/<[^>]+>/g, "");
     const escapeHtml = (text) => text.replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&#x27;");
     for (const section of entry.locales[locale].sections) {
-      assert.ok(document.includes(escapeHtml(section.title)), `${label}: literature heading not rendered`);
-      for (const paragraph of section.paragraphs) assert.ok(document.includes(escapeHtml(paragraph.text)), `${label}: literature paragraph not rendered`);
+      assert.ok(documentText.includes(escapeHtml(section.title)), `${label}: literature heading not rendered`);
+      for (const paragraph of section.paragraphs) assert.ok(documentText.includes(escapeHtml(paragraph.text)), `${label}: literature paragraph not rendered`);
     }
     for (const correction of entry.corrections.filter((item) => item.locale === locale)) {
-      assert.ok(document.includes(escapeHtml(correction.new)), `${label}: recorded correction was not rendered: ${correction.old.slice(0, 60)}`);
+      assert.ok(documentText.includes(escapeHtml(correction.new)), `${label}: recorded correction was not rendered: ${correction.old.slice(0, 60)}`);
     }
     assert.match(document, /class="citation-links"/, `${label}: inline citations missing`);
     assert.match(document, /id="references-title"/, `${label}: reference list missing`);
