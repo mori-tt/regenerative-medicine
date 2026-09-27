@@ -8,6 +8,7 @@ import {
 import { allFeaturedSlugs } from "@/content/subcategories";
 import { LocalizedArticleCard, localizedArticleFor } from "./localized-article";
 import { ArticleBrowser } from "./article-browser";
+import { FeaturedButton, FeaturedScope } from "./featured-filter";
 import { Breadcrumbs } from "./content";
 import { localizedCategoryName, type SiteLocale } from "@/content/locales";
 
@@ -96,6 +97,7 @@ export function LocalizedArticles({
         {embedded ? <h2>{copy.title}</h2> : <h1>{copy.title}</h1>}
         <p>{copy.lead}</p>
       </div>
+      <FeaturedScope>
       <nav className="filter-links" aria-label={copy.navLabel}>
         <Link
           href={`/${locale}/articles/`}
@@ -120,6 +122,10 @@ export function LocalizedArticles({
             </small>
           </Link>
         ))}
+        <FeaturedButton
+          label={copy.badge}
+          count={list.filter((a) => featuredSet.has(a.slug)).length}
+        />
       </nav>
       <LocalizedArticleGrid
         locale={locale}
@@ -127,6 +133,7 @@ export function LocalizedArticles({
         badgeLabel={copy.badge}
         badgeSlugs={featuredSet}
       />
+      </FeaturedScope>
     </div>
   );
 }

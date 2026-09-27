@@ -73,3 +73,8 @@ export function FeaturedHidden({ children }: { children: ReactNode }) {
   const { on } = useContext(FeaturedContext);
   return on ? null : <>{children}</>;
 }
+
+/** 現在のスコープの絞り込み状態を読む（スコープ外では常にfalse）。 */
+export function useFeaturedOn(): boolean {
+  return useContext(FeaturedContext).on;
+}

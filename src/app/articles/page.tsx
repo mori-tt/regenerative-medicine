@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { articles, categories, visibleArticles } from "@/content/articles";
 import { allFeaturedSlugs } from "@/content/subcategories";
+import { FeaturedButton, FeaturedScope } from "@/components/featured-filter";
 import { ArticleCard, Breadcrumbs } from "@/components/content";
 import { pageMetadata } from "@/lib/site";
 import { ArticleBrowser } from "@/components/article-browser";
@@ -20,6 +21,7 @@ export default function ArticlesPage() {
         <h1>記事一覧</h1>
         <p>一つずつ、理解を深める。気になるテーマから、あなたのペースで読み進めてください。</p>
       </div>
+      <FeaturedScope>
       <nav className="filter-links" aria-label="カテゴリから探す">
         <Link href="/articles/" className="active" aria-current="page">
           すべて <small>{list.length}</small>
@@ -30,6 +32,10 @@ export default function ArticlesPage() {
             <small>{list.filter((a) => a.category === c.slug).length}</small>
           </Link>
         ))}
+        <FeaturedButton
+          label="おすすめ"
+          count={list.filter((a) => featuredSet.has(a.slug)).length}
+        />
       </nav>
       <ArticleBrowser
         terms={list.map((a) => `${a.title} ${a.description}`)}
@@ -43,6 +49,7 @@ export default function ArticlesPage() {
           />
         ))}
       </ArticleBrowser>
+      </FeaturedScope>
     </div>
   );
 }
