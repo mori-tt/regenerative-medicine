@@ -2814,6 +2814,18 @@ section[id^="sub-"] { scroll-margin-top: 80px; }
   font-size: 13px;
   color: var(--muted);
 }
+.glossary-alt {
+  margin-left: 8px;
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--muted);
+}
+.glossary-flat-heading {
+  margin-top: 10px;
+}
+.glossary-flat-heading + .glossary-flat {
+  margin-top: 10px;
+}
 
 
 .article-terms {
@@ -3175,7 +3187,7 @@ mark { background: #fdf3c9; color: inherit; padding: 0 1px; border-radius: 2px; 
   color: var(--ink);
 }
 .glossary-sort button.active { background: var(--green); color: #fff; border-color: var(--green); }
-.glossary-flat { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; }
+.glossary-flat { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 16px; }
 .kw-chips {
   display: flex;
   flex-wrap: wrap;

@@ -20,6 +20,8 @@ export function Glossary({ locale = "ja" }: { locale?: GlossaryLocale }) {
         term: t,
         definition: d,
         names: [term.ja[0], term.en[0], term.zh[0]],
+        /** あいうえお順の読み（未設定は表示名を使用） */
+        kana: term.yomi ?? term.ja[0],
         ...(linked
           ? {
               link: {

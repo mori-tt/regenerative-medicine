@@ -13,6 +13,8 @@ export type GlossaryTermView = {
   definition: string;
   /** [ja, en, zh] の用語名。言語をまたいだ検索と並び替えに使う。 */
   names: [string, string, string];
+  /** あいうえおソート用の読み（ひらがな or 表示名）。 */
+  kana: string;
   link?: { href: string; title: string };
   ref?: { title: string; url: string };
 };
@@ -40,27 +42,59 @@ export function GlossaryList({ locale, groups }: { locale: GlossaryLocale; group
     .flatMap((g) => g.terms)
     .filter(matchTerm)
     .sort((a, b) =>
-      sort === "kana" ? kanaCollator.compare(a.names[0], b.names[0]) : alphaCollator.compare(a.names[1], b.names[1]),
+      sort === "kana" ? kanaCollator.compare(a.kana, b.kana) : alphaCollator.compare(a.names[1], b.names[1]),
     );
 
-  const renderItem = (term: GlossaryTermView) => (
-    <div className="glossary-item" key={term.id} id={term.id}>
-      <dt>{term.term}</dt>
-      <dd>
-        {term.definition}
-        {term.link && (
-          <Link className="glossary-link" href={term.link.href}>
-            {copy.more}：{term.link.title} →
-          </Link>
-        )}
-        {term.ref && (
-          <a className="glossary-link glossary-source" href={term.ref.url} target="_blank" rel="noopener noreferrer">
-            {copy.source}：{term.ref.title} ↗
-          </a>
-        )}
-      </dd>
-    </div>
-  );
+  // 五十音の行。カタカナ・濁音・半濁音・小書きは清音の行に寄せる。
+  const kanaRow = (ch: string) => {
+    const hira = ch.replace(/[\u30a1-\u30f6]/g, (c) => String.fromCharCode(c.charCodeAt(0) - 0x60)).replace("ゔ", "う").replace("ヰ", "い").replace("ヱ", "え");
+    const c = hira.charCodeAt(0);
+    if (c >= 0x3041 && c <= 0x304a) return "あ";
+    if (c >= 0x304b && c <= 0x3054) return "か";
+    if (c >= 0x3055 && c <= 0x305e) return "さ";
+    if (c >= 0x305f && c <= 0x3069) return "た";
+    if (c >= 0x306a && c <= 0x306e) return "な";
+    if (c >= 0x306f && c <= 0x307d) return "は";
+    if (c >= 0x307e && c <= 0x3082) return "ま";
+    if ((c >= 0x3083 && c <= 0x3088) || c === 0x3094) return "や";
+    if (c >= 0x3089 && c <= 0x308d) return "ら";
+    if (c >= 0x308e && c <= 0x3093) return "わ";
+    return "その他";
+  };
+  const kanaOrder = ["あ", "か", "さ", "た", "な", "は", "ま", "や", "ら", "わ", "その他"];
+  const buckets: { key: string; terms: GlossaryTermView[] }[] =
+    sort === "kana"
+      ? kanaOrder
+          .map((key) => ({ key, terms: flatTerms.filter((t) => kanaRow(t.kana) === key) }))
+          .filter((b) => b.terms.length > 0)
+      : Array.from(new Set(flatTerms.map((t) => (/^[a-z]/i.test(t.names[1]) ? t.names[1][0].toUpperCase() : "#"))))
+          .map((key) => ({ key, terms: flatTerms.filter((t) => (/^[a-z]/i.test(t.names[1]) ? t.names[1][0].toUpperCase() : "#") === key) }));
+
+  const renderItem = (term: GlossaryTermView) => {
+    // フラット表示では並び替えに使った別名を補助表示する（英字頭の和語などで位置を分かりやすくする）
+    const alt = sort === "alpha" ? term.names[1] : sort === "kana" && term.kana !== term.term ? term.kana : null;
+    return (
+      <div className="glossary-item" key={term.id} id={term.id}>
+        <dt>
+          {term.term}
+          {alt && alt !== term.term && <span className="glossary-alt">{alt}</span>}
+        </dt>
+        <dd>
+          {term.definition}
+          {term.link && (
+            <Link className="glossary-link" href={term.link.href}>
+              {copy.more}：{term.link.title} →
+            </Link>
+          )}
+          {term.ref && (
+            <a className="glossary-link glossary-source" href={term.ref.url} target="_blank" rel="noopener noreferrer">
+              {copy.source}：{term.ref.title} ↗
+            </a>
+          )}
+        </dd>
+      </div>
+    );
+  };
 
   return (
     <div className="glossary">
@@ -88,13 +122,15 @@ export function GlossaryList({ locale, groups }: { locale: GlossaryLocale; group
           </button>
         ))}
       </div>
-      {sort === "group" && (
-        <nav className="filter-links" id="glossary-index" aria-label={copy.index}>
-          {groups.map((group) => (
-            <a key={group.id} href={`#${group.id}`}>{group.label}</a>
-          ))}
-        </nav>
-      )}
+      <nav className="filter-links" id="glossary-index" aria-label={copy.index}>
+        {sort === "group"
+          ? groups.map((group) => (
+              <a key={group.id} href={`#${group.id}`}>{group.label}</a>
+            ))
+          : buckets.map((bucket) => (
+              <a key={bucket.key} href={`#gl-${sort}-${bucket.key}`}>{bucket.key}</a>
+            ))}
+      </nav>
       {sort === "group" ? (
         groups.map((group) => {
           const visibleTerms = group.terms.filter(matchTerm);
@@ -111,7 +147,16 @@ export function GlossaryList({ locale, groups }: { locale: GlossaryLocale; group
           );
         })
       ) : (
-        <dl className="glossary-flat">{flatTerms.map(renderItem)}</dl>
+        buckets.map((bucket) => (
+          <section key={bucket.key} id={`gl-${sort}-${bucket.key}`} className="glossary-group">
+            <h2 className="listing-heading glossary-flat-heading">
+              {bucket.key}
+              <span className="listing-count">{bucket.terms.length}</span>
+            </h2>
+            <dl className="glossary-flat">{bucket.terms.map(renderItem)}</dl>
+            <a className="back-to-index" href="#glossary-index">{copy.back}</a>
+          </section>
+        ))
       )}
       <p className="glossary-note">{copy.note}</p>
     </div>
