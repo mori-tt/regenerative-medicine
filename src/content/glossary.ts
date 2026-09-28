@@ -7,6 +7,8 @@ type Term = {
   link?: string;
   /** 定義の根拠となる外部出典（公的機関・学術機関など） */
   ref?: { title: string; url: string };
+  /** 表記ゆれ・別名。本文中のこの表記も同じ用語として検出する（表示名は変えない）。 */
+  match?: { ja?: string[]; en?: string[]; zh?: string[] };
 };
 
 export type GlossaryGroup = {
@@ -24,17 +26,19 @@ export function glossaryTermId(groupIndex: number, termIndex: number) {
 type GlossLocale = "ja" | "en" | "zh";
 
 /** 記事本文のテキストに登場する用語を抽出（最大 limit 件、用語集の並び順）。 */
-export function termsInText(text: string, locale: GlossLocale, limit = 6): { id: string; term: string }[] {
-  const found: { id: string; term: string }[] = [];
+export function termsInText(text: string, locale: GlossLocale, limit = 6): { id: string; term: string; definition: string; matched: string }[] {
+  const found: { id: string; term: string; definition: string; matched: string }[] = [];
   const lower = text.toLowerCase();
+  const matches = (value: string) =>
+    locale === "ja" || locale === "zh"
+      ? text.includes(value)
+      : new RegExp(`\\b${value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\b`, "i").test(lower);
   glossaryGroups.forEach((group, gi) => {
     group.terms.forEach((term, ti) => {
-      const [t] = locale === "ja" ? term.ja : locale === "en" ? term.en : term.zh;
+      const [t, d] = locale === "ja" ? term.ja : locale === "en" ? term.en : term.zh;
       if (!t) return;
-      const hit = locale === "ja" || locale === "zh"
-        ? text.includes(t)
-        : new RegExp(`\\b${t.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\b`, "i").test(lower);
-      if (hit) found.push({ id: glossaryTermId(gi, ti), term: t });
+      const surface = matches(t) ? t : (term.match?.[locale] ?? []).find((alias) => matches(alias));
+      if (surface) found.push({ id: glossaryTermId(gi, ti), term: t, definition: d, matched: surface });
     });
   });
   // 汎用語（短い和文語）のヒットを絞る：4文字以上 or link/ref 付きを優先
@@ -88,6 +92,7 @@ export const glossaryGroups: GlossaryGroup[] = [
         ja: ["間葉系幹細胞（MSC）", "骨髄・脂肪・臍帯などに由来する体性幹細胞。再生医療の研究や自由診療で多く用いられています。"],
         en: ["Mesenchymal stem cell (MSC)", "Somatic stem cells derived from bone marrow, fat, or umbilical cord. Widely used in research and private-practice offerings."],
         zh: ["间充质干细胞（MSC）", "来源于骨髓、脂肪、脐带等的体性干细胞，广泛用于研究和自费诊疗。"],
+        match: { ja: ["間葉系幹細胞", "MSC", "間葉系間質細胞"], en: ["MSC"], zh: ["MSC"] },
         link: "mesenchymal-basics",
         ref: { title: "日本再生医療学会", url: "https://jsrm.jp/" },
       },
@@ -268,6 +273,7 @@ export const glossaryGroups: GlossaryGroup[] = [
       },
       {
         ja: ["初期化（リプログラミング）", "分化した体の細胞を、iPS細胞のような未熟な状態に戻すこと。"],
+        match: { ja: ["リプログラミング"] },
         en: ["Reprogramming", "Resetting a differentiated body cell back to an immature state such as an iPS cell."],
         zh: ["重编程", "将已分化的体细胞逆转为iPS细胞等未成熟状态。"],
         ref: { title: "CiRA（京都大学iPS細胞研究所）", url: "https://www.cira.kyoto-u.ac.jp/j/faq/faq_index.html" },
@@ -289,6 +295,7 @@ export const glossaryGroups: GlossaryGroup[] = [
       },
       {
         ja: ["パラクリン作用", "細胞が分泌する物質（サイトカインなど）を介して、周囲の細胞に働きかける作用。投与細胞の働き方の有力な仮説です。"],
+        match: { ja: ["パラクライン作用", "パラクライン"] },
         en: ["Paracrine effect", "Action on neighboring cells via secreted substances such as cytokines. A leading hypothesis for how administered cells work."],
         zh: ["旁分泌作用", "细胞通过分泌细胞因子等物质作用于周围细胞，是投与细胞发挥作用的代表性假说。"],
         link: "paracrine-effect",
@@ -366,6 +373,7 @@ export const glossaryGroups: GlossaryGroup[] = [
       },
       {
         ja: ["細胞外基質", "細胞の周囲にある支持構造。コラーゲンなどのタンパク質が組織の形を保ちます。"],
+        match: { ja: ["細胞外マトリックス（ECM）", "細胞外マトリックス", "ECM"] },
         en: ["Extracellular matrix", "The supporting structure around cells — proteins such as collagen that maintain tissue shape."],
         zh: ["细胞外基质", "细胞周围的支持结构，胶原蛋白等蛋白维持组织形态。"],
         link: "cells-tissues-organs",
@@ -1226,6 +1234,13 @@ export const glossaryGroups: GlossaryGroup[] = [
         link: "msc-secretome",
       },
       {
+        ja: ["ケモカイン", "サイトカインの一種で、細胞を特定の場所へ誘導する信号物質。細胞の移動（ホーミング）に関わります。"],
+        en: ["Chemokine", "A type of cytokine that guides cells to specific locations; involved in cell migration (homing)."],
+        zh: ["趋化因子", "细胞因子的一种，引导细胞移动到特定部位，与细胞归巢有关。"],
+        ref: { title: "日本再生医療学会", url: "https://jsrm.jp/" },
+        link: "stem-cell-homing",
+      },
+      {
         ja: ["抗原・抗体", "抗原は異物を標識する分子、抗体はそれに結合して免疫を誘導するたんぱく質。"],
         en: ["Antigen & antibody", "An antigen marks foreign material; an antibody binds it and guides the immune response."],
         zh: ["抗原与抗体", "抗原是标记异物的分子，抗体是与其结合并引导免疫反应的蛋白质。"],
@@ -1308,6 +1323,13 @@ export const glossaryGroups: GlossaryGroup[] = [
         zh: ["生长因子", "促进细胞增殖和分化的蛋白质，参与修复与再生。"],
         ref: { title: "日本再生医療学会", url: "https://jsrm.jp/" },
         link: "growth-factors",
+      },
+      {
+        ja: ["血管新生", "新しい血管が作られること。損傷した組織の修復では、血流を通じた酸素・栄養の供給が重要になります。"],
+        en: ["Angiogenesis", "The formation of new blood vessels. In tissue repair, blood flow delivers oxygen and nutrients."],
+        zh: ["血管新生", "新血管的形成。组织修复需要通过血流供给氧气和营养。"],
+        ref: { title: "日本再生医療学会", url: "https://jsrm.jp/" },
+        link: "body-repair-mechanisms",
       },
       {
         ja: ["受容体", "細胞表面で特定の物質を受け取る構造。細胞間の情報伝達の入口です。"],
@@ -1537,6 +1559,13 @@ export const glossaryGroups: GlossaryGroup[] = [
         ja: ["組織工学（ティッシュエンジニアリング）", "細胞・足場材料・成長因子を組み合わせて組織を作る考え方。"],
         en: ["Tissue engineering", "An approach that combines cells, scaffolds, and growth factors to build tissue."],
         zh: ["组织工程学", "将细胞、支架材料与生长因子结合来构建组织的方法。"],
+        link: "scaffolds",
+        ref: { title: "日本再生医療学会", url: "https://jsrm.jp/" },
+      },
+      {
+        ja: ["生体材料", "医療に使う人工材料や生体由来材料。組織工学では細胞の足場として利用されます。"],
+        en: ["Biomaterial", "Artificial or biological materials used in medicine — in tissue engineering, often as cell scaffolds."],
+        zh: ["生物材料", "用于医疗的人工或生物来源材料，在组织工程中用作细胞支架。"],
         link: "scaffolds",
         ref: { title: "日本再生医療学会", url: "https://jsrm.jp/" },
       },

@@ -1,11 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
+import { Fragment } from "react";
 import { notFound } from "next/navigation";
 import { articleBuildMode, articles, categoryFor, isReviewed, isVisibleArticle, visibleArticles } from "@/content/articles";
 import { ArticleCard, AdSlot, Breadcrumbs, JsonLd } from "@/components/content";
 import { CellArt } from "@/components/visuals";
 import { ArticleVisual } from "@/components/article-visuals";
 import { ArticleTerms } from "@/components/article-terms";
+import { ArticleTable } from "@/components/article-table";
 import { ArticleClosing } from "@/components/article-closing";
 import { ArticleFeedback } from "@/components/article-feedback";
 import { ReadingTools } from "@/components/reading-tools";
@@ -71,11 +73,19 @@ export default async function ArticlePage({
             mainEntityOfPage: absolute(`/articles/${article.slug}/`),
             articleSection: cat.label,
             ...(article.image ? { image: [absolute(article.image)] } : {}),
-            author: {
-              "@type": "Organization",
-              name: `${site.name}編集部`,
-              url: absolute("/about/"),
-            },
+            author: article.author
+              ? {
+                  "@type": "Person",
+                  name: article.author.name,
+                  jobTitle: article.author.title,
+                  affiliation: { "@type": "Organization", name: article.author.affiliation },
+                  url: article.author.profileUrl,
+                }
+              : {
+                  "@type": "Organization",
+                  name: `${site.name}編集部`,
+                  url: absolute("/about/"),
+                },
             publisher: {
               "@type": "Organization",
               name: site.name,
@@ -121,7 +131,11 @@ export default async function ArticlePage({
             <h1>{article.title}</h1>
             <p>{article.description}</p>
             <div className="byline">
-              <span>編集：{site.editorName || `${site.name}編集部`}</span>
+              {article.author ? (
+                <span className="author-badge">執筆・監修：<a href={article.author.profileUrl}>{article.author.honorific}</a>（{article.author.title}）</span>
+              ) : (
+                <span>編集：{site.editorName || `${site.name}編集部`}</span>
+              )}
               <span>位置づけ：一般情報</span>
               <time dateTime={article.updatedAt}>
                 最終編集：{article.updatedAt.replaceAll("-", ".")}
@@ -171,9 +185,20 @@ export default async function ArticlePage({
             {article.sections.map((section, sectionIndex) => (
               <section id={section.id} key={section.id} className={section.id === "faq" ? "faq-section" : section.id === "checklist" ? "checklist-section" : undefined}>
                 <h2>{section.title}<a className="heading-anchor" href={`#${section.id}`} aria-label="この見出しへのリンク">#</a></h2>
+                {section.table && (section.tableAfter === undefined || section.tableAfter < 0) && (
+                  <ArticleTable table={section.table} />
+                )}
                 {section.paragraphs.map((p, paragraphIndex) => (
-                  <p key={paragraphIndex} className={section.id === "faq" ? (p.startsWith("Q.") ? "faq-q" : "faq-a") : undefined}>{linkTerms(p, bodyTerms, linkedTermIds, "")}<CitationLinks ids={section.paragraphReferences?.[paragraphIndex]} references={article.references} locale="ja" /></p>
+                  <Fragment key={paragraphIndex}>
+                    <p className={section.id === "faq" ? (p.startsWith("Q.") ? "faq-q" : "faq-a") : undefined}>{linkTerms(p, bodyTerms, linkedTermIds, "", "ja")}<CitationLinks ids={section.paragraphReferences?.[paragraphIndex]} references={article.references} locale="ja" /></p>
+                    {section.table && section.tableAfter === paragraphIndex && (
+                      <ArticleTable table={section.table} />
+                    )}
+                  </Fragment>
                 ))}
+                {section.table && section.tableAfter !== undefined && section.tableAfter >= section.paragraphs.length && (
+                  <ArticleTable table={section.table} />
+                )}
                 {sectionIndex === 1 && <ArticleVisual slug={article.slug} category={article.category} index={1} />}
               </section>
             ))}
@@ -189,7 +214,22 @@ export default async function ArticlePage({
           <ArticleClosing category={article.category} />
           <ArticleVisual slug={article.slug} category={article.category} index={2} />
           <ArticleReferences references={article.references} locale="ja" />
-          {reviewed && article.reviewer ? (
+          {article.author ? (
+            <section className="reviewer-box author-box">
+              <h2>この記事の執筆・監修医師</h2>
+              <>
+                <a href={article.author.profileUrl}>
+                  {article.author.name}
+                </a>
+                <p>
+                  {article.author.title} / {article.author.affiliation}
+                </p>
+                <p>執筆日：{article.author.authoredAt}</p>
+                {article.reviewer?.reviewedAt && <p>監修日：{article.reviewer.reviewedAt}</p>}
+              </>
+              <Link href="/supervision/">監修の方針を読む →</Link>
+            </section>
+          ) : reviewed && article.reviewer ? (
             <section className="reviewer-box">
               <h2>この記事の監修医師</h2>
               <>

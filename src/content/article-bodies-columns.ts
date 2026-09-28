@@ -1,7 +1,7 @@
 // Translated bodies for scheduled columns (publishAt-gated).
 export type ArticleBodyLocale = {
   points: string[];
-  sections: { title: string; paragraphs: string[] }[];
+  sections: { title: string; paragraphs: string[]; table?: { headers: string[]; rows: string[][] }; tableAfter?: number }[];
 };
 
 function b(

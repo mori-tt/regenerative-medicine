@@ -81,11 +81,16 @@ for (const article of articles) {
   seen.add(slug);
   if (!records[slug]) issue(slug, "missing_review_record");
   const entry = evidence[slug];
+  const physicianAuthored = Boolean(article.author);
   if (!entry) {
-    issue(slug, "missing_topic_evidence");
-    continue;
+    // 医師執筆原稿は編集部の文献対応セクションを付加しないため対象外。
+    // それ以外は記事ごとの文献マッピングを必須とする。
+    if (physicianAuthored)
+      advisories.push({ slug, type: "physician_authored_manuscript" });
+    else issue(slug, "missing_topic_evidence");
   }
-  if (entry.category !== article.category) issue(slug, "wrong_category");
+  if (entry && entry.category !== article.category)
+    issue(slug, "wrong_category");
   checkAdvertisingRisk(slug, "ja", "title", article.title);
   checkAdvertisingRisk(slug, "ja", "description", article.description);
   for (const point of article.points ?? [])
@@ -116,6 +121,7 @@ for (const article of articles) {
       "stale_editorial_record",
       "Run generate-article-review-records after editing",
     );
+  if (!entry) continue;
   if (!entry.auditNote?.trim()) issue(slug, "missing_editorial_note");
   const ids = new Set();
   const articleURLs = new Set();

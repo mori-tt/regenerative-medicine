@@ -1,8 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
+import { Fragment } from "react";
 import { articleBuildMode, categoryFor, isReviewed, type Article } from "@/content/articles";
 import { adjacentArticles, relatedArticles } from "@/lib/related-articles";
 import { articleLocales } from "@/content/article-locales";
+import { articleBodiesDoctor } from "@/content/article-bodies-doctor";
 import { articleBodiesResearch } from "@/content/article-bodies-research";
 import { articleBodiesTreatment } from "@/content/article-bodies-treatment";
 import { articleBodiesStemCells } from "@/content/article-bodies-stem-cells";
@@ -31,6 +33,7 @@ import { checklistSectionsFor } from "@/content/article-checklist";
 import { CitationLinks, ArticleReferences } from "./article-references";
 import { termsInText } from "@/content/glossary";
 import { linkTerms } from "./inline-terms";
+import { ArticleTable } from "./article-table";
 
 const englishTerms: Record<string, string> = {
   basics: "The Basics", stem: "Stem Cells", cell: "Cell", cells: "Cells", tissue: "Tissue", tissues: "Tissues", organ: "Organ", organs: "Organs", treatment: "Treatment", research: "Research", safety: "Safety", cost: "Cost", insurance: "Insurance", clinical: "Clinical", trials: "Trials", trial: "Trial", study: "Study", studies: "Studies", immune: "Immune System", blood: "Blood", bone: "Bone", skin: "Skin", heart: "Heart", nerve: "Nerve", brain: "Brain", gene: "Genes", genes: "Genes", genome: "Genome", culture: "Cell Culture", quality: "Quality", consent: "Informed Consent", followup: "Follow-up", aftercare: "Aftercare", decision: "Decision-making", family: "Family Support", doctor: "Doctor", hospital: "Hospital", rehabilitation: "Rehabilitation", statistics: "Statistics", evidence: "Evidence", future: "Future Research",
@@ -44,6 +47,7 @@ function topicFromSlug(slug: string, locale: SiteLocale) {
 }
 
 const bodyBySlug: Record<string, { en: ArticleBodyLocale; zh: ArticleBodyLocale }> = {
+  ...articleBodiesDoctor,
   ...articleBodiesResearch,
   ...articleBodiesTreatment,
   ...articleBodiesStemCells,
@@ -54,7 +58,7 @@ const bodyBySlug: Record<string, { en: ArticleBodyLocale; zh: ArticleBodyLocale 
   ...articleBodiesStemTopics,
 };
 
-export type LocalizedSection = { id?: string; title: string; paragraphs: string[]; paragraphReferences?: string[][] };
+export type LocalizedSection = { id?: string; title: string; paragraphs: string[]; paragraphReferences?: string[][]; table?: { headers: string[]; rows: string[][] }; tableAfter?: number };
 
 function tupleSections(sections: [string, string, string][]): LocalizedSection[] {
   return sections.map(([title, first, second]) => ({
@@ -95,6 +99,7 @@ const chrome = {
     reviewerPolicy: "Read the review policy", disclaimer: "This article provides general information. For individual diagnosis or treatment, consult a physician.",
     related: "Related reading", draftNotice: "This article organizes general information; it does not present grounds or recommendations for individual diagnosis or treatment. Base medical decisions on current public information and consultation with medical professionals.",
     readGuide: "Read the guide", previewStatus: "Scheduled · review preview", scheduled: (date: string) => `Scheduled for ${date}`,
+    writtenBy: "Written & medically reviewed by", authorBox: "Physician who wrote and reviewed this article", authoredOn: "Written", reviewedOn: "Reviewed",
   },
   zh: {
     home: "首页", editedBy: "编辑：再生医学指南编辑部", position: "定位：一般信息",
@@ -105,6 +110,7 @@ const chrome = {
     reviewerPolicy: "阅读审核方针", disclaimer: "本文提供一般信息。个别诊断与治疗请咨询医生。",
     related: "相关阅读", draftNotice: "本文整理一般信息，不作为个别诊断与治疗的依据或推荐。医疗判断请基于最新公共信息与医疗专业人员咨询。",
     readGuide: "阅读指南", previewStatus: "预定发布・审核确认用", scheduled: (date: string) => `预定发布：${date}`,
+    writtenBy: "撰写・审核：", authorBox: "本文撰写・审核医生", authoredOn: "执笔日期", reviewedOn: "审核日期",
   },
 } as const;
 
@@ -213,11 +219,19 @@ export function LocalizedArticle({ locale, source }: { locale: SiteLocale; sourc
               mainEntityOfPage: absolute(`/${locale}/articles/${source.slug}/`),
               articleSection: base.category,
               ...(source.image ? { image: [absolute(source.image)] } : {}),
-              author: {
-                "@type": "Organization",
-                name: en ? site.nameEn : site.nameZh,
-                url: absolute(`/${locale}/about/`),
-              },
+              author: source.author
+                ? {
+                    "@type": "Person",
+                    name: source.author.name,
+                    jobTitle: source.author.title,
+                    affiliation: { "@type": "Organization", name: source.author.affiliation },
+                    url: source.author.profileUrl,
+                  }
+                : {
+                    "@type": "Organization",
+                    name: en ? site.nameEn : site.nameZh,
+                    url: absolute(`/${locale}/about/`),
+                  },
               publisher: {
                 "@type": "Organization",
                 name: site.name,
@@ -243,7 +257,11 @@ export function LocalizedArticle({ locale, source }: { locale: SiteLocale; sourc
               <p>{base.description}</p>
               {source && (
                 <div className="byline">
-                  <span>{copy.editedBy}</span>
+                  {source.author ? (
+                    <span className="author-badge">{copy.writtenBy} <a href={source.author.profileUrl}>{source.author.name}</a>（{source.author.title}）</span>
+                  ) : (
+                    <span>{copy.editedBy}</span>
+                  )}
                   <span>{copy.position}</span>
                   <time dateTime={source.updatedAt}>
                     {copy.updated}：{source.updatedAt.replaceAll("-", ".")}
@@ -294,9 +312,20 @@ export function LocalizedArticle({ locale, source }: { locale: SiteLocale; sourc
               {base.sections.map((section, index) => (
                 <section id={sectionIds[index]} key={section.title} className={section.id === "faq" ? "faq-section" : section.id === "checklist" ? "checklist-section" : undefined}>
                   <h2>{section.title}<a className="heading-anchor" href={`#${sectionIds[index]}`} aria-label={en ? "Link to this heading" : "链接到本节"}>#</a></h2>
+                  {section.table && (section.tableAfter === undefined || section.tableAfter < 0) && (
+                    <ArticleTable table={section.table} />
+                  )}
                   {section.paragraphs.map((paragraph, paragraphIndex) => (
-                    <p key={paragraphIndex} className={section.id === "faq" ? (paragraphIndex % 2 === 0 ? "faq-q" : "faq-a") : undefined}>{linkTerms(paragraph, bodyTerms, linkedTermIds, `/${locale}`)}<CitationLinks ids={section.paragraphReferences?.[paragraphIndex]} references={base.references} locale={locale} /></p>
+                    <Fragment key={paragraphIndex}>
+                      <p className={section.id === "faq" ? (paragraphIndex % 2 === 0 ? "faq-q" : "faq-a") : undefined}>{linkTerms(paragraph, bodyTerms, linkedTermIds, `/${locale}`, locale)}<CitationLinks ids={section.paragraphReferences?.[paragraphIndex]} references={base.references} locale={locale} /></p>
+                      {section.table && section.tableAfter === paragraphIndex && (
+                        <ArticleTable table={section.table} />
+                      )}
+                    </Fragment>
                   ))}
+                  {section.table && section.tableAfter !== undefined && section.tableAfter >= section.paragraphs.length && (
+                    <ArticleTable table={section.table} />
+                  )}
                   {index === 1 && source && <ArticleVisual slug={source.slug} locale={locale} category={source.category} index={1} />}
                 </section>
               ))}
@@ -313,7 +342,26 @@ export function LocalizedArticle({ locale, source }: { locale: SiteLocale; sourc
             {source && <ArticleClosing category={source.category} locale={locale} />}
             {source && <ArticleVisual slug={source.slug} locale={locale} category={source.category} index={2} />}
             <ArticleReferences references={base.references} locale={locale} />
-            {reviewed && source?.reviewer ? (
+            {source?.author ? (
+              <section className="reviewer-box author-box">
+                <h2>{copy.authorBox}</h2>
+                <>
+                  <a href={source.author.profileUrl}>{source.author.name}</a>
+                  <p>
+                    {source.author.title} / {source.author.affiliation}
+                  </p>
+                  <p>
+                    {copy.authoredOn}：{source.author.authoredAt}
+                  </p>
+                  {source.reviewer?.reviewedAt && (
+                    <p>
+                      {copy.reviewedOn}：{source.reviewer.reviewedAt}
+                    </p>
+                  )}
+                </>
+                <Link href={`/${locale}/supervision/`}>{copy.reviewerPolicy} →</Link>
+              </section>
+            ) : reviewed && source?.reviewer ? (
               <section className="reviewer-box">
                 <h2>{copy.reviewerDone}</h2>
                 <>

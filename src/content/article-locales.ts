@@ -1497,4 +1497,29 @@ export const articleLocales: Record<
     "干细胞与外泌体美容医疗的效果与注意事项",
     "整理美容医疗中干细胞及外泌体相关项目的预期效果与验证现状。",
   ),
+  // 千原良友先生 執筆記事（医師執筆シリーズ）
+  "doctor-stem-cells-basics": t(
+    "What Are Stem Cells? A Clear Guide to Why They Matter in Regenerative Medicine",
+    "The two abilities of stem cells — self-renewal and differentiation — and how they differ from ordinary cells.",
+    "什么是干细胞？再生医学受关注原因的通俗解读",
+    "整理干细胞的两大能力“自我复制”与“分化”，以及与普通细胞的区别。",
+  ),
+  "doctor-regenerative-medicine": t(
+    "What Is Regenerative Medicine? How Stem Cell-Based Treatment Works",
+    "Regenerative medicine aims to repair and regenerate cells, tissues, and organs damaged by illness or injury — and stem-cell therapy is one of its methods.",
+    "什么是再生医学？干细胞治疗机制的解说",
+    "再生医学以修复、再生受损的细胞・组织・器官为目标，干细胞治疗是其手段之一。",
+  ),
+  "doctor-stem-cell-types": t(
+    "What Types of Stem Cells Are There? ES Cells, iPS Cells, and Mesenchymal Stem Cells",
+    "Stem cells come in several kinds that differ in origin, differentiation range, and research use — ES cells, iPS cells, and somatic stem cells.",
+    "干细胞有哪些种类？ES细胞、iPS细胞与间充质干细胞的区别",
+    "干细胞的种类在来源、分化范围与研究目的上各不相同，介绍三种代表性类型。",
+  ),
+  "doctor-regenerative-approaches": t(
+    "Three Approaches to Regenerative Medicine: Cell Transplantation, Tissue Engineering, and Harnessing the Body",
+    "Regenerative medicine is not just 'putting stem cells in' — it supplies cells, builds tissue, and draws out the body's own repair capacity.",
+    "再生医学的三种路径：细胞移植、组织工程与激发自身再生",
+    "再生医学不只是“注入干细胞”，还包括补充细胞、构建组织与发挥身体自身力量。",
+  ),
 };

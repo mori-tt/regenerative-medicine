@@ -89,10 +89,15 @@ for (const [index, article] of sortedArticles.entries()) {
     media.categoryDefaults[category] ?? media.categoryDefaults.basics;
   const defaultImageKey =
     defaultImages[rawIndexBySlug.get(slug) % defaultImages.length];
-  const topicEvidence = evidence[slug];
+  const physicianAuthored = Boolean(article.author);
+  const topicEvidence = evidence[slug] ?? {
+    corrections: [],
+    sources: [],
+    auditNote: "",
+  };
   const contentHash = manuscriptHash(
     article,
-    topicEvidence,
+    evidence[slug],
     translations[slug],
   );
   const previousHash = previous.editorialEvidence?.contentHash;
@@ -109,17 +114,23 @@ for (const [index, article] of sortedArticles.entries()) {
     imageKey: previous.imageKey ?? defaultImageKey,
     publishAt: previous.publishAt ?? scheduledDate(index),
     publishedAt: previous.publishedAt ?? "",
-    releaseTrack: initialCandidates.has(slug)
-      ? "initial-candidate"
-      : "scheduled",
+    releaseTrack: physicianAuthored
+      ? "physician-authored"
+      : initialCandidates.has(slug)
+        ? "initial-candidate"
+        : "scheduled",
     medicalStatus: changed
       ? "needs_medical_review"
       : (previous.medicalStatus ?? "needs_medical_review"),
     legalStatus: changed
       ? "needs_legal_editorial_review"
       : (previous.legalStatus ?? "needs_legal_editorial_review"),
-    evidenceStatus: "topic_sources_mapped_professional_review_pending",
-    clarityStatus: "editorial_expansion_added_professional_readthrough_pending",
+    evidenceStatus: physicianAuthored
+      ? "physician_authored_manuscript_no_editorial_expansion"
+      : "topic_sources_mapped_professional_review_pending",
+    clarityStatus: physicianAuthored
+      ? "physician_manuscript_kept_verbatim"
+      : "editorial_expansion_added_professional_readthrough_pending",
     riskFlags: flags(block, category),
     referenceCount: new Set(
       [...article.references, ...topicEvidence.sources].map(
@@ -147,8 +158,9 @@ for (const [index, article] of sortedArticles.entries()) {
       conflictOfInterest: previousReviewer.conflictOfInterest ?? "",
     },
     publishGate: "review_record_required",
-    notes:
-      "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
+    notes: physicianAuthored
+      ? "医師本人の執筆原稿。文面は原文のまま掲載し、編集部の文献対応セクションは付加しない。"
+      : "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
   };
 }
 

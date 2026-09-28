@@ -12,11 +12,18 @@ export type EvidenceSource = {
   accessedScope: "abstract" | "full-text" | "official-guidance";
   checkedAt: string;
 };
+export type ArticleTable = {
+  headers: string[];
+  rows: string[][];
+};
 export type CitedSection = {
   id: string;
   title: string;
   paragraphs: string[];
   paragraphReferences?: string[][];
+  /** 本文中に差し込む比較表。tableAfter は直前に置く段落の index。未指定なら段落の先頭に置く。 */
+  table?: ArticleTable;
+  tableAfter?: number;
 };
 export type ArticleEvidence = {
   sources: EvidenceSource[];

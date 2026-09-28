@@ -17,6 +17,8 @@ export type ArticleCardData = {
   kicker: string;
   subcategory?: string;
   reviewed: boolean;
+  /** "authored" = 医師執筆記事、"reviewed" = 医師監修済み、"editorial" = 編集部原稿 */
+  statusClass: "authored" | "reviewed" | "editorial";
   statusLabel: string;
   readingLabel: string;
   dateLabel: string;
@@ -27,6 +29,7 @@ export type ArticleCardData = {
 
 const cardCopy = {
   ja: {
+    authored: "医師執筆・監修済み",
     reviewed: "医師監修済み",
     editorial: "一般情報・編集部記事",
     reading: (n: number) => `約${n}分で読める`,
@@ -35,6 +38,7 @@ const cardCopy = {
     scheduled: (d: string) => `公開予定：${d}｜確認用`,
   },
   en: {
+    authored: "Physician-written & reviewed",
     reviewed: "Editorial manuscript",
     editorial: "Editorial manuscript · Translated version",
     reading: (n: number) => `About ${n} min read`,
@@ -43,6 +47,7 @@ const cardCopy = {
     scheduled: (d: string) => `Scheduled · review preview · Scheduled for ${d}`,
   },
   zh: {
+    authored: "医生撰写・审核",
     reviewed: "编辑原稿",
     editorial: "编辑原稿 · 翻译版",
     reading: (n: number) => `约${n}分钟阅读`,
@@ -75,7 +80,8 @@ export function toCardData(
     kicker: cardKicker(article, locale),
     ...(localized ? (localized.subcategory ? { subcategory: localized.subcategory } : {}) : sub ? { subcategory: sub.ja } : {}),
     reviewed,
-    statusLabel: reviewed ? copy.reviewed : copy.editorial,
+    statusClass: article.author ? "authored" : reviewed ? "reviewed" : "editorial",
+    statusLabel: article.author ? copy.authored : reviewed ? copy.reviewed : copy.editorial,
     readingLabel: copy.reading(article.readingMinutes),
     dateLabel: article.publishedAt ? copy.published(dot(article.publishedAt)) : copy.edited(dot(article.updatedAt)),
     ...(scheduled && article.publishAt ? { scheduledLabel: copy.scheduled(dot(article.publishAt)) } : {}),
@@ -117,7 +123,7 @@ export function ArticleCard({
           {badge && <span className="card-badge">{badge}</span>}
         </div>
         <div className="article-meta">
-          <span className={`review-chip ${data.reviewed ? "reviewed" : "editorial"}`}>{data.statusLabel}</span>
+          <span className={`review-chip ${data.statusClass}`}>{data.statusLabel}</span>
           <span>{data.readingLabel}</span>
         </div>
         {data.scheduledLabel && <span className="preview-status">{data.scheduledLabel}</span>}

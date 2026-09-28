@@ -2,6 +2,8 @@ import Link from "next/link";
 import {
   articles,
   categories,
+  liveArticles,
+  stockArticles,
   visibleArticles,
   type Article,
 } from "@/content/articles";
@@ -9,6 +11,7 @@ import { allFeaturedSlugs } from "@/content/subcategories";
 import { LocalizedArticleCard, localizedArticleFor } from "./localized-article";
 import { ArticleBrowser } from "./article-browser";
 import { FeaturedButton, FeaturedScope } from "./featured-filter";
+import { StockReveal } from "./stock-reveal";
 import { Breadcrumbs } from "./content";
 import { localizedCategoryName, type SiteLocale } from "@/content/locales";
 
@@ -77,7 +80,12 @@ export function LocalizedArticles({
   embedded?: boolean;
 }) {
   const allArticles = visibleArticles(articles);
-  const list = allArticles.filter(
+  const liveList = liveArticles(allArticles);
+  const stockList = stockArticles(allArticles);
+  const list = liveList.filter(
+    (article) => !category || article.category === category,
+  );
+  const stock = stockList.filter(
     (article) => !category || article.category === category,
   );
   const featuredSet = allFeaturedSlugs();
@@ -104,7 +112,7 @@ export function LocalizedArticles({
           className={!category ? "active" : undefined}
           aria-current={!category ? "page" : undefined}
         >
-          {copy.all} <small>{allArticles.length}</small>
+          {copy.all} <small>{liveList.length}</small>
         </Link>
         {categories.map((item) => (
           <Link
@@ -116,7 +124,7 @@ export function LocalizedArticles({
             {localizedCategoryName(locale, item.slug)}{" "}
             <small>
               {
-                allArticles.filter((article) => article.category === item.slug)
+                liveList.filter((article) => article.category === item.slug)
                   .length
               }
             </small>
@@ -133,6 +141,18 @@ export function LocalizedArticles({
         badgeLabel={copy.badge}
         badgeSlugs={featuredSet}
       />
+      <StockReveal count={stock.length} locale={locale}>
+        <div className="listing-grid">
+          {stock.map((source) => (
+            <LocalizedArticleCard
+              locale={locale}
+              source={source}
+              key={source.slug}
+              badge={featuredSet.has(source.slug) ? copy.badge : undefined}
+            />
+          ))}
+        </div>
+      </StockReveal>
       </FeaturedScope>
     </div>
   );

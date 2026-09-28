@@ -89,6 +89,7 @@ export function readTranslations() {
     ["basics-b", "BasicsB"],
     ["extra", "ExtraA"],
     ["columns", "Columns"],
+    ["doctor", "Doctor"],
   ]) {
     Object.assign(
       bodies,

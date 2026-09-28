@@ -8,6 +8,11 @@ type ArticleVisualLocale = SiteLocale | "ja";
 
 type VisualSpec = VisualKind | VisualKind[];
 const visualBySlug: Record<string, VisualSpec> = {
+  // 医師執筆記事は既存の図版を流用（見出し内容に対応する種類を割り当て）
+  "doctor-stem-cells-basics": ["differentiation", "celltypes", "levels"],
+  "doctor-regenerative-medicine": ["flow", "homing", "paracrine"],
+  "doctor-stem-cell-types": ["celltypes", "reprogram", "levels"],
+  "doctor-regenerative-approaches": ["approaches", "scaffold", "repair"],
   "three-approaches": ["approaches", "celltypes"],
   "treatment-flow": "flow",
   "clinical-trials-guide": "flow",

@@ -17,6 +17,20 @@ export type SubcategoryGroup = {
 export const subcategories: Record<string, SubcategoryGroup[]> = {
   "stem-basics": [
     {
+      key: "doctor-series",
+      keywords: { ja: ["医師執筆", "幹細胞とは", "再生医療とは"], en: ["physician-written", "stem cells", "regenerative medicine"], zh: ["医生撰写", "干细胞", "再生医学"] },
+      ja: "医師執筆の解説記事",
+      en: "Physician-written guides",
+      zh: "医生撰写的解说",
+      desc: { ja: "千原良友先生（ノリス美容クリニック院長）が執筆した基礎解説シリーズです。編集部原稿とは別に、医師本人の文面で掲載しています。", en: "Foundational guides written by Dr. Yoshitomo Chihara (Norris Beauty Clinic), published in the physician's own words alongside the editorial articles.", zh: "由千原良友医生（Norris美容诊所院长）撰写的基础解说系列，以医生本人原文刊登，与编辑部稿件区分。" },
+      slugs: [
+        "doctor-stem-cells-basics",
+        "doctor-regenerative-medicine",
+        "doctor-stem-cell-types",
+        "doctor-regenerative-approaches",
+      ],
+    },
+    {
       key: "stem-cell-fundamentals",
       keywords: { ja: ["幹細胞とは", "iPS細胞", "ES細胞", "再生医療"], en: ["stem cells", "iPS cells", "ES cells", "regenerative medicine"], zh: ["干细胞", "iPS细胞", "ES细胞", "再生医学"] },
       ja: "幹細胞と再生医療の基本",
@@ -610,6 +624,7 @@ export function subcategoryOf(category: string, slug: string): SubcategoryGroup 
 
 /** サブカテゴリごとのデフォルト図版（article-visuals の VisualKind 名）。 */
 const subcategoryVisual: Record<string, string[]> = {
+  "stem-basics/doctor-series": ["celltypes", "repair"],
   "stem-basics/stem-cell-fundamentals": ["celltypes", "levels"],
   "stem-basics/body-mechanisms": ["bodymap", "levels"],
   "stem-basics/common-diseases": ["disease", "support"],

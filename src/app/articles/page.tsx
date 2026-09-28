@@ -1,10 +1,11 @@
 import Link from "next/link";
-import { articles, categories, visibleArticles } from "@/content/articles";
+import { articles, categories, liveArticles, stockArticles, visibleArticles } from "@/content/articles";
 import { allFeaturedSlugs } from "@/content/subcategories";
 import { FeaturedButton, FeaturedScope } from "@/components/featured-filter";
 import { ArticleCard, Breadcrumbs } from "@/components/content";
 import { pageMetadata } from "@/lib/site";
 import { ArticleBrowser } from "@/components/article-browser";
+import { StockReveal } from "@/components/stock-reveal";
 export const metadata = pageMetadata(
   "記事一覧",
   "再生医療・幹細胞の基礎知識、治療の検討、研究の読み方に関する記事一覧。",
@@ -12,6 +13,8 @@ export const metadata = pageMetadata(
 );
 export default function ArticlesPage() {
   const list = visibleArticles(articles);
+  const live = liveArticles(list);
+  const stock = stockArticles(list);
   const featuredSet = allFeaturedSlugs();
   return (
     <div className="container inner-page">
@@ -24,24 +27,24 @@ export default function ArticlesPage() {
       <FeaturedScope>
       <nav className="filter-links" aria-label="カテゴリから探す">
         <Link href="/articles/" className="active" aria-current="page">
-          すべて <small>{list.length}</small>
+          すべて <small>{live.length}</small>
         </Link>
         {categories.map((c) => (
           <Link key={c.slug} href={`/categories/${c.slug}/`}>
             {c.label}{" "}
-            <small>{list.filter((a) => a.category === c.slug).length}</small>
+            <small>{live.filter((a) => a.category === c.slug).length}</small>
           </Link>
         ))}
         <FeaturedButton
           label="おすすめ"
-          count={list.filter((a) => featuredSet.has(a.slug)).length}
+          count={live.filter((a) => featuredSet.has(a.slug)).length}
         />
       </nav>
       <ArticleBrowser
-        terms={list.map((a) => `${a.title} ${a.description}`)}
-        featured={list.map((a) => featuredSet.has(a.slug))}
+        terms={live.map((a) => `${a.title} ${a.description}`)}
+        featured={live.map((a) => featuredSet.has(a.slug))}
       >
-        {list.map((a) => (
+        {live.map((a) => (
           <ArticleCard
             key={a.slug}
             article={a}
@@ -49,6 +52,17 @@ export default function ArticlesPage() {
           />
         ))}
       </ArticleBrowser>
+      <StockReveal count={stock.length} locale="ja">
+        <div className="listing-grid">
+          {stock.map((a) => (
+            <ArticleCard
+              key={a.slug}
+              article={a}
+              badge={featuredSet.has(a.slug) ? "おすすめ" : undefined}
+            />
+          ))}
+        </div>
+      </StockReveal>
       </FeaturedScope>
     </div>
   );

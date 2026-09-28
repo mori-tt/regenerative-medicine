@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { articles, categories, visibleArticles } from "@/content/articles";
+import { articles, categories, liveArticles, visibleArticles } from "@/content/articles";
 import { ArticleCard, AdSlot, JsonLd } from "@/components/content";
 import { CellArt, Icon } from "@/components/visuals";
 import { pageMetadata, site, siteTaglineFor } from "@/lib/site";
@@ -8,7 +8,7 @@ import { siteGraph } from "@/lib/structured-data";
 export const metadata = pageMetadata(siteTaglineFor.ja, site.description, "/", true, "ja", { home: true });
 export default function Home() {
   const featuredHref = "/guide/";
-  const latest = visibleArticles(articles).slice(0, 4);
+  const latest = liveArticles(visibleArticles(articles)).slice(0, 4);
   return (
     <>
       <JsonLd data={siteGraph("ja")} />

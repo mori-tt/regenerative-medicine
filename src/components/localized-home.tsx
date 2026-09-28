@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { localizedCategoryName, localizedHome, type SiteLocale } from "@/content/locales";
-import { articles, categories, visibleArticles } from "@/content/articles";
+import { articles, categories, liveArticles, visibleArticles } from "@/content/articles";
 import { siteGraph } from "@/lib/structured-data";
 import { LocalizedArticleCard } from "./localized-article";
 import { JsonLd } from "./content";
@@ -10,7 +10,7 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
   const copy = localizedHome[locale];
   const en = locale === "en";
   const featuredHref = `/${locale}/guide/`;
-  const latest = visibleArticles(articles).slice(0, 4);
+  const latest = liveArticles(visibleArticles(articles)).slice(0, 4);
   return (
     <div lang={en ? "en" : "zh-CN"} className="localized-page">
       <JsonLd data={siteGraph(locale)} />

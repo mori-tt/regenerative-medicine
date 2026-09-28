@@ -1,8 +1,9 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { articles, categories, columnArticles, coreArticles, visibleArticles } from "@/content/articles";
+import { articles, categories, columnArticles, coreArticles, liveArticles, stockArticles, visibleArticles } from "@/content/articles";
 import { ArticleCard, Breadcrumbs } from "@/components/content";
 import { featuredSlugs, groupArticlesBySubcategory } from "@/content/subcategories";
+import { StockReveal } from "@/components/stock-reveal";
 import {
   FeaturedButton,
   FeaturedHidden,
@@ -39,15 +40,19 @@ export default async function CategoryPage({
   const listed = visibleArticles(articles).filter((a) => a.category === slug);
   const core = coreArticles(listed);
   const columns = columnArticles(listed);
+  const liveColumns = liveArticles(columns);
+  const stockColumns = stockArticles(columns);
   const groups = groupArticlesBySubcategory(slug, core, {
     ja: "その他の記事",
     en: "Other articles",
     zh: "其他文章",
   });
   const featuredSet = new Set(featuredSlugs(slug));
+  const liveSet = new Set(liveArticles(listed).map((a) => a.slug));
   const featured = featuredSlugs(slug)
     .map((s) => core.find((a) => a.slug === s))
-    .filter((a) => a !== undefined);
+    .filter((a) => a !== undefined)
+    .filter((a) => liveSet.has(a.slug));
   return (
     <div className="container inner-page">
       <Breadcrumbs items={[{ label: category.label }]} />
@@ -98,7 +103,9 @@ export default async function CategoryPage({
         </section>
       )}
       {groups.map(({ group, articles: groupArticles }, index) => {
-        const flags = groupArticles.map((a) => featuredSet.has(a.slug));
+        const liveGroup = liveArticles(groupArticles);
+        const stockGroup = stockArticles(groupArticles);
+        const flags = liveGroup.map((a) => featuredSet.has(a.slug));
         return (
           <FeaturedScope key={group.key}>
             <section id={`sub-${group.key}`} aria-labelledby={`sub-heading-${group.key}`}>
@@ -116,26 +123,46 @@ export default async function CategoryPage({
                   ))}
                 </div>
               )}
-              <FeaturedOnlyGrid featured={flags} empty="このトピックのおすすめ記事はありません。">
-                {groupArticles.map((a) => (
-                  <ArticleCard key={a.slug} article={a} badge={featuredSet.has(a.slug) ? "おすすめ" : undefined} />
-                ))}
-              </FeaturedOnlyGrid>
+              {liveGroup.length > 0 && (
+                <FeaturedOnlyGrid featured={flags} empty="このトピックのおすすめ記事はありません。">
+                  {liveGroup.map((a) => (
+                    <ArticleCard key={a.slug} article={a} badge={featuredSet.has(a.slug) ? "おすすめ" : undefined} />
+                  ))}
+                </FeaturedOnlyGrid>
+              )}
+              <FeaturedHidden>
+                <StockReveal count={stockGroup.length} locale="ja">
+                  <div className="listing-grid">
+                    {stockGroup.map((a) => (
+                      <ArticleCard key={a.slug} article={a} badge={featuredSet.has(a.slug) ? "おすすめ" : undefined} />
+                    ))}
+                  </div>
+                </StockReveal>
+              </FeaturedHidden>
             </section>
           </FeaturedScope>
         );
       })}
-      {(columns.length > 0) && (
+      {(liveColumns.length > 0 || stockColumns.length > 0) && (
         <FeaturedHidden>
           <section aria-labelledby={`columns-${slug}`} className="columns-section">
             <span className="eyebrow">COLUMN</span>
             <h2 id={`columns-${slug}`} className="listing-heading">コラム</h2>
             <p className="listing-lead">研究のこぼれ話や季節の話題など、読みものとして楽しめる記事です。</p>
-            <div className="listing-grid">
-              {columns.map((a) => (
-                <ArticleCard key={a.slug} article={a} />
-              ))}
-            </div>
+            {liveColumns.length > 0 && (
+              <div className="listing-grid">
+                {liveColumns.map((a) => (
+                  <ArticleCard key={a.slug} article={a} />
+                ))}
+              </div>
+            )}
+            <StockReveal count={stockColumns.length} locale="ja">
+              <div className="listing-grid">
+                {stockColumns.map((a) => (
+                  <ArticleCard key={a.slug} article={a} />
+                ))}
+              </div>
+            </StockReveal>
           </section>
         </FeaturedHidden>
       )}
