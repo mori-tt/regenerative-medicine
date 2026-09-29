@@ -31,6 +31,25 @@ export function InlineTerm({ text, term, definition, href, moreLabel }: Props) {
     };
     document.addEventListener("pointerdown", onPointerDown);
     document.addEventListener("keydown", onKey);
+
+    // ビューポートからはみ出す場合、横にずらし・下が狭ければ上に開く
+    const pop = ref.current?.querySelector<HTMLElement>(".term-pop");
+    if (pop && ref.current) {
+      pop.style.transform = "";
+      pop.classList.remove("term-pop-up");
+      const margin = 10;
+      const vw = document.documentElement.clientWidth;
+      const rect = pop.getBoundingClientRect();
+      let dx = 0;
+      if (rect.right > vw - margin) dx = vw - margin - rect.right;
+      if (rect.left + dx < margin) dx = margin - rect.left;
+      if (dx) pop.style.transform = `translateX(${dx}px)`;
+      const wrapRect = ref.current.getBoundingClientRect();
+      if (rect.bottom > window.innerHeight - margin && wrapRect.top - rect.height - 16 > margin) {
+        pop.classList.add("term-pop-up");
+      }
+    }
+
     return () => {
       document.removeEventListener("pointerdown", onPointerDown);
       document.removeEventListener("keydown", onKey);

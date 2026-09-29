@@ -7,7 +7,7 @@ import {
   visibleArticles,
   type Article,
 } from "@/content/articles";
-import { allFeaturedSlugs } from "@/content/subcategories";
+import { allFeaturedSlugsFor } from "@/content/subcategories";
 import { LocalizedArticleCard, localizedArticleFor } from "./localized-article";
 import { ArticleBrowser } from "./article-browser";
 import { FeaturedButton, FeaturedScope } from "./featured-filter";
@@ -88,7 +88,7 @@ export function LocalizedArticles({
   const stock = stockList.filter(
     (article) => !category || article.category === category,
   );
-  const featuredSet = allFeaturedSlugs();
+  const featuredSet = allFeaturedSlugsFor(allArticles);
   const copy = chrome[locale];
   return (
     <div className="container inner-page">

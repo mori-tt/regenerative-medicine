@@ -617,6 +617,37 @@ export function allFeaturedSlugs(picks = 3): Set<string> {
   return out;
 }
 
+/** おすすめ判定に必要な最小限の記事フィールド。author=医師執筆、reviewer=医師監修。 */
+type FeaturedCheck = { slug: string; author?: unknown; reviewer?: unknown };
+
+/** 医師執筆・医師監修の記事はすべておすすめ対象に加える。 */
+function addDoctorPicks(out: Set<string>, list: readonly FeaturedCheck[]) {
+  for (const article of list) {
+    if (article.author || article.reviewer) out.add(article.slug);
+  }
+}
+
+/** カテゴリのおすすめセット。「まず読む」ピックに加え、医師執筆・監修記事をすべて含める。 */
+export function featuredSlugsFor(
+  category: string,
+  list: readonly FeaturedCheck[],
+  picks = 3,
+): Set<string> {
+  const out = new Set(featuredSlugs(category, picks));
+  addDoctorPicks(out, list);
+  return out;
+}
+
+/** 記事一覧用のおすすめセット（全カテゴリのピック＋医師執筆・監修記事すべて）。 */
+export function allFeaturedSlugsFor(
+  list: readonly FeaturedCheck[],
+  picks = 3,
+): Set<string> {
+  const out = allFeaturedSlugs(picks);
+  addDoctorPicks(out, list);
+  return out;
+}
+
 /** 記事が属するサブカテゴリを返す（未定義なら undefined）。 */
 export function subcategoryOf(category: string, slug: string): SubcategoryGroup | undefined {
   return (subcategories[category] ?? []).find((g) => g.slugs.includes(slug));

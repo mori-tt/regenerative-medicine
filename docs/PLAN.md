@@ -357,3 +357,12 @@ FTPSでレンタルサーバーの公開フォルダへ
 - literature/deepen追加セクションとraw本文の見出し衝突を解消（`stem-cell-mechanism`・`stem-cell-infection-risk`・`stem-cell-effect-duration`。`evidence/*.json` の ja/en/zh タイトルを更新）。
 - **セクションIDの重複を解消**（`insurance-care`の`mixed`、`skin-bone-cartilage`の`cartilage`など11記事）。HTMLのid重複とReact key重複を解消し、アンカーリンクを正常化。
 - 全247記事×3言語で「h1と同一のh2」「記事内h2重複」「セクションid重複」がゼロであることをビルド出力で検証。
+
+## 41. おすすめ拡張・検索画面の初期表示・用語フォーカス（2026-09-28 追記26）
+
+- おすすめ対象を拡張：サブカテゴリ先頭のピックに加え、医師執筆（`author`）・医師監修（`reviewer`）の記事はすべておすすめ扱いに。`featuredSlugsFor`/`allFeaturedSlugsFor`（src/content/subcategories.ts）で判定し、記事一覧・カテゴリ（ja/en/zh）のバッジ・絞り込み・「まずはここから」セクションに反映。
+- トップページの「あなたの状況から、探す」セクションを削除（ja/en/zh）。「知りたいことから、探す」（カテゴリグリッド）に集約。`.intent-grid`/`.intent-card` のCSSも撤去。
+- 用語集は記事から `#gt-*` 付きで開いたとき、その用語だけを表示。JS/hydrationに頼らず `.glossary:has(.glossary-item:target)` のCSSで描画時点から適用（ツール・索引・他グループ・他用語を非表示、対象カードを緑枠で強調）。「用語集をすべて見る」は `#glossary-index` への通常アンカーリンクで、ハッシュが変わるだけで全表示に戻る。展開時にブラウザのスクロールアンカー維持で一瞬ページ下部へ飛ぶため `html{overflow-anchor:none}` を追加。
+- 検索ページは初期状態で記事を出さず、キーワード・カテゴリの提案のみ表示。入力またはカテゴリ選択後に結果を出す。検索インデックスは公開記事（live）のみに限定し、ストック記事は一覧ページの「ストック記事を表示」ボタン経由でのみ参照できる。
+- 用語集の検索・並び替えを `.glossary-tools` でスティッキー化し、一致箇所を `<mark>` で強調。記事内用語ポップアップはビューポートからはみ出す場合に横ずらし・下が狭ければ上開きに調整（`.term-pop-up`）。
+- `check-export.mjs` の検索インデックス件数チェックを新仕様に更新（プレビューは <= 記事ページ数、本番は一致）。

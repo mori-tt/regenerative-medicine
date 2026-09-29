@@ -157,14 +157,19 @@ await access(join(root, ".htaccess"));
 await access(join(root, "robots.txt"));
 await access(join(root, "contact.php"));
 await access(join(root, "composer.json"));
-// 検索インデックス（JSON）：公開記事ページと件数が一致し、カード表示に必要な項目を持つこと。
+// 検索インデックス（JSON）：公開記事だけを収録し、カード表示に必要な項目を持つこと。
+// プレビュービルドではストック記事ページも生成されるため、index <= articlePages。
+// 本番ビルドではストック記事は生成されないので件数は一致する。
 for (const locale of ["ja", "en", "zh"]) {
   const prefix = locale === "ja" ? "" : `${locale}/`;
   const articlePages = pages.filter((f) =>
     new RegExp(`^${prefix}articles/(?!__unpublished__)[^/]+/index\\.html$`).test(relative(root, f)),
   );
   const index = JSON.parse(await readFile(join(root, `search-index.${locale}.json`), "utf8"));
-  assert.equal(index.items.length, articlePages.length, `search-index.${locale}.json: item count must match article pages`);
+  assert.ok(
+    isPreview ? index.items.length <= articlePages.length : index.items.length === articlePages.length,
+    `search-index.${locale}.json: item count must match live article pages`,
+  );
   for (const item of index.items) {
     for (const key of ["slug", "href", "title", "description", "categoryLabel", "text"])
       assert.ok(typeof item[key] === "string" && item[key], `search-index.${locale}.json: ${item.slug ?? "?"} missing ${key}`);

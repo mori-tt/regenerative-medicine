@@ -12,6 +12,7 @@ const copy = {
     filterLabel: "カテゴリで絞り込み",
     all: "すべて",
     status: (n: number, q: string) => `${n}件の記事${q ? ` · 「${q}」の検索結果` : ""}`,
+    idle: (n: number) => `${n}件の記事を収録。キーワードかカテゴリで絞り込んでください。`,
     loading: "記事データを読み込んでいます…",
     error: "検索データを読み込めませんでした。ページを再読み込みするか、記事一覧からお探しください。",
     terms: "関連する用語",
@@ -29,6 +30,7 @@ const copy = {
     filterLabel: "Filter by category",
     all: "All",
     status: (n: number, q: string) => `${n} articles${q ? ` · results for “${q}”` : ""}`,
+    idle: (n: number) => `${n} articles. Enter a keyword or pick a category to narrow down.`,
     loading: "Loading articles…",
     error: "The search data could not be loaded. Reload the page or browse the article list.",
     terms: "Related terms",
@@ -46,6 +48,7 @@ const copy = {
     filterLabel: "按分类筛选",
     all: "全部",
     status: (n: number, q: string) => `${n}篇文章${q ? ` · “${q}”的搜索结果` : ""}`,
+    idle: (n: number) => `共收录${n}篇文章。请输入关键词或选择分类进行筛选。`,
     loading: "正在加载文章数据…",
     error: "无法加载搜索数据。请重新加载页面，或从文章列表查找。",
     terms: "相关术语",
@@ -108,6 +111,8 @@ export function ArticleSearch({
   }, [query, restored]);
 
   const terms = useMemo(() => normalize(query, locale).trim().split(/\s+/).filter(Boolean), [query, locale]);
+  // 初期表示では記事を出さない。キーワード入力かカテゴリ選択の後にだけ結果を表示する。
+  const hasConditions = terms.length > 0 || category !== "all";
   const { results, termHits } = useMemo(() => {
     if (state.status !== "ready") return { results: [] as SearchIndexItem[], termHits: [] as SearchIndex["terms"] };
     return {
@@ -117,6 +122,27 @@ export function ArticleSearch({
       termHits: terms.length ? state.index.terms.filter((g) => terms.every((t) => g.keywords.includes(t))) : [],
     };
   }, [state, category, terms]);
+
+  const suggestBlock = (
+    <div className="search-suggest">
+      <p className="search-suggest-label">{text.popular}</p>
+      <div className="kw-chips">
+        {text.keywords.map((kw) => (
+          <button key={kw} type="button" className="kw-chip" onClick={() => setQuery(kw)}>
+            {kw}
+          </button>
+        ))}
+      </div>
+      <p className="search-suggest-label">{text.byCategory}</p>
+      <div className="kw-chips">
+        {categories.map((c) => (
+          <Link key={c.slug} className="kw-chip" href={`${prefix}/categories/${c.slug}/`}>
+            {c.label}
+          </Link>
+        ))}
+      </div>
+    </div>
+  );
 
   return (
     <>
@@ -150,7 +176,13 @@ export function ArticleSearch({
         </p>
       </noscript>
       <p className="search-status" role="status" aria-live="polite" aria-busy={state.status === "loading"}>
-        {state.status === "loading" ? text.loading : state.status === "error" ? text.error : text.status(results.length, query.trim())}
+        {state.status === "loading"
+          ? text.loading
+          : state.status === "error"
+            ? text.error
+            : hasConditions
+              ? text.status(results.length, query.trim())
+              : text.idle(state.index.items.length)}
         {state.status === "error" && (
           <>
             {" "}
@@ -170,7 +202,9 @@ export function ArticleSearch({
           </ul>
         </div>
       )}
-      {state.status !== "ready" ? null : results.length ? (
+      {state.status !== "ready" ? null : !hasConditions ? (
+        suggestBlock
+      ) : results.length ? (
         <div className="listing-grid">
           {results.map((item) => (
             <ArticleCard article={item} key={item.slug} highlight={terms} />
@@ -183,24 +217,7 @@ export function ArticleSearch({
             <br />
             {text.empty[1]}
           </p>
-          <div className="search-suggest">
-            <p className="search-suggest-label">{text.popular}</p>
-            <div className="kw-chips">
-              {text.keywords.map((kw) => (
-                <button key={kw} type="button" className="kw-chip" onClick={() => setQuery(kw)}>
-                  {kw}
-                </button>
-              ))}
-            </div>
-            <p className="search-suggest-label">{text.byCategory}</p>
-            <div className="kw-chips">
-              {categories.map((c) => (
-                <Link key={c.slug} className="kw-chip" href={`${prefix}/categories/${c.slug}/`}>
-                  {c.label}
-                </Link>
-              ))}
-            </div>
-          </div>
+          {suggestBlock}
           <button
             type="button"
             onClick={() => {

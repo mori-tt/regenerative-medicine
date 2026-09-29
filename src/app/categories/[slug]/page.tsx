@@ -2,7 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { articles, categories, columnArticles, coreArticles, liveArticles, stockArticles, visibleArticles } from "@/content/articles";
 import { ArticleCard, Breadcrumbs } from "@/components/content";
-import { featuredSlugs, groupArticlesBySubcategory } from "@/content/subcategories";
+import { featuredSlugsFor, groupArticlesBySubcategory } from "@/content/subcategories";
 import { StockReveal } from "@/components/stock-reveal";
 import {
   FeaturedButton,
@@ -47,12 +47,9 @@ export default async function CategoryPage({
     en: "Other articles",
     zh: "其他文章",
   });
-  const featuredSet = new Set(featuredSlugs(slug));
+  const featuredSet = featuredSlugsFor(slug, listed);
   const liveSet = new Set(liveArticles(listed).map((a) => a.slug));
-  const featured = featuredSlugs(slug)
-    .map((s) => core.find((a) => a.slug === s))
-    .filter((a) => a !== undefined)
-    .filter((a) => liveSet.has(a.slug));
+  const featured = core.filter((a) => featuredSet.has(a.slug) && liveSet.has(a.slug));
   return (
     <div className="container inner-page">
       <Breadcrumbs items={[{ label: category.label }]} />

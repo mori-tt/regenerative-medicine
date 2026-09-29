@@ -16,6 +16,8 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 28px;
   overflow-x: hidden;
+  /* 用語集の:target切替など表示切替でブラウザがスクロール位置を自動補正（アンカー維持）して一瞬ページ下部へ飛ぶのを防ぐ */
+  overflow-anchor: none;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
 }
@@ -473,61 +475,6 @@ svg {
 .category-card.slate {
   background: #eff1f4;
   border-color: #dde1e7;
-}
-.intent-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 17px;
-}
-.intent-card {
-  display: block;
-  border: 1px solid #e1e6d9;
-  border-radius: 16px;
-  padding: 22px 22px 18px;
-  background: #fbfdfa;
-  transition:
-    transform 0.2s,
-    border-color 0.2s,
-    box-shadow 0.2s;
-}
-.intent-card:hover {
-  transform: translateY(-4px);
-  border-color: #97aa8f;
-  box-shadow: 0 12px 30px rgba(38, 54, 33, 0.08);
-}
-.intent-card .intent-tag {
-  display: inline-block;
-  font-size: 11.5px;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  color: #5c6b52;
-  background: #e9efe4;
-  border-radius: 999px;
-  padding: 3px 11px;
-  margin-bottom: 12px;
-}
-.intent-card strong {
-  display: block;
-  font-size: 18px;
-  font-weight: 650;
-  line-height: 1.45;
-  margin-bottom: 8px;
-}
-.intent-card p {
-  font-size: 13.5px;
-  color: #66715e;
-  line-height: 1.7;
-  margin: 0;
-}
-@media (max-width: 860px) {
-  .intent-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (max-width: 560px) {
-  .intent-grid {
-    grid-template-columns: 1fr;
-  }
 }
 .category-card.olive {
   background: #f1f3ea;
@@ -2887,13 +2834,49 @@ section[id^="sub-"] { scroll-margin-top: 80px; }
 .article-note-title { margin: 0 0 4px; font-weight: 700; color: var(--green); }
 .article-note p:last-child { margin: 0; }
 
-.glossary-search { display: flex; align-items: center; gap: 12px; margin: 6px 0 12px; }
+.glossary-tools {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--paper);
+  padding: 8px 0;
+  margin-bottom: 8px;
+}
+.glossary-search { display: flex; align-items: center; gap: 12px; margin: 0 0 10px; }
+.glossary-mark { background: #fbe9a6; padding: 0 1px; border-radius: 2px; }
 .glossary-search input {
   flex: 1; max-width: 480px; padding: 10px 14px; font-size: 15px;
   border: 1px solid var(--line); border-radius: 999px; background: #fff;
 }
 .glossary-search input:focus { outline: 2px solid var(--green); outline-offset: 1px; }
 .glossary-hits { font-size: 13px; color: var(--muted); white-space: nowrap; }
+/* 記事から #gt-* で開いたとき：JS不要・描画時点で対象用語だけを表示する */
+.glossary-focus-lead { display: none; }
+.glossary:has(.glossary-item:target) .glossary-tools,
+.glossary:has(.glossary-item:target) .filter-links,
+.glossary:has(.glossary-item:target) .listing-count,
+.glossary:has(.glossary-item:target) .glossary-group:not(:has(.glossary-item:target)),
+.glossary:has(.glossary-item:target) .glossary-item:not(:target) {
+  display: none;
+}
+.glossary:has(.glossary-item:target) .glossary-focus-lead {
+  display: block;
+  margin: 0 0 16px;
+  font-size: 12.5px;
+  color: var(--muted);
+}
+.glossary-focus-all {
+  color: var(--green);
+  font-weight: 600;
+  margin-left: 8px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.glossary:has(.glossary-item:target) .glossary-list { grid-template-columns: minmax(0, 560px); }
+.glossary-item:target {
+  border-color: var(--green);
+  box-shadow: 0 0 0 3px #e3eedd;
+}
 
 .faq-section { background: #fbfaf6; border: 1px solid var(--line); border-radius: 14px; padding: 18px 20px; margin: 18px 0; }
 .faq-q { font-weight: 700; margin-bottom: 4px; color: var(--ink); }
@@ -2904,7 +2887,7 @@ section[id^="sub-"] { scroll-margin-top: 80px; }
 @media print {
   header.site-header, footer.site-footer, .ad-slot, .topic-nav, .filter-links,
   .article-visual, .article-cover, .mobile-article-toc, .related-section,
-  .article-terms, .closing-links, .breadcrumb, .glossary-search { display: none !important; }
+  .article-terms, .closing-links, .breadcrumb, .glossary-tools { display: none !important; }
   .article-body, .faq-section, .checklist-section, .article-closing, .article-note {
     break-inside: avoid-page;
   }
@@ -3247,6 +3230,10 @@ button.term-link:focus-visible { outline: 2px solid var(--green); outline-offset
   font-weight: normal;
   text-align: left;
   white-space: normal;
+}
+.term-pop.term-pop-up {
+  top: auto;
+  bottom: calc(100% + 8px);
 }
 .term-pop-title { display: block; color: var(--green); margin-bottom: 4px; }
 .term-pop-def { display: block; color: var(--ink); }

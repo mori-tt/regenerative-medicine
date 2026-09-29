@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { articles, categories, liveArticles, stockArticles, visibleArticles } from "@/content/articles";
-import { allFeaturedSlugs } from "@/content/subcategories";
+import { allFeaturedSlugsFor } from "@/content/subcategories";
 import { FeaturedButton, FeaturedScope } from "@/components/featured-filter";
 import { ArticleCard, Breadcrumbs } from "@/components/content";
 import { pageMetadata } from "@/lib/site";
@@ -15,7 +15,7 @@ export default function ArticlesPage() {
   const list = visibleArticles(articles);
   const live = liveArticles(list);
   const stock = stockArticles(list);
-  const featuredSet = allFeaturedSlugs();
+  const featuredSet = allFeaturedSlugsFor(list);
   return (
     <div className="container inner-page">
       <Breadcrumbs items={[{ label: "記事一覧" }]} />

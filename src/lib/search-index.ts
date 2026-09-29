@@ -1,4 +1,4 @@
-import { articles, visibleArticles, type Article } from "@/content/articles";
+import { articles, liveArticles, visibleArticles, type Article } from "@/content/articles";
 import { glossaryGroups, glossaryTermId } from "@/content/glossary";
 import { localizedArticleFor, localizedCardData } from "@/components/localized-article";
 import { toCardData, type ArticleCardData } from "@/components/article-card";
@@ -48,7 +48,8 @@ function itemFor(locale: SearchLocale, source: Article): SearchIndexItem {
 
 export function buildSearchIndex(locale: SearchLocale): SearchIndex {
   return {
-    items: visibleArticles(articles).map((source) => itemFor(locale, source)),
+    // ストック記事は確認用のため検索対象外（一覧ページの「ストック記事を表示」ボタンでのみ参照）。
+    items: liveArticles(visibleArticles(articles)).map((source) => itemFor(locale, source)),
     terms: glossaryGroups.flatMap((group, gi) =>
       group.terms.map((term, ti) => ({
         id: glossaryTermId(gi, ti),
