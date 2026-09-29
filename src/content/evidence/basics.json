@@ -539,36 +539,8 @@
     ]
    }
   },
-  "corrections": [
-   {
-    "locale": "ja",
-    "old": "細胞だけでは形を保てない場合、足場となる材料と組み合わせてシート状や立体的な組織を作る「組織工学」の手法が用いられます。皮膚や軟骨、心筋シートなどの研究が例として挙げられます。",
-    "new": "組織工学では、細胞と足場材料を組み合わせる方法や、細胞の自己集合を利用する方法で、シート状・立体的な組織を作ります。皮膚や軟骨、心筋などが研究対象ですが、細胞シートが必ず人工の足場を使うわけではありません。",
-    "reason": "細胞シートと人工足場を一律に対応させない。",
-    "sourceIds": [
-     "pmid-26498484"
-    ]
-   },
-   {
-    "locale": "en",
-    "old": "When cells alone cannot hold shapes, “tissue engineering” combines scaffold materials to make sheet-like or 3D tissues. Skin, cartilage, and heart muscle sheet studies are examples.",
-    "new": "Tissue engineering creates sheets or three-dimensional tissues using cells with scaffold materials or through cell self-assembly. Skin, cartilage and cardiac tissue are studied, but a cell sheet does not necessarily use an artificial scaffold.",
-    "reason": "細胞シートと人工足場を一律に対応させない。",
-    "sourceIds": [
-     "pmid-26498484"
-    ]
-   },
-   {
-    "locale": "zh",
-    "old": "仅细胞难保持形状时，用支架材料组合制作片状立体组织的“组织工程”手法。皮肤软骨心肌片等研究是例子。",
-    "new": "组织工程可将细胞与支架材料组合，也可利用细胞自组装来构建片状或立体组织。皮肤、软骨和心肌等均为研究对象，但细胞片不一定使用人工支架。",
-    "reason": "細胞シートと人工足場を一律に対応させない。",
-    "sourceIds": [
-     "pmid-26498484"
-    ]
-   }
-  ],
-  "auditNote": "足場を使う臨床例と足場なしの方法、宿主免疫を変える動物実験を照合。既存段落の心筋シートを一律に人工足場の例と読める表現を3言語で修正。"
+  "auditNote": "足場を使う臨床例と足場なしの方法、宿主免疫を変える動物実験を照合。既存段落の心筋シートを一律に人工足場の例と読める表現を3言語で修正。",
+  "corrections": []
  },
  "myths-and-facts": {
   "sources": [
@@ -10219,7 +10191,6 @@
   "corrections": [],
   "auditNote": "公式患者向け情報と学会基準に基づく記述。効果の断定を避けた。"
  },
-
  "stem-cell-antiaging-evidence": {
   "sources": [
    {
