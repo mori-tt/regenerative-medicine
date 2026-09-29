@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<style>
+  html, body { margin: 0; padding: 0; }
+  svg { display: block; }
+</style>
+</head>
+<body>
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="cell" cx="35%" cy="28%">
+      <stop offset="0" stop-color="#fafdf7" stop-opacity=".96"/>
+      <stop offset=".4" stop-color="#d5e5ce" stop-opacity=".84"/>
+      <stop offset=".8" stop-color="#96b89a" stop-opacity=".9"/>
+      <stop offset="1" stop-color="#eff7e5"/>
+    </radialGradient>
+    <radialGradient id="core" cx="30%" cy="25%">
+      <stop offset="0" stop-color="#a6c69e"/>
+      <stop offset=".65" stop-color="#668e6d"/>
+      <stop offset="1" stop-color="#507b5b"/>
+    </radialGradient>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="4" dy="10" stdDeviation="12" flood-color="#50765c" flood-opacity=".18"/>
+    </filter>
+  </defs>
+
+  <!-- 背景：サイトの --paper 系 -->
+  <rect width="1200" height="630" fill="#fcfcf6"/>
+  <rect width="1200" height="14" fill="#7d9c84"/>
+
+  <!-- 右側の淡いディスク -->
+  <circle cx="945" cy="300" r="300" fill="#e6efe0"/>
+
+  <!-- 細胞（CellArtと同じグラデーション） -->
+  <g filter="url(#soft)">
+    <circle cx="960" cy="215" r="105" fill="url(#cell)" stroke="#f3f8e9" stroke-width="2"/>
+    <circle cx="960" cy="215" r="98" fill="none" stroke="#739c7d" stroke-opacity=".35"/>
+    <circle cx="967" cy="221" r="36" fill="url(#core)" stroke="#dae9c7" stroke-width="3"/>
+  </g>
+  <g filter="url(#soft)">
+    <circle cx="815" cy="390" r="78" fill="url(#cell)" stroke="#f3f8e9" stroke-width="2"/>
+    <circle cx="815" cy="390" r="71" fill="none" stroke="#739c7d" stroke-opacity=".35"/>
+    <circle cx="821" cy="395" r="27" fill="url(#core)" stroke="#dae9c7" stroke-width="3"/>
+  </g>
+  <g filter="url(#soft)">
+    <circle cx="1090" cy="375" r="55" fill="url(#cell)" stroke="#f3f8e9" stroke-width="2"/>
+    <circle cx="1090" cy="375" r="48" fill="none" stroke="#739c7d" stroke-opacity=".35"/>
+    <circle cx="1094" cy="379" r="19" fill="url(#core)" stroke="#dae9c7" stroke-width="3"/>
+  </g>
+
+  <!-- テキスト -->
+  <text x="90" y="118" font-family="'Yu Mincho','Hiragino Mincho ProN','Noto Serif JP',serif" font-size="34" fill="#285b48" letter-spacing="2">再生医療ガイド</text>
+  <text x="88" y="272" font-family="'Yu Mincho','Hiragino Mincho ProN','Noto Serif JP',serif" font-size="48" fill="#3f5d46">再生医療を知る。</text>
+  <text x="88" y="352" font-family="'Yu Mincho','Hiragino Mincho ProN','Noto Serif JP',serif" font-size="48" fill="#3f5d46">これからの選択に、</text>
+  <text x="88" y="432" font-family="'Yu Mincho','Hiragino Mincho ProN','Noto Serif JP',serif" font-size="48" fill="#7a8a75">確かな理解を。</text>
+  <text x="90" y="548" font-family="Arial, sans-serif" font-size="19" fill="#8a968b" letter-spacing="10">REGENERATIVE MEDICINE GUIDE</text>
+</svg>
+</body>
+</html>
