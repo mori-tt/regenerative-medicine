@@ -57,50 +57,57 @@ export const articleBodiesStemCells: Record<
       [
         "Introduction",
         [
-          "Many of you have probably heard the term “iPS cells.”",
-          "iPS cells draw worldwide attention because they can be used in regenerative medicine and in developing new drugs.",
-          "This article explains, in plain terms, everything from “what are iPS cells?” to “how far have they actually entered medical care?”",
+          "The term “iPS cells” is being heard more and more often in the news.",
+          "iPS cells are cells made by “reprogramming” our own body cells back into a state in which they can change into many kinds of cells.",
+          "In the future they are expected to be used in “regenerative medicine” to restore the function of tissues and organs lost to disease or injury.",
+          "On the other hand, we are not yet at the stage where “any organ can be made with iPS cells” or “they are already used as a standard treatment.”",
+          "Right now, they are at the stage of moving from basic research through clinical studies and trials into actual medical care for a limited number of diseases.",
+          "This article explains, as plainly as possible, the mechanism of iPS cells, the research, and their current clinical applications.",
         ],
       ],
       [
         "What are iPS cells?",
         [
-          "iPS cells is short for “induced pluripotent stem cells.”",
-          "Our bodies are made of many kinds of cells—skin, blood, nerves, heart muscle, and more. Each cell is in a state with a fixed role (a differentiated state).",
-          "An iPS cell is produced by introducing several factors into such body cells, returning them to a state in which they can again become many kinds of cells.",
+          "iPS cells take their name from the initials of “induced pluripotent stem cells.”",
+          "By making specific factors act on “somatic cells” such as human skin or blood, the cells are reprogrammed into cells with “pluripotency”—the ability to change into many kinds of cells such as nerve cells, cardiomyocytes, retinal cells, hepatocytes, and pancreatic cells.",
+          "iPS cells also have the property that they can be multiplied by culturing.",
         ],
       ],
       [
         "What is “reprogramming”?",
         [
-          "A word often used when making iPS cells is “reprogramming” (initialization).",
-          "Reprogramming means resetting a cell's established identity and returning it to a state able to become many kinds of cells.",
-          "If you make iPS cells from skin cells, for example, those cells are no longer skin—they become able to develop into nerve, heart muscle, liver, and other cell types.",
+          "A skin cell basically works as a skin cell.",
+          "This is not because the genetic information inside the cell has been lost. It is because the state of “which genes the cell uses” has changed.",
+          "In iPS cells, this state is artificially reset, returning the cell to a state in which it can differentiate into many kinds of cells.",
+          "This process is called “reprogramming (initialization).”",
         ],
       ],
       [
         "How are iPS cells made?",
         [
-          "iPS cells were first created in the world from mouse cells in 2006 by a research group led by Professor Shinya Yamanaka at Kyoto University. The following year, in 2007, they were made from human cells as well.",
-          "The representative factors used to make iPS cells are called the “Yamanaka factors”: Oct3/4, Sox2, Klf4, and c-Myc.",
-          "Introducing these factors into body cells greatly changes the cell's state, reprogramming it into a cell with pluripotency.",
-          "Today, various improvements are being made to raise safety, including methods that do not integrate the introduced genes into the genome.",
+          "The work that made iPS-cell research known worldwide is the research of Professor Shinya Yamanaka and colleagues at Kyoto University.",
+          "In 2006 they succeeded in making iPS cells from mouse somatic cells, and in 2007 it was reported that they had made iPS cells from human somatic cells.",
+          "Playing a key role in that process were the so-called “Yamanaka factors.”",
+          "The four representative factors are Oct3/4, Sox2, Klf4, and c-Myc.",
+          "Introducing these factors into somatic cells greatly changes the cells' state, reprogramming them into cells with pluripotency.",
+          "Today the original method has been improved, and various iPS-cell production technologies are being studied to raise safety—for example, methods that do not integrate genes into the cells' genome.",
         ],
       ],
       [
         "The key strength of iPS cells: cells can be “turned back”",
         [
-          "Normally in our bodies, a fertilized egg → differentiates into many cell types → becomes skin, nerve, heart muscle, and so on—the cell's identity is decided in one direction.",
+          "Normally in our bodies, a fertilized egg → differentiates into many cell types → skin, nerves, heart muscle, and so on—the cell's identity is decided in this direction.",
           "Returning a cell that has already become a skin cell to a state able to become many kinds of cells was long considered extremely difficult. iPS cells overturned that assumption.",
-          "In other words, this technology “returns an already-differentiated cell to a pluripotent state.” The discovery opened new paths not only for regenerative medicine, but also for studying diseases and developing new drugs.",
+          "In other words, it is a technology that “returns an already-differentiated cell to a pluripotent state.”",
+          "This discovery opened new paths not only for regenerative medicine but also for studying diseases and developing new drugs.",
         ],
       ],
       [
         "What are iPS cells used for?",
         [
           "The uses of iPS cells are easiest to understand in three broad groups.",
-          "1. Regenerative medicine: make the target cell from iPS cells and transplant it into the patient. For example, iPS cells → heart muscle cells → heart treatment, or iPS cells → nerve cells → treatment of neurological disease—such applications are being studied.",
-          "2. Studying disease causes: making iPS cells from a patient's cells and then producing disease-related cells lets researchers study disease mechanisms. For example, iPS cells from a patient with a neurological disease → differentiate into nerve cells → study what is happening in the diseased cells. This may let researchers examine in the laboratory cells that were previously difficult to study directly from patients.",
+          "1. Regenerative medicine: make the target cell from iPS cells and transplant it into the patient. For example, iPS cells → cardiomyocytes → heart treatment, or iPS cells → nerve cells → treatment of neurological disease—such applications are being studied.",
+          "2. Studying disease causes: making iPS cells from a patient's cells and then producing disease-related cells lets researchers study disease mechanisms. For example, making iPS cells from the cells of a patient with a neurological disease: patient-derived iPS cells → differentiate into nerve cells → study what is happening in the diseased cells. This may let researchers examine in the laboratory cells that were previously difficult to study directly from patients.",
           "3. Developing new drugs: research is also underway in which drugs are applied to diseased cells made from iPS cells to ask “does this drug work?” “at what concentration is it effective?” and “do side effects occur?” In other words, iPS cells matter not only for treatment itself but also as a research tool for drug development.",
         ],
       ],
@@ -109,15 +116,17 @@ export const articleBodiesStemCells: Record<
         [
           "Yes. But this point is very important: “research on iPS cells is progressing” is not the same as “treatments using iPS cells are generally available.”",
           "In March 2026, two regenerative medical products using iPS cells received conditional, time-limited approval in Japan: ReHeart (an iPS-derived cardiomyocyte sheet for severe heart failure) and Amchepry (iPS-derived dopaminergic neural progenitor cells for Parkinson's disease).",
-          "This marks an important stage in which iPS-based treatment is moving from “technology that stayed in the lab” toward actual medical care. Both approvals, however, are conditional and time-limited, so effectiveness must continue to be confirmed after approval.",
+          "This marks an important stage in which iPS-based treatment is moving from “technology that stayed in the lab” toward actual medical care.",
+          "Both approvals, however, are conditional and time-limited, so effectiveness must continue to be confirmed after approval.",
         ],
       ],
       [
         "Which treatments use them?",
         [
-          "Parkinson's disease: in Parkinson's disease, the loss of dopamine-producing nerve cells in the brain contributes to motor symptoms. Amchepry is a product that transplants dopamine neural progenitor cells made from iPS cells into the patient's brain. The transplanted cells are expected to differentiate and mature into dopamine-producing neurons, restoring dopaminergic function and improving motor symptoms.",
+          "Parkinson's disease: in Parkinson's disease, the loss of dopamine-producing nerve cells in the brain contributes to motor symptoms.",
+          "Amchepry is a product that transplants dopamine neural progenitor cells made from iPS cells into the patient's brain. The transplanted cells are expected to differentiate and mature into dopamine-producing neurons, restoring dopaminergic function and improving motor symptoms.",
           "In the clinical trial, seven patients received transplants and six underwent efficacy evaluation. According to Ministry of Health, Labour and Welfare materials, imaging confirmed engraftment of the transplanted cells, and four of the six patients were judged to show improvement in motor-symptom measures. Note, however, that the trial involved a limited number of cases and that efficacy and safety must continue to be verified.",
-          "Severe heart failure: another treatment uses cardiomyocytes made from iPS cells. “ReHeart” is a product of human iPS-derived heart muscle cells formed into sheets. For patients with severe heart failure, the cell sheet is applied to the surface of the heart with the aim of improving cardiac function. It received conditional, time-limited approval in March 2026.",
+          "Severe heart failure: another treatment uses cardiomyocytes made from iPS cells. “ReHeart” is a product of human iPS-derived cardiomyocytes formed into sheets. For patients with severe heart failure, the cell sheet is applied to the surface of the heart with the aim of improving cardiac function. It received conditional, time-limited approval in March 2026.",
         ],
       ],
       [
@@ -150,7 +159,8 @@ export const articleBodiesStemCells: Record<
         [
           "iPS cells are induced pluripotent stem cells made by reprogramming body cells back to a state able to differentiate into many cell types. Their potential spans regenerative medicine, understanding disease causes, new drug development, and drug-discovery research.",
           "And today they are moving step by step from the research stage to clinical application: in 2026, the iPS-derived regenerative medical products “Amchepry” and “ReHeart” received conditional, time-limited approval in Japan.",
-          "Still, medicine using iPS cells is developing. “A technology with great potential” and “a technology proven able to treat every disease” are different things. As research confirming safety and efficacy accumulates, regenerative medicine using iPS cells is expected to expand further.",
+          "Still, medicine using iPS cells is developing.",
+          "“A technology with great potential” and “a technology proven able to treat every disease” are different things. As research confirming safety and efficacy accumulates, regenerative medicine using iPS cells is expected to expand further.",
         ],
       ],
     ],
@@ -163,34 +173,40 @@ export const articleBodiesStemCells: Record<
       [
         "引言",
         [
-          "很多人应该都听说过“iPS细胞”这个词。",
-          "iPS细胞因可用于再生医学和新药开发而受到全球关注。",
-          "本文将从“iPS细胞是什么？”到“目前已在多大程度上用于医疗？”，通俗易懂地进行说明。",
+          "“iPS细胞”一词在新闻等场合听到的机会越来越多。",
+          "iPS细胞是把我们身体的细胞进行“初始化”，使其回到能变化为多种细胞状态的细胞。",
+          "将来有望用于“再生医学”，以恢复因疾病或受伤而丧失的组织、器官功能。",
+          "但另一方面，目前还未达到“用iPS细胞什么器官都能做出来”“已经作为常规治疗在使用”的阶段。",
+          "现在的阶段是：从基础研究经过临床研究、临床试验，在一部分疾病上开始进入实际医疗。",
+          "本文将从iPS细胞的机制到研究、再到目前的临床应用，尽可能通俗易懂地进行解说。",
         ],
       ],
       [
         "什么是iPS细胞？",
         [
-          "iPS细胞是“induced pluripotent stem cells”的缩写，中文称“诱导多能干细胞”。",
-          "我们的身体由皮肤、血液、神经、心肌等多种细胞构成，每种细胞都处于已确定分工的状态（已分化的状态）。",
-          "iPS细胞是向这种“分工已确定的体细胞”导入若干因子，使其重新回到“能变成多种细胞的状态”的细胞。",
+          "iPS细胞是取英文 induced pluripotent stem cells 首字母的名称，中文称“诱导多能干细胞”。",
+          "让人体皮肤、血液等“体细胞”受到特定因子的作用而初始化，就能制成具有“多能性”——能变化为神经细胞、心肌细胞、视网膜细胞、肝细胞、胰腺细胞等多种细胞——的细胞。",
+          "另外，iPS细胞还具有可以通过培养增殖的特点。",
         ],
       ],
       [
         "什么是“初始化”？",
         [
-          "制作iPS细胞时常用的词是“初始化”。",
-          "初始化是指重置已确定的细胞性质，使其回到能分化为多种细胞的状态。",
-          "例如用皮肤细胞制作iPS细胞，该细胞就不再是皮肤，而是变成“神经、心肌、肝脏等都能成为”的状态。",
+          "皮肤细胞基本上作为皮肤细胞发挥作用。",
+          "这并不是因为细胞内的遗传信息消失了，而是因为细胞“使用哪些基因”的状态发生了变化。",
+          "iPS细胞通过人工重置这一状态，使其回到能分化为多种细胞的状态。",
+          "这一过程称为“重编程（初始化）”。",
         ],
       ],
       [
         "iPS细胞如何制作？",
         [
-          "2006年，京都大学山中伸弥教授的研究团队在世界上首次用小鼠细胞制备出iPS细胞，次年2007年也用人体细胞成功制备。",
-          "制备iPS细胞所用的代表性因子称为“山中因子”，共4个：Oct3/4、Sox2、Klf4、c-Myc。",
+          "使iPS细胞研究闻名于世的是京都大学山中伸弥教授等人的研究。",
+          "2006年成功用小鼠体细胞制备出iPS细胞，次年2007年又报告了用人体体细胞制备成功。",
+          "其中发挥关键作用的就是所谓的“山中因子”。",
+          "代表性的4个因子是 Oct3/4、Sox2、Klf4、c-Myc。",
           "将这些因子导入体细胞，可使细胞状态发生巨大变化，重编程为具有多能性的细胞。",
-          "目前为提高安全性，还在进行不将基因整合进基因组等各种改良。",
+          "如今原方法不断改进，为提高安全性，正在研究不将基因整合进细胞基因组等多种iPS细胞制作技术。",
         ],
       ],
       [
@@ -198,7 +214,8 @@ export const articleBodiesStemCells: Record<
         [
           "通常在我们体内，受精卵 → 分化为各种细胞 → 皮肤、神经、心肌等，细胞性质沿这一方向确定。",
           "过去认为，把已经成为皮肤的细胞重新变回“能成为多种细胞的状态”非常困难，而iPS细胞大大改变了这一常识。",
-          "也就是说，这是“将已分化的细胞重新变回多能性状态”的技术。这一发现不仅为再生医学，也为疾病研究和新药开发开辟了新道路。",
+          "也就是说，这是“将已分化的细胞重新变回多能性状态”的技术。",
+          "这一发现不仅为再生医学，也为疾病研究和新药开发开辟了新道路。",
         ],
       ],
       [
@@ -214,14 +231,16 @@ export const articleBodiesStemCells: Record<
         "使用iPS细胞的治疗已经开始了吗？",
         [
           "是的。但这一点非常重要：“iPS细胞研究在推进”与“iPS细胞治疗已普遍可及”并不相同。",
-          "2026年3月，日本有条件及期限批准了两款使用iPS细胞的再生医疗等产品：ReHeart（用于重症心力衰竭的iPS细胞来源心肌细胞片）和Amchepry（用于帕金森病的iPS细胞来源多巴胺神经祖细胞）。",
-          "可以说，这意味着使用iPS细胞的治疗正从“只存在于实验室的技术”向实际医疗过渡的重要阶段。不过两者均为条件及期限批准，获批后仍需继续确认有效性等。",
+          "2026年3月，日本有条件及期限批准了两款使用iPS细胞的再生医疗等产品：ReHeart（用于重症心力衰竭的iPS细胞来源心肌细胞片）、Amchepry（用于帕金森病的iPS细胞来源多巴胺神经祖细胞）。",
+          "可以说，这意味着使用iPS细胞的治疗正从“只存在于实验室的技术”向实际医疗过渡的重要阶段。",
+          "不过两者均为条件及期限批准，获批后仍需继续确认有效性等。",
         ],
       ],
       [
         "用于哪些治疗？",
         [
-          "帕金森病：帕金森病中，脑内产生多巴胺的神经细胞减少是运动症状的原因之一。Amchepry是将iPS细胞制作的多巴胺神经祖细胞移植到患者脑内的产品。移植的细胞分化、成熟为多巴胺神经细胞后，有望恢复多巴胺神经功能、改善运动症状。",
+          "帕金森病：帕金森病中，脑内产生多巴胺的神经细胞减少是运动症状的原因之一。",
+          "Amchepry是将iPS细胞制作的多巴胺神经祖细胞移植到患者脑内的产品。移植的细胞分化、成熟为多巴胺神经细胞后，有望恢复多巴胺神经功能、改善运动症状。",
           "临床试验共移植7例、6例进行了有效性评估。据厚生劳动省资料，影像学评估确认移植细胞成活，运动症状评估6例中4例被判定为改善。但需注意该试验病例数有限，今后仍需持续确认有效性与安全性。",
           "重症心力衰竭：另一项治疗使用iPS细胞制作的心肌细胞。“ReHeart”是将人iPS细胞分化的心肌细胞制成片状的产品。对重症心力衰竭患者，将细胞片贴附于心脏表面以改善心功能。2026年3月获得条件及期限批准。",
         ],
@@ -256,7 +275,8 @@ export const articleBodiesStemCells: Record<
         [
           "iPS细胞是对体细胞进行重编程、使其回到能分化为多种细胞状态的人工多能干细胞。其可能性涉及再生医学、病因解明、新药开发、制药研究等广泛领域。",
           "目前正从研究阶段逐步走向临床应用。2026年，日本有条件及期限批准了iPS细胞来源再生医疗等产品“Amchepry”和“ReHeart”。",
-          "不过，使用iPS细胞的医疗仍在发展中。“拥有巨大潜力的技术”与“能治疗所有疾病的技术已经确立”是两回事。今后随着确认安全性与有效性的研究不断积累，使用iPS细胞的再生医学有望进一步扩展。",
+          "不过，使用iPS细胞的医疗仍在发展中。",
+          "“拥有巨大潜力的技术”与“能治疗所有疾病的技术已经确立”是两回事。今后随着确认安全性与有效性的研究不断积累，使用iPS细胞的再生医学有望进一步扩展。",
         ],
       ],
     ],
