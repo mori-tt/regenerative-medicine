@@ -9,14 +9,18 @@
 - 日本語・英語・中国語の `hreflang` 相当として `alternates.languages` を生成し、日本語の`ja-JP`、中国語の`zh-CN`、未対応言語向けの`x-default`を設定。
 - OGP の title、description、URL、言語、サイト名、画像を設定。
 - X（Twitter）向けに `summary_large_image` を設定。
-- 記事の公開後だけ Article 構造化データを出力し、未監修記事を検索エンジン向けの Article として扱わない。
+- 記事の公開後だけ Article 構造化データを出力し、未監修記事を検索エンジン向けの Article として扱わない。Article には `author`（執筆医または編集部）と `reviewedBy`（監修医 Person）を含める。
+- hreflang は `NEXT_PUBLIC_LOCALIZED_INDEXABLE=true` の時だけ出力（noindexの翻訳ページを案内しない設計）。
 - パンくず、WebSite、学会特集の構造化データを出力。
 - sitemap は正式公開時の可視記事・確認済み記事だけを含める。
 - `robots.txt` の sitemap 案内も、正式公開と検索公開が両方有効な場合だけ出力する。
 
 ## 現在の検索公開状態
 
-現在は `publication.mode=preview` と `NEXT_PUBLIC_SITE_INDEXABLE=false` を前提にしているため、全体として noindex、sitemap なしの状態になる。これは公開前の意図した挙動である。
+2サイト並行公開の構成になっている（docs/DEPLOYMENT.md §2 参照）。
+
+- GitHub Pages（テスト確認用）：`publication.mode=preview` + `NEXT_PUBLIC_SITE_INDEXABLE=false` → 全体 noindex、sitemap 空。
+- Lolipop（本番）：`LOLIPOP_PUBLICATION_MODE=production` + `LOLIPOP_SITE_INDEXABLE=true` → indexable。`LOLIPOP_LOCALIZED_INDEXABLE=true` で en/zh も公開＋hreflang出力。
 
 英語・中国語のページと翻訳記事は、`NEXT_PUBLIC_LOCALIZED_INDEXABLE=false`の間はnoindexになる。主要な英語・中国語ルートは検索公開可能な設定に変更済みだが、翻訳の内容確認、監修記録、公開方針が整うまで環境変数で止める。検索ページは常にnoindexとする。
 

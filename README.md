@@ -26,6 +26,13 @@ npm run preview
 
 静的プレビュー：<http://127.0.0.1:4173>（ポートが使用中なら `PORT=4174 npm run preview` のように変更可）。配置するのは **`out/` の中身**です。Next.jsサーバーの起動は不要で、`next start` は使用しません。
 
+配置先別のビルド（2サイト並行運用、詳細は [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md)）：
+
+```bash
+npm run build:github-pages  # GitHub Pages：全記事・noindexの確認用サイト
+npm run build:lolipop       # Lolipop本番：公開日到達分のみ。production時は権利チェック込み
+```
+
 ## ファイル構成
 
 ```text

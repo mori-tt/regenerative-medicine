@@ -59,36 +59,33 @@ NEXT_PUBLIC_ARTICLE_BUILD_MODE=scheduled
 
 GitHub Pagesのworkflowでは、Pages用artifactのアップロードとdeployジョブを分け、deployジョブに`pages: write`、`id-token: write`、`actions: read`を明示しています。OIDCの`Request timeout`は権限不足ではなく、GitHubのOIDCサービスまたはrunnerからの一時的な通信失敗でも発生します。権限が設定済みなら、同じworkflowを再実行して切り分けます。`ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true`でNode 20へ戻す対応は行わず、ActionsをNode 24対応版へ更新します。
 
-## 2. GitHub ActionsでLolipopへ配置する場合
+## 2. 2サイト並行公開（GitHub Pages＝テスト / Lolipop＝本番）
 
-現在のLolipop workflowは有効化していません。GitHub Actionsに認識されない `.disabled` 拡張子のテンプレートを [`deploy-lolipop.example.disabled`](../.github/workflows/deploy-lolipop.example.disabled) として保存しています。最終公開時に `.github/workflows/deploy-lolipop.yml` へコピーし、次のGitHub Secretsを登録します。
+mainへのpushで、2系統が並行してデプロイされます。
 
-### Lolipopを有効化しない期間の注意
+| サイト | ワークフロー | 記事範囲 | 検索公開 |
+| --- | --- | --- | --- |
+| GitHub Pages（テスト確認用） | `deploy.yml` | 全記事（`ARTICLE_BUILD_MODE=all`、ストック含む） | `noindex` 固定 |
+| Lolipop（本番） | `deploy-lolipop.yml` | 公開日到達分のみ（`scheduled`） | Variablesで制御 |
 
-GitHub Actionsは、`.github/workflows/`内にある拡張子`.yml`または`.yaml`のファイルを、ファイル名に`example`が含まれていてもworkflowとして認識します。そのため、テンプレートを`deploy-lolipop.example.yml`という名前で置くと、mainへのpushやscheduleで実行されます。Lolipop公開前は必ず`.disabled`のまま保存し、`.github/workflows/`内にLolipop用の`.yml`ファイルを置かないでください。
+Lolipop側は [`deploy-lolipop.yml`](../.github/workflows/deploy-lolipop.yml) が置いてありますが、ジョブに `if: vars.LOLIPOP_DEPLOY_ENABLED == 'true'` のガードが付いているため、**Variablesを設定するまで実行されません**。GitHub Pages側だけが動き続けます。
 
-公開直前にだけ、次のようにコピーして有効化します。
+### 本番を有効化する手順
 
-```bash
-cp .github/workflows/deploy-lolipop.example.disabled \
-   .github/workflows/deploy-lolipop.yml
-```
+1. GitHub Secretsに登録：
+   - `LOLIPOP_SSH_USER`
+   - `LOLIPOP_SSH_PASSWORD`
+   - `LOLIPOP_SSH_REMOTE_DIR`：対象ドメインの公開フォルダ。`/`やSSHのHOME自体は指定しない
+2. GitHub Variablesに登録：
+   - `LOLIPOP_DEPLOY_ENABLED=true`（有効化スイッチ）
+   - `LOLIPOP_SITE_URL`：本番ドメイン（例 `https://example.jp`）
+   - `LOLIPOP_PUBLICATION_MODE`：本番公開は `production`（`check:rights` で画像権利の記録確認をゲート）
+   - `LOLIPOP_SITE_INDEXABLE=true`
+   - `LOLIPOP_LOCALIZED_INDEXABLE`：英語・中国語の翻訳確認後だけ `true`（`true`にするとhreflangも出力）
+   - `NEXT_PUBLIC_CONTACT_EMAIL`、`NEXT_PUBLIC_OPERATOR_NAME`、`NEXT_PUBLIC_OPERATOR_ADDRESS`（indexable本番では必須）
+3. mainへpushすると、push・手動実行・毎週土曜06:00（日本時間）の予約実行で `npm run build:lolipop` → 静的検査 → SSH経由で公開フォルダへ配置されます。
 
-その後、Secrets・Variablesを登録してからpushします。コピー前にSSH接続やLolipopへの転送は発生しません。
-
-- `LOLIPOP_SSH_USER`
-- `LOLIPOP_SSH_PASSWORD`
-- `LOLIPOP_SSH_REMOTE_DIR`：対象ドメインの公開フォルダ。`/`やSSHのHOME自体は指定しない
-
-GitHub Variablesには次を登録します。
-
-- `LOLIPOP_SITE_URL`
-- `LOLIPOP_PUBLICATION_MODE`：確認中は `preview`、医学・法務確認後は `production`
-- `LOLIPOP_SITE_INDEXABLE`：確認中は `false`、正式公開後は `true`
-- `LOLIPOP_LOCALIZED_INDEXABLE`：英語・中国語の翻訳確認後だけ`true`
-- 必要に応じて `NEXT_PUBLIC_CONTACT_EMAIL`、`NEXT_PUBLIC_OPERATOR_NAME`、`NEXT_PUBLIC_OPERATOR_ADDRESS`
-
-ファイルを有効化すると、mainへのpush、手動実行、毎週土曜06:00（日本時間）の予約実行で、`npm run build:lolipop` と静的検査を行い、予約日到達分だけをSSH経由で配置します。GitHub Pages workflowは既存のままmain pushで全記事をnoindex配置します。同時公開の直前にworkflowファイルを有効化してください。`.disabled`のままでは実行されません。
+`LOLIPOP_PUBLICATION_MODE` が `production` のときだけ `npm run check:rights` が走り、`src/content/article-media.json` の全素材が `rightsStatus=verified` でないとビルドが止まります（Unsplash等の検索ページURLではなく、使用した写真個別のURL・ライセンス・権利者・確認日を記録してから `verified` に変更してください）。
 
 ## 3. 手元で生成・確認
 

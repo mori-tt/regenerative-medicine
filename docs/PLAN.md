@@ -295,7 +295,7 @@ FTPSでレンタルサーバーの公開フォルダへ
 ## 32. 一斉公開日の変数化（2026-09-26 追記17）
 
 - 全記事の `publishAt`/`publishedAt` を `deployDate` で統一管理に変更。
-- `deployDate` は `src/content/site-config.json` の `deployDate`（環境変数 `NEXT_PUBLIC_DEPLOY_DATE` で上書き可）。現在は仮置き `2026-10-01`。
+- `deployDate` は `src/content/site-config.json` の `deployDate`（環境変数 `NEXT_PUBLIC_DEPLOY_DATE` で上書き可）。現在は `2026-09-30`（並行公開開始日）。
 - デプロイ日まで本番ビルドでは記事非表示、プレビュー（`NEXT_PUBLIC_ARTICLE_BUILD_MODE=all`）では全表示。デプロイ日以降に再ビルドすると一斉公開される。
 - 旧来の段階公開スケジュール（review-records.json の publishAt）は廃止し、新規記事は同じ変数で管理する。
 
