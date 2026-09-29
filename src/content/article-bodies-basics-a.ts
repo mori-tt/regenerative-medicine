@@ -100,158 +100,38 @@ export const articleBodiesBasicsA: Record<
   ),
   "three-approaches": b(
     [
-      "① Cell transplantation: supplementing needed cells from outside.",
-      "② Tissue engineering: building tissues using cells combined with scaffolds.",
-      "③ In-body regeneration: drawing out the body's own repair and regenerative capacity.",
+      "Methods supplementing cells themselves and methods combining scaffolds exist.",
+      "Research boosting built-in repair with drugs also advances.",
+      "Different methods mean different measures and risks.",
     ],
     [
       [
-        "Introduction",
+        "1. Supplementing by transplanting cells",
         [
-          "When people hear “regenerative medicine,” many imagine putting stem cells into the body to regenerate lost tissue.",
-          "However, that is not the whole idea of regenerative medicine. Broadly, it can be considered in three approaches: 1. supplementing cells—cell transplantation, 2. building tissues—tissue engineering, 3. drawing out the body's power—in-body regeneration.",
-          "In practice, treatments and research combining these approaches are also underway.",
+          "Methods supplementing lacking or damaged cells with externally prepared cells. Hematopoietic stem cell transplantation for blood diseases is the representative example, with applications to diverse organs studied.",
+          "Whose cells to use (your own or others') and how to make target cells differ by treatment.",
         ],
       ],
       [
-        "What is “regenerative medicine” in the first place?",
+        "2. Building tissues with scaffolds",
         [
-          "Regenerative medicine is medicine aimed at repairing or restoring the function of cells, tissues, and organs damaged by disease or injury.",
-          "The human body has built-in mechanisms for repairing injured tissue. Phenomena such as skin wounds healing, fractured bones reconnecting, and hair and skin being newly made are also part of the body's repair and regenerative capacity.",
-          "However, not all tissues regenerate in the same way. The brain, spinal cord, and heart have limited regenerative capacity and sometimes cannot sufficiently replace damaged cells.",
-          "That is why “regenerative medicine,” which puts the body's regenerative capacity to medical use, is being researched.",
+          "When cells alone cannot hold shapes, “tissue engineering” combines scaffold materials to make sheet-like or 3D tissues. Skin, cartilage, and heart muscle sheet studies are examples.",
+          "Both shape-making techniques and verification that built tissues keep working long matter.",
         ],
       ],
       [
-        "① “Cell transplantation” that supplements cells",
+        "3. Drawing out built-in repair",
         [
-          "The easiest to imagine is the method of supplementing cells themselves into the body.",
-          "Cells from the patient, cells derived from other people, or cells made from iPS cells and the like are transplanted to the place to be treated. In image, it is a method of “supplementing insufficient cells from outside.”",
-          "For example, methods are being studied in which target cells are made from iPS cells and transplanted to supplement the function of lost cells.",
-          "Simply putting in cells does not by itself regenerate tissue. Transplanted cells must meet conditions such as surviving, settling where needed, communicating properly with surrounding cells, and functioning as the needed cells.",
-          "That is why “what cells, delivered where, and how” matters.",
-        ],
-      ],
-      [
-        "② “Tissue engineering” that builds tissue itself",
-        [
-          "The second is tissue engineering. Rather than transplanting cells alone, it combines cells + scaffolds + physiologically active substances to reconstruct lost tissue.",
-          "A “scaffold” is like a foundation on which cells can multiply and align into the right shape. In the actual body, cells are surrounded by a structure called the extracellular matrix (ECM), which influences their shape, function, and growth. Tissue engineering studies how to recreate such environments artificially.",
-          "For example: cells → multiply and differentiate on a scaffold → cells form tissue → create functioning tissue. Research using 3D bioprinting to make complex tissues is also advancing.",
-          "In other words, tissue engineering is the idea of “designing the environment in which cells can build tissue,” rather than simply “putting cells in.”",
-        ],
-      ],
-      [
-        "③ “In-body regeneration” that harnesses the body's own power",
-        [
-          "The third approach uses cells and repair capabilities already present in the body. Instead of “putting cells in from outside,” it is the idea of “putting the body's own cells to work.”",
-          "For example, research is advancing in which special materials or physiologically active substances are delivered to a damaged site to summon the stem cells and progenitor cells present in the body → promote their activity → encourage tissue repair and regeneration.",
-          "This idea is called in situ (in-body) tissue regeneration. Research is exploring approaches that use materials to gather the body's stem and progenitor cells at injury sites to promote tissue regeneration.",
-        ],
-      ],
-      [
-        "Comparing the three approaches",
-        [
-          "The differences: cell transplantation = “supplementing needed cells from outside,” tissue engineering = “building tissue by combining cells with scaffolds,” in-body regeneration = “using cells and repair capacity already in the body.”",
-          "However, these three are not completely separate. For example, combining cells + a scaffold + growth factors can draw on the ideas of both cell transplantation and tissue engineering.",
-        ],
-      ],
-      [
-        "“Putting in stem cells = regeneration” is not accurate",
-        [
-          "This is very important for understanding regenerative medicine. It is not a simple mechanism in which “transplanting stem cells makes an injured organ reborn.” Cell types differ in nature, and how transplanted cells actually work must be studied for each treatment.",
-          "In regenerative medicine, not only the cells themselves but also the environment where cells exist, communication between cells, immune reactions, growth factors, and the extracellular matrix matter. For that reason, today's regenerative medicine is expanding from medicine that merely “puts in cells” toward medicine that designs the very environment in which cells can work properly.",
-        ],
-      ],
-      [
-        "The future of regenerative medicine",
-        [
-          "The ultimate goal of regenerative medicine is not merely to suppress symptoms but to repair and restore the function of lost cells and tissues. To that end, many methods are being studied—supplementing needed cells, creating environments in which cells can form tissue, and drawing out patients' own regenerative capacity.",
-          "At the same time, research-stage technologies must be distinguished from treatments established as medicine. Much of regenerative medicine is still under research and clinical development, and not every method has established sufficient efficacy or long-term safety.",
-        ],
-      ],
-      [
-        "Summary",
-        [
-          "Regenerative medicine has three broad ideas: ① cell transplantation—supplementing needed cells from outside; ② tissue engineering—building tissue using cells and scaffolds; ③ in-body regeneration—drawing out the body's own repair and regenerative capacity.",
-          "In other words, regenerative medicine is not just “putting cells in.” Supplementing cells, building tissues, and harnessing the body's own power—combining these to restore the function of injured tissues and organs is the broad direction of regenerative medicine.",
+          "Studies also prompt in-body stem cells and repair workings with drugs and proteins instead of direct transplants. Possibly lighter bodily burden, but verification is needed on whether intended workings occur at intended places.",
+          "Whichever approach, effects and safety must be confirmed per treatment and disease.",
         ],
       ],
     ],
-    ["① 细胞移植：从体外补充所需细胞。", "② 组织工程：用细胞与支架等制造组织。", "③ 体内再生：激发身体自带的修复·再生能力。"],
+    ["有补充细胞本身的方法，也有结合支架的方法。", "用药物激发自带修复的研究也在推进。", "方法不同，效果测法与风险不同。"],
     [
-      [
-        "引言",
-        [
-          "说到再生医学，很多人可能会联想到“把干细胞放入体内，让失去的组织再生”。",
-          "但再生医学的思路并不止于此。大致可分为三类来考虑：1. 补充细胞：细胞移植，2. 制造组织：组织工程，3. 激发身体的力量：体内再生。",
-          "实际上，也有结合这些方法的治疗与研究在进行。",
-        ],
-      ],
-      [
-        "究竟什么是“再生医学”？",
-        [
-          "再生医学是指以修复、恢复因疾病或受伤而受损的细胞、组织、器官功能为目标的医疗。",
-          "人体本来就具有修复受损组织的机制。例如皮肤伤口愈合、骨折后骨头愈合、毛发与皮肤新生等现象，都是身体具有的再生·修复能力的一部分。",
-          "但并非所有组织都能同样再生。脑、脊髓、心脏等再生能力有限，有时无法充分补充受损的细胞。",
-          "正因如此，人们正在研究将身体的再生能力用于医疗的“再生医学”。",
-        ],
-      ],
-      [
-        "① 补充细胞的“细胞移植”",
-        [
-          "最容易想象的是将细胞本身补充到体内的方法。",
-          "将患者自身的细胞、他人来源的细胞，或由iPS细胞等制作的细胞，移植到需要治疗的部位。形象地说，就是“从体外补充不足的细胞”。",
-          "例如，正在研究用iPS细胞等制作目标细胞并移植，以补充失去细胞的功能。",
-          "仅仅放入细胞并不能使组织再生。移植的细胞需要满足存活、在所需位置定着、与周围细胞适当进行信息交流、作为所需细胞发挥功能等条件。",
-          "因此，“用什么样的细胞、送到哪里、以何种方式送达”十分重要。",
-        ],
-      ],
-      [
-        "② 制造组织本身的“组织工程”",
-        [
-          "第二种是组织工程（Tissue Engineering）。它不是只移植细胞，而是将细胞＋支架（脚手架）＋生理活性物质等组合起来，重建失去的组织。",
-          "所谓“支架”，相当于让细胞增殖、按正确形状排列的“地基”。在真实的体内，细胞周围存在称为细胞外基质（ECM）的结构，影响细胞的形态、功能与增殖等。组织工程研究的正是人工再现这种环境。",
-          "例如：细胞 → 在支架上增殖·分化 → 细胞彼此形成组织 → 制成功能性组织。利用3D生物打印制作复杂组织的研究也在推进。",
-          "也就是说，组织工程不是“放入细胞”，而是“连细胞能造出组织的环境也一并设计”的思路。",
-        ],
-      ],
-      [
-        "③ 发挥身体力量的“体内再生”",
-        [
-          "第三种是利用体内原本存在的细胞与修复能力的方法。即不是“从体外放入细胞”，而是“让身体里的细胞发挥作用”的思路。",
-          "例如，正在推进的研究是：向受损部位输送特殊材料或生理活性物质等，召唤体内存在的干细胞·前体细胞 → 促进细胞作用 → 促进组织修复·再生。",
-          "这种思路称为in situ（体内）组织再生。研究正在探讨利用材料将体内的干细胞·前体细胞聚集到损伤部位、促进组织再生的方法。",
-        ],
-      ],
-      [
-        "三种路径的比较",
-        [
-          "区别是：细胞移植=“从体外补充所需细胞”即补充细胞；组织工程=“将细胞与支架等组合制造组织”即制造组织；体内再生=“利用体内已有的细胞与修复能力”即激发身体的力量。",
-          "不过，这三者并非完全分开。例如将细胞＋支架＋生长因子组合，有时也会同时利用细胞移植与组织工程两种思路。",
-        ],
-      ],
-      [
-        "“放入干细胞=再生”并不正确",
-        [
-          "这一点对理解再生医学非常重要。并非“移植干细胞，受伤的器官就会重新长成”这样简单的机制。细胞种类不同性质也不同，移植的细胞实际如何发挥作用，也需要针对每种治疗进行研究。",
-          "在再生医学中，重要的不只是细胞本身，还有细胞所处的环境、细胞间的信息交流、免疫反应、生长因子、细胞外基质等。因此，当前的再生医学正从单纯“放入细胞的医疗”，扩展到“设计细胞能正常工作的环境本身的医疗”。",
-        ],
-      ],
-      [
-        "再生医学的未来",
-        [
-          "再生医学的最终目标不只是抑制症状，而是修复、恢复失去的细胞·组织功能。为此正在研究多种方法：补充所需细胞、营造细胞能形成组织的环境、激发患者自身的再生能力。",
-          "另一方面，需要区分研究阶段的技术与已作为医疗确立的治疗。再生医学的许多方法目前仍在研究·临床开发中，并非所有方法都已确立充分有效性与长期安全性。",
-        ],
-      ],
-      [
-        "总结",
-        [
-          "再生医学大致有三种思路：① 细胞移植→从体外补充所需细胞，② 组织工程→利用细胞与支架等制造组织，③ 体内再生→激发身体自带的修复·再生能力。",
-          "也就是说，再生医学不只是“放入细胞”。补充细胞、制造组织、发挥身体自身的力量——在组合这些方法的同时，以恢复受损组织与器官的功能为目标，这就是再生医学的大方向。",
-        ],
-      ],
+      ["1. 移植细胞来补充", ["用体外准备的细胞补充不足损伤细胞的方法。针对血液病的造血干细胞移植是代表例，向多种器官的应用在研究。", "用谁的细胞（自己还是他人）、如何制作目标细胞，因治疗而异。"]],
+      ["2. 结合支架造组织", ["仅细胞难保持形状时，用支架材料组合制作片状立体组织的“组织工程”手法。皮肤软骨心肌片等研究是例子。", "造形技术与制成组织长期工作的验证都重要。"]],
+      ["3. 激发自带修复", ["也有不用直接移植细胞，用药物蛋白质等激发体内干细胞与修复功能的研究。身体负担可能小，但需验证是否在目标位置发生目标作用。", "无论哪种路径，效果安全性都要按治疗疾病确认。"]],
     ],
   ),
   "myths-and-facts": b(

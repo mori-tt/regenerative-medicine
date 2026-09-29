@@ -34,10 +34,10 @@ export const articleLocales: Record<
     "再生医学并非突然出现。回顾其在医学史中的位置。",
   ),
   "three-approaches": t(
-    "Three Approaches to Regenerative Medicine: Cell Transplantation, Tissue Engineering, and Harnessing the Body's Own Power",
-    "Regenerative medicine is not only about putting cells into the body. It is explained through three approaches: supplementing cells, building tissues, and drawing out the body's own power.",
-    "再生医学的三种路径：细胞移植、组织工程、发挥自身力量",
-    "再生医学并不仅仅是把细胞放入体内。本文介绍补充细胞、制造组织、激发自身力量三种思路。",
+    "Three Approaches: Cell Transplantation, Tissue Engineering, and Boosting Repair",
+    "Cell replacement, scaffolds combined with cells, and activating the body's own repair: how they differ.",
+    "再生医学的三种路径：细胞移植、组织工程与激发自愈",
+    "再生医学方法多样。分三种代表性思路介绍。",
   ),
   "myths-and-facts": t(
     "Is Regenerative Medicine All-Powerful? What It Can and Cannot Do",
