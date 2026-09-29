@@ -7918,7 +7918,7 @@
   "stem-cell-treatment-contents": {
     "slug": "stem-cell-treatment-contents",
     "title": "幹細胞治療では、実際に何を体に入れているの？",
-    "lastEditedAt": "2026-09-29",
+    "lastEditedAt": "2026-09-30",
     "imageKey": "microscope",
     "publishAt": "2026-09-28",
     "publishedAt": "2026-09-28",
@@ -7935,7 +7935,7 @@
     "referenceCount": 5,
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "c40c3252c37730b48d49025fa0078c6d2cd1f619c3150590730b3474e5ca2ecf",
+      "contentHash": "69eedd73a62c3b3dee7d56135af80be6b890b2b772a20fe0763d5d0ff3a2b902",
       "checkedAt": "2026-09-30",
       "status": "editorial_source_review",
       "sourceCount": 0,
@@ -7944,7 +7944,7 @@
     "reviewer": {
       "status": "reviewed",
       "name": "千原 良友",
-      "reviewedAt": "2026-09-29",
+      "reviewedAt": "2026-09-28",
       "scope": "執筆医師本人による医学的確認",
       "conflictOfInterest": ""
     },
