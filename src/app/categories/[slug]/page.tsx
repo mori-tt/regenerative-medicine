@@ -81,7 +81,9 @@ export default async function CategoryPage({
               <Link href={`#sub-${group.key}`}>
                 <span className="topic-num" aria-hidden="true">{index + 1}</span>
                 <span className="topic-name">{group.ja}</span>
-                <span className="topic-count">{groupArticles.length}件</span>
+                {liveArticles(groupArticles).length > 0 && (
+                  <span className="topic-count">{liveArticles(groupArticles).length}件</span>
+                )}
               </Link>
             </li>
           ))}
@@ -109,7 +111,9 @@ export default async function CategoryPage({
               <h2 id={`sub-heading-${group.key}`} className="listing-heading">
                 <span className="topic-num" aria-hidden="true">{index + 1}</span>
                 {group.ja}
-                <span className="listing-count">{groupArticles.length}件</span>
+                {liveGroup.length > 0 && (
+                  <span className="listing-count">{liveGroup.length}件</span>
+                )}
                 <FeaturedButton label="おすすめ" count={flags.filter(Boolean).length} />
               </h2>
               {group.desc && <p className="listing-lead">{group.desc.ja}</p>}
@@ -128,13 +132,14 @@ export default async function CategoryPage({
                 </FeaturedOnlyGrid>
               )}
               <FeaturedHidden>
-                <StockReveal count={stockGroup.length} locale="ja">
-                  <div className="listing-grid">
-                    {stockGroup.map((a) => (
-                      <ArticleCard key={a.slug} article={a} badge={featuredSet.has(a.slug) ? "おすすめ" : undefined} />
-                    ))}
-                  </div>
-                </StockReveal>
+                <StockReveal
+                  count={stockGroup.length}
+                  locale="ja"
+                  featured={stockGroup.map((a) => featuredSet.has(a.slug))}
+                  cards={stockGroup.map((a) => (
+                    <ArticleCard key={a.slug} article={a} badge={featuredSet.has(a.slug) ? "おすすめ" : undefined} />
+                  ))}
+                />
               </FeaturedHidden>
             </section>
           </FeaturedScope>
@@ -153,13 +158,14 @@ export default async function CategoryPage({
                 ))}
               </div>
             )}
-            <StockReveal count={stockColumns.length} locale="ja">
-              <div className="listing-grid">
-                {stockColumns.map((a) => (
-                  <ArticleCard key={a.slug} article={a} />
-                ))}
-              </div>
-            </StockReveal>
+            <StockReveal
+              count={stockColumns.length}
+              locale="ja"
+              featured={stockColumns.map((a) => featuredSet.has(a.slug))}
+              cards={stockColumns.map((a) => (
+                <ArticleCard key={a.slug} article={a} />
+              ))}
+            />
           </section>
         </FeaturedHidden>
       )}

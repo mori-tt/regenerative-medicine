@@ -52,17 +52,18 @@ export default function ArticlesPage() {
           />
         ))}
       </ArticleBrowser>
-      <StockReveal count={stock.length} locale="ja">
-        <div className="listing-grid">
-          {stock.map((a) => (
-            <ArticleCard
-              key={a.slug}
-              article={a}
-              badge={featuredSet.has(a.slug) ? "おすすめ" : undefined}
-            />
-          ))}
-        </div>
-      </StockReveal>
+      <StockReveal
+        count={stock.length}
+        locale="ja"
+        featured={stock.map((a) => featuredSet.has(a.slug))}
+        cards={stock.map((a) => (
+          <ArticleCard
+            key={a.slug}
+            article={a}
+            badge={featuredSet.has(a.slug) ? "おすすめ" : undefined}
+          />
+        ))}
+      />
       </FeaturedScope>
     </div>
   );

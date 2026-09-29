@@ -141,18 +141,19 @@ export function LocalizedArticles({
         badgeLabel={copy.badge}
         badgeSlugs={featuredSet}
       />
-      <StockReveal count={stock.length} locale={locale}>
-        <div className="listing-grid">
-          {stock.map((source) => (
-            <LocalizedArticleCard
-              locale={locale}
-              source={source}
-              key={source.slug}
-              badge={featuredSet.has(source.slug) ? copy.badge : undefined}
-            />
-          ))}
-        </div>
-      </StockReveal>
+      <StockReveal
+        count={stock.length}
+        locale={locale}
+        featured={stock.map((source) => featuredSet.has(source.slug))}
+        cards={stock.map((source) => (
+          <LocalizedArticleCard
+            locale={locale}
+            source={source}
+            key={source.slug}
+            badge={featuredSet.has(source.slug) ? copy.badge : undefined}
+          />
+        ))}
+      />
       </FeaturedScope>
     </div>
   );

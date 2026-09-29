@@ -3041,6 +3041,21 @@ section[id^="sub-"] { scroll-margin-top: 80px; }
 .stock-reveal-open .stock-reveal-button {
   margin-bottom: 16px;
 }
+.stock-reveal-actions {
+  display: flex;
+  gap: 8px;
+}
+.stock-reveal-actions .stock-reveal-button {
+  flex: 1;
+}
+.stock-reveal-featured {
+  border-style: dashed;
+}
+.stock-reveal-featured.active {
+  background: var(--green);
+  border-color: var(--green);
+  color: #fff;
+}
 .review-chip.editorial {
   color: #5c6b52;
   background: #eef1ea;
