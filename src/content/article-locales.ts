@@ -280,10 +280,10 @@ export const articleLocales: Record<
     "整理干细胞的基本功能，以及ES、iPS、间充质等代表性种类在来源与性质上的区别。",
   ),
   "ips-cells-explained": t(
-    "iPS Cells Explained: Mechanisms and Research Today",
-    "Pluripotent stem cells made from body cells: what they can and cannot do.",
-    "iPS 细胞解说：机制与研究现状",
-    "由身体细胞制成的多能干细胞。整理能做与不能做的事。",
+    "What Are iPS Cells? The Mechanism, Research, and Limited Clinical Uses Explained",
+    "Induced pluripotent stem cells made by reprogramming body cells: how they are made, the research using them, the iPS-derived products approved in Japan in 2026, and the remaining challenges.",
+    "iPS细胞是什么？机制、研究与有限的临床应用详解",
+    "对体细胞进行初始化制成的人工多能干细胞。整理制作方法、相关研究、2026年日本获批的iPS细胞来源产品与遗留课题。",
   ),
   "es-cells-explained": t(
     "ES Cells: Characteristics and Ethical Considerations",
@@ -1271,9 +1271,9 @@ export const articleLocales: Record<
   ),
   "stem-cell-treatment-contents": t(
     "What Actually Goes Into Your Body in Stem Cell Treatment?",
-    "What stem cell preparations contain beyond cells, and how administration routes differ.",
+    "Stem cells themselves, cells made from stem cells, processed cell products, and cell-derived components—what is actually administered and what to confirm beforehand.",
     "干细胞治疗究竟往体内注入什么？",
-    "整理干细胞制剂中除细胞外可能含有的成分及不同给药途径的差异。",
+    "干细胞本身、由干细胞制作的细胞、细胞加工物、细胞来源成分——整理实际注入物的差异与治疗前应确认的要点。",
   ),
   "iv-stem-cell-journey": t(
     "What Happens After a Stem Cell IV Infusion?",

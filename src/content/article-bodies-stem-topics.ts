@@ -72,37 +72,109 @@ export const articleBodiesStemTopics: Record<
   ),
   "stem-cell-treatment-contents": b(
     [
-      "Stem cell treatment administers a preparation of cultured cells suspended in fluid.",
-      "The product may contain more than cells—suspending fluid and stabilizing additives.",
-      "What to confirm differs by route: IV drip versus local injection.",
+      "What is administered in 'stem cell treatment' differs by therapy.",
+      "Not only stem cells themselves—differentiated cells, processed cell products, and cell-derived components are also used.",
+      "Confirm what is administered, where the cells come from, how they are processed, and how they are given.",
     ],
     [
-      ["What is inside the preparation", [
-        "What enters the body is cells—collected and usually culture-expanded—suspended in a solution such as saline. The cell itself is the active component; cell count, tissue origin, and autologous vs donor status vary by treatment.",
-        "Preparations may also contain excipients and, for frozen products, residual cryoprotectants such as DMSO. Ask for the ingredient list and allergy considerations before administration.",
+      ["Introduction", [
+        "When people hear “stem cell treatment,” many picture stem cells being placed into the body to replace damaged tissue with new cells.",
+        "So what is actually administered in real treatment? The short answer: what is administered differs by therapy. Sometimes the stem cells themselves are administered; sometimes cells made from stem cells are used; and sometimes they are given as a “processed cell product” made by culturing and processing cells.",
       ]],
-      ["How the cells were made is part of the contents", [
-        "Cells used directly after collection and cells expanded over weeks differ in state and in what else they carry. Culture media and serum components may remain in trace amounts.",
-        "Ask not only 'what goes in' but 'how these cells were produced'—request the steps from collection to dosing in writing.",
+      ["The most basic form: treatment that administers living cells", [
+        "In stem-cell-based cell therapy, a processed cell product containing living cells is basically administered into the patient's body. The cells used may be “autologous”—taken from the patient—or “allogeneic”—taken from another person.",
+        "In treatment using mesenchymal stem cells (MSCs), for example, the flow is: collect tissue (such as fat) → isolate and culture the needed cells → check quality → administer to the patient.",
+        "Japan's Ministry of Health, Labour and Welfare handles human cells that have undergone culture or other processing as “specified processed cell products” and similar categories, requiring certain controls for the manufacturing facilities and for safety.",
       ]],
-      ["Routes differ", [
-        "IV infusion distributes the product through the bloodstream; injections into joints or skin stay near the site. Route changes both where cells go and which risks apply.",
-        "The idea that IV delivery reaches the whole body evenly does not match measured distribution—see the 'Inside the body' category for details.",
+      ["It is not always “stem cells themselves” that go in", [
+        "In regenerative medicine, what is administered is not necessarily the stem cells themselves. For example, there is research and medical care in which pluripotent stem cells such as iPS cells are differentiated into target cells—cardiomyocytes, nervous-system cells, retinal pigment epithelial cells, or other tissue-forming cells—which are then used in treatment.",
+        "In other words, the concept is: stem cells → produce the target cells → administer those cells.",
+        "In fact, the “regenerative medical products” handled by PMDA (the Pharmaceuticals and Medical Devices Agency) include products in which human cells are cultured or otherwise processed for rebuilding, repairing, or forming body structure and function, or for treating or preventing disease.",
+      ]],
+      ["There are also treatments that administer “something other than cells”", [
+        "Even where the term regenerative medicine is used, what is administered is not always living stem cells. Research is also advancing on substances secreted by stem cells and components obtained from cells—for example, various factors secreted by stem cells and extracellular vesicles (EVs) are subjects of study.",
+        "One point to note here: “treatment that administers stem cells” and “treatment that uses components produced by stem cells” are not the same thing.",
+        "In particular, “stem-cell culture supernatant” and “exosomes” are distinguished from treatments that administer the cells themselves, because under the Ministry of Health, Labour and Welfare's definition they do not constitute regenerative medicine and therefore do not require an application as regenerative medicine.",
+      ]],
+      ["Your own cells—or someone else's cells", [
+        "Where the administered cells come from also matters.",
+        "Autologous cells: cells collected from the patient are used—for example, collect cells from your own tissue → culture/process → administer to yourself.",
+        "Allogeneic cells: cells collected from someone other than the patient, such as a healthy donor, are used. In this case too, the collected cells are not administered as-is; they are used after the necessary processing and quality control. Which is used depends on the treatment method and the type of cells.",
+        "At present in Japan, the use of allogeneic cells is not permitted for regenerative medicine; the use of allogeneic cells is limited to conventional blood transfusion and bone-marrow transplantation.",
+      ]],
+      ["When given by drip, a “liquid containing cells” is being administered", [
+        "Some stem-cell treatments administer cells by intravenous drip. In that case, the drip liquid is not equal to stem cells alone. In practice, the cells to be administered are suspended in an appropriate solution and given as a “cell suspension.”",
+        "The image is: drip bag → liquid containing cells → administration into the blood vessel. Note, however, that the composition of the administered fluid, the cell count, and the method of administration differ by treatment.",
+      ]],
+      ["Do stem cells that enter the body “become organs as they are”?", [
+        "This is another point that is easily misunderstood. It is tempting to think that “stem cells given by drip travel to the damaged organ and become new cells there,” but the actual action of cell therapy is not that simple.",
+        "Especially for mesenchymal stem cells and the like, research is investigating not only the administered cells themselves rebuilding large amounts of target tissue, but also actions mediated by the various factors the cells secrete.",
+        "Therefore, “putting in stem cells = those cells replace the new tissue” cannot be assumed uniformly. The expected action and mechanism differ depending on the type of cells used, the administration method, and the target disease.",
+      ]],
+      ["The words “stem cell treatment” alone cannot tell you what is administered", [
+        "As we have seen, the words “stem cell treatment” alone cannot tell you what actually enters the body. At minimum, confirm the following points.",
+        "What is being administered? Whether it is the stem cells themselves, cells differentiated from stem cells, a processed cell product, or components produced by cells rather than cells.",
+        "Where were the cells collected from? Whether they are your own cells or cells derived from another person.",
+        "How have they been processed? What culture is performed, what processing is done, and what quality control is in place.",
+        "How are they administered? Drip infusion, intravenous injection, local injection, tissue transplantation, and so on differ by treatment.",
+      ]],
+      ["Summary", [
+        "Even under the single label “stem cell treatment,” what actually enters the body varies: 1) stem cells themselves, 2) target cells made from stem cells, 3) cultured and processed cell products, 4) methods that use components produced by stem cells, and more.",
+        "Therefore, when considering regenerative medicine, it is important to confirm not just the explanation “this is stem cell treatment,” but “which cells are collected from where, how they are processed, what is administered, and by what method.”",
+        "For regenerative medical products, PMDA publishes information on approved products and package inserts. Checking such public information is also important for understanding what a treatment involves.",
       ]],
     ],
-    ["干细胞治疗注入的是悬浮于液体的培养细胞制剂。", "制剂除细胞外还可能含悬浮液与添加成分。", "需确认的内容因给药途径而异。"],
     [
-      ["制剂内含什么", [
-        "进入体内的是经采集、通常培养扩增后悬浮于生理盐水等液体中的细胞。细胞本身是主要成分；细胞数、组织来源、自体或异体因疗法而异。",
-        "制剂还可能含稳定剂等辅料，冷冻制剂可能残留DMSO等冷冻保护剂。给药前应确认成分与过敏可能性。",
+      "“干细胞治疗”实际注入体内的内容因疗法而异。",
+      "不限于干细胞本身，还包括分化所得细胞、细胞加工物及细胞来源成分。",
+      "务必确认注入什么、细胞取自何处、如何加工、以何种方式给药。",
+    ],
+    [
+      ["引言", [
+        "一听到“干细胞治疗”，很多人可能会想象把干细胞放入体内，用新细胞替换受损组织。",
+        "那么实际治疗中注入体内的究竟是什么？先说结论：注入物因疗法而异。有的注入“干细胞本身”，有的使用由干细胞制成的细胞，也有以培养、加工后的“细胞加工物”形式给药的情况。",
       ]],
-      ["细胞的制备过程也是内容的一部分", [
-        "采集后直接使用与经数周培养扩增的细胞在状态及所含物质上不同，培养基与血清成分可能有微量残留。",
-        "不仅要问'注入什么'，还应问'细胞如何制备'，并以书面形式确认从采集到给药的全过程。",
+      ["最基本的形式：注入“活细胞”的治疗", [
+        "使用干细胞的细胞治疗，基本上是向患者体内注入含活细胞的细胞加工物。所用细胞有来自患者本人的“自体细胞”和来自他人的“异体细胞”。",
+        "例如使用间充质干细胞（MSC）的治疗，流程为：采集组织（如脂肪）→ 分离、培养所需细胞 → 确认品质 → 给予患者。",
+        "日本厚生劳动省将对人体细胞进行培养等加工后的产物作为“特定细胞加工物”等管理，对制造设施与安全性提出一定的管理要求。",
       ]],
-      ["给药途径的差异", [
-        "静脉输注使制剂随血流分布；关节腔或皮下注射则留在局部。途径不同，细胞去向与风险也不同。",
-        "'输注即遍布全身'的说法与实测分布并不一致——详见'体内的动向'栏目。",
+      ["注入的未必是“干细胞本身”", [
+        "再生医学中，注入的未必是“干细胞本身”。例如有研究与医疗是从iPS细胞等多能干细胞诱导分化为目标细胞——心肌细胞、神经系统细胞、视网膜色素上皮细胞及其他组织构成细胞等——再用于治疗。",
+        "也就是说，思路是：干细胞 → 制作目标细胞 → 注入该细胞。",
+        "实际上，PMDA（医药品医疗器械综合机构）所管的“再生医疗等产品”就包含对人体细胞进行培养等加工、以重建修复形成身体结构功能或治疗预防疾病为目的使用的制品。",
+      ]],
+      ["也有注入“细胞以外成分”的治疗", [
+        "即使冠以再生医学之名，注入的也未必是活的干细胞。利用干细胞分泌的物质或细胞来源成分的研究也在推进，例如干细胞分泌的多种因子、细胞外囊泡（EV）等都是研究对象。",
+        "这里需要注意的是：“注入干细胞的治疗”与“利用干细胞所产生成分的治疗”并不是一回事。",
+        "特别是“干细胞培养上清”“外泌体”等，与注入细胞本身的治疗是区分开的。因为它们不属于厚生劳动省所定义的再生医疗，无需按再生医疗提出申请。",
+      ]],
+      ["用自己的细胞，或用他人的细胞", [
+        "注入的细胞来自何处也很重要。",
+        "自体细胞：使用从患者本人采集的细胞，例如从自己的组织采集细胞 → 培养、加工 → 回输给自己。",
+        "异体细胞：使用健康供者等患者以外的人采集的细胞。此时也不是把采集的细胞直接注入，而是在进行必要的加工与质量管理后使用。用哪一种取决于治疗方法和所用细胞种类。",
+        "目前在日本，再生医疗不允许使用异体细胞，异体细胞的使用仅限于以往的输血和骨髓移植。",
+      ]],
+      ["经点滴给药时，注入的是“含细胞的液体”", [
+        "有的干细胞治疗通过点滴等方式注入细胞。此时，点滴液体≠只有干细胞。实际上是将拟注入的细胞悬浮于适当液体中，以“细胞悬液”形式给药。",
+        "形象地说就是：点滴袋 → 含细胞的液体 → 注入血管。不过，药液的组成、细胞数与给药方式因治疗而异。",
+      ]],
+      ["“进入体内的干细胞会原样变成器官吗？”", [
+        "这一点也容易误解。人们容易简单地认为“点滴干细胞后会移动到受损器官并在那里变成新细胞”，但实际细胞治疗的作用并没有那么简单。",
+        "尤其是间充质干细胞等，研究不仅在探讨注入的细胞本身大量再造目标组织，也在研究其通过分泌各种因子介导的作用。",
+        "因此不能一律认为“注入干细胞=细胞替换为新组织”。所用细胞种类、给药方法与对象疾病不同，期待的作用与机制也不同。",
+      ]],
+      ["仅凭“干细胞治疗”一词无法判断注入的是什么", [
+        "如上所述，仅凭“干细胞治疗”一词无法判断实际进入体内的是什么。至少应确认以下项目。",
+        "注入的是什么？是干细胞本身、干细胞分化所得的细胞、细胞加工制品，还是并非细胞而是细胞产生的成分。",
+        "细胞取自何处？是自己的细胞还是他人来源的细胞。",
+        "如何加工？进行了怎样的培养、怎样的加工、怎样的质量管理。",
+        "如何给药？点滴、静脉注射、局部注射、组织移植等因治疗而异。",
+      ]],
+      ["总结", [
+        "即使都叫“干细胞治疗”，实际注入体内的内容并不单一：① 干细胞本身，② 由干细胞制作的目标细胞，③ 经培养加工的细胞加工物，④ 利用干细胞所产生成分的方法等，存在多种途径。",
+        "因此考虑再生医疗时，不能只听“这是干细胞治疗”，还应确认“用什么细胞、取自何处、如何加工、注入什么、以何种方式给药”。",
+        "关于再生医疗等产品，PMDA公开了获批产品信息与说明书等资料。理解治疗内容时，也应确认此类公开信息。",
       ]],
     ],
   ),

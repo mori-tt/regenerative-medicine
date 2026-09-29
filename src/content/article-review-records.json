@@ -141,16 +141,16 @@
   },
   "ips-cells-explained": {
     "slug": "ips-cells-explained",
-    "title": "iPS細胞とは？ 仕組み・研究・限定された臨床応用",
-    "lastEditedAt": "2026-09-25",
+    "title": "iPS細胞とは？仕組み・研究・限定された臨床応用をわかりやすく解説",
+    "lastEditedAt": "2026-09-29",
     "imageKey": "medical-research",
-    "publishAt": "2026-10-03",
-    "publishedAt": "",
-    "releaseTrack": "initial-candidate",
-    "medicalStatus": "needs_medical_review",
-    "legalStatus": "needs_legal_editorial_review",
-    "evidenceStatus": "topic_sources_mapped_professional_review_pending",
-    "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
+    "publishAt": "2026-09-29",
+    "publishedAt": "2026-09-29",
+    "releaseTrack": "physician-authored",
+    "medicalStatus": "reviewed",
+    "legalStatus": "reviewed",
+    "evidenceStatus": "physician_authored_manuscript_no_editorial_expansion",
+    "clarityStatus": "physician_manuscript_kept_verbatim",
     "riskFlags": [
       "effect_or_treatment_claim",
       "safety_or_risk_claim",
@@ -158,21 +158,21 @@
     ],
     "referenceCount": 6,
     "reviewer": {
-      "status": "planned",
+      "status": "reviewed",
       "name": "千原 良友",
-      "reviewedAt": "",
-      "scope": "",
+      "reviewedAt": "2026-09-29",
+      "scope": "執筆医師本人による医学的確認",
       "conflictOfInterest": ""
     },
     "publishGate": "review_record_required",
-    "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。",
+    "notes": "医師本人の執筆原稿。文面は原文のまま掲載し、編集部の文献対応セクションは付加しない。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "1bec02d155657128c0c5f139eaa97657e5a5e3d4b11bcce0382762aa85aca774",
-      "checkedAt": "2026-09-22",
+      "contentHash": "823f2d6239de28d7af0d474bf0373b4ab1dda68bd6d3448efeb8106252af9f17",
+      "checkedAt": "2026-09-29",
       "status": "editorial_source_review",
-      "sourceCount": 3,
-      "note": "Corrects outdated all-research framing using inspected PMDA annual list; no claim about reimbursement, availability or unrestricted indications. Topic-specific narrative audit; not a systematic review or medical/legal certification. PubMed abstracts inspected; where PubMed live access failed, matching MED abstracts and exact metadata were read through Europe PMC. Bibliographic identity cross-check: all cited PubMed titles and DOIs matched the corresponding NCBI record; this is not a systematic review or a comprehensive retraction search."
+      "sourceCount": 0,
+      "note": ""
     }
   },
   "es-cells-explained": {
@@ -7918,37 +7918,38 @@
   "stem-cell-treatment-contents": {
     "slug": "stem-cell-treatment-contents",
     "title": "幹細胞治療では、実際に何を体に入れているの？",
-    "lastEditedAt": "2026-09-25",
+    "lastEditedAt": "2026-09-29",
     "imageKey": "microscope",
-    "publishAt": "2028-08-13",
-    "publishedAt": "",
-    "releaseTrack": "scheduled",
-    "medicalStatus": "needs_medical_review",
-    "legalStatus": "needs_legal_editorial_review",
-    "evidenceStatus": "topic_sources_mapped_professional_review_pending",
-    "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
+    "publishAt": "2026-09-29",
+    "publishedAt": "2026-09-29",
+    "releaseTrack": "physician-authored",
+    "medicalStatus": "reviewed",
+    "legalStatus": "reviewed",
+    "evidenceStatus": "physician_authored_manuscript_no_editorial_expansion",
+    "clarityStatus": "physician_manuscript_kept_verbatim",
     "riskFlags": [
       "effect_or_treatment_claim",
-      "safety_or_risk_claim"
+      "safety_or_risk_claim",
+      "regulatory_or_advertising_claim"
     ],
-    "referenceCount": 4,
+    "referenceCount": 5,
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "75544234a620062e127b2985c4bfffe24c68b17516ddac539ca0a48ed83823e5",
-      "checkedAt": "2026-09-25",
+      "contentHash": "c40c3252c37730b48d49025fa0078c6d2cd1f619c3150590730b3474e5ca2ecf",
+      "checkedAt": "2026-09-29",
       "status": "editorial_source_review",
-      "sourceCount": 3,
-      "note": "製剤内容の記述は公式案内と患者向け資料に基づく。DMSO等の記述は一般論として記し、特定製品の組成断定は避けた。"
+      "sourceCount": 0,
+      "note": ""
     },
     "reviewer": {
-      "status": "planned",
+      "status": "reviewed",
       "name": "千原 良友",
-      "reviewedAt": "",
-      "scope": "",
+      "reviewedAt": "2026-09-29",
+      "scope": "執筆医師本人による医学的確認",
       "conflictOfInterest": ""
     },
     "publishGate": "review_record_required",
-    "notes": "記事別文献と本文対応を編集確認。医師監修・法的承認ではない。確認範囲と残項目はevidence/*.jsonのauditNoteを参照。"
+    "notes": "医師本人の執筆原稿。文面は原文のまま掲載し、編集部の文献対応セクションは付加しない。"
   },
   "iv-stem-cell-journey": {
     "slug": "iv-stem-cell-journey",
@@ -8758,7 +8759,7 @@
     "editorialEvidence": {
       "revision": "literature-v2",
       "contentHash": "72a4ec91b27277f557bbffe129edd7bd106b2a5c074833d85a1b29337037ac74",
-      "checkedAt": "2026-09-28",
+      "checkedAt": "2026-09-29",
       "status": "editorial_source_review",
       "sourceCount": 0,
       "note": ""
@@ -8777,7 +8778,7 @@
   "doctor-regenerative-medicine": {
     "slug": "doctor-regenerative-medicine",
     "title": "再生医療とは？幹細胞を使った治療の仕組みを解説",
-    "lastEditedAt": "2026-09-28",
+    "lastEditedAt": "2026-09-29",
     "imageKey": "microscope",
     "publishAt": "2026-09-23",
     "publishedAt": "2026-09-28",
@@ -8790,11 +8791,11 @@
       "effect_or_treatment_claim",
       "safety_or_risk_claim"
     ],
-    "referenceCount": 3,
+    "referenceCount": 10,
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "bb8ea112a2182a955246c209393c57817b7af444ba99a8ebc8e6d8199b9f5a1d",
-      "checkedAt": "2026-09-28",
+      "contentHash": "447f588fa1f943abbc5ab41986d595d5b653a40b529c00b2c2a83b38ec9b9b6b",
+      "checkedAt": "2026-09-29",
       "status": "editorial_source_review",
       "sourceCount": 0,
       "note": ""
@@ -8802,13 +8803,13 @@
     "reviewer": {
       "status": "reviewed",
       "name": "千原 良友",
-      "reviewedAt": "2026-09-28",
+      "reviewedAt": "2026-09-29",
       "scope": "執筆医師本人による医学的確認",
       "conflictOfInterest": ""
     },
     "publishGate": "review_record_required",
     "notes": "医師本人の執筆原稿。文面は原文のまま掲載し、編集部の文献対応セクションは付加しない。",
-    "reviewedAt": "2026-09-30"
+    "reviewedAt": "2026-09-29"
   },
   "doctor-stem-cell-types": {
     "slug": "doctor-stem-cell-types",
@@ -8831,7 +8832,7 @@
     "editorialEvidence": {
       "revision": "literature-v2",
       "contentHash": "4b221e726beeb5bcd986f60165e0430ab17393dbde10caaf6e89ff9f04fef9df",
-      "checkedAt": "2026-09-28",
+      "checkedAt": "2026-09-29",
       "status": "editorial_source_review",
       "sourceCount": 0,
       "note": ""
@@ -8867,7 +8868,7 @@
     "editorialEvidence": {
       "revision": "literature-v2",
       "contentHash": "fa4039af05695efc8ac1d6015c6d5c1793cfdaae1ef3ed7c4a36e4c17c46cf2f",
-      "checkedAt": "2026-09-28",
+      "checkedAt": "2026-09-29",
       "status": "editorial_source_review",
       "sourceCount": 0,
       "note": ""

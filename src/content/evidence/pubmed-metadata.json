@@ -1953,7 +1953,24 @@
     ],
     "checkedAt": "2026-09-25"
   },
-  "27502078": {
+  "27236669": {
+  "title": "Paracrine Mechanisms of Mesenchymal Stem Cells in Tissue Repair.",
+  "authors": [
+   "Gnecchi M",
+   "Danieli P",
+   "Malpasso G",
+   "Ciuffreda MC"
+  ],
+  "journal": "Methods in molecular biology",
+  "year": "2016",
+  "doi": "10.1007/978-1-4939-3584-0_7",
+  "publicationTypes": [
+   "Journal Article",
+   "Review"
+  ],
+  "checkedAt": "2026-09-29"
+ },
+ "27502078": {
     "title": "Acute myocardial infarction.",
     "authors": [
       "Reed GW",
