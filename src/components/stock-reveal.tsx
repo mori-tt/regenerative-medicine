@@ -26,6 +26,7 @@ const labels = {
     hide: "ストックを閉じる",
     featured: (n: number) => `おすすめのみ（${n}件）`,
     all: (n: number) => `すべて表示（${n}件）`,
+    badge: "テスト表示",
   },
   en: {
     button: (n: number) => `Show stock articles (${n})`,
@@ -33,6 +34,7 @@ const labels = {
     hide: "Hide stock articles",
     featured: (n: number) => `Featured only (${n})`,
     all: (n: number) => `Show all (${n})`,
+    badge: "Test preview",
   },
   zh: {
     button: (n: number) => `显示库存文章（${n}篇）`,
@@ -40,6 +42,7 @@ const labels = {
     hide: "收起库存文章",
     featured: (n: number) => `仅看推荐（${n}篇）`,
     all: (n: number) => `显示全部（${n}篇）`,
+    badge: "测试预览",
   },
 } as const;
 
@@ -99,6 +102,7 @@ export function StockReveal({
   return (
     <div className="stock-reveal stock-reveal-open">
       <div className="stock-reveal-actions">
+        <span className="stock-reveal-badge">{copy.badge}</span>
         <button
           type="button"
           className="stock-reveal-button stock-reveal-close"

@@ -3044,6 +3044,18 @@ section[id^="sub-"] { scroll-margin-top: 80px; }
 .stock-reveal-actions {
   display: flex;
   gap: 8px;
+  align-items: center;
+}
+.stock-reveal-badge {
+  flex-shrink: 0;
+  padding: 3px 10px;
+  border: 1px dashed #a87f3c;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: #a87f3c;
+  background: #fdf6e8;
 }
 .stock-reveal-actions .stock-reveal-button {
   flex: 1;

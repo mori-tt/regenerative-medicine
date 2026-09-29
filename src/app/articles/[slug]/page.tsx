@@ -92,6 +92,17 @@ export default async function ArticlePage({
               url: absolute(),
               logo: { "@type": "ImageObject", url: absolute("/icon.svg") },
             },
+            ...(article.reviewer
+              ? {
+                  reviewedBy: {
+                    "@type": "Person",
+                    name: article.reviewer.name,
+                    description: article.reviewer.credentials,
+                    affiliation: { "@type": "Organization", name: article.reviewer.affiliation },
+                    url: article.reviewer.profileUrl,
+                  },
+                }
+              : {}),
             citation: article.references.map((r) => r.url),
           }}
         />

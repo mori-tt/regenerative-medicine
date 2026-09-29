@@ -238,6 +238,17 @@ export function LocalizedArticle({ locale, source }: { locale: SiteLocale; sourc
                 url: absolute(),
                 logo: { "@type": "ImageObject", url: absolute("/icon.svg") },
               },
+              ...(source.reviewer
+                ? {
+                    reviewedBy: {
+                      "@type": "Person",
+                      name: source.reviewer.name,
+                      description: source.reviewer.credentials,
+                      affiliation: { "@type": "Organization", name: source.reviewer.affiliation },
+                      url: source.reviewer.profileUrl,
+                    },
+                  }
+                : {}),
               citation: source.references.map((r) => r.url),
             }}
           />
