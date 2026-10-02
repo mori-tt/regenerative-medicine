@@ -142,7 +142,7 @@
   "ips-cells-explained": {
     "slug": "ips-cells-explained",
     "title": "iPS細胞とは？仕組み・研究・限定された臨床応用をわかりやすく解説",
-    "lastEditedAt": "2026-09-30",
+    "lastEditedAt": "2026-10-02",
     "imageKey": "medical-research",
     "publishAt": "2026-09-29",
     "publishedAt": "2026-09-29",
@@ -160,7 +160,7 @@
     "reviewer": {
       "status": "reviewed",
       "name": "千原 良友",
-      "reviewedAt": "2026-09-30",
+      "reviewedAt": "2026-10-02",
       "scope": "執筆医師本人による医学的確認",
       "conflictOfInterest": ""
     },
@@ -168,8 +168,8 @@
     "notes": "医師本人の執筆原稿。文面は原文のまま掲載し、編集部の文献対応セクションは付加しない。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "ac69962724b4bb4d3983d2fa6b825117ded63153e2e6ee1e58fdea2f6185b12f",
-      "checkedAt": "2026-09-30",
+      "contentHash": "896cf8d41c7cfa8bb6d71f8b9f047981052d694265e14958f375c713c8b594bf",
+      "checkedAt": "2026-10-02",
       "status": "editorial_source_review",
       "sourceCount": 0,
       "note": ""
@@ -7936,7 +7936,7 @@
     "editorialEvidence": {
       "revision": "literature-v2",
       "contentHash": "69eedd73a62c3b3dee7d56135af80be6b890b2b772a20fe0763d5d0ff3a2b902",
-      "checkedAt": "2026-09-30",
+      "checkedAt": "2026-10-02",
       "status": "editorial_source_review",
       "sourceCount": 0,
       "note": ""
@@ -8759,7 +8759,7 @@
     "editorialEvidence": {
       "revision": "literature-v2",
       "contentHash": "72a4ec91b27277f557bbffe129edd7bd106b2a5c074833d85a1b29337037ac74",
-      "checkedAt": "2026-09-30",
+      "checkedAt": "2026-10-02",
       "status": "editorial_source_review",
       "sourceCount": 0,
       "note": ""
@@ -8795,7 +8795,7 @@
     "editorialEvidence": {
       "revision": "literature-v2",
       "contentHash": "447f588fa1f943abbc5ab41986d595d5b653a40b529c00b2c2a83b38ec9b9b6b",
-      "checkedAt": "2026-09-30",
+      "checkedAt": "2026-10-02",
       "status": "editorial_source_review",
       "sourceCount": 0,
       "note": ""
@@ -8832,7 +8832,7 @@
     "editorialEvidence": {
       "revision": "literature-v2",
       "contentHash": "4b221e726beeb5bcd986f60165e0430ab17393dbde10caaf6e89ff9f04fef9df",
-      "checkedAt": "2026-09-30",
+      "checkedAt": "2026-10-02",
       "status": "editorial_source_review",
       "sourceCount": 0,
       "note": ""
@@ -8868,7 +8868,7 @@
     "editorialEvidence": {
       "revision": "literature-v2",
       "contentHash": "fa4039af05695efc8ac1d6015c6d5c1793cfdaae1ef3ed7c4a36e4c17c46cf2f",
-      "checkedAt": "2026-09-30",
+      "checkedAt": "2026-10-02",
       "status": "editorial_source_review",
       "sourceCount": 0,
       "note": ""

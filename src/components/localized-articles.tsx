@@ -22,6 +22,7 @@ const chrome = {
     title: "Articles",
     lead: "Deepen your understanding, one step at a time. Start with topics that interest you, and read at your own pace.",
     navLabel: "Browse by category",
+    listHeading: "All published articles",
     all: "All articles",
     badge: "Featured",
   },
@@ -31,6 +32,7 @@ const chrome = {
     title: "文章列表",
     lead: "一个一个加深理解。从感兴趣的主题开始，按自己的节奏阅读。",
     navLabel: "按主题浏览",
+    listHeading: "已发布文章列表",
     all: "全部文章",
     badge: "推荐",
   },
@@ -135,6 +137,7 @@ export function LocalizedArticles({
           count={list.filter((a) => featuredSet.has(a.slug)).length}
         />
       </nav>
+      <h2 className="sr-only">{copy.listHeading}</h2>
       <LocalizedArticleGrid
         locale={locale}
         list={list}

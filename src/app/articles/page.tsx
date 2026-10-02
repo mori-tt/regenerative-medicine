@@ -40,6 +40,7 @@ export default function ArticlesPage() {
           count={live.filter((a) => featuredSet.has(a.slug)).length}
         />
       </nav>
+      <h2 className="sr-only">公開中の記事一覧</h2>
       <ArticleBrowser
         terms={live.map((a) => `${a.title} ${a.description}`)}
         featured={live.map((a) => featuredSet.has(a.slug))}

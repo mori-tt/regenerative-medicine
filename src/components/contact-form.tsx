@@ -13,6 +13,7 @@ const chrome = {
     options: [["article", "記事内容について"], ["correction", "誤記・修正のご指摘"], ["review", "監修・取材について"], ["advertising", "広告・提携について"], ["operations", "運営について"], ["other", "その他"]],
     message: "お問い合わせ内容（必須）", messagePlaceholder: "記事URLや該当箇所があればご記入ください。診療情報・検査結果は送信しないでください。",
     consent: "個人情報の取り扱いに同意します", privacy: "プライバシーポリシー", submit: "送信する",
+    staticHost: "このプレビューサイトではフォーム送信は動作しません。本番サイトのお問い合わせページから送信してください。",
   },
   en: {
     sent: "Your inquiry has been sent. We usually reply within three business days.",
@@ -22,6 +23,7 @@ const chrome = {
     options: [["article", "About article content"], ["correction", "Report an error or correction"], ["review", "About review and interviews"], ["advertising", "About advertising and partnerships"], ["operations", "About site operations"], ["other", "Other"]],
     message: "Message (required)", messagePlaceholder: "Include the article URL and relevant passage if any. Do not send medical or test information.",
     consent: "I agree to the handling of personal information", privacy: "Privacy policy", submit: "Send",
+    staticHost: "Form submission is disabled on this preview site. Please use the contact page on the production site.",
   },
   zh: {
     sent: "咨询已发送。通常3个工作日内联系。",
@@ -31,6 +33,7 @@ const chrome = {
     options: [["article", "关于文章内容"], ["correction", "报告错误或修正"], ["review", "关于审核与采访"], ["advertising", "关于广告与合作"], ["operations", "关于网站运营"], ["other", "其他"]],
     message: "咨询内容（必填）", messagePlaceholder: "如有文章URL与相关位置请填写。不要发送诊疗与检查信息。",
     consent: "同意个人信息处理", privacy: "隐私政策", submit: "发送",
+    staticHost: "此预览站点不支持表单提交。请通过正式网站的咨询页面发送。",
   },
 } as const;
 
@@ -40,10 +43,13 @@ export function ContactForm({ locale = "ja" }: { locale?: SiteLocale | "ja" } = 
   const [result, setResult] = useState<"sent" | "error" | "">("");
   const [categoryValue, setCategoryValue] = useState("");
   const [messageValue, setMessageValue] = useState("");
+  const [staticHost, setStaticHost] = useState(false);
   const returnPath = locale === "ja" ? "/contact/" : `/${locale}/contact/`;
 
   useEffect(() => {
     setStartedAt(String(Date.now()));
+    // GitHub Pages 等の静的ホストでは contact.php が実行されないため送信を止める
+    if (window.location.hostname.endsWith("github.io")) setStaticHost(true);
     const params = new URLSearchParams(window.location.search);
     const status = params.get("sent") === "1" ? "sent" : params.get("error") === "1" ? "error" : "";
     setResult(status);
@@ -68,7 +74,7 @@ Details:`
   }, [copy]);
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
-    if (!startedAt) {
+    if (!startedAt || staticHost) {
       event.preventDefault();
       setResult("error");
     }
@@ -76,8 +82,9 @@ Details:`
 
   return (
     <div className="contact-form-wrap">
+      {staticHost && <p className="form-result error" role="status">{copy.staticHost}</p>}
       {result === "sent" && <p className="form-result success" role="status">{copy.sent}</p>}
-      {result === "error" && <p className="form-result error" role="alert">{copy.error}</p>}
+      {result === "error" && !staticHost && <p className="form-result error" role="alert">{copy.error}</p>}
       <form className="contact-form" action={publicAsset("/contact.php")} method="post" onSubmit={handleSubmit}>
         <input type="hidden" name="started_at" value={startedAt} />
         <input type="hidden" name="locale" value={locale} />

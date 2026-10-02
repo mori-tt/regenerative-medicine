@@ -281,7 +281,7 @@ export const articleLocales: Record<
   ),
   "ips-cells-explained": t(
     "What Are iPS Cells? The Mechanism, Research, and Limited Clinical Uses Explained",
-    "Induced pluripotent stem cells made by reprogramming body cells: how they are made, the research using them, the iPS-derived products approved in Japan in 2026, and the remaining challenges.",
+    "Induced pluripotent stem cells made by reprogramming body cells: how they are made, research using them, and products approved in Japan in 2026.",
     "iPS细胞是什么？机制、研究与有限的临床应用详解",
     "对体细胞进行初始化制成的人工多能干细胞。整理制作方法、相关研究、2026年日本获批的iPS细胞来源产品与遗留课题。",
   ),
