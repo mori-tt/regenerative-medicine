@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Fragment } from "react";
 import { notFound } from "next/navigation";
-import { articleBuildMode, articles, categoryFor, isReviewed, isVisibleArticle, visibleArticles } from "@/content/articles";
+import { articleBuildMode, articleDateModified, articles, categoryFor, isReviewed, isVisibleArticle, visibleArticles } from "@/content/articles";
 import { ArticleCard, AdSlot, Breadcrumbs, JsonLd } from "@/components/content";
 import { CellArt } from "@/components/visuals";
 import { ArticleVisual } from "@/components/article-visuals";
@@ -69,7 +69,7 @@ export default async function ArticlePage({
             description: article.description,
             inLanguage: "ja",
             datePublished: article.publishedAt,
-            dateModified: article.updatedAt,
+            dateModified: articleDateModified(article),
             mainEntityOfPage: absolute(`/articles/${article.slug}/`),
             articleSection: cat.label,
             ...(article.image ? { image: [absolute(article.image)] } : {}),

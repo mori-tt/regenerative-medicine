@@ -1,8 +1,7 @@
-import Link from "next/link";
 import { articles, categories, liveArticles, stockArticles, visibleArticles } from "@/content/articles";
 import { allFeaturedSlugsFor } from "@/content/subcategories";
-import { FeaturedButton, FeaturedScope } from "@/components/featured-filter";
-import { ArticleCard, Breadcrumbs } from "@/components/content";
+import { CategoryNavigation } from "@/components/category-navigation";
+import { ArticleCard, Breadcrumbs, toCardData } from "@/components/content";
 import { pageMetadata } from "@/lib/site";
 import { ArticleBrowser } from "@/components/article-browser";
 import { StockReveal } from "@/components/stock-reveal";
@@ -24,48 +23,34 @@ export default function ArticlesPage() {
         <h1>記事一覧</h1>
         <p>一つずつ、理解を深める。気になるテーマから、あなたのペースで読み進めてください。</p>
       </div>
-      <FeaturedScope>
-      <nav className="filter-links" aria-label="カテゴリから探す">
-        <Link href="/articles/" className="active" aria-current="page">
-          すべて <small>{live.length}</small>
-        </Link>
-        {categories.map((c) => (
-          <Link key={c.slug} href={`/categories/${c.slug}/`}>
-            {c.label}{" "}
-            <small>{live.filter((a) => a.category === c.slug).length}</small>
-          </Link>
-        ))}
-        <FeaturedButton
-          label="おすすめ"
-          count={live.filter((a) => featuredSet.has(a.slug)).length}
-        />
-      </nav>
-      <h2 className="sr-only">公開中の記事一覧</h2>
-      <ArticleBrowser
-        terms={live.map((a) => `${a.title} ${a.description}`)}
-        featured={live.map((a) => featuredSet.has(a.slug))}
-      >
-        {live.map((a) => (
-          <ArticleCard
-            key={a.slug}
-            article={a}
-            badge={featuredSet.has(a.slug) ? "おすすめ" : undefined}
-          />
-        ))}
-      </ArticleBrowser>
-      <StockReveal
-        count={stock.length}
-        locale="ja"
-        featured={stock.map((a) => featuredSet.has(a.slug))}
-        cards={stock.map((a) => (
-          <ArticleCard
-            key={a.slug}
-            article={a}
-            badge={featuredSet.has(a.slug) ? "おすすめ" : undefined}
-          />
-        ))}
+      <div className="filter-scope" data-filter-scope>
+      <CategoryNavigation
+        total={live.length}
+        counts={Object.fromEntries(categories.map((category) => [category.slug, live.filter((article) => article.category === category.slug).length]))}
+        featuredCount={live.filter((article) => featuredSet.has(article.slug)).length}
       />
-      </FeaturedScope>
+      <h2 className="sr-only">公開中の記事一覧</h2>
+      <ArticleBrowser locale="ja" total={live.length} gridId="articles-live" />
+      <div className="listing-zone" id="articles-live">
+        <div className="listing-grid">
+          {live.map((a) => (
+            <ArticleCard
+              key={a.slug}
+              article={a}
+              badge={featuredSet.has(a.slug) ? "おすすめ" : undefined}
+              filter={{ featured: featuredSet.has(a.slug) }}
+            />
+          ))}
+        </div>
+      </div>
+      <div className="featured-hidden">
+        <StockReveal
+          locale="ja"
+          cards={stock.map((a) => toCardData(a))}
+          featured={stock.map((a) => featuredSet.has(a.slug))}
+        />
+      </div>
+      </div>
     </div>
   );
 }

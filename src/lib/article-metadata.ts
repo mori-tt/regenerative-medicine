@@ -3,6 +3,7 @@ import { categoryFor } from "@/content/categories";
 import { articleImageAlt, articleImageBySrc } from "@/content/article-images";
 import { localizedCategoryName } from "@/content/locales";
 import { subcategoryOf } from "@/content/subcategories";
+import { articleDateModified } from "./article-state";
 import type { PageMetadataOptions, SiteLocaleCode } from "./site";
 
 /** 記事ページの OGP を article 型にし、カバー画像・公開日・更新日・カテゴリ・サブカテゴリを載せる。 */
@@ -13,7 +14,7 @@ export function articleMetadataOptions(article: Article, locale: SiteLocaleCode)
   return {
     article: {
       publishedTime: article.publishedAt,
-      modifiedTime: article.updatedAt,
+      modifiedTime: articleDateModified(article),
       section: category,
       tags: [category, ...(group ? [group[locale]] : [])],
     },

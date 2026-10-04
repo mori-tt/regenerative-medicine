@@ -1,135 +1,123 @@
 "use client";
 
-import { useEffect, useState, type ReactNode } from "react";
+import { useEffect, useId, useState } from "react";
+import { ArticleCard, type ArticleCardData } from "./article-card";
 
-/** ?stock=1 でストック表示、?stock=featured でおすすめのみ表示（テストサイト用）。 */
-function readStockParam(): { open: boolean; featuredOnly: boolean } {
-  const value = new URLSearchParams(window.location.search).get("stock");
-  if (value === "featured" || value === "osusume") {
-    return { open: true, featuredOnly: true };
-  }
-  return { open: Boolean(value && value !== "0" && value !== "false"), featuredOnly: false };
-}
-
-/** 開閉状態をURLへ反映（共有用）。本番ビルドではストック自体が出力されないので無害。 */
-function syncStockParam(open: boolean, featuredOnly: boolean) {
-  const url = new URL(window.location.href);
-  if (!open) url.searchParams.delete("stock");
-  else url.searchParams.set("stock", featuredOnly ? "featured" : "1");
-  window.history.replaceState(null, "", url);
-}
-
-const labels = {
+const copy = {
   ja: {
-    button: (n: number) => `ストック記事を表示（${n}件）`,
-    note: "公開準備中の原稿です。テストサイトでのみ参照できます。URLに ?stock=1 （おすすめのみは ?stock=featured）で直接開けます。",
-    hide: "ストックを閉じる",
-    featured: (n: number) => `おすすめのみ（${n}件）`,
-    all: (n: number) => `すべて表示（${n}件）`,
-    badge: "テスト表示",
+    lead: (n: number) => `このカテゴリには、監修・校閲前の確認用ストックが ${n} 本あります。`,
+    open: (n: number) => `公開前のストック ${n} 本を確認する`,
+    close: "ストックを閉じる",
+    note: "※ ストック記事は本番の公開モードでは表示されず、検索対象にも含まれません。",
+    featured: (n: number) => `おすすめだけ表示（${n}本）`,
+    all: (n: number) => `すべて表示（${n}本）`,
+    badge: "おすすめ",
   },
   en: {
-    button: (n: number) => `Show stock articles (${n})`,
-    note: "Manuscripts in preparation — visible on the test site only. Open directly via ?stock=1 (featured only: ?stock=featured).",
-    hide: "Hide stock articles",
+    lead: (n: number) => `This category holds ${n} pre-review draft articles.`,
+    open: (n: number) => `View ${n} unpublished drafts`,
+    close: "Hide drafts",
+    note: "* Draft articles are hidden in production and excluded from search.",
     featured: (n: number) => `Featured only (${n})`,
     all: (n: number) => `Show all (${n})`,
-    badge: "Test preview",
+    badge: "Featured",
   },
   zh: {
-    button: (n: number) => `显示库存文章（${n}篇）`,
-    note: "准备中的稿件，仅测试网站可见。可用 ?stock=1 直接打开（仅推荐：?stock=featured）。",
-    hide: "收起库存文章",
-    featured: (n: number) => `仅看推荐（${n}篇）`,
+    lead: (n: number) => `该分类下有 ${n} 篇待审核的稿件。`,
+    open: (n: number) => `查看 ${n} 篇未发布稿件`,
+    close: "收起稿件",
+    note: "※ 待审核稿件在正式环境中不显示，也不在搜索范围内。",
+    featured: (n: number) => `仅显示推荐（${n}篇）`,
     all: (n: number) => `显示全部（${n}篇）`,
-    badge: "测试预览",
+    badge: "推荐",
   },
 } as const;
 
+type StockParams = { open: boolean; featuredOnly: boolean };
+
+function readStockParam(): StockParams {
+  if (typeof window === "undefined") return { open: false, featuredOnly: false };
+  const v = new URLSearchParams(window.location.search).get("stock");
+  return { open: v === "1" || v === "featured", featuredOnly: v === "featured" };
+}
+
 /**
- * ストック記事のカード一覧をボタンの後ろに隠す。
- * 本番ビルドではストック記事自体が生成されないため、このボタンは出ない。
- * cards + featured を渡すと、テストサイト上で「おすすめのみ」絞り込みができる。
+ * 公開前ストックの開閉。カードデータだけを props で受け取り、開いたときに
+ * クライアント側で ArticleCard を描画する（ページの HTML/Flight を増やさないため）。
  */
 export function StockReveal({
-  count,
-  locale = "ja",
+  locale,
   cards,
   featured,
-  children,
+  badgeLabel,
 }: {
-  count: number;
-  locale?: keyof typeof labels;
-  /** カードを1枚ずつ渡すと featured 絞り込みが有効になる */
-  cards?: ReactNode[];
-  /** cards と同じ並びの「おすすめ」フラグ */
-  featured?: boolean[];
-  children?: ReactNode;
+  locale: keyof typeof copy;
+  cards: ArticleCardData[];
+  featured: boolean[];
+  badgeLabel?: string;
 }) {
-  const [open, setOpen] = useState(false);
-  const [featuredOnly, setFeaturedOnly] = useState(false);
+  const [state, setState] = useState<StockParams>({ open: false, featuredOnly: false });
+  const panelId = useId();
+  const c = copy[locale];
+  const featuredCount = featured.filter(Boolean).length;
+
   useEffect(() => {
-    const { open, featuredOnly } = readStockParam();
-    setOpen(open);
-    setFeaturedOnly(featuredOnly);
+    setState(readStockParam());
   }, []);
-  if (count <= 0) return null;
-  const copy = labels[locale];
-  const featuredCount = featured?.filter(Boolean).length ?? 0;
-  const canFilter = Boolean(cards && featured && featuredCount > 0);
-  const shown =
-    cards && canFilter && featuredOnly
-      ? cards.filter((_, i) => featured![i])
-      : cards;
-  if (!open) {
-    return (
-      <div className="stock-reveal">
-        <button
-          type="button"
-          className="stock-reveal-button"
-          aria-expanded={false}
-          onClick={() => {
-            setOpen(true);
-            syncStockParam(true, false);
-          }}
-        >
-          {copy.button(count)}
-        </button>
-        <p className="stock-reveal-note">{copy.note}</p>
-      </div>
-    );
-  }
+
+  const update = (next: StockParams) => {
+    setState(next);
+    const url = new URL(window.location.href);
+    if (next.open) url.searchParams.set("stock", next.featuredOnly ? "featured" : "1");
+    else url.searchParams.delete("stock");
+    window.history.replaceState(null, "", url);
+  };
+
+  if (cards.length === 0) return null;
+  const items = cards.map((data, index) => ({ data, isFeatured: featured[index] ?? false }));
+  const shown = state.featuredOnly ? items.filter((item) => item.isFeatured) : items;
+  const badge = badgeLabel ?? c.badge;
+
   return (
-    <div className="stock-reveal stock-reveal-open">
-      <div className="stock-reveal-actions">
-        <span className="stock-reveal-badge">{copy.badge}</span>
+    <div className="stock-reveal">
+      <div className="stock-banner">
+        <div>
+          <p className="stock-lead">{c.lead(cards.length)}</p>
+          <p className="stock-note">{c.note}</p>
+        </div>
         <button
           type="button"
-          className="stock-reveal-button stock-reveal-close"
-          aria-expanded={true}
-          onClick={() => {
-            setOpen(false);
-            syncStockParam(false, false);
-          }}
+          className={`stock-button${state.open ? " active" : ""}`}
+          aria-expanded={state.open}
+          aria-controls={panelId}
+          onClick={() => update({ ...state, open: !state.open })}
         >
-          {copy.hide}
+          {state.open ? c.close : c.open(cards.length)}
         </button>
-        {canFilter && (
-          <button
-            type="button"
-            className={`stock-reveal-button stock-reveal-featured${featuredOnly ? " active" : ""}`}
-            aria-pressed={featuredOnly}
-            onClick={() => {
-              const next = !featuredOnly;
-              setFeaturedOnly(next);
-              syncStockParam(true, next);
-            }}
-          >
-            {featuredOnly ? copy.all(count) : copy.featured(featuredCount)}
-          </button>
+      </div>
+      <div className="stock-panel" id={panelId} hidden={!state.open}>
+        {state.open && (
+          <>
+            {featuredCount > 0 && (
+              <div className="stock-actions">
+                <button
+                  type="button"
+                  className={`featured-toggle${state.featuredOnly ? " active" : ""}`}
+                  aria-pressed={state.featuredOnly}
+                  onClick={() => update({ ...state, featuredOnly: !state.featuredOnly })}
+                >
+                  {state.featuredOnly ? c.all(cards.length) : c.featured(featuredCount)}
+                </button>
+              </div>
+            )}
+            <div className="listing-grid">
+              {shown.map(({ data, isFeatured }) => (
+                <ArticleCard key={data.slug} article={data} badge={isFeatured ? badge : undefined} />
+              ))}
+            </div>
+          </>
         )}
       </div>
-      {shown ? <div className="listing-grid">{shown}</div> : children}
     </div>
   );
 }

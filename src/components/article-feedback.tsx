@@ -9,7 +9,8 @@ const copy = {
     ask: "この記事は役に立ちましたか？",
     yes: "はい",
     no: "いいえ",
-    thanks: "ご意見をありがとうございます。",
+    thanks: "ご回答ありがとうございます。",
+    localNote: "回答はこの端末にのみ保存されます。編集部へ届けるにはお問い合わせフォームをご利用ください。",
     detail: "詳しいご意見・ご質問はこちらから（3営業日以内に回答）",
     correction: "誤記・修正のご指摘",
     note: "個別の病状相談は受け付けていません。診療に関することは医療機関へご相談ください。",
@@ -20,7 +21,8 @@ const copy = {
     ask: "Was this article helpful?",
     yes: "Yes",
     no: "No",
-    thanks: "Thank you for your feedback.",
+    thanks: "Thank you for your answer.",
+    localNote: "Your answer is stored on this device only. To reach the editorial team, please use the contact form.",
     detail: "Share detailed comments or questions (we reply within 3 business days)",
     correction: "Report an error or correction",
     note: "We cannot answer individual medical consultations. Please consult your healthcare provider.",
@@ -31,7 +33,8 @@ const copy = {
     ask: "这篇文章对您有帮助吗？",
     yes: "有帮助",
     no: "没有",
-    thanks: "感谢您的反馈。",
+    thanks: "感谢您的回答。",
+    localNote: "回答仅保存在此设备上。如需联系编辑部，请使用咨询表单。",
     detail: "如需详细意见或咨询，请通过表单联系（3个工作日内回复）",
     correction: "报告错误或修正建议",
     note: "我们无法回答个人医疗咨询。请咨询您的医疗机构。",
@@ -108,9 +111,10 @@ export function ArticleFeedback({
           </div>
         </div>
       ) : (
-        <p className="feedback-thanks" role="status">
-          {c.thanks}
-        </p>
+        <div role="status">
+          <p className="feedback-thanks">{c.thanks}</p>
+          <p className="feedback-why">{c.localNote}</p>
+        </div>
       )}
       <div className="feedback-links">
         <Link href={contactHref} className="feedback-link">

@@ -82,6 +82,20 @@ export function siteNameFor(locale: SiteLocaleCode): string {
   return locale === "en" ? site.nameEn : locale === "zh" ? site.nameZh : site.name;
 }
 
+/** タイトル末尾に付ける短いサイト名。英語名が長いので SERP で切れないよう短縮形を用意。 */
+const shortSiteNameFor: Partial<Record<SiteLocaleCode, string>> = {
+  en: "RM Guide",
+};
+
+/** 「タイトル | サイト名」が目安の 60 文字を超える場合は短縮名、それでも長ければタイトル単体にする。 */
+export function pageTitleFor(title: string, locale: SiteLocaleCode): string {
+  const full = `${title} | ${siteNameFor(locale)}`;
+  if (full.length <= 60) return full;
+  const short = shortSiteNameFor[locale];
+  if (short && `${title} | ${short}`.length <= 65) return `${title} | ${short}`;
+  return title;
+}
+
 export const siteTaglineFor: Record<SiteLocaleCode, string> = {
   ja: "再生医療と幹細胞を、もっとわかりやすく。",
   en: "Regenerative medicine and stem cells, made clearer.",
@@ -113,10 +127,11 @@ export function pageMetadata(
   const base = basePathOf(path);
   const canonical = absolute(localizedPath(base, locale));
   const siteName = siteNameFor(locale);
-  const fullTitle = options.home ? `${siteName} | ${siteTaglineFor[locale]}` : `${title} | ${siteName}`;
+  const fullTitle = options.home ? `${siteName} | ${siteTaglineFor[locale]}` : locale === "ja" ? `${title} | ${siteName}` : pageTitleFor(title, locale);
+  const defaultCard = locale === "en" ? "/social-card-en.png" : locale === "zh" ? "/social-card-zh.png" : "/social-card.png";
   const image = options.image
     ? { url: absolute(options.image.url), width: options.image.width, height: options.image.height, alt: options.image.alt }
-    : { url: absolute("/social-card.png"), width: 1200, height: 630, alt: siteName };
+    : { url: absolute(defaultCard), width: 1200, height: 630, alt: siteName };
   return {
     // NOTE: the root-layout title template ("%s | 再生医療ガイド") only applies to
     // child segments, so the home page and non-Japanese pages set absolute titles.
@@ -124,6 +139,7 @@ export function pageMetadata(
     description,
     alternates: {
       canonical,
+      types: { "application/rss+xml": absolute("/feed.xml") },
       // hreflang は翻訳ページを検索公開している時だけ出す。noindex のページを
       // 代替言語として案内しても検索エンジンには無視され、整合性の警告要因になる。
       ...(localizedIndexable

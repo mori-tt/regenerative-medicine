@@ -25,7 +25,8 @@ export function Logo({ locale = "ja" }: { locale?: UiLocale }) {
   );
 }
 export function Header() {
-  const locale = localeFromPath(usePathname());
+  const pathname = usePathname();
+  const locale = localeFromPath(pathname);
   const copy = locale === "ja" ? null : localizedShell[locale];
   const path = (slug: string) => `${localePrefix(locale)}/${slug}/`;
   return (
@@ -43,14 +44,12 @@ export function Header() {
       <header className="site-header">
         <div className="container header-main">
           <Logo locale={locale} />
-          <div className="header-links">
-            <Link href={path("editorial-policy")}>{copy?.editorial || "私たちの編集方針"}</Link>
-            <Link href={path("supervision")}>
-              {copy?.supervision || "医師監修について"} <span aria-hidden="true">↗</span>
-            </Link>
-          </div>
+          <nav className="header-links" aria-label={locale === "ja" ? "メインナビゲーション" : locale === "en" ? "Main navigation" : "主导航"}>
+            <Link href={path("guide")} aria-current={pathname === path("guide") ? "page" : undefined}>{copy?.guide || "はじめての方へ"}</Link>
+            <Link href={path("articles")} aria-current={pathname === path("articles") ? "page" : undefined}>{copy?.articles || "記事一覧"}</Link>
+          </nav>
           <CategoryDropdown />
-          <Link className="search-link" href={path("search")} aria-label={copy?.searchAria || "記事を検索"}>
+          <Link className="search-link" href={path("search")} aria-label={copy?.searchAria || "記事を検索"} aria-current={pathname === path("search") ? "page" : undefined}>
             <Icon name="search" />
             <span>{copy?.search || "記事を探す"}</span>
           </Link>

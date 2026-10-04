@@ -1,4 +1,11 @@
 import Link from "next/link";
+
+// 404 は検索に出さない。ルートレイアウトの robots(index) を上書きする。
+export const metadata = {
+  title: "ページが見つかりません",
+  robots: { index: false, follow: true },
+};
+
 export default function NotFound() {
   return (
     <div className="container not-found">

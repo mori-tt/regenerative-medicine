@@ -1,4 +1,3 @@
-import Link from "next/link";
 import {
   articles,
   categories,
@@ -8,12 +7,12 @@ import {
   type Article,
 } from "@/content/articles";
 import { allFeaturedSlugsFor } from "@/content/subcategories";
-import { LocalizedArticleCard, localizedArticleFor } from "./localized-article";
+import { LocalizedArticleCard, localizedCardData } from "./localized-article";
 import { ArticleBrowser } from "./article-browser";
-import { FeaturedButton, FeaturedScope } from "./featured-filter";
+import { CategoryNavigation } from "./category-navigation";
 import { StockReveal } from "./stock-reveal";
 import { Breadcrumbs } from "./content";
-import { localizedCategoryName, type SiteLocale } from "@/content/locales";
+import type { SiteLocale } from "@/content/locales";
 
 const chrome = {
   en: {
@@ -43,32 +42,31 @@ export function LocalizedArticleGrid({
   list,
   badgeLabel,
   badgeSlugs,
+  zoneId,
 }: {
   locale: SiteLocale;
   list: Article[];
   badgeLabel?: string;
   badgeSlugs?: Set<string>;
+  zoneId?: string;
 }) {
   return (
-    <ArticleBrowser
-      locale={locale}
-      terms={list.map((source) => {
-        const article = localizedArticleFor(locale, source);
-        return `${article.title} ${article.description}`;
-      })}
-      featured={
-        badgeSlugs ? list.map((source) => badgeSlugs.has(source.slug)) : undefined
-      }
-    >
-      {list.map((source) => (
-        <LocalizedArticleCard
-          locale={locale}
-          source={source}
-          key={source.slug}
-          badge={badgeLabel && (!badgeSlugs || badgeSlugs.has(source.slug)) ? badgeLabel : undefined}
-        />
-      ))}
-    </ArticleBrowser>
+    <div className="listing-zone" id={zoneId}>
+      <div className="listing-grid">
+        {list.map((source) => {
+          const featured = badgeSlugs?.has(source.slug) ?? false;
+          return (
+            <LocalizedArticleCard
+              locale={locale}
+              source={source}
+              key={source.slug}
+              badge={badgeLabel && (!badgeSlugs || featured) ? badgeLabel : undefined}
+              filter={{ featured }}
+            />
+          );
+        })}
+      </div>
+    </div>
   );
 }
 
@@ -107,57 +105,32 @@ export function LocalizedArticles({
         {embedded ? <h2>{copy.title}</h2> : <h1>{copy.title}</h1>}
         <p>{copy.lead}</p>
       </div>
-      <FeaturedScope>
-      <nav className="filter-links" aria-label={copy.navLabel}>
-        <Link
-          href={`/${locale}/articles/`}
-          className={!category ? "active" : undefined}
-          aria-current={!category ? "page" : undefined}
-        >
-          {copy.all} <small>{liveList.length}</small>
-        </Link>
-        {categories.map((item) => (
-          <Link
-            key={item.slug}
-            href={`/${locale}/categories/${item.slug}/`}
-            className={category === item.slug ? "active" : undefined}
-            aria-current={category === item.slug ? "page" : undefined}
-          >
-            {localizedCategoryName(locale, item.slug)}{" "}
-            <small>
-              {
-                liveList.filter((article) => article.category === item.slug)
-                  .length
-              }
-            </small>
-          </Link>
-        ))}
-        <FeaturedButton
-          label={copy.badge}
-          count={list.filter((a) => featuredSet.has(a.slug)).length}
-        />
-      </nav>
+      <div className="filter-scope" data-filter-scope>
+      <CategoryNavigation
+        locale={locale}
+        current={category}
+        total={liveList.length}
+        counts={Object.fromEntries(categories.map((item) => [item.slug, liveList.filter((article) => article.category === item.slug).length]))}
+        featuredCount={list.filter((article) => featuredSet.has(article.slug)).length}
+      />
       <h2 className="sr-only">{copy.listHeading}</h2>
+      <ArticleBrowser locale={locale} total={list.length} gridId="localized-articles-live" />
       <LocalizedArticleGrid
         locale={locale}
         list={list}
         badgeLabel={copy.badge}
         badgeSlugs={featuredSet}
+        zoneId="localized-articles-live"
       />
-      <StockReveal
-        count={stock.length}
-        locale={locale}
-        featured={stock.map((source) => featuredSet.has(source.slug))}
-        cards={stock.map((source) => (
-          <LocalizedArticleCard
-            locale={locale}
-            source={source}
-            key={source.slug}
-            badge={featuredSet.has(source.slug) ? copy.badge : undefined}
-          />
-        ))}
-      />
-      </FeaturedScope>
+      <div className="featured-hidden">
+        <StockReveal
+          locale={locale}
+          cards={stock.map((source) => localizedCardData(locale, source))}
+          featured={stock.map((source) => featuredSet.has(source.slug))}
+          badgeLabel={copy.badge}
+        />
+      </div>
+      </div>
     </div>
   );
 }

@@ -17,8 +17,9 @@
     "check:pubmed": "node scripts/check-pubmed-metadata.mjs",
     "check:rights": "node scripts/check-rights.mjs",
     "report:article-evidence": "node scripts/report-article-evidence.mjs",
-    "prebuild": "npm run check:article-content && npm run test:article-review",
-    "test:article-review": "node --test scripts/tests/article-review.test.mjs"
+    "prebuild": "npm run check:article-content && npm run test:article-review && npm run check:contact",
+    "test:article-review": "node --test scripts/tests/article-review.test.mjs",
+    "check:contact": "node scripts/check-contact-categories.mjs"
   },
   "dependencies": {
     "next": "16.3.5",

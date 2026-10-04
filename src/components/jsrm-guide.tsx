@@ -3,6 +3,8 @@ import { Breadcrumbs, JsonLd } from "./content";
 import { Icon } from "./visuals";
 import { jsrmCertification, jsrmSources, jsrmTimeline } from "@/content/jsrm";
 import { jsrmChapters } from "@/content/jsrm-chapters";
+import { absolute, site } from "@/lib/site";
+import { deployDate } from "@/lib/site-config";
 
 export function JsrmGuide() {
   return (
@@ -15,7 +17,17 @@ export function JsrmGuide() {
           "@type": "Article",
           headline: "日本再生医療学会とは？役割・沿革・認定制度を詳しく解説",
           description: "日本再生医療学会の役割、沿革、認定制度、制度情報を公式資料から整理した解説。",
-          author: { "@type": "Organization", name: "再生医療ガイド" },
+          inLanguage: "ja",
+          dateModified: deployDate,
+          mainEntityOfPage: absolute("/jsrm/"),
+          image: [absolute("/social-card.png")],
+          author: { "@type": "Organization", name: site.name, url: absolute("/about/") },
+          publisher: {
+            "@type": "Organization",
+            name: site.name,
+            url: absolute(),
+            logo: { "@type": "ImageObject", url: absolute("/icon.svg") },
+          },
           about: { "@type": "Organization", name: "一般社団法人 日本再生医療学会" },
         }}
       />

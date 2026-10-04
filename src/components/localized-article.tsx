@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Fragment } from "react";
-import { articleBuildMode, categoryFor, isReviewed, type Article } from "@/content/articles";
+import { articleBuildMode, articleDateModified, categoryFor, isReviewed, type Article } from "@/content/articles";
 import { adjacentArticles, relatedArticles } from "@/lib/related-articles";
 import { articleLocales } from "@/content/article-locales";
 import { articleBodiesDoctor } from "@/content/article-bodies-doctor";
@@ -159,13 +159,15 @@ export function LocalizedArticleCard({
   source,
   compact = false,
   badge,
+  filter,
 }: {
   locale: SiteLocale;
   source: Article;
   compact?: boolean;
   badge?: string;
+  filter?: { terms?: string; featured?: boolean };
 }) {
-  return <ArticleCard article={localizedCardData(locale, source)} compact={compact} badge={badge} />;
+  return <ArticleCard article={localizedCardData(locale, source)} compact={compact} badge={badge} filter={filter} />;
 }
 
 export function LocalizedArticle({ locale, source }: { locale: SiteLocale; source?: Article }) {
@@ -215,7 +217,7 @@ export function LocalizedArticle({ locale, source }: { locale: SiteLocale; sourc
               description: base.description,
               inLanguage: en ? "en" : "zh-CN",
               datePublished: source.publishedAt,
-              dateModified: source.updatedAt,
+              dateModified: articleDateModified(source),
               mainEntityOfPage: absolute(`/${locale}/articles/${source.slug}/`),
               articleSection: base.category,
               ...(source.image ? { image: [absolute(source.image)] } : {}),

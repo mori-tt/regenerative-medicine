@@ -41,3 +41,23 @@
 - Google Search Console などで canonical、title、description、OGP画像、sitemap を確認する。
 - 主要ページの検索結果表示で title と description が途中で不自然に切れていないか確認する。
 - Search Console の URL検査で、未監修記事や検索ページが意図せずインデックスされていないことを確認する。
+
+## 2026-10-03 実施の修正
+
+- お問い合わせの `correction`（誤記・修正のご指摘）を `public/contact.php` のカテゴリ表に追加。フロントの選択肢と PHP の一致を `npm run check:contact`（prebuild 実行）で回帰検証するようにした。
+- 記事フィードバックの投票がローカル保存のみである点を日英中で明記し、編集部連絡はお問い合わせフォームへ導線を変更。
+- 英語タイトルがサイト名との連結で長くなりすぎる問題を `pageTitleFor` で改善。60字に収まる場合のみ短縮名 `RM Guide` をサフィックスに使い、超える場合はタイトルのみ。
+- `dateModified < datePublished` になるケースを `articleDateModified` で正規化し、記事 JSON-LD と OGP の両方に適用。
+- JSRM 特集・各章の Article 構造化データに `publisher`・`image`・`dateModified`・`mainEntityOfPage`・`inLanguage` を追加。
+- `/feed.xml`（RSS 2.0、監修済み公開記事のみ）を新設し、全ページに `<link rel="alternate" type="application/rss+xml">` を出力。
+- ファビコンを basePath 対応の `publicAsset()` に変更し、180×180 の `apple-touch-icon.png` を追加。
+- `social-card.png` を 404KB→140KB に圧縮し、英語・中国語版を新規作成。`pageMetadata` が言語別に出し分ける。
+- 404 ページに `noindex` メタと独自タイトルを追加。
+- `.htaccess` に composer.json/lock/phar の公開拒否と `vendor/` への HTTP アクセス遮断を追加（既存の圧縮・キャッシュ設定は維持）。
+- 記事一覧・カテゴリ・英中一覧ページの RSC ペイロードを削減。公開前ストックのカードは開閉時にクライアントで描画する方式に変更し、記事一覧HTMLは約55%削減。検索公開に必要なライブ記事のリンクは引き続きサーバー描画で出力。
+
+## 残課題（編集・運用判断が必要）
+
+- 下書き（未監修）記事の description は簡易文のまま。公開審査のタイミングで編集する運用。
+- `what-is-*` / `doctor-*` のニア重複記事ペアは、下書き側の統合方針を編集で決める必要がある。
+- `NEXT_PUBLIC_SITE_URL` を実ドメインに設定する。

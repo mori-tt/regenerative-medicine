@@ -81,6 +81,7 @@ $honeypot = trim((string)($_POST['website'] ?? ''));
 $consent = ($_POST['consent'] ?? '') === '1';
 $categoryLabels = [
     'article' => '記事内容について',
+    'correction' => '誤記・修正のご指摘',
     'review' => '監修・取材について',
     'advertising' => '広告・提携について',
     'operations' => '運営について',

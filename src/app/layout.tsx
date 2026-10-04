@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Header, Footer } from "@/components/site-shell";
 import { LocaleDocument, SkipLink } from "@/components/locale-document";
-import { absolute, publiclyIndexable, site, siteTaglineFor } from "@/lib/site";
+import { absolute, publiclyIndexable, publicAsset, site, siteTaglineFor } from "@/lib/site";
 import "./globals.css";
 import "./editorial.css";
 
@@ -15,7 +15,8 @@ export const metadata: Metadata = {
   applicationName: site.name,
   robots: { index: publiclyIndexable, follow: true },
   openGraph: { locale: "ja_JP", type: "website", siteName: site.name },
-  icons: { icon: absolute("/icon.svg") },
+  icons: { icon: publicAsset("/icon.svg"), apple: publicAsset("/apple-touch-icon.png") },
+  alternates: { types: { "application/rss+xml": absolute("/feed.xml") } },
 };
 
 export const viewport: Viewport = {

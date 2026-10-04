@@ -1,15 +1,11 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { articles, categories, columnArticles, coreArticles, liveArticles, stockArticles, visibleArticles } from "@/content/articles";
-import { ArticleCard, Breadcrumbs } from "@/components/content";
+import { ArticleCard, Breadcrumbs, toCardData } from "@/components/content";
 import { featuredSlugsFor, groupArticlesBySubcategory } from "@/content/subcategories";
 import { StockReveal } from "@/components/stock-reveal";
-import {
-  FeaturedButton,
-  FeaturedHidden,
-  FeaturedOnlyGrid,
-  FeaturedScope,
-} from "@/components/featured-filter";
+import { FeaturedButton } from "@/components/featured-filter";
+import { CategoryNavigation } from "@/components/category-navigation";
 import { pageMetadata } from "@/lib/site";
 export const dynamicParams = false;
 export function generateStaticParams() {
@@ -58,21 +54,8 @@ export default async function CategoryPage({
         <h1>{category.label}</h1>
         <p>{category.description}</p>
       </div>
-      <FeaturedScope>
-      <nav className="filter-links" aria-label="カテゴリから探す">
-        <Link href="/articles/">すべての記事</Link>
-        {categories.map((c) => (
-          <Link
-            key={c.slug}
-            href={`/categories/${c.slug}/`}
-            className={c.slug === slug ? "active" : ""}
-            aria-current={c.slug === slug ? "page" : undefined}
-          >
-            {c.label}
-          </Link>
-        ))}
-        <FeaturedButton label="おすすめ" count={featured.length} />
-      </nav>
+      <div className="filter-scope" data-filter-scope>
+      <CategoryNavigation current={slug} featuredCount={featured.length} />
       <nav className="topic-panel" aria-label="トピックから探す">
         <p className="topic-panel-title">トピック別に読む</p>
         <ol className="topic-panel-list">
@@ -96,7 +79,7 @@ export default async function CategoryPage({
           <p className="listing-lead">このカテゴリで最初に押さえておきたい記事です。</p>
           <div className="listing-grid">
             {featured.map((a) => (
-              <ArticleCard key={a.slug} article={a} badge="おすすめ" />
+              <ArticleCard key={a.slug} article={a} badge="おすすめ" filter={{ featured: true }} />
             ))}
           </div>
         </section>
@@ -104,9 +87,8 @@ export default async function CategoryPage({
       {groups.map(({ group, articles: groupArticles }, index) => {
         const liveGroup = liveArticles(groupArticles);
         const stockGroup = stockArticles(groupArticles);
-        const flags = liveGroup.map((a) => featuredSet.has(a.slug));
         return (
-          <FeaturedScope key={group.key}>
+          <div className="filter-scope" data-filter-scope key={group.key}>
             <section id={`sub-${group.key}`} aria-labelledby={`sub-heading-${group.key}`}>
               <h2 id={`sub-heading-${group.key}`} className="listing-heading">
                 <span className="topic-num" aria-hidden="true">{index + 1}</span>
@@ -114,7 +96,7 @@ export default async function CategoryPage({
                 {liveGroup.length > 0 && (
                   <span className="listing-count">{liveGroup.length}件</span>
                 )}
-                <FeaturedButton label="おすすめ" count={flags.filter(Boolean).length} />
+                <FeaturedButton label="おすすめ" count={liveGroup.filter((a) => featuredSet.has(a.slug)).length} />
               </h2>
               {group.desc && <p className="listing-lead">{group.desc.ja}</p>}
               {group.keywords && (
@@ -125,28 +107,30 @@ export default async function CategoryPage({
                 </div>
               )}
               {liveGroup.length > 0 && (
-                <FeaturedOnlyGrid featured={flags} empty="このトピックのおすすめ記事はありません。">
-                  {liveGroup.map((a) => (
-                    <ArticleCard key={a.slug} article={a} badge={featuredSet.has(a.slug) ? "おすすめ" : undefined} />
-                  ))}
-                </FeaturedOnlyGrid>
+                <div className="listing-zone">
+                  <div className="listing-grid">
+                    {liveGroup.map((a) => (
+                      <ArticleCard key={a.slug} article={a} badge={featuredSet.has(a.slug) ? "おすすめ" : undefined} filter={{ featured: featuredSet.has(a.slug) }} />
+                    ))}
+                  </div>
+                  <div className="listing-empty empty-state" hidden>
+                    <p>このトピックのおすすめ記事はありません。</p>
+                  </div>
+                </div>
               )}
-              <FeaturedHidden>
+              <div className="featured-hidden">
                 <StockReveal
-                  count={stockGroup.length}
                   locale="ja"
+                  cards={stockGroup.map((a) => toCardData(a))}
                   featured={stockGroup.map((a) => featuredSet.has(a.slug))}
-                  cards={stockGroup.map((a) => (
-                    <ArticleCard key={a.slug} article={a} badge={featuredSet.has(a.slug) ? "おすすめ" : undefined} />
-                  ))}
                 />
-              </FeaturedHidden>
+              </div>
             </section>
-          </FeaturedScope>
+          </div>
         );
       })}
       {(liveColumns.length > 0 || stockColumns.length > 0) && (
-        <FeaturedHidden>
+        <div className="featured-hidden">
           <section aria-labelledby={`columns-${slug}`} className="columns-section">
             <span className="eyebrow">COLUMN</span>
             <h2 id={`columns-${slug}`} className="listing-heading">コラム</h2>
@@ -159,17 +143,14 @@ export default async function CategoryPage({
               </div>
             )}
             <StockReveal
-              count={stockColumns.length}
               locale="ja"
+              cards={stockColumns.map((a) => toCardData(a))}
               featured={stockColumns.map((a) => featuredSet.has(a.slug))}
-              cards={stockColumns.map((a) => (
-                <ArticleCard key={a.slug} article={a} />
-              ))}
             />
           </section>
-        </FeaturedHidden>
+        </div>
       )}
-      </FeaturedScope>
+      </div>
     </div>
   );
 }

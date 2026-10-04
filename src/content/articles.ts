@@ -10,8 +10,8 @@ const reviewSchedule = reviewRecords as Record<string, ArticleReviewRecord>;
 import type { CategorySlug } from "./categories";
 export { categories, categoryFor } from "./categories";
 export type { CategorySlug } from "./categories";
-import { articleBuildMode, isReviewed, publishBaseDate } from "@/lib/article-state";
-export { articleBuildMode, isReviewed, publishBaseDate } from "@/lib/article-state";
+import { articleBuildMode, articleDateModified, isReviewed, publishBaseDate } from "@/lib/article-state";
+export { articleBuildMode, articleDateModified, isReviewed, publishBaseDate } from "@/lib/article-state";
 export type { ArticleBuildMode } from "@/lib/article-state";
 
 export type Reviewer = {

@@ -83,7 +83,7 @@ export function toCardData(
     statusClass: article.author ? "authored" : reviewed ? "reviewed" : "editorial",
     statusLabel: article.author ? copy.authored : reviewed ? copy.reviewed : copy.editorial,
     readingLabel: copy.reading(article.readingMinutes),
-    dateLabel: article.publishedAt ? copy.published(dot(article.publishedAt)) : copy.edited(dot(article.updatedAt)),
+    dateLabel: reviewed && article.publishedAt ? copy.published(dot(article.publishedAt)) : copy.edited(dot(article.updatedAt)),
     ...(scheduled && article.publishAt ? { scheduledLabel: copy.scheduled(dot(article.publishAt)) } : {}),
     title: localized?.title ?? article.title,
     description: localized?.description ?? article.description,
@@ -104,29 +104,28 @@ export function ArticleCard({
   badge,
   highlight = [],
   headingLevel = "h3",
+  filter,
 }: {
   article: Article | ArticleCardData;
   compact?: boolean;
   badge?: string;
   highlight?: string[];
   headingLevel?: "h2" | "h3";
+  /** 一覧の絞り込み対象にするとき渡す。カードはサーバー描画のまま data 属性で制御する。 */
+  filter?: { featured?: boolean };
 }) {
   const data = "sections" in article ? toCardData(article) : article;
   const Heading = headingLevel;
   return (
-    <article className={`article-card ${compact ? "compact" : ""}`}>
+    <article
+      className={`article-card ${compact ? "compact" : ""}${filter ? " filter-item" : ""}`}
+      {...(filter?.featured ? { "data-featured": "true" } : {})}
+    >
       <div className="article-card-body">
         <div className="card-label-row">
           <span className={`category-label ${data.color}`}>{data.categoryLabel}</span>
-          <span className="card-kicker">{data.kicker}</span>
-          {data.subcategory && <span className="card-subcat">{data.subcategory}</span>}
           {badge && <span className="card-badge">{badge}</span>}
         </div>
-        <div className="article-meta">
-          <span className={`review-chip ${data.statusClass}`}>{data.statusLabel}</span>
-          <span>{data.readingLabel}</span>
-        </div>
-        {data.scheduledLabel && <span className="preview-status">{data.scheduledLabel}</span>}
         <Heading>
           <Link href={data.href}>
             <Marked text={data.title} terms={highlight} />
@@ -137,6 +136,11 @@ export function ArticleCard({
             <Marked text={data.description} terms={highlight} />
           </p>
         )}
+        <div className="article-meta">
+          <span className={`review-chip ${data.statusClass}`}>{data.statusLabel}</span>
+          <span>{data.readingLabel}</span>
+        </div>
+        {data.scheduledLabel && <span className="preview-status">{data.scheduledLabel}</span>}
         <div className="card-bottom">
           <span>{data.dateLabel}</span>
           <Icon name="arrow" size={19} />

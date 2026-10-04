@@ -25,7 +25,7 @@ export function LanguageSwitcher() {
           lang={lang}
           hrefLang={lang}
           className={active === locale ? "current" : undefined}
-          aria-current={active === locale ? "true" : undefined}
+          aria-current={active === locale ? "page" : undefined}
         >
           {label}
         </Link>

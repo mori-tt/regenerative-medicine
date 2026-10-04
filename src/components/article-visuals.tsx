@@ -1,5 +1,6 @@
 import type { SiteLocale } from "@/content/locales";
 import { defaultVisualFor } from "@/content/subcategories";
+import { publicAsset } from "@/lib/site";
 import { VisualIcon, type IconName } from "./visual-icons";
 import type { CSSProperties, ReactElement } from "react";
 
@@ -910,6 +911,16 @@ export function ArticleVisual({ slug, locale = "ja", category, index }: { slug: 
   return <>{kinds.map((kind) => <VisualFigure key={kind} kind={kind} slug={slug} text={text} locale={locale} />)}</>;
 }
 
+function ScrollableDiagram({ title, locale, children }: { title: string; locale: ArticleVisualLocale; children: ReactElement }) {
+  const hint = locale === "en" ? "Scroll sideways to explore the diagram." : locale === "zh" ? "可左右滑动查看完整图示。" : "図は横にスクロールして確認できます。";
+  return (
+    <>
+      <span className="visual-scroll-hint">{hint}</span>
+      <div className="visual-scroll" role="region" aria-label={title} tabIndex={0}>{children}</div>
+    </>
+  );
+}
+
 function VisualFigure({ kind, slug, text, locale }: { kind: VisualKind; slug: string; text: VisualCopy; locale: ArticleVisualLocale }) {
   return (
     <figure className={`article-visual article-visual-${kind}`}>
@@ -940,10 +951,10 @@ function VisualFigure({ kind, slug, text, locale }: { kind: VisualKind; slug: st
         </div>
       )}
       {kind === "safety" && <div className="visual-cards visual-cards-four">{text.safety.map((item, index) => <div className="visual-card" key={item}><span><StepIcon name={iconFor(kind, index)} />{item}</span></div>)}</div>}
-      {kind === "biodistribution" && <BiodistributionDiagram text={text} />}
-      {kind === "homing" && <HomingDiagram text={text} />}
-      {kind === "paracrine" && <ParacrineDiagram text={text} />}
-      {kind === "bbb" && <BbbDiagram text={text} />}
+      {kind === "biodistribution" && <ScrollableDiagram title={text.titles[kind]} locale={locale}><BiodistributionDiagram text={text} /></ScrollableDiagram>}
+      {kind === "homing" && <ScrollableDiagram title={text.titles[kind]} locale={locale}><HomingDiagram text={text} /></ScrollableDiagram>}
+      {kind === "paracrine" && <ScrollableDiagram title={text.titles[kind]} locale={locale}><ParacrineDiagram text={text} /></ScrollableDiagram>}
+      {kind === "bbb" && <ScrollableDiagram title={text.titles[kind]} locale={locale}><BbbDiagram text={text} /></ScrollableDiagram>}
       {kind === "therapies" && (
         <div className="visual-table-wrap">
           <table className="visual-table">
@@ -982,14 +993,14 @@ function VisualFigure({ kind, slug, text, locale }: { kind: VisualKind; slug: st
           ))}
         </div>
       )}
-      {kind === "skinaging" && <SkinagingDiagram text={text} />}
+      {kind === "skinaging" && <ScrollableDiagram title={text.titles[kind]} locale={locale}><SkinagingDiagram text={text} /></ScrollableDiagram>}
       {kind === "repair" && (
         <div className="visual-flow">
           {text.repair.map((item, index) => <div className="visual-flow-step" key={item}><b>{index + 1}</b><span><StepIcon name={iconFor(kind, index)} />{item}</span></div>)}
         </div>
       )}
-      {kind === "bodymap" && <BodymapDiagram text={text} />}
-      {isSceneKind(kind) && (() => { const Scene = SCENE_KINDS[kind]; return (<><Scene text={text} /><VisualLegend items={text[kind]} kind={kind} /></>); })()}
+      {kind === "bodymap" && <ScrollableDiagram title={text.titles[kind]} locale={locale}><BodymapDiagram text={text} /></ScrollableDiagram>}
+      {isSceneKind(kind) && (() => { const Scene = SCENE_KINDS[kind]; return (<><ScrollableDiagram title={text.titles[kind]} locale={locale}><Scene text={text} /></ScrollableDiagram><VisualLegend items={text[kind]} kind={kind} /></>); })()}
       {isCardKind(kind) && (
         <div className="visual-cards">
           {text[kind].map(([label, desc], index) => (
@@ -1006,11 +1017,11 @@ function VisualFigure({ kind, slug, text, locale }: { kind: VisualKind; slug: st
         </div>
       )}
       <figcaption>{text.note}</figcaption>
-      {slug === "stem-cell-biodistribution" && (
+      {slug === "stem-cell-biodistribution" && kind === "biodistribution" && (
         <div className="paper-figure">
           <p className="paper-figure-label">{text.paperFigureLabel}</p>
           <img
-            src="/images/articles/msc-biodistribution-eggenhofer-2012.jpg"
+            src={publicAsset("/images/articles/msc-biodistribution-eggenhofer-2012.jpg")}
             alt={
               locale === "en"
                 ? "Bar charts showing organ distribution of radioactivity after IV infusion of Cr-51-labeled MSCs in mice: over 60% in lungs at 1 hour, liver share rising at 24 hours"

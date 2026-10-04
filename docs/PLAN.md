@@ -366,3 +366,11 @@ FTPSでレンタルサーバーの公開フォルダへ
 - 検索ページは初期状態で記事を出さず、キーワード・カテゴリの提案のみ表示。入力またはカテゴリ選択後に結果を出す。検索インデックスは公開記事（live）のみに限定し、ストック記事は一覧ページの「ストック記事を表示」ボタン経由でのみ参照できる。
 - 用語集の検索・並び替えを `.glossary-tools` でスティッキー化し、一致箇所を `<mark>` で強調。記事内用語ポップアップはビューポートからはみ出す場合に横ずらし・下が狭ければ上開きに調整（`.term-pop-up`）。
 - `check-export.mjs` の検索インデックス件数チェックを新仕様に更新（プレビューは <= 記事ページ数、本番は一致）。
+
+## 42. SEO/UX監査の一括対応・デザイン統一（2026-10-04 追記27）
+
+- SEO周辺：contact.php に `correction` カテゴリ追加＋`npm run check:contact`（フロント/PHPのカテゴリ一致検査、prebuildで自動実行）。404ページを `noindex, follow`＋専用タイトルに。`/feed.xml`（RSS）と alternate link 追加。Apple touch icon・英中用 OGP 画像を追加。`articleDateModified` で dateModified < datePublished を防止。.htaccess で composer.json/lock/phar・vendor/ へのアクセスを拒否。hreflang はローカライズ版が indexable のときのみ出力。
+- パフォーマンス/構成：記事一覧のカードをサーバー描画のまま data 属性で絞り込み（`.filter-item`/`data-featured`/`data-query-hide`）、RSCペイロードへの重複を解消。ストック記事はクライアント描画に分離。
+- デザイン統一：`editorial.css` に `--surface`/`--radius`/`--control-radius`/`--control-border` トークンを追加し、カード・フォーム・チップの角丸・枠線を統一。ヘッダーを sticky 化しプライマリナビ（はじめての方へ/記事一覧/カテゴリドロップダウン/検索）と現在位置インジケーターを追加。記事カードは カテゴリ→タイトル→概要→監修情報 の優先順に再構成。
+- UI修正：`CategoryNavigation` 新設（PC＝チップ、モバイル＝`<details>` ピッカー）。絞り込み入力を type="search"＋クリアボタン＋全文検索リンクに。おすすめトグルを MutationObserver で絞り込み欄と同期。用語ポップアップを `role="region"`＋`aria-labelledby` 化し Escape フォーカス復帰。ストック開閉を `aria-expanded`/`aria-controls` 対応。英中の対象記事プリフィルに言語接頭辞を追加。論文図を `publicAsset()` 化、同一図版の論文図二重表示を修正。モバイル記事レイアウトの固定列はみ出しを `minmax(0,1fr)` で解消。
+- 検証：ja/en/zh × 8画面 × 320/768/1440px（72条件）で横はみ出し・エラーなし。コントラスト AA サンプル全合格。typecheck / build:github-pages / build:lolipop / check:export（885ページ・82,510リンク）通過。詳細は `docs/DESIGN-UI-REVIEW.md`。

@@ -63,10 +63,10 @@ export function ContactForm({ locale = "ja" }: { locale?: SiteLocale | "ja" } = 
 
 内容：`
           : locale === "en"
-            ? `Article: /articles/${article}/
+            ? `Article: /en/articles/${article}/
 
 Details:`
-            : `相关文章: /articles/${article}/
+            : `相关文章: /zh/articles/${article}/
 
 内容：`,
       );
@@ -94,7 +94,7 @@ Details:`
         <label>{copy.email}<input type="email" name="email" required maxLength={254} autoComplete="email" /></label>
         <label>{copy.category}<select name="category" required value={categoryValue} onChange={(e) => setCategoryValue(e.target.value)}><option value="" disabled>{copy.choose}</option>{copy.options.map(([value, label]) => <option key={value} value={value}>{label}</option>)}</select></label>
         <label>{copy.message}<textarea name="message" required minLength={10} maxLength={5000} rows={8} placeholder={copy.messagePlaceholder} value={messageValue} onChange={(e) => setMessageValue(e.target.value)} /></label>
-        <label className="contact-consent"><input type="checkbox" name="consent" value="1" required /> {copy.consent}（<a href={publicAsset(locale === "ja" ? "/privacy/" : `/${locale}/privacy/`)}>{copy.privacy}</a>）</label>
+        <label className="contact-consent"><input type="checkbox" name="consent" value="1" required /><span>{copy.consent}（<a href={publicAsset(locale === "ja" ? "/privacy/" : `/${locale}/privacy/`)}>{copy.privacy}</a>）</span></label>
         <button className="button" type="submit">{copy.submit}</button>
       </form>
     </div>

@@ -1,101 +1,149 @@
 "use client";
 
-import { Children, useRef, useState, type ReactNode } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 import Link from "next/link";
 import { Icon } from "./visuals";
-import { useFeaturedOn } from "./featured-filter";
+import { refreshScope } from "./featured-filter";
 
 const copy = {
   ja: {
-    label: "タイトル・概要から絞り込む",
-    placeholder: "例：幹細胞、費用、安全性",
-    search: "本文も含めて検索",
-    count: (n: number, total: number) => `${total}本中 ${n}本を表示`,
-    empty: "条件に一致する記事はありません。別の言葉でお試しください。",
+    label: "記事を絞り込む",
+    placeholder: "キーワード（例：費用、リスク）",
+    count: (shown: number, total: number) => `${total}本中 ${shown}本を表示`,
+    empty: "条件に一致する記事はありません。",
+    emptyLead: "公開中の記事は ",
+    emptyTail: " からも確認できます。",
+    emptyLink: "カテゴリ一覧",
     clear: "絞り込みを解除",
+    clearInput: "キーワードを消す",
+    fullSearch: "本文も含めて検索",
   },
   en: {
-    label: "Filter by title or summary",
-    placeholder: "Try stem cells, cost, or safety",
-    search: "Search full articles",
-    count: (n: number, total: number) => `${n} of ${total} articles`,
-    empty: "No matching articles. Try another keyword.",
+    label: "Filter articles",
+    placeholder: "Keywords (e.g., cost, risks)",
+    count: (shown: number, total: number) => `Showing ${shown} of ${total} articles`,
+    empty: "No articles match the current filter.",
+    emptyLead: "You can also browse the ",
+    emptyTail: ".",
+    emptyLink: "category list",
     clear: "Clear filter",
+    clearInput: "Clear keywords",
+    fullSearch: "Search full articles",
   },
   zh: {
-    label: "按标题或摘要筛选",
-    placeholder: "例如：干细胞、费用、安全性",
-    search: "搜索文章全文",
-    count: (n: number, total: number) => `显示 ${total} 篇中的 ${n} 篇`,
-    empty: "没有符合条件的文章，请尝试其他关键词。",
+    label: "筛选文章",
+    placeholder: "关键词（如：费用、风险）",
+    count: (shown: number, total: number) => `已发布文章 ${total} 篇中显示 ${shown} 篇`,
+    empty: "没有符合条件的文章。",
+    emptyLead: "也可以从 ",
+    emptyTail: " 查看公开中的文章。",
+    emptyLink: "分类列表",
     clear: "清除筛选",
+    clearInput: "清除关键词",
+    fullSearch: "搜索文章全文",
   },
-};
+} as const;
 
-// Cards stay server-rendered so every article link is available without JavaScript.
+/**
+ * カード一覧のテキスト絞り込み。
+ * カードはサーバー描画のまま残し、ここでは入力 UI と件数・空状態だけを持つ。
+ * gridId で指定したゾーン内の .filter-item に data-query-hide を付け外しし、
+ * スコープの featured-on 変化も MutationObserver で追従する。
+ */
 export function ArticleBrowser({
-  children,
-  terms,
   locale = "ja",
-  featured,
+  total,
+  gridId,
 }: {
-  children: ReactNode;
-  terms: string[];
   locale?: keyof typeof copy;
-  featured?: boolean[];
+  total: number;
+  gridId: string;
 }) {
   const [query, setQuery] = useState("");
-  const featuredOnly = useFeaturedOn();
+  const [shown, setShown] = useState(total);
   const input = useRef<HTMLInputElement>(null);
+  const id = useId();
   const text = copy[locale];
-  const normalize = (value: string) =>
-    value.normalize("NFKC").toLocaleLowerCase(locale);
-  const words = normalize(query).trim().split(/\s+/).filter(Boolean);
-  const cards = Children.toArray(children);
-  const matches = cards.filter(
-    (_, index) =>
-      (!featuredOnly || featured?.[index]) &&
-      words.every((word) => normalize(terms[index] ?? "").includes(word)),
-  );
+  const prefix = locale === "ja" ? "" : `/${locale}`;
+
+  useEffect(() => {
+    const zone = document.getElementById(gridId);
+    const scope = zone?.closest("[data-filter-scope]");
+    if (!zone || !scope) return;
+    const normalize = (value: string) => value.normalize("NFKC").toLocaleLowerCase(locale);
+    const run = () => {
+      const words = normalize(query).trim().split(/\s+/).filter(Boolean);
+      let count = 0;
+      zone.querySelectorAll<HTMLElement>(".filter-item").forEach((item) => {
+        const matched = words.every((word) => normalize(item.textContent ?? "").includes(word));
+        item.toggleAttribute("data-query-hide", !matched);
+        const featuredHidden = item.dataset.featured !== "true" && Boolean(item.closest(".filter-scope.featured-on"));
+        if (matched && !featuredHidden) count += 1;
+      });
+      setShown(count);
+      refreshScope(scope);
+    };
+    run();
+    const observer = new MutationObserver(run);
+    observer.observe(scope, { attributes: true, attributeFilter: ["class"] });
+    return () => observer.disconnect();
+  }, [query, gridId, locale]);
+
+  const clearQuery = () => {
+    setQuery("");
+    input.current?.focus();
+  };
+
   return (
-    <>
+    <div className="article-browser">
       <div className="browser-tools">
-        <label>
-          {text.label}
-          <input
-            ref={input}
-            type="search"
-            value={query}
-            onChange={(event) => setQuery(event.target.value)}
-            placeholder={text.placeholder}
-          />
-        </label>
-        <Link href={`${locale === "ja" ? "" : `/${locale}`}/search/`}>
-          {text.search}
-          <Icon name="arrow" size={18} />
+        <div className="browser-field">
+          <label htmlFor={id}>{text.label}</label>
+          <div className="browser-input">
+            <Icon name="search" size={20} />
+            <input
+              id={id}
+              ref={input}
+              type="search"
+              value={query}
+              onChange={(event) => setQuery(event.target.value)}
+              placeholder={text.placeholder}
+              aria-controls={gridId}
+              aria-describedby={`${id}-count`}
+            />
+            {query && <button className="browser-clear" type="button" onClick={clearQuery} aria-label={text.clearInput}><span aria-hidden="true">×</span></button>}
+          </div>
+        </div>
+      </div>
+      <div className="browser-meta">
+        <p className="browser-count" id={`${id}-count`} aria-live="polite">
+          {text.count(shown, total)}
+        </p>
+        <Link className="browser-search-link" href={`${prefix}/search/${query.trim() ? `?q=${encodeURIComponent(query.trim())}` : ""}`}>
+          {text.fullSearch}<Icon name="arrow" size={18} />
         </Link>
       </div>
-      <p className="browser-count" role="status" aria-live="polite">
-        {text.count(matches.length, cards.length)}
-      </p>
-      {matches.length ? (
-        <div className="listing-grid">{matches}</div>
-      ) : (
-        <div className="empty-state">
-          <p>{text.empty}</p>
-          {query && (
-            <button
-              type="button"
-              onClick={() => {
-                setQuery("");
-                input.current?.focus();
-              }}
-            >
-              {text.clear}
-            </button>
-          )}
+      {shown === 0 && (
+        <div className="empty-state" role="status">
+          <p>
+            {text.empty}
+            {text.emptyLead}
+            <Link href={`${prefix}/articles/`}>{text.emptyLink}</Link>
+            {text.emptyTail}
+          </p>
+          <button
+            type="button"
+            onClick={() => {
+              const scope = document.getElementById(gridId)?.closest("[data-filter-scope]");
+              scope?.classList.remove("featured-on");
+              refreshScope(scope ?? null);
+              clearQuery();
+            }}
+          >
+            {text.clear}
+          </button>
         </div>
       )}
-    </>
+    </div>
   );
 }

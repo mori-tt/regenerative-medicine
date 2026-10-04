@@ -1,80 +1,60 @@
 "use client";
 
-import {
-  Children,
-  createContext,
-  useContext,
-  useState,
-  type ReactNode,
-} from "react";
+import { useEffect, useRef, useState } from "react";
 
-type FeaturedState = { on: boolean; setOn: (v: boolean) => void };
-const FeaturedContext = createContext<FeaturedState>({
-  on: false,
-  setOn: () => {},
-});
+/**
+ * 「おすすめ」絞り込みのトグル。
+ * カード自体はサーバー描画したまま .filter-item / data-featured / data-query-hide
+ * で制御するため、ここでは最も近い data-filter-scope 要素に featured-on を付け外しする。
+ * CSS 側で `.filter-scope.featured-on .filter-item:not([data-featured="true"])` を非表示にする。
+ */
 
-/** 「おすすめのみ」絞り込みのON/OFFを共有するスコープ。入れ子にすると親のONを引き継ぐ。 */
-export function FeaturedScope({ children }: { children: ReactNode }) {
-  const parent = useContext(FeaturedContext);
-  const [self, setSelf] = useState(false);
-  return (
-    <FeaturedContext.Provider value={{ on: self || parent.on, setOn: setSelf }}>
-      {children}
-    </FeaturedContext.Provider>
-  );
+/** スコープ内の .listing-zone を走査し、表示カードが 0 枚なら .listing-empty を出す。 */
+export function refreshScope(scope: Element | null) {
+  if (!scope) return;
+  scope.querySelectorAll<HTMLElement>(".listing-zone").forEach((zone) => {
+    const empty = zone.querySelector<HTMLElement>(".listing-empty");
+    if (!empty) return;
+    const items = zone.querySelectorAll<HTMLElement>(".filter-item");
+    let visible = 0;
+    items.forEach((item) => {
+      const queryHidden = item.hasAttribute("data-query-hide");
+      const featuredHidden = item.dataset.featured !== "true" && Boolean(item.closest(".filter-scope.featured-on"));
+      if (!queryHidden && !featuredHidden) visible += 1;
+    });
+    empty.hidden = visible > 0;
+  });
 }
 
-/** おすすめ絞り込みトグル。所属する FeaturedScope の状態を切り替える。 */
-export function FeaturedButton({
-  label,
-  count,
-}: {
-  label: string;
-  count: number;
-}) {
-  const { on, setOn } = useContext(FeaturedContext);
+export function FeaturedButton({ label, count }: { label: string; count: number }) {
+  const [on, setOn] = useState(false);
+  const button = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    const scope = button.current?.closest("[data-filter-scope]");
+    if (!scope) return;
+    const sync = () => setOn(scope.classList.contains("featured-on"));
+    sync();
+    const observer = new MutationObserver(sync);
+    observer.observe(scope, { attributes: true, attributeFilter: ["class"] });
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <button
+      ref={button}
       type="button"
       className={`featured-toggle${on ? " active" : ""}`}
       aria-pressed={on}
-      onClick={() => setOn(!on)}
+      onClick={(event) => {
+        const scope = event.currentTarget.closest("[data-filter-scope]");
+        const next = !scope?.classList.contains("featured-on");
+        scope?.classList.toggle("featured-on", next);
+        setOn(next);
+        refreshScope(scope);
+      }}
     >
       {label} <small>{count}</small>
     </button>
   );
-}
-
-/** スコープがONの間、featured=true のカードだけを出す listing-grid。 */
-export function FeaturedOnlyGrid({
-  children,
-  featured,
-  empty,
-}: {
-  children: ReactNode;
-  featured: boolean[];
-  empty: string;
-}) {
-  const { on } = useContext(FeaturedContext);
-  const cards = Children.toArray(children);
-  const shown = on ? cards.filter((_, i) => featured[i]) : cards;
-  return shown.length ? (
-    <div className="listing-grid">{shown}</div>
-  ) : (
-    <div className="empty-state">
-      <p>{empty}</p>
-    </div>
-  );
-}
-
-/** スコープがONの間はまるごと隠す（コラムなど対象外のセクション用）。 */
-export function FeaturedHidden({ children }: { children: ReactNode }) {
-  const { on } = useContext(FeaturedContext);
-  return on ? null : <>{children}</>;
-}
-
-/** 現在のスコープの絞り込み状態を読む（スコープ外では常にfalse）。 */
-export function useFeaturedOn(): boolean {
-  return useContext(FeaturedContext).on;
 }
