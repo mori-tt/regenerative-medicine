@@ -112,6 +112,8 @@ npm run preview
 
 `public/.htaccess`はドメイン直下用のサンプルで、ビルド時に`out/.htaccess`へコピーされます。既存のWordPress用リライト等がある場合は、そのまま上書きせず統合してください。使えるディレクティブはサーバー設定に依存するため、配置後に確認します。
 
+含まれる設定：404ページ、ディレクトリ一覧の禁止、テキスト圧縮、composer系ファイルと`vendor/`の公開拒否、セキュリティヘッダー（`X-Content-Type-Options`/`Referrer-Policy`/`X-Frame-Options`/`Permissions-Policy`/`Strict-Transport-Security`/`Content-Security-Policy`）、コンテンツ種別ごとのキャッシュ、検索インデックスJSONの`X-Robots-Tag: noindex`。`mod_headers`が無効なレンタルサーバーではヘッダー系が出ないため、配置後に `curl -I` でレスポンスヘッダーを確認してください。
+
 ## 5. 配置後の確認
 
 - トップ、カテゴリ、記事詳細をそれぞれURLの直接入力で開ける。

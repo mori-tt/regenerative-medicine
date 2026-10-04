@@ -56,6 +56,13 @@
 - `.htaccess` に composer.json/lock/phar の公開拒否と `vendor/` への HTTP アクセス遮断を追加（既存の圧縮・キャッシュ設定は維持）。
 - 記事一覧・カテゴリ・英中一覧ページの RSC ペイロードを削減。公開前ストックのカードは開閉時にクライアントで描画する方式に変更し、記事一覧HTMLは約55%削減。検索公開に必要なライブ記事のリンクは引き続きサーバー描画で出力。
 
+## 2026-10-04 追加対応
+
+- RSS を言語別に拡張：`/feed.xml`（ja）に加え `/en/feed.xml`・`/zh/feed.xml` を追加（`src/lib/feed.ts` に生成処理を集約）。各言語ページの alternate link は自言語のフィードを指し、フッターの「サイト案内」に RSS リンクを追加。掲載条件は従来どおり監修済み公開記事のみ。
+- `.htaccess` にセキュリティヘッダーを追加：`X-Frame-Options DENY`、`Permissions-Policy`（camera/microphone/geolocation/payment等を無効化）、`Strict-Transport-Security`（max-age=1年・includeSubDomains）、`Content-Security-Policy`（自己ホストのみ・インラインscript/style許可・frame-ancestors 'none'・form-action 'self'）。外部フォント・外部JSなしの構成なので既存機能への影響はなし。
+- `contact.php` に本文内URL数チェックを追加（4件以上のリンクを含む投稿は送信せず成功応答を返して破棄）。既存の honeypot・最小入力時間・IPレート制限・Originチェックと併用。
+- 論文図表の `<img>` に `width`/`height`/`decoding="async"` を追加（レイアウトシフト対策。`loading="lazy"`は既存）。
+
 ## 残課題（編集・運用判断が必要）
 
 - 下書き（未監修）記事の description は簡易文のまま。公開審査のタイミングで編集する運用。

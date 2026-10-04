@@ -92,6 +92,11 @@ $categoryLabels = [
 if ($honeypot !== '' || ($startedAt > 0 && (int)(microtime(true) * 1000) - $startedAt < 2500)) {
     redirect_result('sent');
 }
+// リンクを大量に貼る投稿はスパムとみなし、送信したように見せて破棄する。
+$linkCount = preg_match_all('#https?://|www\.#i', $message);
+if ($linkCount !== false && $linkCount > 3) {
+    redirect_result('sent');
+}
 if (
     $name === '' || mb_strlen($name) > 80 ||
     !filter_var($email, FILTER_VALIDATE_EMAIL) || strlen($email) > 254 ||

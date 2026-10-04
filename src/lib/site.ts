@@ -139,7 +139,7 @@ export function pageMetadata(
     description,
     alternates: {
       canonical,
-      types: { "application/rss+xml": absolute("/feed.xml") },
+      types: { "application/rss+xml": absolute(localizedPath("/feed.xml", locale)) },
       // hreflang は翻訳ページを検索公開している時だけ出す。noindex のページを
       // 代替言語として案内しても検索エンジンには無視され、整合性の警告要因になる。
       ...(localizedIndexable

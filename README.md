@@ -95,7 +95,7 @@ NEXT_PUBLIC_SITE_INDEXABLE=true
 
 ## 実装の範囲
 
-- 静的HTML、ページ固有のメタデータ、canonical、OGP、パンくず・構造化データ、sitemap、robots。
+- 静的HTML、ページ固有のメタデータ、canonical、OGP、パンくず・構造化データ、sitemap、robots、言語別RSSフィード（`/feed.xml`・`/en/feed.xml`・`/zh/feed.xml`）。
 - サーバー不要の全文キーワード検索とカテゴリ絞り込み。
 - 医師監修欄、編集方針、出典、更新日、広告予定枠。
 - 入稿後に静的バナーを表示できる広告コンポーネント。

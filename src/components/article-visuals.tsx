@@ -1022,6 +1022,10 @@ function VisualFigure({ kind, slug, text, locale }: { kind: VisualKind; slug: st
           <p className="paper-figure-label">{text.paperFigureLabel}</p>
           <img
             src={publicAsset("/images/articles/msc-biodistribution-eggenhofer-2012.jpg")}
+            width={389}
+            height={702}
+            loading="lazy"
+            decoding="async"
             alt={
               locale === "en"
                 ? "Bar charts showing organ distribution of radioactivity after IV infusion of Cr-51-labeled MSCs in mice: over 60% in lungs at 1 hour, liver share rising at 24 hours"
@@ -1029,7 +1033,6 @@ function VisualFigure({ kind, slug, text, locale }: { kind: VisualKind; slug: st
                   ? "论文柱状图：小鼠静脉输注51Cr标记间充质干细胞后各器官放射活性分布，1小时后肺占60%以上，24小时后肝占比上升"
                   : "マウスに51Cr標識間葉系幹細胞を静脈投与した後の各臓器の放射活性分布。投与1時間後は肺に60%以上、24時間後は肝臓への割合が増加する論文の棒グラフ"
             }
-            loading="lazy"
           />
           <p className="paper-figure-caption">
             {text.paperFigureNote}{" "}

@@ -45,10 +45,19 @@
 ## 6. 問い合わせフォーム
 
 - [ ] `public/contact.php` が動作するホスティング環境を確認（GitHub Pages は静的ホストのため PHP 非対応 → 外部フォームサービスへの切り替えが必要な場合あり）
+- [ ] PHPMailer の SMTP 設定（`CONTACT_SMTP_*`）と実送信・返信・スパム扱いされないかの確認
+- [ ] 実運用でスパム投稿が出た場合は Turnstile/hCaptcha の導入を検討（サイトキー・シークレットの発行が必要。現状は honeypot＋最小入力時間＋IPレート制限＋URL数制限）
+
+## 6.5 セキュリティヘッダー・RSS
+
+- [ ] デプロイ後に `curl -I https://本番ドメイン/` で `X-Frame-Options` `Permissions-Policy` `Strict-Transport-Security` `Content-Security-Policy` が返ることを確認（`.htaccess` に定義済み。`mod_headers` が有効かサーバー依存）
+- [ ] HTTPS証明書の安定稼働を確認後、HSTS に `preload` を追加してブラウザのpreloadリスト申請も検討
+- [ ] CSP 違反が出ていないかブラウザコンソールで確認（外部リソースは使っていないはず。違反が出たら該当リソースを自己ホスト化するかポリシーを見直す）
+- [ ] `/feed.xml`、`/en/feed.xml`、`/zh/feed.xml` が本番URLで取得できること、リーダーで購読表示を確認
 
 ## 7. デプロイ後のモニタリング
 
 - [ ] Google Search Console でインデックス状況を確認
 - [ ] アクセシビリティ監査（Lighthouse / axe）
-- [ ] 実機でのモバイル表示・フォーム送信テスト
+- [ ] 実機でのモバイル表示・フォーム送信テスト（iOS Safari / Android Chrome で `<details>` ピッカー・stickyヘッダー・横スクロール図版の挙動も確認）
 - [ ] フィードバック・誤記報告の受け皿の運用フロー確立

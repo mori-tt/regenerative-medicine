@@ -374,3 +374,12 @@ FTPSでレンタルサーバーの公開フォルダへ
 - デザイン統一：`editorial.css` に `--surface`/`--radius`/`--control-radius`/`--control-border` トークンを追加し、カード・フォーム・チップの角丸・枠線を統一。ヘッダーを sticky 化しプライマリナビ（はじめての方へ/記事一覧/カテゴリドロップダウン/検索）と現在位置インジケーターを追加。記事カードは カテゴリ→タイトル→概要→監修情報 の優先順に再構成。
 - UI修正：`CategoryNavigation` 新設（PC＝チップ、モバイル＝`<details>` ピッカー）。絞り込み入力を type="search"＋クリアボタン＋全文検索リンクに。おすすめトグルを MutationObserver で絞り込み欄と同期。用語ポップアップを `role="region"`＋`aria-labelledby` 化し Escape フォーカス復帰。ストック開閉を `aria-expanded`/`aria-controls` 対応。英中の対象記事プリフィルに言語接頭辞を追加。論文図を `publicAsset()` 化、同一図版の論文図二重表示を修正。モバイル記事レイアウトの固定列はみ出しを `minmax(0,1fr)` で解消。
 - 検証：ja/en/zh × 8画面 × 320/768/1440px（72条件）で横はみ出し・エラーなし。コントラスト AA サンプル全合格。typecheck / build:github-pages / build:lolipop / check:export（885ページ・82,510リンク）通過。詳細は `docs/DESIGN-UI-REVIEW.md`。
+
+## 43. セキュリティヘッダー・言語別RSS・フォーム防御の強化（2026-10-04 追記28）
+
+- `.htaccess`：`X-Frame-Options DENY`、`Permissions-Policy`（camera/mic/geo/payment等無効化）、`Strict-Transport-Security`（1年・includeSubDomains）、`Content-Security-Policy`（'self'中心・インラインscript/style許可・frame-ancestors 'none'・form-action 'self'）を追加。外部フォント/JSを使わない構成のため既存機能への影響なし。
+- RSS言語別化：`src/lib/feed.ts` に生成を集約し `/feed.xml`（ja）・`/en/feed.xml`・`/zh/feed.xml` を出力。各言語ページの alternate link を自言語フィードへ、フッター「サイト案内」に RSS リンク追加。掲載は監修済み公開記事のみ（現状6件×3言語）。
+- `contact.php`：本文に4件以上のURLを含む投稿をスパムとして成功応答で破棄。既存の honeypot・最小入力時間・IPレート制限・Originチェックと併用。
+- 論文図表 `<img>` に `width`/`height`/`decoding="async"` を追加（CLS対策）。
+- 検証：typecheck・両ターゲットビルド（892タスク）・check:export（885ページ・83,395リンク）通過。3言語feedの配信・alternate link・フッターリンクをプレビューで確認。
+- 残る手作業：Turnstile等のCAPTCHA導入（スパム発生時・キー発行が必要）、実機確認、編集判断（ニア重複記事統合・ストック公開予定）。DEPLOY-CHECKLIST.md §6.5 参照。

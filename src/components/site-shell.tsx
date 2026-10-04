@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { CategoryDropdown, MobileMenu } from "./navigation";
-import { site } from "@/lib/site";
+import { localizedPath, publicAsset, site } from "@/lib/site";
 import { localeFromPath, localePrefix, type UiLocale } from "@/lib/locale-path";
 import { Icon } from "./visuals";
 import { LanguageSwitcher } from "./language-switcher";
@@ -75,7 +75,7 @@ export function Footer() {
           <div className="footer-links">
             <div className="footer-link-group"><strong>{locale === "ja" ? "読む" : locale === "en" ? "Read" : "阅读"}</strong><Link href={path("guide")}>{copy?.guide || "はじめての方へ"}</Link><Link href={path("articles")}> {copy?.articles || "記事一覧"}</Link><Link href={path("glossary")}>{copy?.glossary || "用語集"}</Link><Link href={path("faq")}>{copy?.faq || "よくある質問"}</Link></div>
             <div className="footer-link-group"><strong>{locale === "ja" ? "信頼性" : locale === "en" ? "Trust" : "可信度"}</strong><Link href={path("editorial-policy")}>{copy?.editorial || "編集方針"}</Link><Link href={path("supervision")}>{copy?.supervision || "医師監修について"}</Link><Link href={path("sources")}>{copy?.sources || "情報源・参考サイト"}</Link><Link href={path("citations")}>{copy?.citations || "引用・転載"}</Link></div>
-            <div className="footer-link-group"><strong>{locale === "ja" ? "サイト案内" : locale === "en" ? "About" : "网站信息"}</strong><Link href={path("about")}>{copy?.about || "運営について"}</Link><Link href={path("updates")}>{copy?.updates || "更新情報"}</Link><Link href={path("contact")}>{copy?.contact || "お問い合わせ"}</Link><Link href={path("site-guide")}>{copy?.siteGuide || "サイトマップ"}</Link><Link href={path("advertising")}>{copy?.advertising || "広告掲載について"}</Link></div>
+            <div className="footer-link-group"><strong>{locale === "ja" ? "サイト案内" : locale === "en" ? "About" : "网站信息"}</strong><Link href={path("about")}>{copy?.about || "運営について"}</Link><Link href={path("updates")}>{copy?.updates || "更新情報"}</Link><Link href={path("contact")}>{copy?.contact || "お問い合わせ"}</Link><Link href={path("site-guide")}>{copy?.siteGuide || "サイトマップ"}</Link><Link href={path("advertising")}>{copy?.advertising || "広告掲載について"}</Link><a href={publicAsset(localizedPath("/feed.xml", locale))}>RSS</a></div>
             <div className="footer-link-group"><strong>{locale === "ja" ? "法務・プライバシー" : locale === "en" ? "Legal" : "法律与隐私"}</strong><Link href={path("terms")}>{copy?.terms || "利用規約"}</Link><Link href={path("privacy")}>{copy?.privacy || "プライバシーポリシー"}</Link><Link href={path("disclaimer")}>{copy?.disclaimer || "利用上の注意"}</Link><Link href={path("corrections")}>{copy?.corrections || "訂正・更新の方針"}</Link><Link href={path("accessibility")}>{copy?.accessibility || "アクセシビリティ"}</Link><Link href={path("regulation")}>{copy?.regulation || "制度と法律"}</Link></div>
           </div>
         </div>
