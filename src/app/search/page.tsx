@@ -1,6 +1,6 @@
 import { ArticleSearch } from "@/components/article-search";
 import { Breadcrumbs } from "@/components/content";
-import { categories } from "@/content/categories";
+import { availableCategories } from "@/content/articles";
 import { pageMetadata } from "@/lib/site";
 import { searchIndexPath } from "@/lib/search-index";
 export const metadata = pageMetadata(
@@ -21,7 +21,7 @@ export default function SearchPage() {
       <ArticleSearch
         locale="ja"
         indexUrl={searchIndexPath("ja")}
-        categories={categories.map((c) => ({ slug: c.slug, label: c.label }))}
+        categories={availableCategories().map((c) => ({ slug: c.slug, label: c.label }))}
       />
     </div>
   );

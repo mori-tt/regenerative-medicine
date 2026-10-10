@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { availableCategories } from "@/content/articles";
 import { Header, Footer } from "@/components/site-shell";
 import { LocaleDocument, SkipLink } from "@/components/locale-document";
 import { absolute, publiclyIndexable, publicAsset, site, siteTaglineFor } from "@/lib/site";
@@ -33,7 +34,7 @@ export default function RootLayout({
       <body>
         <LocaleDocument />
         <SkipLink />
-        <Header />
+        <Header categorySlugs={availableCategories().map((category) => category.slug)} />
         <main id="main">{children}</main>
         <Footer />
       </body>

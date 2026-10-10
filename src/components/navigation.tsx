@@ -35,7 +35,7 @@ const categoryLabel = { ja: "カテゴリ", en: "Categories", zh: "分类" } as 
 const categoryNavLabel = { ja: "カテゴリ一覧", en: "Categories", zh: "分类" } as const;
 
 /** PCヘッダーのカテゴリドロップダウン。 */
-export function CategoryDropdown() {
+export function CategoryDropdown({ slugs }: { slugs?: string[] }) {
   const pathname = usePathname();
   const locale = localeFromPath(pathname);
   const prefix = localePrefix(locale);
@@ -44,7 +44,7 @@ export function CategoryDropdown() {
     <details className="cat-dropdown" ref={details}>
       <summary>{categoryLabel[locale]}</summary>
       <nav aria-label={categoryNavLabel[locale]}>
-        {categories.map((c) => (
+        {categories.filter((c) => !slugs || slugs.includes(c.slug)).map((c) => (
           <Link key={c.slug} href={`${prefix}/categories/${c.slug}/`} onClick={close} aria-current={pathname === `${prefix}/categories/${c.slug}/` ? "page" : undefined}>
             {locale === "ja" ? c.label : localizedCategoryName(locale, c.slug)}
           </Link>
@@ -71,7 +71,7 @@ export function CategoryPicker({ label, selected, count, children }: { label: st
   );
 }
 
-export function MobileMenu() {
+export function MobileMenu({ slugs }: { slugs?: string[] }) {
   const pathname = usePathname();
   const locale = localeFromPath(pathname);
   const copy = locale === "ja" ? null : localizedShell[locale];
@@ -100,7 +100,7 @@ export function MobileMenu() {
         ))}
         <div className="mobile-menu-group">
           <p>{categoryNavLabel[locale]}</p>
-          {categories.map((c) => (
+          {categories.filter((c) => !slugs || slugs.includes(c.slug)).map((c) => (
             <Link key={c.slug} href={`${prefix}/categories/${c.slug}/`} onClick={close} aria-current={pathname === `${prefix}/categories/${c.slug}/` ? "page" : undefined}>
               {locale === "ja" ? c.label : localizedCategoryName(locale, c.slug)}
             </Link>

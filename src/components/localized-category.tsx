@@ -38,8 +38,8 @@ const categoryDescriptions = {
 } as const;
 
 const chrome = {
-  en: { home: "Home", eyebrow: "TOPIC", core: "Guides", columns: "Columns", coreEyebrow: "GUIDES", columnsEyebrow: "COLUMN", coreLead: "Learn the essentials for understanding regenerative medicine, in order.", columnsLead: "Lighter reads — stories behind the research and seasonal topics.", back: "Back to the home page", note: "Careful, source-based reading", noteBody: "Each article has a separate editorial manuscript in this language. Check the evidence, limitations, and medical questions before making a decision.", navLabel: "Browse by category", all: "All articles", featured: "Start here", featuredEyebrow: "START HERE", featuredLead: "Articles to read first in this category.", badge: "Featured", subnavLabel: "Browse by theme", topicsTitle: "Browse by topic", others: "Other articles", emptyFeatured: "No featured articles in this topic." },
-  zh: { home: "首页", eyebrow: "主题", core: "指南", columns: "专栏", coreEyebrow: "GUIDES", columnsEyebrow: "COLUMN", coreLead: "按顺序学习理解再生医学所需的基础知识。", columnsLead: "轻松阅读——研究花絮与时令话题等。", back: "返回首页", note: "基于来源的谨慎阅读", noteBody: "每篇文章都有单独的中文编辑原稿。做出决定前，请确认证据、局限性和需要向医生询问的问题。", navLabel: "按主题浏览", all: "全部文章", featured: "从这里开始", featuredEyebrow: "START HERE", featuredLead: "本主题中建议先读的文章。", badge: "推荐", subnavLabel: "按小主题浏览", topicsTitle: "按小主题阅读", others: "其他文章", emptyFeatured: "此小主题暂无推荐文章。" },
+  en: { home: "Home", eyebrow: "TOPIC", core: "Guides", columns: "Columns", coreEyebrow: "GUIDES", columnsEyebrow: "COLUMN", coreLead: "Learn the essentials for understanding regenerative medicine, in order.", columnsLead: "Lighter reads — stories behind the research and seasonal topics.", back: "Back to the home page", note: "Careful, source-based reading", noteBody: "Each article has a separate editorial manuscript in this language. Check the evidence, limitations, and medical questions before making a decision.", navLabel: "Browse by category", all: "All articles", featured: "Start here", featuredEyebrow: "START HERE", featuredLead: "Articles to read first in this category.", badge: "Featured", subnavLabel: "Browse by theme", topicsTitle: "Browse by topic", others: "Other articles", emptyFeatured: "No featured articles in this topic.", emptyCategory: "Articles for this category are being prepared. Please check back later.", emptyCategoryLink: "Browse published articles" },
+  zh: { home: "首页", eyebrow: "主题", core: "指南", columns: "专栏", coreEyebrow: "GUIDES", columnsEyebrow: "COLUMN", coreLead: "按顺序学习理解再生医学所需的基础知识。", columnsLead: "轻松阅读——研究花絮与时令话题等。", back: "返回首页", note: "基于来源的谨慎阅读", noteBody: "每篇文章都有单独的中文编辑原稿。做出决定前，请确认证据、局限性和需要向医生询问的问题。", navLabel: "按主题浏览", all: "全部文章", featured: "从这里开始", featuredEyebrow: "START HERE", featuredLead: "本主题中建议先读的文章。", badge: "推荐", subnavLabel: "按小主题浏览", topicsTitle: "按小主题阅读", others: "其他文章", emptyFeatured: "此小主题暂无推荐文章。", emptyCategory: "此分类的文章正在准备中，敬请期待。", emptyCategoryLink: "查看已发布的文章" },
 } as const;
 
 export type LocalizedCategorySlug = keyof typeof categoryDescriptions.en;
@@ -64,6 +64,26 @@ export function LocalizedCategory({ locale, slug }: { locale: SiteLocale; slug: 
   const featuredSet = featuredSlugsFor(slug, listed);
   const liveSet = new Set(liveArticles(listed).map((a) => a.slug));
   const featured = core.filter((a) => featuredSet.has(a.slug) && liveSet.has(a.slug));
+  const allFeatured = featured.length > 0 && featured.length >= core.filter((a) => liveSet.has(a.slug)).length;
+  if (listed.length === 0) {
+    return (
+      <div lang={locale === "en" ? "en" : "zh-CN"} className="localized-page">
+        <div className="container inner-page">
+          <Breadcrumbs homeLabel={copy.home} homeHref={`/${locale}/`} locale={locale} items={[{ label: title }]} />
+          <div className="page-heading">
+            <span className="eyebrow">{copy.eyebrow}</span>
+            <h1>{title}</h1>
+            <p>{description}</p>
+          </div>
+          <CategoryNavigation locale={locale} current={slug} featuredCount={0} />
+          <div className="empty-state category-empty">
+            <p>{copy.emptyCategory}</p>
+            <p><Link href={`/${locale}/articles/`}>{copy.emptyCategoryLink}</Link></p>
+          </div>
+        </div>
+      </div>
+    );
+  }
   return (
     <div lang={locale === "en" ? "en" : "zh-CN"} className="localized-page">
       <div className="container inner-page">
@@ -79,7 +99,8 @@ export function LocalizedCategory({ locale, slug }: { locale: SiteLocale; slug: 
           <Link href={`/${locale}/editorial-policy/`}>{locale === "en" ? "Our editorial policy" : "阅读编辑方针"} →</Link>
         </aside>
         <div className="filter-scope" data-filter-scope>
-        <CategoryNavigation locale={locale} current={slug} featuredCount={featured.length} />
+        <CategoryNavigation locale={locale} current={slug} featuredCount={featured.length} hideFeatured={featured.length === 0 || featured.length >= listed.length} />
+        {groups.length > 1 && (
         <nav className="topic-panel" aria-label={copy.subnavLabel}>
           <p className="topic-panel-title">{copy.topicsTitle}</p>
           <ol className="topic-panel-list">
@@ -94,7 +115,8 @@ export function LocalizedCategory({ locale, slug }: { locale: SiteLocale; slug: 
             ))}
           </ol>
         </nav>
-        {featured.length > 0 && (
+        )}
+        {featured.length > 0 && !allFeatured && (
           <section aria-label={copy.featured} className="featured-section">
             <span className="eyebrow">{copy.featuredEyebrow}</span>
             <h2 className="listing-heading">{copy.featured}</h2>
@@ -113,7 +135,7 @@ export function LocalizedCategory({ locale, slug }: { locale: SiteLocale; slug: 
                   <span className="topic-num" aria-hidden="true">{index + 1}</span>
                   {groupName}
                   {liveGroup.length > 0 && <span className="listing-count">{liveGroup.length}</span>}
-                  <FeaturedButton label={copy.badge} count={liveGroup.filter((a) => featuredSet.has(a.slug)).length} />
+                  <FeaturedButton label={copy.badge} count={liveGroup.filter((a) => featuredSet.has(a.slug)).length} total={groupArticles.length} />
                 </h2>
                 {group.desc && <p className="listing-lead">{locale === "en" ? group.desc.en : group.desc.zh}</p>}
                 {group.keywords && (
@@ -131,7 +153,7 @@ export function LocalizedCategory({ locale, slug }: { locale: SiteLocale; slug: 
                           locale={locale}
                           source={source}
                           key={source.slug}
-                          badge={featuredSet.has(source.slug) ? copy.badge : undefined}
+                          badge={featuredSet.has(source.slug) && !allFeatured ? copy.badge : undefined}
                           filter={{ featured: featuredSet.has(source.slug) }}
                         />
                       ))}

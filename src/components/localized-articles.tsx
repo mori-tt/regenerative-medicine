@@ -1,6 +1,6 @@
 import {
   articles,
-  categories,
+  availableCategories,
   liveArticles,
   stockArticles,
   visibleArticles,
@@ -110,15 +110,16 @@ export function LocalizedArticles({
         locale={locale}
         current={category}
         total={liveList.length}
-        counts={Object.fromEntries(categories.map((item) => [item.slug, liveList.filter((article) => article.category === item.slug).length]))}
+        counts={Object.fromEntries(availableCategories().map((item) => [item.slug, liveList.filter((article) => article.category === item.slug).length]))}
         featuredCount={list.filter((article) => featuredSet.has(article.slug)).length}
+        hideFeatured={list.filter((article) => featuredSet.has(article.slug)).length === 0 || [...list, ...stock].every((article) => featuredSet.has(article.slug))}
       />
       <h2 className="sr-only">{copy.listHeading}</h2>
       <ArticleBrowser locale={locale} total={list.length} gridId="localized-articles-live" />
       <LocalizedArticleGrid
         locale={locale}
         list={list}
-        badgeLabel={copy.badge}
+        badgeLabel={list.every((article) => featuredSet.has(article.slug)) ? undefined : copy.badge}
         badgeSlugs={featuredSet}
         zoneId="localized-articles-live"
       />

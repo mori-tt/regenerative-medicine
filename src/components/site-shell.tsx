@@ -24,7 +24,7 @@ export function Logo({ locale = "ja" }: { locale?: UiLocale }) {
     </Link>
   );
 }
-export function Header() {
+export function Header({ categorySlugs }: { categorySlugs?: string[] }) {
   const pathname = usePathname();
   const locale = localeFromPath(pathname);
   const copy = locale === "ja" ? null : localizedShell[locale];
@@ -48,13 +48,13 @@ export function Header() {
             <Link href={path("guide")} aria-current={pathname === path("guide") ? "page" : undefined}>{copy?.guide || "はじめての方へ"}</Link>
             <Link href={path("articles")} aria-current={pathname === path("articles") ? "page" : undefined}>{copy?.articles || "記事一覧"}</Link>
           </nav>
-          <CategoryDropdown />
+          <CategoryDropdown slugs={categorySlugs} />
           <Link className="search-link" href={path("search")} aria-label={copy?.searchAria || "記事を検索"} aria-current={pathname === path("search") ? "page" : undefined}>
             <Icon name="search" />
             <span>{copy?.search || "記事を探す"}</span>
           </Link>
           <LanguageSwitcher />
-          <MobileMenu />
+          <MobileMenu slugs={categorySlugs} />
         </div>
       </header>
     </>

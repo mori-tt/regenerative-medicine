@@ -1,4 +1,4 @@
-import { articles, categories, liveArticles, stockArticles, visibleArticles } from "@/content/articles";
+import { articles, availableCategories, liveArticles, stockArticles, visibleArticles } from "@/content/articles";
 import { allFeaturedSlugsFor } from "@/content/subcategories";
 import { CategoryNavigation } from "@/components/category-navigation";
 import { ArticleCard, Breadcrumbs, toCardData } from "@/components/content";
@@ -15,6 +15,7 @@ export default function ArticlesPage() {
   const live = liveArticles(list);
   const stock = stockArticles(list);
   const featuredSet = allFeaturedSlugsFor(list);
+  const allFeatured = live.length > 0 && live.every((article) => featuredSet.has(article.slug));
   return (
     <div className="container inner-page">
       <Breadcrumbs items={[{ label: "記事一覧" }]} />
@@ -26,8 +27,9 @@ export default function ArticlesPage() {
       <div className="filter-scope" data-filter-scope>
       <CategoryNavigation
         total={live.length}
-        counts={Object.fromEntries(categories.map((category) => [category.slug, live.filter((article) => article.category === category.slug).length]))}
+        counts={Object.fromEntries(availableCategories().map((category) => [category.slug, live.filter((article) => article.category === category.slug).length]))}
         featuredCount={live.filter((article) => featuredSet.has(article.slug)).length}
+        hideFeatured={live.filter((article) => featuredSet.has(article.slug)).length === 0 || list.every((article) => featuredSet.has(article.slug))}
       />
       <h2 className="sr-only">公開中の記事一覧</h2>
       <ArticleBrowser locale="ja" total={live.length} gridId="articles-live" />
@@ -37,7 +39,7 @@ export default function ArticlesPage() {
             <ArticleCard
               key={a.slug}
               article={a}
-              badge={featuredSet.has(a.slug) ? "おすすめ" : undefined}
+              badge={featuredSet.has(a.slug) && !allFeatured ? "おすすめ" : undefined}
               filter={{ featured: featuredSet.has(a.slug) }}
             />
           ))}

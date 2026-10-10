@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { articles, categories, columnArticles, coreArticles, liveArticles, stockArticles, visibleArticles } from "@/content/articles";
+import { articles, categories, columnArticles, isCategoryAvailable, coreArticles, liveArticles, stockArticles, visibleArticles } from "@/content/articles";
 import { ArticleCard, Breadcrumbs, toCardData } from "@/components/content";
 import { featuredSlugsFor, groupArticlesBySubcategory } from "@/content/subcategories";
 import { StockReveal } from "@/components/stock-reveal";
@@ -23,6 +23,7 @@ export async function generateMetadata({
     category.label,
     category.description,
     `/categories/${slug}/`,
+    isCategoryAvailable(slug),
   );
 }
 export default async function CategoryPage({
@@ -46,6 +47,25 @@ export default async function CategoryPage({
   const featuredSet = featuredSlugsFor(slug, listed);
   const liveSet = new Set(liveArticles(listed).map((a) => a.slug));
   const featured = core.filter((a) => featuredSet.has(a.slug) && liveSet.has(a.slug));
+  // 公開済みの基幹記事がすべて「おすすめ」なら、見出し・バッジを重ねても情報が増えないので出さない。
+  const allFeatured = featured.length > 0 && featured.length >= core.filter((a) => liveSet.has(a.slug)).length;
+  if (listed.length === 0) {
+    return (
+      <div className="container inner-page">
+        <Breadcrumbs items={[{ label: category.label }]} />
+        <div className="page-heading">
+          <span className="eyebrow">{category.en}</span>
+          <h1>{category.label}</h1>
+          <p>{category.description}</p>
+        </div>
+        <CategoryNavigation current={slug} featuredCount={0} />
+        <div className="empty-state category-empty">
+          <p>このカテゴリの記事は現在準備中です。公開までしばらくお待ちください。</p>
+          <p><Link href="/articles/">公開中の記事一覧を見る</Link></p>
+        </div>
+      </div>
+    );
+  }
   return (
     <div className="container inner-page">
       <Breadcrumbs items={[{ label: category.label }]} />
@@ -55,7 +75,8 @@ export default async function CategoryPage({
         <p>{category.description}</p>
       </div>
       <div className="filter-scope" data-filter-scope>
-      <CategoryNavigation current={slug} featuredCount={featured.length} />
+      <CategoryNavigation current={slug} featuredCount={featured.length} hideFeatured={featured.length === 0 || featured.length >= listed.length} />
+      {groups.length > 1 && (
       <nav className="topic-panel" aria-label="トピックから探す">
         <p className="topic-panel-title">トピック別に読む</p>
         <ol className="topic-panel-list">
@@ -72,7 +93,8 @@ export default async function CategoryPage({
           ))}
         </ol>
       </nav>
-      {featured.length > 0 && (
+      )}
+      {featured.length > 0 && !allFeatured && (
         <section aria-labelledby={`featured-${slug}`} className="featured-section">
           <span className="eyebrow">START HERE</span>
           <h2 id={`featured-${slug}`} className="listing-heading">まずはここから</h2>
@@ -96,7 +118,7 @@ export default async function CategoryPage({
                 {liveGroup.length > 0 && (
                   <span className="listing-count">{liveGroup.length}件</span>
                 )}
-                <FeaturedButton label="おすすめ" count={liveGroup.filter((a) => featuredSet.has(a.slug)).length} />
+                <FeaturedButton label="おすすめ" count={liveGroup.filter((a) => featuredSet.has(a.slug)).length} total={groupArticles.length} />
               </h2>
               {group.desc && <p className="listing-lead">{group.desc.ja}</p>}
               {group.keywords && (
@@ -110,7 +132,7 @@ export default async function CategoryPage({
                 <div className="listing-zone">
                   <div className="listing-grid">
                     {liveGroup.map((a) => (
-                      <ArticleCard key={a.slug} article={a} badge={featuredSet.has(a.slug) ? "おすすめ" : undefined} filter={{ featured: featuredSet.has(a.slug) }} />
+                      <ArticleCard key={a.slug} article={a} badge={featuredSet.has(a.slug) && !allFeatured ? "おすすめ" : undefined} filter={{ featured: featuredSet.has(a.slug) }} />
                     ))}
                   </div>
                   <div className="listing-empty empty-state" hidden>

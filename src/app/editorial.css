@@ -17,6 +17,8 @@ html { scroll-padding-top: 112px; }
 html, body { overflow-x: clip; }
 body { font-size: 16px; }
 h1, h2 { text-wrap: balance; }
+/* 日本語は文節で折り返す（対応ブラウザのみ。未対応でも従来どおり表示） */
+:lang(ja) :is(h1, h2, h3, .article-heading > p, .page-heading p, .hero-copy > p) { word-break: auto-phrase; }
 .heading-phrase { display: inline-block; }
 ::selection { background: #d2e5d7; color: #17392c; }
 .container { width: min(1200px, calc(100% - 80px)); }
@@ -78,6 +80,10 @@ h1, h2 { text-wrap: balance; }
 .section-caption { font-size: 13px; color: var(--muted); }
 .category-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 16px; }
 .category-grid .category-card { padding: 24px 20px; border: 1px solid var(--line); border-radius: var(--radius); display: flex; flex-direction: column; background: var(--surface); }
+.category-grid.category-grid-few { grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr)); }
+.category-upcoming { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; margin-top: 20px; font-size: 13px; color: var(--muted); }
+.category-upcoming strong { font-size: 13px; font-weight: 600; color: var(--green); margin-right: 4px; }
+.category-upcoming span { padding: 4px 12px; border: 1px dashed #b9cabc; border-radius: 999px; background: var(--surface); }
 .category-grid .category-card:hover { border-color: #8cae96; transform: none; box-shadow: 0 6px 24px #243d3509; }
 .category-top { margin-bottom: 18px; }
 .category-number { color: #5b7062; font-size: 20px; }
@@ -94,7 +100,11 @@ h1, h2 { text-wrap: balance; }
 .feature-copy p { font-size: 15px; color: var(--muted); }
 .text-link, .small-link { font-size: 14px; min-height: 44px; }
 .journal-layout { grid-template-columns: minmax(0, 1fr) 260px; gap: 32px; }
-.journal-sidebar { align-self: start; }
+.journal-sidebar { align-self: stretch; }
+@media (min-width: 1101px) {
+  .journal-sidebar .editorial-note { height: 100%; display: flex; flex-direction: column; }
+  .journal-sidebar .editorial-note a { margin-top: auto; }
+}
 .journal-layout .article-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .article-grid, .listing-grid { gap: 20px; }
 .listing-grid { grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
@@ -240,7 +250,7 @@ h1, h2 { text-wrap: balance; }
 .mobile-article-toc { border: 1px solid var(--line); border-radius: var(--control-radius); background: var(--surface); padding: 8px 16px; }
 .mobile-article-toc summary { min-height: 44px; padding-block: 9px; font-size: 15px; font-weight: 600; cursor: pointer; }
 .contact-form label { font-size: 14px; font-weight: 500; }
-.contact-form { gap: 24px; }
+.contact-form { gap: 24px; max-width: none; }
 .contact-form input:not([type="checkbox"]), .contact-form select, .contact-form textarea { font-size: 16px; font-weight: 400; min-height: 52px; border-radius: var(--control-radius); border-color: var(--control-border); padding: 12px 14px; }
 .contact-consent { gap: 12px !important; line-height: 1.9; }
 .contact-consent input { width: 18px; height: 18px; flex: 0 0 18px; accent-color: var(--green); margin: 5px 0 0; }

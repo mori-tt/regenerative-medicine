@@ -1,4 +1,4 @@
-import { readdir, readFile, access } from "node:fs/promises";
+import { readdir, readFile, access, stat } from "node:fs/promises";
 import { resolve, join, relative } from "node:path";
 import assert from "node:assert/strict";
 import { readEvidence } from "./lib/article-data.mjs";
@@ -10,11 +10,11 @@ async function targetForUrl(url) {
   const segments = url.split("/").filter(Boolean);
   for (let offset = 0; offset <= segments.length; offset++) {
     const relativePath = segments.slice(offset).join("/");
-    const target = join(root, !relativePath || relativePath.endsWith("/") ? relativePath + "index.html" : relativePath);
-    try {
-      await access(target);
-      return target;
-    } catch {}
+    for (const target of [join(root, relativePath, "index.html"), ...(relativePath ? [join(root, relativePath)] : [])]) {
+      try {
+        if ((await stat(target)).isFile()) return target;
+      } catch {}
+    }
   }
   return null;
 }

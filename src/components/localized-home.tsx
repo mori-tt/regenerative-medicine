@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { localizedCategoryName, localizedHome, type SiteLocale } from "@/content/locales";
-import { articles, categories, liveArticles, visibleArticles } from "@/content/articles";
+import { articles, availableCategories, categories, liveArticles, visibleArticles } from "@/content/articles";
 import { siteGraph } from "@/lib/structured-data";
 import { LocalizedArticleCard } from "./localized-article";
 import { JsonLd } from "./content";
@@ -11,6 +11,8 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
   const en = locale === "en";
   const featuredHref = `/${locale}/guide/`;
   const latest = liveArticles(visibleArticles(articles)).slice(0, 4);
+  const shownCategories = availableCategories();
+  const upcomingCategories = categories.filter((category) => !shownCategories.includes(category));
   return (
     <div lang={en ? "en" : "zh-CN"} className="localized-page">
       <JsonLd data={siteGraph(locale)} />
@@ -55,8 +57,8 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
           </div>
           <span className="section-caption">{copy.topicCaption}</span>
         </div>
-        <div className="category-grid">
-          {categories.map((category, index) => (
+        <div className={`category-grid${shownCategories.length < 5 ? " category-grid-few" : ""}`}>
+          {shownCategories.map((category, index) => (
             <Link
               href={`/${locale}/categories/${category.slug}/`}
               className={`category-card ${category.color}`}
@@ -79,6 +81,14 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
             </Link>
           ))}
         </div>
+        {upcomingCategories.length > 0 && (
+          <p className="category-upcoming">
+            <strong>{en ? "Topics in preparation" : "筹备中的主题"}</strong>
+            {upcomingCategories.map((category) => (
+              <span key={category.slug}>{localizedCategoryName(locale, category.slug)}</span>
+            ))}
+          </p>
+        )}
       </section>
       <section className="feature-section">
         <div className="container feature">

@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { articles, categories, isReviewed, isVisibleArticle } from "@/content/articles";
+import { articles, availableCategories, isReviewed, isVisibleArticle } from "@/content/articles";
 import { infoPages } from "@/content/pages";
 import { jsrmChapters } from "@/content/jsrm-chapters";
 import { publication } from "@/lib/site-config";
@@ -23,7 +23,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   });
   return [
     ...withLocales(["/", "/articles/"]).map((path) => entry(path, siteUpdated)),
-    ...categories.flatMap((c) =>
+    ...availableCategories().flatMap((c) =>
       withLocales([`/categories/${c.slug}/`]).map((path) =>
         entry(path, latest(listed.filter((a) => a.category === c.slug).map((a) => a.updatedAt))),
       ),

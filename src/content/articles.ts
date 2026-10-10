@@ -7,7 +7,7 @@ import { faqSectionsFor } from "./article-faq";
 import { checklistSectionsFor } from "./article-checklist";
 import { reviewRecordReady, type ArticleReviewRecord } from "@/lib/article-review";
 const reviewSchedule = reviewRecords as Record<string, ArticleReviewRecord>;
-import type { CategorySlug } from "./categories";
+import { categories, type CategorySlug } from "./categories";
 export { categories, categoryFor } from "./categories";
 export type { CategorySlug } from "./categories";
 import { articleBuildMode, articleDateModified, isReviewed, publishBaseDate } from "@/lib/article-state";
@@ -14509,6 +14509,20 @@ export function visibleArticles(list: Article[], baseDate?: string): Article[] {
 /** 本番でも公開できる記事（監修記録が整っているもの）。 */
 export function liveArticles(list: Article[]): Article[] {
   return list.filter((article) => isReviewed(article));
+}
+
+/**
+ * 読者に見せるカテゴリ。本番では公開記事が1本以上あるカテゴリだけ（空ページへの導線・サイトマップ登録を避ける）。
+ * 確認用ビルドでは全カテゴリを返す。
+ */
+export function availableCategories() {
+  if (publication.mode !== "production") return categories;
+  const live = liveArticles(visibleArticles(articles));
+  return categories.filter((category) => live.some((article) => article.category === category.slug));
+}
+
+export function isCategoryAvailable(slug: string): boolean {
+  return availableCategories().some((category) => category.slug === slug);
 }
 
 /** ストック記事（まだ公開しない原稿）。テストサイトでは「ストック」ボタンで表示、本番では生成しない。 */

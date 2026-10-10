@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { articles, categories, liveArticles, visibleArticles } from "@/content/articles";
+import { articles, availableCategories, categories, isCategoryAvailable, liveArticles, visibleArticles } from "@/content/articles";
 import { ArticleCard, AdSlot, JsonLd } from "@/components/content";
 import { CellArt, Icon } from "@/components/visuals";
 import { pageMetadata, site, siteTaglineFor } from "@/lib/site";
@@ -9,6 +9,8 @@ export const metadata = pageMetadata(siteTaglineFor.ja, site.description, "/", t
 export default function Home() {
   const featuredHref = "/guide/";
   const latest = liveArticles(visibleArticles(articles)).slice(0, 4);
+  const shownCategories = availableCategories();
+  const upcomingCategories = categories.filter((cat) => !shownCategories.includes(cat));
   return (
     <>
       <JsonLd data={siteGraph("ja")} />
@@ -85,8 +87,8 @@ export default function Home() {
             あなたのペースで、理解を深める。
           </span>
         </div>
-        <div className="category-grid">
-          {categories.map((cat, i) => (
+        <div className={`category-grid${shownCategories.length < 5 ? " category-grid-few" : ""}`}>
+          {shownCategories.map((cat, i) => (
             <Link
               href={`/categories/${cat.slug}/`}
               className={`category-card ${cat.color}`}
@@ -107,6 +109,14 @@ export default function Home() {
             </Link>
           ))}
         </div>
+        {upcomingCategories.length > 0 && (
+          <p className="category-upcoming">
+            <strong>公開準備中のテーマ</strong>
+            {upcomingCategories.map((cat) => (
+              <span key={cat.slug}>{cat.label}</span>
+            ))}
+          </p>
+        )}
       </section>
       <section className="feature-section">
         <div className="container feature">
@@ -186,7 +196,7 @@ export default function Home() {
               効果だけでなく、リスクや費用も。医師に相談する前の確認事項を整理しましょう。
             </p>
           </div>
-          <Link className="button outline" href="/categories/cost-access/">
+          <Link className="button outline" href={isCategoryAvailable("cost-access") ? "/categories/cost-access/" : "/articles/"}>
             確認したいことを読む <Icon name="arrow" size={19} />
           </Link>
         </div>

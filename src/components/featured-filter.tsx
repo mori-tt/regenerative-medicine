@@ -26,7 +26,7 @@ export function refreshScope(scope: Element | null) {
   });
 }
 
-export function FeaturedButton({ label, count }: { label: string; count: number }) {
+export function FeaturedButton({ label, count, total }: { label: string; count: number; total?: number }) {
   const [on, setOn] = useState(false);
   const button = useRef<HTMLButtonElement>(null);
 
@@ -40,6 +40,7 @@ export function FeaturedButton({ label, count }: { label: string; count: number 
     return () => observer.disconnect();
   }, []);
 
+  if (count === 0 || (total !== undefined && count >= total)) return null;
   return (
     <button
       ref={button}

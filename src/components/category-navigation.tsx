@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { categories } from "@/content/categories";
+import { availableCategories } from "@/content/articles";
 import { localizedCategoryName } from "@/content/locales";
 import { localePrefix, type UiLocale } from "@/lib/locale-path";
 import { FeaturedButton } from "./featured-filter";
@@ -17,18 +17,21 @@ export function CategoryNavigation({
   counts,
   total,
   featuredCount,
+  hideFeatured = featuredCount === 0,
 }: {
   locale?: UiLocale;
   current?: string;
   counts?: Record<string, number>;
   total?: number;
   featuredCount: number;
+  /** 全記事がおすすめで絞り込みの意味がないときは非表示にする */
+  hideFeatured?: boolean;
 }) {
   const text = copy[locale];
   const prefix = localePrefix(locale);
   const items = [
     { slug: "all", label: text.all, href: `${prefix}/articles/`, count: total },
-    ...categories.map((category) => ({
+    ...availableCategories().map((category) => ({
       slug: category.slug,
       label: locale === "ja" ? category.label : localizedCategoryName(locale, category.slug),
       href: `${prefix}/categories/${category.slug}/`,
@@ -54,7 +57,7 @@ export function CategoryNavigation({
       <CategoryPicker label={text.category} selected={selected.label} count={selected.count}>
         <div className="filter-links">{links()}</div>
       </CategoryPicker>
-      <FeaturedButton label={text.featured} count={featuredCount} />
+      {!hideFeatured && <FeaturedButton label={text.featured} count={featuredCount} />}
     </nav>
   );
 }

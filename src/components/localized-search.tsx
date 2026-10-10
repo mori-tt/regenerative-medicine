@@ -1,4 +1,4 @@
-import { categories } from "@/content/categories";
+import { availableCategories } from "@/content/articles";
 import { localizedCategoryName, type SiteLocale } from "@/content/locales";
 import { searchIndexPath } from "@/lib/search-index";
 import { ArticleSearch } from "./article-search";
@@ -33,7 +33,7 @@ export function LocalizedSearch({ locale }: { locale: SiteLocale }) {
         <ArticleSearch
           locale={locale}
           indexUrl={searchIndexPath(locale)}
-          categories={categories.map((c) => ({ slug: c.slug, label: localizedCategoryName(locale, c.slug) }))}
+          categories={availableCategories().map((c) => ({ slug: c.slug, label: localizedCategoryName(locale, c.slug) }))}
         />
       </div>
     </div>

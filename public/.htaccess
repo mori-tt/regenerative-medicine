@@ -13,9 +13,16 @@ Options -Indexes
   Require all denied
 </FilesMatch>
 
-# vendor/ 内はHTTP公開しない（contact.php はファイルシステム経由で読むため影響なし）
 <IfModule mod_rewrite.c>
   RewriteEngine On
+  # HTTP → HTTPS（リバースプロキシ経由でも判定できるよう X-Forwarded-Proto も見る）
+  RewriteCond %{HTTPS} !=on
+  RewriteCond %{HTTP:X-Forwarded-Proto} !=https
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+  # www を外してドメインを統一（canonical・sitemap は www なしの前提）
+  RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+  RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
+  # vendor/ 内はHTTP公開しない（contact.php はファイルシステム経由で読むため影響なし）
   RewriteRule ^vendor/ - [F,L]
 </IfModule>
 

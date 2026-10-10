@@ -2,7 +2,33 @@
 declare(strict_types=1);
 
 // Static Next.js exportから呼び出すお問い合わせ受付。秘密情報はLolipopの環境変数で設定します。
+// 設定は contact-config.php（公開フォルダの外）を優先し、なければ環境変数を読む。
+// デプロイは公開フォルダを丸ごと入れ替えるため、秘密情報は公開フォルダの外に置く。
+function contact_config(): array {
+    static $config = null;
+    if ($config !== null) return $config;
+    $config = [];
+    $docRoot = rtrim((string)($_SERVER['DOCUMENT_ROOT'] ?? __DIR__), '/');
+    $candidates = array_filter([
+        getenv('CONTACT_CONFIG_FILE') ?: '',
+        dirname($docRoot) . '/contact-config.php',
+        dirname($docRoot, 2) . '/contact-config.php',
+    ]);
+    foreach ($candidates as $file) {
+        if (!is_file($file)) continue;
+        $loaded = (static function () use ($file) { return require $file; })();
+        if (is_array($loaded)) {
+            $config = $loaded;
+            break;
+        }
+        error_log('contact-config.php must return an array: ' . $file);
+    }
+    return $config;
+}
+
 function env_value(string $key, string $fallback = ''): string {
+    $config = contact_config();
+    if (array_key_exists($key, $config)) return trim((string)$config[$key]);
     $value = getenv($key);
     return $value === false ? $fallback : trim($value);
 }
@@ -15,7 +41,7 @@ function safe_return_path(): string {
     return $path;
 }
 
-function redirect_result(string $key): never {
+function redirect_result(string $key): void {
     header('Location: ' . safe_return_path() . '?' . $key . '=1', true, 303);
     exit;
 }
@@ -31,7 +57,7 @@ function request_is_allowed_origin(): bool {
     foreach ($allowed as $base) {
         $base = rtrim($base, '/');
         if ($origin !== '' && $origin === $base) return true;
-        if ($referer !== '' && str_starts_with($referer, $base . '/')) return true;
+        if ($referer !== '' && strncmp($referer, $base . '/', strlen($base) + 1) === 0) return true;
     }
     return false;
 }
