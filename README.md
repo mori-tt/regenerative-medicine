@@ -1,8 +1,8 @@
 # 再生医療ガイド（仮称）
 
-再生医療・幹細胞に関する日本語ポータルのNext.js静的サイト雛形です。スマートフォン対応のトップ、検索意図別9カテゴリ（各カテゴリにサブカテゴリ）、251本の記事（監修記録の確定した本番公開対象は6本、残りは監修・公開待ち。確認用ビルドでは全件表示）、記事検索、日英中の多言語化、編集・監修方針、運営・広告・問い合わせ案内を実装しています。
+再生医療・幹細胞に関する日本語ポータルのNext.js静的サイト雛形です。スマートフォン対応のトップ、検索意図別10カテゴリ（各カテゴリにサブカテゴリ）、251本の記事（監修記録の確定した本番公開対象は6本、残りは監修・公開待ち。確認用ビルドでは全件表示）、記事検索、日英中の多言語化、編集・監修方針、運営・広告・問い合わせ案内を実装しています。
 
-**全体計画は [docs/PLAN.md](docs/PLAN.md)、レンタルサーバーへの配置は [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md) を参照してください。**
+**全体計画は [docs/PLAN.md](docs/PLAN.md)、レンタルサーバーへの配置は [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md)、本番公開の手作業とGitHub Actionsのコピペ資料は [docs/GO-LIVE.md](docs/GO-LIVE.md) を参照してください。**
 
 ## 起動
 
@@ -93,12 +93,18 @@ NEXT_PUBLIC_SITE_INDEXABLE=true
 
 写真は監修者の公式プロフィールページ掲載写真を使用し、サイト内に出典リンクを表示しています。監修者が変更になった場合はJSONの監修者情報と写真を差し替えて再ビルドしてください。
 
+## 本番での表示ルール
+
+- **空カテゴリ**：`NEXT_PUBLIC_PUBLICATION_MODE=production` では、公開記事が1本以上あるカテゴリだけをトップ・ヘッダーのカテゴリ・記事一覧のチップ・検索のカテゴリ・sitemapに出します（`src/content/articles.ts` の `availableCategories()`）。記事0件のカテゴリのURLは生成されますが、「準備中」の表示で `noindex` になります。トップには「公開準備中のテーマ」としてリンクなしで表示します。確認用ビルド（GitHub Pages）は全カテゴリを表示します。
+- **おすすめトグル**：該当記事が0本、または全記事が「おすすめ」のときは、絞り込みの意味がないため表示しません。
+- **公開日**：記事の公開日・`publishAt` は `src/content/site-config.json` の `deployDate`（または `NEXT_PUBLIC_DEPLOY_DATE`）に一括で揃えます。`article-review-records.json` の `publishAt` は編集部の予定表で、サイトの表示には使いません。本番公開日が決まったら `deployDate` を更新してください。
+
 ## 実装の範囲
 
 - 静的HTML、ページ固有のメタデータ、canonical、OGP、パンくず・構造化データ、sitemap、robots、言語別RSSフィード（`/feed.xml`・`/en/feed.xml`・`/zh/feed.xml`）。
 - サーバー不要の全文キーワード検索とカテゴリ絞り込み。
 - 医師監修欄、編集方針、出典、更新日、広告予定枠。
 - 入稿後に静的バナーを表示できる広告コンポーネント。
-- 問い合わせは `public/contact.php`（Lolipop側でPHP/PHPMailer実行）で送信。GitHub PagesなどPHPの実行できない静的ホストでは送信を停止する案内を表示。
+- 問い合わせは `public/contact.php`（Lolipop側でPHP/PHPMailer実行）で送信。SMTPなどの設定は公開フォルダの外の `contact-config.php`（雛形は [`deploy/contact-config.example.php`](deploy/contact-config.example.php)）に置きます。GitHub PagesなどPHPの実行できない静的ホストでは送信を停止する案内を表示。
 
 CMS、広告計測、アクセス解析、会員機能は未導入です。本番ドメイン・監修医師・運営者が未確定のため、雛形のままの正式公開は想定していません。

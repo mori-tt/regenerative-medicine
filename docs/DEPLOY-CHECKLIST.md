@@ -1,5 +1,7 @@
 # デプロイ前チェックリスト（手作業）
 
+> 公開当日の手順、GitHub Actionsの設定（Secrets/Variables、運用向けワークフローのコピペ）、公開後の運用は [GO-LIVE.md](GO-LIVE.md) を参照。
+
 コードで自動化できない、人が設定・確認する項目の一覧です。
 
 ## 1. サイトURLの設定（必須）
@@ -16,6 +18,9 @@
 - [ ] 記事の `publishAt` / `publishedAt` はこの日付から自動生成される
 - [ ] **静的エクスポートのため、公開日以降に再ビルド・再デプロイが必要**
 
+- [ ] 画面に表示される公開日は `deployDate` に統一される。`article-review-records.json` の `publishAt` は編集部の予定表で、サイトには反映されない
+- [ ] 本番モードでは、公開記事が0件のカテゴリはトップ・ナビ・sitemapから外れ、直接開くと「準備中」の `noindex` ページになる（記事を公開するとカテゴリは自動で現れる）
+
 ## 3. 本番ビルド設定の確認
 
 - [ ] 本番では `NEXT_PUBLIC_ARTICLE_BUILD_MODE=all` を**設定しない**（設定すると future-dated も公開されてしまう）
@@ -29,6 +34,8 @@
 - [ ] 法務・広告表現の確認（現在 `needs_legal_editorial_review`）
 - [ ] `article-review` レコードに監修者名・日付・スコープを記入（`isReviewed` ゲートを通過させる）
 - [ ] 監修者プロフィール（`supervision` ページ）が実名・資格で埋まっているか確認
+- [ ] **千原良友先生の氏名・写真・肩書の掲載と「医師執筆・監修済み」の表示について、書面等の許諾を得ているか確認**。`site-config.json` の `medicalReviewer.enabled` は現在 `true`、`reviewStatus` は `planned`。許諾が未了なら `NEXT_PUBLIC_MEDICAL_REVIEWER_ENABLED=false` でビルドする
+- [ ] 手動でFTPする場合は、検証用に作った `out/`（運営者名が `TEST` など）を使わず、必ず本番の環境変数で `npm run build:lolipop` し直してから転送する
 
 ## 4.5 2サイト並行公開（GitHub Pages＝テスト / Lolipop＝本番）
 
@@ -44,11 +51,16 @@
 
 ## 6. 問い合わせフォーム
 
+- [ ] `deploy/contact-config.example.php` を `contact-config.php` にコピーして値を入力し、**公開フォルダの外**（例：ホーム直下）に置く。公開フォルダ内に置くとデプロイで消える（`docs/DEPLOYMENT.md` 参照）
+
+- [ ] Lolipopの対象ドメインのPHPが **7.4以上**であること（`contact.php` の要件。8系を推奨）
 - [ ] `public/contact.php` が動作するホスティング環境を確認（GitHub Pages は静的ホストのため PHP 非対応 → 外部フォームサービスへの切り替えが必要な場合あり）
 - [ ] PHPMailer の SMTP 設定（`CONTACT_SMTP_*`）と実送信・返信・スパム扱いされないかの確認
 - [ ] 実運用でスパム投稿が出た場合は Turnstile/hCaptcha の導入を検討（サイトキー・シークレットの発行が必要。現状は honeypot＋最小入力時間＋IPレート制限＋URL数制限）
 
 ## 6.5 セキュリティヘッダー・RSS
+
+- [ ] `public/.htaccess` にHTTP→HTTPS・wwwなし統一の301リダイレクトを実装済み。正規URLをwwwなしにする方針の確認、Lolipop側の常時SSL設定との二重化がないことの確認は手作業（`GO-LIVE.md` §3）
 
 - [ ] デプロイ後に `curl -I https://本番ドメイン/` で `X-Frame-Options` `Permissions-Policy` `Strict-Transport-Security` `Content-Security-Policy` が返ることを確認（`.htaccess` に定義済み。`mod_headers` が有効かサーバー依存）
 - [ ] HTTPS証明書の安定稼働を確認後、HSTS に `preload` を追加してブラウザのpreloadリスト申請も検討

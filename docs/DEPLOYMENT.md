@@ -61,6 +61,8 @@ GitHub Pagesのworkflowでは、Pages用artifactのアップロードとdeploy�
 
 ## 2. 2サイト並行公開（GitHub Pages＝テスト / Lolipop＝本番）
 
+> 公開当日の手作業・Secrets/Variablesの一覧・運用向けワークフローのコピペ版・トラブルシュートは [GO-LIVE.md](GO-LIVE.md) にまとめています。
+
 mainへのpushで、2系統が並行してデプロイされます。
 
 | サイト | ワークフロー | 記事範囲 | 検索公開 |
@@ -68,7 +70,7 @@ mainへのpushで、2系統が並行してデプロイされます。
 | GitHub Pages（テスト確認用） | `deploy.yml` | 全記事（`ARTICLE_BUILD_MODE=all`、ストック含む） | `noindex` 固定 |
 | Lolipop（本番） | `deploy-lolipop.yml` | 公開日到達分のみ（`scheduled`） | Variablesで制御 |
 
-Lolipop側は [`deploy-lolipop.yml`](../.github/workflows/deploy-lolipop.yml) が置いてありますが、ジョブに `if: vars.LOLIPOP_DEPLOY_ENABLED == 'true'` のガードが付いているため、**Variablesを設定するまで実行されません**。GitHub Pages側だけが動き続けます。
+Lolipop側の `deploy-lolipop.yml` は、**公開時に [GO-LIVE.md](GO-LIVE.md) §5 のコードをコピペして作成します**（現在リポジトリにはありません。GitHub Pages側だけが動きます）。ジョブには `if: vars.LOLIPOP_DEPLOY_ENABLED == 'true'` のガードが付いているため、ファイルを作ってもVariablesを設定するまで実行されません。
 
 ### 本番を有効化する手順
 
@@ -76,14 +78,17 @@ Lolipop側は [`deploy-lolipop.yml`](../.github/workflows/deploy-lolipop.yml) �
    - `LOLIPOP_SSH_USER`
    - `LOLIPOP_SSH_PASSWORD`
    - `LOLIPOP_SSH_REMOTE_DIR`：対象ドメインの公開フォルダ。`/`やSSHのHOME自体は指定しない
+   - `LOLIPOP_SSH_KNOWN_HOSTS`：`ssh-keyscan -p 2222 ssh.lolipop.jp` の出力（ホスト鍵を固定する。未登録だとデプロイは失敗する）
 2. GitHub Variablesに登録：
-   - `LOLIPOP_DEPLOY_ENABLED=true`（有効化スイッチ）
+   - `LOLIPOP_DEPLOY_ENABLED=true`（有効化スイッチ。手順3のファイル作成と最終確認が済んでから最後に設定する）
    - `LOLIPOP_SITE_URL`：本番ドメイン（例 `https://example.jp`）
    - `LOLIPOP_PUBLICATION_MODE`：本番公開は `production`（`check:rights` で画像権利の記録確認をゲート）
    - `LOLIPOP_SITE_INDEXABLE=true`
    - `LOLIPOP_LOCALIZED_INDEXABLE`：英語・中国語の翻訳確認後だけ `true`（`true`にするとhreflangも出力）
    - `NEXT_PUBLIC_CONTACT_EMAIL`、`NEXT_PUBLIC_OPERATOR_NAME`、`NEXT_PUBLIC_OPERATOR_ADDRESS`（indexable本番では必須）
-3. mainへpushすると、push・手動実行・毎週土曜06:00（日本時間）の予約実行で `npm run build:lolipop` → 静的検査 → SSH経由で公開フォルダへ配置されます。
+3. GO-LIVE.md §5 のワークフロー全文を `.github/workflows/deploy-lolipop.yml` として保存してコミットする。
+4. （推奨）GitHubの Settings → Environments に `production` を作り、Required reviewers を設定すると、本番デプロイの前に承認画面が出ます。
+5. mainへpushすると、push・手動実行・毎週土曜06:00（日本時間）の予約実行で `npm run build:lolipop` → 静的検査 → SSH経由でステージングに展開・検査 → 公開フォルダを入れ替え → スモークテスト（主要URLの200/404、noindex、`vendor/` 非公開）の順に実行されます。詳細・コピペ可能な設定は [GO-LIVE.md](GO-LIVE.md) を参照。
 
 `LOLIPOP_PUBLICATION_MODE` が `production` のときだけ `npm run check:rights` が走り、`src/content/article-media.json` の全素材が `rightsStatus=verified` でないとビルドが止まります（Unsplash等の検索ページURLではなく、使用した写真個別のURL・ライセンス・権利者・確認日を記録してから `verified` に変更してください）。
 
@@ -144,7 +149,14 @@ composer install --no-dev --working-dir=public
 
 Composerをサーバーで実行できない場合は、同じPHPメジャー・マイナーバージョンで手元に生成した`public/vendor/`を転送します。PHPMailerは`public/vendor/autoload.php`から読み込まれます。
 
-PHPの実行環境には、次の値を環境変数として設定します。`.env.local`を公開フォルダへ置いても、LolipopのPHPが自動的に読むとは限らないため、管理画面の環境変数機能またはサーバー側の設定方法に合わせてください。秘密のSMTPパスワードはGitに追加しません。
+SMTPなどの設定は、**公開フォルダの外に置く `contact-config.php`** に書きます。GitHub Actionsのデプロイは公開フォルダの中身を毎回削除してから展開するため、公開フォルダ内に置いた設定や、`.htaccess`の`SetEnv`は消えます。また、Lolipopの共有サーバーには環境変数を設定する管理画面が通常ありません。
+
+1. [`deploy/contact-config.example.php`](../deploy/contact-config.example.php) を `contact-config.php` にコピーし、値を入力します。
+2. サーバー上の**公開フォルダの1つ上、または2つ上**に置きます（例：公開フォルダが `~/web/saisei-med.com/` ならホーム直下の `~/contact-config.php`）。`contact.php` は `DOCUMENT_ROOT` の1つ上・2つ上の順に探します。
+3. 別の場所に置く場合は、環境変数 `CONTACT_CONFIG_FILE` にフルパスを指定します。
+4. 設定ファイルが無いときは、従来どおり環境変数（`getenv`）を読みます。設定ファイルの値が優先されます。
+
+`contact-config.php`はPHPファイルなので、万一URLで直接開かれても中身は表示されません。それでもGitには追加しないでください。以下は設定する項目です。
 
 ```dotenv
 CONTACT_TO_EMAIL=受信するメールアドレス
