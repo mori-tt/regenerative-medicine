@@ -18,11 +18,19 @@ export const subcategories: Record<string, SubcategoryGroup[]> = {
   "stem-basics": [
     {
       key: "stem-cell-fundamentals",
-      keywords: { ja: ["幹細胞とは", "iPS細胞", "ES細胞", "再生医療"], en: ["stem cells", "iPS cells", "ES cells", "regenerative medicine"], zh: ["干细胞", "iPS细胞", "ES细胞", "再生医学"] },
+      keywords: {
+        ja: ["幹細胞とは", "iPS細胞", "ES細胞", "再生医療"],
+        en: ["stem cells", "iPS cells", "ES cells", "regenerative medicine"],
+        zh: ["干细胞", "iPS细胞", "ES细胞", "再生医学"],
+      },
       ja: "幹細胞と再生医療の基本",
       en: "Stem cells and regenerative medicine",
       zh: "干细胞与再生医学基础",
-      desc: { ja: "幹細胞の定義・種類・再生医療の成り立ちを最初に押さえる記事群です。", en: "Foundational articles on what stem cells are and how regenerative medicine began.", zh: "干细胞定义、种类与再生医学起源的基础文章。" },
+      desc: {
+        ja: "幹細胞の定義・種類・再生医療の成り立ちを最初に押さえる記事群です。",
+        en: "Foundational articles on what stem cells are and how regenerative medicine began.",
+        zh: "干细胞定义、种类与再生医学起源的基础文章。",
+      },
       slugs: [
         "doctor-stem-cells-basics",
         "doctor-regenerative-medicine",
@@ -43,90 +51,176 @@ export const subcategories: Record<string, SubcategoryGroup[]> = {
     },
     {
       key: "body-mechanisms",
-      keywords: { ja: ["細胞分裂", "遺伝子", "組織修復"], en: ["cell division", "genes", "tissue repair"], zh: ["细胞分裂", "基因", "组织修复"] },
+      keywords: {
+        ja: ["細胞分裂", "遺伝子", "組織修復"],
+        en: ["cell division", "genes", "tissue repair"],
+        zh: ["细胞分裂", "基因", "组织修复"],
+      },
       ja: "体のしくみの基礎",
       en: "How the body works",
       zh: "身体机制基础",
-      desc: { ja: "細胞の分裂・遺伝子・組織の修復など、体の働きの基礎を整理します。", en: "Cell division, genes, and tissue repair — the body's basic mechanics.", zh: "细胞分裂、基因与组织修复等身体机制的基础整理。" },
-      slugs: [
-        "cell-division",
-        "genes-and-cells",
-        "skin-bone-cartilage",
-      ],
+      desc: {
+        ja: "細胞の分裂・遺伝子・組織の修復など、体の働きの基礎を整理します。",
+        en: "Cell division, genes, and tissue repair — the body's basic mechanics.",
+        zh: "细胞分裂、基因与组织修复等身体机制的基础整理。",
+      },
+      slugs: ["cell-division", "genes-and-cells", "skin-bone-cartilage"],
     },
     {
       key: "health-and-life",
-      keywords: { ja: ["高齢化社会", "健康寿命"], en: ["aging society", "healthy lifespan"], zh: ["老龄化社会", "健康寿命"] },
+      keywords: {
+        ja: ["高齢化社会", "健康寿命"],
+        en: ["aging society", "healthy lifespan"],
+        zh: ["老龄化社会", "健康寿命"],
+      },
       ja: "健康と暮らし",
       en: "Health and daily life",
       zh: "健康与日常生活",
-      desc: { ja: "高齢化社会や暮らしの中での医療の位置づけを考えます。", en: "How medicine fits into an aging society and daily life.", zh: "老龄化社会与日常生活中医疗的定位。" },
-      slugs: [
-        "aging-society",
-      ],
+      desc: {
+        ja: "高齢化社会や暮らしの中での医療の位置づけを考えます。",
+        en: "How medicine fits into an aging society and daily life.",
+        zh: "老龄化社会与日常生活中医疗的定位。",
+      },
+      slugs: ["aging-society"],
     },
   ],
   "health-basics": [
     {
       key: "body-systems",
-      keywords: { ja: ["骨髄", "免疫系", "皮膚"], en: ["bone marrow", "immune system", "skin"], zh: ["骨髓", "免疫系统", "皮肤"] },
+      keywords: {
+        ja: ["骨髄", "免疫系", "皮膚"],
+        en: ["bone marrow", "immune system", "skin"],
+        zh: ["骨髓", "免疫系统", "皮肤"],
+      },
       ja: "体のしくみと器官",
       en: "Body systems & organs",
       zh: "身体机制与器官",
-      desc: { ja: "血液・循環・脳・肝腎など、体の器官の働きを整理します。", en: "How organs like the blood, circulation, brain, and liver work.", zh: "血液、循环、脑、肝肾等器官机制的整理。" },
+      desc: {
+        ja: "血液・循環・脳・肝腎など、体の器官の働きを整理します。",
+        en: "How organs like the blood, circulation, brain, and liver work.",
+        zh: "血液、循环、脑、肝肾等器官机制的整理。",
+      },
       slugs: [
-        "blood-basics", "dna-basics", "proteins-basics", "nerve-muscle-heart",
-        "digestion-absorption", "circulation", "respiration", "kidney-liver",
-        "brain-basics", "senses", "teeth-bones-growth", "hormones",
-        "lymph-system", "body-water", "cell-sizes", "blood-types",
-        "joints-basics", "microscope-world",
+        "blood-basics",
+        "dna-basics",
+        "proteins-basics",
+        "nerve-muscle-heart",
+        "digestion-absorption",
+        "circulation",
+        "respiration",
+        "kidney-liver",
+        "brain-basics",
+        "senses",
+        "teeth-bones-growth",
+        "hormones",
+        "lymph-system",
+        "body-water",
+        "cell-sizes",
+        "blood-types",
+        "joints-basics",
+        "microscope-world",
       ],
     },
     {
       key: "common-illness",
-      keywords: { ja: ["糖尿病", "関節炎", "心疾患"], en: ["diabetes", "arthritis", "heart disease"], zh: ["糖尿病", "关节炎", "心脏病"] },
+      keywords: {
+        ja: ["糖尿病", "関節炎", "心疾患"],
+        en: ["diabetes", "arthritis", "heart disease"],
+        zh: ["糖尿病", "关节炎", "心脏病"],
+      },
       ja: "身近な病気とけが",
       en: "Common conditions & injuries",
       zh: "常见疾病与外伤",
-      desc: { ja: "がん・糖尿病・認知症など、身近な病気と細胞の関係を解説します。", en: "Common diseases and their connection to cells.", zh: "癌症、糖尿病、认知症等常见疾病与细胞的关系。" },
+      desc: {
+        ja: "がん・糖尿病・認知症など、身近な病気と細胞の関係を解説します。",
+        en: "Common diseases and their connection to cells.",
+        zh: "癌症、糖尿病、认知症等常见疾病与细胞的关系。",
+      },
       slugs: [
-        "cancer-basics", "diabetes-lifestyle", "allergy-basics", "antibodies-vaccines",
-        "osteoporosis-basics", "dementia-basics", "stroke-basics", "heart-attack-basics",
-        "thyroid-disease-basics", "anemia-basics", "blood-pressure-basics", "cholesterol-basics",
-        "fever-basics", "pain-basics", "fracture-healing", "microbiome",
+        "cancer-basics",
+        "diabetes-lifestyle",
+        "allergy-basics",
+        "antibodies-vaccines",
+        "osteoporosis-basics",
+        "dementia-basics",
+        "stroke-basics",
+        "heart-attack-basics",
+        "thyroid-disease-basics",
+        "anemia-basics",
+        "blood-pressure-basics",
+        "cholesterol-basics",
+        "fever-basics",
+        "pain-basics",
+        "fracture-healing",
+        "microbiome",
       ],
     },
     {
       key: "daily-health",
-      keywords: { ja: ["生活習慣", "睡眠", "運動"], en: ["lifestyle", "sleep", "exercise"], zh: ["生活习惯", "睡眠", "运动"] },
+      keywords: {
+        ja: ["生活習慣", "睡眠", "運動"],
+        en: ["lifestyle", "sleep", "exercise"],
+        zh: ["生活习惯", "睡眠", "运动"],
+      },
       ja: "暮らしと健康習慣",
       en: "Daily health & lifestyle",
       zh: "日常生活与健康习惯",
-      desc: { ja: "食事・運動・睡眠・健診など、日々の健康の土台を扱います。", en: "Everyday health foundations — diet, exercise, sleep, checkups.", zh: "饮食、运动、睡眠、体检等日常健康基础。" },
+      desc: {
+        ja: "食事・運動・睡眠・健診など、日々の健康の土台を扱います。",
+        en: "Everyday health foundations — diet, exercise, sleep, checkups.",
+        zh: "饮食、运动、睡眠、体检等日常健康基础。",
+      },
       slugs: [
-        "nutrition-basics", "exercise-basics", "sleep-basics", "mental-health-decision",
-        "health-checkups", "family-doctor", "rehabilitation-basics", "disabilities-support",
-        "heatstroke-dehydration", "thermometer-guide", "blood-donation-basics",
+        "nutrition-basics",
+        "exercise-basics",
+        "sleep-basics",
+        "mental-health-decision",
+        "health-checkups",
+        "family-doctor",
+        "rehabilitation-basics",
+        "disabilities-support",
+        "heatstroke-dehydration",
+        "thermometer-guide",
+        "blood-donation-basics",
       ],
     },
   ],
   "in-body": [
     {
       key: "how-administered",
-      keywords: { ja: ["点滴投与", "静脈注射", "局所注射"], en: ["IV infusion", "intravenous injection", "local injection"], zh: ["点滴输注", "静脉注射", "局部注射"] },
+      keywords: {
+        ja: ["点滴投与", "静脈注射", "局所注射"],
+        en: ["IV infusion", "intravenous injection", "local injection"],
+        zh: ["点滴输注", "静脉注射", "局部注射"],
+      },
       ja: "投与方法と経路",
       en: "How cells are administered",
       zh: "给药方式与途径",
-      desc: { ja: "点滴・局所注射・動脈投与など、細胞の入れ方を整理します。", en: "How cells are administered — IV, local injection, arterial routes.", zh: "点滴、局部注射、动脉给药等给药途径的整理。" },
-      slugs: ["stem-cell-administration-routes", "stem-cell-treatment-contents"],
+      desc: {
+        ja: "点滴・局所注射・動脈投与など、細胞の入れ方を整理します。",
+        en: "How cells are administered — IV, local injection, arterial routes.",
+        zh: "点滴、局部注射、动脉给药等给药途径的整理。",
+      },
+      slugs: [
+        "stem-cell-administration-routes",
+        "stem-cell-treatment-contents",
+      ],
     },
     {
       key: "after-infusion",
-      keywords: { ja: ["体内分布", "生着", "排出"], en: ["biodistribution", "engraftment", "clearance"], zh: ["体内分布", "植入", "清除"] },
+      keywords: {
+        ja: ["体内分布", "生着", "排出"],
+        en: ["biodistribution", "engraftment", "clearance"],
+        zh: ["体内分布", "植入", "清除"],
+      },
       ja: "投与後の体内での動き",
       en: "What happens after infusion",
       zh: "输注后的体内动向",
-      desc: { ja: "投与された細胞が体内でどう動くかを追います。", en: "What happens to cells once inside the body.", zh: "输注后细胞在体内的动向。" },
+      desc: {
+        ja: "投与された細胞が体内でどう動くかを追います。",
+        en: "What happens to cells once inside the body.",
+        zh: "输注后细胞在体内的动向。",
+      },
       slugs: [
         "iv-stem-cell-journey",
         "stem-cell-biodistribution",
@@ -135,11 +229,19 @@ export const subcategories: Record<string, SubcategoryGroup[]> = {
     },
     {
       key: "where-they-reach",
-      keywords: { ja: ["ホーミング", "肺", "肝臓"], en: ["homing", "lungs", "liver"], zh: ["归巢", "肺", "肝脏"] },
+      keywords: {
+        ja: ["ホーミング", "肺", "肝臓"],
+        en: ["homing", "lungs", "liver"],
+        zh: ["归巢", "肺", "肝脏"],
+      },
       ja: "行き先と届き方",
       en: "Where cells reach and how",
       zh: "到达部位与机制",
-      desc: { ja: "細胞がどの臓器に集まるか、脳に届くかを考えます。", en: "Where cells accumulate, and whether they reach the brain.", zh: "细胞聚集在哪些器官、能否到达大脑。" },
+      desc: {
+        ja: "細胞がどの臓器に集まるか、脳に届くかを考えます。",
+        en: "Where cells accumulate, and whether they reach the brain.",
+        zh: "细胞聚集在哪些器官、能否到达大脑。",
+      },
       slugs: [
         "stem-cell-homing",
         "stem-cell-brain-bbb",
@@ -150,20 +252,36 @@ export const subcategories: Record<string, SubcategoryGroup[]> = {
   "anti-aging": [
     {
       key: "scientific-evidence",
-      keywords: { ja: ["臨床試験", "論文", "エビデンス"], en: ["clinical trials", "papers", "evidence"], zh: ["临床试验", "论文", "证据"] },
+      keywords: {
+        ja: ["臨床試験", "論文", "エビデンス"],
+        en: ["clinical trials", "papers", "evidence"],
+        zh: ["临床试验", "论文", "证据"],
+      },
       ja: "科学的な検証状況",
       en: "Scientific evidence",
       zh: "科学验证现状",
-      desc: { ja: "抗老化・若返りの研究がどこまで進んでいるかを整理します。", en: "What anti-aging research has and hasn't established.", zh: "抗衰老与“年轻化”研究的进展程度。" },
+      desc: {
+        ja: "抗老化・若返りの研究がどこまで進んでいるかを整理します。",
+        en: "What anti-aging research has and hasn't established.",
+        zh: "抗衰老与“年轻化”研究的进展程度。",
+      },
       slugs: ["stem-cell-antiaging-evidence", "stem-cell-skin-aging"],
     },
     {
       key: "aesthetic-offerings",
-      keywords: { ja: ["幹細胞美容", "肌再生", "アンチエイジング"], en: ["stem cell beauty", "skin regeneration", "anti-aging"], zh: ["干细胞美容", "皮肤再生", "抗衰老"] },
+      keywords: {
+        ja: ["幹細胞美容", "肌再生", "アンチエイジング"],
+        en: ["stem cell beauty", "skin regeneration", "anti-aging"],
+        zh: ["干细胞美容", "皮肤再生", "抗衰老"],
+      },
       ja: "美容医療の実態",
       en: "Aesthetic offerings",
       zh: "美容医疗的实际情况",
-      desc: { ja: "美容目的の提供の現状と、確認すべき点をまとめます。", en: "Cosmetic offerings — what's available and what to check.", zh: "美容类服务的现状与应确认事项。" },
+      desc: {
+        ja: "美容目的の提供の現状と、確認すべき点をまとめます。",
+        en: "Cosmetic offerings — what's available and what to check.",
+        zh: "美容类服务的现状与应确认事项。",
+      },
       slugs: [
         "stem-cell-cosmetic-medicine",
         "exosome-cosmetic-claims",
@@ -174,11 +292,19 @@ export const subcategories: Record<string, SubcategoryGroup[]> = {
   efficacy: [
     {
       key: "efficacy-status",
-      keywords: { ja: ["効果の根拠", "承認治療", "研究段階"], en: ["evidence for efficacy", "approved treatments", "research stage"], zh: ["疗效依据", "获批治疗", "研究阶段"] },
+      keywords: {
+        ja: ["効果の根拠", "承認治療", "研究段階"],
+        en: ["evidence for efficacy", "approved treatments", "research stage"],
+        zh: ["疗效依据", "获批治疗", "研究阶段"],
+      },
       ja: "効果の検証状況",
       en: "Evidence for effectiveness",
       zh: "疗效的验证现状",
-      desc: { ja: "承認・届出・研究の違いと、効果の確かさの見方です。", en: "Approval vs filing vs research — and how to read claims of benefit.", zh: "批准、申报、研究的区别与疗效确凿性的解读。" },
+      desc: {
+        ja: "承認・届出・研究の違いと、効果の確かさの見方です。",
+        en: "Approval vs filing vs research — and how to read claims of benefit.",
+        zh: "批准、申报、研究的区别与疗效确凿性的解读。",
+      },
       slugs: [
         "stem-cell-efficacy-evidence",
         "stem-cell-effect-duration",
@@ -189,11 +315,19 @@ export const subcategories: Record<string, SubcategoryGroup[]> = {
     },
     {
       key: "research-stages",
-      keywords: { ja: ["第1相試験", "第2相試験", "承認"], en: ["phase 1", "phase 2", "approval"], zh: ["I期试验", "II期试验", "获批"] },
+      keywords: {
+        ja: ["第1相試験", "第2相試験", "承認"],
+        en: ["phase 1", "phase 2", "approval"],
+        zh: ["I期试验", "II期试验", "获批"],
+      },
       ja: "研究の段階と種類",
       en: "Research stages and types",
       zh: "研究阶段与类型",
-      desc: { ja: "基礎研究から臨床試験まで、段階ごとの意味を整理します。", en: "From bench to bedside — what each research stage means.", zh: "从基础研究到临床试验各阶段的意义。" },
+      desc: {
+        ja: "基礎研究から臨床試験まで、段階ごとの意味を整理します。",
+        en: "From bench to bedside — what each research stage means.",
+        zh: "从基础研究到临床试验各阶段的意义。",
+      },
       slugs: [
         "stages-of-research",
         "evidence-levels",
@@ -211,11 +345,19 @@ export const subcategories: Record<string, SubcategoryGroup[]> = {
     },
     {
       key: "reading-research",
-      keywords: { ja: ["論文の読み方", "症例報告", "メタ分析"], en: ["reading papers", "case reports", "meta-analysis"], zh: ["论文阅读", "病例报告", "荟萃分析"] },
+      keywords: {
+        ja: ["論文の読み方", "症例報告", "メタ分析"],
+        en: ["reading papers", "case reports", "meta-analysis"],
+        zh: ["论文阅读", "病例报告", "荟萃分析"],
+      },
       ja: "研究情報の読み方",
       en: "How to read research",
       zh: "研究信息的阅读方法",
-      desc: { ja: "ニュース・論文・登録情報の読み方を解説します。", en: "How to read research news, papers, and registries.", zh: "新闻、论文与注册信息的解读方法。" },
+      desc: {
+        ja: "ニュース・論文・登録情報の読み方を解説します。",
+        en: "How to read research news, papers, and registries.",
+        zh: "新闻、论文与注册信息的解读方法。",
+      },
       slugs: [
         "reading-research-news",
         "press-release-reading",
@@ -236,11 +378,19 @@ export const subcategories: Record<string, SubcategoryGroup[]> = {
   safety: [
     {
       key: "treatment-risks",
-      keywords: { ja: ["副作用", "腫瘍化リスク", "感染"], en: ["side effects", "tumor risk", "infection"], zh: ["副作用", "肿瘤风险", "感染"] },
+      keywords: {
+        ja: ["副作用", "腫瘍化リスク", "感染"],
+        en: ["side effects", "tumor risk", "infection"],
+        zh: ["副作用", "肿瘤风险", "感染"],
+      },
       ja: "治療のリスク",
       en: "Treatment risks",
       zh: "治疗风险",
-      desc: { ja: "起こりうるリスクと、説明で確認すべき点を整理します。", en: "Possible risks and what to confirm in explanations.", zh: "可能发生的风险与说明中应确认的点。" },
+      desc: {
+        ja: "起こりうるリスクと、説明で確認すべき点を整理します。",
+        en: "Possible risks and what to confirm in explanations.",
+        zh: "可能发生的风险与说明中应确认的点。",
+      },
       slugs: [
         "risks-and-safety",
         "iv-stem-cell-safety",
@@ -252,31 +402,55 @@ export const subcategories: Record<string, SubcategoryGroup[]> = {
     },
     {
       key: "eligibility",
-      keywords: { ja: ["適格性", "持病", "年齢制限"], en: ["eligibility", "existing conditions", "age limits"], zh: ["适用条件", "基础疾病", "年龄限制"] },
+      keywords: {
+        ja: ["適格性", "持病", "年齢制限"],
+        en: ["eligibility", "existing conditions", "age limits"],
+        zh: ["适用条件", "基础疾病", "年龄限制"],
+      },
       ja: "受けられるかの判断",
       en: "Eligibility",
       zh: "适用性判断",
-      desc: { ja: "受けられる条件・禁忌・主治医との相談について。", en: "Eligibility, contraindications, and consulting your doctor.", zh: "可接受治疗的条件、禁忌与主治医生的咨询。" },
+      desc: {
+        ja: "受けられる条件・禁忌・主治医との相談について。",
+        en: "Eligibility, contraindications, and consulting your doctor.",
+        zh: "可接受治疗的条件、禁忌与主治医生的咨询。",
+      },
       slugs: ["stem-cell-contraindications", "questions-before-treatment"],
     },
     {
       key: "trouble-and-relief",
-      keywords: { ja: ["トラブル時の相談", "相談窓口"], en: ["troubleshooting", "consultation"], zh: ["问题咨询", "咨询窗口"] },
+      keywords: {
+        ja: ["トラブル時の相談", "相談窓口"],
+        en: ["troubleshooting", "consultation"],
+        zh: ["问题咨询", "咨询窗口"],
+      },
       ja: "トラブル時と救済制度",
       en: "Troubles and relief systems",
       zh: "出现问题与救济制度",
-      desc: { ja: "困ったときの相談先と救済制度をまとめます。", en: "Where to turn when things go wrong, and relief systems.", zh: "遇到问题时的咨询渠道与救济制度。" },
+      desc: {
+        ja: "困ったときの相談先と救済制度をまとめます。",
+        en: "Where to turn when things go wrong, and relief systems.",
+        zh: "遇到问题时的咨询渠道与救济制度。",
+      },
       slugs: ["trouble-help", "drug-side-effect-relief-system"],
     },
   ],
   "cell-types": [
     {
       key: "cell-kinds",
-      keywords: { ja: ["間葉系幹細胞", "造血幹細胞", "iPS細胞"], en: ["mesenchymal stem cells", "hematopoietic stem cells", "iPS cells"], zh: ["间充质干细胞", "造血干细胞", "iPS细胞"] },
+      keywords: {
+        ja: ["間葉系幹細胞", "造血幹細胞", "iPS細胞"],
+        en: ["mesenchymal stem cells", "hematopoietic stem cells", "iPS cells"],
+        zh: ["间充质干细胞", "造血干细胞", "iPS细胞"],
+      },
       ja: "細胞の種類",
       en: "Types of cells",
       zh: "细胞的种类",
-      desc: { ja: "造血・間葉系・iPS・ESなど、細胞の種類ごとの違いです。", en: "Hematopoietic, MSC, iPS, ES — how cell types differ.", zh: "造血、间充质、iPS、ES等细胞种类的差异。" },
+      desc: {
+        ja: "造血・間葉系・iPS・ESなど、細胞の種類ごとの違いです。",
+        en: "Hematopoietic, MSC, iPS, ES — how cell types differ.",
+        zh: "造血、间充质、iPS、ES等细胞种类的差异。",
+      },
       slugs: [
         "mesenchymal-basics",
         "adipose-stem",
@@ -291,11 +465,19 @@ export const subcategories: Record<string, SubcategoryGroup[]> = {
     },
     {
       key: "collection-sources",
-      keywords: { ja: ["骨髄由来", "脂肪由来", "臍帯血"], en: ["bone marrow", "adipose-derived", "cord blood"], zh: ["骨髓来源", "脂肪来源", "脐带血"] },
+      keywords: {
+        ja: ["骨髄由来", "脂肪由来", "臍帯血"],
+        en: ["bone marrow", "adipose-derived", "cord blood"],
+        zh: ["骨髓来源", "脂肪来源", "脐带血"],
+      },
       ja: "採取源の違い",
       en: "Collection sources",
       zh: "采集来源的差异",
-      desc: { ja: "骨髄・脂肪・臍帯など、採取元による違いを整理します。", en: "Bone marrow, fat, cord — how sources differ.", zh: "骨髓、脂肪、脐带等采集来源的差异。" },
+      desc: {
+        ja: "骨髄・脂肪・臍帯など、採取元による違いを整理します。",
+        en: "Bone marrow, fat, cord — how sources differ.",
+        zh: "骨髓、脂肪、脐带等采集来源的差异。",
+      },
       slugs: [
         "stem-cell-sources",
         "bone-marrow-vs-adipose",
@@ -308,11 +490,19 @@ export const subcategories: Record<string, SubcategoryGroup[]> = {
     },
     {
       key: "self-vs-donor",
-      keywords: { ja: ["自家移植", "同種移植", "拒絶反応"], en: ["autologous", "allogeneic", "rejection"], zh: ["自体移植", "异体移植", "排异反应"] },
+      keywords: {
+        ja: ["自家移植", "同種移植", "拒絶反応"],
+        en: ["autologous", "allogeneic", "rejection"],
+        zh: ["自体移植", "异体移植", "排异反应"],
+      },
       ja: "自家と他家",
       en: "Autologous vs allogeneic",
       zh: "自体与异体",
-      desc: { ja: "自分の細胞か他人の細胞か、利点と注意点です。", en: "Your own cells vs donor cells — trade-offs to know.", zh: "自体细胞与异体细胞的利弊与注意点。" },
+      desc: {
+        ja: "自分の細胞か他人の細胞か、利点と注意点です。",
+        en: "Your own cells vs donor cells — trade-offs to know.",
+        zh: "自体细胞与异体细胞的利弊与注意点。",
+      },
       slugs: [
         "autologous-allogeneic",
         "self-vs-donor-cells",
@@ -323,11 +513,19 @@ export const subcategories: Record<string, SubcategoryGroup[]> = {
     },
     {
       key: "culture-and-quality",
-      keywords: { ja: ["細胞培養", "品質管理", "GMP"], en: ["cell culture", "quality control", "GMP"], zh: ["细胞培养", "质量控制", "GMP"] },
+      keywords: {
+        ja: ["細胞培養", "品質管理", "GMP"],
+        en: ["cell culture", "quality control", "GMP"],
+        zh: ["细胞培养", "质量控制", "GMP"],
+      },
       ja: "培養と品質管理",
       en: "Culture and quality",
       zh: "培养与质量管理",
-      desc: { ja: "培養・品質管理・届出の仕組みを解説します。", en: "Culture, quality control, and facility filings.", zh: "培养、质量管理与申报制度。" },
+      desc: {
+        ja: "培養・品質管理・届出の仕組みを解説します。",
+        en: "Culture, quality control, and facility filings.",
+        zh: "培养、质量管理与申报制度。",
+      },
       slugs: [
         "cell-culture-and-quality",
         "culture-media",
@@ -342,31 +540,55 @@ export const subcategories: Record<string, SubcategoryGroup[]> = {
   "compare-therapies": [
     {
       key: "cell-free-therapies",
-      keywords: { ja: ["エクソソーム", "培養上清", "PRP"], en: ["exosomes", "culture supernatant", "PRP"], zh: ["外泌体", "培养上清", "PRP"] },
+      keywords: {
+        ja: ["エクソソーム", "培養上清", "PRP"],
+        en: ["exosomes", "culture supernatant", "PRP"],
+        zh: ["外泌体", "培养上清", "PRP"],
+      },
       ja: "細胞なし・血液由来の治療",
       en: "Cell-free and blood-derived therapies",
       zh: "无细胞与血液来源疗法",
-      desc: { ja: "エクソソーム・PRPなど、細胞を使わない治療との違いです。", en: "Exosomes, PRP, and other cell-free approaches.", zh: "外泌体、PRP等不使用细胞的治疗方式。" },
+      desc: {
+        ja: "エクソソーム・PRPなど、細胞を使わない治療との違いです。",
+        en: "Exosomes, PRP, and other cell-free approaches.",
+        zh: "外泌体、PRP等不使用细胞的治疗方式。",
+      },
       slugs: ["stemcell-exosome-prp", "exosomes-notes", "prp-therapy-basics"],
     },
     {
       key: "vs-conventional",
-      keywords: { ja: ["標準治療", "保険適用", "先進医療"], en: ["standard care", "insurance", "advanced medicine"], zh: ["标准治疗", "保险适用", "先进医疗"] },
+      keywords: {
+        ja: ["標準治療", "保険適用", "先進医療"],
+        en: ["standard care", "insurance", "advanced medicine"],
+        zh: ["标准治疗", "保险适用", "先进医疗"],
+      },
       ja: "従来治療との比較",
       en: "Compared with standard care",
       zh: "与常规疗法的比较",
-      desc: { ja: "標準治療との比較で考える、再生医療の位置づけです。", en: "Regenerative medicine next to standard care.", zh: "与标准治疗相比较下的再生医学定位。" },
+      desc: {
+        ja: "標準治療との比較で考える、再生医療の位置づけです。",
+        en: "Regenerative medicine next to standard care.",
+        zh: "与标准治疗相比较下的再生医学定位。",
+      },
       slugs: ["drugs-surgery-comparison"],
     },
   ],
   "cost-access": [
     {
       key: "cost-and-coverage",
-      keywords: { ja: ["費用", "保険", "医療費控除"], en: ["cost", "insurance", "tax deduction"], zh: ["费用", "保险", "医疗扣除"] },
+      keywords: {
+        ja: ["費用", "保険", "医療費控除"],
+        en: ["cost", "insurance", "tax deduction"],
+        zh: ["费用", "保险", "医疗扣除"],
+      },
       ja: "費用と保険",
       en: "Costs and coverage",
       zh: "费用与保险",
-      desc: { ja: "自由診療の費用・保険・税制度を整理します。", en: "Private-care costs, insurance, and tax treatment.", zh: "自费诊疗的费用、保险与税务制度。" },
+      desc: {
+        ja: "自由診療の費用・保険・税制度を整理します。",
+        en: "Private-care costs, insurance, and tax treatment.",
+        zh: "自费诊疗的费用、保险与税务制度。",
+      },
       slugs: [
         "cost-and-insurance",
         "insurance-care",
@@ -382,11 +604,19 @@ export const subcategories: Record<string, SubcategoryGroup[]> = {
     },
     {
       key: "before-consultation",
-      keywords: { ja: ["再生医療等計画", "届出", "確認事項"], en: ["regenerative medicine plan", "filing", "checklist"], zh: ["再生医疗计划", "备案", "确认事项"] },
+      keywords: {
+        ja: ["再生医療等計画", "届出", "確認事項"],
+        en: ["regenerative medicine plan", "filing", "checklist"],
+        zh: ["再生医疗计划", "备案", "确认事项"],
+      },
       ja: "受診前の準備と確認",
       en: "Preparation before visiting",
       zh: "就诊前的准备与确认",
-      desc: { ja: "受診前の準備・質問の仕方・説明の受け方です。", en: "Preparing for consultations and asking the right questions.", zh: "就诊前的准备、提问方式与听取说明的方法。" },
+      desc: {
+        ja: "受診前の準備・質問の仕方・説明の受け方です。",
+        en: "Preparing for consultations and asking the right questions.",
+        zh: "就诊前的准备、提问方式与听取说明的方法。",
+      },
       slugs: [
         "five-points-before-treatment",
         "hospital-choice",
@@ -407,20 +637,36 @@ export const subcategories: Record<string, SubcategoryGroup[]> = {
     },
     {
       key: "spotting-ads",
-      keywords: { ja: ["広告の見分け方", "根拠の確認"], en: ["spotting ads", "verifying claims"], zh: ["广告辨别", "核实依据"] },
+      keywords: {
+        ja: ["広告の見分け方", "根拠の確認"],
+        en: ["spotting ads", "verifying claims"],
+        zh: ["广告辨别", "核实依据"],
+      },
       ja: "広告・情報の見分け方",
       en: "Reading ads and claims",
       zh: "广告与信息的辨别",
-      desc: { ja: "広告表現の規制と、疑わしい表現の見分け方です。", en: "How medical advertising is regulated, and red flags.", zh: "医疗广告的规制与可疑表述的辨别。" },
+      desc: {
+        ja: "広告表現の規制と、疑わしい表現の見分け方です。",
+        en: "How medical advertising is regulated, and red flags.",
+        zh: "医疗广告的规制与可疑表述的辨别。",
+      },
       slugs: ["advertising-literacy", "before-after-ad-regulation"],
     },
     {
       key: "during-and-after",
-      keywords: { ja: ["アフターケア", "経過観察"], en: ["aftercare", "follow-up"], zh: ["术后护理", "随访"] },
+      keywords: {
+        ja: ["アフターケア", "経過観察"],
+        en: ["aftercare", "follow-up"],
+        zh: ["术后护理", "随访"],
+      },
       ja: "治療中・治療後",
       en: "During and after treatment",
       zh: "治疗中与治疗后",
-      desc: { ja: "治療中・治療後の経過観察と生活の整え方です。", en: "Follow-up care and daily life during and after treatment.", zh: "治疗中・治疗后的随访与生活安排。" },
+      desc: {
+        ja: "治療中・治療後の経過観察と生活の整え方です。",
+        en: "Follow-up care and daily life during and after treatment.",
+        zh: "治疗中・治疗后的随访与生活安排。",
+      },
       slugs: [
         "aftercare",
         "rehab-after-treatment",
@@ -436,11 +682,19 @@ export const subcategories: Record<string, SubcategoryGroup[]> = {
     },
     {
       key: "life-and-support",
-      keywords: { ja: ["相談支援", "セカンドオピニオン"], en: ["support", "second opinion"], zh: ["支持", "第二意见"] },
+      keywords: {
+        ja: ["相談支援", "セカンドオピニオン"],
+        en: ["support", "second opinion"],
+        zh: ["支持", "第二意见"],
+      },
       ja: "暮らし・制度・支援",
       en: "Daily life and support systems",
       zh: "生活・制度与支持",
-      desc: { ja: "仕事・介護・家族など、制度と支援の使い方です。", en: "Work, caregiving, family — systems and support.", zh: "工作、护理、家庭相关的制度与支援。" },
+      desc: {
+        ja: "仕事・介護・家族など、制度と支援の使い方です。",
+        en: "Work, caregiving, family — systems and support.",
+        zh: "工作、护理、家庭相关的制度与支援。",
+      },
       slugs: [
         "family-discussion",
         "family-decision",
@@ -471,11 +725,19 @@ export const subcategories: Record<string, SubcategoryGroup[]> = {
   mechanisms: [
     {
       key: "cell-mechanisms",
-      keywords: { ja: ["パラクリン効果", "分化", "免疫調節"], en: ["paracrine effect", "differentiation", "immunomodulation"], zh: ["旁分泌效应", "分化", "免疫调节"] },
+      keywords: {
+        ja: ["パラクリン効果", "分化", "免疫調節"],
+        en: ["paracrine effect", "differentiation", "immunomodulation"],
+        zh: ["旁分泌效应", "分化", "免疫调节"],
+      },
       ja: "細胞の働きと作用機序",
       en: "Cellular mechanisms",
       zh: "细胞的作用机制",
-      desc: { ja: "幹細胞が働く仕組み（分化・分泌・ニッチ）を解説します。", en: "How stem cells may act — differentiation, secretion, niches.", zh: "干细胞的作用机制（分化、分泌、微环境）。" },
+      desc: {
+        ja: "幹細胞が働く仕組み（分化・分泌・ニッチ）を解説します。",
+        en: "How stem cells may act — differentiation, secretion, niches.",
+        zh: "干细胞的作用机制（分化、分泌、微环境）。",
+      },
       slugs: [
         "stem-cell-mechanism",
         "paracrine-effect",
@@ -492,11 +754,19 @@ export const subcategories: Record<string, SubcategoryGroup[]> = {
     },
     {
       key: "regeneration-research",
-      keywords: { ja: ["オーガノイド", "臓器再生", "iPS創薬"], en: ["organoids", "organ regeneration", "iPS drug discovery"], zh: ["类器官", "器官再生", "iPS药物研发"] },
+      keywords: {
+        ja: ["オーガノイド", "臓器再生", "iPS創薬"],
+        en: ["organoids", "organ regeneration", "iPS drug discovery"],
+        zh: ["类器官", "器官再生", "iPS药物研发"],
+      },
       ja: "再生の研究テーマ",
       en: "Regeneration research topics",
       zh: "再生研究主题",
-      desc: { ja: "臓器ごとの再生研究の進み具合を整理します。", en: "Progress in regeneration research, organ by organ.", zh: "各器官再生研究的进展程度。" },
+      desc: {
+        ja: "臓器ごとの再生研究の進み具合を整理します。",
+        en: "Progress in regeneration research, organ by organ.",
+        zh: "各器官再生研究的进展程度。",
+      },
       slugs: [
         "future-perspectives",
         "bench-to-bedside",
@@ -526,11 +796,19 @@ export const subcategories: Record<string, SubcategoryGroup[]> = {
     },
     {
       key: "science-and-society",
-      keywords: { ja: ["倫理", "制度", "社会的課題"], en: ["ethics", "regulation", "society"], zh: ["伦理", "制度", "社会议题"] },
+      keywords: {
+        ja: ["倫理", "制度", "社会的課題"],
+        en: ["ethics", "regulation", "society"],
+        zh: ["伦理", "制度", "社会议题"],
+      },
       ja: "科学との関わり方",
       en: "Engaging with science",
       zh: "与科学的关系",
-      desc: { ja: "ノーベル賞・学会・倫理など、科学と社会の接点です。", en: "Prizes, societies, and ethics — science meets society.", zh: "诺贝尔奖、学会、伦理等科学与社会的交汇。" },
+      desc: {
+        ja: "ノーベル賞・学会・倫理など、科学と社会の接点です。",
+        en: "Prizes, societies, and ethics — science meets society.",
+        zh: "诺贝尔奖、学会、伦理等科学与社会的交汇。",
+      },
       slugs: [
         "japanese-society-for-regenerative-medicine",
         "ips-nobel-story",
@@ -639,7 +917,10 @@ export function allFeaturedSlugsFor(
 }
 
 /** 記事が属するサブカテゴリを返す（未定義なら undefined）。 */
-export function subcategoryOf(category: string, slug: string): SubcategoryGroup | undefined {
+export function subcategoryOf(
+  category: string,
+  slug: string,
+): SubcategoryGroup | undefined {
   return (subcategories[category] ?? []).find((g) => g.slugs.includes(slug));
 }
 

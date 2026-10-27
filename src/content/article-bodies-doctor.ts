@@ -248,8 +248,16 @@ export const articleBodiesDoctor: Record<
           headers: ["Type", "Produced from", "Differentiation range"],
           rows: [
             ["ES cell", "Early embryo (fertilized egg)", "Very broad"],
-            ["iPS cell", "Artificially reprogrammed body cells such as skin", "Very broad"],
-            ["Somatic stem cell", "Present in the body after birth", "Mainly specific tissues and cells"],
+            [
+              "iPS cell",
+              "Artificially reprogrammed body cells such as skin",
+              "Very broad",
+            ],
+            [
+              "Somatic stem cell",
+              "Present in the body after birth",
+              "Mainly specific tissues and cells",
+            ],
           ],
         },
         0,
@@ -518,9 +526,21 @@ export const articleBodiesDoctor: Record<
         {
           headers: ["Approach", "Basic idea", "Image"],
           rows: [
-            ["Cell transplantation", "Supply needed cells from outside", "'Replenish cells'"],
-            ["Tissue engineering", "Combine cells with scaffolds to build tissue", "'Build tissue'"],
-            ["In vivo regeneration", "Use cells and repair capacity already in the body", "'Draw out the body's own power'"],
+            [
+              "Cell transplantation",
+              "Supply needed cells from outside",
+              "'Replenish cells'",
+            ],
+            [
+              "Tissue engineering",
+              "Combine cells with scaffolds to build tissue",
+              "'Build tissue'",
+            ],
+            [
+              "In vivo regeneration",
+              "Use cells and repair capacity already in the body",
+              "'Draw out the body's own power'",
+            ],
           ],
         },
       ],

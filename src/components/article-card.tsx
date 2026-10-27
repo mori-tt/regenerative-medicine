@@ -1,6 +1,10 @@
 import Link from "next/link";
 import type { Article } from "@/content/articles";
-import { cardKicker, categoryFor, type CategorySlug } from "@/content/categories";
+import {
+  cardKicker,
+  categoryFor,
+  type CategorySlug,
+} from "@/content/categories";
 import { subcategoryOf } from "@/content/subcategories";
 import { articleBuildMode, isReviewed } from "@/lib/article-state";
 import { Icon } from "./visuals";
@@ -63,13 +67,22 @@ const dot = (date: string) => date.replaceAll("-", ".");
 export function toCardData(
   article: Article,
   locale: CardLocale = "ja",
-  localized?: { title: string; description: string; categoryLabel: string; subcategory?: string },
+  localized?: {
+    title: string;
+    description: string;
+    categoryLabel: string;
+    subcategory?: string;
+  },
 ): ArticleCardData {
   const cat = categoryFor(article.category);
   const copy = cardCopy[locale];
   const reviewed = isReviewed(article);
   const scheduled =
-    articleBuildMode === "all" && Boolean(article.publishAt && article.publishAt > new Date().toISOString().slice(0, 10));
+    articleBuildMode === "all" &&
+    Boolean(
+      article.publishAt &&
+      article.publishAt > new Date().toISOString().slice(0, 10),
+    );
   const sub = subcategoryOf(article.category, article.slug);
   return {
     slug: article.slug,
@@ -78,13 +91,32 @@ export function toCardData(
     categoryLabel: localized?.categoryLabel ?? cat.label,
     color: cat.color,
     kicker: cardKicker(article, locale),
-    ...(localized ? (localized.subcategory ? { subcategory: localized.subcategory } : {}) : sub ? { subcategory: sub.ja } : {}),
+    ...(localized
+      ? localized.subcategory
+        ? { subcategory: localized.subcategory }
+        : {}
+      : sub
+        ? { subcategory: sub.ja }
+        : {}),
     reviewed,
-    statusClass: article.author ? "authored" : reviewed ? "reviewed" : "editorial",
-    statusLabel: article.author ? copy.authored : reviewed ? copy.reviewed : copy.editorial,
+    statusClass: article.author
+      ? "authored"
+      : reviewed
+        ? "reviewed"
+        : "editorial",
+    statusLabel: article.author
+      ? copy.authored
+      : reviewed
+        ? copy.reviewed
+        : copy.editorial,
     readingLabel: copy.reading(article.readingMinutes),
-    dateLabel: reviewed && article.publishedAt ? copy.published(dot(article.publishedAt)) : copy.edited(dot(article.updatedAt)),
-    ...(scheduled && article.publishAt ? { scheduledLabel: copy.scheduled(dot(article.publishAt)) } : {}),
+    dateLabel:
+      reviewed && article.publishedAt
+        ? copy.published(dot(article.publishedAt))
+        : copy.edited(dot(article.updatedAt)),
+    ...(scheduled && article.publishAt
+      ? { scheduledLabel: copy.scheduled(dot(article.publishAt)) }
+      : {}),
     title: localized?.title ?? article.title,
     description: localized?.description ?? article.description,
   };
@@ -95,7 +127,13 @@ export function Marked({ text, terms }: { text: string; terms: string[] }) {
   const esc = (t: string) => t.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
   const re = new RegExp(`(${terms.map(esc).join("|")})`, "gi");
   const parts = text.split(re);
-  return <>{parts.map((part, i) => (i % 2 === 1 ? <mark key={i}>{part}</mark> : part))}</>;
+  return (
+    <>
+      {parts.map((part, i) =>
+        i % 2 === 1 ? <mark key={i}>{part}</mark> : part,
+      )}
+    </>
+  );
 }
 
 export function ArticleCard({
@@ -123,7 +161,9 @@ export function ArticleCard({
     >
       <div className="article-card-body">
         <div className="card-label-row">
-          <span className={`category-label ${data.color}`}>{data.categoryLabel}</span>
+          <span className={`category-label ${data.color}`}>
+            {data.categoryLabel}
+          </span>
           {badge && <span className="card-badge">{badge}</span>}
         </div>
         <Heading>
@@ -137,10 +177,14 @@ export function ArticleCard({
           </p>
         )}
         <div className="article-meta">
-          <span className={`review-chip ${data.statusClass}`}>{data.statusLabel}</span>
+          <span className={`review-chip ${data.statusClass}`}>
+            {data.statusLabel}
+          </span>
           <span>{data.readingLabel}</span>
         </div>
-        {data.scheduledLabel && <span className="preview-status">{data.scheduledLabel}</span>}
+        {data.scheduledLabel && (
+          <span className="preview-status">{data.scheduledLabel}</span>
+        )}
         <div className="card-bottom">
           <span>{data.dateLabel}</span>
           <Icon name="arrow" size={19} />

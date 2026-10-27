@@ -19,4 +19,8 @@ export function stripLocale(pathname: string): string {
 }
 
 /** `<html lang>` に入れる値。 */
-export const htmlLangFor: Record<UiLocale, string> = { ja: "ja", en: "en", zh: "zh-CN" };
+export const htmlLangFor: Record<UiLocale, string> = {
+  ja: "ja",
+  en: "en",
+  zh: "zh-CN",
+};

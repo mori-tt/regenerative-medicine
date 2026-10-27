@@ -44,7 +44,8 @@ export const jsrmGuideLocales: Record<SiteLocale, JsrmGuideLocale> = {
       "An academic society connecting research, clinical practice, cell processing, ethics, and legal systems in regenerative medicine. Its roles and certification are explained in plain words.",
     officialSite: "Visit the official society site",
     officialNote: "Organized from official materials · Updated September 2026",
-    whyTitle: "A society's name alone never decides whether a treatment is good.",
+    whyTitle:
+      "A society's name alone never decides whether a treatment is good.",
     whyBody: [
       "The society is a forum where specialists discuss research, education, and systems. Membership or certification helps you understand a physician's background.",
       "Whether an individual treatment suits you, works, or is safe must still be judged separately through the disease, symptoms, test results, methods, evidence, and risks.",
@@ -53,10 +54,22 @@ export const jsrmGuideLocales: Record<SiteLocale, JsrmGuideLocale> = {
     chaptersCaption: "Start from the theme you care about",
     rolesTitle: "What the society does.",
     roles: [
-      ["Connecting specialties", "It addresses regenerative medicine across clinical and basic medicine, cell and tissue engineering, materials science, bioethics, law, and health economics."],
-      ["Supporting research and education", "It shares findings and knowledge through meetings, journals, newsletters, awards, and educational content."],
-      ["Thinking about safety and systems", "It publishes expert information on cell quality and safety, cell processing, and the Act on the Safety of Regenerative Medicine."],
-      ["Certifying and training people", "It certifies physicians, dentists, cell culture technologists, and facility staff who support regenerative medicine."],
+      [
+        "Connecting specialties",
+        "It addresses regenerative medicine across clinical and basic medicine, cell and tissue engineering, materials science, bioethics, law, and health economics.",
+      ],
+      [
+        "Supporting research and education",
+        "It shares findings and knowledge through meetings, journals, newsletters, awards, and educational content.",
+      ],
+      [
+        "Thinking about safety and systems",
+        "It publishes expert information on cell quality and safety, cell processing, and the Act on the Safety of Regenerative Medicine.",
+      ],
+      [
+        "Certifying and training people",
+        "It certifies physicians, dentists, cell culture technologists, and facility staff who support regenerative medicine.",
+      ],
     ],
     historyTitle: "From a study group to a field-supporting society.",
     historyBody:
@@ -64,7 +77,10 @@ export const jsrmGuideLocales: Record<SiteLocale, JsrmGuideLocale> = {
     historyLink: "See the official history",
     timeline: [
       ["1992", "Predecessor cell therapy study group launched"],
-      ["2001", "Study group dissolved to found the Japanese Society for Regenerative Medicine"],
+      [
+        "2001",
+        "Study group dissolved to found the Japanese Society for Regenerative Medicine",
+      ],
       ["2002", "First annual meeting held; journal publishing began"],
       ["2008", "Merged with the Japanese Society for Tissue Engineering"],
       ["2009", "Merged with the Japanese Regenerative Dentistry Forum"],
@@ -77,9 +93,18 @@ export const jsrmGuideLocales: Record<SiteLocale, JsrmGuideLocale> = {
       "Through education programs and examinations in law, ethics, and cell processing, the society certifies multiple professions. Each credential means something different.",
     certOfficial: "Official certification page",
     certs: [
-      ["Certified Regenerative Medicine Physician", "A system checking responsibility for explaining standard care, knowledge of culture methods and cell properties, indication judgment with specialists, ethical and legal knowledge, and sufficient experience."],
-      ["Cell Processing Facility Manager", "Covers knowledge and practical ability in facility structure, manufacturing, quality control, and operational management."],
-      ["Senior Clinical Cultivator / Clinical Cultivator", "Certification for technologists in cell culture and processing. It does not directly certify treatment effects for patients."],
+      [
+        "Certified Regenerative Medicine Physician",
+        "A system checking responsibility for explaining standard care, knowledge of culture methods and cell properties, indication judgment with specialists, ethical and legal knowledge, and sufficient experience.",
+      ],
+      [
+        "Cell Processing Facility Manager",
+        "Covers knowledge and practical ability in facility structure, manufacturing, quality control, and operational management.",
+      ],
+      [
+        "Senior Clinical Cultivator / Clinical Cultivator",
+        "Certification for technologists in cell culture and processing. It does not directly certify treatment effects for patients.",
+      ],
     ],
     certCautionTitle: "An important line",
     certCautionBody:
@@ -122,13 +147,26 @@ export const jsrmGuideLocales: Record<SiteLocale, JsrmGuideLocale> = {
     chaptersCaption: "从感兴趣的主题读起",
     rolesTitle: "日本再生医学学会的作用。",
     roles: [
-      ["连接专业领域", "横跨临床医学、基础医学、细胞工程、组织工程、材料工程、生命伦理、法律与医疗经济，处理再生医学课题。"],
-      ["支撑研究与教育", "通过学术集会、期刊、通讯、学会奖和教育内容分享研究成果与知识。"],
-      ["思考安全与制度", "面向专家发布细胞质量与安全性、细胞加工、《再生医学安全性确保法》相关信息与观点。"],
-      ["认定与培养人才", "设立面向医生、牙科医生、细胞培养技术人员与加工设施相关人员的认定制度，培养支撑再生医学的人才。"],
+      [
+        "连接专业领域",
+        "横跨临床医学、基础医学、细胞工程、组织工程、材料工程、生命伦理、法律与医疗经济，处理再生医学课题。",
+      ],
+      [
+        "支撑研究与教育",
+        "通过学术集会、期刊、通讯、学会奖和教育内容分享研究成果与知识。",
+      ],
+      [
+        "思考安全与制度",
+        "面向专家发布细胞质量与安全性、细胞加工、《再生医学安全性确保法》相关信息与观点。",
+      ],
+      [
+        "认定与培养人才",
+        "设立面向医生、牙科医生、细胞培养技术人员与加工设施相关人员的认定制度，培养支撑再生医学的人才。",
+      ],
     ],
     historyTitle: "从研究会到支撑领域的学会。",
-    historyBody: "从官方沿革可以追溯再生医学从细胞治疗扩展到组织工程、牙科、临床与制度的历程。",
+    historyBody:
+      "从官方沿革可以追溯再生医学从细胞治疗扩展到组织工程、牙科、临床与制度的历程。",
     historyLink: "查看官方沿革",
     timeline: [
       ["1992", "前身细胞治疗研究会成立"],
@@ -141,15 +179,26 @@ export const jsrmGuideLocales: Record<SiteLocale, JsrmGuideLocale> = {
       ["2018", "加入日本医学会"],
     ],
     certTitle: "认定制度的读法。",
-    certLead: "学会通过法规、伦理与细胞加工等教育项目和考试认定多个职业。各项资格含义不同。",
+    certLead:
+      "学会通过法规、伦理与细胞加工等教育项目和考试认定多个职业。各项资格含义不同。",
     certOfficial: "官方认定制度页面",
     certs: [
-      ["再生医学认定医", "确认说明标准医疗内容的责任、细胞培养方法与性质知识、与专科医生协作的适应判断、伦理与法律知识、充分经验等的制度。"],
-      ["细胞培养加工设施管理士", "面向加工设施的结构设备、制造、质量管理与运营管理的知识与实务能力。"],
-      ["高级临床培养士·临床培养士", "面向细胞培养与加工技术人员的认定。不直接认定对患者的治疗效果。"],
+      [
+        "再生医学认定医",
+        "确认说明标准医疗内容的责任、细胞培养方法与性质知识、与专科医生协作的适应判断、伦理与法律知识、充分经验等的制度。",
+      ],
+      [
+        "细胞培养加工设施管理士",
+        "面向加工设施的结构设备、制造、质量管理与运营管理的知识与实务能力。",
+      ],
+      [
+        "高级临床培养士·临床培养士",
+        "面向细胞培养与加工技术人员的认定。不直接认定对患者的治疗效果。",
+      ],
     ],
     certCautionTitle: "重要的分界",
-    certCautionBody: "认定资格是关于资格要件的信息。不保证特定治疗的有效性、安全性、费用效果和对你的适应性。",
+    certCautionBody:
+      "认定资格是关于资格要件的信息。不保证特定治疗的有效性、安全性、费用效果和对你的适应性。",
     lawTitle: "查制度信息时注意更新日期与用语。",
     lawBody: [
       "“新法相关信息”刊登细胞加工、无菌操作、细胞保管与提供计划模板等专业资料。",
@@ -179,11 +228,15 @@ export type JsrmChapterLocale = {
   sections: { title: string; paragraphs: string[] }[];
 };
 
-export const jsrmChapterLocales: Record<SiteLocale, Record<string, JsrmChapterLocale>> = {
+export const jsrmChapterLocales: Record<
+  SiteLocale,
+  Record<string, JsrmChapterLocale>
+> = {
   en: {
     "01-overview": {
       title: "What the society is",
-      description: "Its purpose, the fields it covers, and how patients should position it.",
+      description:
+        "Its purpose, the fields it covers, and how patients should position it.",
       sections: [
         {
           title: "The society's basic role",
@@ -261,7 +314,8 @@ export const jsrmChapterLocales: Record<SiteLocale, Record<string, JsrmChapterLo
     },
     "04-certification": {
       title: "Certification systems and what credentials mean",
-      description: "Certified physicians, cultivators, and points patients often misunderstand.",
+      description:
+        "Certified physicians, cultivators, and points patients often misunderstand.",
       sections: [
         {
           title: "A system for multiple professions",
@@ -287,7 +341,8 @@ export const jsrmChapterLocales: Record<SiteLocale, Record<string, JsrmChapterLo
     },
     "05-law-and-regulation": {
       title: "Regenerative medicine and legal systems",
-      description: "The Safety Act, cell processing, and provision plans from a patient viewpoint.",
+      description:
+        "The Safety Act, cell processing, and provision plans from a patient viewpoint.",
       sections: [
         {
           title: "Regulatory information as material for safety thinking",
@@ -312,7 +367,8 @@ export const jsrmChapterLocales: Record<SiteLocale, Record<string, JsrmChapterLo
     },
     "06-public-research": {
       title: "Public research and industry-academia collaboration",
-      description: "Reading JST and AMED-linked public research apart from treatment.",
+      description:
+        "Reading JST and AMED-linked public research apart from treatment.",
       sections: [
         {
           title: "Why public research pages exist",
@@ -338,7 +394,8 @@ export const jsrmChapterLocales: Record<SiteLocale, Record<string, JsrmChapterLo
     },
     "07-cell-processing": {
       title: "Cell processing facilities and quality control",
-      description: "Steps from collection to administration, and why quality control matters.",
+      description:
+        "Steps from collection to administration, and why quality control matters.",
       sections: [
         {
           title: "Steps behind treatment",
@@ -364,7 +421,8 @@ export const jsrmChapterLocales: Record<SiteLocale, Record<string, JsrmChapterLo
     },
     "08-compensation": {
       title: "Compensation systems and preparation after treatment",
-      description: "Support insurance for private care and clinical research, plus pre-contract checks.",
+      description:
+        "Support insurance for private care and clinical research, plus pre-contract checks.",
       sections: [
         {
           title: "What compensation covers",
@@ -390,7 +448,8 @@ export const jsrmChapterLocales: Record<SiteLocale, Record<string, JsrmChapterLo
     },
     "09-membership-and-education": {
       title: "Membership and learning entries",
-      description: "Who joins the society and what information is accessible, in plain words.",
+      description:
+        "Who joins the society and what information is accessible, in plain words.",
       sections: [
         {
           title: "A society open to individuals and corporations",
@@ -416,7 +475,8 @@ export const jsrmChapterLocales: Record<SiteLocale, Record<string, JsrmChapterLo
     },
     "10-for-patients-and-reviewer": {
       title: "How patients should read, and Dr. Chihara's review",
-      description: "Final checkpoints to avoid confusing affiliation, review, and evidence.",
+      description:
+        "Final checkpoints to avoid confusing affiliation, review, and evidence.",
       sections: [
         {
           title: "Affiliation is one clue",

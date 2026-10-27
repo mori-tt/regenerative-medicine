@@ -40,34 +40,83 @@ export default async function InfoPage({
       </div>
       <div className={page === "glossary" ? "prose prose-full" : "prose"}>
         {page === "sources" && <SourceDirectory />}
-        {page === "supervision" && (medicalReviewer.enabled || medicalReviewer.planned) && <ReviewerProfile />}
+        {page === "supervision" &&
+          (medicalReviewer.enabled || medicalReviewer.planned) && (
+            <ReviewerProfile />
+          )}
         {page === "glossary" && <Glossary />}
-        {page !== "sources" && page !== "glossary" && (page !== "supervision" || (!medicalReviewer.enabled && !medicalReviewer.planned)) && info.sections.map((s) => (
-          <section key={s.title}>
-            <h2>{s.title}</h2>
-            {s.paragraphs.map((p) => (
-              <p key={p}>{publication.showPreparationNotices ? p : p.replaceAll("現在の掲載原稿は監修前のサンプルであり、正式公開前に精査します。", "記事は監修者の確認範囲と更新日を明示して管理します。")}</p>
-            ))}
-          </section>
-        ))}
+        {page !== "sources" &&
+          page !== "glossary" &&
+          (page !== "supervision" ||
+            (!medicalReviewer.enabled && !medicalReviewer.planned)) &&
+          info.sections.map((s) => (
+            <section key={s.title}>
+              <h2>{s.title}</h2>
+              {s.paragraphs.map((p) => (
+                <p key={p}>
+                  {publication.showPreparationNotices
+                    ? p
+                    : p.replaceAll(
+                        "現在の掲載原稿は監修前のサンプルであり、正式公開前に精査します。",
+                        "記事は監修者の確認範囲と更新日を明示して管理します。",
+                      )}
+                </p>
+              ))}
+            </section>
+          ))}
         {page === "about" && (
-          <section className="operator-info" aria-labelledby="operator-info-title">
+          <section
+            className="operator-info"
+            aria-labelledby="operator-info-title"
+          >
             <h2 id="operator-info-title">運営者情報</h2>
-            {site.operatorName && <p><strong>運営者：</strong>{site.operatorName}</p>}
-            {site.operatorAddress && <p><strong>所在地：</strong>{site.operatorAddress}</p>}
-            {site.editorName && <p><strong>編集者：</strong>{site.editorName}</p>}
-            {site.editorAddress && <p><strong>編集者住所：</strong>{site.editorAddress}</p>}
-            {site.contactEmail && <p><strong>連絡先：</strong><a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a></p>}
-            {(!site.operatorName || !site.operatorAddress || !site.contactEmail) && publication.showPreparationNotices && (
-              <p className="form-result error">運営者名・所在地・連絡先は、実値を環境変数に設定してから正式公開してください。</p>
+            {site.operatorName && (
+              <p>
+                <strong>運営者：</strong>
+                {site.operatorName}
+              </p>
             )}
+            {site.operatorAddress && (
+              <p>
+                <strong>所在地：</strong>
+                {site.operatorAddress}
+              </p>
+            )}
+            {site.editorName && (
+              <p>
+                <strong>編集者：</strong>
+                {site.editorName}
+              </p>
+            )}
+            {site.editorAddress && (
+              <p>
+                <strong>編集者住所：</strong>
+                {site.editorAddress}
+              </p>
+            )}
+            {site.contactEmail && (
+              <p>
+                <strong>連絡先：</strong>
+                <a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a>
+              </p>
+            )}
+            {(!site.operatorName ||
+              !site.operatorAddress ||
+              !site.contactEmail) &&
+              publication.showPreparationNotices && (
+                <p className="form-result error">
+                  運営者名・所在地・連絡先は、実値を環境変数に設定してから正式公開してください。
+                </p>
+              )}
           </section>
         )}
         {page === "advertising" && (
           <>
             <div className="policy-callout advertising-separation">
               <h2>編集と広告の分離</h2>
-              <p>広告の有無は、記事内容、掲載順位、医学的確認、編集上の評価に影響しません。広告主の情報は、特定の治療や医療機関を推奨するものではありません。</p>
+              <p>
+                広告の有無は、記事内容、掲載順位、医学的確認、編集上の評価に影響しません。広告主の情報は、特定の治療や医療機関を推奨するものではありません。
+              </p>
             </div>
             <p>
               参考：
@@ -84,9 +133,16 @@ export default async function InfoPage({
         {page === "contact" ? (
           <div className="policy-callout">
             <h2>お問い合わせフォーム</h2>
-            <p>送信内容は運営上の連絡と記事の確認にのみ使用します。診断・治療の相談、予約、緊急連絡には対応していません。</p>
+            <p>
+              送信内容は運営上の連絡と記事の確認にのみ使用します。診断・治療の相談、予約、緊急連絡には対応していません。
+            </p>
             <ContactForm />
-            {site.contactEmail && <p className="contact-alternative">フォームが利用できない場合：<a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a></p>}
+            {site.contactEmail && (
+              <p className="contact-alternative">
+                フォームが利用できない場合：
+                <a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a>
+              </p>
+            )}
           </div>
         ) : (
           <div className="policy-callout">

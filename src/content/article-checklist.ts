@@ -182,12 +182,19 @@ const checklists: Record<string, ChecklistEntry> = {
 export function checklistSectionsFor(slug: string, locale: SiteLocale | "ja") {
   const entry = checklists[slug];
   if (!entry) return [];
-  const title = locale === "ja" ? "書類・説明で確認したい項目の例" : locale === "en" ? "What to check in documents" : "文件与说明中应确认的项目";
-  const intro = locale === "ja"
-    ? "以下は確認の目安です。すべてが必須ではありませんが、抜けている項目は施設に確認してください。"
-    : locale === "en"
-      ? "A reference checklist — not every item is mandatory, but ask the clinic about anything missing."
-      : "以下为参考清单——并非所有项目都必须具备，但缺失项请向机构确认。";
-  const items = locale === "ja" ? entry.ja : locale === "en" ? entry.en : entry.zh;
+  const title =
+    locale === "ja"
+      ? "書類・説明で確認したい項目の例"
+      : locale === "en"
+        ? "What to check in documents"
+        : "文件与说明中应确认的项目";
+  const intro =
+    locale === "ja"
+      ? "以下は確認の目安です。すべてが必須ではありませんが、抜けている項目は施設に確認してください。"
+      : locale === "en"
+        ? "A reference checklist — not every item is mandatory, but ask the clinic about anything missing."
+        : "以下为参考清单——并非所有项目都必须具备，但缺失项请向机构确认。";
+  const items =
+    locale === "ja" ? entry.ja : locale === "en" ? entry.en : entry.zh;
   return [{ id: "checklist", title, paragraphs: [intro, ...items] }];
 }

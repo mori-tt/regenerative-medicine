@@ -19,14 +19,24 @@ export function refreshScope(scope: Element | null) {
     let visible = 0;
     items.forEach((item) => {
       const queryHidden = item.hasAttribute("data-query-hide");
-      const featuredHidden = item.dataset.featured !== "true" && Boolean(item.closest(".filter-scope.featured-on"));
+      const featuredHidden =
+        item.dataset.featured !== "true" &&
+        Boolean(item.closest(".filter-scope.featured-on"));
       if (!queryHidden && !featuredHidden) visible += 1;
     });
     empty.hidden = visible > 0;
   });
 }
 
-export function FeaturedButton({ label, count, total }: { label: string; count: number; total?: number }) {
+export function FeaturedButton({
+  label,
+  count,
+  total,
+}: {
+  label: string;
+  count: number;
+  total?: number;
+}) {
   const [on, setOn] = useState(false);
   const button = useRef<HTMLButtonElement>(null);
 

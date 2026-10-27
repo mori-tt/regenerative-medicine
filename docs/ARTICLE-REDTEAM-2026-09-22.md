@@ -147,17 +147,17 @@
 
 共通出典の `mhlw` は厚労省の**再生・細胞医療・遺伝子治療の入口**、`amed` と `pmda` は機関トップ、`ciraNews` は研究所ニュース一覧である。公的ドメインであるだけでは、次の本文の根拠の対応関係は成立しない。追加文献を確認していないため、以下は**原文referencesの弱さ**についての限定的な指摘である。
 
-| 原文slug | 元のreferences | 足りない対応・必要な資料 |
-|---|---|---|
-| `first-aid-basics` | `[mhlw]` | 再生医療の制度入口から圧迫止血・救命処置は検証できない。赤十字の止血説明や消防庁の救命講習へ直接対応させる。手袋等の感染防護、正常な呼吸がない場合の心肺蘇生・AEDを扱うかは記事範囲の編集判断。原文が逆の手順を勧めるとまでは判定しない。 |
-| `heatstroke-dehydration` | `[mhlw]` | 熱中症の応急対応のページに変更する。「水分を取る」は意識明瞭・安全に飲める場合と明示するとよいが、次段落の救急条件を無視して危険指示と判定しない。 |
-| `fever-basics` / `blood-pressure-basics` | `[mhlw]` | 発熱時トリアージ・血圧変動は再生医療制度の資料では支えられない。R02/R09の個別資料へ対応させる。 |
-| `vessel-regeneration` | `[amed, pmda]` | 研究費配分機関・規制当局トップは重症虚血の歩行処方の根拠にならない。R07の疾患別ガイドラインが必要。 |
-| `work-injury-insurance` | `[mhlw]` | 同じ厚労省でも再生医療の入口は労災の手続根拠ではない。R10の労災資料へ対応させる。 |
-| `dna-basics` | `[cira, amed]` | iPS入門・機関トップでは核内のDNA量を直接検証できない。R05の1組・2組の説明を対応させる。 |
-| `cord-blood-cells` | `[mhlw]` | 細胞数制約の説明自体を虚偽とはしないが、小児向きという記述だけでは成人での実施状況、細胞数・HLAの選択基準、日本と海外の複数ユニット移植の違いが分からない。移植学会の臍帯血ガイドラインと国内実績が必要。この監査では成人利用比率を算定・確定していない。 |
-| `predatory-journals` | `[ciraNews, amed]` | ニュース一覧や研究機関トップは粗悪誌判定基準ではない。「掲載料の請求が目印の一つ」というpointは誤読されやすく、掲載料の有無だけでは判定できない旨を本文内に補う余地がある。個別雑誌の不正認定はしていない。 |
-| `organoid-ethics` | `[amed, jsrm]` | 「現状の科学で確かめる手段はありません」は「確立した判定法がない」と「評価の試みもできない」を区別すべき。ISSCRの[研究指針](https://www.isscr.org/guidelines)は現在の意識・痛覚を懸念する生物学的根拠と将来の高度化を分けている。意識の有無そのものを本監査で認定しない。 |
+| 原文slug                                 | 元のreferences     | 足りない対応・必要な資料                                                                                                                                                                                                                                                  |
+| ---------------------------------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `first-aid-basics`                       | `[mhlw]`           | 再生医療の制度入口から圧迫止血・救命処置は検証できない。赤十字の止血説明や消防庁の救命講習へ直接対応させる。手袋等の感染防護、正常な呼吸がない場合の心肺蘇生・AEDを扱うかは記事範囲の編集判断。原文が逆の手順を勧めるとまでは判定しない。                                 |
+| `heatstroke-dehydration`                 | `[mhlw]`           | 熱中症の応急対応のページに変更する。「水分を取る」は意識明瞭・安全に飲める場合と明示するとよいが、次段落の救急条件を無視して危険指示と判定しない。                                                                                                                        |
+| `fever-basics` / `blood-pressure-basics` | `[mhlw]`           | 発熱時トリアージ・血圧変動は再生医療制度の資料では支えられない。R02/R09の個別資料へ対応させる。                                                                                                                                                                           |
+| `vessel-regeneration`                    | `[amed, pmda]`     | 研究費配分機関・規制当局トップは重症虚血の歩行処方の根拠にならない。R07の疾患別ガイドラインが必要。                                                                                                                                                                       |
+| `work-injury-insurance`                  | `[mhlw]`           | 同じ厚労省でも再生医療の入口は労災の手続根拠ではない。R10の労災資料へ対応させる。                                                                                                                                                                                         |
+| `dna-basics`                             | `[cira, amed]`     | iPS入門・機関トップでは核内のDNA量を直接検証できない。R05の1組・2組の説明を対応させる。                                                                                                                                                                                   |
+| `cord-blood-cells`                       | `[mhlw]`           | 細胞数制約の説明自体を虚偽とはしないが、小児向きという記述だけでは成人での実施状況、細胞数・HLAの選択基準、日本と海外の複数ユニット移植の違いが分からない。移植学会の臍帯血ガイドラインと国内実績が必要。この監査では成人利用比率を算定・確定していない。                 |
+| `predatory-journals`                     | `[ciraNews, amed]` | ニュース一覧や研究機関トップは粗悪誌判定基準ではない。「掲載料の請求が目印の一つ」というpointは誤読されやすく、掲載料の有無だけでは判定できない旨を本文内に補う余地がある。個別雑誌の不正認定はしていない。                                                               |
+| `organoid-ethics`                        | `[amed, jsrm]`     | 「現状の科学で確かめる手段はありません」は「確立した判定法がない」と「評価の試みもできない」を区別すべき。ISSCRの[研究指針](https://www.isscr.org/guidelines)は現在の意識・痛覚を懸念する生物学的根拠と将来の高度化を分けている。意識の有無そのものを本監査で認定しない。 |
 
 制度記事の追加的な限界も残る。
 
@@ -179,231 +179,231 @@
 
 ### basics — 59/59読了
 
-| # | slug | 節/段落/points | 読了した節ID | 判定・照合範囲 |
-|---|---|---|---|---|
-| 1 | `what-is-regenerative-medicine` | 3/4/3 | overview, research-and-care, questions | 本文読了・個別照合未実施 |
-| 2 | `cells-tissues-organs` | 3/6/3 | building-blocks, repair, words | 本文読了・個別照合未実施 |
-| 4 | `regenerative-medicine-history` | 3/6/3 | roots, turning-points, today | 本文読了・個別照合未実施 |
-| 5 | `three-approaches` | 3/6/3 | transplant, tissue, activate | 本文読了・個別照合未実施 |
-| 6 | `myths-and-facts` | 3/6/3 | myth-1-2, myth-3-4, myth-5 | 本文読了／自家なら安全・高額なら有効を否定する実文を確認 |
-| 22 | `body-repair-mechanisms` | 3/3/3 | inflammation, scar, organs | 本文読了・個別照合未実施 |
-| 23 | `self-vs-donor-cells` | 3/3/3 | autologous, allogeneic, choice | 本文読了／免疫適合の比較を安全保証とは解釈しない |
-| 24 | `differentiation-basics` | 3/3/3 | differentiation, reprogram, dediff | 本文読了・個別照合未実施 |
-| 25 | `genes-and-cells` | 3/3/3 | blueprint, protein, gene-therapy | 本文読了・個別照合未実施 |
-| 26 | `immune-basics` | 3/3/3 | self, hla, measures | 本文読了・個別照合未実施 |
-| 27 | `blood-basics` | 3/3/3 | components, hematopoiesis, link | 本文読了／白血病の移植例示、全疾患治癒の断定なし |
-| 28 | `skin-bone-cartilage` | 3/3/3 | skin, bone, cartilage | 本文読了／JACC更新の関連箇所、OA否定はない |
-| 29 | `nerve-muscle-heart` | 3/3/3 | nerve, heart, muscle | 本文読了・個別照合未実施 |
-| 30 | `age-and-regeneration` | 3/3/3 | young, aging, decision | 本文読了・個別照合未実施 |
-| 31 | `drugs-surgery-comparison` | 3/3/3 | standard, features, combine | 本文読了・個別照合未実施 |
-| 32 | `hospital-words` | 3/3/3 | indication, prognosis, qol | 本文読了・個別照合未実施 |
-| 33 | `family-discussion` | 3/3/3 | share, feelings, decide | 本文読了・個別照合未実施 |
-| 34 | `next-steps-after-basics` | 3/3/3 | mechanism, treatment, news | 本文読了・個別照合未実施 |
-| 74 | `cell-division` | 3/3/3 | mitosis, limit, culture | 本文読了・個別照合未実施 |
-| 75 | `dna-basics` | 3/3/3 | structure, gene, read | R05 低 |
-| 76 | `proteins-basics` | 3/3/3 | roles, shape, factors | 本文読了・個別照合未実施 |
-| 77 | `digestion-absorption` | 3/3/3 | journey, turnover, care | 本文読了・個別照合未実施 |
-| 78 | `circulation` | 3/3/3 | route, vessels, delivery | 本文読了・個別照合未実施 |
-| 79 | `respiration` | 3/3/3 | exchange, control, culture | 本文読了・個別照合未実施 |
-| 80 | `kidney-liver` | 3/3/3 | kidney, liver, care | 本文読了・個別照合未実施 |
-| 81 | `brain-basics` | 3/3/3 | cells, areas, repair | 本文読了・個別照合未実施 |
-| 82 | `senses` | 3/3/3 | eye, ear, support | 本文読了・個別照合未実施 |
-| 83 | `teeth-bones-growth` | 3/3/3 | bone, teeth, kids | 本文読了・個別照合未実施 |
-| 84 | `hormones` | 3/3/3 | system, examples, care | 本文読了・個別照合未実施 |
-| 85 | `antibodies-vaccines` | 3/3/3 | antibody, vaccine, difference | 本文読了・個別照合未実施 |
-| 86 | `allergy-basics` | 3/3/3 | mechanism, types, care | 本文読了・個別照合未実施 |
-| 87 | `cancer-basics` | 3/3/3 | what, standard, difference | R04 中 |
-| 88 | `diabetes-lifestyle` | 3/3/3 | mechanism, care, research | 本文読了・個別照合未実施 |
-| 89 | `pregnancy-cordblood` | 3/3/3 | what, banks, decide | 本文読了・個別照合未実施 |
-| 90 | `aging-society` | 3/3/3 | diseases, society, view | 本文読了・個別照合未実施 |
-| 91 | `disabilities-support` | 3/3/3 | systems, consult, medical | 本文読了・個別照合未実施 |
-| 92 | `rehabilitation-basics` | 3/3/3 | three, timing, combine | 本文読了・個別照合未実施 |
-| 93 | `nutrition-basics` | 3/3/3 | five, repair, myths | 本文読了・個別照合未実施 |
-| 94 | `exercise-basics` | 3/3/3 | effects, continue, care | 本文読了・個別照合未実施 |
-| 95 | `sleep-basics` | 3/3/3 | role, habits, consult | 本文読了・個別照合未実施 |
-| 96 | `mental-health-decision` | 3/3/3 | anxiety, cope, help | 本文読了・個別照合未実施 |
-| 97 | `health-checkups` | 3/3/3 | kinds, follow, trend | 本文読了・個別照合未実施 |
-| 98 | `family-doctor` | 3/3/3 | role, how, referral | 本文読了・個別照合未実施 |
-| 149 | `cell-sizes` | 3/3/3 | scale, measure, meaning | 本文読了・個別照合未実施 |
-| 150 | `blood-types` | 3/3/3 | abo, transfusion, myths | 本文読了・個別照合未実施 |
-| 151 | `body-water` | 3/3/3 | roles, electrolytes, intake | 本文読了・個別照合未実施 |
-| 152 | `lymph-system` | 3/3/3 | flow, nodes, swelling | 本文読了・個別照合未実施 |
-| 153 | `microbiome` | 3/3/3 | residents, roles, living | 本文読了・個別照合未実施 |
-| 154 | `fever-basics` | 3/3/3 | mechanism, care, signals | R02 高 |
-| 155 | `pain-basics` | 3/3/3 | signals, perception, telling | 本文読了・個別照合未実施 |
-| 156 | `joints-basics` | 3/3/3 | parts, types, care | 本文読了・個別照合未実施 |
-| 157 | `fracture-healing` | 3/3/3 | stages, fixation, rehab | 本文読了・個別照合未実施 |
-| 158 | `anemia-basics` | 3/3/3 | what, causes, check | 本文読了／鉄欠乏以外の原因と受診を記載 |
-| 159 | `blood-pressure-basics` | 3/3/3 | numbers, measure, record | R09 中 |
-| 160 | `cholesterol-basics` | 3/3/3 | roles, ldl-hdl, manage | 本文読了・個別照合未実施 |
-| 161 | `heatstroke-dehydration` | 3/3/3 | prevent, signs, emergency | 冷却・飲めない場合の救急要請を限定照合／原出典弱い |
-| 199 | `thermometer-guide` | 3/3/3 | sites, tips, record | 本文読了・個別照合未実施 |
-| 200 | `blood-donation-basics` | 3/3/3 | types, day, after | 本文読了・個別照合未実施 |
-| 201 | `microscope-world` | 3/3/3 | types, stain, places | 本文読了・個別照合未実施 |
+| #   | slug                            | 節/段落/points | 読了した節ID                           | 判定・照合範囲                                           |
+| --- | ------------------------------- | -------------- | -------------------------------------- | -------------------------------------------------------- |
+| 1   | `what-is-regenerative-medicine` | 3/4/3          | overview, research-and-care, questions | 本文読了・個別照合未実施                                 |
+| 2   | `cells-tissues-organs`          | 3/6/3          | building-blocks, repair, words         | 本文読了・個別照合未実施                                 |
+| 4   | `regenerative-medicine-history` | 3/6/3          | roots, turning-points, today           | 本文読了・個別照合未実施                                 |
+| 5   | `three-approaches`              | 3/6/3          | transplant, tissue, activate           | 本文読了・個別照合未実施                                 |
+| 6   | `myths-and-facts`               | 3/6/3          | myth-1-2, myth-3-4, myth-5             | 本文読了／自家なら安全・高額なら有効を否定する実文を確認 |
+| 22  | `body-repair-mechanisms`        | 3/3/3          | inflammation, scar, organs             | 本文読了・個別照合未実施                                 |
+| 23  | `self-vs-donor-cells`           | 3/3/3          | autologous, allogeneic, choice         | 本文読了／免疫適合の比較を安全保証とは解釈しない         |
+| 24  | `differentiation-basics`        | 3/3/3          | differentiation, reprogram, dediff     | 本文読了・個別照合未実施                                 |
+| 25  | `genes-and-cells`               | 3/3/3          | blueprint, protein, gene-therapy       | 本文読了・個別照合未実施                                 |
+| 26  | `immune-basics`                 | 3/3/3          | self, hla, measures                    | 本文読了・個別照合未実施                                 |
+| 27  | `blood-basics`                  | 3/3/3          | components, hematopoiesis, link        | 本文読了／白血病の移植例示、全疾患治癒の断定なし         |
+| 28  | `skin-bone-cartilage`           | 3/3/3          | skin, bone, cartilage                  | 本文読了／JACC更新の関連箇所、OA否定はない               |
+| 29  | `nerve-muscle-heart`            | 3/3/3          | nerve, heart, muscle                   | 本文読了・個別照合未実施                                 |
+| 30  | `age-and-regeneration`          | 3/3/3          | young, aging, decision                 | 本文読了・個別照合未実施                                 |
+| 31  | `drugs-surgery-comparison`      | 3/3/3          | standard, features, combine            | 本文読了・個別照合未実施                                 |
+| 32  | `hospital-words`                | 3/3/3          | indication, prognosis, qol             | 本文読了・個別照合未実施                                 |
+| 33  | `family-discussion`             | 3/3/3          | share, feelings, decide                | 本文読了・個別照合未実施                                 |
+| 34  | `next-steps-after-basics`       | 3/3/3          | mechanism, treatment, news             | 本文読了・個別照合未実施                                 |
+| 74  | `cell-division`                 | 3/3/3          | mitosis, limit, culture                | 本文読了・個別照合未実施                                 |
+| 75  | `dna-basics`                    | 3/3/3          | structure, gene, read                  | R05 低                                                   |
+| 76  | `proteins-basics`               | 3/3/3          | roles, shape, factors                  | 本文読了・個別照合未実施                                 |
+| 77  | `digestion-absorption`          | 3/3/3          | journey, turnover, care                | 本文読了・個別照合未実施                                 |
+| 78  | `circulation`                   | 3/3/3          | route, vessels, delivery               | 本文読了・個別照合未実施                                 |
+| 79  | `respiration`                   | 3/3/3          | exchange, control, culture             | 本文読了・個別照合未実施                                 |
+| 80  | `kidney-liver`                  | 3/3/3          | kidney, liver, care                    | 本文読了・個別照合未実施                                 |
+| 81  | `brain-basics`                  | 3/3/3          | cells, areas, repair                   | 本文読了・個別照合未実施                                 |
+| 82  | `senses`                        | 3/3/3          | eye, ear, support                      | 本文読了・個別照合未実施                                 |
+| 83  | `teeth-bones-growth`            | 3/3/3          | bone, teeth, kids                      | 本文読了・個別照合未実施                                 |
+| 84  | `hormones`                      | 3/3/3          | system, examples, care                 | 本文読了・個別照合未実施                                 |
+| 85  | `antibodies-vaccines`           | 3/3/3          | antibody, vaccine, difference          | 本文読了・個別照合未実施                                 |
+| 86  | `allergy-basics`                | 3/3/3          | mechanism, types, care                 | 本文読了・個別照合未実施                                 |
+| 87  | `cancer-basics`                 | 3/3/3          | what, standard, difference             | R04 中                                                   |
+| 88  | `diabetes-lifestyle`            | 3/3/3          | mechanism, care, research              | 本文読了・個別照合未実施                                 |
+| 89  | `pregnancy-cordblood`           | 3/3/3          | what, banks, decide                    | 本文読了・個別照合未実施                                 |
+| 90  | `aging-society`                 | 3/3/3          | diseases, society, view                | 本文読了・個別照合未実施                                 |
+| 91  | `disabilities-support`          | 3/3/3          | systems, consult, medical              | 本文読了・個別照合未実施                                 |
+| 92  | `rehabilitation-basics`         | 3/3/3          | three, timing, combine                 | 本文読了・個別照合未実施                                 |
+| 93  | `nutrition-basics`              | 3/3/3          | five, repair, myths                    | 本文読了・個別照合未実施                                 |
+| 94  | `exercise-basics`               | 3/3/3          | effects, continue, care                | 本文読了・個別照合未実施                                 |
+| 95  | `sleep-basics`                  | 3/3/3          | role, habits, consult                  | 本文読了・個別照合未実施                                 |
+| 96  | `mental-health-decision`        | 3/3/3          | anxiety, cope, help                    | 本文読了・個別照合未実施                                 |
+| 97  | `health-checkups`               | 3/3/3          | kinds, follow, trend                   | 本文読了・個別照合未実施                                 |
+| 98  | `family-doctor`                 | 3/3/3          | role, how, referral                    | 本文読了・個別照合未実施                                 |
+| 149 | `cell-sizes`                    | 3/3/3          | scale, measure, meaning                | 本文読了・個別照合未実施                                 |
+| 150 | `blood-types`                   | 3/3/3          | abo, transfusion, myths                | 本文読了・個別照合未実施                                 |
+| 151 | `body-water`                    | 3/3/3          | roles, electrolytes, intake            | 本文読了・個別照合未実施                                 |
+| 152 | `lymph-system`                  | 3/3/3          | flow, nodes, swelling                  | 本文読了・個別照合未実施                                 |
+| 153 | `microbiome`                    | 3/3/3          | residents, roles, living               | 本文読了・個別照合未実施                                 |
+| 154 | `fever-basics`                  | 3/3/3          | mechanism, care, signals               | R02 高                                                   |
+| 155 | `pain-basics`                   | 3/3/3          | signals, perception, telling           | 本文読了・個別照合未実施                                 |
+| 156 | `joints-basics`                 | 3/3/3          | parts, types, care                     | 本文読了・個別照合未実施                                 |
+| 157 | `fracture-healing`              | 3/3/3          | stages, fixation, rehab                | 本文読了・個別照合未実施                                 |
+| 158 | `anemia-basics`                 | 3/3/3          | what, causes, check                    | 本文読了／鉄欠乏以外の原因と受診を記載                   |
+| 159 | `blood-pressure-basics`         | 3/3/3          | numbers, measure, record               | R09 中                                                   |
+| 160 | `cholesterol-basics`            | 3/3/3          | roles, ldl-hdl, manage                 | 本文読了・個別照合未実施                                 |
+| 161 | `heatstroke-dehydration`        | 3/3/3          | prevent, signs, emergency              | 冷却・飲めない場合の救急要請を限定照合／原出典弱い       |
+| 199 | `thermometer-guide`             | 3/3/3          | sites, tips, record                    | 本文読了・個別照合未実施                                 |
+| 200 | `blood-donation-basics`         | 3/3/3          | types, day, after                      | 本文読了・個別照合未実施                                 |
+| 201 | `microscope-world`              | 3/3/3          | types, stain, places                   | 本文読了・個別照合未実施                                 |
 
 ### stem-cells — 58/58読了
 
-| # | slug | 節/段落/points | 読了した節ID | 判定・照合範囲 |
-|---|---|---|---|---|
-| 7 | `stem-cell-types` | 2/3/2 | stem-cells, types | 本文読了・個別照合未実施 |
-| 8 | `ips-cells-explained` | 3/6/3 | mechanism, uses, status | U01 承認更新 |
-| 9 | `es-cells-explained` | 3/6/3 | features, ethics, comparison | 本文読了・個別照合未実施 |
-| 10 | `somatic-stem-cells` | 3/6/3 | overview, types, treatment | 本文読了／細胞種類と適応・投与法を区別 |
-| 11 | `cell-culture-and-quality` | 3/6/3 | process, quality, facility | 本文読了・個別照合未実施 |
-| 35 | `hematopoietic-transplant` | 3/3/3 | mechanism, risks, lesson | R08 中 |
-| 36 | `mesenchymal-basics` | 3/3/3 | what, actions, check | 本文読了・個別照合未実施 |
-| 37 | `neural-stem-cells` | 3/3/3 | difficulty, targets, rehab | U02 承認更新 |
-| 38 | `tissue-stem-cells` | 3/3/3 | active, reserve, culture | 本文読了・個別照合未実施 |
-| 39 | `ips-stock` | 3/3/3 | concept, compare, system | 本文読了・個別照合未実施 |
-| 40 | `differentiation-purification` | 3/3/3 | induction, purification, check | 本文読了・個別照合未実施 |
-| 41 | `genome-editing-difference` | 3/3/3 | editing, combine, ethics | 本文読了・個別照合未実施 |
-| 42 | `autologous-allogeneic` | 3/3/3 | flow-self, flow-donor, ask | 本文読了／自家の安全保証を否定する実文を確認 |
-| 43 | `tumorigenicity-safety` | 3/3/3 | concern, tests, follow | 本文読了・個別照合未実施 |
-| 44 | `hla-rejection` | 3/3/3 | hla, limit, cells | R06 中 |
-| 45 | `ips-drug-discovery` | 3/3/3 | model, screening, personal | 本文読了・個別照合未実施 |
-| 46 | `organoids-intro` | 3/3/3 | what, uses, limits | 本文読了・個別照合未実施 |
-| 47 | `exosomes-notes` | 3/3/3 | what, issues, check | 本文読了・個別照合未実施 |
-| 99 | `cell-cycle` | 3/3/3 | phases, checkpoint, culture | 本文読了・個別照合未実施 |
-| 100 | `asymmetric-division` | 3/3/3 | what, symmetric, disease | 本文読了・個別照合未実施 |
-| 101 | `stemcell-niche` | 3/3/3 | concept, members, culture | 本文読了・個別照合未実施 |
-| 102 | `cell-signaling` | 3/3/3 | types, development, therapy | 本文読了・個別照合未実施 |
-| 103 | `growth-factors` | 3/3/3 | examples, use, therapy | 本文読了・個別照合未実施 |
-| 104 | `scaffolds` | 3/3/3 | materials, design, decell | 本文読了・個別照合未実施 |
-| 105 | `bioreactors` | 3/3/3 | why, how, quality | 本文読了・個別照合未実施 |
-| 106 | `cryopreservation` | 3/3/3 | damage, methods, thaw | 本文読了・個別照合未実施 |
-| 107 | `cord-blood-cells` | 3/3/3 | content, use, banks | 本文読了／成人での実施・細胞選択の裏付け未完 |
-| 108 | `dental-pulp-stem` | 3/3/3 | source, research, check | 本文読了・個別照合未実施 |
-| 109 | `adipose-stem` | 3/3/3 | source, processing, check | 本文読了・個別照合未実施 |
-| 110 | `bone-marrow-system` | 3/3/3 | structure, harvest, donor | 本文読了・個別照合未実施 |
-| 111 | `satellite-cells` | 3/3/3 | rest, aging, therapy | 本文読了・個別照合未実施 |
-| 112 | `intestinal-stem` | 3/3/3 | structure, culture, disease | 本文読了・個別照合未実施 |
-| 113 | `liver-progenitor` | 3/3/3 | regeneration, progenitor, fibrosis | 本文読了・個別照合未実施 |
-| 114 | `corneal-regeneration` | 3/3/3 | limbus, sheet, care | 本文読了・個別照合未実施 |
-| 115 | `cartilage-repair-deep` | 3/3/3 | why, options, rehab | U04 承認更新 |
-| 116 | `tendon-ligament` | 3/3/3 | structure, injury, research | 本文読了・個別照合未実施 |
-| 117 | `hair-regeneration` | 3/3/3 | cycle, care, research | 本文読了・個別照合未実施 |
-| 118 | `tooth-regeneration` | 3/3/3 | research, now, view | 本文読了・個別照合未実施 |
-| 119 | `inner-ear-regeneration` | 3/3/3 | types, support, research | 本文読了・個別照合未実施 |
-| 120 | `retina-regeneration` | 3/3/3 | disease, methods, care | 本文読了・個別照合未実施 |
-| 121 | `spinal-cord-detail` | 3/3/3 | injury, trials, life | 本文読了・個別照合未実施 |
-| 122 | `heart-sheet-detail` | 3/3/3 | sheet, target, check | U03 承認更新 |
-| 123 | `direct-reprogramming` | 3/3/3 | what, issues, invivo | 本文読了・個別照合未実施 |
-| 162 | `cell-banks-guide` | 3/3/3 | public, private, choose | R03 中 |
-| 163 | `culture-media` | 3/3/3 | contents, serum, manage | 本文読了・個別照合未実施 |
-| 164 | `cell-sorting` | 3/3/3 | markers, sorter, purity | 本文読了・個別照合未実施 |
-| 165 | `placenta-cells` | 3/3/3 | sources, research, consent | 本文読了・個別照合未実施 |
-| 166 | `pancreas-progenitor` | 3/3/3 | target, devices, now | 本文読了・個別照合未実施 |
-| 167 | `kidney-progenitor` | 3/3/3 | difficulty, research, now | 本文読了・個別照合未実施 |
-| 168 | `lung-regeneration` | 3/3/3 | structure, research, daily | 本文読了・個別照合未実施 |
-| 169 | `disc-regeneration` | 3/3/3 | disc, pain, research | 本文読了・個別照合未実施 |
-| 170 | `vessel-regeneration` | 3/3/3 | idea, status, daily | R07 高 |
-| 171 | `bioprinting` | 3/3/3 | how, uses, future | 本文読了・個別照合未実施 |
-| 172 | `organ-transplant-basics` | 3/3/3 | donation, allocation, after | 本文読了・個別照合未実施 |
-| 173 | `ips-donation` | 3/3/3 | flow, consent, meaning | 本文読了・個別照合未実施 |
-| 202 | `ips-nobel-story` | 3/3/3 | prize, after, view | 本文読了・個別照合未実施 |
-| 203 | `organoid-ethics` | 3/3/3 | question, rules, readers | ISSCRの現状と将来の区別のみ限定照合 |
-| 204 | `home-culture-myth` | 3/3/3 | sterile, control, danger | 本文読了・個別照合未実施 |
+| #   | slug                           | 節/段落/points | 読了した節ID                       | 判定・照合範囲                               |
+| --- | ------------------------------ | -------------- | ---------------------------------- | -------------------------------------------- |
+| 7   | `stem-cell-types`              | 2/3/2          | stem-cells, types                  | 本文読了・個別照合未実施                     |
+| 8   | `ips-cells-explained`          | 3/6/3          | mechanism, uses, status            | U01 承認更新                                 |
+| 9   | `es-cells-explained`           | 3/6/3          | features, ethics, comparison       | 本文読了・個別照合未実施                     |
+| 10  | `somatic-stem-cells`           | 3/6/3          | overview, types, treatment         | 本文読了／細胞種類と適応・投与法を区別       |
+| 11  | `cell-culture-and-quality`     | 3/6/3          | process, quality, facility         | 本文読了・個別照合未実施                     |
+| 35  | `hematopoietic-transplant`     | 3/3/3          | mechanism, risks, lesson           | R08 中                                       |
+| 36  | `mesenchymal-basics`           | 3/3/3          | what, actions, check               | 本文読了・個別照合未実施                     |
+| 37  | `neural-stem-cells`            | 3/3/3          | difficulty, targets, rehab         | U02 承認更新                                 |
+| 38  | `tissue-stem-cells`            | 3/3/3          | active, reserve, culture           | 本文読了・個別照合未実施                     |
+| 39  | `ips-stock`                    | 3/3/3          | concept, compare, system           | 本文読了・個別照合未実施                     |
+| 40  | `differentiation-purification` | 3/3/3          | induction, purification, check     | 本文読了・個別照合未実施                     |
+| 41  | `genome-editing-difference`    | 3/3/3          | editing, combine, ethics           | 本文読了・個別照合未実施                     |
+| 42  | `autologous-allogeneic`        | 3/3/3          | flow-self, flow-donor, ask         | 本文読了／自家の安全保証を否定する実文を確認 |
+| 43  | `tumorigenicity-safety`        | 3/3/3          | concern, tests, follow             | 本文読了・個別照合未実施                     |
+| 44  | `hla-rejection`                | 3/3/3          | hla, limit, cells                  | R06 中                                       |
+| 45  | `ips-drug-discovery`           | 3/3/3          | model, screening, personal         | 本文読了・個別照合未実施                     |
+| 46  | `organoids-intro`              | 3/3/3          | what, uses, limits                 | 本文読了・個別照合未実施                     |
+| 47  | `exosomes-notes`               | 3/3/3          | what, issues, check                | 本文読了・個別照合未実施                     |
+| 99  | `cell-cycle`                   | 3/3/3          | phases, checkpoint, culture        | 本文読了・個別照合未実施                     |
+| 100 | `asymmetric-division`          | 3/3/3          | what, symmetric, disease           | 本文読了・個別照合未実施                     |
+| 101 | `stemcell-niche`               | 3/3/3          | concept, members, culture          | 本文読了・個別照合未実施                     |
+| 102 | `cell-signaling`               | 3/3/3          | types, development, therapy        | 本文読了・個別照合未実施                     |
+| 103 | `growth-factors`               | 3/3/3          | examples, use, therapy             | 本文読了・個別照合未実施                     |
+| 104 | `scaffolds`                    | 3/3/3          | materials, design, decell          | 本文読了・個別照合未実施                     |
+| 105 | `bioreactors`                  | 3/3/3          | why, how, quality                  | 本文読了・個別照合未実施                     |
+| 106 | `cryopreservation`             | 3/3/3          | damage, methods, thaw              | 本文読了・個別照合未実施                     |
+| 107 | `cord-blood-cells`             | 3/3/3          | content, use, banks                | 本文読了／成人での実施・細胞選択の裏付け未完 |
+| 108 | `dental-pulp-stem`             | 3/3/3          | source, research, check            | 本文読了・個別照合未実施                     |
+| 109 | `adipose-stem`                 | 3/3/3          | source, processing, check          | 本文読了・個別照合未実施                     |
+| 110 | `bone-marrow-system`           | 3/3/3          | structure, harvest, donor          | 本文読了・個別照合未実施                     |
+| 111 | `satellite-cells`              | 3/3/3          | rest, aging, therapy               | 本文読了・個別照合未実施                     |
+| 112 | `intestinal-stem`              | 3/3/3          | structure, culture, disease        | 本文読了・個別照合未実施                     |
+| 113 | `liver-progenitor`             | 3/3/3          | regeneration, progenitor, fibrosis | 本文読了・個別照合未実施                     |
+| 114 | `corneal-regeneration`         | 3/3/3          | limbus, sheet, care                | 本文読了・個別照合未実施                     |
+| 115 | `cartilage-repair-deep`        | 3/3/3          | why, options, rehab                | U04 承認更新                                 |
+| 116 | `tendon-ligament`              | 3/3/3          | structure, injury, research        | 本文読了・個別照合未実施                     |
+| 117 | `hair-regeneration`            | 3/3/3          | cycle, care, research              | 本文読了・個別照合未実施                     |
+| 118 | `tooth-regeneration`           | 3/3/3          | research, now, view                | 本文読了・個別照合未実施                     |
+| 119 | `inner-ear-regeneration`       | 3/3/3          | types, support, research           | 本文読了・個別照合未実施                     |
+| 120 | `retina-regeneration`          | 3/3/3          | disease, methods, care             | 本文読了・個別照合未実施                     |
+| 121 | `spinal-cord-detail`           | 3/3/3          | injury, trials, life               | 本文読了・個別照合未実施                     |
+| 122 | `heart-sheet-detail`           | 3/3/3          | sheet, target, check               | U03 承認更新                                 |
+| 123 | `direct-reprogramming`         | 3/3/3          | what, issues, invivo               | 本文読了・個別照合未実施                     |
+| 162 | `cell-banks-guide`             | 3/3/3          | public, private, choose            | R03 中                                       |
+| 163 | `culture-media`                | 3/3/3          | contents, serum, manage            | 本文読了・個別照合未実施                     |
+| 164 | `cell-sorting`                 | 3/3/3          | markers, sorter, purity            | 本文読了・個別照合未実施                     |
+| 165 | `placenta-cells`               | 3/3/3          | sources, research, consent         | 本文読了・個別照合未実施                     |
+| 166 | `pancreas-progenitor`          | 3/3/3          | target, devices, now               | 本文読了・個別照合未実施                     |
+| 167 | `kidney-progenitor`            | 3/3/3          | difficulty, research, now          | 本文読了・個別照合未実施                     |
+| 168 | `lung-regeneration`            | 3/3/3          | structure, research, daily         | 本文読了・個別照合未実施                     |
+| 169 | `disc-regeneration`            | 3/3/3          | disc, pain, research               | 本文読了・個別照合未実施                     |
+| 170 | `vessel-regeneration`          | 3/3/3          | idea, status, daily                | R07 高                                       |
+| 171 | `bioprinting`                  | 3/3/3          | how, uses, future                  | 本文読了・個別照合未実施                     |
+| 172 | `organ-transplant-basics`      | 3/3/3          | donation, allocation, after        | 本文読了・個別照合未実施                     |
+| 173 | `ips-donation`                 | 3/3/3          | flow, consent, meaning             | 本文読了・個別照合未実施                     |
+| 202 | `ips-nobel-story`              | 3/3/3          | prize, after, view                 | 本文読了・個別照合未実施                     |
+| 203 | `organoid-ethics`              | 3/3/3          | question, rules, readers           | ISSCRの現状と将来の区別のみ限定照合          |
+| 204 | `home-culture-myth`            | 3/3/3          | sterile, control, danger           | 本文読了・個別照合未実施                     |
 
 ### treatment — 58/58読了
 
-| # | slug | 節/段落/points | 読了した節ID | 判定・照合範囲 |
-|---|---|---|---|---|
-| 12 | `questions-before-treatment` | 2/2/3 | evidence, alternatives | 本文読了・個別照合未実施 |
-| 13 | `cost-and-insurance` | 3/6/3 | types, checklist, traps | 本文読了・個別照合未実施 |
-| 14 | `risks-and-safety` | 3/6/3 | risks, followup, compare | 本文読了・個別照合未実施 |
-| 15 | `second-opinion` | 3/6/3 | what, how, after | 本文読了・個別照合未実施 |
-| 16 | `clinical-trials-guide` | 3/6/3 | difference, consent, participation | 本文読了・個別照合未実施 |
-| 48 | `first-visit-prep` | 3/3/3 | bring, tell, ask | 本文読了・個別照合未実施 |
-| 49 | `informed-consent-howto` | 3/3/3 | three, words, time | 本文読了・個別照合未実施 |
-| 50 | `treatment-flow` | 3/3/3 | before, during, after | 本文読了・個別照合未実施 |
-| 51 | `insurance-care` | 3/3/3 | search, visit, mixed | 本文読了・個別照合未実施 |
-| 52 | `jibihi-contract` | 3/3/3 | money, cancel, trouble | 本文読了／解約・クーリングオフは可否確認に留まる |
-| 53 | `advertising-literacy` | 3/3/3 | rule, cases, check | 本文読了／広告の個別適法性の照合は未実施 |
-| 54 | `trouble-help` | 3/3/3 | health, contract, report | R01 高 |
-| 55 | `aftercare` | 3/3/3 | timing, record, life | 本文読了・個別照合未実施 |
-| 56 | `pain-burden` | 3/3/3 | pain, visits, work | 本文読了・個別照合未実施 |
-| 57 | `family-decision` | 3/3/3 | will, prepare, team | 本文読了・個別照合未実施 |
-| 58 | `elderly-points` | 3/3/3 | meds, function, support | 本文読了・個別照合未実施 |
-| 59 | `children-points` | 3/3/3 | growth, assent, research | 本文読了・個別照合未実施 |
-| 60 | `final-checklist` | 3/3/3 | medical, contract, compare | 本文読了・個別照合未実施 |
-| 124 | `online-care` | 3/3/3 | rule, use, prepare | 本文読了・個別照合未実施 |
-| 125 | `referral-letters` | 3/3/3 | role, fee, back | 本文読了・個別照合未実施 |
-| 126 | `medical-records` | 3/3/3 | right, how, use | 本文読了・個別照合未実施 |
-| 127 | `hospital-choice` | 3/3/3 | results, fit, access | 本文読了・個別照合未実施 |
-| 128 | `emergency-care` | 3/3/3 | call, info, trial | 119番の症状案内を厚労省で限定照合 |
-| 129 | `pharmacy-use` | 3/3/3 | role, notebook, supplements | 本文読了・個別照合未実施 |
-| 130 | `nursing-care-link` | 3/3/3 | team, plan, share | 本文読了・個別照合未実施 |
-| 131 | `home-care` | 3/3/3 | kinds, system, family | 本文読了・個別照合未実施 |
-| 132 | `work-balance` | 3/3/3 | systems, doctor, plan | 本文読了・個別照合未実施 |
-| 133 | `cost-simulation` | 3/3/3 | direct, indirect, compare | 本文読了・個別照合未実施 |
-| 134 | `high-cost-care` | 3/3/3 | what, cert, note | 認定証以外の経路を厚労省で限定照合／補足推奨 |
-| 135 | `tax-deduction` | 3/3/3 | what, keep, check | 対象費用・所得控除の概要を国税庁で限定照合 |
-| 136 | `insurance-review` | 3/3/3 | public, needs, duty | 本文読了・個別照合未実施 |
-| 137 | `decision-aids` | 3/3/3 | what, values, talk | 本文読了・個別照合未実施 |
-| 138 | `patient-groups` | 3/3/3 | find, use, care | 本文読了・個別照合未実施 |
-| 139 | `counseling-support` | 3/3/3 | what, center, prepare | 本文読了・個別照合未実施 |
-| 140 | `palliative-care` | 3/3/3 | what, team, use | 本文読了・個別照合未実施 |
-| 141 | `rehab-after-treatment` | 3/3/3 | goal, steps, keep | 本文読了・個別照合未実施 |
-| 142 | `oral-care-during` | 3/3/3 | why, before, daily | 本文読了・個別照合未実施 |
-| 143 | `distant-travel-care` | 3/3/3 | plan, stay, link | 本文読了・個別照合未実施 |
-| 144 | `language-support` | 3/3/3 | plain, tools, interpret | 本文読了・個別照合未実施 |
-| 145 | `treatment-diary` | 3/3/3 | items, how, use | 本文読了・個別照合未実施 |
-| 146 | `reviewing-treatment` | 3/3/3 | timing, sunkcost, next | 本文読了・個別照合未実施 |
-| 147 | `childcare-balance` | 3/3/3 | care, systems, share | 本文読了・個別照合未実施 |
-| 148 | `medical-payment-help` | 3/3/3 | consult, systems, note | 本文読了・個別照合未実施 |
-| 174 | `advance-directives` | 3/3/3 | what, write, share | 本文読了・個別照合未実施 |
-| 175 | `patient-rights` | 3/3/3 | rights, records, trouble | 本文読了・個別照合未実施 |
-| 176 | `generic-drugs` | 3/3/3 | what, switch, points | 本文読了・個別照合未実施 |
-| 177 | `insurance-card-guide` | 3/3/3 | check, myna, trouble | 本文読了／資格確認書の代替経路を記載 |
-| 178 | `nursing-care-certification` | 3/3/3 | apply, levels, plan | 本文読了・個別照合未実施 |
-| 179 | `driving-illness` | 3/3/3 | effects, system, life | 本文読了・個別照合未実施 |
-| 180 | `work-injury-insurance` | 3/3/3 | rousai, sick, steps | R10 中 |
-| 181 | `medical-accident-system` | 3/3/3 | system, family, consult | 本文読了・個別照合未実施 |
-| 182 | `drug-allergy-record` | 3/3/3 | record, share, otc | 本文読了・個別照合未実施 |
-| 183 | `vaccination-adult` | 3/3/3 | types, check, after | 本文読了・個別照合未実施 |
-| 184 | `dental-visit-guide` | 3/3/3 | first, plan, prevent | 本文読了・個別照合未実施 |
-| 185 | `assistive-devices` | 3/3/3 | types, make, use | 本文読了・個別照合未実施 |
-| 186 | `home-safety-elderly` | 3/3/3 | risks, devices, body | 本文読了・個別照合未実施 |
-| 205 | `first-aid-basics` | 3/3/3 | safety, bleed, learn | 直接圧迫を赤十字で限定照合／原出典弱い |
-| 206 | `medicine-storage` | 3/3/3 | keep, expiry, leftover | 本文読了・個別照合未実施 |
+| #   | slug                         | 節/段落/points | 読了した節ID                       | 判定・照合範囲                                   |
+| --- | ---------------------------- | -------------- | ---------------------------------- | ------------------------------------------------ |
+| 12  | `questions-before-treatment` | 2/2/3          | evidence, alternatives             | 本文読了・個別照合未実施                         |
+| 13  | `cost-and-insurance`         | 3/6/3          | types, checklist, traps            | 本文読了・個別照合未実施                         |
+| 14  | `risks-and-safety`           | 3/6/3          | risks, followup, compare           | 本文読了・個別照合未実施                         |
+| 15  | `second-opinion`             | 3/6/3          | what, how, after                   | 本文読了・個別照合未実施                         |
+| 16  | `clinical-trials-guide`      | 3/6/3          | difference, consent, participation | 本文読了・個別照合未実施                         |
+| 48  | `first-visit-prep`           | 3/3/3          | bring, tell, ask                   | 本文読了・個別照合未実施                         |
+| 49  | `informed-consent-howto`     | 3/3/3          | three, words, time                 | 本文読了・個別照合未実施                         |
+| 50  | `treatment-flow`             | 3/3/3          | before, during, after              | 本文読了・個別照合未実施                         |
+| 51  | `insurance-care`             | 3/3/3          | search, visit, mixed               | 本文読了・個別照合未実施                         |
+| 52  | `jibihi-contract`            | 3/3/3          | money, cancel, trouble             | 本文読了／解約・クーリングオフは可否確認に留まる |
+| 53  | `advertising-literacy`       | 3/3/3          | rule, cases, check                 | 本文読了／広告の個別適法性の照合は未実施         |
+| 54  | `trouble-help`               | 3/3/3          | health, contract, report           | R01 高                                           |
+| 55  | `aftercare`                  | 3/3/3          | timing, record, life               | 本文読了・個別照合未実施                         |
+| 56  | `pain-burden`                | 3/3/3          | pain, visits, work                 | 本文読了・個別照合未実施                         |
+| 57  | `family-decision`            | 3/3/3          | will, prepare, team                | 本文読了・個別照合未実施                         |
+| 58  | `elderly-points`             | 3/3/3          | meds, function, support            | 本文読了・個別照合未実施                         |
+| 59  | `children-points`            | 3/3/3          | growth, assent, research           | 本文読了・個別照合未実施                         |
+| 60  | `final-checklist`            | 3/3/3          | medical, contract, compare         | 本文読了・個別照合未実施                         |
+| 124 | `online-care`                | 3/3/3          | rule, use, prepare                 | 本文読了・個別照合未実施                         |
+| 125 | `referral-letters`           | 3/3/3          | role, fee, back                    | 本文読了・個別照合未実施                         |
+| 126 | `medical-records`            | 3/3/3          | right, how, use                    | 本文読了・個別照合未実施                         |
+| 127 | `hospital-choice`            | 3/3/3          | results, fit, access               | 本文読了・個別照合未実施                         |
+| 128 | `emergency-care`             | 3/3/3          | call, info, trial                  | 119番の症状案内を厚労省で限定照合                |
+| 129 | `pharmacy-use`               | 3/3/3          | role, notebook, supplements        | 本文読了・個別照合未実施                         |
+| 130 | `nursing-care-link`          | 3/3/3          | team, plan, share                  | 本文読了・個別照合未実施                         |
+| 131 | `home-care`                  | 3/3/3          | kinds, system, family              | 本文読了・個別照合未実施                         |
+| 132 | `work-balance`               | 3/3/3          | systems, doctor, plan              | 本文読了・個別照合未実施                         |
+| 133 | `cost-simulation`            | 3/3/3          | direct, indirect, compare          | 本文読了・個別照合未実施                         |
+| 134 | `high-cost-care`             | 3/3/3          | what, cert, note                   | 認定証以外の経路を厚労省で限定照合／補足推奨     |
+| 135 | `tax-deduction`              | 3/3/3          | what, keep, check                  | 対象費用・所得控除の概要を国税庁で限定照合       |
+| 136 | `insurance-review`           | 3/3/3          | public, needs, duty                | 本文読了・個別照合未実施                         |
+| 137 | `decision-aids`              | 3/3/3          | what, values, talk                 | 本文読了・個別照合未実施                         |
+| 138 | `patient-groups`             | 3/3/3          | find, use, care                    | 本文読了・個別照合未実施                         |
+| 139 | `counseling-support`         | 3/3/3          | what, center, prepare              | 本文読了・個別照合未実施                         |
+| 140 | `palliative-care`            | 3/3/3          | what, team, use                    | 本文読了・個別照合未実施                         |
+| 141 | `rehab-after-treatment`      | 3/3/3          | goal, steps, keep                  | 本文読了・個別照合未実施                         |
+| 142 | `oral-care-during`           | 3/3/3          | why, before, daily                 | 本文読了・個別照合未実施                         |
+| 143 | `distant-travel-care`        | 3/3/3          | plan, stay, link                   | 本文読了・個別照合未実施                         |
+| 144 | `language-support`           | 3/3/3          | plain, tools, interpret            | 本文読了・個別照合未実施                         |
+| 145 | `treatment-diary`            | 3/3/3          | items, how, use                    | 本文読了・個別照合未実施                         |
+| 146 | `reviewing-treatment`        | 3/3/3          | timing, sunkcost, next             | 本文読了・個別照合未実施                         |
+| 147 | `childcare-balance`          | 3/3/3          | care, systems, share               | 本文読了・個別照合未実施                         |
+| 148 | `medical-payment-help`       | 3/3/3          | consult, systems, note             | 本文読了・個別照合未実施                         |
+| 174 | `advance-directives`         | 3/3/3          | what, write, share                 | 本文読了・個別照合未実施                         |
+| 175 | `patient-rights`             | 3/3/3          | rights, records, trouble           | 本文読了・個別照合未実施                         |
+| 176 | `generic-drugs`              | 3/3/3          | what, switch, points               | 本文読了・個別照合未実施                         |
+| 177 | `insurance-card-guide`       | 3/3/3          | check, myna, trouble               | 本文読了／資格確認書の代替経路を記載             |
+| 178 | `nursing-care-certification` | 3/3/3          | apply, levels, plan                | 本文読了・個別照合未実施                         |
+| 179 | `driving-illness`            | 3/3/3          | effects, system, life              | 本文読了・個別照合未実施                         |
+| 180 | `work-injury-insurance`      | 3/3/3          | rousai, sick, steps                | R10 中                                           |
+| 181 | `medical-accident-system`    | 3/3/3          | system, family, consult            | 本文読了・個別照合未実施                         |
+| 182 | `drug-allergy-record`        | 3/3/3          | record, share, otc                 | 本文読了・個別照合未実施                         |
+| 183 | `vaccination-adult`          | 3/3/3          | types, check, after                | 本文読了・個別照合未実施                         |
+| 184 | `dental-visit-guide`         | 3/3/3          | first, plan, prevent               | 本文読了・個別照合未実施                         |
+| 185 | `assistive-devices`          | 3/3/3          | types, make, use                   | 本文読了・個別照合未実施                         |
+| 186 | `home-safety-elderly`        | 3/3/3          | risks, devices, body               | 本文読了・個別照合未実施                         |
+| 205 | `first-aid-basics`           | 3/3/3          | safety, bleed, learn               | 直接圧迫を赤十字で限定照合／原出典弱い           |
+| 206 | `medicine-storage`           | 3/3/3          | keep, expiry, leftover             | 本文読了・個別照合未実施                         |
 
 ### research — 33/33読了
 
-| # | slug | 節/段落/points | 読了した節ID | 判定・照合範囲 |
-|---|---|---|---|---|
-| 3 | `japanese-society-for-regenerative-medicine` | 5/11/3 | what-is-jsrm, history-and-activities, certification-system, law-and-safety-information, how-to-use-official-information | 改正法情報を限定照合／個人所属・資格未照会 |
-| 17 | `reading-research-news` | 3/3/3 | stage, results, source | 本文読了・個別照合未実施 |
-| 18 | `stages-of-research` | 3/6/3 | basic, preclinical, clinical | 本文読了・個別照合未実施 |
-| 19 | `evidence-levels` | 3/6/3 | hierarchy, checkpoints, accumulation | 本文読了・個別照合未実施 |
-| 20 | `approved-products-japan` | 3/6/3 | system, examples, caution | PMDA承認一覧と区分を限定照合／全添付文書未確認 |
-| 21 | `future-perspectives` | 3/6/3 | organoid, organs, personalized | 本文読了・個別照合未実施 |
-| 61 | `bench-to-bedside` | 3/3/3 | bridge, team, time | 本文読了・個別照合未実施 |
-| 62 | `randomized-trials` | 3/3/3 | random, blind, limits | 本文読了・個別照合未実施 |
-| 63 | `case-reports-registries` | 3/3/3 | cases, registry, use | 本文読了・個別照合未実施 |
-| 64 | `endpoints` | 3/3/3 | primary, surrogate, patient | 本文読了・個別照合未実施 |
-| 65 | `peer-review` | 3/3/3 | review, limits, preprint | 本文読了・個別照合未実施 |
-| 66 | `press-release-reading` | 3/3/3 | role, check, next | 本文読了・個別照合未実施 |
-| 67 | `statistics-intro` | 3/3/3 | n, ci, meaning | 本文読了・個別照合未実施 |
-| 68 | `conflict-of-interest` | 3/3/3 | disclosure, view, check | 本文読了・個別照合未実施 |
-| 69 | `overseas-research` | 3/3/3 | systems, tourism, japan | 本文読了・個別照合未実施 |
-| 70 | `negative-trials` | 3/3/3 | value, bias, next | 本文読了・個別照合未実施 |
-| 71 | `long-term-followup` | 3/3/3 | short-long, dropout, join | 本文読了・個別照合未実施 |
-| 72 | `how-to-find-trials` | 3/3/3 | db, criteria, doctor | 本文読了・個別照合未実施 |
-| 73 | `world-products` | 3/3/3 | primary, compare, news | 本文読了・個別照合未実施 |
-| 187 | `predatory-journals` | 3/3/3 | what, signs, check | 本文読了／原出典と判定基準の対応が弱い |
-| 188 | `retractions` | 3/3/3 | what, reasons, use | 本文読了・個別照合未実施 |
-| 189 | `open-access` | 3/3/3 | what, fee, use | 本文読了・個別照合未実施 |
-| 190 | `impact-factor` | 3/3/3 | what, limits, use | 本文読了・個別照合未実施 |
-| 191 | `guideline-reading` | 3/3/3 | grades, evidence, use | 本文読了・個別照合未実施 |
-| 192 | `package-insert` | 3/3/3 | sections, side, use | 本文読了・個別照合未実施 |
-| 193 | `rwd-basics` | 3/3/3 | what, roles, limits | 本文読了・個別照合未実施 |
-| 194 | `expanded-access` | 3/3/3 | what, trials, consider | 本文読了・個別照合未実施 |
-| 195 | `first-in-human` | 3/3/3 | purpose, design, join | 本文読了・個別照合未実施 |
-| 196 | `decentralized-trials` | 3/3/3 | what, merits, join | 本文読了・個別照合未実施 |
-| 197 | `basket-trials` | 3/3/3 | basket, umbrella, points | 本文読了・個別照合未実施 |
-| 198 | `digital-therapeutics` | 3/3/3 | what, drugs, use | 本文読了・個別照合未実施 |
-| 207 | `nobel-prize-guide` | 3/3/3 | prize, news, use | 本文読了・個別照合未実施 |
-| 208 | `science-events` | 3/3/3 | types, find, join | 本文読了・個別照合未実施 |
+| #   | slug                                         | 節/段落/points | 読了した節ID                                                                                                            | 判定・照合範囲                                 |
+| --- | -------------------------------------------- | -------------- | ----------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- |
+| 3   | `japanese-society-for-regenerative-medicine` | 5/11/3         | what-is-jsrm, history-and-activities, certification-system, law-and-safety-information, how-to-use-official-information | 改正法情報を限定照合／個人所属・資格未照会     |
+| 17  | `reading-research-news`                      | 3/3/3          | stage, results, source                                                                                                  | 本文読了・個別照合未実施                       |
+| 18  | `stages-of-research`                         | 3/6/3          | basic, preclinical, clinical                                                                                            | 本文読了・個別照合未実施                       |
+| 19  | `evidence-levels`                            | 3/6/3          | hierarchy, checkpoints, accumulation                                                                                    | 本文読了・個別照合未実施                       |
+| 20  | `approved-products-japan`                    | 3/6/3          | system, examples, caution                                                                                               | PMDA承認一覧と区分を限定照合／全添付文書未確認 |
+| 21  | `future-perspectives`                        | 3/6/3          | organoid, organs, personalized                                                                                          | 本文読了・個別照合未実施                       |
+| 61  | `bench-to-bedside`                           | 3/3/3          | bridge, team, time                                                                                                      | 本文読了・個別照合未実施                       |
+| 62  | `randomized-trials`                          | 3/3/3          | random, blind, limits                                                                                                   | 本文読了・個別照合未実施                       |
+| 63  | `case-reports-registries`                    | 3/3/3          | cases, registry, use                                                                                                    | 本文読了・個別照合未実施                       |
+| 64  | `endpoints`                                  | 3/3/3          | primary, surrogate, patient                                                                                             | 本文読了・個別照合未実施                       |
+| 65  | `peer-review`                                | 3/3/3          | review, limits, preprint                                                                                                | 本文読了・個別照合未実施                       |
+| 66  | `press-release-reading`                      | 3/3/3          | role, check, next                                                                                                       | 本文読了・個別照合未実施                       |
+| 67  | `statistics-intro`                           | 3/3/3          | n, ci, meaning                                                                                                          | 本文読了・個別照合未実施                       |
+| 68  | `conflict-of-interest`                       | 3/3/3          | disclosure, view, check                                                                                                 | 本文読了・個別照合未実施                       |
+| 69  | `overseas-research`                          | 3/3/3          | systems, tourism, japan                                                                                                 | 本文読了・個別照合未実施                       |
+| 70  | `negative-trials`                            | 3/3/3          | value, bias, next                                                                                                       | 本文読了・個別照合未実施                       |
+| 71  | `long-term-followup`                         | 3/3/3          | short-long, dropout, join                                                                                               | 本文読了・個別照合未実施                       |
+| 72  | `how-to-find-trials`                         | 3/3/3          | db, criteria, doctor                                                                                                    | 本文読了・個別照合未実施                       |
+| 73  | `world-products`                             | 3/3/3          | primary, compare, news                                                                                                  | 本文読了・個別照合未実施                       |
+| 187 | `predatory-journals`                         | 3/3/3          | what, signs, check                                                                                                      | 本文読了／原出典と判定基準の対応が弱い         |
+| 188 | `retractions`                                | 3/3/3          | what, reasons, use                                                                                                      | 本文読了・個別照合未実施                       |
+| 189 | `open-access`                                | 3/3/3          | what, fee, use                                                                                                          | 本文読了・個別照合未実施                       |
+| 190 | `impact-factor`                              | 3/3/3          | what, limits, use                                                                                                       | 本文読了・個別照合未実施                       |
+| 191 | `guideline-reading`                          | 3/3/3          | grades, evidence, use                                                                                                   | 本文読了・個別照合未実施                       |
+| 192 | `package-insert`                             | 3/3/3          | sections, side, use                                                                                                     | 本文読了・個別照合未実施                       |
+| 193 | `rwd-basics`                                 | 3/3/3          | what, roles, limits                                                                                                     | 本文読了・個別照合未実施                       |
+| 194 | `expanded-access`                            | 3/3/3          | what, trials, consider                                                                                                  | 本文読了・個別照合未実施                       |
+| 195 | `first-in-human`                             | 3/3/3          | purpose, design, join                                                                                                   | 本文読了・個別照合未実施                       |
+| 196 | `decentralized-trials`                       | 3/3/3          | what, merits, join                                                                                                      | 本文読了・個別照合未実施                       |
+| 197 | `basket-trials`                              | 3/3/3          | basket, umbrella, points                                                                                                | 本文読了・個別照合未実施                       |
+| 198 | `digital-therapeutics`                       | 3/3/3          | what, drugs, use                                                                                                        | 本文読了・個別照合未実施                       |
+| 207 | `nobel-prize-guide`                          | 3/3/3          | prize, news, use                                                                                                        | 本文読了・個別照合未実施                       |
+| 208 | `science-events`                             | 3/3/3          | types, find, join                                                                                                       | 本文読了・個別照合未実施                       |
 
 ## 統合担当による修正反映確認（2026-09-22）
 

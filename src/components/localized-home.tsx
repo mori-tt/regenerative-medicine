@@ -1,6 +1,16 @@
 import Link from "next/link";
-import { localizedCategoryName, localizedHome, type SiteLocale } from "@/content/locales";
-import { articles, availableCategories, categories, liveArticles, visibleArticles } from "@/content/articles";
+import {
+  localizedCategoryName,
+  localizedHome,
+  type SiteLocale,
+} from "@/content/locales";
+import {
+  articles,
+  availableCategories,
+  categories,
+  liveArticles,
+  visibleArticles,
+} from "@/content/articles";
 import { siteGraph } from "@/lib/structured-data";
 import { LocalizedArticleCard } from "./localized-article";
 import { JsonLd } from "./content";
@@ -12,7 +22,9 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
   const featuredHref = `/${locale}/guide/`;
   const latest = liveArticles(visibleArticles(articles)).slice(0, 4);
   const shownCategories = availableCategories();
-  const upcomingCategories = categories.filter((category) => !shownCategories.includes(category));
+  const upcomingCategories = categories.filter(
+    (category) => !shownCategories.includes(category),
+  );
   return (
     <div lang={en ? "en" : "zh-CN"} className="localized-page">
       <JsonLd data={siteGraph(locale)} />
@@ -22,7 +34,9 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
             <span /> {copy.eyebrow}
           </div>
           <h1>
-            {copy.title[0]}{en ? " " : ""}{copy.title[1]}
+            {copy.title[0]}
+            {en ? " " : ""}
+            {copy.title[1]}
             <br />
             <em>{copy.title[2]}</em>
           </h1>
@@ -57,7 +71,9 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
           </div>
           <span className="section-caption">{copy.topicCaption}</span>
         </div>
-        <div className={`category-grid${shownCategories.length < 5 ? " category-grid-few" : ""}`}>
+        <div
+          className={`category-grid${shownCategories.length < 5 ? " category-grid-few" : ""}`}
+        >
           {shownCategories.map((category, index) => (
             <Link
               href={`/${locale}/categories/${category.slug}/`}
@@ -85,7 +101,9 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
           <p className="category-upcoming">
             <strong>{en ? "Topics in preparation" : "筹备中的主题"}</strong>
             {upcomingCategories.map((category) => (
-              <span key={category.slug}>{localizedCategoryName(locale, category.slug)}</span>
+              <span key={category.slug}>
+                {localizedCategoryName(locale, category.slug)}
+              </span>
             ))}
           </p>
         )}
@@ -125,11 +143,17 @@ export function LocalizedHome({ locale }: { locale: SiteLocale }) {
             <Icon name="arrow" size={18} />
           </Link>
         </div>
-        <div className={`journal-layout${latest.length ? "" : " journal-layout-empty"}`}>
+        <div
+          className={`journal-layout${latest.length ? "" : " journal-layout-empty"}`}
+        >
           {latest.length > 0 && (
             <div className="article-grid">
               {latest.map((source) => (
-                <LocalizedArticleCard key={source.slug} source={source} locale={locale} />
+                <LocalizedArticleCard
+                  key={source.slug}
+                  source={source}
+                  locale={locale}
+                />
               ))}
             </div>
           )}

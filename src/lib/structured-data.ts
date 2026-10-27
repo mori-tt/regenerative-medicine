@@ -1,6 +1,17 @@
-import { absolute, localizedPath, site, siteNameFor, siteTaglineFor, type SiteLocaleCode } from "./site";
+import {
+  absolute,
+  localizedPath,
+  site,
+  siteNameFor,
+  siteTaglineFor,
+  type SiteLocaleCode,
+} from "./site";
 
-const inLanguage: Record<SiteLocaleCode, string> = { ja: "ja", en: "en", zh: "zh-CN" };
+const inLanguage: Record<SiteLocaleCode, string> = {
+  ja: "ja",
+  en: "en",
+  zh: "zh-CN",
+};
 
 /** 運営組織。全ページの publisher / author から同じ @id で参照する。 */
 export function organizationNode() {

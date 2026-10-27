@@ -1,7 +1,12 @@
 import type { ReactNode } from "react";
 import { InlineTerm } from "./inline-term";
 
-export type InlineTerm = { id: string; term: string; definition: string; matched?: string };
+export type InlineTerm = {
+  id: string;
+  term: string;
+  definition: string;
+  matched?: string;
+};
 
 function escapeRe(s: string) {
   return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
@@ -32,7 +37,10 @@ export function linkTerms(
     const surface = matched ?? term;
     if (surface.length < 2) continue;
     const isLatin = /^[A-Za-z][A-Za-z0-9 -]*$/.test(surface);
-    const re = new RegExp(isLatin ? `\\b${escapeRe(surface)}\\b` : escapeRe(surface), isLatin ? "i" : "");
+    const re = new RegExp(
+      isLatin ? `\\b${escapeRe(surface)}\\b` : escapeRe(surface),
+      isLatin ? "i" : "",
+    );
     let replaced = false;
     for (let i = 0; i < parts.length && !replaced; i++) {
       const seg = parts[i];
@@ -51,7 +59,12 @@ export function linkTerms(
           moreLabel={moreLabels[locale]}
         />
       );
-      parts.splice(i, 1, ...(before ? [before, node] : [node]), ...(after ? [after] : []));
+      parts.splice(
+        i,
+        1,
+        ...(before ? [before, node] : [node]),
+        ...(after ? [after] : []),
+      );
       used.add(id);
       replaced = true;
     }

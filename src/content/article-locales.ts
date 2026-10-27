@@ -8,7 +8,7 @@ function t(enTitle: string, enDesc: string, zhTitle: string, zhDesc: string) {
   return {
     en: { title: enTitle, description: enDesc },
     zh: { title: zhTitle, description: zhDesc },
-};
+  };
 }
 
 export const articleLocales: Record<
@@ -927,7 +927,7 @@ export const articleLocales: Record<
     "淋巴机制：水肿与免疫的通道",
     "整理与血管并行的另一循环。",
   ),
-  "microbiome": t(
+  microbiome: t(
     "Gut Bacteria and the Body: Living with Microbes",
     "Workings of trillions of gut bacteria and how to live with them.",
     "肠道细菌与身体：共生微生物的话题",
@@ -1035,7 +1035,7 @@ export const articleLocales: Record<
     "血管再生：补充不足的血流",
     "整理以闭塞性动脉疾病等为对象的血管再生思路。",
   ),
-  "bioprinting": t(
+  bioprinting: t(
     "3D Bioprinting: Printing Tissues",
     "Current status and challenges of building 3D tissues from cells.",
     "3D生物打印：打印组织",
@@ -1137,7 +1137,7 @@ export const articleLocales: Record<
     "掠夺性期刊是什么：粗劣杂志的辨别",
     "付费就登的杂志特点，以及论文质量的判断。",
   ),
-  "retractions": t(
+  retractions: t(
     "What Paper Retractions Are: Reading Withdrawal Reasons",
     "Meanings of withdrawn papers, and finding retraction information.",
     "论文撤回是什么：撤稿原因的读法",

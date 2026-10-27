@@ -2,7 +2,11 @@
 import { useEffect, useRef, useState } from "react";
 
 /** 読了プログレスバー + ページ上部へ戻るボタン + 目次の現在位置ハイライト */
-export function ReadingTools({ labelTop = "ページ上部へ戻る" }: { labelTop?: string }) {
+export function ReadingTools({
+  labelTop = "ページ上部へ戻る",
+}: {
+  labelTop?: string;
+}) {
   const barRef = useRef<HTMLDivElement>(null);
   const [showTop, setShowTop] = useState(false);
 
@@ -20,8 +24,14 @@ export function ReadingTools({ labelTop = "ページ上部へ戻る" }: { labelT
   }, []);
 
   useEffect(() => {
-    const links = [...document.querySelectorAll<HTMLAnchorElement>('.toc a[href^="#"]')];
-    const sections = [...document.querySelectorAll<HTMLElement>(".article-body section[id], .article-body [id]")];
+    const links = [
+      ...document.querySelectorAll<HTMLAnchorElement>('.toc a[href^="#"]'),
+    ];
+    const sections = [
+      ...document.querySelectorAll<HTMLElement>(
+        ".article-body section[id], .article-body [id]",
+      ),
+    ];
     if (!links.length || !sections.length) return;
     const byId = new Map(links.map((l) => [l.hash.slice(1), l]));
     const obs = new IntersectionObserver(

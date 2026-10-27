@@ -24,8 +24,13 @@ export function isReviewed(article: Article) {
  * （予約公開で publishAt=deployDate を使う場合）に crawlers が日付の
  * 前後関係を疑わないよう、dateModified は datePublished 以降に丸める。
  */
-export function articleDateModified(article: { updatedAt: string; publishedAt?: string }): string {
-  return article.publishedAt && article.updatedAt < article.publishedAt ? article.publishedAt : article.updatedAt;
+export function articleDateModified(article: {
+  updatedAt: string;
+  publishedAt?: string;
+}): string {
+  return article.publishedAt && article.updatedAt < article.publishedAt
+    ? article.publishedAt
+    : article.updatedAt;
 }
 
 /** 予約公開の基準日 (YYYY-MM-DD、日本時間)。プレビュー時は NEXT_PUBLIC_PREVIEW_DATE で上書き可。 */

@@ -24,7 +24,12 @@ export function LocalizedSearch({ locale }: { locale: SiteLocale }) {
   return (
     <div lang={locale === "en" ? "en" : "zh-CN"} className="localized-page">
       <div className="container inner-page">
-        <Breadcrumbs homeLabel={copy.home} homeHref={`/${locale}/`} locale={locale} items={[{ label: copy.crumb }]} />
+        <Breadcrumbs
+          homeLabel={copy.home}
+          homeHref={`/${locale}/`}
+          locale={locale}
+          items={[{ label: copy.crumb }]}
+        />
         <div className="page-heading">
           <span className="eyebrow">FIND YOUR NEXT READ</span>
           <h1>{copy.title}</h1>
@@ -33,7 +38,10 @@ export function LocalizedSearch({ locale }: { locale: SiteLocale }) {
         <ArticleSearch
           locale={locale}
           indexUrl={searchIndexPath(locale)}
-          categories={availableCategories().map((c) => ({ slug: c.slug, label: localizedCategoryName(locale, c.slug) }))}
+          categories={availableCategories().map((c) => ({
+            slug: c.slug,
+            label: localizedCategoryName(locale, c.slug),
+          }))}
         />
       </div>
     </div>

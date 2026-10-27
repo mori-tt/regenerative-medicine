@@ -33,7 +33,10 @@ export function LocalizedJsrmGuide({ locale }: { locale: SiteLocale }) {
             headline: copy.title,
             description: copy.description,
             inLanguage: en ? "en" : "zh-CN",
-            author: { "@type": "Organization", name: "Regenerative Medicine Guide" },
+            author: {
+              "@type": "Organization",
+              name: "Regenerative Medicine Guide",
+            },
             about: {
               "@type": "Organization",
               name: "Japanese Society for Regenerative Medicine",
@@ -42,7 +45,9 @@ export function LocalizedJsrmGuide({ locale }: { locale: SiteLocale }) {
         />
         <header className="jsrm-hero">
           <div>
-            <span className="eyebrow">JAPANESE SOCIETY FOR REGENERATIVE MEDICINE</span>
+            <span className="eyebrow">
+              JAPANESE SOCIETY FOR REGENERATIVE MEDICINE
+            </span>
             <h1>{copy.heroTitle}</h1>
             <p>{copy.heroBody}</p>
             <div className="jsrm-hero-actions">
@@ -137,7 +142,10 @@ export function LocalizedJsrmGuide({ locale }: { locale: SiteLocale }) {
               target="_blank"
               rel="noopener noreferrer"
             >
-              {copy.historyLink} <span><Icon name="arrow" size={20} /></span>
+              {copy.historyLink}{" "}
+              <span>
+                <Icon name="arrow" size={20} />
+              </span>
             </a>
           </div>
           <ol className="jsrm-timeline">
@@ -202,7 +210,10 @@ export function LocalizedJsrmGuide({ locale }: { locale: SiteLocale }) {
               target="_blank"
               rel="noopener noreferrer"
             >
-              {copy.lawLink} <span><Icon name="arrow" size={20} /></span>
+              {copy.lawLink}{" "}
+              <span>
+                <Icon name="arrow" size={20} />
+              </span>
             </a>
           </div>
         </section>
@@ -240,15 +251,24 @@ export function LocalizedJsrmGuide({ locale }: { locale: SiteLocale }) {
                   ["JSRM Official site", "https://www.jsrm.jp/"],
                   ["Prospectus", "https://www.jsrm.jp/whoweare/prospectus/"],
                   ["History", "https://www.jsrm.jp/whoweare/pastandpresent/"],
-                  ["Certification", "https://www.jsrm.jp/activity/certification/"],
-                  ["Regulatory information", "https://www.jsrm.jp/activity/regulatoryaffairs/"],
+                  [
+                    "Certification",
+                    "https://www.jsrm.jp/activity/certification/",
+                  ],
+                  [
+                    "Regulatory information",
+                    "https://www.jsrm.jp/activity/regulatoryaffairs/",
+                  ],
                 ]
               : [
                   ["日本再生医学学会官方网站", "https://www.jsrm.jp/"],
                   ["设立宗旨", "https://www.jsrm.jp/whoweare/prospectus/"],
                   ["沿革", "https://www.jsrm.jp/whoweare/pastandpresent/"],
                   ["认定制度", "https://www.jsrm.jp/activity/certification/"],
-                  ["新法相关信息", "https://www.jsrm.jp/activity/regulatoryaffairs/"],
+                  [
+                    "新法相关信息",
+                    "https://www.jsrm.jp/activity/regulatoryaffairs/",
+                  ],
                 ]
             ).map(([label, url]) => (
               <a key={url} href={url} target="_blank" rel="noopener noreferrer">
@@ -272,11 +292,11 @@ const sourceLabels: Record<SiteLocale, Record<string, string>> = {
     "日本再生医療学会：沿革": "JSRM: History",
     "日本再生医療学会：補償制度": "JSRM: Compensation",
     "日本再生医療学会：認定制度": "JSRM: Certification",
-    "監修者プロフィール": "Reviewer profile",
-    "設立趣旨": "Prospectus",
+    監修者プロフィール: "Reviewer profile",
+    設立趣旨: "Prospectus",
     "認定制度 FAQ": "Certification FAQ",
     "厚生労働省：再生医療": "MHLW: Regenerative medicine",
-    "学術事業": "Academic programs",
+    学術事業: "Academic programs",
     AMED: "AMED",
     JST: "JST",
   },
@@ -289,11 +309,11 @@ const sourceLabels: Record<SiteLocale, Record<string, string>> = {
     "日本再生医療学会：沿革": "学会：沿革",
     "日本再生医療学会：補償制度": "学会：补偿制度",
     "日本再生医療学会：認定制度": "学会：认定制度",
-    "監修者プロフィール": "审核者简介",
-    "設立趣旨": "设立宗旨",
+    監修者プロフィール: "审核者简介",
+    設立趣旨: "设立宗旨",
     "認定制度 FAQ": "认定制度 FAQ",
     "厚生労働省：再生医療": "厚生劳动省：再生医学",
-    "学術事業": "学术事业",
+    学術事業: "学术事业",
     AMED: "AMED",
     JST: "JST",
   },
@@ -315,9 +335,14 @@ export function LocalizedJsrmChapter({
   const source = jsrmChapters[index];
   const translated = jsrmChapterLocales[locale][slug];
   const previous = index > 0 ? jsrmChapters[index - 1] : undefined;
-  const next = index < jsrmChapters.length - 1 ? jsrmChapters[index + 1] : undefined;
-  const previousTitle = previous ? jsrmChapterLocales[locale][previous.slug]?.title ?? previous.title : "";
-  const nextTitle = next ? jsrmChapterLocales[locale][next.slug]?.title ?? next.title : "";
+  const next =
+    index < jsrmChapters.length - 1 ? jsrmChapters[index + 1] : undefined;
+  const previousTitle = previous
+    ? (jsrmChapterLocales[locale][previous.slug]?.title ?? previous.title)
+    : "";
+  const nextTitle = next
+    ? (jsrmChapterLocales[locale][next.slug]?.title ?? next.title)
+    : "";
   return (
     <div lang={en ? "en" : "zh-CN"} className="localized-page">
       <div className="container inner-page jsrm-chapter-page">
@@ -337,7 +362,10 @@ export function LocalizedJsrmChapter({
             headline: translated.title,
             description: translated.description,
             inLanguage: en ? "en" : "zh-CN",
-            author: { "@type": "Organization", name: "Regenerative Medicine Guide" },
+            author: {
+              "@type": "Organization",
+              name: "Regenerative Medicine Guide",
+            },
             about: {
               "@type": "Organization",
               name: "Japanese Society for Regenerative Medicine",
@@ -381,11 +409,17 @@ export function LocalizedJsrmChapter({
               </section>
             ))}
             <section className="jsrm-chapter-sources">
-              <h2>{en ? "Official information and references" : "官方信息与参考页面"}</h2>
+              <h2>
+                {en
+                  ? "Official information and references"
+                  : "官方信息与参考页面"}
+              </h2>
               {source.sources.map(([label, url]) =>
                 url.startsWith("/") ? (
                   <p key={url}>
-                    <Link href={`/${locale}${url}`}>{sourceLabelFor(locale, label)} →</Link>
+                    <Link href={`/${locale}${url}`}>
+                      {sourceLabelFor(locale, label)} →
+                    </Link>
                   </p>
                 ) : (
                   <p key={url}>
@@ -398,7 +432,10 @@ export function LocalizedJsrmChapter({
             </section>
           </article>
         </div>
-        <nav className="jsrm-chapter-pager" aria-label={en ? "Move between chapters" : "章节移动"}>
+        <nav
+          className="jsrm-chapter-pager"
+          aria-label={en ? "Move between chapters" : "章节移动"}
+        >
           {previous ? (
             <Link href={`/${locale}/jsrm/${previous.slug}/`}>
               <small>PREVIOUS</small>

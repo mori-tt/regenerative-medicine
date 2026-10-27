@@ -21,7 +21,10 @@ export default function SearchPage() {
       <ArticleSearch
         locale="ja"
         indexUrl={searchIndexPath("ja")}
-        categories={availableCategories().map((c) => ({ slug: c.slug, label: c.label }))}
+        categories={availableCategories().map((c) => ({
+          slug: c.slug,
+          label: c.label,
+        }))}
       />
     </div>
   );

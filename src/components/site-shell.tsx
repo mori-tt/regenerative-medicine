@@ -13,12 +13,22 @@ import { publication } from "@/lib/site-config";
 export function Logo({ locale = "ja" }: { locale?: UiLocale }) {
   const copy = locale === "ja" ? null : localizedShell[locale];
   return (
-    <Link href={`${localePrefix(locale)}/`} className={`logo ${locale === "en" ? "logo-en" : locale === "zh" ? "logo-zh" : ""}`} aria-label={copy?.logoAria || "再生医療ガイド ホーム"}>
+    <Link
+      href={`${localePrefix(locale)}/`}
+      className={`logo ${locale === "en" ? "logo-en" : locale === "zh" ? "logo-zh" : ""}`}
+      aria-label={copy?.logoAria || "再生医療ガイド ホーム"}
+    >
       <span className="logo-mark">
         <Icon name="cells" size={32} />
       </span>
       <span>
-        {copy ? copy.logoName : <>再生医療<span className="logo-light">ガイド</span></>}
+        {copy ? (
+          copy.logoName
+        ) : (
+          <>
+            再生医療<span className="logo-light">ガイド</span>
+          </>
+        )}
         <small>REGENERATIVE MEDICINE GUIDE</small>
       </span>
     </Link>
@@ -33,7 +43,9 @@ export function Header({ categorySlugs }: { categorySlugs?: string[] }) {
     <>
       <div className="topline">
         <div className="container">
-          <span>{copy?.tagline || "再生医療と幹細胞を、もっとわかりやすく。"}</span>
+          <span>
+            {copy?.tagline || "再生医療と幹細胞を、もっとわかりやすく。"}
+          </span>
           <span>
             {publication.showPreviewBanner
               ? copy?.preview || "出典を確認し、わかりやすく整理しています"
@@ -44,12 +56,36 @@ export function Header({ categorySlugs }: { categorySlugs?: string[] }) {
       <header className="site-header">
         <div className="container header-main">
           <Logo locale={locale} />
-          <nav className="header-links" aria-label={locale === "ja" ? "メインナビゲーション" : locale === "en" ? "Main navigation" : "主导航"}>
-            <Link href={path("guide")} aria-current={pathname === path("guide") ? "page" : undefined}>{copy?.guide || "はじめての方へ"}</Link>
-            <Link href={path("articles")} aria-current={pathname === path("articles") ? "page" : undefined}>{copy?.articles || "記事一覧"}</Link>
+          <nav
+            className="header-links"
+            aria-label={
+              locale === "ja"
+                ? "メインナビゲーション"
+                : locale === "en"
+                  ? "Main navigation"
+                  : "主导航"
+            }
+          >
+            <Link
+              href={path("guide")}
+              aria-current={pathname === path("guide") ? "page" : undefined}
+            >
+              {copy?.guide || "はじめての方へ"}
+            </Link>
+            <Link
+              href={path("articles")}
+              aria-current={pathname === path("articles") ? "page" : undefined}
+            >
+              {copy?.articles || "記事一覧"}
+            </Link>
           </nav>
           <CategoryDropdown slugs={categorySlugs} />
-          <Link className="search-link" href={path("search")} aria-label={copy?.searchAria || "記事を検索"} aria-current={pathname === path("search") ? "page" : undefined}>
+          <Link
+            className="search-link"
+            href={path("search")}
+            aria-label={copy?.searchAria || "記事を検索"}
+            aria-current={pathname === path("search") ? "page" : undefined}
+          >
             <Icon name="search" />
             <span>{copy?.search || "記事を探す"}</span>
           </Link>
@@ -70,18 +106,115 @@ export function Footer() {
         <div className="footer-main">
           <div>
             <Logo locale={locale} />
-            <p>{copy ? copy.footerLead.split("\n").map((line) => <span key={line}>{line}<br /></span>) : <>知ることから、はじまる選択。<br />再生医療とあなたをつなぐ、情報ガイド。</>}</p>
+            <p>
+              {copy ? (
+                copy.footerLead.split("\n").map((line) => (
+                  <span key={line}>
+                    {line}
+                    <br />
+                  </span>
+                ))
+              ) : (
+                <>
+                  知ることから、はじまる選択。
+                  <br />
+                  再生医療とあなたをつなぐ、情報ガイド。
+                </>
+              )}
+            </p>
           </div>
           <div className="footer-links">
-            <div className="footer-link-group"><strong>{locale === "ja" ? "読む" : locale === "en" ? "Read" : "阅读"}</strong><Link href={path("guide")}>{copy?.guide || "はじめての方へ"}</Link><Link href={path("articles")}> {copy?.articles || "記事一覧"}</Link><Link href={path("glossary")}>{copy?.glossary || "用語集"}</Link><Link href={path("faq")}>{copy?.faq || "よくある質問"}</Link></div>
-            <div className="footer-link-group"><strong>{locale === "ja" ? "信頼性" : locale === "en" ? "Trust" : "可信度"}</strong><Link href={path("editorial-policy")}>{copy?.editorial || "編集方針"}</Link><Link href={path("supervision")}>{copy?.supervision || "医師監修について"}</Link><Link href={path("sources")}>{copy?.sources || "情報源・参考サイト"}</Link><Link href={path("citations")}>{copy?.citations || "引用・転載"}</Link></div>
-            <div className="footer-link-group"><strong>{locale === "ja" ? "サイト案内" : locale === "en" ? "About" : "网站信息"}</strong><Link href={path("about")}>{copy?.about || "運営について"}</Link><Link href={path("updates")}>{copy?.updates || "更新情報"}</Link><Link href={path("contact")}>{copy?.contact || "お問い合わせ"}</Link><Link href={path("site-guide")}>{copy?.siteGuide || "サイトマップ"}</Link><Link href={path("advertising")}>{copy?.advertising || "広告掲載について"}</Link><a href={publicAsset(localizedPath("/feed.xml", locale))}>RSS</a></div>
-            <div className="footer-link-group"><strong>{locale === "ja" ? "法務・プライバシー" : locale === "en" ? "Legal" : "法律与隐私"}</strong><Link href={path("terms")}>{copy?.terms || "利用規約"}</Link><Link href={path("privacy")}>{copy?.privacy || "プライバシーポリシー"}</Link><Link href={path("disclaimer")}>{copy?.disclaimer || "利用上の注意"}</Link><Link href={path("corrections")}>{copy?.corrections || "訂正・更新の方針"}</Link><Link href={path("accessibility")}>{copy?.accessibility || "アクセシビリティ"}</Link><Link href={path("regulation")}>{copy?.regulation || "制度と法律"}</Link></div>
+            <div className="footer-link-group">
+              <strong>
+                {locale === "ja" ? "読む" : locale === "en" ? "Read" : "阅读"}
+              </strong>
+              <Link href={path("guide")}>
+                {copy?.guide || "はじめての方へ"}
+              </Link>
+              <Link href={path("articles")}>
+                {" "}
+                {copy?.articles || "記事一覧"}
+              </Link>
+              <Link href={path("glossary")}>{copy?.glossary || "用語集"}</Link>
+              <Link href={path("faq")}>{copy?.faq || "よくある質問"}</Link>
+            </div>
+            <div className="footer-link-group">
+              <strong>
+                {locale === "ja"
+                  ? "信頼性"
+                  : locale === "en"
+                    ? "Trust"
+                    : "可信度"}
+              </strong>
+              <Link href={path("editorial-policy")}>
+                {copy?.editorial || "編集方針"}
+              </Link>
+              <Link href={path("supervision")}>
+                {copy?.supervision || "医師監修について"}
+              </Link>
+              <Link href={path("sources")}>
+                {copy?.sources || "情報源・参考サイト"}
+              </Link>
+              <Link href={path("citations")}>
+                {copy?.citations || "引用・転載"}
+              </Link>
+            </div>
+            <div className="footer-link-group">
+              <strong>
+                {locale === "ja"
+                  ? "サイト案内"
+                  : locale === "en"
+                    ? "About"
+                    : "网站信息"}
+              </strong>
+              <Link href={path("about")}>{copy?.about || "運営について"}</Link>
+              <Link href={path("updates")}>{copy?.updates || "更新情報"}</Link>
+              <Link href={path("contact")}>
+                {copy?.contact || "お問い合わせ"}
+              </Link>
+              <Link href={path("site-guide")}>
+                {copy?.siteGuide || "サイトマップ"}
+              </Link>
+              <Link href={path("advertising")}>
+                {copy?.advertising || "広告掲載について"}
+              </Link>
+              <a href={publicAsset(localizedPath("/feed.xml", locale))}>RSS</a>
+            </div>
+            <div className="footer-link-group">
+              <strong>
+                {locale === "ja"
+                  ? "法務・プライバシー"
+                  : locale === "en"
+                    ? "Legal"
+                    : "法律与隐私"}
+              </strong>
+              <Link href={path("terms")}>{copy?.terms || "利用規約"}</Link>
+              <Link href={path("privacy")}>
+                {copy?.privacy || "プライバシーポリシー"}
+              </Link>
+              <Link href={path("disclaimer")}>
+                {copy?.disclaimer || "利用上の注意"}
+              </Link>
+              <Link href={path("corrections")}>
+                {copy?.corrections || "訂正・更新の方針"}
+              </Link>
+              <Link href={path("accessibility")}>
+                {copy?.accessibility || "アクセシビリティ"}
+              </Link>
+              <Link href={path("regulation")}>
+                {copy?.regulation || "制度と法律"}
+              </Link>
+            </div>
           </div>
         </div>
-        <p className="disclaimer">{copy?.footerDisclaimer || "本サイトは情報提供を目的としており、診断・治療の代わりとなるものではありません。治療については、医師にご相談ください。"}</p>
+        <p className="disclaimer">
+          {copy?.footerDisclaimer ||
+            "本サイトは情報提供を目的としており、診断・治療の代わりとなるものではありません。治療については、医師にご相談ください。"}
+        </p>
         <div className="footer-bottom">
-          <span>© 2026 {locale === "ja" ? site.name : copy?.logoName || site.name}</span>
+          <span>
+            © 2026 {locale === "ja" ? site.name : copy?.logoName || site.name}
+          </span>
           <span>KNOWLEDGE FOR YOUR NEXT STEP.</span>
         </div>
       </div>

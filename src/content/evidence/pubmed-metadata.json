@@ -12,17 +12,12 @@
     "journal": "The New England journal of medicine",
     "year": "1994",
     "doi": "10.1056/NEJM199410063311401",
-    "publicationTypes": [
-      "Journal Article",
-      "Research Support, Non-U.S. Gov't"
-    ],
+    "publicationTypes": ["Journal Article", "Research Support, Non-U.S. Gov't"],
     "checkedAt": "2026-09-25"
   },
   "8520830": {
     "title": "Infectious disease transmission through cell, tissue, and organ transplantation: reducing the risk through donor selection.",
-    "authors": [
-      "Eastlund T"
-    ],
+    "authors": ["Eastlund T"],
     "journal": "Cell transplantation",
     "year": "1995",
     "doi": "10.1177/096368979500400507",
@@ -35,11 +30,7 @@
   },
   "9676667": {
     "title": "Effect on the quality of peer review of blinding reviewers and asking them to sign their reports: a randomized controlled trial.",
-    "authors": [
-      "Godlee F",
-      "Gale CR",
-      "Martyn CN"
-    ],
+    "authors": ["Godlee F", "Gale CR", "Martyn CN"],
     "journal": "JAMA",
     "year": "1998",
     "doi": "10.1001/jama.280.3.237",
@@ -64,10 +55,7 @@
     "journal": "Science (New York, N.Y.)",
     "year": "1998",
     "doi": "10.1126/science.282.5391.1145",
-    "publicationTypes": [
-      "Journal Article",
-      "Research Support, Non-U.S. Gov't"
-    ],
+    "publicationTypes": ["Journal Article", "Research Support, Non-U.S. Gov't"],
     "checkedAt": "2026-09-25"
   },
   "11253156": {
@@ -164,40 +152,25 @@
   },
   "12962545": {
     "title": "A perfect correlate does not a surrogate make.",
-    "authors": [
-      "Baker SG",
-      "Kramer BS"
-    ],
+    "authors": ["Baker SG", "Kramer BS"],
     "journal": "BMC medical research methodology",
     "year": "2003",
     "doi": "10.1186/1471-2288-3-16",
-    "publicationTypes": [
-      "Journal Article"
-    ],
+    "publicationTypes": ["Journal Article"],
     "checkedAt": "2026-09-25"
   },
   "15169549": {
     "title": "The level of non-citation of articles within a journal as a measure of quality: a comparison to the impact factor.",
-    "authors": [
-      "Weale AR",
-      "Bailey M",
-      "Lear PA"
-    ],
+    "authors": ["Weale AR", "Bailey M", "Lear PA"],
     "journal": "BMC medical research methodology",
     "year": "2004",
     "doi": "10.1186/1471-2288-4-14",
-    "publicationTypes": [
-      "Comparative Study",
-      "Journal Article"
-    ],
+    "publicationTypes": ["Comparative Study", "Journal Article"],
     "checkedAt": "2026-09-25"
   },
   "15494428": {
     "title": "Human mesenchymal stem cells modulate allogeneic immune cell responses.",
-    "authors": [
-      "Aggarwal S",
-      "Pittenger MF"
-    ],
+    "authors": ["Aggarwal S", "Pittenger MF"],
     "journal": "Blood",
     "year": "2005",
     "doi": "10.1182/blood-2004-04-1559",
@@ -231,11 +204,7 @@
   },
   "15772165": {
     "title": "Low O2 tensions and the prevention of differentiation of hES cells.",
-    "authors": [
-      "Ezashi T",
-      "Das P",
-      "Roberts RM"
-    ],
+    "authors": ["Ezashi T", "Das P", "Roberts RM"],
     "journal": "Proceedings of the National Academy of Sciences of the United States of America",
     "year": "2005",
     "doi": "10.1073/pnas.0501283102",
@@ -248,10 +217,7 @@
   },
   "16619257": {
     "title": "Mesenchymal stem cells as trophic mediators.",
-    "authors": [
-      "Caplan AI",
-      "Dennis JE"
-    ],
+    "authors": ["Caplan AI", "Dennis JE"],
     "journal": "Journal of cellular biochemistry",
     "year": "2006",
     "doi": "10.1002/jcb.20886",
@@ -264,44 +230,25 @@
   },
   "16631879": {
     "title": "Tissue-engineered autologous bladders for patients needing cystoplasty.",
-    "authors": [
-      "Atala A",
-      "Bauer SB",
-      "Soker S",
-      "Yoo JJ",
-      "Retik AB"
-    ],
+    "authors": ["Atala A", "Bauer SB", "Soker S", "Yoo JJ", "Retik AB"],
     "journal": "Lancet (London, England)",
     "year": "2006",
     "doi": "10.1016/S0140-6736(06)68438-9",
-    "publicationTypes": [
-      "Journal Article"
-    ],
+    "publicationTypes": ["Journal Article"],
     "checkedAt": "2026-09-25"
   },
   "16904174": {
     "title": "Induction of pluripotent stem cells from mouse embryonic and adult fibroblast cultures by defined factors.",
-    "authors": [
-      "Takahashi K",
-      "Yamanaka S"
-    ],
+    "authors": ["Takahashi K", "Yamanaka S"],
     "journal": "Cell",
     "year": "2006",
     "doi": "10.1016/j.cell.2006.07.024",
-    "publicationTypes": [
-      "Journal Article",
-      "Research Support, Non-U.S. Gov't"
-    ],
+    "publicationTypes": ["Journal Article", "Research Support, Non-U.S. Gov't"],
     "checkedAt": "2026-09-25"
   },
   "16923388": {
     "title": "Matrix elasticity directs stem cell lineage specification.",
-    "authors": [
-      "Engler AJ",
-      "Sen S",
-      "Sweeney HL",
-      "Discher DE"
-    ],
+    "authors": ["Engler AJ", "Sen S", "Sweeney HL", "Discher DE"],
     "journal": "Cell",
     "year": "2006",
     "doi": "10.1016/j.cell.2006.06.044",
@@ -329,9 +276,7 @@
     "journal": "Cytotherapy",
     "year": "2006",
     "doi": "10.1080/14653240600855905",
-    "publicationTypes": [
-      "Journal Article"
-    ],
+    "publicationTypes": ["Journal Article"],
     "checkedAt": "2026-09-25"
   },
   "17828274": {
@@ -400,10 +345,7 @@
     "journal": "Cell",
     "year": "2007",
     "doi": "10.1016/j.cell.2007.11.019",
-    "publicationTypes": [
-      "Journal Article",
-      "Research Support, Non-U.S. Gov't"
-    ],
+    "publicationTypes": ["Journal Article", "Research Support, Non-U.S. Gov't"],
     "checkedAt": "2026-09-25"
   },
   "18199864": {
@@ -446,12 +388,7 @@
   },
   "19028920": {
     "title": "Paracrine mechanisms in adult stem cell signaling and therapy.",
-    "authors": [
-      "Gnecchi M",
-      "Zhang Z",
-      "Ni A",
-      "Dzau VJ"
-    ],
+    "authors": ["Gnecchi M", "Zhang Z", "Ni A", "Dzau VJ"],
     "journal": "Circulation research",
     "year": "2008",
     "doi": "10.1161/CIRCRESAHA.108.176826",
@@ -483,10 +420,7 @@
     "journal": "Cell",
     "year": "2008",
     "doi": "10.1016/j.cell.2008.10.048",
-    "publicationTypes": [
-      "Journal Article",
-      "Research Support, Non-U.S. Gov't"
-    ],
+    "publicationTypes": ["Journal Article", "Research Support, Non-U.S. Gov't"],
     "checkedAt": "2026-09-25"
   },
   "19099374": {
@@ -512,10 +446,7 @@
   },
   "19265660": {
     "title": "Mesenchymal stem cell homing: the devil is in the details.",
-    "authors": [
-      "Karp JM",
-      "Leng Teo GS"
-    ],
+    "authors": ["Karp JM", "Leng Teo GS"],
     "journal": "Cell stem cell",
     "year": "2009",
     "doi": "10.1016/j.stem.2009.02.001",
@@ -544,9 +475,7 @@
     "journal": "Nature",
     "year": "2009",
     "doi": "10.1038/nature07935",
-    "publicationTypes": [
-      "Journal Article"
-    ],
+    "publicationTypes": ["Journal Article"],
     "checkedAt": "2026-09-25"
   },
   "19342590": {
@@ -578,18 +507,11 @@
   },
   "19398828": {
     "title": "[Bone fracture and the healing mechanisms. Histological aspect of fracture healing. Primary and secondary healing].",
-    "authors": [
-      "Yamagiwa H",
-      "Endo N"
-    ],
+    "authors": ["Yamagiwa H", "Endo N"],
     "journal": "Clinical calcium",
     "year": "2009",
     "doi": "",
-    "publicationTypes": [
-      "English Abstract",
-      "Journal Article",
-      "Review"
-    ],
+    "publicationTypes": ["English Abstract", "Journal Article", "Review"],
     "checkedAt": "2026-09-25"
   },
   "19570514": {
@@ -647,10 +569,7 @@
     "journal": "The New England journal of medicine",
     "year": "2010",
     "doi": "10.1056/NEJMoa0905955",
-    "publicationTypes": [
-      "Journal Article",
-      "Research Support, Non-U.S. Gov't"
-    ],
+    "publicationTypes": ["Journal Article", "Research Support, Non-U.S. Gov't"],
     "checkedAt": "2026-09-25"
   },
   "20644535": {
@@ -729,10 +648,7 @@
     "journal": "Stem cell reviews and reports",
     "year": "2010",
     "doi": "10.1007/s12015-010-9184-8",
-    "publicationTypes": [
-      "Journal Article",
-      "Research Support, Non-U.S. Gov't"
-    ],
+    "publicationTypes": ["Journal Article", "Research Support, Non-U.S. Gov't"],
     "checkedAt": "2026-09-25"
   },
   "20887898": {
@@ -753,9 +669,7 @@
     "journal": "Cell",
     "year": "2010",
     "doi": "10.1016/j.cell.2010.09.016",
-    "publicationTypes": [
-      "Journal Article"
-    ],
+    "publicationTypes": ["Journal Article"],
     "checkedAt": "2026-09-25"
   },
   "21113151": {
@@ -775,9 +689,7 @@
     "journal": "Nature",
     "year": "2011",
     "doi": "10.1038/nature09637",
-    "publicationTypes": [
-      "Journal Article"
-    ],
+    "publicationTypes": ["Journal Article"],
     "checkedAt": "2026-09-25"
   },
   "21195583": {
@@ -802,9 +714,7 @@
     "journal": "Journal of clinical epidemiology",
     "year": "2011",
     "doi": "10.1016/j.jclinepi.2010.04.026",
-    "publicationTypes": [
-      "Journal Article"
-    ],
+    "publicationTypes": ["Journal Article"],
     "checkedAt": "2026-09-25"
   },
   "21208779": {
@@ -825,9 +735,7 @@
     "journal": "Journal of clinical epidemiology",
     "year": "2011",
     "doi": "10.1016/j.jclinepi.2010.07.015",
-    "publicationTypes": [
-      "Journal Article"
-    ],
+    "publicationTypes": ["Journal Article"],
     "checkedAt": "2026-09-25"
   },
   "21478862": {
@@ -862,11 +770,7 @@
   },
   "21828092": {
     "title": "An absolute requirement for Pax7-positive satellite cells in acute injury-induced skeletal muscle regeneration.",
-    "authors": [
-      "Lepper C",
-      "Partridge TA",
-      "Fan CM"
-    ],
+    "authors": ["Lepper C", "Partridge TA", "Fan CM"],
     "journal": "Development (Cambridge, England)",
     "year": "2011",
     "doi": "10.1242/dev.067595",
@@ -895,18 +799,12 @@
     "journal": "Development (Cambridge, England)",
     "year": "2011",
     "doi": "10.1242/dev.067587",
-    "publicationTypes": [
-      "Journal Article",
-      "Research Support, Non-U.S. Gov't"
-    ],
+    "publicationTypes": ["Journal Article", "Research Support, Non-U.S. Gov't"],
     "checkedAt": "2026-09-25"
   },
   "21937732": {
     "title": "Overview of the matrisome--an inventory of extracellular matrix constituents and functions.",
-    "authors": [
-      "Hynes RO",
-      "Naba A"
-    ],
+    "authors": ["Hynes RO", "Naba A"],
     "journal": "Cold Spring Harbor perspectives in biology",
     "year": "2012",
     "doi": "10.1101/cshperspect.a004903",
@@ -933,20 +831,12 @@
     "journal": "Nature biotechnology",
     "year": "2011",
     "doi": "10.1038/nbt.2005",
-    "publicationTypes": [
-      "Journal Article",
-      "Research Support, Non-U.S. Gov't"
-    ],
+    "publicationTypes": ["Journal Article", "Research Support, Non-U.S. Gov't"],
     "checkedAt": "2026-09-25"
   },
   "22281595": {
     "title": "Endothelial and perivascular cells maintain haematopoietic stem cells.",
-    "authors": [
-      "Ding L",
-      "Saunders TL",
-      "Enikolopov G",
-      "Morrison SJ"
-    ],
+    "authors": ["Ding L", "Saunders TL", "Enikolopov G", "Morrison SJ"],
     "journal": "Nature",
     "year": "2012",
     "doi": "10.1038/nature10783",
@@ -971,10 +861,7 @@
     "journal": "Tissue engineering. Part C, Methods",
     "year": "2012",
     "doi": "10.1089/ten.TEC.2011.0717",
-    "publicationTypes": [
-      "Journal Article",
-      "Research Support, Non-U.S. Gov't"
-    ],
+    "publicationTypes": ["Journal Article", "Research Support, Non-U.S. Gov't"],
     "checkedAt": "2026-09-25"
   },
   "22607825": {
@@ -1120,14 +1007,7 @@
   },
   "22696177": {
     "title": "Specification of midbrain dopamine neurons from primate pluripotent stem cells.",
-    "authors": [
-      "Xi J",
-      "Liu Y",
-      "Liu H",
-      "Chen H",
-      "Emborg ME",
-      "Zhang SC"
-    ],
+    "authors": ["Xi J", "Liu Y", "Liu H", "Chen H", "Emborg ME", "Zhang SC"],
     "journal": "Stem cells (Dayton, Ohio)",
     "year": "2012",
     "doi": "10.1002/stem.1152",
@@ -1152,25 +1032,16 @@
     "journal": "Journal of cell science",
     "year": "2012",
     "doi": "10.1242/jcs.108860",
-    "publicationTypes": [
-      "Journal Article",
-      "Research Support, Non-U.S. Gov't"
-    ],
+    "publicationTypes": ["Journal Article", "Research Support, Non-U.S. Gov't"],
     "checkedAt": "2026-09-25"
   },
   "23027971": {
     "title": "Misconduct accounts for the majority of retracted scientific publications.",
-    "authors": [
-      "Fang FC",
-      "Steen RG",
-      "Casadevall A"
-    ],
+    "authors": ["Fang FC", "Steen RG", "Casadevall A"],
     "journal": "Proceedings of the National Academy of Sciences of the United States of America",
     "year": "2012",
     "doi": "10.1073/pnas.1212247109",
-    "publicationTypes": [
-      "Journal Article"
-    ],
+    "publicationTypes": ["Journal Article"],
     "checkedAt": "2026-09-25"
   },
   "23056000": {
@@ -1189,9 +1060,7 @@
     "journal": "Frontiers in immunology",
     "year": "2012",
     "doi": "10.3389/fimmu.2012.00297",
-    "publicationTypes": [
-      "Journal Article"
-    ],
+    "publicationTypes": ["Journal Article"],
     "checkedAt": "2026-09-25"
   },
   "23117550": {
@@ -1288,10 +1157,7 @@
     "journal": "Cell stem cell",
     "year": "2013",
     "doi": "10.1016/j.stem.2012.09.013",
-    "publicationTypes": [
-      "Journal Article",
-      "Research Support, Non-U.S. Gov't"
-    ],
+    "publicationTypes": ["Journal Article", "Research Support, Non-U.S. Gov't"],
     "checkedAt": "2026-09-25"
   },
   "23172272": {
@@ -1331,9 +1197,7 @@
     "journal": "Cytotherapy",
     "year": "2013",
     "doi": "10.1016/j.jcyt.2013.02.006",
-    "publicationTypes": [
-      "Journal Article"
-    ],
+    "publicationTypes": ["Journal Article"],
     "checkedAt": "2026-09-25"
   },
   "23734061": {
@@ -1362,9 +1226,7 @@
     "journal": "Stem cells translational medicine",
     "year": "2013",
     "doi": "10.5966/sctm.2012-0187",
-    "publicationTypes": [
-      "Journal Article"
-    ],
+    "publicationTypes": ["Journal Article"],
     "checkedAt": "2026-09-25"
   },
   "23921127": {
@@ -1407,10 +1269,7 @@
     "journal": "Nature",
     "year": "2013",
     "doi": "10.1038/nature12517",
-    "publicationTypes": [
-      "Journal Article",
-      "Research Support, Non-U.S. Gov't"
-    ],
+    "publicationTypes": ["Journal Article", "Research Support, Non-U.S. Gov't"],
     "checkedAt": "2026-09-25"
   },
   "24237192": {
@@ -1427,10 +1286,7 @@
     "journal": "Journal of dietary supplements",
     "year": "2013",
     "doi": "10.3109/19390211.2013.830679",
-    "publicationTypes": [
-      "Consensus Statement",
-      "Journal Article"
-    ],
+    "publicationTypes": ["Consensus Statement", "Journal Article"],
     "checkedAt": "2026-09-25"
   },
   "24550124": {
@@ -1446,19 +1302,12 @@
     "journal": "Advanced materials (Deerfield Beach, Fla.)",
     "year": "2014",
     "doi": "10.1002/adma.201305506",
-    "publicationTypes": [
-      "Journal Article",
-      "Research Support, Non-U.S. Gov't"
-    ],
+    "publicationTypes": ["Journal Article", "Research Support, Non-U.S. Gov't"],
     "checkedAt": "2026-09-25"
   },
   "24630686": {
     "title": "Postprandial hypotension: a systematic review.",
-    "authors": [
-      "Trahair LG",
-      "Horowitz M",
-      "Jones KL"
-    ],
+    "authors": ["Trahair LG", "Horowitz M", "Jones KL"],
     "journal": "Journal of the American Medical Directors Association",
     "year": "2014",
     "doi": "10.1016/j.jamda.2014.01.011",
@@ -1471,17 +1320,11 @@
   },
   "25126378": {
     "title": "Osteogenic potential: Comparison between bone marrow and adipose-derived mesenchymal stem cells.",
-    "authors": [
-      "Liao HT",
-      "Chen CT"
-    ],
+    "authors": ["Liao HT", "Chen CT"],
     "journal": "World journal of stem cells",
     "year": "2014",
     "doi": "10.4252/wjsc.v6.i3.288",
-    "publicationTypes": [
-      "Journal Article",
-      "Review"
-    ],
+    "publicationTypes": ["Journal Article", "Review"],
     "checkedAt": "2026-09-25"
   },
   "25130492": {
@@ -1580,11 +1423,7 @@
   },
   "25473038": {
     "title": "Wound repair and regeneration: mechanisms, signaling, and translation.",
-    "authors": [
-      "Eming SA",
-      "Martin P",
-      "Tomic-Canic M"
-    ],
+    "authors": ["Eming SA", "Martin P", "Tomic-Canic M"],
     "journal": "Science translational medicine",
     "year": "2014",
     "doi": "10.1126/scitranslmed.3009337",
@@ -1707,18 +1546,12 @@
     "journal": "Nature",
     "year": "2015",
     "doi": "10.1038/nature15695",
-    "publicationTypes": [
-      "Journal Article",
-      "Research Support, Non-U.S. Gov't"
-    ],
+    "publicationTypes": ["Journal Article", "Research Support, Non-U.S. Gov't"],
     "checkedAt": "2026-09-25"
   },
   "26468230": {
     "title": "The hematopoietic stem cell niche in homeostasis and disease.",
-    "authors": [
-      "Calvi LM",
-      "Link DC"
-    ],
+    "authors": ["Calvi LM", "Link DC"],
     "journal": "Blood",
     "year": "2015",
     "doi": "10.1182/blood-2015-07-533588",
@@ -1754,10 +1587,7 @@
   },
   "26598661": {
     "title": "Regenerative medicine: Current therapies and future directions.",
-    "authors": [
-      "Mao AS",
-      "Mooney DJ"
-    ],
+    "authors": ["Mao AS", "Mooney DJ"],
     "journal": "Proceedings of the National Academy of Sciences of the United States of America",
     "year": "2015",
     "doi": "10.1073/pnas.1508520112",
@@ -1804,17 +1634,11 @@
   },
   "26753925": {
     "title": "Biodistribution, migration and homing of systemically applied mesenchymal stem/stromal cells.",
-    "authors": [
-      "Leibacher J",
-      "Henschler R"
-    ],
+    "authors": ["Leibacher J", "Henschler R"],
     "journal": "Stem cell research & therapy",
     "year": "2016",
     "doi": "10.1186/s13287-015-0271-2",
-    "publicationTypes": [
-      "Journal Article",
-      "Review"
-    ],
+    "publicationTypes": ["Journal Article", "Review"],
     "checkedAt": "2026-09-25"
   },
   "26898654": {
@@ -1830,20 +1654,12 @@
     "journal": "Current medicinal chemistry",
     "year": "2016",
     "doi": "10.2174/0929867323666160222113702",
-    "publicationTypes": [
-      "Journal Article",
-      "Review"
-    ],
+    "publicationTypes": ["Journal Article", "Review"],
     "checkedAt": "2026-09-25"
   },
   "26940231": {
     "title": "Taking cues from the extracellular matrix to design bone-mimetic regenerative scaffolds.",
-    "authors": [
-      "Curry AS",
-      "Pensa NW",
-      "Barlow AM",
-      "Bellis SL"
-    ],
+    "authors": ["Curry AS", "Pensa NW", "Barlow AM", "Bellis SL"],
     "journal": "Matrix biology : journal of the International Society for Matrix Biology",
     "year": "2016",
     "doi": "10.1016/j.matbio.2016.02.011",
@@ -1857,12 +1673,7 @@
   },
   "26951646": {
     "title": "Three-dimensional bioprinting of thick vascularized tissues.",
-    "authors": [
-      "Kolesky DB",
-      "Homan KA",
-      "Skylar-Scott MA",
-      "Lewis JA"
-    ],
+    "authors": ["Kolesky DB", "Homan KA", "Skylar-Scott MA", "Lewis JA"],
     "journal": "Proceedings of the National Academy of Sciences of the United States of America",
     "year": "2016",
     "doi": "10.1073/pnas.1521342113",
@@ -1875,10 +1686,7 @@
   },
   "26982353": {
     "title": "Macrophages in Tissue Repair, Regeneration, and Fibrosis.",
-    "authors": [
-      "Wynn TA",
-      "Vannella KM"
-    ],
+    "authors": ["Wynn TA", "Vannella KM"],
     "journal": "Immunity",
     "year": "2016",
     "doi": "10.1016/j.immuni.2016.02.015",
@@ -1891,10 +1699,7 @@
   },
   "26994063": {
     "title": "Using Big Data to Emulate a Target Trial When a Randomized Trial Is Not Available.",
-    "authors": [
-      "Hernán MA",
-      "Robins JM"
-    ],
+    "authors": ["Hernán MA", "Robins JM"],
     "journal": "American journal of epidemiology",
     "year": "2016",
     "doi": "10.1093/aje/kwv254",
@@ -1947,82 +1752,48 @@
     "journal": "European journal of epidemiology",
     "year": "2016",
     "doi": "10.1007/s10654-016-0149-3",
-    "publicationTypes": [
-      "Journal Article",
-      "Research Support, Non-U.S. Gov't"
-    ],
+    "publicationTypes": ["Journal Article", "Research Support, Non-U.S. Gov't"],
     "checkedAt": "2026-09-25"
   },
   "27236669": {
-  "title": "Paracrine Mechanisms of Mesenchymal Stem Cells in Tissue Repair.",
-  "authors": [
-   "Gnecchi M",
-   "Danieli P",
-   "Malpasso G",
-   "Ciuffreda MC"
-  ],
-  "journal": "Methods in molecular biology",
-  "year": "2016",
-  "doi": "10.1007/978-1-4939-3584-0_7",
-  "publicationTypes": [
-   "Journal Article",
-   "Review"
-  ],
-  "checkedAt": "2026-09-29"
- },
- "27502078": {
+    "title": "Paracrine Mechanisms of Mesenchymal Stem Cells in Tissue Repair.",
+    "authors": ["Gnecchi M", "Danieli P", "Malpasso G", "Ciuffreda MC"],
+    "journal": "Methods in molecular biology",
+    "year": "2016",
+    "doi": "10.1007/978-1-4939-3584-0_7",
+    "publicationTypes": ["Journal Article", "Review"],
+    "checkedAt": "2026-09-29"
+  },
+  "27502078": {
     "title": "Acute myocardial infarction.",
-    "authors": [
-      "Reed GW",
-      "Rossi JE",
-      "Cannon CP"
-    ],
+    "authors": ["Reed GW", "Rossi JE", "Cannon CP"],
     "journal": "Lancet (London, England)",
     "year": "2017",
     "doi": "10.1016/S0140-6736(16)30677-8",
-    "publicationTypes": [
-      "Journal Article",
-      "Review"
-    ],
+    "publicationTypes": ["Journal Article", "Review"],
     "checkedAt": "2026-09-25"
   },
   "27541692": {
     "title": "Revised Estimates for the Number of Human and Bacteria Cells in the Body.",
-    "authors": [
-      "Sender R",
-      "Fuchs S",
-      "Milo R"
-    ],
+    "authors": ["Sender R", "Fuchs S", "Milo R"],
     "journal": "PLoS biology",
     "year": "2016",
     "doi": "10.1371/journal.pbio.1002533",
-    "publicationTypes": [
-      "Journal Article",
-      "Research Support, Non-U.S. Gov't"
-    ],
+    "publicationTypes": ["Journal Article", "Research Support, Non-U.S. Gov't"],
     "checkedAt": "2026-09-25"
   },
   "28007647": {
     "title": "Rewiring the spinal cord: Direct and indirect strategies.",
-    "authors": [
-      "Dell'Anno MT",
-      "Strittmatter SM"
-    ],
+    "authors": ["Dell'Anno MT", "Strittmatter SM"],
     "journal": "Neuroscience letters",
     "year": "2017",
     "doi": "10.1016/j.neulet.2016.12.002",
-    "publicationTypes": [
-      "Journal Article",
-      "Review"
-    ],
+    "publicationTypes": ["Journal Article", "Review"],
     "checkedAt": "2026-09-25"
   },
   "28247342": {
     "title": "Muscle Stem Cells: A Model System for Adult Stem Cell Biology.",
-    "authors": [
-      "Cornelison D",
-      "Perdiguero E"
-    ],
+    "authors": ["Cornelison D", "Perdiguero E"],
     "journal": "Methods in molecular biology (Clifton, N.J.)",
     "year": "2017",
     "doi": "10.1007/978-1-4939-6771-1_1",
@@ -2151,25 +1922,16 @@
     "journal": "BMC medicine",
     "year": "2017",
     "doi": "10.1186/s12916-017-0785-9",
-    "publicationTypes": [
-      "Comparative Study",
-      "Journal Article"
-    ],
+    "publicationTypes": ["Comparative Study", "Journal Article"],
     "checkedAt": "2026-09-25"
   },
   "28315909": {
     "title": "A concise review of Hashimoto thyroiditis (HT) and the importance of iodine, selenium, vitamin D and gluten on the autoimmunity and dietary management of HT patients.Points that need more investigation.",
-    "authors": [
-      "Liontiris MI",
-      "Mazokopakis EE"
-    ],
+    "authors": ["Liontiris MI", "Mazokopakis EE"],
     "journal": "Hellenic journal of nuclear medicine",
     "year": "2017",
     "doi": "10.1967/s002449910507",
-    "publicationTypes": [
-      "Journal Article",
-      "Review"
-    ],
+    "publicationTypes": ["Journal Article", "Review"],
     "checkedAt": "2026-09-25"
   },
   "28316123": {
@@ -2185,10 +1947,7 @@
     "journal": "Stem cells (Dayton, Ohio)",
     "year": "2017",
     "doi": "10.1002/stem.2614",
-    "publicationTypes": [
-      "Journal Article",
-      "Review"
-    ],
+    "publicationTypes": ["Journal Article", "Review"],
     "checkedAt": "2026-09-25"
   },
   "28382727": {
@@ -2207,10 +1966,7 @@
     "journal": "Journal of tissue engineering and regenerative medicine",
     "year": "2018",
     "doi": "10.1002/term.2435",
-    "publicationTypes": [
-      "Journal Article",
-      "Research Support, Non-U.S. Gov't"
-    ],
+    "publicationTypes": ["Journal Article", "Research Support, Non-U.S. Gov't"],
     "checkedAt": "2026-09-25"
   },
   "28444181": {
@@ -2250,10 +2006,7 @@
     "journal": "The journals of gerontology. Series A, Biological sciences and medical sciences",
     "year": "2017",
     "doi": "10.1093/gerona/glx056",
-    "publicationTypes": [
-      "Clinical Trial",
-      "Journal Article"
-    ],
+    "publicationTypes": ["Clinical Trial", "Journal Article"],
     "checkedAt": "2026-09-25"
   },
   "28445466": {
@@ -2331,9 +2084,7 @@
     "journal": "BMJ (Clinical research ed.)",
     "year": "2017",
     "doi": "10.1136/bmj.j3453",
-    "publicationTypes": [
-      "Journal Article"
-    ],
+    "publicationTypes": ["Journal Article"],
     "checkedAt": "2026-09-25"
   },
   "28841158": {
@@ -2348,10 +2099,7 @@
     "journal": "International journal of molecular sciences",
     "year": "2017",
     "doi": "10.3390/ijms18091852",
-    "publicationTypes": [
-      "Journal Article",
-      "Review"
-    ],
+    "publicationTypes": ["Journal Article", "Review"],
     "checkedAt": "2026-09-25"
   },
   "28977399": {
@@ -2457,26 +2205,16 @@
   },
   "29523213": {
     "title": "Mesenchymal stem cell-derived extracellular vesicles: novel frontiers in regenerative medicine.",
-    "authors": [
-      "Keshtkar S",
-      "Azarpira N",
-      "Ghahremani MH"
-    ],
+    "authors": ["Keshtkar S", "Azarpira N", "Ghahremani MH"],
     "journal": "Stem cell research & therapy",
     "year": "2018",
     "doi": "10.1186/s13287-018-0791-7",
-    "publicationTypes": [
-      "Journal Article",
-      "Review"
-    ],
+    "publicationTypes": ["Journal Article", "Review"],
     "checkedAt": "2026-09-25"
   },
   "29557255": {
     "title": "Neural Mechanisms of Inflammation-Induced Fever.",
-    "authors": [
-      "Blomqvist A",
-      "Engblom D"
-    ],
+    "authors": ["Blomqvist A", "Engblom D"],
     "journal": "The Neuroscientist : a review journal bringing neurobiology, neurology and psychiatry",
     "year": "2018",
     "doi": "10.1177/1073858418760481",
@@ -2489,11 +2227,7 @@
   },
   "29870434": {
     "title": "Assessment of human leukocyte antigen immunogenicity: current methods, challenges and opportunities.",
-    "authors": [
-      "Copley HC",
-      "Elango M",
-      "Kosmoliaptsis V"
-    ],
+    "authors": ["Copley HC", "Elango M", "Kosmoliaptsis V"],
     "journal": "Current opinion in organ transplantation",
     "year": "2018",
     "doi": "10.1097/MOT.0000000000000544",
@@ -2518,18 +2252,12 @@
     "journal": "Stem cell research & therapy",
     "year": "2018",
     "doi": "10.1186/s13287-018-0914-1",
-    "publicationTypes": [
-      "Journal Article",
-      "Research Support, Non-U.S. Gov't"
-    ],
+    "publicationTypes": ["Journal Article", "Research Support, Non-U.S. Gov't"],
     "checkedAt": "2026-09-25"
   },
   "29933347": {
     "title": "Dehydration Impairs Cognitive Performance: A Meta-analysis.",
-    "authors": [
-      "Wittbrodt MT",
-      "Millard-Stafford M"
-    ],
+    "authors": ["Wittbrodt MT", "Millard-Stafford M"],
     "journal": "Medicine and science in sports and exercise",
     "year": "2018",
     "doi": "10.1249/MSS.0000000000001682",
@@ -2552,10 +2280,7 @@
     "journal": "BMJ open",
     "year": "2018",
     "doi": "10.1136/bmjopen-2017-021161",
-    "publicationTypes": [
-      "Journal Article",
-      "Systematic Review"
-    ],
+    "publicationTypes": ["Journal Article", "Systematic Review"],
     "checkedAt": "2026-09-25"
   },
   "30064455": {
@@ -2593,13 +2318,7 @@
   },
   "30132025": {
     "title": "Industry sponsorship and research outcome: systematic review with meta-analysis.",
-    "authors": [
-      "Lundh A",
-      "Lexchin J",
-      "Mintzes B",
-      "Schroll JB",
-      "Bero L"
-    ],
+    "authors": ["Lundh A", "Lexchin J", "Mintzes B", "Schroll JB", "Bero L"],
     "journal": "Intensive care medicine",
     "year": "2018",
     "doi": "10.1007/s00134-018-5293-7",
@@ -2650,10 +2369,7 @@
     "journal": "Brain circulation",
     "year": "2018",
     "doi": "10.4103/bc.bc_16_18",
-    "publicationTypes": [
-      "Journal Article",
-      "Review"
-    ],
+    "publicationTypes": ["Journal Article", "Review"],
     "checkedAt": "2026-09-25"
   },
   "30508922": {
@@ -2672,10 +2388,7 @@
     "journal": "Medicine",
     "year": "2018",
     "doi": "10.1097/MD.0000000000013313",
-    "publicationTypes": [
-      "Case Reports",
-      "Journal Article"
-    ],
+    "publicationTypes": ["Case Reports", "Journal Article"],
     "checkedAt": "2026-09-25"
   },
   "30571672": {
@@ -2694,24 +2407,16 @@
     "journal": "MMWR. Morbidity and mortality weekly report",
     "year": "2018",
     "doi": "10.15585/mmwr.mm6750a5",
-    "publicationTypes": [
-      "Case Reports",
-      "Journal Article"
-    ],
+    "publicationTypes": ["Case Reports", "Journal Article"],
     "checkedAt": "2026-09-25"
   },
   "30704681": {
     "title": "The Alzheimer's Disease Clinical Spectrum: Diagnosis and Management.",
-    "authors": [
-      "Atri A"
-    ],
+    "authors": ["Atri A"],
     "journal": "The Medical clinics of North America",
     "year": "2019",
     "doi": "10.1016/j.mcna.2018.10.009",
-    "publicationTypes": [
-      "Journal Article",
-      "Review"
-    ],
+    "publicationTypes": ["Journal Article", "Review"],
     "checkedAt": "2026-09-25"
   },
   "30801478": {
@@ -2720,10 +2425,7 @@
     "journal": "Obstetrics and gynecology",
     "year": "2019",
     "doi": "10.1097/AOG.0000000000003128",
-    "publicationTypes": [
-      "Journal Article",
-      "Practice Guideline"
-    ],
+    "publicationTypes": ["Journal Article", "Practice Guideline"],
     "checkedAt": "2026-09-25"
   },
   "31030981": {
@@ -2771,12 +2473,7 @@
   },
   "31543433": {
     "title": "Characteristics and clinical applications of Wharton's jelly-derived mesenchymal stromal cells.",
-    "authors": [
-      "Liau LL",
-      "Ruszymah BHI",
-      "Ng MH",
-      "Law JX"
-    ],
+    "authors": ["Liau LL", "Ruszymah BHI", "Ng MH", "Law JX"],
     "journal": "Current research in translational medicine",
     "year": "2020",
     "doi": "10.1016/j.retram.2019.09.001",
@@ -2790,11 +2487,7 @@
   },
   "31638686": {
     "title": "Diagnosis and Management of Dementia: Review.",
-    "authors": [
-      "Arvanitakis Z",
-      "Shah RC",
-      "Bennett DA"
-    ],
+    "authors": ["Arvanitakis Z", "Shah RC", "Bennett DA"],
     "journal": "JAMA",
     "year": "2019",
     "doi": "10.1001/jama.2019.4782",
@@ -2838,11 +2531,7 @@
   },
   "31988205": {
     "title": "Normal Hematopoiesis Is a Balancing Act of Self-Renewal and Regeneration.",
-    "authors": [
-      "Olson OC",
-      "Kang YA",
-      "Passegué E"
-    ],
+    "authors": ["Olson OC", "Kang YA", "Passegué E"],
     "journal": "Cold Spring Harbor perspectives in medicine",
     "year": "2020",
     "doi": "10.1101/cshperspect.a035519",
@@ -2875,10 +2564,7 @@
     "journal": "Scientific reports",
     "year": "2020",
     "doi": "10.1038/s41598-020-60466-9",
-    "publicationTypes": [
-      "Journal Article",
-      "Research Support, Non-U.S. Gov't"
-    ],
+    "publicationTypes": ["Journal Article", "Research Support, Non-U.S. Gov't"],
     "checkedAt": "2026-09-25"
   },
   "32142771": {
@@ -2901,10 +2587,7 @@
     "journal": "European journal of pharmacology",
     "year": "2020",
     "doi": "10.1016/j.ejphar.2020.173049",
-    "publicationTypes": [
-      "Journal Article",
-      "Review"
-    ],
+    "publicationTypes": ["Journal Article", "Review"],
     "checkedAt": "2026-09-25"
   },
   "32195370": {
@@ -2922,9 +2605,7 @@
     "journal": "NPJ digital medicine",
     "year": "2020",
     "doi": "10.1038/s41746-020-0243-5",
-    "publicationTypes": [
-      "Journal Article"
-    ],
+    "publicationTypes": ["Journal Article"],
     "checkedAt": "2026-09-25"
   },
   "32302218": {
@@ -2940,10 +2621,7 @@
     "journal": "The American journal of sports medicine",
     "year": "2021",
     "doi": "10.1177/0363546520909397",
-    "publicationTypes": [
-      "Journal Article",
-      "Systematic Review"
-    ],
+    "publicationTypes": ["Journal Article", "Systematic Review"],
     "checkedAt": "2026-09-25"
   },
   "32494013": {
@@ -2973,27 +2651,16 @@
   },
   "32613467": {
     "title": "Mesenchymal Stem Cells Attenuated Blood-Brain Barrier Disruption via Downregulation of Aquaporin-4 Expression in EAE Mice.",
-    "authors": [
-      "Liu Y",
-      "Ma Y",
-      "Du B",
-      "Wang Y",
-      "Yang GY",
-      "Bi X"
-    ],
+    "authors": ["Liu Y", "Ma Y", "Du B", "Wang Y", "Yang GY", "Bi X"],
     "journal": "Molecular neurobiology",
     "year": "2020",
     "doi": "10.1007/s12035-020-01998-z",
-    "publicationTypes": [
-      "Journal Article"
-    ],
+    "publicationTypes": ["Journal Article"],
     "checkedAt": "2026-09-25"
   },
   "32913098": {
     "title": "The GTEx Consortium atlas of genetic regulatory effects across human tissues.",
-    "authors": [
-      "GTEx Consortium"
-    ],
+    "authors": ["GTEx Consortium"],
     "journal": "Science (New York, N.Y.)",
     "year": "2020",
     "doi": "10.1126/science.aaz1776",
@@ -3026,20 +2693,11 @@
   },
   "33096812": {
     "title": "Platelet-Rich Plasma: New Performance Understandings and Therapeutic Considerations in 2020.",
-    "authors": [
-      "Everts P",
-      "Onishi K",
-      "Jayaram P",
-      "Lana JF",
-      "Mautner K"
-    ],
+    "authors": ["Everts P", "Onishi K", "Jayaram P", "Lana JF", "Mautner K"],
     "journal": "International journal of molecular sciences",
     "year": "2020",
     "doi": "10.3390/ijms21207794",
-    "publicationTypes": [
-      "Journal Article",
-      "Review"
-    ],
+    "publicationTypes": ["Journal Article", "Review"],
     "checkedAt": "2026-09-25"
   },
   "33221677": {
@@ -3085,10 +2743,7 @@
     "journal": "Stem cell research",
     "year": "2020",
     "doi": "10.1016/j.scr.2020.102066",
-    "publicationTypes": [
-      "Journal Article",
-      "Research Support, Non-U.S. Gov't"
-    ],
+    "publicationTypes": ["Journal Article", "Research Support, Non-U.S. Gov't"],
     "checkedAt": "2026-09-25"
   },
   "33283989": {
@@ -3193,25 +2848,16 @@
     "journal": "Frontiers in bioengineering and biotechnology",
     "year": "2020",
     "doi": "10.3389/fbioe.2020.610544",
-    "publicationTypes": [
-      "Journal Article",
-      "Review"
-    ],
+    "publicationTypes": ["Journal Article", "Review"],
     "checkedAt": "2026-09-25"
   },
   "33432173": {
     "title": "The distribution of cellular turnover in the human body.",
-    "authors": [
-      "Sender R",
-      "Milo R"
-    ],
+    "authors": ["Sender R", "Milo R"],
     "journal": "Nature medicine",
     "year": "2021",
     "doi": "10.1038/s41591-020-01182-9",
-    "publicationTypes": [
-      "Journal Article",
-      "Research Support, Non-U.S. Gov't"
-    ],
+    "publicationTypes": ["Journal Article", "Research Support, Non-U.S. Gov't"],
     "checkedAt": "2026-09-25"
   },
   "33579703": {
@@ -3232,10 +2878,7 @@
     "journal": "Science advances",
     "year": "2021",
     "doi": "10.1126/sciadv.abf1798",
-    "publicationTypes": [
-      "Journal Article",
-      "Research Support, Non-U.S. Gov't"
-    ],
+    "publicationTypes": ["Journal Article", "Research Support, Non-U.S. Gov't"],
     "checkedAt": "2026-09-25"
   },
   "33660551": {
@@ -3254,44 +2897,25 @@
     "journal": "Medical decision making : an international journal of the Society for Medical Decision Making",
     "year": "2021",
     "doi": "10.1177/0272989X21996328",
-    "publicationTypes": [
-      "Journal Article",
-      "Review"
-    ],
+    "publicationTypes": ["Journal Article", "Review"],
     "checkedAt": "2026-09-25"
   },
   "33673711": {
     "title": "Applications of Mesenchymal Stem Cells in Skin Regeneration and Rejuvenation.",
-    "authors": [
-      "Jo H",
-      "Brito S",
-      "Kwak BM",
-      "Park S",
-      "Lee MG",
-      "Bin BH"
-    ],
+    "authors": ["Jo H", "Brito S", "Kwak BM", "Park S", "Lee MG", "Bin BH"],
     "journal": "International journal of molecular sciences",
     "year": "2021",
     "doi": "10.3390/ijms22052410",
-    "publicationTypes": [
-      "Journal Article",
-      "Review"
-    ],
+    "publicationTypes": ["Journal Article", "Review"],
     "checkedAt": "2026-09-25"
   },
   "33724327": {
     "title": "Diagnosis and Management of Transient Ischemic Attack and Acute Ischemic Stroke: A Review.",
-    "authors": [
-      "Mendelson SJ",
-      "Prabhakaran S"
-    ],
+    "authors": ["Mendelson SJ", "Prabhakaran S"],
     "journal": "JAMA",
     "year": "2021",
     "doi": "10.1001/jama.2020.26867",
-    "publicationTypes": [
-      "Journal Article",
-      "Review"
-    ],
+    "publicationTypes": ["Journal Article", "Review"],
     "checkedAt": "2026-09-25"
   },
   "33782057": {
@@ -3353,20 +2977,12 @@
     "journal": "Nature",
     "year": "2021",
     "doi": "10.1038/s41586-021-03563-7",
-    "publicationTypes": [
-      "Journal Article",
-      "Research Support, Non-U.S. Gov't"
-    ],
+    "publicationTypes": ["Journal Article", "Research Support, Non-U.S. Gov't"],
     "checkedAt": "2026-09-25"
   },
   "34050618": {
     "title": "Allograft recognition by recipient's natural killer cells: Molecular mechanisms and role in transplant rejection.",
-    "authors": [
-      "Hamada S",
-      "Dubois V",
-      "Koenig A",
-      "Thaunat O"
-    ],
+    "authors": ["Hamada S", "Dubois V", "Koenig A", "Thaunat O"],
     "journal": "HLA",
     "year": "2021",
     "doi": "10.1111/tan.14332",
@@ -3379,17 +2995,11 @@
   },
   "34064624": {
     "title": "Adipose-Derived Mesenchymal Stem Cells (AD-MSCs) against Ultraviolet (UV) Radiation Effects and the Skin Photoaging.",
-    "authors": [
-      "Gentile P",
-      "Garcovich S"
-    ],
+    "authors": ["Gentile P", "Garcovich S"],
     "journal": "Biomedicines",
     "year": "2021",
     "doi": "10.3390/biomedicines9050532",
-    "publicationTypes": [
-      "Journal Article",
-      "Review"
-    ],
+    "publicationTypes": ["Journal Article", "Review"],
     "checkedAt": "2026-09-25"
   },
   "34095516": {
@@ -3427,9 +3037,7 @@
     "journal": "BMJ open science",
     "year": "2020",
     "doi": "10.1136/bmjos-2020-100115",
-    "publicationTypes": [
-      "Journal Article"
-    ],
+    "publicationTypes": ["Journal Article"],
     "checkedAt": "2026-09-25"
   },
   "34157093": {
@@ -3514,17 +3122,11 @@
   },
   "34218430": {
     "title": "Megakaryocyte Cytoskeletal Proteins in Platelet Biogenesis and Diseases.",
-    "authors": [
-      "Mbiandjeu S",
-      "Balduini A",
-      "Malara A"
-    ],
+    "authors": ["Mbiandjeu S", "Balduini A", "Malara A"],
     "journal": "Thrombosis and haemostasis",
     "year": "2022",
     "doi": "10.1055/s-0041-1731717",
-    "publicationTypes": [
-      "Journal Article"
-    ],
+    "publicationTypes": ["Journal Article"],
     "checkedAt": "2026-09-25"
   },
   "34256014": {
@@ -3575,18 +3177,12 @@
     "journal": "Frontiers in cell and developmental biology",
     "year": "2021",
     "doi": "10.3389/fcell.2021.709225",
-    "publicationTypes": [
-      "Journal Article"
-    ],
+    "publicationTypes": ["Journal Article"],
     "checkedAt": "2026-09-25"
   },
   "34440728": {
     "title": "Mesenchymal Stem Cell-Derived Exosomes: Applications in Regenerative Medicine.",
-    "authors": [
-      "Hade MD",
-      "Suire CN",
-      "Suo Z"
-    ],
+    "authors": ["Hade MD", "Suire CN", "Suo Z"],
     "journal": "Cells",
     "year": "2021",
     "doi": "10.3390/cells10081959",
@@ -3635,18 +3231,11 @@
   },
   "34675575": {
     "title": "Mesenchymal Stem Cell Secretome for Dermatology Application: A Review.",
-    "authors": [
-      "Damayanti RH",
-      "Rusdiana T",
-      "Wathoni N"
-    ],
+    "authors": ["Damayanti RH", "Rusdiana T", "Wathoni N"],
     "journal": "Clinical, cosmetic and investigational dermatology",
     "year": "2021",
     "doi": "10.2147/CCID.S331044",
-    "publicationTypes": [
-      "Journal Article",
-      "Review"
-    ],
+    "publicationTypes": ["Journal Article", "Review"],
     "checkedAt": "2026-09-25"
   },
   "34812863": {
@@ -3889,10 +3478,7 @@
     "journal": "Science (New York, N.Y.)",
     "year": "2022",
     "doi": "10.1126/science.abl4896",
-    "publicationTypes": [
-      "Journal Article",
-      "Research Support, Non-U.S. Gov't"
-    ],
+    "publicationTypes": ["Journal Article", "Research Support, Non-U.S. Gov't"],
     "checkedAt": "2026-09-25"
   },
   "35661856": {
@@ -3931,10 +3517,7 @@
     "journal": "JAMA",
     "year": "2022",
     "doi": "10.1001/jama.2022.9265",
-    "publicationTypes": [
-      "Journal Article",
-      "Randomized Controlled Trial"
-    ],
+    "publicationTypes": ["Journal Article", "Randomized Controlled Trial"],
     "checkedAt": "2026-09-25"
   },
   "35793128": {
@@ -3957,23 +3540,16 @@
     "journal": "JMIR research protocols",
     "year": "2022",
     "doi": "10.2196/37898",
-    "publicationTypes": [
-      "Journal Article"
-    ],
+    "publicationTypes": ["Journal Article"],
     "checkedAt": "2026-09-25"
   },
   "36396216": {
     "title": "Management of Acute Coronary Syndrome.",
-    "authors": [
-      "Atwood J"
-    ],
+    "authors": ["Atwood J"],
     "journal": "Emergency medicine clinics of North America",
     "year": "2022",
     "doi": "10.1016/j.emc.2022.06.008",
-    "publicationTypes": [
-      "Journal Article",
-      "Review"
-    ],
+    "publicationTypes": ["Journal Article", "Review"],
     "checkedAt": "2026-09-25"
   },
   "36599349": {
@@ -4034,9 +3610,7 @@
     "journal": "Breast care (Basel, Switzerland)",
     "year": "2023",
     "doi": "10.1159/000527849",
-    "publicationTypes": [
-      "Journal Article"
-    ],
+    "publicationTypes": ["Journal Article"],
     "checkedAt": "2026-09-25"
   },
   "36913992": {
@@ -4117,28 +3691,16 @@
     "journal": "Journal of cosmetic dermatology",
     "year": "2023",
     "doi": "10.1111/jocd.15872",
-    "publicationTypes": [
-      "Randomized Controlled Trial",
-      "Journal Article"
-    ],
+    "publicationTypes": ["Randomized Controlled Trial", "Journal Article"],
     "checkedAt": "2026-09-25"
   },
   "37475866": {
     "title": "The effect of cytokines on osteoblasts and osteoclasts in bone remodeling in osteoporosis: a review.",
-    "authors": [
-      "Xu J",
-      "Yu L",
-      "Liu F",
-      "Wan L",
-      "Deng Z"
-    ],
+    "authors": ["Xu J", "Yu L", "Liu F", "Wan L", "Deng Z"],
     "journal": "Frontiers in immunology",
     "year": "2023",
     "doi": "10.3389/fimmu.2023.1222129",
-    "publicationTypes": [
-      "Journal Article",
-      "Review"
-    ],
+    "publicationTypes": ["Journal Article", "Review"],
     "checkedAt": "2026-09-25"
   },
   "37493002": {
@@ -4178,9 +3740,7 @@
     "journal": "International journal of stem cells",
     "year": "2023",
     "doi": "10.15283/ijsc23062",
-    "publicationTypes": [
-      "Journal Article"
-    ],
+    "publicationTypes": ["Journal Article"],
     "checkedAt": "2026-09-25"
   },
   "37722043": {
@@ -4196,10 +3756,7 @@
     "journal": "Proceedings of the National Academy of Sciences of the United States of America",
     "year": "2023",
     "doi": "10.1073/pnas.2303077120",
-    "publicationTypes": [
-      "Journal Article",
-      "Research Support, Non-U.S. Gov't"
-    ],
+    "publicationTypes": ["Journal Article", "Research Support, Non-U.S. Gov't"],
     "checkedAt": "2026-09-25"
   },
   "37781295": {
@@ -4226,9 +3783,7 @@
     "journal": "Frontiers in cardiovascular medicine",
     "year": "2023",
     "doi": "10.3389/fcvm.2023.1182209",
-    "publicationTypes": [
-      "Journal Article"
-    ],
+    "publicationTypes": ["Journal Article"],
     "checkedAt": "2026-09-25"
   },
   "37919438": {
@@ -4272,18 +3827,11 @@
   },
   "38028356": {
     "title": "Methods and perceptions of success for patient recruitment in decentralized clinical studies.",
-    "authors": [
-      "Miyata BL",
-      "Tafuto B",
-      "Jose N"
-    ],
+    "authors": ["Miyata BL", "Tafuto B", "Jose N"],
     "journal": "Journal of clinical and translational science",
     "year": "2023",
     "doi": "10.1017/cts.2023.643",
-    "publicationTypes": [
-      "Journal Article",
-      "Review"
-    ],
+    "publicationTypes": ["Journal Article", "Review"],
     "checkedAt": "2026-09-25"
   },
   "38284415": {
@@ -4314,10 +3862,7 @@
     "journal": "The Cochrane database of systematic reviews",
     "year": "2024",
     "doi": "10.1002/14651858.CD001431.pub6",
-    "publicationTypes": [
-      "Systematic Review",
-      "Journal Article"
-    ],
+    "publicationTypes": ["Systematic Review", "Journal Article"],
     "checkedAt": "2026-09-25"
   },
   "38294084": {
@@ -4362,10 +3907,7 @@
     "journal": "The Journal of the American Academy of Orthopaedic Surgeons",
     "year": "2024",
     "doi": "10.5435/JAAOS-D-23-00957",
-    "publicationTypes": [
-      "Journal Article",
-      "Systematic Review"
-    ],
+    "publicationTypes": ["Journal Article", "Systematic Review"],
     "checkedAt": "2026-09-25"
   },
   "38326288": {
@@ -4448,9 +3990,7 @@
     "journal": "Journal of extracellular vesicles",
     "year": "2024",
     "doi": "10.1002/jev2.12404",
-    "publicationTypes": [
-      "Journal Article"
-    ],
+    "publicationTypes": ["Journal Article"],
     "checkedAt": "2026-09-25"
   },
   "38411408": {
@@ -4554,27 +4094,16 @@
     "journal": "Stroke",
     "year": "2024",
     "doi": "10.1161/STR.0000000000000475",
-    "publicationTypes": [
-      "Journal Article",
-      "Practice Guideline",
-      "Review"
-    ],
+    "publicationTypes": ["Journal Article", "Practice Guideline", "Review"],
     "checkedAt": "2026-09-25"
   },
   "39448132": {
     "title": "Postmenopausal Osteoporosis: A Review of Latest Guidelines.",
-    "authors": [
-      "Subarajan P",
-      "Arceo-Mendoza RM",
-      "Camacho PM"
-    ],
+    "authors": ["Subarajan P", "Arceo-Mendoza RM", "Camacho PM"],
     "journal": "Endocrinology and metabolism clinics of North America",
     "year": "2024",
     "doi": "10.1016/j.ecl.2024.08.008",
-    "publicationTypes": [
-      "Journal Article",
-      "Review"
-    ],
+    "publicationTypes": ["Journal Article", "Review"],
     "checkedAt": "2026-09-25"
   },
   "39609885": {
@@ -4598,41 +4127,25 @@
     "journal": "Stem cell research & therapy",
     "year": "2024",
     "doi": "10.1186/s13287-024-04078-4",
-    "publicationTypes": [
-      "Journal Article",
-      "Research Support, Non-U.S. Gov't"
-    ],
+    "publicationTypes": ["Journal Article", "Research Support, Non-U.S. Gov't"],
     "checkedAt": "2026-09-25"
   },
   "39701285": {
     "title": "Management Aspects of Medical Therapy in Graves Disease.",
-    "authors": [
-      "Shah R",
-      "Adamson SE",
-      "Jasim S"
-    ],
+    "authors": ["Shah R", "Adamson SE", "Jasim S"],
     "journal": "Endocrine practice : official journal of the American College of Endocrinology and the American Association of Clinical Endocrinologists",
     "year": "2025",
     "doi": "10.1016/j.eprac.2024.12.012",
-    "publicationTypes": [
-      "Journal Article",
-      "Review"
-    ],
+    "publicationTypes": ["Journal Article", "Review"],
     "checkedAt": "2026-09-25"
   },
   "39743230": {
     "title": "Mechanisms of allorecognition and xenorecognition in transplantation.",
-    "authors": [
-      "Yun IH",
-      "Yang J"
-    ],
+    "authors": ["Yun IH", "Yang J"],
     "journal": "Clinical transplantation and research",
     "year": "2024",
     "doi": "10.4285/ctr.24.0056",
-    "publicationTypes": [
-      "Journal Article",
-      "Review"
-    ],
+    "publicationTypes": ["Journal Article", "Review"],
     "checkedAt": "2026-09-25"
   },
   "40228833": {
@@ -4681,9 +4194,7 @@
     "journal": "BMJ (Clinical research ed.)",
     "year": "2025",
     "doi": "10.1136/bmj-2024-081123",
-    "publicationTypes": [
-      "Journal Article"
-    ],
+    "publicationTypes": ["Journal Article"],
     "checkedAt": "2026-09-25"
   },
   "40240591": {
@@ -4724,19 +4235,11 @@
   },
   "40252859": {
     "title": "Early Specialist Palliative Care in Patients with Metastatic Cancer: A Population-Based Cohort Study.",
-    "authors": [
-      "Guo L",
-      "LeBlanc TW",
-      "Smith CB",
-      "Morrison RS",
-      "Hua M"
-    ],
+    "authors": ["Guo L", "LeBlanc TW", "Smith CB", "Morrison RS", "Hua M"],
     "journal": "Journal of pain and symptom management",
     "year": "2025",
     "doi": "10.1016/j.jpainsymman.2025.04.005",
-    "publicationTypes": [
-      "Journal Article"
-    ],
+    "publicationTypes": ["Journal Article"],
     "checkedAt": "2026-09-25"
   },
   "40544428": {
@@ -4792,10 +4295,7 @@
     "journal": "Physical therapy",
     "year": "2026",
     "doi": "10.1093/ptj/pzag058",
-    "publicationTypes": [
-      "Journal Article",
-      "Practice Guideline"
-    ],
+    "publicationTypes": ["Journal Article", "Practice Guideline"],
     "checkedAt": "2026-09-25"
   }
 }

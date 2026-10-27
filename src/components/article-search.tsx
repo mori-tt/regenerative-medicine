@@ -1,7 +1,11 @@
 "use client";
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
-import type { SearchIndex, SearchIndexItem, SearchLocale } from "@/lib/search-index";
+import type {
+  SearchIndex,
+  SearchIndexItem,
+  SearchLocale,
+} from "@/lib/search-index";
 import { ArticleCard } from "./article-card";
 import { Icon } from "./visuals";
 
@@ -11,43 +15,73 @@ const copy = {
     placeholder: "キーワードで探す（例：幹細胞、費用）",
     filterLabel: "カテゴリで絞り込み",
     all: "すべて",
-    status: (n: number, q: string) => `${n}件の記事${q ? ` · 「${q}」の検索結果` : ""}`,
-    idle: (n: number) => `${n}件の記事を収録。キーワードかカテゴリで絞り込んでください。`,
+    status: (n: number, q: string) =>
+      `${n}件の記事${q ? ` · 「${q}」の検索結果` : ""}`,
+    idle: (n: number) =>
+      `${n}件の記事を収録。キーワードかカテゴリで絞り込んでください。`,
     loading: "記事データを読み込んでいます…",
-    error: "検索データを読み込めませんでした。ページを再読み込みするか、記事一覧からお探しください。",
+    error:
+      "検索データを読み込めませんでした。ページを再読み込みするか、記事一覧からお探しください。",
     terms: "関連する用語",
-    empty: ["条件に一致する記事は見つかりませんでした。", "別のキーワードでお試しください。"],
+    empty: [
+      "条件に一致する記事は見つかりませんでした。",
+      "別のキーワードでお試しください。",
+    ],
     popular: "よく検索されるキーワード：",
     byCategory: "カテゴリから探す：",
     clear: "検索条件をクリア",
-    noscript: "検索にはJavaScriptが必要です。記事一覧からもお探しいただけます。",
+    noscript:
+      "検索にはJavaScriptが必要です。記事一覧からもお探しいただけます。",
     articles: "記事一覧へ",
-    keywords: ["幹細胞", "iPS細胞", "エクソソーム", "費用", "副作用", "効果", "保険", "美容"],
+    keywords: [
+      "幹細胞",
+      "iPS細胞",
+      "エクソソーム",
+      "費用",
+      "副作用",
+      "効果",
+      "保険",
+      "美容",
+    ],
   },
   en: {
     inputLabel: "Enter keywords",
     placeholder: "Search by keyword (e.g. iPS, cost)",
     filterLabel: "Filter by category",
     all: "All",
-    status: (n: number, q: string) => `${n} articles${q ? ` · results for “${q}”` : ""}`,
-    idle: (n: number) => `${n} articles. Enter a keyword or pick a category to narrow down.`,
+    status: (n: number, q: string) =>
+      `${n} articles${q ? ` · results for “${q}”` : ""}`,
+    idle: (n: number) =>
+      `${n} articles. Enter a keyword or pick a category to narrow down.`,
     loading: "Loading articles…",
-    error: "The search data could not be loaded. Reload the page or browse the article list.",
+    error:
+      "The search data could not be loaded. Reload the page or browse the article list.",
     terms: "Related terms",
     empty: ["No articles matched your search.", "Try different keywords."],
     popular: "Popular keywords:",
     byCategory: "Browse by category:",
     clear: "Clear search",
-    noscript: "Search requires JavaScript. You can also browse the article list.",
+    noscript:
+      "Search requires JavaScript. You can also browse the article list.",
     articles: "All articles",
-    keywords: ["stem cells", "iPS cells", "exosomes", "cost", "safety", "efficacy", "insurance", "anti-aging"],
+    keywords: [
+      "stem cells",
+      "iPS cells",
+      "exosomes",
+      "cost",
+      "safety",
+      "efficacy",
+      "insurance",
+      "anti-aging",
+    ],
   },
   zh: {
     inputLabel: "输入关键词",
     placeholder: "关键词搜索（例如：干细胞、费用）",
     filterLabel: "按分类筛选",
     all: "全部",
-    status: (n: number, q: string) => `${n}篇文章${q ? ` · “${q}”的搜索结果` : ""}`,
+    status: (n: number, q: string) =>
+      `${n}篇文章${q ? ` · “${q}”的搜索结果` : ""}`,
     idle: (n: number) => `共收录${n}篇文章。请输入关键词或选择分类进行筛选。`,
     loading: "正在加载文章数据…",
     error: "无法加载搜索数据。请重新加载页面，或从文章列表查找。",
@@ -58,13 +92,26 @@ const copy = {
     clear: "清除搜索条件",
     noscript: "搜索功能需要 JavaScript。您也可以从文章列表查找。",
     articles: "文章列表",
-    keywords: ["干细胞", "iPS细胞", "外泌体", "费用", "安全性", "疗效", "保险", "抗衰老"],
+    keywords: [
+      "干细胞",
+      "iPS细胞",
+      "外泌体",
+      "费用",
+      "安全性",
+      "疗效",
+      "保险",
+      "抗衰老",
+    ],
   },
 } as const;
 
-type LoadState = { status: "loading" } | { status: "error" } | { status: "ready"; index: SearchIndex; lower: string[] };
+type LoadState =
+  | { status: "loading" }
+  | { status: "error" }
+  | { status: "ready"; index: SearchIndex; lower: string[] };
 
-const normalize = (value: string, locale: SearchLocale) => value.normalize("NFKC").toLocaleLowerCase(locale);
+const normalize = (value: string, locale: SearchLocale) =>
+  value.normalize("NFKC").toLocaleLowerCase(locale);
 
 export function ArticleSearch({
   locale,
@@ -92,10 +139,21 @@ export function ArticleSearch({
   useEffect(() => {
     const controller = new AbortController();
     fetch(indexUrl, { signal: controller.signal })
-      .then((res) => (res.ok ? (res.json() as Promise<SearchIndex>) : Promise.reject(new Error(String(res.status)))))
-      .then((index) => setState({ status: "ready", index, lower: index.items.map((item) => normalize(item.text, locale)) }))
+      .then((res) =>
+        res.ok
+          ? (res.json() as Promise<SearchIndex>)
+          : Promise.reject(new Error(String(res.status))),
+      )
+      .then((index) =>
+        setState({
+          status: "ready",
+          index,
+          lower: index.items.map((item) => normalize(item.text, locale)),
+        }),
+      )
       .catch((error: unknown) => {
-        if (!(error instanceof DOMException && error.name === "AbortError")) setState({ status: "error" });
+        if (!(error instanceof DOMException && error.name === "AbortError"))
+          setState({ status: "error" });
       });
     return () => controller.abort();
   }, [indexUrl, locale]);
@@ -107,19 +165,33 @@ export function ArticleSearch({
     const url = new URL(window.location.href);
     if (query.trim()) url.searchParams.set("q", query.trim());
     else url.searchParams.delete("q");
-    if (url.href !== window.location.href) window.history.replaceState(null, "", url);
+    if (url.href !== window.location.href)
+      window.history.replaceState(null, "", url);
   }, [query, restored]);
 
-  const terms = useMemo(() => normalize(query, locale).trim().split(/\s+/).filter(Boolean), [query, locale]);
+  const terms = useMemo(
+    () => normalize(query, locale).trim().split(/\s+/).filter(Boolean),
+    [query, locale],
+  );
   // 初期表示では記事を出さない。キーワード入力かカテゴリ選択の後にだけ結果を表示する。
   const hasConditions = terms.length > 0 || category !== "all";
   const { results, termHits } = useMemo(() => {
-    if (state.status !== "ready") return { results: [] as SearchIndexItem[], termHits: [] as SearchIndex["terms"] };
+    if (state.status !== "ready")
+      return {
+        results: [] as SearchIndexItem[],
+        termHits: [] as SearchIndex["terms"],
+      };
     return {
       results: state.index.items.filter(
-        (item, i) => (category === "all" || item.category === category) && terms.every((t) => state.lower[i].includes(t)),
+        (item, i) =>
+          (category === "all" || item.category === category) &&
+          terms.every((t) => state.lower[i].includes(t)),
       ),
-      termHits: terms.length ? state.index.terms.filter((g) => terms.every((t) => g.keywords.includes(t))) : [],
+      termHits: terms.length
+        ? state.index.terms.filter((g) =>
+            terms.every((t) => g.keywords.includes(t)),
+          )
+        : [],
     };
   }, [state, category, terms]);
 
@@ -128,7 +200,12 @@ export function ArticleSearch({
       <p className="search-suggest-label">{text.popular}</p>
       <div className="kw-chips">
         {text.keywords.map((kw) => (
-          <button key={kw} type="button" className="kw-chip" onClick={() => setQuery(kw)}>
+          <button
+            key={kw}
+            type="button"
+            className="kw-chip"
+            onClick={() => setQuery(kw)}
+          >
             {kw}
           </button>
         ))}
@@ -136,7 +213,11 @@ export function ArticleSearch({
       <p className="search-suggest-label">{text.byCategory}</p>
       <div className="kw-chips">
         {categories.map((c) => (
-          <Link key={c.slug} className="kw-chip" href={`${prefix}/categories/${c.slug}/`}>
+          <Link
+            key={c.slug}
+            className="kw-chip"
+            href={`${prefix}/categories/${c.slug}/`}
+          >
             {c.label}
           </Link>
         ))}
@@ -172,10 +253,16 @@ export function ArticleSearch({
       </div>
       <noscript>
         <p className="search-status">
-          {text.noscript} <Link href={`${prefix}/articles/`}>{text.articles} →</Link>
+          {text.noscript}{" "}
+          <Link href={`${prefix}/articles/`}>{text.articles} →</Link>
         </p>
       </noscript>
-      <p className="search-status" role="status" aria-live="polite" aria-busy={state.status === "loading"}>
+      <p
+        className="search-status"
+        role="status"
+        aria-live="polite"
+        aria-busy={state.status === "loading"}
+      >
         {state.status === "loading"
           ? text.loading
           : state.status === "error"

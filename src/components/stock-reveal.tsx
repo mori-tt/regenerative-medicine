@@ -5,7 +5,8 @@ import { ArticleCard, type ArticleCardData } from "./article-card";
 
 const copy = {
   ja: {
-    lead: (n: number) => `このカテゴリには、監修・校閲前の確認用ストックが ${n} 本あります。`,
+    lead: (n: number) =>
+      `このカテゴリには、監修・校閲前の確認用ストックが ${n} 本あります。`,
     open: (n: number) => `公開前のストック ${n} 本を確認する`,
     close: "ストックを閉じる",
     note: "※ ストック記事は本番の公開モードでは表示されず、検索対象にも含まれません。",
@@ -36,9 +37,13 @@ const copy = {
 type StockParams = { open: boolean; featuredOnly: boolean };
 
 function readStockParam(): StockParams {
-  if (typeof window === "undefined") return { open: false, featuredOnly: false };
+  if (typeof window === "undefined")
+    return { open: false, featuredOnly: false };
   const v = new URLSearchParams(window.location.search).get("stock");
-  return { open: v === "1" || v === "featured", featuredOnly: v === "featured" };
+  return {
+    open: v === "1" || v === "featured",
+    featuredOnly: v === "featured",
+  };
 }
 
 /**
@@ -56,7 +61,10 @@ export function StockReveal({
   featured: boolean[];
   badgeLabel?: string;
 }) {
-  const [state, setState] = useState<StockParams>({ open: false, featuredOnly: false });
+  const [state, setState] = useState<StockParams>({
+    open: false,
+    featuredOnly: false,
+  });
   const panelId = useId();
   const c = copy[locale];
   const featuredCount = featured.filter(Boolean).length;
@@ -68,14 +76,20 @@ export function StockReveal({
   const update = (next: StockParams) => {
     setState(next);
     const url = new URL(window.location.href);
-    if (next.open) url.searchParams.set("stock", next.featuredOnly ? "featured" : "1");
+    if (next.open)
+      url.searchParams.set("stock", next.featuredOnly ? "featured" : "1");
     else url.searchParams.delete("stock");
     window.history.replaceState(null, "", url);
   };
 
   if (cards.length === 0) return null;
-  const items = cards.map((data, index) => ({ data, isFeatured: featured[index] ?? false }));
-  const shown = state.featuredOnly ? items.filter((item) => item.isFeatured) : items;
+  const items = cards.map((data, index) => ({
+    data,
+    isFeatured: featured[index] ?? false,
+  }));
+  const shown = state.featuredOnly
+    ? items.filter((item) => item.isFeatured)
+    : items;
   const badge = badgeLabel ?? c.badge;
 
   return (
@@ -104,15 +118,23 @@ export function StockReveal({
                   type="button"
                   className={`featured-toggle${state.featuredOnly ? " active" : ""}`}
                   aria-pressed={state.featuredOnly}
-                  onClick={() => update({ ...state, featuredOnly: !state.featuredOnly })}
+                  onClick={() =>
+                    update({ ...state, featuredOnly: !state.featuredOnly })
+                  }
                 >
-                  {state.featuredOnly ? c.all(cards.length) : c.featured(featuredCount)}
+                  {state.featuredOnly
+                    ? c.all(cards.length)
+                    : c.featured(featuredCount)}
                 </button>
               </div>
             )}
             <div className="listing-grid">
               {shown.map(({ data, isFeatured }) => (
-                <ArticleCard key={data.slug} article={data} badge={isFeatured ? badge : undefined} />
+                <ArticleCard
+                  key={data.slug}
+                  article={data}
+                  badge={isFeatured ? badge : undefined}
+                />
               ))}
             </div>
           </>

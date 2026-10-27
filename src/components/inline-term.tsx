@@ -25,13 +25,15 @@ export function InlineTerm({ text, term, definition, href, moreLabel }: Props) {
   useEffect(() => {
     if (!open) return;
     const onPointerDown = (event: PointerEvent) => {
-      if (ref.current && !ref.current.contains(event.target as Node)) setOpen(false);
+      if (ref.current && !ref.current.contains(event.target as Node))
+        setOpen(false);
     };
     const onKey = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
         setOpen(false);
         // ポップ内にフォーカスがあればトリガーへ戻す
-        const trigger = ref.current?.querySelector<HTMLButtonElement>(".term-button");
+        const trigger =
+          ref.current?.querySelector<HTMLButtonElement>(".term-button");
         const pop = ref.current?.querySelector(".term-pop");
         if (pop?.contains(document.activeElement)) trigger?.focus();
       }
@@ -52,7 +54,10 @@ export function InlineTerm({ text, term, definition, href, moreLabel }: Props) {
       if (rect.left + dx < margin) dx = margin - rect.left;
       if (dx) pop.style.transform = `translateX(${dx}px)`;
       const wrapRect = ref.current.getBoundingClientRect();
-      if (rect.bottom > window.innerHeight - margin && wrapRect.top - rect.height - 16 > margin) {
+      if (
+        rect.bottom > window.innerHeight - margin &&
+        wrapRect.top - rect.height - 16 > margin
+      ) {
         pop.classList.add("term-pop-up");
       }
     }
@@ -64,9 +69,13 @@ export function InlineTerm({ text, term, definition, href, moreLabel }: Props) {
   }, [open]);
 
   return (
-    <span ref={ref} className="term-wrap" onBlur={(event) => {
-      if (!event.currentTarget.contains(event.relatedTarget)) setOpen(false);
-    }}>
+    <span
+      ref={ref}
+      className="term-wrap"
+      onBlur={(event) => {
+        if (!event.currentTarget.contains(event.relatedTarget)) setOpen(false);
+      }}
+    >
       <button
         type="button"
         className="term-link term-button"
@@ -78,9 +87,18 @@ export function InlineTerm({ text, term, definition, href, moreLabel }: Props) {
         {text}
       </button>
       {open && (
-        <span className="term-pop" role="region" id={popId} aria-labelledby={`${popId}-title`}>
-          <b className="term-pop-title" id={`${popId}-title`}>{term}</b>
-          <span className="term-pop-def" id={`${popId}-definition`}>{definition}</span>
+        <span
+          className="term-pop"
+          role="region"
+          id={popId}
+          aria-labelledby={`${popId}-title`}
+        >
+          <b className="term-pop-title" id={`${popId}-title`}>
+            {term}
+          </b>
+          <span className="term-pop-def" id={`${popId}-definition`}>
+            {definition}
+          </span>
           <Link className="term-pop-link" href={href}>
             {moreLabel} →
           </Link>

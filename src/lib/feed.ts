@@ -1,17 +1,41 @@
-import { articles, categoryFor, isReviewed, isVisibleArticle, publishBaseDate } from "@/content/articles";
+import {
+  articles,
+  categoryFor,
+  isReviewed,
+  isVisibleArticle,
+  publishBaseDate,
+} from "@/content/articles";
 import { localizedArticleFor } from "@/components/localized-article";
 import { localizedHome, type SiteLocale } from "@/content/locales";
-import { absolute, localizedPath, site, siteNameFor, type SiteLocaleCode } from "@/lib/site";
+import {
+  absolute,
+  localizedPath,
+  site,
+  siteNameFor,
+  type SiteLocaleCode,
+} from "@/lib/site";
 
 const escapeXml = (value: string) =>
-  value.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&apos;");
+  value
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&apos;");
 
-const rfc822 = (date: string) => new Date(`${date}T00:00:00+09:00`).toUTCString();
+const rfc822 = (date: string) =>
+  new Date(`${date}T00:00:00+09:00`).toUTCString();
 
-const feedLanguage: Record<SiteLocaleCode, string> = { ja: "ja", en: "en", zh: "zh-cn" };
+const feedLanguage: Record<SiteLocaleCode, string> = {
+  ja: "ja",
+  en: "en",
+  zh: "zh-cn",
+};
 
 const channelDescription = (locale: SiteLocaleCode) =>
-  locale === "ja" ? site.description : localizedHome[locale as SiteLocale].intro;
+  locale === "ja"
+    ? site.description
+    : localizedHome[locale as SiteLocale].intro;
 
 /**
  * 公開中かつ監修済みの記事だけを載せる RSS フィード（サイトマップと同じ掲載条件）。
@@ -22,10 +46,17 @@ export function buildFeedXml(locale: SiteLocaleCode = "ja"): string {
   const updated = publishBaseDate();
   const items = listed
     .map((article) => {
-      const text = locale === "ja"
-        ? { title: article.title, description: article.description, category: categoryFor(article.category).label }
-        : localizedArticleFor(locale as SiteLocale, article);
-      const link = absolute(localizedPath(`/articles/${article.slug}/`, locale));
+      const text =
+        locale === "ja"
+          ? {
+              title: article.title,
+              description: article.description,
+              category: categoryFor(article.category).label,
+            }
+          : localizedArticleFor(locale as SiteLocale, article);
+      const link = absolute(
+        localizedPath(`/articles/${article.slug}/`, locale),
+      );
       return `    <item>
       <title>${escapeXml(text.title)}</title>
       <link>${escapeXml(link)}</link>

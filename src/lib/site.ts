@@ -4,11 +4,14 @@ import rawConfig from "@/content/site-config.json";
 
 const configuredUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://example.com";
 const parsedUrl = new URL(configuredUrl);
-export const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? (process.env.GITHUB_PAGES === "true" ? "/regenerative-medicine" : "");
+export const basePath =
+  process.env.NEXT_PUBLIC_BASE_PATH ??
+  (process.env.GITHUB_PAGES === "true" ? "/regenerative-medicine" : "");
 export const indexable = process.env.NEXT_PUBLIC_SITE_INDEXABLE === "true";
 export const publiclyIndexable = indexable && publication.mode === "production";
 // 英語・中国語ページは翻訳・医学用語・監修範囲を確認した後に個別に検索公開する。
-export const localizedIndexable = process.env.NEXT_PUBLIC_LOCALIZED_INDEXABLE === "true";
+export const localizedIndexable =
+  process.env.NEXT_PUBLIC_LOCALIZED_INDEXABLE === "true";
 if (parsedUrl.pathname !== "/" || parsedUrl.search || parsedUrl.hash) {
   throw new Error(
     "NEXT_PUBLIC_SITE_URL はドメインのルートURLを指定してください。",
@@ -34,7 +37,8 @@ export const site = {
   operatorName: process.env.NEXT_PUBLIC_OPERATOR_NAME || "",
   operatorAddress: process.env.NEXT_PUBLIC_OPERATOR_ADDRESS || "",
   editorName: process.env.NEXT_PUBLIC_EDITOR_NAME || rawConfig.editor.name,
-  editorAddress: process.env.NEXT_PUBLIC_EDITOR_ADDRESS || rawConfig.editor.address,
+  editorAddress:
+    process.env.NEXT_PUBLIC_EDITOR_ADDRESS || rawConfig.editor.address,
 };
 if (publication.mode === "production" && indexable) {
   const missing = [
@@ -79,7 +83,11 @@ export function localizedPath(base: string, locale: SiteLocaleCode): string {
 }
 
 export function siteNameFor(locale: SiteLocaleCode): string {
-  return locale === "en" ? site.nameEn : locale === "zh" ? site.nameZh : site.name;
+  return locale === "en"
+    ? site.nameEn
+    : locale === "zh"
+      ? site.nameZh
+      : site.name;
 }
 
 /** タイトル末尾に付ける短いサイト名。英語名が長いので SERP で切れないよう短縮形を用意。 */
@@ -127,10 +135,24 @@ export function pageMetadata(
   const base = basePathOf(path);
   const canonical = absolute(localizedPath(base, locale));
   const siteName = siteNameFor(locale);
-  const fullTitle = options.home ? `${siteName} | ${siteTaglineFor[locale]}` : locale === "ja" ? `${title} | ${siteName}` : pageTitleFor(title, locale);
-  const defaultCard = locale === "en" ? "/social-card-en.png" : locale === "zh" ? "/social-card-zh.png" : "/social-card.png";
+  const fullTitle = options.home
+    ? `${siteName} | ${siteTaglineFor[locale]}`
+    : locale === "ja"
+      ? `${title} | ${siteName}`
+      : pageTitleFor(title, locale);
+  const defaultCard =
+    locale === "en"
+      ? "/social-card-en.png"
+      : locale === "zh"
+        ? "/social-card-zh.png"
+        : "/social-card.png";
   const image = options.image
-    ? { url: absolute(options.image.url), width: options.image.width, height: options.image.height, alt: options.image.alt }
+    ? {
+        url: absolute(options.image.url),
+        width: options.image.width,
+        height: options.image.height,
+        alt: options.image.alt,
+      }
     : { url: absolute(defaultCard), width: 1200, height: 630, alt: siteName };
   return {
     // NOTE: the root-layout title template ("%s | 再生医療ガイド") only applies to
@@ -139,7 +161,9 @@ export function pageMetadata(
     description,
     alternates: {
       canonical,
-      types: { "application/rss+xml": absolute(localizedPath("/feed.xml", locale)) },
+      types: {
+        "application/rss+xml": absolute(localizedPath("/feed.xml", locale)),
+      },
       // hreflang は翻訳ページを検索公開している時だけ出す。noindex のページを
       // 代替言語として案内しても検索エンジンには無視され、整合性の警告要因になる。
       ...(localizedIndexable
@@ -154,7 +178,10 @@ export function pageMetadata(
         : {}),
     },
     robots: {
-      index: publiclyIndexable && allowIndex && (locale === "ja" || localizedIndexable),
+      index:
+        publiclyIndexable &&
+        allowIndex &&
+        (locale === "ja" || localizedIndexable),
       follow: true,
     },
     openGraph: {

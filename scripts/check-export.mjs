@@ -10,7 +10,10 @@ async function targetForUrl(url) {
   const segments = url.split("/").filter(Boolean);
   for (let offset = 0; offset <= segments.length; offset++) {
     const relativePath = segments.slice(offset).join("/");
-    for (const target of [join(root, relativePath, "index.html"), ...(relativePath ? [join(root, relativePath)] : [])]) {
+    for (const target of [
+      join(root, relativePath, "index.html"),
+      ...(relativePath ? [join(root, relativePath)] : []),
+    ]) {
       try {
         if ((await stat(target)).isFile()) return target;
       } catch {}
@@ -38,7 +41,12 @@ let linkCount = 0;
 for (const path of pages) {
   const html = await readFile(path, "utf8");
   const label = relative(root, path);
-  const wantLang = label === "en.html" || label.startsWith("en/") ? "en" : label === "zh.html" || label.startsWith("zh/") ? "zh-CN" : "ja";
+  const wantLang =
+    label === "en.html" || label.startsWith("en/")
+      ? "en"
+      : label === "zh.html" || label.startsWith("zh/")
+        ? "zh-CN"
+        : "ja";
   const is404 =
     label === "404.html" ||
     label.startsWith("404/") ||
@@ -56,7 +64,10 @@ for (const path of pages) {
       `${label}: exactly one h1 required`,
     );
   assert.match(html, /<title>[^<]+<\/title>/, `${label}: title missing`);
-  assert.ok(!html.includes("undefined |"), `${label}: metadata contains undefined title`);
+  assert.ok(
+    !html.includes("undefined |"),
+    `${label}: metadata contains undefined title`,
+  );
   if (!is404) {
     assert.match(
       html,
@@ -98,23 +109,51 @@ for (const path of pages) {
     assert.ok(target, `${label}: missing internal target ${url}`);
     linkCount++;
   }
-  const articleMatch = label.match(/^(?:(en|zh)\/)?articles\/([^/]+)\/index\.html$/);
+  const articleMatch = label.match(
+    /^(?:(en|zh)\/)?articles\/([^/]+)\/index\.html$/,
+  );
   if (articleMatch && evidence[articleMatch[2]]) {
     const locale = articleMatch[1] ?? "ja";
     const entry = evidence[articleMatch[2]];
     const document = html.replace(/<script\b[^>]*>[\s\S]*?<\/script>/g, "");
     // 本文中の用語リンク等でテキストが要素分割されるため、テキスト比較はタグ除去後の文字列に対して行う。
     const documentText = document.replace(/<[^>]+>/g, "");
-    const escapeHtml = (text) => text.replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&#x27;");
+    const escapeHtml = (text) =>
+      text
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#x27;");
     for (const section of entry.locales[locale].sections) {
-      assert.ok(documentText.includes(escapeHtml(section.title)), `${label}: literature heading not rendered`);
-      for (const paragraph of section.paragraphs) assert.ok(documentText.includes(escapeHtml(paragraph.text)), `${label}: literature paragraph not rendered`);
+      assert.ok(
+        documentText.includes(escapeHtml(section.title)),
+        `${label}: literature heading not rendered`,
+      );
+      for (const paragraph of section.paragraphs)
+        assert.ok(
+          documentText.includes(escapeHtml(paragraph.text)),
+          `${label}: literature paragraph not rendered`,
+        );
     }
-    for (const correction of entry.corrections.filter((item) => item.locale === locale)) {
-      assert.ok(documentText.includes(escapeHtml(correction.new)), `${label}: recorded correction was not rendered: ${correction.old.slice(0, 60)}`);
+    for (const correction of entry.corrections.filter(
+      (item) => item.locale === locale,
+    )) {
+      assert.ok(
+        documentText.includes(escapeHtml(correction.new)),
+        `${label}: recorded correction was not rendered: ${correction.old.slice(0, 60)}`,
+      );
     }
-    assert.match(document, /class="citation-links"/, `${label}: inline citations missing`);
-    assert.match(document, /id="references-title"/, `${label}: reference list missing`);
+    assert.match(
+      document,
+      /class="citation-links"/,
+      `${label}: inline citations missing`,
+    );
+    assert.match(
+      document,
+      /id="references-title"/,
+      `${label}: reference list missing`,
+    );
     evidencePages[locale]++;
   }
   for (const match of html.matchAll(/href="#([^"]+)"/g)) {
@@ -163,24 +202,59 @@ await access(join(root, "composer.json"));
 for (const locale of ["ja", "en", "zh"]) {
   const prefix = locale === "ja" ? "" : `${locale}/`;
   const articlePages = pages.filter((f) =>
-    new RegExp(`^${prefix}articles/(?!__unpublished__)[^/]+/index\\.html$`).test(relative(root, f)),
+    new RegExp(
+      `^${prefix}articles/(?!__unpublished__)[^/]+/index\\.html$`,
+    ).test(relative(root, f)),
   );
-  const index = JSON.parse(await readFile(join(root, `search-index.${locale}.json`), "utf8"));
+  const index = JSON.parse(
+    await readFile(join(root, `search-index.${locale}.json`), "utf8"),
+  );
   assert.ok(
-    isPreview ? index.items.length <= articlePages.length : index.items.length === articlePages.length,
+    isPreview
+      ? index.items.length <= articlePages.length
+      : index.items.length === articlePages.length,
     `search-index.${locale}.json: item count must match live article pages`,
   );
   for (const item of index.items) {
-    for (const key of ["slug", "href", "title", "description", "categoryLabel", "text"])
-      assert.ok(typeof item[key] === "string" && item[key], `search-index.${locale}.json: ${item.slug ?? "?"} missing ${key}`);
-    assert.ok(await targetForUrl(item.href), `search-index.${locale}.json: missing page for ${item.href}`);
+    for (const key of [
+      "slug",
+      "href",
+      "title",
+      "description",
+      "categoryLabel",
+      "text",
+    ])
+      assert.ok(
+        typeof item[key] === "string" && item[key],
+        `search-index.${locale}.json: ${item.slug ?? "?"} missing ${key}`,
+      );
+    assert.ok(
+      await targetForUrl(item.href),
+      `search-index.${locale}.json: missing page for ${item.href}`,
+    );
   }
-  assert.ok(index.terms.length > 0, `search-index.${locale}.json: glossary terms missing`);
+  assert.ok(
+    index.terms.length > 0,
+    `search-index.${locale}.json: glossary terms missing`,
+  );
 }
 // トップ：WebSite + SearchAction、記事：og:type=article が出ていること。
-assert.ok(home.includes('"@type":"WebSite"') && home.includes('"@type":"SearchAction"'), "home must emit WebSite/SearchAction JSON-LD");
-for (const path of pages.filter((f) => /^(?:en\/|zh\/)?articles\/(?!__unpublished__)[^/]+\/index\.html$/.test(relative(root, f))).slice(0, 5)) {
-  assert.match(await readFile(path, "utf8"), /<meta property="og:type" content="article"/, `${relative(root, path)}: og:type must be article`);
+assert.ok(
+  home.includes('"@type":"WebSite"') && home.includes('"@type":"SearchAction"'),
+  "home must emit WebSite/SearchAction JSON-LD",
+);
+for (const path of pages
+  .filter((f) =>
+    /^(?:en\/|zh\/)?articles\/(?!__unpublished__)[^/]+\/index\.html$/.test(
+      relative(root, f),
+    ),
+  )
+  .slice(0, 5)) {
+  assert.match(
+    await readFile(path, "utf8"),
+    /<meta property="og:type" content="article"/,
+    `${relative(root, path)}: og:type must be article`,
+  );
 }
 console.log("Rendered article literature coverage:", evidencePages);
 console.log(

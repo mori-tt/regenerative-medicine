@@ -2,7 +2,14 @@ import type { Metadata, Viewport } from "next";
 import { availableCategories } from "@/content/articles";
 import { Header, Footer } from "@/components/site-shell";
 import { LocaleDocument, SkipLink } from "@/components/locale-document";
-import { absolute, publiclyIndexable, publicAsset, site, siteTaglineFor } from "@/lib/site";
+import {
+  absolute,
+  publiclyIndexable,
+  publicAsset,
+  site,
+  siteTaglineFor,
+} from "@/lib/site";
+import { colorTheme } from "@/lib/site-config";
 import "./globals.css";
 import "./editorial.css";
 
@@ -16,7 +23,10 @@ export const metadata: Metadata = {
   applicationName: site.name,
   robots: { index: publiclyIndexable, follow: true },
   openGraph: { locale: "ja_JP", type: "website", siteName: site.name },
-  icons: { icon: publicAsset("/icon.svg"), apple: publicAsset("/apple-touch-icon.png") },
+  icons: {
+    icon: publicAsset("/icon.svg"),
+    apple: publicAsset("/apple-touch-icon.png"),
+  },
   alternates: { types: { "application/rss+xml": absolute("/feed.xml") } },
 };
 
@@ -29,12 +39,15 @@ export const viewport: Viewport = {
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
+  const themeClass = colorTheme === "orange" ? "theme-orange" : "";
   return (
-    <html lang="ja">
+    <html lang="ja" className={themeClass}>
       <body>
         <LocaleDocument />
         <SkipLink />
-        <Header categorySlugs={availableCategories().map((category) => category.slug)} />
+        <Header
+          categorySlugs={availableCategories().map((category) => category.slug)}
+        />
         <main id="main">{children}</main>
         <Footer />
       </body>

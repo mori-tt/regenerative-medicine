@@ -14,7 +14,9 @@ export function LanguageSwitcher() {
   const pathname = usePathname();
   const active = localeFromPath(pathname);
   const basePath = stripLocale(pathname);
-  const safePath = /^\/(?:_not-found|404)(?:\/|$)/.test(basePath) ? "/" : basePath;
+  const safePath = /^\/(?:_not-found|404)(?:\/|$)/.test(basePath)
+    ? "/"
+    : basePath;
   return (
     <nav className="language-switcher" aria-label="Language selection">
       <span>LANGUAGE</span>

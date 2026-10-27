@@ -22,15 +22,15 @@
     "check:contact": "node scripts/check-contact-categories.mjs"
   },
   "dependencies": {
-    "next": "16.3.5",
-    "react": "19.3.0",
-    "react-dom": "19.3.0"
+    "next": "16.4.3",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
   },
   "devDependencies": {
     "@types/node": "^22",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "prettier": "^3.9.8",
+    "prettier": "^3.9.10",
     "typescript": "^5"
   },
   "engines": {

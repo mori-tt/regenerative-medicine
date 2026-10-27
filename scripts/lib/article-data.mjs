@@ -133,7 +133,10 @@ export function readEvidence({ allowIncomplete = false } = {}) {
     const data = JSON.parse(fs.readFileSync(file, "utf8"));
     for (const [slug, entry] of Object.entries(data)) {
       if (records[slug]) throw new Error(`Duplicate evidence article: ${slug}`);
-      records[slug] = { ...entry, category: articleCategory.get(slug) ?? group };
+      records[slug] = {
+        ...entry,
+        category: articleCategory.get(slug) ?? group,
+      };
     }
   }
   return records;

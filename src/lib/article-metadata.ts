@@ -7,8 +7,14 @@ import { articleDateModified } from "./article-state";
 import type { PageMetadataOptions, SiteLocaleCode } from "./site";
 
 /** 記事ページの OGP を article 型にし、カバー画像・公開日・更新日・カテゴリ・サブカテゴリを載せる。 */
-export function articleMetadataOptions(article: Article, locale: SiteLocaleCode): PageMetadataOptions {
-  const category = locale === "ja" ? categoryFor(article.category).label : localizedCategoryName(locale, article.category);
+export function articleMetadataOptions(
+  article: Article,
+  locale: SiteLocaleCode,
+): PageMetadataOptions {
+  const category =
+    locale === "ja"
+      ? categoryFor(article.category).label
+      : localizedCategoryName(locale, article.category);
   const group = subcategoryOf(article.category, article.slug);
   const image = articleImageBySrc(article.image);
   return {

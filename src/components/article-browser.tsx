@@ -21,7 +21,8 @@ const copy = {
   en: {
     label: "Filter articles",
     placeholder: "Keywords (e.g., cost, risks)",
-    count: (shown: number, total: number) => `Showing ${shown} of ${total} articles`,
+    count: (shown: number, total: number) =>
+      `Showing ${shown} of ${total} articles`,
     empty: "No articles match the current filter.",
     emptyLead: "You can also browse the ",
     emptyTail: ".",
@@ -33,7 +34,8 @@ const copy = {
   zh: {
     label: "筛选文章",
     placeholder: "关键词（如：费用、风险）",
-    count: (shown: number, total: number) => `已发布文章 ${total} 篇中显示 ${shown} 篇`,
+    count: (shown: number, total: number) =>
+      `已发布文章 ${total} 篇中显示 ${shown} 篇`,
     empty: "没有符合条件的文章。",
     emptyLead: "也可以从 ",
     emptyTail: " 查看公开中的文章。",
@@ -70,14 +72,19 @@ export function ArticleBrowser({
     const zone = document.getElementById(gridId);
     const scope = zone?.closest("[data-filter-scope]");
     if (!zone || !scope) return;
-    const normalize = (value: string) => value.normalize("NFKC").toLocaleLowerCase(locale);
+    const normalize = (value: string) =>
+      value.normalize("NFKC").toLocaleLowerCase(locale);
     const run = () => {
       const words = normalize(query).trim().split(/\s+/).filter(Boolean);
       let count = 0;
       zone.querySelectorAll<HTMLElement>(".filter-item").forEach((item) => {
-        const matched = words.every((word) => normalize(item.textContent ?? "").includes(word));
+        const matched = words.every((word) =>
+          normalize(item.textContent ?? "").includes(word),
+        );
         item.toggleAttribute("data-query-hide", !matched);
-        const featuredHidden = item.dataset.featured !== "true" && Boolean(item.closest(".filter-scope.featured-on"));
+        const featuredHidden =
+          item.dataset.featured !== "true" &&
+          Boolean(item.closest(".filter-scope.featured-on"));
         if (matched && !featuredHidden) count += 1;
       });
       setShown(count);
@@ -111,7 +118,16 @@ export function ArticleBrowser({
               aria-controls={gridId}
               aria-describedby={`${id}-count`}
             />
-            {query && <button className="browser-clear" type="button" onClick={clearQuery} aria-label={text.clearInput}><span aria-hidden="true">×</span></button>}
+            {query && (
+              <button
+                className="browser-clear"
+                type="button"
+                onClick={clearQuery}
+                aria-label={text.clearInput}
+              >
+                <span aria-hidden="true">×</span>
+              </button>
+            )}
           </div>
         </div>
       </div>
@@ -119,8 +135,12 @@ export function ArticleBrowser({
         <p className="browser-count" id={`${id}-count`} aria-live="polite">
           {text.count(shown, total)}
         </p>
-        <Link className="browser-search-link" href={`${prefix}/search/${query.trim() ? `?q=${encodeURIComponent(query.trim())}` : ""}`}>
-          {text.fullSearch}<Icon name="arrow" size={18} />
+        <Link
+          className="browser-search-link"
+          href={`${prefix}/search/${query.trim() ? `?q=${encodeURIComponent(query.trim())}` : ""}`}
+        >
+          {text.fullSearch}
+          <Icon name="arrow" size={18} />
         </Link>
       </div>
       {shown === 0 && (
@@ -134,7 +154,9 @@ export function ArticleBrowser({
           <button
             type="button"
             onClick={() => {
-              const scope = document.getElementById(gridId)?.closest("[data-filter-scope]");
+              const scope = document
+                .getElementById(gridId)
+                ?.closest("[data-filter-scope]");
               scope?.classList.remove("featured-on");
               refreshScope(scope ?? null);
               clearQuery();

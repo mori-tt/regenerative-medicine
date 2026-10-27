@@ -114,5 +114,7 @@ export function cardKicker(
   article: { category: CategorySlug; kind?: "core" | "column" },
   locale: "ja" | "en" | "zh" = "ja",
 ): string {
-  return article.kind === "column" ? columnKicker[locale] : categoryFor(article.category).kicker[locale];
+  return article.kind === "column"
+    ? columnKicker[locale]
+    : categoryFor(article.category).kicker[locale];
 }

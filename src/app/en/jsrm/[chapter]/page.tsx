@@ -11,7 +11,11 @@ export function generateStaticParams() {
   return jsrmChapters.map((chapter) => ({ chapter: chapter.slug }));
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ chapter: string }> }) {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ chapter: string }>;
+}) {
   const { chapter: slug } = await params;
   const translated = jsrmChapterLocales.en[slug];
   if (!translated) notFound();
@@ -24,7 +28,11 @@ export async function generateMetadata({ params }: { params: Promise<{ chapter: 
   );
 }
 
-export default async function EnglishJsrmChapterRoute({ params }: { params: Promise<{ chapter: string }> }) {
+export default async function EnglishJsrmChapterRoute({
+  params,
+}: {
+  params: Promise<{ chapter: string }>;
+}) {
   const { chapter: slug } = await params;
   if (!jsrmChapters.some((item) => item.slug === slug)) notFound();
   return <LocalizedJsrmChapter locale="en" slug={slug} />;

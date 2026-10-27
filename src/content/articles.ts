@@ -1,17 +1,37 @@
 import { articleImageFor } from "./article-images";
 import { deployDate, medicalReviewer, publication } from "@/lib/site-config";
 import reviewRecords from "./article-review-records.json";
-import { articleEvidence, correctArticleText, correctArticleSections, evidenceSectionsFor, type CitedSection, type EvidenceSource } from "./article-evidence";
+import {
+  articleEvidence,
+  correctArticleText,
+  correctArticleSections,
+  evidenceSectionsFor,
+  type CitedSection,
+  type EvidenceSource,
+} from "./article-evidence";
 import { deepenSectionsFor } from "./article-deepen";
 import { faqSectionsFor } from "./article-faq";
 import { checklistSectionsFor } from "./article-checklist";
-import { reviewRecordReady, type ArticleReviewRecord } from "@/lib/article-review";
+import {
+  reviewRecordReady,
+  type ArticleReviewRecord,
+} from "@/lib/article-review";
 const reviewSchedule = reviewRecords as Record<string, ArticleReviewRecord>;
 import { categories, type CategorySlug } from "./categories";
 export { categories, categoryFor } from "./categories";
 export type { CategorySlug } from "./categories";
-import { articleBuildMode, articleDateModified, isReviewed, publishBaseDate } from "@/lib/article-state";
-export { articleBuildMode, articleDateModified, isReviewed, publishBaseDate } from "@/lib/article-state";
+import {
+  articleBuildMode,
+  articleDateModified,
+  isReviewed,
+  publishBaseDate,
+} from "@/lib/article-state";
+export {
+  articleBuildMode,
+  articleDateModified,
+  isReviewed,
+  publishBaseDate,
+} from "@/lib/article-state";
 export type { ArticleBuildMode } from "@/lib/article-state";
 
 export type Reviewer = {
@@ -157,7 +177,8 @@ const nobel2012 = {
   url: "https://www.nobelprize.org/prizes/medicine/2012/summary/",
 };
 const mhlwApprovedProducts = {
-  title: "厚生労働省：承認された再生医療等製品について（令和8年3月9日付事務連絡）",
+  title:
+    "厚生労働省：承認された再生医療等製品について（令和8年3月9日付事務連絡）",
   url: "https://www.mhlw.go.jp/hourei/doc/tsuchi/T260309I0110.pdf",
 };
 const mhlwFacility = {
@@ -189,11 +210,13 @@ const nihStemCells = {
   url: "https://orip.nih.gov/division-comparative-medicine/initiatives/stem-cells-and-regenerative-medicine",
 };
 const neiRegenMed = {
-  title: "National Eye Institute：What is regenerative medicine?（患者向け資料）",
+  title:
+    "National Eye Institute：What is regenerative medicine?（患者向け資料）",
   url: "https://www.nei.nih.gov/about/our-impact/nei-research-initiatives/regenerative-medicine/patientpublic-resources",
 };
 const isscrPatients = {
-  title: "ISSCR：Stem Cell Resources for Patients（A Closer Look at Stem Cells）",
+  title:
+    "ISSCR：Stem Cell Resources for Patients（A Closer Look at Stem Cells）",
   url: "https://www.closerlookatstemcells.org/",
 };
 const isscrGuide = {
@@ -226,8 +249,8 @@ const mscMechanisms = {
 const doctorAuthor: ArticleAuthor = {
   name: "千原 良友",
   honorific: "千原良友先生",
-  title: "ノリス美容クリニック 院長",
-  affiliation: "ノリス美容クリニック",
+  title: "ノリスクリニック 院長",
+  affiliation: "ノリスクリニック",
   profileUrl: "https://www.norris-beauty-clinic.com/doctor/",
   authoredAt: "2026-09-28",
 };
@@ -235,7 +258,8 @@ const rawArticles: Article[] = [
   {
     slug: "what-is-regenerative-medicine",
     title: "再生医療とは？幹細胞を使った治療の仕組みを解説",
-    description: "再生医療の意味と、幹細胞を使った治療が目指すこと。「幹細胞」と「再生医療」の違いも含めて整理します。",
+    description:
+      "再生医療の意味と、幹細胞を使った治療が目指すこと。「幹細胞」と「再生医療」の違いも含めて整理します。",
     category: "stem-basics",
     updatedAt: "2026-08-01",
     readingMinutes: 2,
@@ -472,7 +496,8 @@ const rawArticles: Article[] = [
   {
     slug: "myths-and-facts",
     title: "再生医療は万能なの？できること・できないこと",
-    description: "「何でも治る」「自分にもすぐ使える」は本当？再生医療でできることとできないことを、よくある誤解から整理します。",
+    description:
+      "「何でも治る」「自分にもすぐ使える」は本当？再生医療でできることとできないことを、よくある誤解から整理します。",
     category: "efficacy",
     updatedAt: "2026-08-02",
     readingMinutes: 4,
@@ -514,7 +539,8 @@ const rawArticles: Article[] = [
   {
     slug: "stem-cell-types",
     title: "幹細胞にはどんな種類がある？ES細胞・iPS細胞・間葉系幹細胞の違い",
-    description: "幹細胞の基本的な働きと、ES細胞・iPS細胞・間葉系幹細胞をはじめとする代表的な種類の違いを整理します。",
+    description:
+      "幹細胞の基本的な働きと、ES細胞・iPS細胞・間葉系幹細胞をはじめとする代表的な種類の違いを整理します。",
     category: "stem-basics",
     updatedAt: "2026-08-02",
     readingMinutes: 2,
@@ -804,7 +830,8 @@ const rawArticles: Article[] = [
   {
     slug: "cell-culture-and-quality",
     title: "培養幹細胞とは？採取した細胞をどうやって治療に使うの？",
-    description: "採取した細胞を増やし、品質を確かめて投与するまで。幹細胞治療の裏側にある培養・加工の工程を紹介します。",
+    description:
+      "採取した細胞を増やし、品質を確かめて投与するまで。幹細胞治療の裏側にある培養・加工の工程を紹介します。",
     category: "cell-types",
     updatedAt: "2026-08-03",
     readingMinutes: 4,
@@ -846,7 +873,8 @@ const rawArticles: Article[] = [
   {
     slug: "questions-before-treatment",
     title: "幹細胞治療を受ける前に知っておきたいこと",
-    description: "効果の根拠、リスク、代替案、費用。幹細胞治療を検討するとき、医師に確認したい質問を整理します。",
+    description:
+      "効果の根拠、リスク、代替案、費用。幹細胞治療を検討するとき、医師に確認したい質問を整理します。",
     category: "safety",
     updatedAt: "2026-08-03",
     readingMinutes: 2,
@@ -910,7 +938,8 @@ const rawArticles: Article[] = [
   {
     slug: "cost-and-insurance",
     title: "幹細胞治療はいくらかかる？費用の仕組みと保険の扱い",
-    description: "採取・培養・投与・通院を含む費用の内訳と、保険が使える範囲、自由診療との違いを整理します。",
+    description:
+      "採取・培養・投与・通院を含む費用の内訳と、保険が使える範囲、自由診療との違いを整理します。",
     category: "cost-access",
     updatedAt: "2026-08-04",
     readingMinutes: 5,
@@ -960,7 +989,8 @@ const rawArticles: Article[] = [
   {
     slug: "risks-and-safety",
     title: "幹細胞治療は安全？知っておきたい副作用とリスク",
-    description: "幹細胞治療で起こり得る副作用とリスク。投与方法や細胞の種類によって変わる注意点を整理します。",
+    description:
+      "幹細胞治療で起こり得る副作用とリスク。投与方法や細胞の種類によって変わる注意点を整理します。",
     category: "safety",
     updatedAt: "2026-08-04",
     readingMinutes: 5,
@@ -1246,8 +1276,7 @@ const rawArticles: Article[] = [
   {
     slug: "approved-products-japan",
     title: "日本で承認された再生医療等製品：今使える治療を知る",
-    description:
-      "条件・期限付き承認を含め、承認の仕組みと調べ方を整理します。",
+    description: "条件・期限付き承認を含め、承認の仕組みと調べ方を整理します。",
     category: "efficacy",
     updatedAt: "2026-08-05",
     readingMinutes: 4,
@@ -1289,8 +1318,7 @@ const rawArticles: Article[] = [
   {
     slug: "future-perspectives",
     title: "これからの研究：オルガノイド・臓器再生・個別化医療",
-    description:
-      "期待が集まる領域を、現状と課題と一緒に冷静に眺めます。",
+    description: "期待が集まる領域を、現状と課題と一緒に冷静に眺めます。",
     category: "mechanisms",
     updatedAt: "2026-08-06",
     readingMinutes: 4,
@@ -1332,7 +1360,8 @@ const rawArticles: Article[] = [
   {
     slug: "body-repair-mechanisms",
     title: "幹細胞はどうやって体の組織を修復するの？",
-    description: "傷ついた組織が治る仕組みと、幹細胞がどのように関わると考えられているかを解説します。",
+    description:
+      "傷ついた組織が治る仕組みと、幹細胞がどのように関わると考えられているかを解説します。",
     category: "in-body",
     updatedAt: "2026-08-06",
     readingMinutes: 3,
@@ -1395,8 +1424,7 @@ const rawArticles: Article[] = [
   {
     slug: "self-vs-donor-cells",
     title: "自家と他家：誰の細胞を使うかの違い",
-    description:
-      "自分由来と他人由来の細胞。それぞれの利点と課題を比べます。",
+    description: "自分由来と他人由来の細胞。それぞれの利点と課題を比べます。",
     category: "cell-types",
     updatedAt: "2026-08-06",
     readingMinutes: 3,
@@ -2147,7 +2175,8 @@ const rawArticles: Article[] = [
   {
     slug: "mesenchymal-basics",
     title: "間葉系幹細胞（MSC）とは？再生医療で注目される理由",
-    description: "骨髄・脂肪・臍帯などに由来する間葉系幹細胞（MSC）の特徴と、再生医療で注目される理由を解説します。",
+    description:
+      "骨髄・脂肪・臍帯などに由来する間葉系幹細胞（MSC）の特徴と、再生医療で注目される理由を解説します。",
     category: "cell-types",
     updatedAt: "2026-08-09",
     readingMinutes: 4,
@@ -2306,8 +2335,7 @@ const rawArticles: Article[] = [
   {
     slug: "ips-stock",
     title: "iPS細胞ストック：備蓄細胞で迅速に届ける工夫",
-    description:
-      "拒絶されにくい型の備蓄と、個別作製との使い分けを解説します。",
+    description: "拒絶されにくい型の備蓄と、個別作製との使い分けを解説します。",
     category: "cell-types",
     updatedAt: "2026-08-10",
     readingMinutes: 3,
@@ -2474,7 +2502,8 @@ const rawArticles: Article[] = [
   {
     slug: "autologous-allogeneic",
     title: "自家幹細胞と他家幹細胞の違いとは？",
-    description: "自分の細胞を使う自家移植と、他人由来の細胞を使う他家移植。採取・製造・免疫の観点から違いを整理します。",
+    description:
+      "自分の細胞を使う自家移植と、他人由来の細胞を使う他家移植。採取・製造・免疫の観点から違いを整理します。",
     category: "cell-types",
     updatedAt: "2026-08-11",
     readingMinutes: 3,
@@ -2537,8 +2566,7 @@ const rawArticles: Article[] = [
   {
     slug: "tumorigenicity-safety",
     title: "腫瘍化と安全性試験：増える力の裏側",
-    description:
-      "増殖力に伴う懸念と、それを確かめる試験の考え方を解説します。",
+    description: "増殖力に伴う懸念と、それを確かめる試験の考え方を解説します。",
     category: "safety",
     updatedAt: "2026-08-11",
     readingMinutes: 3,
@@ -2593,8 +2621,7 @@ const rawArticles: Article[] = [
   {
     slug: "hla-rejection",
     title: "HLAと拒絶：型合わせの基本",
-    description:
-      "移植の適合性で聞くHLAの意味と、型合わせの限界を整理します。",
+    description: "移植の適合性で聞くHLAの意味と、型合わせの限界を整理します。",
     category: "safety",
     updatedAt: "2026-08-11",
     readingMinutes: 3,
@@ -2705,8 +2732,7 @@ const rawArticles: Article[] = [
   {
     slug: "organoids-intro",
     title: "オルガノイド入門：ミニ臓器で何が分かるか",
-    description:
-      "立体的な小さな組織モデルの作り方・使い道・限界を整理します。",
+    description: "立体的な小さな組織モデルの作り方・使い道・限界を整理します。",
     category: "mechanisms",
     updatedAt: "2026-08-12",
     readingMinutes: 3,
@@ -2769,7 +2795,8 @@ const rawArticles: Article[] = [
   {
     slug: "exosomes-notes",
     title: "幹細胞治療とエクソソーム治療は何が違う？",
-    description: "細胞そのものを使う治療と、細胞の分泌物を使うエクソソーム治療。違いと研究段階を整理します。",
+    description:
+      "細胞そのものを使う治療と、細胞の分泌物を使うエクソソーム治療。違いと研究段階を整理します。",
     category: "compare-therapies",
     updatedAt: "2026-08-12",
     readingMinutes: 3,
@@ -2880,7 +2907,8 @@ const rawArticles: Article[] = [
   {
     slug: "informed-consent-howto",
     title: "再生医療を受けるなら、どんな説明を受けるべき？",
-    description: "説明と同意の流れで確認したい、効果・リスク・代替案・費用の説明の受け方と質問の仕方。",
+    description:
+      "説明と同意の流れで確認したい、効果・リスク・代替案・費用の説明の受け方と質問の仕方。",
     category: "cost-access",
     updatedAt: "2026-08-13",
     readingMinutes: 3,
@@ -2991,7 +3019,8 @@ const rawArticles: Article[] = [
   {
     slug: "insurance-care",
     title: "幹細胞治療は保険適用される？自由診療との違い",
-    description: "保険診療・治験・臨床研究・自由診療の違いと、幹細胞治療がどの位置づけで提供されているかを確認する方法。",
+    description:
+      "保険診療・治験・臨床研究・自由診療の違いと、幹細胞治療がどの位置づけで提供されているかを確認する方法。",
     category: "cost-access",
     updatedAt: "2026-08-13",
     readingMinutes: 3,
@@ -3406,8 +3435,7 @@ const rawArticles: Article[] = [
   {
     slug: "elderly-points",
     title: "高齢者が考えるときの注意：持病・薬・通院",
-    description:
-      "複数の病気や薬がある場合の、特有の確認点をまとめます。",
+    description: "複数の病気や薬がある場合の、特有の確認点をまとめます。",
     category: "cost-access",
     updatedAt: "2026-08-15",
     readingMinutes: 3,
@@ -3462,8 +3490,7 @@ const rawArticles: Article[] = [
   {
     slug: "children-points",
     title: "子どもが対象のとき：成長への配慮と同意",
-    description:
-      "小児を対象とする治療・研究で特に大切な視点をまとめます。",
+    description: "小児を対象とする治療・研究で特に大切な視点をまとめます。",
     category: "cost-access",
     updatedAt: "2026-08-15",
     readingMinutes: 3,
@@ -3518,7 +3545,8 @@ const rawArticles: Article[] = [
   {
     slug: "final-checklist",
     title: "幹細胞治療を受ける前に確認したいポイント：契約前チェックリスト",
-    description: "契約前に確認したい項目を整理。説明・費用・体制を持ち帰って点検するためのチェックリストです。",
+    description:
+      "契約前に確認したい項目を整理。説明・費用・体制を持ち帰って点検するためのチェックリストです。",
     category: "cost-access",
     updatedAt: "2026-08-15",
     readingMinutes: 4,
@@ -3573,8 +3601,7 @@ const rawArticles: Article[] = [
   {
     slug: "bench-to-bedside",
     title: "基礎と臨床の橋渡し：トランスレーショナルリサーチ",
-    description:
-      "実験室の発見を診療へ届けるまでの協働の仕組みを紹介します。",
+    description: "実験室の発見を診療へ届けるまでの協働の仕組みを紹介します。",
     category: "mechanisms",
     updatedAt: "2026-08-16",
     readingMinutes: 3,
@@ -3685,8 +3712,7 @@ const rawArticles: Article[] = [
   {
     slug: "case-reports-registries",
     title: "症例報告とレジストリ：一人ひとりの積み重ね",
-    description:
-      "少数例の報告と大規模登録の役割分担を整理します。",
+    description: "少数例の報告と大規模登録の役割分担を整理します。",
     category: "efficacy",
     updatedAt: "2026-08-16",
     readingMinutes: 3,
@@ -3741,8 +3767,7 @@ const rawArticles: Article[] = [
   {
     slug: "endpoints",
     title: "評価項目・エンドポイント：何をもって効いたとするか",
-    description:
-      "主要評価項目の設定と、代理指標の読み方を紹介します。",
+    description: "主要評価項目の設定と、代理指標の読み方を紹介します。",
     category: "efficacy",
     updatedAt: "2026-08-16",
     readingMinutes: 3,
@@ -3853,8 +3878,7 @@ const rawArticles: Article[] = [
   {
     slug: "press-release-reading",
     title: "プレスリリースの読み方：発表文の裏側を読む",
-    description:
-      "大学・企業の発表文を、原論文と合わせて読むコツをまとめます。",
+    description: "大学・企業の発表文を、原論文と合わせて読むコツをまとめます。",
     category: "efficacy",
     updatedAt: "2026-08-17",
     readingMinutes: 3,
@@ -3965,8 +3989,7 @@ const rawArticles: Article[] = [
   {
     slug: "conflict-of-interest",
     title: "利益相反の開示：誰が得をする研究か",
-    description:
-      "資金提供や特許と研究の関係を、冷静に見る視点をまとめます。",
+    description: "資金提供や特許と研究の関係を、冷静に見る視点をまとめます。",
     category: "efficacy",
     updatedAt: "2026-08-17",
     readingMinutes: 3,
@@ -4077,8 +4100,7 @@ const rawArticles: Article[] = [
   {
     slug: "negative-trials",
     title: "うまくいかなかった研究の価値：陰性試験を読む",
-    description:
-      "期待外れの結果が持つ意味と、学びの活かし方を解説します。",
+    description: "期待外れの結果が持つ意味と、学びの活かし方を解説します。",
     category: "efficacy",
     updatedAt: "2026-08-18",
     readingMinutes: 3,
@@ -4133,8 +4155,7 @@ const rawArticles: Article[] = [
   {
     slug: "long-term-followup",
     title: "長期追跡の重要性：年単位で見る安全性",
-    description:
-      "短期の結果と長期の経過の違い、追跡調査の読み方をまとめます。",
+    description: "短期の結果と長期の経過の違い、追跡調査の読み方をまとめます。",
     category: "efficacy",
     updatedAt: "2026-08-18",
     readingMinutes: 3,
@@ -4189,8 +4210,7 @@ const rawArticles: Article[] = [
   {
     slug: "how-to-find-trials",
     title: "治験を探す方法：登録情報の使い方",
-    description:
-      "国内外の治験登録と、主治医への相談の仕方を紹介します。",
+    description: "国内外の治験登録と、主治医への相談の仕方を紹介します。",
     category: "efficacy",
     updatedAt: "2026-08-18",
     readingMinutes: 3,
@@ -4245,8 +4265,7 @@ const rawArticles: Article[] = [
   {
     slug: "world-products",
     title: "世界の承認製品の調べ方：原資料にあたる",
-    description:
-      "各国当局の公開情報をたどり、正確につかむ方法をまとめます。",
+    description: "各国当局の公開情報をたどり、正確につかむ方法をまとめます。",
     category: "efficacy",
     updatedAt: "2026-08-19",
     readingMinutes: 3,
@@ -4301,8 +4320,7 @@ const rawArticles: Article[] = [
   {
     slug: "cell-division",
     title: "細胞分裂の基礎：体が増え・入れ替わる仕組み",
-    description:
-      "体細胞分裂の流れと、再生医療との関わりをやさしく整理します。",
+    description: "体細胞分裂の流れと、再生医療との関わりをやさしく整理します。",
     category: "stem-basics",
     updatedAt: "2026-08-19",
     readingMinutes: 3,
@@ -4357,8 +4375,7 @@ const rawArticles: Article[] = [
   {
     slug: "dna-basics",
     title: "DNAの基礎：設計情報の読み方",
-    description:
-      "二重らせんから遺伝子、染色体まで。最小限の言葉で整理します。",
+    description: "二重らせんから遺伝子、染色体まで。最小限の言葉で整理します。",
     category: "health-basics",
     updatedAt: "2026-08-19",
     readingMinutes: 3,
@@ -4469,8 +4486,7 @@ const rawArticles: Article[] = [
   {
     slug: "digestion-absorption",
     title: "消化と吸収：栄養が体になるまで",
-    description:
-      "口から腸までの旅をたどり、治療中の栄養の大切さを考えます。",
+    description: "口から腸までの旅をたどり、治療中の栄養の大切さを考えます。",
     category: "health-basics",
     updatedAt: "2026-08-20",
     readingMinutes: 3,
@@ -4525,8 +4541,7 @@ const rawArticles: Article[] = [
   {
     slug: "circulation",
     title: "循環の仕組み：血液が巡る道",
-    description:
-      "心臓・血管・血液の連携を整理し、細胞の届け方を考えます。",
+    description: "心臓・血管・血液の連携を整理し、細胞の届け方を考えます。",
     category: "health-basics",
     updatedAt: "2026-08-20",
     readingMinutes: 3,
@@ -4581,8 +4596,7 @@ const rawArticles: Article[] = [
   {
     slug: "respiration",
     title: "呼吸の仕組み：酸素と二酸化炭素の交換",
-    description:
-      "肺の構造とガス交換の仕組みを、身近な例で解説します。",
+    description: "肺の構造とガス交換の仕組みを、身近な例で解説します。",
     category: "health-basics",
     updatedAt: "2026-08-20",
     readingMinutes: 3,
@@ -4693,8 +4707,7 @@ const rawArticles: Article[] = [
   {
     slug: "brain-basics",
     title: "脳の基礎：指令塔のつくりと働き",
-    description:
-      "神経細胞とグリア、部位ごとの役割を大まかに紹介します。",
+    description: "神経細胞とグリア、部位ごとの役割を大まかに紹介します。",
     category: "health-basics",
     updatedAt: "2026-08-21",
     readingMinutes: 3,
@@ -4749,8 +4762,7 @@ const rawArticles: Article[] = [
   {
     slug: "senses",
     title: "目と耳：感覚器の仕組みと再生研究",
-    description:
-      "視覚と聴覚の入り口の構造と、再生への挑戦を紹介します。",
+    description: "視覚と聴覚の入り口の構造と、再生への挑戦を紹介します。",
     category: "health-basics",
     updatedAt: "2026-08-21",
     readingMinutes: 3,
@@ -4805,8 +4817,7 @@ const rawArticles: Article[] = [
   {
     slug: "teeth-bones-growth",
     title: "歯と骨の成長：子どもの体の変化",
-    description:
-      "成長期の体の作り替えと、歯・骨の再生研究の話題を整理します。",
+    description: "成長期の体の作り替えと、歯・骨の再生研究の話題を整理します。",
     category: "health-basics",
     updatedAt: "2026-08-21",
     readingMinutes: 3,
@@ -4861,8 +4872,7 @@ const rawArticles: Article[] = [
   {
     slug: "hormones",
     title: "ホルモンの基礎：全身の連絡網",
-    description:
-      "血液で運ばれる信号の仕組みと、代表的な例を紹介します。",
+    description: "血液で運ばれる信号の仕組みと、代表的な例を紹介します。",
     category: "health-basics",
     updatedAt: "2026-08-21",
     readingMinutes: 3,
@@ -4917,8 +4927,7 @@ const rawArticles: Article[] = [
   {
     slug: "antibodies-vaccines",
     title: "抗体とワクチン：免疫の記憶の仕組み",
-    description:
-      "感染から守る記憶の仕組みと、細胞治療との違いを整理します。",
+    description: "感染から守る記憶の仕組みと、細胞治療との違いを整理します。",
     category: "health-basics",
     updatedAt: "2026-08-22",
     readingMinutes: 3,
@@ -4973,8 +4982,7 @@ const rawArticles: Article[] = [
   {
     slug: "allergy-basics",
     title: "アレルギーの基礎：過剰な防御反応",
-    description:
-      "花粉症や食物アレルギーを例に、免疫の誤作動を解説します。",
+    description: "花粉症や食物アレルギーを例に、免疫の誤作動を解説します。",
     category: "health-basics",
     updatedAt: "2026-08-22",
     readingMinutes: 3,
@@ -5029,8 +5037,7 @@ const rawArticles: Article[] = [
   {
     slug: "cancer-basics",
     title: "がんの基礎知識：細胞の増殖の暴走",
-    description:
-      "がんの成り立ちと、再生医療との関係・違いを整理します。",
+    description: "がんの成り立ちと、再生医療との関係・違いを整理します。",
     category: "health-basics",
     updatedAt: "2026-08-22",
     readingMinutes: 3,
@@ -5141,8 +5148,7 @@ const rawArticles: Article[] = [
   {
     slug: "pregnancy-cordblood",
     title: "妊娠・出産と臍帯血：誕生時の細胞の活用",
-    description:
-      "臍帯血の採取・保存・利用の仕組みと、決断の視点をまとめます。",
+    description: "臍帯血の採取・保存・利用の仕組みと、決断の視点をまとめます。",
     category: "cell-types",
     updatedAt: "2026-08-23",
     readingMinutes: 3,
@@ -5365,8 +5371,7 @@ const rawArticles: Article[] = [
   {
     slug: "nutrition-basics",
     title: "栄養の基礎：5大栄養素と体の材料",
-    description:
-      "治療中の体を支える栄養の考え方を、基本から整理します。",
+    description: "治療中の体を支える栄養の考え方を、基本から整理します。",
     category: "health-basics",
     updatedAt: "2026-08-24",
     readingMinutes: 3,
@@ -5421,8 +5426,7 @@ const rawArticles: Article[] = [
   {
     slug: "exercise-basics",
     title: "運動と体：筋肉・骨・心肺への効果",
-    description:
-      "無理のない運動の考え方と、治療中の注意をまとめます。",
+    description: "無理のない運動の考え方と、治療中の注意をまとめます。",
     category: "health-basics",
     updatedAt: "2026-08-24",
     readingMinutes: 3,
@@ -5477,8 +5481,7 @@ const rawArticles: Article[] = [
   {
     slug: "sleep-basics",
     title: "睡眠と修復：眠りが体を整える",
-    description:
-      "睡眠の役割と、質を上げる生活習慣を紹介します。",
+    description: "睡眠の役割と、質を上げる生活習慣を紹介します。",
     category: "health-basics",
     updatedAt: "2026-08-24",
     readingMinutes: 3,
@@ -5533,8 +5536,7 @@ const rawArticles: Article[] = [
   {
     slug: "mental-health-decision",
     title: "心の健康と意思決定：不安と向き合う",
-    description:
-      "治療選択のストレスへの対処と、相談先の使い方をまとめます。",
+    description: "治療選択のストレスへの対処と、相談先の使い方をまとめます。",
     category: "health-basics",
     updatedAt: "2026-08-24",
     readingMinutes: 3,
@@ -5589,8 +5591,7 @@ const rawArticles: Article[] = [
   {
     slug: "health-checkups",
     title: "健診・検診の活かし方：結果の読み方",
-    description:
-      "特定健診とがん検診の違い、要精密検査への対応を整理します。",
+    description: "特定健診とがん検診の違い、要精密検査への対応を整理します。",
     category: "health-basics",
     updatedAt: "2026-08-25",
     readingMinutes: 3,
@@ -5645,8 +5646,7 @@ const rawArticles: Article[] = [
   {
     slug: "family-doctor",
     title: "かかりつけ医の持ち方：相談の起点",
-    description:
-      "かかりつけ医の役割と、上手な付き合い方を紹介します。",
+    description: "かかりつけ医の役割と、上手な付き合い方を紹介します。",
     category: "health-basics",
     updatedAt: "2026-08-25",
     readingMinutes: 3,
@@ -5757,8 +5757,7 @@ const rawArticles: Article[] = [
   {
     slug: "asymmetric-division",
     title: "非対称分裂：幹細胞を保つ分け方",
-    description:
-      "自分を残しつつ分化細胞を生む、幹細胞独特の分裂を紹介します。",
+    description: "自分を残しつつ分化細胞を生む、幹細胞独特の分裂を紹介します。",
     category: "mechanisms",
     updatedAt: "2026-08-25",
     readingMinutes: 3,
@@ -5813,8 +5812,7 @@ const rawArticles: Article[] = [
   {
     slug: "stemcell-niche",
     title: "ニッチ：幹細胞を支える微小環境",
-    description:
-      "周囲の環境が幹細胞の振る舞いを決める考え方を解説します。",
+    description: "周囲の環境が幹細胞の振る舞いを決める考え方を解説します。",
     category: "mechanisms",
     updatedAt: "2026-08-26",
     readingMinutes: 3,
@@ -5869,8 +5867,7 @@ const rawArticles: Article[] = [
   {
     slug: "cell-signaling",
     title: "細胞間シグナル：連絡を取り合う仕組み",
-    description:
-      "増殖因子や接触信号など、細胞の会話の基本を紹介します。",
+    description: "増殖因子や接触信号など、細胞の会話の基本を紹介します。",
     category: "mechanisms",
     updatedAt: "2026-08-26",
     readingMinutes: 3,
@@ -5925,8 +5922,7 @@ const rawArticles: Article[] = [
   {
     slug: "growth-factors",
     title: "成長因子：増殖と分化の合図",
-    description:
-      "代表的な因子の役割と、培養・治療での使い方を整理します。",
+    description: "代表的な因子の役割と、培養・治療での使い方を整理します。",
     category: "mechanisms",
     updatedAt: "2026-08-26",
     readingMinutes: 3,
@@ -5981,8 +5977,7 @@ const rawArticles: Article[] = [
   {
     slug: "scaffolds",
     title: "足場材料：細胞の家を設計する",
-    description:
-      "生体材料と合成材料、立体組織づくりの工夫を紹介します。",
+    description: "生体材料と合成材料、立体組織づくりの工夫を紹介します。",
     category: "mechanisms",
     updatedAt: "2026-08-26",
     readingMinutes: 3,
@@ -6037,8 +6032,7 @@ const rawArticles: Article[] = [
   {
     slug: "bioreactors",
     title: "大量培養：バイオリアクターの役割",
-    description:
-      "治療に足る量の細胞を安定に作る技術を紹介します。",
+    description: "治療に足る量の細胞を安定に作る技術を紹介します。",
     category: "cell-types",
     updatedAt: "2026-08-27",
     readingMinutes: 3,
@@ -6149,8 +6143,7 @@ const rawArticles: Article[] = [
   {
     slug: "cord-blood-cells",
     title: "臍帯血の細胞：採取から利用まで",
-    description:
-      "臍帯血に含まれる細胞と、移植利用の実際を紹介します。",
+    description: "臍帯血に含まれる細胞と、移植利用の実際を紹介します。",
     category: "cell-types",
     updatedAt: "2026-08-27",
     readingMinutes: 3,
@@ -6205,8 +6198,7 @@ const rawArticles: Article[] = [
   {
     slug: "dental-pulp-stem",
     title: "歯髄幹細胞：抜いた歯の活用",
-    description:
-      "乳歯や親知らずの歯髄に含まれる幹細胞の研究を紹介します。",
+    description: "乳歯や親知らずの歯髄に含まれる幹細胞の研究を紹介します。",
     category: "cell-types",
     updatedAt: "2026-08-27",
     readingMinutes: 3,
@@ -6261,7 +6253,8 @@ const rawArticles: Article[] = [
   {
     slug: "adipose-stem",
     title: "脂肪由来幹細胞とは？美容・再生医療で使われる理由",
-    description: "脂肪から採取できる幹細胞の特徴と、美容・再生医療で用いられる理由、注意点を整理します。",
+    description:
+      "脂肪から採取できる幹細胞の特徴と、美容・再生医療で用いられる理由、注意点を整理します。",
     category: "cell-types",
     updatedAt: "2026-08-28",
     readingMinutes: 3,
@@ -6316,8 +6309,7 @@ const rawArticles: Article[] = [
   {
     slug: "bone-marrow-system",
     title: "骨髄の仕組み：血を作る工場",
-    description:
-      "骨髄の構造と造血の場としての役割を紹介します。",
+    description: "骨髄の構造と造血の場としての役割を紹介します。",
     category: "cell-types",
     updatedAt: "2026-08-28",
     readingMinutes: 3,
@@ -6372,8 +6364,7 @@ const rawArticles: Article[] = [
   {
     slug: "satellite-cells",
     title: "筋サテライト細胞：筋肉の控え選手",
-    description:
-      "けがの際に働く筋肉の幹細胞と、加齢による変化を紹介します。",
+    description: "けがの際に働く筋肉の幹細胞と、加齢による変化を紹介します。",
     category: "cell-types",
     updatedAt: "2026-08-28",
     readingMinutes: 3,
@@ -6428,8 +6419,7 @@ const rawArticles: Article[] = [
   {
     slug: "intestinal-stem",
     title: "腸管上皮幹細胞：毎日生まれ変わる仕組み",
-    description:
-      "陰窩と絨毛の構造、オルガノイド培養への応用を解説します。",
+    description: "陰窩と絨毛の構造、オルガノイド培養への応用を解説します。",
     category: "cell-types",
     updatedAt: "2026-08-28",
     readingMinutes: 3,
@@ -6484,8 +6474,7 @@ const rawArticles: Article[] = [
   {
     slug: "liver-progenitor",
     title: "肝臓の再生と前駆細胞：強い回復力の源",
-    description:
-      "肝切除後に戻る力の仕組みと、研究の現状を紹介します。",
+    description: "肝切除後に戻る力の仕組みと、研究の現状を紹介します。",
     category: "cell-types",
     updatedAt: "2026-08-29",
     readingMinutes: 3,
@@ -6596,8 +6585,7 @@ const rawArticles: Article[] = [
   {
     slug: "cartilage-repair-deep",
     title: "軟骨再生の深掘り：なぜ難しいか",
-    description:
-      "血流の乏しさと荷重の課題、治療選択の視点を整理します。",
+    description: "血流の乏しさと荷重の課題、治療選択の視点を整理します。",
     category: "mechanisms",
     updatedAt: "2026-08-29",
     readingMinutes: 3,
@@ -6708,8 +6696,7 @@ const rawArticles: Article[] = [
   {
     slug: "hair-regeneration",
     title: "毛髪再生の研究：毛包の仕組み",
-    description:
-      "毛周期と毛包幹細胞の話題を、現状と一緒に整理します。",
+    description: "毛周期と毛包幹細胞の話題を、現状と一緒に整理します。",
     category: "mechanisms",
     updatedAt: "2026-08-30",
     readingMinutes: 3,
@@ -6820,8 +6807,7 @@ const rawArticles: Article[] = [
   {
     slug: "inner-ear-regeneration",
     title: "内耳・聴覚の再生研究：有毛細胞を目指して",
-    description:
-      "難聴の種類と、再生・補聴の両面の進歩を紹介します。",
+    description: "難聴の種類と、再生・補聴の両面の進歩を紹介します。",
     category: "mechanisms",
     updatedAt: "2026-08-30",
     readingMinutes: 3,
@@ -6876,8 +6862,7 @@ const rawArticles: Article[] = [
   {
     slug: "retina-regeneration",
     title: "網膜の再生研究：見る力を守る挑戦",
-    description:
-      "加齢黄斑変性などを対象とする細胞治療研究の現状を整理します。",
+    description: "加齢黄斑変性などを対象とする細胞治療研究の現状を整理します。",
     category: "mechanisms",
     updatedAt: "2026-08-30",
     readingMinutes: 3,
@@ -6932,8 +6917,7 @@ const rawArticles: Article[] = [
   {
     slug: "spinal-cord-detail",
     title: "脊髄損傷の治療研究：神経をつなぐ挑戦",
-    description:
-      "損傷後の変化と、細胞移植・リハビリの組み合わせを解説します。",
+    description: "損傷後の変化と、細胞移植・リハビリの組み合わせを解説します。",
     category: "mechanisms",
     updatedAt: "2026-08-31",
     readingMinutes: 3,
@@ -6988,8 +6972,7 @@ const rawArticles: Article[] = [
   {
     slug: "heart-sheet-detail",
     title: "心筋シートの研究：拍動する組織を目指して",
-    description:
-      "シート工学の工夫と、虚血性心疾患治療の位置づけを整理します。",
+    description: "シート工学の工夫と、虚血性心疾患治療の位置づけを整理します。",
     category: "mechanisms",
     updatedAt: "2026-08-31",
     readingMinutes: 3,
@@ -7044,8 +7027,7 @@ const rawArticles: Article[] = [
   {
     slug: "direct-reprogramming",
     title: "ダイレクトリプログラミング：経由しない変換",
-    description:
-      "多能性状態を経ずに細胞を変換する研究の考え方を紹介します。",
+    description: "多能性状態を経ずに細胞を変換する研究の考え方を紹介します。",
     category: "mechanisms",
     updatedAt: "2026-08-31",
     readingMinutes: 3,
@@ -7100,8 +7082,7 @@ const rawArticles: Article[] = [
   {
     slug: "online-care",
     title: "オンライン診療との付き合い方：遠方の相談に",
-    description:
-      "初診・再診のルールと、対面との使い分けを整理します。",
+    description: "初診・再診のルールと、対面との使い分けを整理します。",
     category: "cost-access",
     updatedAt: "2026-08-31",
     readingMinutes: 3,
@@ -7156,8 +7137,7 @@ const rawArticles: Article[] = [
   {
     slug: "referral-letters",
     title: "紹介状・逆紹介：医療機関をつなぐ文書",
-    description:
-      "紹介状の役割と、逆紹介で地域に戻る流れを解説します。",
+    description: "紹介状の役割と、逆紹介で地域に戻る流れを解説します。",
     category: "cost-access",
     updatedAt: "2026-09-01",
     readingMinutes: 3,
@@ -7212,8 +7192,7 @@ const rawArticles: Article[] = [
   {
     slug: "medical-records",
     title: "診療記録の開示請求：自分の記録を受け取る",
-    description:
-      "カルテ開示の手続きと、記録の活かし方をまとめます。",
+    description: "カルテ開示の手続きと、記録の活かし方をまとめます。",
     category: "cost-access",
     updatedAt: "2026-09-01",
     readingMinutes: 3,
@@ -7268,7 +7247,8 @@ const rawArticles: Article[] = [
   {
     slug: "hospital-choice",
     title: "幹細胞治療のクリニック選びで確認すべきこと",
-    description: "提供計画の届出、説明の質、費用の透明性。幹細胞治療を提供するクリニックを比較するときの確認点を整理します。",
+    description:
+      "提供計画の届出、説明の質、費用の透明性。幹細胞治療を提供するクリニックを比較するときの確認点を整理します。",
     category: "cost-access",
     updatedAt: "2026-09-01",
     readingMinutes: 3,
@@ -7323,8 +7303,7 @@ const rawArticles: Article[] = [
   {
     slug: "emergency-care",
     title: "救急とのかかわり：いざというときの備え",
-    description:
-      "救急車を呼ぶ目安と、持病の伝え方をまとめます。",
+    description: "救急車を呼ぶ目安と、持病の伝え方をまとめます。",
     category: "cost-access",
     updatedAt: "2026-09-01",
     readingMinutes: 3,
@@ -7379,8 +7358,7 @@ const rawArticles: Article[] = [
   {
     slug: "pharmacy-use",
     title: "薬局・薬剤師の活用：薬の相談役",
-    description:
-      "お薬手帳の使い方と、飲み合わせ相談のコツを紹介します。",
+    description: "お薬手帳の使い方と、飲み合わせ相談のコツを紹介します。",
     category: "cost-access",
     updatedAt: "2026-09-02",
     readingMinutes: 3,
@@ -7435,8 +7413,7 @@ const rawArticles: Article[] = [
   {
     slug: "nursing-care-link",
     title: "看護・介護との連携：暮らしを支える体制",
-    description:
-      "訪問看護やケアマネジャーとの協働の仕組みを紹介します。",
+    description: "訪問看護やケアマネジャーとの協働の仕組みを紹介します。",
     category: "cost-access",
     updatedAt: "2026-09-02",
     readingMinutes: 3,
@@ -7491,8 +7468,7 @@ const rawArticles: Article[] = [
   {
     slug: "home-care",
     title: "在宅医療の基礎：家で受ける医療",
-    description:
-      "訪問診療と往診の違い、利用の流れを整理します。",
+    description: "訪問診療と往診の違い、利用の流れを整理します。",
     category: "cost-access",
     updatedAt: "2026-09-02",
     readingMinutes: 3,
@@ -7547,8 +7523,7 @@ const rawArticles: Article[] = [
   {
     slug: "work-balance",
     title: "治療と仕事の両立：両立支援の使い方",
-    description:
-      "休暇制度や主治医との連携など、働きながらの治療の工夫です。",
+    description: "休暇制度や主治医との連携など、働きながらの治療の工夫です。",
     category: "cost-access",
     updatedAt: "2026-09-02",
     readingMinutes: 3,
@@ -7659,8 +7634,7 @@ const rawArticles: Article[] = [
   {
     slug: "high-cost-care",
     title: "高額療養費制度：医療費の上限の仕組み",
-    description:
-      "自己負担に上限を設ける制度の概要と手続きを解説します。",
+    description: "自己負担に上限を設ける制度の概要と手続きを解説します。",
     category: "cost-access",
     updatedAt: "2026-09-03",
     readingMinutes: 3,
@@ -7715,8 +7689,7 @@ const rawArticles: Article[] = [
   {
     slug: "tax-deduction",
     title: "医療費控除：確定申告での手続き",
-    description:
-      "対象になる費用と、領収書管理のコツをまとめます。",
+    description: "対象になる費用と、領収書管理のコツをまとめます。",
     category: "cost-access",
     updatedAt: "2026-09-03",
     readingMinutes: 3,
@@ -7771,8 +7744,7 @@ const rawArticles: Article[] = [
   {
     slug: "insurance-review",
     title: "民間保険の見直し方：保障と必要額",
-    description:
-      "医療保険・がん保険を見直すときの視点を整理します。",
+    description: "医療保険・がん保険を見直すときの視点を整理します。",
     category: "cost-access",
     updatedAt: "2026-09-03",
     readingMinutes: 3,
@@ -7827,8 +7799,7 @@ const rawArticles: Article[] = [
   {
     slug: "decision-aids",
     title: "意思決定支援ツール：比べる表の使い方",
-    description:
-      "選択肢を整理するディシジョンエイドの活用法を紹介します。",
+    description: "選択肢を整理するディシジョンエイドの活用法を紹介します。",
     category: "cost-access",
     updatedAt: "2026-09-04",
     readingMinutes: 3,
@@ -7883,8 +7854,7 @@ const rawArticles: Article[] = [
   {
     slug: "patient-groups",
     title: "患者会・ピアサポート：経験者とつながる",
-    description:
-      "当事者同士の支え合いの探し方と、付き合い方のコツです。",
+    description: "当事者同士の支え合いの探し方と、付き合い方のコツです。",
     category: "cost-access",
     updatedAt: "2026-09-04",
     readingMinutes: 3,
@@ -7939,8 +7909,7 @@ const rawArticles: Article[] = [
   {
     slug: "counseling-support",
     title: "医療相談支援：メディエーションと相談窓口",
-    description:
-      "医師との行き違いを調整する仕組みと窓口を紹介します。",
+    description: "医師との行き違いを調整する仕組みと窓口を紹介します。",
     category: "cost-access",
     updatedAt: "2026-09-04",
     readingMinutes: 3,
@@ -7995,8 +7964,7 @@ const rawArticles: Article[] = [
   {
     slug: "palliative-care",
     title: "緩和ケアの考え方：つらさを和らげる",
-    description:
-      "痛みや不安への早期からの対応と、利用の仕方を解説します。",
+    description: "痛みや不安への早期からの対応と、利用の仕方を解説します。",
     category: "cost-access",
     updatedAt: "2026-09-04",
     readingMinutes: 3,
@@ -8051,8 +8019,7 @@ const rawArticles: Article[] = [
   {
     slug: "rehab-after-treatment",
     title: "術後リハビリ計画：回復の道筋",
-    description:
-      "目標設定と段階的な負荷、継続のコツをまとめます。",
+    description: "目標設定と段階的な負荷、継続のコツをまとめます。",
     category: "cost-access",
     updatedAt: "2026-09-05",
     readingMinutes: 3,
@@ -8107,8 +8074,7 @@ const rawArticles: Article[] = [
   {
     slug: "oral-care-during",
     title: "治療中の口腔ケア：口の健康を守る",
-    description:
-      "感染症予防と栄養摂取のための、口のケアを紹介します。",
+    description: "感染症予防と栄養摂取のための、口のケアを紹介します。",
     category: "cost-access",
     updatedAt: "2026-09-05",
     readingMinutes: 3,
@@ -8163,8 +8129,7 @@ const rawArticles: Article[] = [
   {
     slug: "distant-travel-care",
     title: "遠方通院・宿泊：負担を減らす工夫",
-    description:
-      "交通・宿泊・付き添いの計画と、利用できる支援をまとめます。",
+    description: "交通・宿泊・付き添いの計画と、利用できる支援をまとめます。",
     category: "cost-access",
     updatedAt: "2026-09-05",
     readingMinutes: 3,
@@ -8219,8 +8184,7 @@ const rawArticles: Article[] = [
   {
     slug: "language-support",
     title: "やさしい日本語・多言語：伝わる工夫",
-    description:
-      "言葉の壁を下げる伝え方と、通訳利用の方法を紹介します。",
+    description: "言葉の壁を下げる伝え方と、通訳利用の方法を紹介します。",
     category: "cost-access",
     updatedAt: "2026-09-05",
     readingMinutes: 3,
@@ -8275,8 +8239,7 @@ const rawArticles: Article[] = [
   {
     slug: "treatment-diary",
     title: "治療日記のつけ方：変化を見える化する",
-    description:
-      "症状・服薬・生活の記録法と、診察での活かし方をまとめます。",
+    description: "症状・服薬・生活の記録法と、診察での活かし方をまとめます。",
     category: "cost-access",
     updatedAt: "2026-09-06",
     readingMinutes: 3,
@@ -8331,8 +8294,7 @@ const rawArticles: Article[] = [
   {
     slug: "reviewing-treatment",
     title: "治療を見直す・やめる判断：立ち止まる勇気",
-    description:
-      "効果がないときの見直し方と、中止の進め方を整理します。",
+    description: "効果がないときの見直し方と、中止の進め方を整理します。",
     category: "cost-access",
     updatedAt: "2026-09-06",
     readingMinutes: 3,
@@ -8387,8 +8349,7 @@ const rawArticles: Article[] = [
   {
     slug: "childcare-balance",
     title: "育児・介護との両立：治療中の暮らし",
-    description:
-      "預け先やサービスの確保など、両立のための準備をまとめます。",
+    description: "預け先やサービスの確保など、両立のための準備をまとめます。",
     category: "cost-access",
     updatedAt: "2026-09-06",
     readingMinutes: 3,
@@ -8443,8 +8404,7 @@ const rawArticles: Article[] = [
   {
     slug: "medical-payment-help",
     title: "医療費の支払い相談：困ったときの窓口",
-    description:
-      "分割や猶予、支援制度など、支払いに困ったときの道筋です。",
+    description: "分割や猶予、支援制度など、支払いに困ったときの道筋です。",
     category: "cost-access",
     updatedAt: "2026-09-06",
     readingMinutes: 3,
@@ -8499,8 +8459,7 @@ const rawArticles: Article[] = [
   {
     slug: "cell-sizes",
     title: "細胞の大きさ比べ：卵子から血小板まで",
-    description:
-      "目に見えない細胞の世界のスケール感をつかみます。",
+    description: "目に見えない細胞の世界のスケール感をつかみます。",
     category: "health-basics",
     updatedAt: "2026-09-07",
     readingMinutes: 3,
@@ -8555,8 +8514,7 @@ const rawArticles: Article[] = [
   {
     slug: "blood-types",
     title: "血液型の仕組み：ABO式と輸血の関係",
-    description:
-      "赤血球の目印の違いと、輸血で適合を見る理由を整理します。",
+    description: "赤血球の目印の違いと、輸血で適合を見る理由を整理します。",
     category: "health-basics",
     updatedAt: "2026-09-07",
     readingMinutes: 3,
@@ -8611,8 +8569,7 @@ const rawArticles: Article[] = [
   {
     slug: "body-water",
     title: "体の水分と電解質：脱水を防ぐ考え方",
-    description:
-      "体重の約6割を占める水分の役割と、補給の基本をまとめます。",
+    description: "体重の約6割を占める水分の役割と、補給の基本をまとめます。",
     category: "health-basics",
     updatedAt: "2026-09-07",
     readingMinutes: 3,
@@ -8667,8 +8624,7 @@ const rawArticles: Article[] = [
   {
     slug: "lymph-system",
     title: "リンパの仕組み：むくみと免疫の通り道",
-    description:
-      "血管と並ぶ循環のもう一つの流れを整理します。",
+    description: "血管と並ぶ循環のもう一つの流れを整理します。",
     category: "health-basics",
     updatedAt: "2026-09-07",
     readingMinutes: 3,
@@ -8723,8 +8679,7 @@ const rawArticles: Article[] = [
   {
     slug: "microbiome",
     title: "腸内細菌と体：共生する微生物の話",
-    description:
-      "100兆個ともいわれる腸内細菌の働きと付き合い方を紹介します。",
+    description: "100兆個ともいわれる腸内細菌の働きと付き合い方を紹介します。",
     category: "health-basics",
     updatedAt: "2026-09-08",
     readingMinutes: 4,
@@ -8779,8 +8734,7 @@ const rawArticles: Article[] = [
   {
     slug: "fever-basics",
     title: "熱が出る仕組み：発熱と解熱の考え方",
-    description:
-      "体温を上げる体の判断と、対処の目安を整理します。",
+    description: "体温を上げる体の判断と、対処の目安を整理します。",
     category: "health-basics",
     updatedAt: "2026-09-08",
     readingMinutes: 3,
@@ -8835,8 +8789,7 @@ const rawArticles: Article[] = [
   {
     slug: "pain-basics",
     title: "痛みの仕組み：信号と感じ方の違い",
-    description:
-      "痛みが伝わる経路と、感じ方が変わる理由を紹介します。",
+    description: "痛みが伝わる経路と、感じ方が変わる理由を紹介します。",
     category: "health-basics",
     updatedAt: "2026-09-08",
     readingMinutes: 3,
@@ -8891,8 +8844,7 @@ const rawArticles: Article[] = [
   {
     slug: "joints-basics",
     title: "関節の仕組み：動く連結部の構造",
-    description:
-      "骨と骨をつなぐ関節のつくりと、動きの種類を整理します。",
+    description: "骨と骨をつなぐ関節のつくりと、動きの種類を整理します。",
     category: "health-basics",
     updatedAt: "2026-09-08",
     readingMinutes: 3,
@@ -8947,8 +8899,7 @@ const rawArticles: Article[] = [
   {
     slug: "fracture-healing",
     title: "骨折の治り方：骨がつながるまで",
-    description:
-      "骨が修復される段階と、治療中の過ごし方を紹介します。",
+    description: "骨が修復される段階と、治療中の過ごし方を紹介します。",
     category: "health-basics",
     updatedAt: "2026-09-09",
     readingMinutes: 3,
@@ -9003,8 +8954,7 @@ const rawArticles: Article[] = [
   {
     slug: "anemia-basics",
     title: "貧血とは：酸素不足のサイン",
-    description:
-      "めまいや疲れの背景にある貧血の基本と受診の目安です。",
+    description: "めまいや疲れの背景にある貧血の基本と受診の目安です。",
     category: "health-basics",
     updatedAt: "2026-09-09",
     readingMinutes: 3,
@@ -9059,8 +9009,7 @@ const rawArticles: Article[] = [
   {
     slug: "blood-pressure-basics",
     title: "血圧の仕組み：数値の読み方",
-    description:
-      "上と下の数値の意味と、測り方のコツを整理します。",
+    description: "上と下の数値の意味と、測り方のコツを整理します。",
     category: "health-basics",
     updatedAt: "2026-09-09",
     readingMinutes: 3,
@@ -9115,8 +9064,7 @@ const rawArticles: Article[] = [
   {
     slug: "cholesterol-basics",
     title: "コレステロールとは：善玉・悪玉の話",
-    description:
-      "体に必要な脂質の役割と、検査値の見方を紹介します。",
+    description: "体に必要な脂質の役割と、検査値の見方を紹介します。",
     category: "health-basics",
     updatedAt: "2026-09-09",
     readingMinutes: 3,
@@ -9171,8 +9119,7 @@ const rawArticles: Article[] = [
   {
     slug: "heatstroke-dehydration",
     title: "脱水と熱中症：夏の備えと応急対応",
-    description:
-      "暑い時期の体調不良を防ぐ工夫と、重症度の見分け方です。",
+    description: "暑い時期の体調不良を防ぐ工夫と、重症度の見分け方です。",
     category: "health-basics",
     updatedAt: "2026-09-10",
     readingMinutes: 3,
@@ -9227,8 +9174,7 @@ const rawArticles: Article[] = [
   {
     slug: "cell-banks-guide",
     title: "細胞バンクの種類：公的と民間の違い",
-    description:
-      "臍帯血・骨髄・iPSの保管の仕組みと選び方を整理します。",
+    description: "臍帯血・骨髄・iPSの保管の仕組みと選び方を整理します。",
     category: "cell-types",
     updatedAt: "2026-09-10",
     readingMinutes: 3,
@@ -9283,8 +9229,7 @@ const rawArticles: Article[] = [
   {
     slug: "culture-media",
     title: "培養液とは：細胞の食事と環境",
-    description:
-      "細胞を育てる液体の中身と管理の基本を紹介します。",
+    description: "細胞を育てる液体の中身と管理の基本を紹介します。",
     category: "cell-types",
     updatedAt: "2026-09-10",
     readingMinutes: 3,
@@ -9339,8 +9284,7 @@ const rawArticles: Article[] = [
   {
     slug: "cell-sorting",
     title: "細胞の選別：マーカーとセルソーター",
-    description:
-      "目的の細胞だけを取り出す技術の基本を整理します。",
+    description: "目的の細胞だけを取り出す技術の基本を整理します。",
     category: "cell-types",
     updatedAt: "2026-09-10",
     readingMinutes: 3,
@@ -9395,8 +9339,7 @@ const rawArticles: Article[] = [
   {
     slug: "placenta-cells",
     title: "胎盤・羊膜由来の細胞：出産時の組織の活用",
-    description:
-      "出産に伴い得られる組織の研究と利用の実際を紹介します。",
+    description: "出産に伴い得られる組織の研究と利用の実際を紹介します。",
     category: "cell-types",
     updatedAt: "2026-09-11",
     readingMinutes: 3,
@@ -9451,8 +9394,7 @@ const rawArticles: Article[] = [
   {
     slug: "pancreas-progenitor",
     title: "膵臓の再生研究：β細胞を目指して",
-    description:
-      "インスリンを出す細胞の再生と移植研究の現状を整理します。",
+    description: "インスリンを出す細胞の再生と移植研究の現状を整理します。",
     category: "mechanisms",
     updatedAt: "2026-09-11",
     readingMinutes: 4,
@@ -9563,8 +9505,7 @@ const rawArticles: Article[] = [
   {
     slug: "lung-regeneration",
     title: "肺の再生研究：呼吸を取り戻す挑戦",
-    description:
-      "ガス交換の仕組みを守る・戻す研究の現状を整理します。",
+    description: "ガス交換の仕組みを守る・戻す研究の現状を整理します。",
     category: "mechanisms",
     updatedAt: "2026-09-11",
     readingMinutes: 3,
@@ -9619,8 +9560,7 @@ const rawArticles: Article[] = [
   {
     slug: "disc-regeneration",
     title: "椎間板の再生研究：腰痛との関係",
-    description:
-      "背骨のクッションの変性と、再生への挑戦を紹介します。",
+    description: "背骨のクッションの変性と、再生への挑戦を紹介します。",
     category: "mechanisms",
     updatedAt: "2026-09-12",
     readingMinutes: 3,
@@ -9675,8 +9615,7 @@ const rawArticles: Article[] = [
   {
     slug: "vessel-regeneration",
     title: "血管の再生：足りない血流を補う",
-    description:
-      "閉塞性動脈疾患などを対象とする血管再生の考え方を整理します。",
+    description: "閉塞性動脈疾患などを対象とする血管再生の考え方を整理します。",
     category: "mechanisms",
     updatedAt: "2026-09-12",
     readingMinutes: 3,
@@ -9731,8 +9670,7 @@ const rawArticles: Article[] = [
   {
     slug: "bioprinting",
     title: "3Dバイオプリンティング：印刷する組織",
-    description:
-      "細胞を材料に立体組織を作る技術の現状と課題を紹介します。",
+    description: "細胞を材料に立体組織を作る技術の現状と課題を紹介します。",
     category: "mechanisms",
     updatedAt: "2026-09-12",
     readingMinutes: 3,
@@ -9787,8 +9725,7 @@ const rawArticles: Article[] = [
   {
     slug: "organ-transplant-basics",
     title: "臓器移植の基礎：提供と分配の仕組み",
-    description:
-      "ドナーからの提供と公平な分配を支える制度を紹介します。",
+    description: "ドナーからの提供と公平な分配を支える制度を紹介します。",
     category: "mechanisms",
     updatedAt: "2026-09-12",
     readingMinutes: 4,
@@ -9843,8 +9780,7 @@ const rawArticles: Article[] = [
   {
     slug: "ips-donation",
     title: "iPSの提供ドナーとは：協力の仕組みと流れ",
-    description:
-      "研究やストックのための血液提供と、その後の扱いを解説します。",
+    description: "研究やストックのための血液提供と、その後の扱いを解説します。",
     category: "cell-types",
     updatedAt: "2026-09-13",
     readingMinutes: 3,
@@ -9899,8 +9835,7 @@ const rawArticles: Article[] = [
   {
     slug: "advance-directives",
     title: "事前指示書の書き方：延命治療と意思表示",
-    description:
-      "いざというときの希望を伝える文書の作り方と使い方です。",
+    description: "いざというときの希望を伝える文書の作り方と使い方です。",
     category: "cost-access",
     updatedAt: "2026-09-13",
     readingMinutes: 3,
@@ -10011,8 +9946,7 @@ const rawArticles: Article[] = [
   {
     slug: "generic-drugs",
     title: "ジェネリック医薬品：後発品の選び方",
-    description:
-      "先発品との違いと、切り替えるときの確認点をまとめます。",
+    description: "先発品との違いと、切り替えるときの確認点をまとめます。",
     category: "cost-access",
     updatedAt: "2026-09-13",
     readingMinutes: 3,
@@ -10067,8 +10001,7 @@ const rawArticles: Article[] = [
   {
     slug: "insurance-card-guide",
     title: "保険証とマイナ保険証：受診時の使い方",
-    description:
-      "受診に必要な確認と、マイナ保険証の利用方法を紹介します。",
+    description: "受診に必要な確認と、マイナ保険証の利用方法を紹介します。",
     category: "cost-access",
     updatedAt: "2026-09-14",
     readingMinutes: 3,
@@ -10179,8 +10112,7 @@ const rawArticles: Article[] = [
   {
     slug: "driving-illness",
     title: "病気と運転：免許と安全の考え方",
-    description:
-      "治療中の運転の注意と、免許に関わる制度を紹介します。",
+    description: "治療中の運転の注意と、免許に関わる制度を紹介します。",
     category: "cost-access",
     updatedAt: "2026-09-14",
     readingMinutes: 3,
@@ -10235,8 +10167,7 @@ const rawArticles: Article[] = [
   {
     slug: "work-injury-insurance",
     title: "労災と傷病手当：働けなくなったときの保障",
-    description:
-      "仕事が原因のけが・病気と、それ以外の休業の保障を整理します。",
+    description: "仕事が原因のけが・病気と、それ以外の休業の保障を整理します。",
     category: "cost-access",
     updatedAt: "2026-09-14",
     readingMinutes: 4,
@@ -10347,8 +10278,7 @@ const rawArticles: Article[] = [
   {
     slug: "drug-allergy-record",
     title: "薬のアレルギーと副作用の記録：伝え方",
-    description:
-      "飲み合わせや副作用の情報を整理し、安全につなげる方法です。",
+    description: "飲み合わせや副作用の情報を整理し、安全につなげる方法です。",
     category: "cost-access",
     updatedAt: "2026-09-15",
     readingMinutes: 3,
@@ -10403,8 +10333,7 @@ const rawArticles: Article[] = [
   {
     slug: "vaccination-adult",
     title: "大人の予防接種：種類と受け方",
-    description:
-      "成人に勧められる予防接種と、接種前の確認点をまとめます。",
+    description: "成人に勧められる予防接種と、接種前の確認点をまとめます。",
     category: "cost-access",
     updatedAt: "2026-09-15",
     readingMinutes: 3,
@@ -10459,8 +10388,7 @@ const rawArticles: Article[] = [
   {
     slug: "dental-visit-guide",
     title: "歯科受診の進め方：検診と治療の流れ",
-    description:
-      "歯科の初診から治療完了までの流れと準備を紹介します。",
+    description: "歯科の初診から治療完了までの流れと準備を紹介します。",
     category: "cost-access",
     updatedAt: "2026-09-15",
     readingMinutes: 3,
@@ -10515,8 +10443,7 @@ const rawArticles: Article[] = [
   {
     slug: "assistive-devices",
     title: "補装具の作り方：義肢・装具と費用",
-    description:
-      "体を支える用具の種類と、作製・支給の流れを整理します。",
+    description: "体を支える用具の種類と、作製・支給の流れを整理します。",
     category: "cost-access",
     updatedAt: "2026-09-16",
     readingMinutes: 3,
@@ -10571,8 +10498,7 @@ const rawArticles: Article[] = [
   {
     slug: "home-safety-elderly",
     title: "高齢者の家の安全：転倒予防の工夫",
-    description:
-      "住まいの危険箇所の見直しと、転倒を防ぐ工夫をまとめます。",
+    description: "住まいの危険箇所の見直しと、転倒を防ぐ工夫をまとめます。",
     category: "cost-access",
     updatedAt: "2026-09-16",
     readingMinutes: 3,
@@ -10627,8 +10553,7 @@ const rawArticles: Article[] = [
   {
     slug: "predatory-journals",
     title: "ハゲタカジャーナルとは：粗悪誌の見分け方",
-    description:
-      "お金を払えば載る雑誌の特徴と、論文の質の見極めを紹介します。",
+    description: "お金を払えば載る雑誌の特徴と、論文の質の見極めを紹介します。",
     category: "efficacy",
     updatedAt: "2026-09-16",
     readingMinutes: 3,
@@ -10683,8 +10608,7 @@ const rawArticles: Article[] = [
   {
     slug: "retractions",
     title: "論文撤回とは：撤回理由の読み方",
-    description:
-      "取り下げられた論文の意味と、撤回情報の探し方を整理します。",
+    description: "取り下げられた論文の意味と、撤回情報の探し方を整理します。",
     category: "efficacy",
     updatedAt: "2026-09-16",
     readingMinutes: 3,
@@ -10739,8 +10663,7 @@ const rawArticles: Article[] = [
   {
     slug: "open-access",
     title: "オープンアクセスとは：誰でも読める論文",
-    description:
-      "無料公開の仕組みと、購読誌との違いを紹介します。",
+    description: "無料公開の仕組みと、購読誌との違いを紹介します。",
     category: "efficacy",
     updatedAt: "2026-09-17",
     readingMinutes: 3,
@@ -10795,8 +10718,7 @@ const rawArticles: Article[] = [
   {
     slug: "impact-factor",
     title: "インパクトファクターの読み方：数字の意味と限界",
-    description:
-      "雑誌の影響指標の仕組みと、誤用への注意を整理します。",
+    description: "雑誌の影響指標の仕組みと、誤用への注意を整理します。",
     category: "efficacy",
     updatedAt: "2026-09-17",
     readingMinutes: 3,
@@ -10851,8 +10773,7 @@ const rawArticles: Article[] = [
   {
     slug: "guideline-reading",
     title: "診療ガイドラインの読み方：推奨の強さを知る",
-    description:
-      "推奨度とエビデンスレベルの表記の読み方を紹介します。",
+    description: "推奨度とエビデンスレベルの表記の読み方を紹介します。",
     category: "efficacy",
     updatedAt: "2026-09-17",
     readingMinutes: 4,
@@ -10907,8 +10828,7 @@ const rawArticles: Article[] = [
   {
     slug: "package-insert",
     title: "添付文書の読み方：薬の説明書を活用する",
-    description:
-      "効能・用法・副作用の記載の読み方と注意点をまとめます。",
+    description: "効能・用法・副作用の記載の読み方と注意点をまとめます。",
     category: "efficacy",
     updatedAt: "2026-09-17",
     readingMinutes: 3,
@@ -10963,8 +10883,7 @@ const rawArticles: Article[] = [
   {
     slug: "rwd-basics",
     title: "リアルワールドデータとは：日常診療の記録の活用",
-    description:
-      "治験以外のデータの役割と読み方の注意を紹介します。",
+    description: "治験以外のデータの役割と読み方の注意を紹介します。",
     category: "efficacy",
     updatedAt: "2026-09-18",
     readingMinutes: 3,
@@ -11019,8 +10938,7 @@ const rawArticles: Article[] = [
   {
     slug: "expanded-access",
     title: "拡大治験とコンパッショネートユース：未承認薬への道",
-    description:
-      "承認前の薬にアクセスする制度と考え方を整理します。",
+    description: "承認前の薬にアクセスする制度と考え方を整理します。",
     category: "efficacy",
     updatedAt: "2026-09-18",
     readingMinutes: 4,
@@ -11075,8 +10993,7 @@ const rawArticles: Article[] = [
   {
     slug: "first-in-human",
     title: "ファーストインヒューマン試験とは：人で初めて試す段階",
-    description:
-      "最初期の臨床試験の目的と参加の考え方を紹介します。",
+    description: "最初期の臨床試験の目的と参加の考え方を紹介します。",
     category: "efficacy",
     updatedAt: "2026-09-18",
     readingMinutes: 3,
@@ -11131,8 +11048,7 @@ const rawArticles: Article[] = [
   {
     slug: "decentralized-trials",
     title: "分散型治験（DCT）とは：来院しない治験",
-    description:
-      "オンラインや訪問を組み合わせた新しい治験の形を整理します。",
+    description: "オンラインや訪問を組み合わせた新しい治験の形を整理します。",
     category: "efficacy",
     updatedAt: "2026-09-18",
     readingMinutes: 3,
@@ -11187,8 +11103,7 @@ const rawArticles: Article[] = [
   {
     slug: "basket-trials",
     title: "バスケット試験・アンブレラ試験とは：遺伝子で分ける治験",
-    description:
-      "臓器ではなく特徴で分ける新しい治験デザインを紹介します。",
+    description: "臓器ではなく特徴で分ける新しい治験デザインを紹介します。",
     category: "efficacy",
     updatedAt: "2026-09-19",
     readingMinutes: 4,
@@ -11243,8 +11158,7 @@ const rawArticles: Article[] = [
   {
     slug: "digital-therapeutics",
     title: "デジタル療法（DTx）とは：アプリで治す時代",
-    description:
-      "治療用アプリの仕組みと、薬との違いを整理します。",
+    description: "治療用アプリの仕組みと、薬との違いを整理します。",
     category: "efficacy",
     updatedAt: "2026-09-19",
     readingMinutes: 3,
@@ -11299,8 +11213,7 @@ const rawArticles: Article[] = [
   {
     slug: "thermometer-guide",
     title: "体温計の使い方：脇・耳・おでこの違い",
-    description:
-      "部位による違いと、正しく測るコツを紹介するコラムです。",
+    description: "部位による違いと、正しく測るコツを紹介するコラムです。",
     category: "health-basics",
     updatedAt: "2026-09-26",
     readingMinutes: 3,
@@ -11356,8 +11269,7 @@ const rawArticles: Article[] = [
   {
     slug: "blood-donation-basics",
     title: "献血の流れと条件：初めての方へ",
-    description:
-      "献血の種類・条件・当日の流れをまとめたコラムです。",
+    description: "献血の種類・条件・当日の流れをまとめたコラムです。",
     category: "health-basics",
     updatedAt: "2026-10-03",
     readingMinutes: 3,
@@ -11413,8 +11325,7 @@ const rawArticles: Article[] = [
   {
     slug: "microscope-world",
     title: "顕微鏡でのぞく世界：細胞観察入門",
-    description:
-      "顕微鏡の種類と、細胞の見え方の基本を紹介するコラムです。",
+    description: "顕微鏡の種類と、細胞の見え方の基本を紹介するコラムです。",
     category: "health-basics",
     updatedAt: "2026-10-10",
     readingMinutes: 3,
@@ -11470,8 +11381,7 @@ const rawArticles: Article[] = [
   {
     slug: "ips-nobel-story",
     title: "iPS細胞とノーベル賞：2012年の出来事",
-    description:
-      "山中伸弥教授の受賞の背景と、その後の歩みをたどるコラムです。",
+    description: "山中伸弥教授の受賞の背景と、その後の歩みをたどるコラムです。",
     category: "mechanisms",
     updatedAt: "2026-10-17",
     readingMinutes: 4,
@@ -11527,8 +11437,7 @@ const rawArticles: Article[] = [
   {
     slug: "organoid-ethics",
     title: "オルガノイドと意識の議論：脳モデルの倫理",
-    description:
-      "ミニ臓器をめぐる倫理的な問いを紹介するコラムです。",
+    description: "ミニ臓器をめぐる倫理的な問いを紹介するコラムです。",
     category: "mechanisms",
     updatedAt: "2026-10-24",
     readingMinutes: 3,
@@ -11641,8 +11550,7 @@ const rawArticles: Article[] = [
   {
     slug: "first-aid-basics",
     title: "応急手当の基礎：止血と119番",
-    description:
-      "けがや急病の現場でできることをまとめたコラムです。",
+    description: "けがや急病の現場でできることをまとめたコラムです。",
     category: "cost-access",
     updatedAt: "2026-11-07",
     readingMinutes: 3,
@@ -11698,8 +11606,7 @@ const rawArticles: Article[] = [
   {
     slug: "medicine-storage",
     title: "薬の保管方法：期限と置き場所",
-    description:
-      "薬の品質を保つ保管のコツと、残薬の扱いを紹介するコラムです。",
+    description: "薬の品質を保つ保管のコツと、残薬の扱いを紹介するコラムです。",
     category: "cost-access",
     updatedAt: "2026-11-14",
     readingMinutes: 3,
@@ -11755,8 +11662,7 @@ const rawArticles: Article[] = [
   {
     slug: "nobel-prize-guide",
     title: "ノーベル生理学・医学賞の読み方",
-    description:
-      "受賞研究の意味と、報道との付き合い方を紹介するコラムです。",
+    description: "受賞研究の意味と、報道との付き合い方を紹介するコラムです。",
     category: "mechanisms",
     updatedAt: "2026-11-21",
     readingMinutes: 3,
@@ -11812,8 +11718,7 @@ const rawArticles: Article[] = [
   {
     slug: "science-events",
     title: "科学イベントの探し方：公開講座と見学会",
-    description:
-      "研究に触れられる場の種類と探し方をまとめたコラムです。",
+    description: "研究に触れられる場の種類と探し方をまとめたコラムです。",
     category: "mechanisms",
     updatedAt: "2026-11-28",
     readingMinutes: 3,
@@ -12234,7 +12139,8 @@ const rawArticles: Article[] = [
   {
     slug: "prp-therapy-basics",
     title: "PRPと幹細胞治療は何が違う？自分の血液と自分の細胞",
-    description: "自分の血液を使うPRP療法と、細胞を採取・培養して使う幹細胞治療。仕組みと位置づけの違いを整理します。",
+    description:
+      "自分の血液を使うPRP療法と、細胞を採取・培養して使う幹細胞治療。仕組みと位置づけの違いを整理します。",
     category: "compare-therapies",
     updatedAt: "2026-09-23",
     readingMinutes: 3,
@@ -12339,7 +12245,8 @@ const rawArticles: Article[] = [
     ],
     references: [
       {
-        title: "厚生労働省：再生医療等の安全性の確保等に関する法律に基づく提供計画の公開情報",
+        title:
+          "厚生労働省：再生医療等の安全性の確保等に関する法律に基づく提供計画の公開情報",
         url: "https://saiseiiryo.mhlw.go.jp/published_plan/download/02C2508044/5/0",
       },
     ],
@@ -12347,7 +12254,8 @@ const rawArticles: Article[] = [
   {
     slug: "exosome-cosmetic-claims",
     title: "幹細胞・エクソソームを使った美容医療の効果と注意点",
-    description: "美容医療で使われる幹細胞関連の治療とエクソソーム製剤。期待される効果と科学的な検証状況、注意点を整理します。",
+    description:
+      "美容医療で使われる幹細胞関連の治療とエクソソーム製剤。期待される効果と科学的な検証状況、注意点を整理します。",
     category: "anti-aging",
     updatedAt: "2026-09-23",
     readingMinutes: 3,
@@ -12911,7 +12819,8 @@ const rawArticles: Article[] = [
       },
       {
         id: "confirm-points",
-        title: "7．「幹細胞治療」という言葉だけでは、何を投与するのか分からない",
+        title:
+          "7．「幹細胞治療」という言葉だけでは、何を投与するのか分からない",
         paragraphs: [
           "ここまで見てきたように、「幹細胞治療」という言葉だけでは、実際に何が体内に入るのか判断できません。確認したいのは、少なくとも次の項目です。",
           "投与されるものは何か？　幹細胞そのものなのか、幹細胞から分化させた細胞なのか、細胞を加工した製品なのか、細胞ではなく細胞が作る成分なのか。",
@@ -14239,7 +14148,11 @@ const rawArticles: Article[] = [
           headers: ["種類", "どこから作られる？", "分化できる範囲"],
           rows: [
             ["ES細胞", "胚（受精後の初期胚）", "非常に広い"],
-            ["iPS細胞", "皮膚などの体細胞を人工的にリプログラミング", "非常に広い"],
+            [
+              "iPS細胞",
+              "皮膚などの体細胞を人工的にリプログラミング",
+              "非常に広い",
+            ],
             ["体性幹細胞", "生まれた後の体の中に存在", "主に特定の組織・細胞"],
           ],
         },
@@ -14414,8 +14327,16 @@ const rawArticles: Article[] = [
           headers: ["アプローチ", "基本的な考え方", "イメージ"],
           rows: [
             ["細胞移植", "必要な細胞を外から補う", "「細胞を補充する」"],
-            ["組織工学", "細胞と足場などを組み合わせて組織をつくる", "「組織をつくる」"],
-            ["生体内再生", "体内にある細胞や修復能力を利用する", "「体の力を引き出す」"],
+            [
+              "組織工学",
+              "細胞と足場などを組み合わせて組織をつくる",
+              "「組織をつくる」",
+            ],
+            [
+              "生体内再生",
+              "体内にある細胞や修復能力を利用する",
+              "「体の力を引き出す」",
+            ],
           ],
         },
       },
@@ -14453,7 +14374,8 @@ const rawArticles: Article[] = [
 export const articles: Article[] = rawArticles.map((article, index) => {
   const evidence = articleEvidence[article.slug];
   const record = reviewSchedule[article.slug];
-  const reviewed = reviewRecordReady(record, medicalReviewer.enabled, publishBaseDate()) &&
+  const reviewed =
+    reviewRecordReady(record, medicalReviewer.enabled, publishBaseDate()) &&
     record?.reviewer?.name === medicalReviewer.name;
   const sections = [
     ...correctArticleSections(article.slug, "ja", article.sections),
@@ -14462,8 +14384,11 @@ export const articles: Article[] = rawArticles.map((article, index) => {
     ...faqSectionsFor(article.slug, "ja", article.category),
     ...checklistSectionsFor(article.slug, "ja"),
   ];
-  const editedAt = reviewSchedule[article.slug]?.lastEditedAt ?? article.updatedAt;
-  const points = article.points.map((text) => correctArticleText(article.slug, "ja", text));
+  const editedAt =
+    reviewSchedule[article.slug]?.lastEditedAt ?? article.updatedAt;
+  const points = article.points.map((text) =>
+    correctArticleText(article.slug, "ja", text),
+  );
   return {
     ...article,
     title: correctArticleText(article.slug, "ja", article.title),
@@ -14471,31 +14396,58 @@ export const articles: Article[] = rawArticles.map((article, index) => {
     points,
     publishAt: deployDate,
     updatedAt: editedAt,
-    image: articleImageFor(article.category, index, reviewSchedule[article.slug]?.imageKey).src,
-    imageAlt: articleImageFor(article.category, index, reviewSchedule[article.slug]?.imageKey).alt,
+    image: articleImageFor(
+      article.category,
+      index,
+      reviewSchedule[article.slug]?.imageKey,
+    ).src,
+    imageAlt: articleImageFor(
+      article.category,
+      index,
+      reviewSchedule[article.slug]?.imageKey,
+    ).alt,
     // Literature editing is not physician review. Never infer publication from an edit date.
     status: reviewed ? "published" : "draft",
-    reviewer: reviewed ? {
-      name: medicalReviewer.name,
-      credentials: medicalReviewer.credentials.join(" / "),
-      affiliation: medicalReviewer.affiliation,
-      profileUrl: medicalReviewer.profileUrl,
-      reviewedAt: record.reviewer!.reviewedAt!,
-      scope: record.reviewer!.scope,
-    } : undefined,
+    reviewer: reviewed
+      ? {
+          name: medicalReviewer.name,
+          credentials: medicalReviewer.credentials.join(" / "),
+          affiliation: medicalReviewer.affiliation,
+          profileUrl: medicalReviewer.profileUrl,
+          reviewedAt: record.reviewer!.reviewedAt!,
+          scope: record.reviewer!.scope,
+        }
+      : undefined,
     publishedAt: deployDate,
-    readingMinutes: Math.max(2, Math.ceil((points.join("").length + sections.map((section) => section.paragraphs.join("")).join("").length) / 450)),
+    readingMinutes: Math.max(
+      2,
+      Math.ceil(
+        (points.join("").length +
+          sections.map((section) => section.paragraphs.join("")).join("")
+            .length) /
+          450,
+      ),
+    ),
     sections,
-    references: Array.from(new Map(
-      [...article.references, ...(evidence?.sources ?? [])].map((reference) => [reference.url, reference]),
-    ).values()),
+    references: Array.from(
+      new Map(
+        [...article.references, ...(evidence?.sources ?? [])].map(
+          (reference) => [reference.url, reference],
+        ),
+      ).values(),
+    ),
   };
 });
 
 /** publishAt が未来日の間は非公開（ページ生成・一覧・検索・関連の対象外）。 */
 export function isVisibleArticle(article: Article, baseDate?: string): boolean {
   const today = baseDate ?? publishBaseDate();
-  if (articleBuildMode !== "all" && article.publishAt && article.publishAt > today) return false;
+  if (
+    articleBuildMode !== "all" &&
+    article.publishAt &&
+    article.publishAt > today
+  )
+    return false;
   // Preview builds are useful for editorial review. Production builds expose
   // only articles with a recorded review and publication state.
   if (publication.mode === "production" && !isReviewed(article)) return false;
@@ -14518,7 +14470,9 @@ export function liveArticles(list: Article[]): Article[] {
 export function availableCategories() {
   if (publication.mode !== "production") return categories;
   const live = liveArticles(visibleArticles(articles));
-  return categories.filter((category) => live.some((article) => article.category === category.slug));
+  return categories.filter((category) =>
+    live.some((article) => article.category === category.slug),
+  );
 }
 
 export function isCategoryAvailable(slug: string): boolean {

@@ -14,7 +14,11 @@ export function LocaleDocument() {
   return null;
 }
 
-const skipLabel = { ja: "本文へスキップ", en: "Skip to content", zh: "跳到正文" } as const;
+const skipLabel = {
+  ja: "本文へスキップ",
+  en: "Skip to content",
+  zh: "跳到正文",
+} as const;
 
 export function SkipLink() {
   const locale = localeFromPath(usePathname());

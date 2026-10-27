@@ -10,17 +10,18 @@
 
 `main` にpushすると、2つのワークフローが並行して動きます。
 
-| | GitHub Pages（テスト） | Lolipop（本番） |
-| --- | --- | --- |
-| ワークフロー | `.github/workflows/deploy.yml`（作成済み） | `.github/workflows/deploy-lolipop.yml`（**未作成**。公開時に §5 をコピペして作る） |
-| 起動 | `main` へのpush、手動 | `main` へのpush（`src/**`・`public/**`・`scripts/**`・`deploy/**`・`package*.json`・`next.config.ts`・`tsconfig.json`・`.env.example` の変更時のみ）、手動、毎週土曜06:00(JST) |
-| 有効化 | 常に有効 | ファイルを作り、かつ Variables `LOLIPOP_DEPLOY_ENABLED=true` を設定するまで配置されない |
-| 記事 | 全251本（未監修含む） | 監修記録が確定した記事だけ（現在6本） |
-| 検索公開 | 常に `noindex` | Variablesで制御 |
-| 問い合わせ | 送信不可（PHPなし） | 送信可（PHP + PHPMailer） |
-| URL | `https://mori-tt.github.io/regenerative-medicine/` | 本番ドメイン（例：`https://saisei-med.com`） |
+|              | GitHub Pages（テスト）                             | Lolipop（本番）                                                                                                                                                                |
+| ------------ | -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| ワークフロー | `.github/workflows/deploy.yml`（作成済み）         | `.github/workflows/deploy-lolipop.yml`（**未作成**。公開時に §5 をコピペして作る）                                                                                             |
+| 起動         | `main` へのpush、手動                              | `main` へのpush（`src/**`・`public/**`・`scripts/**`・`deploy/**`・`package*.json`・`next.config.ts`・`tsconfig.json`・`.env.example` の変更時のみ）、手動、毎週土曜06:00(JST) |
+| 有効化       | 常に有効                                           | ファイルを作り、かつ Variables `LOLIPOP_DEPLOY_ENABLED=true` を設定するまで配置されない                                                                                        |
+| 記事         | 全251本（未監修含む）                              | 監修記録が確定した記事だけ（現在6本）                                                                                                                                          |
+| 検索公開     | 常に `noindex`                                     | Variablesで制御                                                                                                                                                                |
+| 問い合わせ   | 送信不可（PHPなし）                                | 送信可（PHP + PHPMailer）                                                                                                                                                      |
+| URL          | `https://mori-tt.github.io/regenerative-medicine/` | 本番ドメイン（例：`https://saisei-med.com`）                                                                                                                                   |
 
 注意：
+
 - Variablesを変えただけではワークフローは起動しません。反映するには手動実行（§4）が必要です。
 - 上記の `paths` に当てはまらない変更（`docs/` や `.github/` だけの変更）では、Lolipopは再デプロイされません。GitHub Pagesは `main` へのどのpushでも再デプロイされます。
 - GitHub Pagesのテストサイトは、未監修の原稿を含む全記事をURLを知っていれば誰でも閲覧できます（`noindex` は閲覧制限ではありません）。公開したくない原稿をここに置かないでください。
@@ -30,6 +31,7 @@
 詳細は各節にあります。上から順に進め、すべて終わったら公開できます。
 
 **A. 公開の数週間前〜準備**
+
 1. 運営者名・所在地・連絡先を確定する → §1-3
 2. 千原良友先生の掲載・監修表示の許諾を得る → §1-3
 3. 法務確認（プライバシーポリシー・利用規約・広告表記・医療広告）→ §1-3、[MANUAL-LEGAL-CHECKLIST.md](MANUAL-LEGAL-CHECKLIST.md)
@@ -39,17 +41,9 @@
 7. `contact-config.php` をサーバーに置く → §2
 8. SSHホスト鍵を登録する → §5
 
-**B. 公開当日**
-9. `deployDate` を公開日にして `main` へ → §6-2
-10. 手元で本番設定のビルド確認 → §6-1
-11. `deploy-lolipop.yml` を作成・コミット → §5
-12. `LOLIPOP_DEPLOY_ENABLED=true` を設定して実行 → §6-2
-13. 公開直後の動作確認（HTTPS、問い合わせ送信、フィード、OGP、実機）→ §6-3
+**B. 公開当日** 9. `deployDate` を公開日にして `main` へ → §6-2 10. 手元で本番設定のビルド確認 → §6-1 11. `deploy-lolipop.yml` を作成・コミット → §5 12. `LOLIPOP_DEPLOY_ENABLED=true` を設定して実行 → §6-2 13. 公開直後の動作確認（HTTPS、問い合わせ送信、フィード、OGP、実機）→ §6-3
 
-**C. 公開後**
-14. Search Console / Bing 登録・sitemap送信 → §6-4
-15. 数日後にインデックス状況を確認 → §6-4
-16. 運用（記事追加、英中の検索公開、ロールバック、パスワード変更）→ §7
+**C. 公開後** 14. Search Console / Bing 登録・sitemap送信 → §6-4 15. 数日後にインデックス状況を確認 → §6-4 16. 運用（記事追加、英中の検索公開、ロールバック、パスワード変更）→ §7
 
 ## 1. 一度だけ行う準備（手作業）
 
@@ -127,26 +121,26 @@ rm /tmp/contact-config.php
 
 **Secrets**（Settings → Secrets and variables → Actions → Secrets）
 
-| 名前 | 内容 |
-| --- | --- |
-| `LOLIPOP_SSH_USER` | SSHユーザー名 |
-| `LOLIPOP_SSH_PASSWORD` | SSHパスワード |
-| `LOLIPOP_SSH_REMOTE_DIR` | 公開フォルダ（例：`~/web/saisei-med.com`）。`/` やホーム自体は不可 |
-| `LOLIPOP_SSH_KNOWN_HOSTS` | `ssh-keyscan -p 2222 ssh.lolipop.jp` の出力（§5の手順で登録） |
+| 名前                      | 内容                                                               |
+| ------------------------- | ------------------------------------------------------------------ |
+| `LOLIPOP_SSH_USER`        | SSHユーザー名                                                      |
+| `LOLIPOP_SSH_PASSWORD`    | SSHパスワード                                                      |
+| `LOLIPOP_SSH_REMOTE_DIR`  | 公開フォルダ（例：`~/web/saisei-med.com`）。`/` やホーム自体は不可 |
+| `LOLIPOP_SSH_KNOWN_HOSTS` | `ssh-keyscan -p 2222 ssh.lolipop.jp` の出力（§5の手順で登録）      |
 
 **Variables**（同 → Variables）
 
-| 名前 | 本番公開時の値 | 備考 |
-| --- | --- | --- |
-| `LOLIPOP_DEPLOY_ENABLED` | `true` | これを設定するまでLolipopへは配置されない |
-| `LOLIPOP_SITE_URL` | `https://saisei-med.com` | ドメインのルート。サブディレクトリ不可。wwwなしに統一する前提（§3） |
-| `LOLIPOP_PUBLICATION_MODE` | `production` | `check:rights` が走る |
-| `LOLIPOP_SITE_INDEXABLE` | `true` | 検索に出す。準備中は `false` |
-| `LOLIPOP_LOCALIZED_INDEXABLE` | `false` | 英・中の翻訳確認後に `true` |
-| `NEXT_PUBLIC_CONTACT_EMAIL` | 受信できるアドレス | 必須 |
-| `NEXT_PUBLIC_OPERATOR_NAME` | 運営者の正式名称 | 必須 |
-| `NEXT_PUBLIC_OPERATOR_ADDRESS` | 運営者の所在地 | 必須 |
-| `NEXT_PUBLIC_SITE_URL` | `https://mori-tt.github.io` | GitHub Pages用（未設定でも既定値） |
+| 名前                           | 本番公開時の値              | 備考                                                                |
+| ------------------------------ | --------------------------- | ------------------------------------------------------------------- |
+| `LOLIPOP_DEPLOY_ENABLED`       | `true`                      | これを設定するまでLolipopへは配置されない                           |
+| `LOLIPOP_SITE_URL`             | `https://saisei-med.com`    | ドメインのルート。サブディレクトリ不可。wwwなしに統一する前提（§3） |
+| `LOLIPOP_PUBLICATION_MODE`     | `production`                | `check:rights` が走る                                               |
+| `LOLIPOP_SITE_INDEXABLE`       | `true`                      | 検索に出す。準備中は `false`                                        |
+| `LOLIPOP_LOCALIZED_INDEXABLE`  | `false`                     | 英・中の翻訳確認後に `true`                                         |
+| `NEXT_PUBLIC_CONTACT_EMAIL`    | 受信できるアドレス          | 必須                                                                |
+| `NEXT_PUBLIC_OPERATOR_NAME`    | 運営者の正式名称            | 必須                                                                |
+| `NEXT_PUBLIC_OPERATOR_ADDRESS` | 運営者の所在地              | 必須                                                                |
+| `NEXT_PUBLIC_SITE_URL`         | `https://mori-tt.github.io` | GitHub Pages用（未設定でも既定値）                                  |
 
 コマンドで登録する場合：
 
@@ -419,25 +413,25 @@ git tag v2026.10.15 && git push origin v2026.10.15
 SSHが使えない場合は、上のワークフロー全文の `Install sshpass`・`Trust Lolipop SSH host key`・`Deploy via SSH` を次の2ステップに置き換えます。Secretsは `LOLIPOP_FTP_HOST`・`LOLIPOP_FTP_USER`・`LOLIPOP_FTP_PASSWORD`・`LOLIPOP_FTP_REMOTE_DIR` に変更します。**未検証**の案で、初回は検証用ディレクトリで試してください。`--delete` は公開フォルダ内の余分なファイルを消します。
 
 ```yaml
-      - name: Install lftp
-        run: sudo apt-get update && sudo apt-get install -y lftp
+- name: Install lftp
+  run: sudo apt-get update && sudo apt-get install -y lftp
 
-      - name: Deploy via FTPS
-        env:
-          FTP_HOST: ${{ secrets.LOLIPOP_FTP_HOST }}
-          FTP_USER: ${{ secrets.LOLIPOP_FTP_USER }}
-          FTP_PASSWORD: ${{ secrets.LOLIPOP_FTP_PASSWORD }}
-          FTP_REMOTE_DIR: ${{ secrets.LOLIPOP_FTP_REMOTE_DIR }}
-        run: |
-          set -euo pipefail
-          test -n "${FTP_REMOTE_DIR}" && [ "${FTP_REMOTE_DIR}" != "/" ] || { echo "::error::LOLIPOP_FTP_REMOTE_DIR is invalid"; exit 1; }
-          lftp -u "${FTP_USER},${FTP_PASSWORD}" "${FTP_HOST}" <<EOF
-          set ftp:ssl-force true
-          set ftp:ssl-protect-data true
-          set ssl:verify-certificate yes
-          mirror --reverse --delete --verbose out "${FTP_REMOTE_DIR}"
-          bye
-          EOF
+- name: Deploy via FTPS
+  env:
+    FTP_HOST: ${{ secrets.LOLIPOP_FTP_HOST }}
+    FTP_USER: ${{ secrets.LOLIPOP_FTP_USER }}
+    FTP_PASSWORD: ${{ secrets.LOLIPOP_FTP_PASSWORD }}
+    FTP_REMOTE_DIR: ${{ secrets.LOLIPOP_FTP_REMOTE_DIR }}
+  run: |
+    set -euo pipefail
+    test -n "${FTP_REMOTE_DIR}" && [ "${FTP_REMOTE_DIR}" != "/" ] || { echo "::error::LOLIPOP_FTP_REMOTE_DIR is invalid"; exit 1; }
+    lftp -u "${FTP_USER},${FTP_PASSWORD}" "${FTP_HOST}" <<EOF
+    set ftp:ssl-force true
+    set ftp:ssl-protect-data true
+    set ssl:verify-certificate yes
+    mirror --reverse --delete --verbose out "${FTP_REMOTE_DIR}"
+    bye
+    EOF
 ```
 
 ## 6. 公開当日の手順
@@ -498,30 +492,30 @@ curl -s $SITE/articles/ips-cells-explained/ | grep -o 'name="robots"[^>]*'   # i
 
 ## 7. 公開後の運用
 
-| やりたいこと | 手順 |
-| --- | --- |
-| 記事の追加・修正 | PR → `main` にマージ。Pages・Lolipopの両方が自動更新 |
-| 記事を新たに公開 | 監修・法務の確認を `article-review-records.json` に記録 → `main` にマージ（[PUBLISHING.md](PUBLISHING.md)）。記事のあるカテゴリはトップ・sitemapに自動で現れる |
-| 英・中を検索公開 | 翻訳・監修範囲の確認後、Variables `LOLIPOP_LOCALIZED_INDEXABLE=true` → 手動実行（§4-2） |
-| 問い合わせ設定の変更 | サーバー上の `~/contact-config.php` を編集（再デプロイ不要） |
-| 前のバージョンに戻す | 戻したいコミットのタグ、またはブランチを指定：`gh workflow run deploy-lolipop.yml --ref <タグまたはブランチ>`。または `git revert` → push |
-| 本番の自動配置を止める | Variables `LOLIPOP_DEPLOY_ENABLED=false`（公開済みのサイトは消えない。消す場合は管理画面またはSSHで公開フォルダを空にする） |
-| パスワードの変更 | Lolipopでパスワードを変更 → Secrets `LOLIPOP_SSH_PASSWORD` と、メールなら `contact-config.php` を更新 |
-| 週次ビルドの停止 | 60日間リポジトリに動きがないと、GitHubはスケジュール実行を自動で停止する。`deployDate` が過去なら週次ビルド自体は不要 |
+| やりたいこと           | 手順                                                                                                                                                           |
+| ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 記事の追加・修正       | PR → `main` にマージ。Pages・Lolipopの両方が自動更新                                                                                                           |
+| 記事を新たに公開       | 監修・法務の確認を `article-review-records.json` に記録 → `main` にマージ（[PUBLISHING.md](PUBLISHING.md)）。記事のあるカテゴリはトップ・sitemapに自動で現れる |
+| 英・中を検索公開       | 翻訳・監修範囲の確認後、Variables `LOLIPOP_LOCALIZED_INDEXABLE=true` → 手動実行（§4-2）                                                                        |
+| 問い合わせ設定の変更   | サーバー上の `~/contact-config.php` を編集（再デプロイ不要）                                                                                                   |
+| 前のバージョンに戻す   | 戻したいコミットのタグ、またはブランチを指定：`gh workflow run deploy-lolipop.yml --ref <タグまたはブランチ>`。または `git revert` → push                      |
+| 本番の自動配置を止める | Variables `LOLIPOP_DEPLOY_ENABLED=false`（公開済みのサイトは消えない。消す場合は管理画面またはSSHで公開フォルダを空にする）                                    |
+| パスワードの変更       | Lolipopでパスワードを変更 → Secrets `LOLIPOP_SSH_PASSWORD` と、メールなら `contact-config.php` を更新                                                          |
+| 週次ビルドの停止       | 60日間リポジトリに動きがないと、GitHubはスケジュール実行を自動で停止する。`deployDate` が過去なら週次ビルド自体は不要                                          |
 
 ## 8. トラブルシュート
 
-| 症状 | 原因・対処 |
-| --- | --- |
-| Lolipopのジョブが「skipped」になる | Variables `LOLIPOP_DEPLOY_ENABLED` が `true` ではない |
-| 変更したのにLolipopが更新されない | 変更が `paths` の対象外（`docs/` など）。手動実行する |
-| ビルドで「正式公開には運営者情報と連絡先が必要です」 | `NEXT_PUBLIC_OPERATOR_NAME` / `ADDRESS` / `CONTACT_EMAIL` のVariablesが未設定 |
-| ビルドで「検索公開する前に NEXT_PUBLIC_SITE_URL に本番のHTTPSドメインを」 | `LOLIPOP_SITE_URL` が未設定、`http://`、または `example.com` |
-| `check:rights` で失敗 | `article-media.json` の全素材が `verified` でない（写真個別のURL・ライセンス・確認日を記録） |
-| 「PHPMailer (out/vendor) is missing」 | `composer install --working-dir=public` が失敗している |
-| SSHで `Host key verification failed` | `LOLIPOP_SSH_KNOWN_HOSTS` が古い、または別ホストの鍵。§5の手順で取得し直す（鍵の変更を確認してから） |
-| 問い合わせが「送信できませんでした」 | `~/contact-config.php` の場所・値、SMTP認証、`CONTACT_ALLOWED_ORIGINS`、PHPMailerの有無を確認。サーバーのPHPエラーログを見る |
-| 公開後、記事が6本しかない | 仕様。監修記録が確定した記事だけが本番に出る。GitHub Pagesには全記事が出る |
-| カテゴリが1つしか出ない | 仕様。記事のあるカテゴリだけが表示される |
-| ヘッダー系（X-Frame-Options等）が出ない | サーバーで `mod_headers` が無効。Lolipopのサポートに確認 |
-| 画面の公開日が想定と違う | `site-config.json` の `deployDate`（または `NEXT_PUBLIC_DEPLOY_DATE`）を確認 |
+| 症状                                                                      | 原因・対処                                                                                                                   |
+| ------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| Lolipopのジョブが「skipped」になる                                        | Variables `LOLIPOP_DEPLOY_ENABLED` が `true` ではない                                                                        |
+| 変更したのにLolipopが更新されない                                         | 変更が `paths` の対象外（`docs/` など）。手動実行する                                                                        |
+| ビルドで「正式公開には運営者情報と連絡先が必要です」                      | `NEXT_PUBLIC_OPERATOR_NAME` / `ADDRESS` / `CONTACT_EMAIL` のVariablesが未設定                                                |
+| ビルドで「検索公開する前に NEXT_PUBLIC_SITE_URL に本番のHTTPSドメインを」 | `LOLIPOP_SITE_URL` が未設定、`http://`、または `example.com`                                                                 |
+| `check:rights` で失敗                                                     | `article-media.json` の全素材が `verified` でない（写真個別のURL・ライセンス・確認日を記録）                                 |
+| 「PHPMailer (out/vendor) is missing」                                     | `composer install --working-dir=public` が失敗している                                                                       |
+| SSHで `Host key verification failed`                                      | `LOLIPOP_SSH_KNOWN_HOSTS` が古い、または別ホストの鍵。§5の手順で取得し直す（鍵の変更を確認してから）                         |
+| 問い合わせが「送信できませんでした」                                      | `~/contact-config.php` の場所・値、SMTP認証、`CONTACT_ALLOWED_ORIGINS`、PHPMailerの有無を確認。サーバーのPHPエラーログを見る |
+| 公開後、記事が6本しかない                                                 | 仕様。監修記録が確定した記事だけが本番に出る。GitHub Pagesには全記事が出る                                                   |
+| カテゴリが1つしか出ない                                                   | 仕様。記事のあるカテゴリだけが表示される                                                                                     |
+| ヘッダー系（X-Frame-Options等）が出ない                                   | サーバーで `mod_headers` が無効。Lolipopのサポートに確認                                                                     |
+| 画面の公開日が想定と違う                                                  | `site-config.json` の `deployDate`（または `NEXT_PUBLIC_DEPLOY_DATE`）を確認                                                 |

@@ -2,7 +2,15 @@ import Link from "next/link";
 import Image from "next/image";
 import { Fragment } from "react";
 import { notFound } from "next/navigation";
-import { articleBuildMode, articleDateModified, articles, categoryFor, isReviewed, isVisibleArticle, visibleArticles } from "@/content/articles";
+import {
+  articleBuildMode,
+  articleDateModified,
+  articles,
+  categoryFor,
+  isReviewed,
+  isVisibleArticle,
+  visibleArticles,
+} from "@/content/articles";
 import { ArticleCard, AdSlot, Breadcrumbs, JsonLd } from "@/components/content";
 import { CellArt } from "@/components/visuals";
 import { ArticleVisual } from "@/components/article-visuals";
@@ -16,7 +24,10 @@ import { publication } from "@/lib/site-config";
 import { absolute, pageMetadata, site } from "@/lib/site";
 import { articleMetadataOptions } from "@/lib/article-metadata";
 import { adjacentArticles, relatedArticles } from "@/lib/related-articles";
-import { CitationLinks, ArticleReferences } from "@/components/article-references";
+import {
+  CitationLinks,
+  ArticleReferences,
+} from "@/components/article-references";
 import { subcategoryOf } from "@/content/subcategories";
 import { termsInText } from "@/content/glossary";
 import { linkTerms } from "@/components/inline-terms";
@@ -33,7 +44,14 @@ export async function generateMetadata({
   const { slug } = await params;
   const a = articles.find((a) => a.slug === slug);
   if (!a || !isVisibleArticle(a)) notFound();
-  return pageMetadata(a.title, a.description, `/articles/${a.slug}/`, isReviewed(a), "ja", articleMetadataOptions(a, "ja"));
+  return pageMetadata(
+    a.title,
+    a.description,
+    `/articles/${a.slug}/`,
+    isReviewed(a),
+    "ja",
+    articleMetadataOptions(a, "ja"),
+  );
 }
 export default async function ArticlePage({
   params,
@@ -45,18 +63,34 @@ export default async function ArticlePage({
   if (!article || !isVisibleArticle(article)) notFound();
   const cat = categoryFor(article.category);
   const reviewed = isReviewed(article);
-  const scheduled = articleBuildMode === "all" && Boolean(article.publishAt && article.publishAt > new Date().toISOString().slice(0, 10));
+  const scheduled =
+    articleBuildMode === "all" &&
+    Boolean(
+      article.publishAt &&
+      article.publishAt > new Date().toISOString().slice(0, 10),
+    );
   const { prev: prevArticle, next: nextArticle } = adjacentArticles(article);
   const related = relatedArticles(article);
   const subcat = subcategoryOf(article.category, slug);
-  const bodyTerms = termsInText(article.sections.map((x) => x.paragraphs.join(" ")).join(" "), "ja", 24);
+  const bodyTerms = termsInText(
+    article.sections.map((x) => x.paragraphs.join(" ")).join(" "),
+    "ja",
+    24,
+  );
   const linkedTermIds = new Set<string>();
   return (
     <div className="container inner-page">
       <Breadcrumbs
         items={[
           { label: cat.label, href: `/categories/${cat.slug}/` },
-          ...(subcat ? [{ label: subcat.ja, href: `/categories/${cat.slug}/#sub-${subcat.key}` }] : []),
+          ...(subcat
+            ? [
+                {
+                  label: subcat.ja,
+                  href: `/categories/${cat.slug}/#sub-${subcat.key}`,
+                },
+              ]
+            : []),
           { label: article.title },
         ]}
       />
@@ -78,7 +112,10 @@ export default async function ArticlePage({
                   "@type": "Person",
                   name: article.author.name,
                   jobTitle: article.author.title,
-                  affiliation: { "@type": "Organization", name: article.author.affiliation },
+                  affiliation: {
+                    "@type": "Organization",
+                    name: article.author.affiliation,
+                  },
                   url: article.author.profileUrl,
                 }
               : {
@@ -98,7 +135,10 @@ export default async function ArticlePage({
                     "@type": "Person",
                     name: article.reviewer.name,
                     description: article.reviewer.credentials,
-                    affiliation: { "@type": "Organization", name: article.reviewer.affiliation },
+                    affiliation: {
+                      "@type": "Organization",
+                      name: article.reviewer.affiliation,
+                    },
                     url: article.reviewer.profileUrl,
                   },
                 }
@@ -112,7 +152,10 @@ export default async function ArticlePage({
         if (!faq) return null;
         const pairs: [string, string][] = [];
         for (let i = 0; i + 1 < faq.paragraphs.length; i += 2) {
-          pairs.push([faq.paragraphs[i].replace(/^Q\.\s*/, ""), faq.paragraphs[i + 1].replace(/^A\.\s*/, "")]);
+          pairs.push([
+            faq.paragraphs[i].replace(/^Q\.\s*/, ""),
+            faq.paragraphs[i + 1].replace(/^A\.\s*/, ""),
+          ]);
         }
         return (
           <JsonLd
@@ -143,7 +186,13 @@ export default async function ArticlePage({
             <p>{article.description}</p>
             <div className="byline">
               {article.author ? (
-                <span className="author-badge">執筆・監修：<a href={article.author.profileUrl}>{article.author.honorific}</a>（{article.author.title}）</span>
+                <span className="author-badge">
+                  執筆・監修：
+                  <a href={article.author.profileUrl}>
+                    {article.author.honorific}
+                  </a>
+                  （{article.author.title}）
+                </span>
               ) : (
                 <span>編集：{site.editorName || `${site.name}編集部`}</span>
               )}
@@ -151,12 +200,17 @@ export default async function ArticlePage({
               <time dateTime={article.updatedAt}>
                 最終編集：{article.updatedAt.replaceAll("-", ".")}
               </time>
-              {article.publishedAt && <time dateTime={article.publishedAt}>公開：{article.publishedAt.replaceAll("-", ".")}</time>}
+              {article.publishedAt && (
+                <time dateTime={article.publishedAt}>
+                  公開：{article.publishedAt.replaceAll("-", ".")}
+                </time>
+              )}
               <span>約{article.readingMinutes}分で読める</span>
             </div>
             {scheduled && (
               <div className="preview-status article-preview-status">
-                編集・監修確認用｜公開予定：{article.publishAt?.replaceAll("-", ".")}
+                編集・監修確認用｜公開予定：
+                {article.publishAt?.replaceAll("-", ".")}
               </div>
             )}
           </header>
@@ -183,34 +237,86 @@ export default async function ArticlePage({
               ))}
             </ul>
           </div>
-          <ArticleVisual slug={article.slug} category={article.category} index={0} />
+          <ArticleVisual
+            slug={article.slug}
+            category={article.category}
+            index={0}
+          />
           <details className="toc mobile-article-toc">
             <summary>この記事の目次</summary>
             <nav aria-label="この記事の目次">
               <ol>
-                {article.sections.map((s) => <li key={s.id}><a href={`#${s.id}`}>{s.title}</a></li>)}
+                {article.sections.map((s) => (
+                  <li key={s.id}>
+                    <a href={`#${s.id}`}>{s.title}</a>
+                  </li>
+                ))}
               </ol>
             </nav>
           </details>
           <div className="article-body">
             {article.sections.map((section, sectionIndex) => (
-              <section id={section.id} key={section.id} className={section.id === "faq" ? "faq-section" : section.id === "checklist" ? "checklist-section" : undefined}>
-                <h2>{section.title}<a className="heading-anchor" href={`#${section.id}`} aria-label="この見出しへのリンク">#</a></h2>
-                {section.table && (section.tableAfter === undefined || section.tableAfter < 0) && (
-                  <ArticleTable table={section.table} />
-                )}
+              <section
+                id={section.id}
+                key={section.id}
+                className={
+                  section.id === "faq"
+                    ? "faq-section"
+                    : section.id === "checklist"
+                      ? "checklist-section"
+                      : undefined
+                }
+              >
+                <h2>
+                  {section.title}
+                  <a
+                    className="heading-anchor"
+                    href={`#${section.id}`}
+                    aria-label="この見出しへのリンク"
+                  >
+                    #
+                  </a>
+                </h2>
+                {section.table &&
+                  (section.tableAfter === undefined ||
+                    section.tableAfter < 0) && (
+                    <ArticleTable table={section.table} />
+                  )}
                 {section.paragraphs.map((p, paragraphIndex) => (
                   <Fragment key={paragraphIndex}>
-                    <p className={section.id === "faq" ? (p.startsWith("Q.") ? "faq-q" : "faq-a") : undefined}>{linkTerms(p, bodyTerms, linkedTermIds, "", "ja")}<CitationLinks ids={section.paragraphReferences?.[paragraphIndex]} references={article.references} locale="ja" /></p>
+                    <p
+                      className={
+                        section.id === "faq"
+                          ? p.startsWith("Q.")
+                            ? "faq-q"
+                            : "faq-a"
+                          : undefined
+                      }
+                    >
+                      {linkTerms(p, bodyTerms, linkedTermIds, "", "ja")}
+                      <CitationLinks
+                        ids={section.paragraphReferences?.[paragraphIndex]}
+                        references={article.references}
+                        locale="ja"
+                      />
+                    </p>
                     {section.table && section.tableAfter === paragraphIndex && (
                       <ArticleTable table={section.table} />
                     )}
                   </Fragment>
                 ))}
-                {section.table && section.tableAfter !== undefined && section.tableAfter >= section.paragraphs.length && (
-                  <ArticleTable table={section.table} />
+                {section.table &&
+                  section.tableAfter !== undefined &&
+                  section.tableAfter >= section.paragraphs.length && (
+                    <ArticleTable table={section.table} />
+                  )}
+                {sectionIndex === 1 && (
+                  <ArticleVisual
+                    slug={article.slug}
+                    category={article.category}
+                    index={1}
+                  />
                 )}
-                {sectionIndex === 1 && <ArticleVisual slug={article.slug} category={article.category} index={1} />}
               </section>
             ))}
           </div>
@@ -223,20 +329,24 @@ export default async function ArticlePage({
             ].join("\n")}
           />
           <ArticleClosing category={article.category} />
-          <ArticleVisual slug={article.slug} category={article.category} index={2} />
+          <ArticleVisual
+            slug={article.slug}
+            category={article.category}
+            index={2}
+          />
           <ArticleReferences references={article.references} locale="ja" />
           {article.author ? (
             <section className="reviewer-box author-box">
               <h2>この記事の執筆・監修医師</h2>
               <>
-                <a href={article.author.profileUrl}>
-                  {article.author.name}
-                </a>
+                <a href={article.author.profileUrl}>{article.author.name}</a>
                 <p>
                   {article.author.title} / {article.author.affiliation}
                 </p>
                 <p>執筆日：{article.author.authoredAt}</p>
-                {article.reviewer?.reviewedAt && <p>監修日：{article.reviewer.reviewedAt}</p>}
+                {article.reviewer?.reviewedAt && (
+                  <p>監修日：{article.reviewer.reviewedAt}</p>
+                )}
               </>
               <Link href="/supervision/">監修の方針を読む →</Link>
             </section>
@@ -252,7 +362,9 @@ export default async function ArticlePage({
                   {article.reviewer.affiliation}
                 </p>
                 <p>監修日：{article.reviewer.reviewedAt}</p>
-                {article.reviewer.scope && <p>確認範囲：{article.reviewer.scope}</p>}
+                {article.reviewer.scope && (
+                  <p>確認範囲：{article.reviewer.scope}</p>
+                )}
               </>
               <Link href="/supervision/">監修の方針を読む →</Link>
             </section>
@@ -280,11 +392,20 @@ export default async function ArticlePage({
       {(prevArticle || nextArticle) && (
         <nav className="article-pager" aria-label="このカテゴリの前後の記事">
           {prevArticle ? (
-            <Link href={`/articles/${prevArticle.slug}/`}><small>前の記事</small>← {prevArticle.title}</Link>
-          ) : <span />}
+            <Link href={`/articles/${prevArticle.slug}/`}>
+              <small>前の記事</small>← {prevArticle.title}
+            </Link>
+          ) : (
+            <span />
+          )}
           {nextArticle ? (
-            <Link className="next" href={`/articles/${nextArticle.slug}/`}><small>次の記事</small>{nextArticle.title} →</Link>
-          ) : <span />}
+            <Link className="next" href={`/articles/${nextArticle.slug}/`}>
+              <small>次の記事</small>
+              {nextArticle.title} →
+            </Link>
+          ) : (
+            <span />
+          )}
         </nav>
       )}
       {related.length > 0 && (

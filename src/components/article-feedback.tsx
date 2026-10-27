@@ -10,24 +10,39 @@ const copy = {
     yes: "はい",
     no: "いいえ",
     thanks: "ご回答ありがとうございます。",
-    localNote: "回答はこの端末にのみ保存されます。編集部へ届けるにはお問い合わせフォームをご利用ください。",
+    localNote:
+      "回答はこの端末にのみ保存されます。編集部へ届けるにはお問い合わせフォームをご利用ください。",
     detail: "詳しいご意見・ご質問はこちらから（3営業日以内に回答）",
     correction: "誤記・修正のご指摘",
     note: "個別の病状相談は受け付けていません。診療に関することは医療機関へご相談ください。",
     whyAsk: "差し支えなければ、理由を教えてください",
-    reasons: ["内容が古い", "分かりにくい", "情報が足りない", "事実誤認がある", "その他"],
+    reasons: [
+      "内容が古い",
+      "分かりにくい",
+      "情報が足りない",
+      "事実誤認がある",
+      "その他",
+    ],
   },
   en: {
     ask: "Was this article helpful?",
     yes: "Yes",
     no: "No",
     thanks: "Thank you for your answer.",
-    localNote: "Your answer is stored on this device only. To reach the editorial team, please use the contact form.",
-    detail: "Share detailed comments or questions (we reply within 3 business days)",
+    localNote:
+      "Your answer is stored on this device only. To reach the editorial team, please use the contact form.",
+    detail:
+      "Share detailed comments or questions (we reply within 3 business days)",
     correction: "Report an error or correction",
     note: "We cannot answer individual medical consultations. Please consult your healthcare provider.",
     whyAsk: "If you don't mind, tell us why",
-    reasons: ["Outdated content", "Hard to understand", "Not enough detail", "Factual error", "Other"],
+    reasons: [
+      "Outdated content",
+      "Hard to understand",
+      "Not enough detail",
+      "Factual error",
+      "Other",
+    ],
   },
   zh: {
     ask: "这篇文章对您有帮助吗？",
@@ -84,10 +99,18 @@ export function ArticleFeedback({
       </h2>
       {!voted ? (
         <div className="feedback-buttons">
-          <button type="button" className="feedback-btn yes" onClick={() => vote("yes")}>
+          <button
+            type="button"
+            className="feedback-btn yes"
+            onClick={() => vote("yes")}
+          >
             <Icon name="check" size={18} /> {c.yes}
           </button>
-          <button type="button" className="feedback-btn no" onClick={() => vote("no")}>
+          <button
+            type="button"
+            className="feedback-btn no"
+            onClick={() => vote("no")}
+          >
             {c.no}
           </button>
         </div>

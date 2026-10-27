@@ -49,11 +49,11 @@ NEXT_PUBLIC_ARTICLE_BUILD_MODE=scheduled
 
 配置先ごとの設定は次のとおりです。
 
-| 配置先 | `NEXT_PUBLIC_SITE_URL` | `NEXT_PUBLIC_BASE_PATH` | `NEXT_PUBLIC_ASSET_PREFIX` |
-| --- | --- | --- | --- |
-| GitHub Pages（リポジトリ配下） | Pagesのドメイン | 未設定（自動で`/regenerative-medicine`） | 未設定（自動生成） |
-| Lolipopサブドメイン | `https://サブドメイン.example` | 空欄 | 空欄 |
-| 独自ドメイン | `https://独自ドメイン.example` | 空欄 | 空欄 |
+| 配置先                         | `NEXT_PUBLIC_SITE_URL`         | `NEXT_PUBLIC_BASE_PATH`                  | `NEXT_PUBLIC_ASSET_PREFIX` |
+| ------------------------------ | ------------------------------ | ---------------------------------------- | -------------------------- |
+| GitHub Pages（リポジトリ配下） | Pagesのドメイン                | 未設定（自動で`/regenerative-medicine`） | 未設定（自動生成）         |
+| Lolipopサブドメイン            | `https://サブドメイン.example` | 空欄                                     | 空欄                       |
+| 独自ドメイン                   | `https://独自ドメイン.example` | 空欄                                     | 空欄                       |
 
 `public/`配下の画像・アイコンは、`NEXT_PUBLIC_BASE_PATH`を含むURLへビルド時に変換されます。GitHub PagesからLolipopへ移すときは、環境変数を切り替えて再ビルドしてください。
 
@@ -65,10 +65,10 @@ GitHub Pagesのworkflowでは、Pages用artifactのアップロードとdeploy�
 
 mainへのpushで、2系統が並行してデプロイされます。
 
-| サイト | ワークフロー | 記事範囲 | 検索公開 |
-| --- | --- | --- | --- |
-| GitHub Pages（テスト確認用） | `deploy.yml` | 全記事（`ARTICLE_BUILD_MODE=all`、ストック含む） | `noindex` 固定 |
-| Lolipop（本番） | `deploy-lolipop.yml` | 公開日到達分のみ（`scheduled`） | Variablesで制御 |
+| サイト                       | ワークフロー         | 記事範囲                                         | 検索公開        |
+| ---------------------------- | -------------------- | ------------------------------------------------ | --------------- |
+| GitHub Pages（テスト確認用） | `deploy.yml`         | 全記事（`ARTICLE_BUILD_MODE=all`、ストック含む） | `noindex` 固定  |
+| Lolipop（本番）              | `deploy-lolipop.yml` | 公開日到達分のみ（`scheduled`）                  | Variablesで制御 |
 
 Lolipop側の `deploy-lolipop.yml` は、**公開時に [GO-LIVE.md](GO-LIVE.md) §5 のコードをコピペして作成します**（現在リポジトリにはありません。GitHub Pages側だけが動きます）。ジョブには `if: vars.LOLIPOP_DEPLOY_ENABLED == 'true'` のガードが付いているため、ファイルを作ってもVariablesを設定するまで実行されません。
 

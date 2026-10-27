@@ -1,7 +1,11 @@
 import { glossaryGroups, glossaryTermId } from "@/content/glossary";
 import { articles, visibleArticles } from "@/content/articles";
 import { localizedArticleFor } from "./localized-article";
-import { GlossaryList, type GlossaryGroupView, type GlossaryLocale } from "./glossary-list";
+import {
+  GlossaryList,
+  type GlossaryGroupView,
+  type GlossaryLocale,
+} from "./glossary-list";
 
 // Server component: resolves linked article titles here so the client bundle
 // never includes the article dataset or the three-language glossary source.
@@ -26,7 +30,10 @@ export function Glossary({ locale = "ja" }: { locale?: GlossaryLocale }) {
           ? {
               link: {
                 href: `${prefix}/articles/${linked.slug}/`,
-                title: locale === "ja" ? linked.title : localizedArticleFor(locale, linked).title,
+                title:
+                  locale === "ja"
+                    ? linked.title
+                    : localizedArticleFor(locale, linked).title,
               },
             }
           : {}),

@@ -4,7 +4,10 @@ import type { SiteLocale } from "./locales";
 
 export type GuideSection = { title: string; paragraphs: string[] };
 
-export const articleGuideSections: Record<SiteLocale, Record<string, GuideSection[]>> = {
+export const articleGuideSections: Record<
+  SiteLocale,
+  Record<string, GuideSection[]>
+> = {
   en: {
     "stem-basics": [
       {

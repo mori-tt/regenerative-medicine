@@ -1,16 +1,32 @@
 import Link from "next/link";
-import { articles, availableCategories, categories, isCategoryAvailable, liveArticles, visibleArticles } from "@/content/articles";
+import {
+  articles,
+  availableCategories,
+  categories,
+  isCategoryAvailable,
+  liveArticles,
+  visibleArticles,
+} from "@/content/articles";
 import { ArticleCard, AdSlot, JsonLd } from "@/components/content";
 import { CellArt, Icon } from "@/components/visuals";
 import { pageMetadata, site, siteTaglineFor } from "@/lib/site";
 import { siteGraph } from "@/lib/structured-data";
 
-export const metadata = pageMetadata(siteTaglineFor.ja, site.description, "/", true, "ja", { home: true });
+export const metadata = pageMetadata(
+  siteTaglineFor.ja,
+  site.description,
+  "/",
+  true,
+  "ja",
+  { home: true },
+);
 export default function Home() {
   const featuredHref = "/guide/";
   const latest = liveArticles(visibleArticles(articles)).slice(0, 4);
   const shownCategories = availableCategories();
-  const upcomingCategories = categories.filter((cat) => !shownCategories.includes(cat));
+  const upcomingCategories = categories.filter(
+    (cat) => !shownCategories.includes(cat),
+  );
   return (
     <>
       <JsonLd data={siteGraph("ja")} />
@@ -87,7 +103,9 @@ export default function Home() {
             あなたのペースで、理解を深める。
           </span>
         </div>
-        <div className={`category-grid${shownCategories.length < 5 ? " category-grid-few" : ""}`}>
+        <div
+          className={`category-grid${shownCategories.length < 5 ? " category-grid-few" : ""}`}
+        >
           {shownCategories.map((cat, i) => (
             <Link
               href={`/categories/${cat.slug}/`}
@@ -98,7 +116,9 @@ export default function Home() {
                 <span className="category-icon">
                   <Icon name={cat.icon} size={31} />
                 </span>
-                <span className="category-number">{String(i + 1).padStart(2, "0")}</span>
+                <span className="category-number">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
               </div>
               <h3>{cat.label}</h3>
               <p>{cat.description}</p>
@@ -157,7 +177,9 @@ export default function Home() {
             記事をすべて見る <Icon name="arrow" size={18} />
           </Link>
         </div>
-        <div className={`journal-layout${latest.length ? "" : " journal-layout-empty"}`}>
+        <div
+          className={`journal-layout${latest.length ? "" : " journal-layout-empty"}`}
+        >
           {latest.length > 0 && (
             <div className="article-grid">
               {latest.map((a) => (
@@ -196,7 +218,14 @@ export default function Home() {
               効果だけでなく、リスクや費用も。医師に相談する前の確認事項を整理しましょう。
             </p>
           </div>
-          <Link className="button outline" href={isCategoryAvailable("cost-access") ? "/categories/cost-access/" : "/articles/"}>
+          <Link
+            className="button outline"
+            href={
+              isCategoryAvailable("cost-access")
+                ? "/categories/cost-access/"
+                : "/articles/"
+            }
+          >
             確認したいことを読む <Icon name="arrow" size={19} />
           </Link>
         </div>

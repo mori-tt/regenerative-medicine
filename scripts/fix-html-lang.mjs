@@ -22,7 +22,11 @@ let fixed = 0;
 for (const file of files) {
   const rel = relative(out, file).replace(/\\/g, "/");
   const want =
-    rel === "en.html" || rel.startsWith("en/") ? "en" : rel === "zh.html" || rel.startsWith("zh/") ? "zh-CN" : "ja";
+    rel === "en.html" || rel.startsWith("en/")
+      ? "en"
+      : rel === "zh.html" || rel.startsWith("zh/")
+        ? "zh-CN"
+        : "ja";
   const html = await readFile(file, "utf8");
   if (html.includes(`<html lang="${want}"`)) continue;
   const next = html.includes("<html lang=")

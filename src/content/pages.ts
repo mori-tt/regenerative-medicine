@@ -175,7 +175,8 @@ export const infoPages = [
     slug: "sources",
     title: "情報源・参考サイト",
     en: "SOURCES",
-    description: "大学・研究機関、学会、行政・規制当局の公開情報を中心に確認しています。",
+    description:
+      "大学・研究機関、学会、行政・規制当局の公開情報を中心に確認しています。",
     sections: [],
   },
   {
@@ -212,7 +213,8 @@ export const infoPages = [
     slug: "glossary",
     title: "用語集：再生医療の言葉",
     en: "GLOSSARY",
-    description: "幹細胞、分化、培養…。ニュースや説明資料に出てくる言葉を解説。",
+    description:
+      "幹細胞、分化、培養…。ニュースや説明資料に出てくる言葉を解説。",
     sections: [
       {
         title: "細胞に関する言葉",
@@ -241,7 +243,8 @@ export const infoPages = [
     slug: "faq",
     title: "よくある質問",
     en: "FAQ",
-    description: "費用、痛み、通院、相談先。読者から想定される質問にまとめました。",
+    description:
+      "費用、痛み、通院、相談先。読者から想定される質問にまとめました。",
     sections: [
       {
         title: "学び方についての質問",
