@@ -33,6 +33,35 @@ function env_value(string $key, string $fallback = ''): string {
     return $value === false ? $fallback : trim($value);
 }
 
+function request_accepts_json(): bool {
+    $accept = $_SERVER['HTTP_ACCEPT'] ?? '';
+    return str_contains(strtolower($accept), 'application/json');
+}
+
+function request_body_json(): array {
+    $contentType = $_SERVER['CONTENT_TYPE'] ?? '';
+    if (!str_contains(strtolower($contentType), 'application/json')) {
+        return [];
+    }
+    $raw = file_get_contents('php://input') ?: '';
+    $decoded = json_decode($raw, true);
+    return is_array($decoded) ? $decoded : [];
+}
+
+function respond_json(bool $success, string $message, int $status = 200): never {
+    header('Content-Type: application/json; charset=utf-8');
+    http_response_code($status);
+    echo json_encode(['success' => $success, 'message' => $message], JSON_UNESCAPED_UNICODE);
+    exit;
+}
+
+function respond(bool $success, string $message, int $status = 200): never {
+    if (request_accepts_json()) {
+        respond_json($success, $message, $status);
+    }
+    redirect_result($success ? 'sent' : 'error');
+}
+
 function safe_return_path(): string {
     $path = (string)($_POST['return_path'] ?? '/contact/');
     if (!preg_match('#^/(?:en/|zh/)?contact/$#', $path)) {
@@ -94,17 +123,21 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 }
 
 if (!request_is_allowed_origin() || rate_limit_exceeded()) {
-    redirect_result('error');
+    respond(false, 'リクエストを受け付けできません。', 403);
 }
 
-$name = trim((string)($_POST['name'] ?? ''));
-$email = trim((string)($_POST['email'] ?? ''));
-$category = trim((string)($_POST['category'] ?? ''));
-$locale = trim((string)($_POST['locale'] ?? 'ja'));
-$message = trim((string)($_POST['message'] ?? ''));
-$startedAt = (int)($_POST['started_at'] ?? 0);
-$honeypot = trim((string)($_POST['website'] ?? ''));
-$consent = ($_POST['consent'] ?? '') === '1';
+// JSON / フォームエンコード（application/x-www-form-urlencoded）の両方に対応
+$jsonInput = request_body_json();
+$input = $jsonInput !== [] ? $jsonInput : $_POST;
+
+$name = trim((string)($input['name'] ?? ''));
+$email = trim((string)($input['email'] ?? ''));
+$category = trim((string)($input['category'] ?? ''));
+$locale = trim((string)($input['locale'] ?? 'ja'));
+$message = trim((string)($input['message'] ?? ''));
+$startedAt = (int)($input['started_at'] ?? 0);
+$honeypot = trim((string)($input['website'] ?? ''));
+$consent = ($input['consent'] ?? '') === '1' || ($input['consent'] ?? false) === true;
 $categoryLabels = [
     'article' => '記事内容について',
     'correction' => '誤記・修正のご指摘',
@@ -116,12 +149,12 @@ $categoryLabels = [
 
 // ボット対策と、誤送信・大量送信を抑える最低限の検証。
 if ($honeypot !== '' || ($startedAt > 0 && (int)(microtime(true) * 1000) - $startedAt < 2500)) {
-    redirect_result('sent');
+    respond(true, 'お問い合わせを受け付けました。');
 }
 // リンクを大量に貼る投稿はスパムとみなし、送信したように見せて破棄する。
 $linkCount = preg_match_all('#https?://|www\.#i', $message);
 if ($linkCount !== false && $linkCount > 3) {
-    redirect_result('sent');
+    respond(true, 'お問い合わせを受け付けました。');
 }
 if (
     $name === '' || mb_strlen($name) > 80 ||
@@ -131,7 +164,7 @@ if (
     !$consent || !in_array($locale, ['ja', 'en', 'zh'], true) ||
     preg_match('/[\r\n\x00-\x08\x0B\x0C\x0E-\x1F]/', $name . $email . $message)
 ) {
-    redirect_result('error');
+    respond(false, '入力内容をご確認ください。', 422);
 }
 
 $to = env_value('CONTACT_TO_EMAIL');
@@ -139,7 +172,7 @@ $from = env_value('CONTACT_FROM_EMAIL');
 $fromName = env_value('CONTACT_FROM_NAME', '再生医療ガイド');
 if (!filter_var($to, FILTER_VALIDATE_EMAIL) || !filter_var($from, FILTER_VALIDATE_EMAIL)) {
     error_log('Contact form is not configured: CONTACT_TO_EMAIL or CONTACT_FROM_EMAIL is missing.');
-    redirect_result('error');
+    respond(false, 'サーバー側の設定が完了していません。', 500);
 }
 
 $categoryLabel = $categoryLabels[$category];
@@ -165,6 +198,15 @@ foreach ($autoloadCandidates as $autoload) {
     }
 }
 
+// Composer が使えない環境・FTP のみのデプロイでも動作するよう、
+// 同梱の PHPMailer ソースを直接 require するフォールバック。
+if (!$autoloaded && is_file(__DIR__ . '/phpmailer/src/PHPMailer.php')) {
+    require_once __DIR__ . '/phpmailer/src/Exception.php';
+    require_once __DIR__ . '/phpmailer/src/PHPMailer.php';
+    require_once __DIR__ . '/phpmailer/src/SMTP.php';
+    $autoloaded = true;
+}
+
 if ($autoloaded && class_exists('PHPMailer\\PHPMailer\\PHPMailer')) {
     try {
         $mail = new PHPMailer\PHPMailer\PHPMailer(true);
@@ -184,16 +226,16 @@ if ($autoloaded && class_exists('PHPMailer\\PHPMailer\\PHPMailer')) {
         $mail->Subject = $subject;
         $mail->Body = $body;
         $mail->send();
-        redirect_result('sent');
+        respond(true, 'お問い合わせを受け付けました。');
     } catch (Throwable $exception) {
         error_log('PHPMailer contact error: ' . $exception->getMessage());
-        redirect_result('error');
+        respond(false, '送信に失敗しました。時間を置いて再度お試しください。', 500);
     }
 }
 
 if (env_value('CONTACT_ALLOW_NATIVE_MAIL', 'false') !== 'true') {
     error_log('PHPMailer is not configured. Native mail fallback is disabled.');
-    redirect_result('error');
+    respond(false, 'サーバー側の設定が完了していません。', 500);
 }
 
 // 互換経路は明示的に許可した場合だけ使用する。送信元は固定し、入力メールはReply-Toだけに使います。
@@ -202,7 +244,7 @@ $headers = "From: {$from}\r\n" .
     "Reply-To: {$email}\r\n" .
     "Content-Type: text/plain; charset=UTF-8\r\n";
 if (mail($to, $encodedSubject, $body, $headers, '-f' . $from)) {
-    redirect_result('sent');
+    respond(true, 'お問い合わせを受け付けました。');
 }
 error_log('Native mail() failed for contact form.');
-redirect_result('error');
+respond(false, '送信に失敗しました。時間を置いて再度お試しください。', 500);

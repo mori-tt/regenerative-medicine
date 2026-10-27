@@ -53,7 +53,7 @@
 
 - [ ] `deploy/contact-config.example.php` を `contact-config.php` にコピーして値を入力し、**公開フォルダの外**（例：ホーム直下）に置く。公開フォルダ内に置くとデプロイで消える（`docs/DEPLOYMENT.md` 参照）
 
-- [ ] Lolipopの対象ドメインのPHPが **7.4以上**であること（`contact.php` の要件。8系を推奨）
+- [ ] Lolipopの対象ドメインのPHPが **8.2.35以上 / 8.3.36以上 / 8.4.27以上 / 8.5.12以上** であること（PHP2shell脆弱性 CVE-2026-109618 / CVE-2026-109619 対策。`contact.php` の要件は8.2以上）
 - [ ] `public/contact.php` が動作するホスティング環境を確認（GitHub Pages は静的ホストのため PHP 非対応 → 外部フォームサービスへの切り替えが必要な場合あり）
 - [ ] PHPMailer の SMTP 設定（`CONTACT_SMTP_*`）と実送信・返信・スパム扱いされないかの確認
 - [ ] 実運用でスパム投稿が出た場合は Turnstile/hCaptcha の導入を検討（サイトキー・シークレットの発行が必要。現状は honeypot＋最小入力時間＋IPレート制限＋URL数制限）

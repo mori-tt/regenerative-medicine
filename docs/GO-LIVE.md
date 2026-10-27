@@ -56,7 +56,7 @@
 - [ ] **SSHが使える契約プランか確認し、SSHを有効化する。** ホスト `ssh.lolipop.jp`、ポート `2222`、ユーザー名・パスワードは管理画面の表示に従う。SSHが使えないプランの場合は §5 のFTPS代替を使う
 - [ ] 問い合わせ用のメールアカウント（例：`info@saisei-med.com`）を作成する
 - [ ] **`contact-config.php` を置く**（§2）
-- [ ] Lolipopの対象ドメインのPHPバージョンを **7.4以上**にする（`contact.php` は7.4以上で動作。CIはPHP 8.3でPHPMailerをインストールする。可能なら8系を推奨）
+- [ ] Lolipopの対象ドメインのPHPバージョンを **8.2.35以上、8.3.36以上、8.4.27以上、または8.5.12以上** にする（PHP2shell脆弱性 CVE-2026-109618 / CVE-2026-109619 対策。`contact.php` は8.2以上で動作。可能なら8.3以上を推奨）
 - [ ] ドメインの `www` 有無を決める（どちらかをもう一方へリダイレクト。§3）
 
 ### 1-2. GitHub側
@@ -265,6 +265,8 @@ jobs:
       - name: Setup PHP and Composer
         uses: shivammathur/setup-php@v2
         with:
+          # PHP2shell（CVE-2026-109618 / CVE-2026-109619）対策：必ず修正済みバージョンを使う
+          # 対象例：8.2.35 / 8.3.36 / 8.4.27 / 8.5.12 以上。Lolipop側も同様に上げること
           php-version: "8.3"
           tools: composer:v2
 

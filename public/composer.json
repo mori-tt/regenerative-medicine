@@ -1,5 +1,13 @@
 {
   "require": {
-    "phpmailer/phpmailer": "^6.9"
+    "php": ">=8.2",
+    "phpmailer/phpmailer": "^6.12"
+  },
+  "config": {
+    "platform": {
+      "php": "8.2"
+    },
+    "optimize-autoloader": true,
+    "sort-packages": true
   }
 }
