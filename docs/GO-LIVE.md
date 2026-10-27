@@ -2,7 +2,7 @@
 
 本番公開に必要な**手作業**と、GitHub Actionsでの運用手順をまとめた資料です。
 
-**Lolipopへのデプロイ用ワークフローは、まだリポジトリに作っていません。** 公開時に §5 のコードをコピペして `.github/workflows/deploy-lolipop.yml` を作ります（それまでは、`main` へのpushでGitHub Pagesだけが更新されます）。一方、`.htaccess` のHTTPS・www統一や `contact.php` のPHP 7.4対応は実装済みです。
+**Lolipopへのデプロイ用ワークフローは `.github/workflows/deploy-lolipop.yml` として作成済みですが、`LOLIPOP_DEPLOY_ENABLED=true` の GitHub Variables を設定するまで実行されません。** それまでは、`main` へのpushでGitHub Pagesだけが更新されます。一方、`.htaccess` のHTTPS・www統一や `contact.php` のPHP対応は実装済みです。
 
 関連資料：[DEPLOYMENT.md](DEPLOYMENT.md)（仕組みの説明）、[DEPLOY-CHECKLIST.md](DEPLOY-CHECKLIST.md)（チェック項目）、[MANUAL-LEGAL-CHECKLIST.md](MANUAL-LEGAL-CHECKLIST.md)（法務・監修）、[PUBLISHING.md](PUBLISHING.md)（記事公開の仕組み）。
 
@@ -12,7 +12,7 @@
 
 |              | GitHub Pages（テスト）                             | Lolipop（本番）                                                                                                                                                                |
 | ------------ | -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| ワークフロー | `.github/workflows/deploy.yml`（作成済み）         | `.github/workflows/deploy-lolipop.yml`（**未作成**。公開時に §5 をコピペして作る）                                                                                             |
+| ワークフロー | `.github/workflows/deploy.yml`（作成済み）         | `.github/workflows/deploy-lolipop.yml`（作成済み。`LOLIPOP_DEPLOY_ENABLED=true` で有効化）                                                                                             |
 | 起動         | `main` へのpush、手動                              | `main` へのpush（`src/**`・`public/**`・`scripts/**`・`deploy/**`・`package*.json`・`next.config.ts`・`tsconfig.json`・`.env.example` の変更時のみ）、手動、毎週土曜06:00(JST) |
 | 有効化       | 常に有効                                           | ファイルを作り、かつ Variables `LOLIPOP_DEPLOY_ENABLED=true` を設定するまで配置されない                                                                                        |
 | 記事         | 全251本（未監修含む）                              | 監修記録が確定した記事だけ（現在6本）                                                                                                                                          |
@@ -41,7 +41,7 @@
 7. `contact-config.php` をサーバーに置く → §2
 8. SSHホスト鍵を登録する → §5
 
-**B. 公開当日** 9. `deployDate` を公開日にして `main` へ → §6-2 10. 手元で本番設定のビルド確認 → §6-1 11. `deploy-lolipop.yml` を作成・コミット → §5 12. `LOLIPOP_DEPLOY_ENABLED=true` を設定して実行 → §6-2 13. 公開直後の動作確認（HTTPS、問い合わせ送信、フィード、OGP、実機）→ §6-3
+**B. 公開当日** 9. `deployDate` を公開日にして `main` へ → §6-2 10. 手元で本番設定のビルド確認 → §6-1 11. `deploy-lolipop.yml` の内容を確認・コミット → §5 12. `LOLIPOP_DEPLOY_ENABLED=true` を設定して実行 → §6-2 13. 公開直後の動作確認（HTTPS、問い合わせ送信、フィード、OGP、実機）→ §6-3
 
 **C. 公開後** 14. Search Console / Bing 登録・sitemap送信 → §6-4 15. 数日後にインデックス状況を確認 → §6-4 16. 運用（記事追加、英中の検索公開、ロールバック、パスワード変更）→ §7
 
@@ -177,21 +177,14 @@ gh run list --repo mori-tt/regenerative-medicine --limit 5
 gh run watch --repo mori-tt/regenerative-medicine
 ```
 
-## 5. Lolipopワークフロー（公開時にコピペして作る）
+## 5. Lolipopワークフロー（`.github/workflows/deploy-lolipop.yml`）
 
-**このリポジトリには `deploy-lolipop.yml` はまだありません。** 公開の準備ができたら、次の手順で作ります。
+**`.github/workflows/deploy-lolipop.yml` はリポジトリに作成済みです。** 公開の準備ができたら、次の手順で有効化します。
 
 1. [ ] §1・§2・§4-1 の手作業（Lolipop側の準備、`contact-config.php`、Secrets / Variables、ホスト鍵の登録）を終える。ただし `LOLIPOP_DEPLOY_ENABLED` は**まだ設定しない**
-2. [ ] 下の「ワークフロー全文」をコピーし、`.github/workflows/deploy-lolipop.yml` として保存する
+2. [ ] `.github/workflows/deploy-lolipop.yml` の内容を確認する
 3. [ ] 内容を確認してコミット（この時点では `LOLIPOP_DEPLOY_ENABLED` が未設定なのでジョブはスキップされる）
 4. [ ] §6 の最終確認のあと、`LOLIPOP_DEPLOY_ENABLED=true` を設定して実行する（§6-2）
-
-手元のクリップボードから作る場合（macOS）：
-
-```bash
-mkdir -p .github/workflows
-pbpaste > .github/workflows/deploy-lolipop.yml   # 全文をコピーした状態で実行
-```
 
 このワークフローの特徴：
 
@@ -463,7 +456,7 @@ npm run preview   # http://127.0.0.1:4173 で目視確認
 
 1. [ ] `site-config.json` の `deployDate` を公開日にして `main` にマージ
 2. [ ] §4-1 の Secrets / Variables が揃っていることを確認（`LOLIPOP_DEPLOY_ENABLED=true` は最後に設定）
-3. [ ] §5 で `deploy-lolipop.yml` を作成・コミット済みであることを確認し、`main` にpush、または `gh workflow run deploy-lolipop.yml` で実行（`production` 環境の承認画面が出たら承認）
+3. [ ] `.github/workflows/deploy-lolipop.yml` がコミット済みであることを確認し、`main` にpush、または `gh workflow run deploy-lolipop.yml` で実行（`production` 環境の承認画面が出たら承認）
 4. [ ] Actionsの2つのワークフロー（Pages・Lolipop）が成功したことを確認
 
 ### 6-3. 公開直後の確認（手作業）

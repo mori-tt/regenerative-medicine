@@ -1,0 +1,174 @@
+name: Deploy to Lolipop
+
+# 本番（ロリポップ）。GitHub Pagesのテストサイトとは別系統で並行公開する。
+# Variables LOLIPOP_DEPLOY_ENABLED=true を設定するまで、push してもこのワークフローはスキップされる。
+# Secrets（LOLIPOP_SSH_USER / LOLIPOP_SSH_PASSWORD / LOLIPOP_SSH_REMOTE_DIR / LOLIPOP_SSH_KNOWN_HOSTS）
+# が未登録の場合は、実行時にエラーで止まる。
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "src/**"
+      - "public/**"
+      - "scripts/**"
+      - "deploy/**"
+      - "package.json"
+      - "package-lock.json"
+      - "next.config.ts"
+      - "tsconfig.json"
+      - ".env.example"
+  workflow_dispatch:
+  # 公開日(deployDate)を跨ぐ再ビルド用。毎週土曜06:00（日本時間）。不要なら削除。
+  schedule:
+    - cron: "0 21 * * 5"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: lolipop-deploy
+  cancel-in-progress: false
+
+env:
+  NODE_VERSION: "22"
+  SSH_HOST: ssh.lolipop.jp
+  SSH_PORT: "2222"
+  NEXT_PUBLIC_SITE_URL: ${{ vars.LOLIPOP_SITE_URL }}
+  NEXT_PUBLIC_BASE_PATH: ""
+  NEXT_PUBLIC_ASSET_PREFIX: ""
+  NEXT_PUBLIC_ARTICLE_BUILD_MODE: scheduled
+  NEXT_PUBLIC_PUBLICATION_MODE: ${{ vars.LOLIPOP_PUBLICATION_MODE || 'preview' }}
+  NEXT_PUBLIC_SITE_INDEXABLE: ${{ vars.LOLIPOP_SITE_INDEXABLE || 'false' }}
+  NEXT_PUBLIC_LOCALIZED_INDEXABLE: ${{ vars.LOLIPOP_LOCALIZED_INDEXABLE || 'false' }}
+
+jobs:
+  build-and-deploy:
+    # この変数が true 以外なら何もしない。ファイルはあっても未登録時は動かない。
+    if: ${{ vars.LOLIPOP_DEPLOY_ENABLED == 'true' }}
+    runs-on: ubuntu-latest
+    # 承認ゲートが不要なら次の1行を削除する。
+    environment: production
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+
+      - name: Setup PHP and Composer
+        uses: shivammathur/setup-php@v2
+        with:
+          # PHP2shell（CVE-2026-109618 / CVE-2026-109619）対策：必ず修正済みバージョンを使う
+          # 対象例：8.2.35 / 8.3.36 / 8.4.27 / 8.5.12 以上。Lolipop側も同様に上げること
+          php-version: "8.3"
+          tools: composer:v2
+
+      - name: Install dependencies
+        run: npm ci
+
+      # Composer が使えない環境のフォールバック用に public/phpmailer/src/ も同梱しているが、
+      # 管理しやすさ・依存解決のため、CI では Composer で vendor/ を生成する。
+      - name: Install PHPMailer
+        run: composer install --no-dev --working-dir=public --no-interaction --prefer-dist
+
+      - name: Build scheduled Lolipop output
+        env:
+          NEXT_PUBLIC_CONTACT_EMAIL: ${{ vars.NEXT_PUBLIC_CONTACT_EMAIL }}
+          NEXT_PUBLIC_OPERATOR_NAME: ${{ vars.NEXT_PUBLIC_OPERATOR_NAME }}
+          NEXT_PUBLIC_OPERATOR_ADDRESS: ${{ vars.NEXT_PUBLIC_OPERATOR_ADDRESS }}
+        run: |
+          test -n "${NEXT_PUBLIC_SITE_URL}" || { echo "::error::LOLIPOP_SITE_URL is not configured"; exit 1; }
+          npm run build:lolipop
+          npm run check:export
+          test -f out/contact.php || { echo "::error::out/contact.php is missing"; exit 1; }
+          # Composer 経由の autoload が優先される。Composer が使えない場合は out/phpmailer/src/ がフォールバックとして使われる。
+          test -f out/vendor/autoload.php || test -f out/phpmailer/src/PHPMailer.php || { echo "::error::PHPMailer (out/vendor or out/phpmailer/src) is missing"; exit 1; }
+
+      - name: Archive build output
+        run: tar czf regenerative-medicine-out.tar.gz -C out .
+
+      - name: Install sshpass
+        run: sudo apt-get update && sudo apt-get install -y sshpass
+
+      - name: Trust Lolipop SSH host key
+        env:
+          KNOWN_HOSTS: ${{ secrets.LOLIPOP_SSH_KNOWN_HOSTS }}
+        run: |
+          test -n "${KNOWN_HOSTS}" || { echo "::error::LOLIPOP_SSH_KNOWN_HOSTS is not configured"; exit 1; }
+          mkdir -p ~/.ssh
+          printf '%s\n' "${KNOWN_HOSTS}" > ~/.ssh/known_hosts
+
+      - name: Deploy via SSH
+        env:
+          SSHPASS: ${{ secrets.LOLIPOP_SSH_PASSWORD }}
+          SSH_USER: ${{ secrets.LOLIPOP_SSH_USER }}
+          SSH_REMOTE_DIR: ${{ secrets.LOLIPOP_SSH_REMOTE_DIR }}
+          SSH_ARCHIVE: regenerative-medicine-out.tar.gz
+        run: |
+          set -euo pipefail
+          if [ -z "${SSHPASS}" ] || [ -z "${SSH_USER}" ] || [ -z "${SSH_REMOTE_DIR}" ]; then
+            echo "::error::Required secrets are missing: LOLIPOP_SSH_PASSWORD, LOLIPOP_SSH_USER, LOLIPOP_SSH_REMOTE_DIR"
+            exit 1
+          fi
+
+          SSH_TARGET="${SSH_USER}@${SSH_HOST}"
+          SSH_OPTS=(-o StrictHostKeyChecking=yes -p "${SSH_PORT}")
+          SCP_OPTS=(-o StrictHostKeyChecking=yes -P "${SSH_PORT}")
+
+          REMOTE_HOME=$(sshpass -e ssh "${SSH_OPTS[@]}" "${SSH_TARGET}" 'printf "%s" "$HOME"')
+          if [ -z "${REMOTE_HOME}" ] || [ "${REMOTE_HOME}" = "/" ]; then
+            echo "::error::Unable to determine remote HOME. Deployment aborted."
+            exit 1
+          fi
+
+          REMOTE_ROOT="${SSH_REMOTE_DIR%/}"
+          if [[ "${REMOTE_ROOT}" == "~" ]]; then
+            REMOTE_ROOT="${REMOTE_HOME}"
+          elif [[ "${REMOTE_ROOT}" == "~"* ]]; then
+            REMOTE_ROOT="${REMOTE_HOME}/${REMOTE_ROOT#~/}"
+          fi
+          if [ -z "${REMOTE_ROOT}" ] || [ "${REMOTE_ROOT}" = "/" ] || [ "${REMOTE_ROOT}" = "${REMOTE_HOME}" ]; then
+            echo "::error::SSH_REMOTE_DIR must be the site's public directory, not / or HOME."
+            exit 1
+          fi
+
+          REMOTE_ARCHIVE="${REMOTE_HOME}/${SSH_ARCHIVE}"
+          STAGE="${REMOTE_HOME}/.deploy-staging"
+
+          # 1) アップロードして、ステージングに展開・検査する（ここで失敗しても公開中のサイトは無傷）
+          sshpass -e scp "${SCP_OPTS[@]}" "${SSH_ARCHIVE}" "${SSH_TARGET}:${REMOTE_ARCHIVE}"
+          sshpass -e ssh "${SSH_OPTS[@]}" "${SSH_TARGET}" \
+            "set -e; rm -rf '${STAGE}'; mkdir -p '${STAGE}'; tar xzf '${REMOTE_ARCHIVE}' -C '${STAGE}'; test -f '${STAGE}/index.html'; test -f '${STAGE}/contact.php'"
+
+          # 2) 公開フォルダを入れ替える（contact-config.php は公開フォルダの外にあるので消えない）
+          sshpass -e ssh "${SSH_OPTS[@]}" "${SSH_TARGET}" \
+            "set -e; mkdir -p '${REMOTE_ROOT}'; find '${REMOTE_ROOT}' -mindepth 1 -maxdepth 1 -exec rm -rf -- {} +; cp -a '${STAGE}'/. '${REMOTE_ROOT}'/; rm -rf '${STAGE}' '${REMOTE_ARCHIVE}'"
+
+      - name: Smoke test
+        env:
+          SITE_URL: ${{ vars.LOLIPOP_SITE_URL }}
+        run: |
+          set -euo pipefail
+          BASE="${SITE_URL%/}"
+          for path in / /articles/ /robots.txt /sitemap.xml /feed.xml /contact/ /search/; do
+            code=$(curl -s -o /dev/null -w '%{http_code}' --retry 3 --retry-delay 5 --retry-all-errors "${BASE}${path}")
+            [ "${code}" = "200" ] || { echo "::error::${path} returned ${code}"; exit 1; }
+          done
+          code=$(curl -s -o /dev/null -w '%{http_code}' "${BASE}/this-page-does-not-exist/")
+          [ "${code}" = "404" ] || { echo "::error::missing page returned ${code} (expected 404)"; exit 1; }
+          if [ "${NEXT_PUBLIC_SITE_INDEXABLE}" = "true" ]; then
+            html=$(curl -s "${BASE}/")
+            if grep -q 'name="robots" content="[^"]*noindex' <<<"${html}"; then
+              echo "::error::Home page is noindex although SITE_INDEXABLE=true"
+              exit 1
+            fi
+          fi
+          headers=$(curl -sI "${BASE}/")
+          grep -qi '^x-frame-options' <<<"${headers}" || echo "::warning::Security headers are missing (mod_headers disabled?)"
+          # vendor/ と composer.json は公開されないこと
+          for path in /vendor/autoload.php /composer.json; do
+            code=$(curl -s -o /dev/null -w '%{http_code}' "${BASE}${path}")
+            case "${code}" in 403|404) ;; *) echo "::error::${path} must not be public (got ${code})"; exit 1 ;; esac
+          done

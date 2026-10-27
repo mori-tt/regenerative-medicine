@@ -70,7 +70,7 @@ mainへのpushで、2系統が並行してデプロイされます。
 | GitHub Pages（テスト確認用） | `deploy.yml`         | 全記事（`ARTICLE_BUILD_MODE=all`、ストック含む） | `noindex` 固定  |
 | Lolipop（本番）              | `deploy-lolipop.yml` | 公開日到達分のみ（`scheduled`）                  | Variablesで制御 |
 
-Lolipop側の `deploy-lolipop.yml` は、**公開時に [GO-LIVE.md](GO-LIVE.md) §5 のコードをコピペして作成します**（現在リポジトリにはありません。GitHub Pages側だけが動きます）。ジョブには `if: vars.LOLIPOP_DEPLOY_ENABLED == 'true'` のガードが付いているため、ファイルを作ってもVariablesを設定するまで実行されません。
+Lolipop側の `deploy-lolipop.yml` は **リポジトリに作成済み** ですが、ジョブに `if: vars.LOLIPOP_DEPLOY_ENABLED == 'true'` のガードが付いているため、Variablesを設定するまで実行されません。
 
 ### 本番を有効化する手順
 
@@ -86,7 +86,7 @@ Lolipop側の `deploy-lolipop.yml` は、**公開時に [GO-LIVE.md](GO-LIVE.md)
    - `LOLIPOP_SITE_INDEXABLE=true`
    - `LOLIPOP_LOCALIZED_INDEXABLE`：英語・中国語の翻訳確認後だけ `true`（`true`にするとhreflangも出力）
    - `NEXT_PUBLIC_CONTACT_EMAIL`、`NEXT_PUBLIC_OPERATOR_NAME`、`NEXT_PUBLIC_OPERATOR_ADDRESS`（indexable本番では必須）
-3. GO-LIVE.md §5 のワークフロー全文を `.github/workflows/deploy-lolipop.yml` として保存してコミットする。
+3. `.github/workflows/deploy-lolipop.yml` は既に作成済み。内容を確認してコミットする。
 4. （推奨）GitHubの Settings → Environments に `production` を作り、Required reviewers を設定すると、本番デプロイの前に承認画面が出ます。
 5. mainへpushすると、push・手動実行・毎週土曜06:00（日本時間）の予約実行で `npm run build:lolipop` → 静的検査 → SSH経由でステージングに展開・検査 → 公開フォルダを入れ替え → スモークテスト（主要URLの200/404、noindex、`vendor/` 非公開）の順に実行されます。詳細・コピペ可能な設定は [GO-LIVE.md](GO-LIVE.md) を参照。
 
