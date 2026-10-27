@@ -17,9 +17,35 @@ const form = readFileSync(
 const php = readFileSync(join(root, "public/contact.php"), "utf8");
 
 // contact-form.tsx の options: [["key","label"], ...] から全ロケールのキーを集める
+// 括弧のネストを考慮して options: [...] ブロック全体を抽出
+function extractOptionsBlocks(str) {
+  const results = [];
+  let pos = 0;
+  while (true) {
+    const start = str.indexOf("options: [", pos);
+    if (start === -1) break;
+    const bracketStart = start + "options: ".length;
+    let depth = 0;
+    let i = bracketStart;
+    for (; i < str.length; i++) {
+      if (str[i] === "[") depth++;
+      else if (str[i] === "]") {
+        depth--;
+        if (depth === 0) {
+          results.push(str.slice(start, i + 1));
+          break;
+        }
+      }
+    }
+    pos = i + 1;
+  }
+  return results;
+}
+
 const front = new Set();
-for (const m of form.matchAll(/options:\s*\[((?:\[[^\]]*\][,\s]*)+)\]/g)) {
-  for (const pair of m[1].matchAll(/\["([^"]+)",/g)) front.add(pair[1]);
+const optionBlocks = extractOptionsBlocks(form);
+for (const block of optionBlocks) {
+  for (const pair of block.matchAll(/"([^"]+)",/g)) front.add(pair[1]);
 }
 
 // contact.php の $categoryLabels 配列キーを集める
