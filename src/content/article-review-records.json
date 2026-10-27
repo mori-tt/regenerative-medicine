@@ -47,7 +47,9 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
     "referenceCount": 5,
     "reviewer": {
       "status": "planned",
@@ -79,7 +81,10 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim", "safety_or_risk_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
     "referenceCount": 5,
     "reviewer": {
       "status": "planned",
@@ -111,7 +116,10 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim", "safety_or_risk_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
     "referenceCount": 4,
     "reviewer": {
       "status": "planned",
@@ -134,13 +142,13 @@
   "ips-cells-explained": {
     "slug": "ips-cells-explained",
     "title": "iPS細胞とは？仕組み・研究・限定された臨床応用をわかりやすく解説",
-    "lastEditedAt": "2026-10-02",
+    "lastEditedAt": "2026-10-27",
     "imageKey": "microscope",
     "publishAt": "2026-09-29",
     "publishedAt": "2026-09-29",
     "releaseTrack": "physician-authored",
-    "medicalStatus": "reviewed",
-    "legalStatus": "reviewed",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "physician_authored_manuscript_no_editorial_expansion",
     "clarityStatus": "physician_manuscript_kept_verbatim",
     "riskFlags": [
@@ -160,8 +168,8 @@
     "notes": "医師本人の執筆原稿。文面は原文のまま掲載し、編集部の文献対応セクションは付加しない。",
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "896cf8d41c7cfa8bb6d71f8b9f047981052d694265e14958f375c713c8b594bf",
-      "checkedAt": "2026-10-02",
+      "contentHash": "161be91328d834a222444758168da199d5707be4b313b8a07195e23df93f5b4f",
+      "checkedAt": "2026-10-27",
       "status": "editorial_source_review",
       "sourceCount": 0,
       "note": ""
@@ -179,7 +187,10 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim", "safety_or_risk_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
     "referenceCount": 6,
     "reviewer": {
       "status": "planned",
@@ -507,7 +518,10 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim", "safety_or_risk_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
     "referenceCount": 4,
     "reviewer": {
       "status": "planned",
@@ -539,7 +553,10 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim", "individual_decision_context"],
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "individual_decision_context"
+    ],
     "referenceCount": 5,
     "reviewer": {
       "status": "planned",
@@ -609,7 +626,9 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
     "referenceCount": 4,
     "reviewer": {
       "status": "planned",
@@ -641,7 +660,9 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["safety_or_risk_claim"],
+    "riskFlags": [
+      "safety_or_risk_claim"
+    ],
     "referenceCount": 5,
     "reviewer": {
       "status": "planned",
@@ -710,7 +731,10 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["safety_or_risk_claim", "cost_or_system_claim"],
+    "riskFlags": [
+      "safety_or_risk_claim",
+      "cost_or_system_claim"
+    ],
     "referenceCount": 6,
     "reviewer": {
       "status": "planned",
@@ -742,7 +766,10 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim", "safety_or_risk_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
     "referenceCount": 6,
     "reviewer": {
       "status": "planned",
@@ -810,7 +837,10 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim", "safety_or_risk_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
     "referenceCount": 4,
     "reviewer": {
       "status": "planned",
@@ -842,7 +872,9 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
     "referenceCount": 5,
     "reviewer": {
       "status": "planned",
@@ -874,7 +906,10 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim", "safety_or_risk_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
     "referenceCount": 5,
     "reviewer": {
       "status": "planned",
@@ -942,7 +977,10 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim", "safety_or_risk_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
     "referenceCount": 6,
     "reviewer": {
       "status": "planned",
@@ -974,7 +1012,9 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
     "referenceCount": 6,
     "reviewer": {
       "status": "planned",
@@ -1188,7 +1228,10 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim", "safety_or_risk_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
     "referenceCount": 5,
     "reviewer": {
       "status": "planned",
@@ -1292,7 +1335,10 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim", "safety_or_risk_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
     "referenceCount": 4,
     "reviewer": {
       "status": "planned",
@@ -1360,7 +1406,10 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim", "safety_or_risk_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
     "referenceCount": 3,
     "reviewer": {
       "status": "planned",
@@ -1392,7 +1441,10 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim", "safety_or_risk_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
     "referenceCount": 4,
     "reviewer": {
       "status": "planned",
@@ -1568,7 +1620,10 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim", "safety_or_risk_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
     "referenceCount": 4,
     "reviewer": {
       "status": "planned",
@@ -1934,7 +1989,10 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim", "individual_decision_context"],
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "individual_decision_context"
+    ],
     "referenceCount": 4,
     "reviewer": {
       "status": "planned",
@@ -2148,7 +2206,9 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
     "referenceCount": 4,
     "reviewer": {
       "status": "planned",
@@ -2215,7 +2275,9 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
     "referenceCount": 4,
     "reviewer": {
       "status": "planned",
@@ -2314,7 +2376,9 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
     "referenceCount": 4,
     "reviewer": {
       "status": "planned",
@@ -2346,7 +2410,9 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
     "referenceCount": 6,
     "reviewer": {
       "status": "planned",
@@ -2414,7 +2480,9 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
     "referenceCount": 6,
     "reviewer": {
       "status": "planned",
@@ -2446,7 +2514,10 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim", "safety_or_risk_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
     "referenceCount": 5,
     "reviewer": {
       "status": "planned",
@@ -2513,7 +2584,10 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["cost_or_system_claim", "regulatory_or_advertising_claim"],
+    "riskFlags": [
+      "cost_or_system_claim",
+      "regulatory_or_advertising_claim"
+    ],
     "referenceCount": 8,
     "reviewer": {
       "status": "planned",
@@ -2545,7 +2619,10 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim", "safety_or_risk_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
     "referenceCount": 4,
     "reviewer": {
       "status": "planned",
@@ -2577,7 +2654,10 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim", "safety_or_risk_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
     "referenceCount": 5,
     "reviewer": {
       "status": "planned",
@@ -2641,7 +2721,9 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
     "referenceCount": 4,
     "reviewer": {
       "status": "planned",
@@ -2673,7 +2755,10 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim", "safety_or_risk_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
     "referenceCount": 4,
     "reviewer": {
       "status": "planned",
@@ -2705,7 +2790,9 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
     "referenceCount": 4,
     "reviewer": {
       "status": "planned",
@@ -2737,7 +2824,9 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
     "referenceCount": 5,
     "reviewer": {
       "status": "planned",
@@ -2769,7 +2858,9 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
     "referenceCount": 5,
     "reviewer": {
       "status": "planned",
@@ -2801,7 +2892,9 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
     "referenceCount": 5,
     "reviewer": {
       "status": "planned",
@@ -2833,7 +2926,9 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
     "referenceCount": 6,
     "reviewer": {
       "status": "planned",
@@ -2865,7 +2960,9 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
     "referenceCount": 4,
     "reviewer": {
       "status": "planned",
@@ -2897,7 +2994,10 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim", "safety_or_risk_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
     "referenceCount": 4,
     "reviewer": {
       "status": "planned",
@@ -2929,7 +3029,10 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim", "safety_or_risk_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
     "referenceCount": 4,
     "reviewer": {
       "status": "planned",
@@ -2997,7 +3100,10 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim", "safety_or_risk_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
     "referenceCount": 5,
     "reviewer": {
       "status": "planned",
@@ -3029,7 +3135,10 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim", "cost_or_system_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "cost_or_system_claim"
+    ],
     "referenceCount": 4,
     "reviewer": {
       "status": "planned",
@@ -3061,7 +3170,10 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim", "cost_or_system_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "cost_or_system_claim"
+    ],
     "referenceCount": 5,
     "reviewer": {
       "status": "planned",
@@ -3093,7 +3205,10 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim", "cost_or_system_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "cost_or_system_claim"
+    ],
     "referenceCount": 4,
     "reviewer": {
       "status": "planned",
@@ -3125,7 +3240,10 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim", "cost_or_system_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "cost_or_system_claim"
+    ],
     "referenceCount": 5,
     "reviewer": {
       "status": "planned",
@@ -3192,7 +3310,10 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim", "safety_or_risk_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
     "referenceCount": 4,
     "reviewer": {
       "status": "planned",
@@ -3224,7 +3345,10 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim", "safety_or_risk_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
     "referenceCount": 4,
     "reviewer": {
       "status": "planned",
@@ -3256,7 +3380,9 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
     "referenceCount": 5,
     "reviewer": {
       "status": "planned",
@@ -3288,7 +3414,9 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
     "referenceCount": 4,
     "reviewer": {
       "status": "planned",
@@ -3320,7 +3448,10 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim", "safety_or_risk_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
     "referenceCount": 5,
     "reviewer": {
       "status": "planned",
@@ -3352,7 +3483,9 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["safety_or_risk_claim"],
+    "riskFlags": [
+      "safety_or_risk_claim"
+    ],
     "referenceCount": 2,
     "reviewer": {
       "status": "planned",
@@ -3384,7 +3517,9 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
     "referenceCount": 3,
     "reviewer": {
       "status": "planned",
@@ -3416,7 +3551,9 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
     "referenceCount": 3,
     "reviewer": {
       "status": "planned",
@@ -3448,7 +3585,9 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
     "referenceCount": 2,
     "reviewer": {
       "status": "planned",
@@ -3480,7 +3619,10 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim", "safety_or_risk_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
     "referenceCount": 3,
     "reviewer": {
       "status": "planned",
@@ -3512,7 +3654,10 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim", "safety_or_risk_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
     "referenceCount": 3,
     "reviewer": {
       "status": "planned",
@@ -3544,7 +3689,10 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim", "safety_or_risk_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
     "referenceCount": 4,
     "reviewer": {
       "status": "planned",
@@ -3576,7 +3724,9 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["cost_or_system_claim"],
+    "riskFlags": [
+      "cost_or_system_claim"
+    ],
     "referenceCount": 3,
     "reviewer": {
       "status": "planned",
@@ -3608,7 +3758,9 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
     "referenceCount": 3,
     "reviewer": {
       "status": "planned",
@@ -3640,7 +3792,10 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim", "cost_or_system_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "cost_or_system_claim"
+    ],
     "referenceCount": 3,
     "reviewer": {
       "status": "planned",
@@ -3708,7 +3863,9 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
     "referenceCount": 4,
     "reviewer": {
       "status": "planned",
@@ -3740,7 +3897,9 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
     "referenceCount": 3,
     "reviewer": {
       "status": "planned",
@@ -3772,7 +3931,9 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
     "referenceCount": 3,
     "reviewer": {
       "status": "planned",
@@ -3804,7 +3965,9 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
     "referenceCount": 3,
     "reviewer": {
       "status": "planned",
@@ -3871,7 +4034,9 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
     "referenceCount": 4,
     "reviewer": {
       "status": "planned",
@@ -3903,7 +4068,9 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
     "referenceCount": 3,
     "reviewer": {
       "status": "planned",
@@ -3972,7 +4139,9 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
     "referenceCount": 3,
     "reviewer": {
       "status": "planned",
@@ -4004,7 +4173,10 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim", "safety_or_risk_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
     "referenceCount": 3,
     "reviewer": {
       "status": "planned",
@@ -4434,7 +4606,10 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim", "individual_decision_context"],
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "individual_decision_context"
+    ],
     "referenceCount": 4,
     "reviewer": {
       "status": "planned",
@@ -4466,7 +4641,10 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim", "individual_decision_context"],
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "individual_decision_context"
+    ],
     "referenceCount": 5,
     "reviewer": {
       "status": "planned",
@@ -4498,7 +4676,10 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["cost_or_system_claim", "individual_decision_context"],
+    "riskFlags": [
+      "cost_or_system_claim",
+      "individual_decision_context"
+    ],
     "referenceCount": 6,
     "reviewer": {
       "status": "planned",
@@ -4674,7 +4855,10 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim", "individual_decision_context"],
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "individual_decision_context"
+    ],
     "referenceCount": 5,
     "reviewer": {
       "status": "planned",
@@ -4743,7 +4927,10 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim", "individual_decision_context"],
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "individual_decision_context"
+    ],
     "referenceCount": 5,
     "reviewer": {
       "status": "planned",
@@ -4883,7 +5070,9 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["individual_decision_context"],
+    "riskFlags": [
+      "individual_decision_context"
+    ],
     "referenceCount": 4,
     "reviewer": {
       "status": "planned",
@@ -4915,7 +5104,10 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim", "individual_decision_context"],
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "individual_decision_context"
+    ],
     "referenceCount": 5,
     "reviewer": {
       "status": "planned",
@@ -4984,7 +5176,10 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim", "individual_decision_context"],
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "individual_decision_context"
+    ],
     "referenceCount": 6,
     "reviewer": {
       "status": "planned",
@@ -5016,7 +5211,10 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["cost_or_system_claim", "individual_decision_context"],
+    "riskFlags": [
+      "cost_or_system_claim",
+      "individual_decision_context"
+    ],
     "referenceCount": 6,
     "reviewer": {
       "status": "planned",
@@ -5048,7 +5246,9 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
     "referenceCount": 4,
     "reviewer": {
       "status": "planned",
@@ -5080,7 +5280,10 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim", "safety_or_risk_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
     "referenceCount": 5,
     "reviewer": {
       "status": "planned",
@@ -5112,7 +5315,9 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
     "referenceCount": 4,
     "reviewer": {
       "status": "planned",
@@ -5144,7 +5349,10 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim", "safety_or_risk_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
     "referenceCount": 4,
     "reviewer": {
       "status": "planned",
@@ -5176,7 +5384,10 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim", "safety_or_risk_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
     "referenceCount": 4,
     "reviewer": {
       "status": "planned",
@@ -5208,7 +5419,10 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim", "safety_or_risk_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
     "referenceCount": 4,
     "reviewer": {
       "status": "planned",
@@ -5240,7 +5454,9 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
     "referenceCount": 4,
     "reviewer": {
       "status": "planned",
@@ -5272,7 +5488,9 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
     "referenceCount": 4,
     "reviewer": {
       "status": "planned",
@@ -5304,7 +5522,9 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
     "referenceCount": 4,
     "reviewer": {
       "status": "planned",
@@ -5336,7 +5556,9 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
     "referenceCount": 4,
     "reviewer": {
       "status": "planned",
@@ -5368,7 +5590,10 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim", "safety_or_risk_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
     "referenceCount": 4,
     "reviewer": {
       "status": "planned",
@@ -5400,7 +5625,10 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim", "safety_or_risk_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
     "referenceCount": 4,
     "reviewer": {
       "status": "planned",
@@ -5432,7 +5660,10 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim", "public_health_instruction"],
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "public_health_instruction"
+    ],
     "referenceCount": 4,
     "reviewer": {
       "status": "planned",
@@ -5464,7 +5695,10 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim", "cost_or_system_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "cost_or_system_claim"
+    ],
     "referenceCount": 4,
     "reviewer": {
       "status": "planned",
@@ -5496,7 +5730,10 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim", "safety_or_risk_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
     "referenceCount": 4,
     "reviewer": {
       "status": "planned",
@@ -5528,7 +5765,10 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim", "safety_or_risk_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
     "referenceCount": 3,
     "reviewer": {
       "status": "planned",
@@ -5596,7 +5836,10 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim", "safety_or_risk_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
     "referenceCount": 4,
     "reviewer": {
       "status": "planned",
@@ -5628,7 +5871,9 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
     "referenceCount": 4,
     "reviewer": {
       "status": "planned",
@@ -5660,7 +5905,10 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim", "safety_or_risk_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
     "referenceCount": 4,
     "reviewer": {
       "status": "planned",
@@ -5692,7 +5940,9 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
     "referenceCount": 4,
     "reviewer": {
       "status": "planned",
@@ -5724,7 +5974,9 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
     "referenceCount": 4,
     "reviewer": {
       "status": "planned",
@@ -5756,7 +6008,9 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["safety_or_risk_claim"],
+    "riskFlags": [
+      "safety_or_risk_claim"
+    ],
     "referenceCount": 4,
     "reviewer": {
       "status": "planned",
@@ -5824,7 +6078,10 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim", "safety_or_risk_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
     "referenceCount": 4,
     "reviewer": {
       "status": "planned",
@@ -5856,7 +6113,10 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim", "individual_decision_context"],
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "individual_decision_context"
+    ],
     "referenceCount": 6,
     "reviewer": {
       "status": "planned",
@@ -6359,7 +6619,9 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
     "referenceCount": 4,
     "reviewer": {
       "status": "planned",
@@ -6391,7 +6653,9 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["cost_or_system_claim"],
+    "riskFlags": [
+      "cost_or_system_claim"
+    ],
     "referenceCount": 4,
     "reviewer": {
       "status": "planned",
@@ -6458,7 +6722,9 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
     "referenceCount": 5,
     "reviewer": {
       "status": "planned",
@@ -6744,7 +7010,9 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
     "referenceCount": 4,
     "reviewer": {
       "status": "planned",
@@ -6776,7 +7044,10 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim", "public_health_instruction"],
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "public_health_instruction"
+    ],
     "referenceCount": 4,
     "reviewer": {
       "status": "planned",
@@ -6808,7 +7079,9 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
     "referenceCount": 4,
     "reviewer": {
       "status": "planned",
@@ -6875,7 +7148,9 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
     "referenceCount": 5,
     "reviewer": {
       "status": "planned",
@@ -6907,7 +7182,10 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim", "safety_or_risk_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
     "referenceCount": 5,
     "reviewer": {
       "status": "planned",
@@ -7012,7 +7290,9 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
     "referenceCount": 6,
     "reviewer": {
       "status": "planned",
@@ -7076,7 +7356,10 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim", "safety_or_risk_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
     "referenceCount": 4,
     "editorialEvidence": {
       "revision": "literature-v2",
@@ -7108,7 +7391,10 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim", "safety_or_risk_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
     "referenceCount": 3,
     "editorialEvidence": {
       "revision": "literature-v2",
@@ -7140,7 +7426,10 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim", "safety_or_risk_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
     "referenceCount": 3,
     "editorialEvidence": {
       "revision": "literature-v2",
@@ -7172,7 +7461,10 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim", "public_health_instruction"],
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "public_health_instruction"
+    ],
     "referenceCount": 3,
     "editorialEvidence": {
       "revision": "literature-v2",
@@ -7204,7 +7496,10 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim", "public_health_instruction"],
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "public_health_instruction"
+    ],
     "referenceCount": 3,
     "editorialEvidence": {
       "revision": "literature-v2",
@@ -7382,7 +7677,10 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim", "safety_or_risk_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
     "referenceCount": 2,
     "editorialEvidence": {
       "revision": "literature-v2",
@@ -7559,7 +7857,10 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim", "cost_or_system_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "cost_or_system_claim"
+    ],
     "referenceCount": 3,
     "editorialEvidence": {
       "revision": "literature-v2",
@@ -7591,7 +7892,10 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim", "safety_or_risk_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
     "referenceCount": 4,
     "editorialEvidence": {
       "revision": "literature-v2",
@@ -7614,13 +7918,13 @@
   "stem-cell-treatment-contents": {
     "slug": "stem-cell-treatment-contents",
     "title": "幹細胞治療では、実際に何を体に入れているの？",
-    "lastEditedAt": "2026-09-30",
+    "lastEditedAt": "2026-10-27",
     "imageKey": "doctor-consultation",
     "publishAt": "2026-09-28",
     "publishedAt": "2026-09-28",
     "releaseTrack": "physician-authored",
-    "medicalStatus": "reviewed",
-    "legalStatus": "reviewed",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "physician_authored_manuscript_no_editorial_expansion",
     "clarityStatus": "physician_manuscript_kept_verbatim",
     "riskFlags": [
@@ -7631,8 +7935,8 @@
     "referenceCount": 5,
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "69eedd73a62c3b3dee7d56135af80be6b890b2b772a20fe0763d5d0ff3a2b902",
-      "checkedAt": "2026-10-02",
+      "contentHash": "ff0a7fe3b3b84f7af72efa8725ec06831e1a1b16161eff73ef7f63f966782263",
+      "checkedAt": "2026-10-27",
       "status": "editorial_source_review",
       "sourceCount": 0,
       "note": ""
@@ -7659,7 +7963,10 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim", "safety_or_risk_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
     "referenceCount": 5,
     "editorialEvidence": {
       "revision": "literature-v2",
@@ -7723,7 +8030,10 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim", "safety_or_risk_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
     "referenceCount": 5,
     "editorialEvidence": {
       "revision": "literature-v2",
@@ -7755,7 +8065,10 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim", "safety_or_risk_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
     "referenceCount": 5,
     "editorialEvidence": {
       "revision": "literature-v2",
@@ -7787,7 +8100,10 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim", "safety_or_risk_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
     "referenceCount": 6,
     "editorialEvidence": {
       "revision": "literature-v2",
@@ -7856,7 +8172,10 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim", "safety_or_risk_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
     "referenceCount": 5,
     "editorialEvidence": {
       "revision": "literature-v2",
@@ -8290,7 +8609,9 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim"
+    ],
     "referenceCount": 5,
     "editorialEvidence": {
       "revision": "literature-v2",
@@ -8322,7 +8643,10 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim", "safety_or_risk_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
     "referenceCount": 5,
     "editorialEvidence": {
       "revision": "literature-v2",
@@ -8390,7 +8714,10 @@
     "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "topic_sources_mapped_professional_review_pending",
     "clarityStatus": "editorial_expansion_added_professional_readthrough_pending",
-    "riskFlags": ["effect_or_treatment_claim", "safety_or_risk_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
     "referenceCount": 6,
     "editorialEvidence": {
       "revision": "literature-v2",
@@ -8413,13 +8740,13 @@
   "doctor-stem-cells-basics": {
     "slug": "doctor-stem-cells-basics",
     "title": "幹細胞とは？再生医療で注目される理由をわかりやすく解説",
-    "lastEditedAt": "2026-09-28",
+    "lastEditedAt": "2026-10-27",
     "imageKey": "microscope",
     "publishAt": "2026-09-22",
     "publishedAt": "2026-09-28",
     "releaseTrack": "physician-authored",
-    "medicalStatus": "reviewed",
-    "legalStatus": "reviewed",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "physician_authored_manuscript_no_editorial_expansion",
     "clarityStatus": "physician_manuscript_kept_verbatim",
     "riskFlags": [
@@ -8431,8 +8758,8 @@
     "referenceCount": 3,
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "72a4ec91b27277f557bbffe129edd7bd106b2a5c074833d85a1b29337037ac74",
-      "checkedAt": "2026-10-02",
+      "contentHash": "4a4af2134f2fde7e9aa30126fa8f8aa974b17ca1edc587e687f0a368eb32ae20",
+      "checkedAt": "2026-10-27",
       "status": "editorial_source_review",
       "sourceCount": 0,
       "note": ""
@@ -8451,21 +8778,24 @@
   "doctor-regenerative-medicine": {
     "slug": "doctor-regenerative-medicine",
     "title": "再生医療とは？幹細胞を使った治療の仕組みを解説",
-    "lastEditedAt": "2026-09-29",
+    "lastEditedAt": "2026-10-27",
     "imageKey": "doctor-consultation",
     "publishAt": "2026-09-23",
     "publishedAt": "2026-09-28",
     "releaseTrack": "physician-authored",
-    "medicalStatus": "reviewed",
-    "legalStatus": "reviewed",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "physician_authored_manuscript_no_editorial_expansion",
     "clarityStatus": "physician_manuscript_kept_verbatim",
-    "riskFlags": ["effect_or_treatment_claim", "safety_or_risk_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
     "referenceCount": 10,
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "447f588fa1f943abbc5ab41986d595d5b653a40b529c00b2c2a83b38ec9b9b6b",
-      "checkedAt": "2026-10-02",
+      "contentHash": "62b4415a638209b804457e3384b4a9c30ee252965bb11d5d1515df37046a445b",
+      "checkedAt": "2026-10-27",
       "status": "editorial_source_review",
       "sourceCount": 0,
       "note": ""
@@ -8484,13 +8814,13 @@
   "doctor-stem-cell-types": {
     "slug": "doctor-stem-cell-types",
     "title": "幹細胞にはどんな種類がある？ES細胞、iPS細胞、間葉系幹細胞の違い",
-    "lastEditedAt": "2026-09-28",
+    "lastEditedAt": "2026-10-27",
     "imageKey": "laboratory",
     "publishAt": "2026-09-25",
     "publishedAt": "2026-09-28",
     "releaseTrack": "physician-authored",
-    "medicalStatus": "reviewed",
-    "legalStatus": "reviewed",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "physician_authored_manuscript_no_editorial_expansion",
     "clarityStatus": "physician_manuscript_kept_verbatim",
     "riskFlags": [
@@ -8501,8 +8831,8 @@
     "referenceCount": 3,
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "4b221e726beeb5bcd986f60165e0430ab17393dbde10caaf6e89ff9f04fef9df",
-      "checkedAt": "2026-10-02",
+      "contentHash": "125eac70703d8e76d7acab373a9a7c20deee7121961d9bbbc6b8f1e8da1d50d2",
+      "checkedAt": "2026-10-27",
       "status": "editorial_source_review",
       "sourceCount": 0,
       "note": ""
@@ -8521,21 +8851,24 @@
   "doctor-regenerative-approaches": {
     "slug": "doctor-regenerative-approaches",
     "title": "再生医療の3つのアプローチ：細胞移植、組織工学、体の力を生かす",
-    "lastEditedAt": "2026-09-28",
+    "lastEditedAt": "2026-10-27",
     "imageKey": "laboratory",
     "publishAt": "2026-09-26",
     "publishedAt": "2026-09-28",
     "releaseTrack": "physician-authored",
-    "medicalStatus": "reviewed",
-    "legalStatus": "reviewed",
+    "medicalStatus": "needs_medical_review",
+    "legalStatus": "needs_legal_editorial_review",
     "evidenceStatus": "physician_authored_manuscript_no_editorial_expansion",
     "clarityStatus": "physician_manuscript_kept_verbatim",
-    "riskFlags": ["effect_or_treatment_claim", "safety_or_risk_claim"],
+    "riskFlags": [
+      "effect_or_treatment_claim",
+      "safety_or_risk_claim"
+    ],
     "referenceCount": 3,
     "editorialEvidence": {
       "revision": "literature-v2",
-      "contentHash": "fa4039af05695efc8ac1d6015c6d5c1793cfdaae1ef3ed7c4a36e4c17c46cf2f",
-      "checkedAt": "2026-10-02",
+      "contentHash": "db1b0fd493c12d6f74ef9a530206504e27d2d9fd5a00f9009eb9680a64d556c2",
+      "checkedAt": "2026-10-27",
       "status": "editorial_source_review",
       "sourceCount": 0,
       "note": ""
