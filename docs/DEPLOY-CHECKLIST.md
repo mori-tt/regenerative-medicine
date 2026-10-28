@@ -51,7 +51,7 @@
 
 ## 6. 問い合わせフォーム
 
-- [ ] `deploy/contact-config.example.php` を `contact-config.php` にコピーして値を入力し、**公開フォルダの外**（例：ホーム直下）に置く。公開フォルダ内に置くとデプロイで消える（`docs/DEPLOYMENT.md` 参照）
+- [ ] `deploy/contact-config.example.php` に値を入力した内容を Secrets `LOLIPOP_CONTACT_CONFIG` に登録（デプロイ時に `~/contact-config.php` へ自動配置。手動なら `contact-config.php` として**公開フォルダの外**に置く）（`docs/DEPLOYMENT.md` 参照）
 
 - [ ] Lolipopの対象ドメインのPHPが **8.2.35以上 / 8.3.36以上 / 8.4.27以上 / 8.5.12以上** であること（PHP2shell脆弱性 CVE-2026-109618 / CVE-2026-109619 対策。`contact.php` の要件は8.2以上）
 - [ ] `public/contact.php` が動作するホスティング環境を確認（GitHub Pages は静的ホストのため PHP 非対応 → 外部フォームサービスへの切り替えが必要な場合あり）

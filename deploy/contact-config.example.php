@@ -1,6 +1,10 @@
 <?php
 // お問い合わせフォーム（public/contact.php）用の設定。
-// このファイルを contact-config.php という名前でコピーし、サーバー上の「公開フォルダの外」に置く。
+// GitHub Actionsでデプロイする場合：このファイルに値を入力した内容を
+// Secrets `LOLIPOP_CONTACT_CONFIG` に登録すると、デプロイ時にサーバーの
+// ホーム直下（~/contact-config.php、公開フォルダの外）へ自動配置される。
+// 手動の場合：このファイルを contact-config.php という名前でコピーし、
+// サーバー上の「公開フォルダの外」に置く。
 //   例）公開フォルダが ~/web/saisei-med.com/ なら ~/contact-config.php（ホーム直下）
 // 公開フォルダの中に置くとデプロイのたびに消えるため置かないこと。Git にも追加しない。
 // 場所を変える場合は、環境変数 CONTACT_CONFIG_FILE にフルパスを指定する。

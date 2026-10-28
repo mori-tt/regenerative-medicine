@@ -6,6 +6,8 @@ name: Deploy to Lolipop
 # DEPLOY_TARGET 未設定時だけ、旧変数 LOLIPOP_DEPLOY_ENABLED=true も有効（移行措置）。
 # Secrets（LOLIPOP_SSH_USER / LOLIPOP_SSH_PASSWORD / LOLIPOP_SSH_REMOTE_DIR / LOLIPOP_SSH_KNOWN_HOSTS）
 # が未登録の場合は、実行時にエラーで止まる。
+# 任意: LOLIPOP_CONTACT_CONFIG に contact-config.php の内容を登録すると、
+# デプロイ時に ~/contact-config.php（公開フォルダ外）へ自動配置する。
 
 on:
   push:
@@ -134,6 +136,7 @@ jobs:
           SSH_USER: ${{ secrets.LOLIPOP_SSH_USER }}
           SSH_REMOTE_DIR: ${{ secrets.LOLIPOP_SSH_REMOTE_DIR }}
           SSH_ARCHIVE: regenerative-medicine-out.tar.gz
+          CONTACT_CONFIG: ${{ secrets.LOLIPOP_CONTACT_CONFIG }}
         run: |
           set -euo pipefail
           if [ -z "${SSHPASS}" ] || [ -z "${SSH_USER}" ] || [ -z "${SSH_REMOTE_DIR}" ]; then
@@ -194,12 +197,35 @@ jobs:
           REMOTE_ARCHIVE="${REMOTE_HOME}/${SSH_ARCHIVE}"
           STAGE="${REMOTE_HOME}/.deploy-staging"
 
-          # 1) アップロードして、ステージングに展開・検査する（ここで失敗しても公開中のサイトは無傷）
+          # 1) contact-config.php を公開フォルダの外（ホーム直下）へ配置
+          #    Secrets LOLIPOP_CONTACT_CONFIG にファイル内容を登録すると自動配置される。
+          #    contact.php は DOCUMENT_ROOT の1つ上・2つ上の順に探すため、
+          #    REMOTE_ROOT が ~/web/<domain> ならホーム直下（2つ上）で検出される。
+          #    サイト本体より先に検証するため、設定の不備は公開前に失敗で止まる。
+          if [ -n "${CONTACT_CONFIG:-}" ]; then
+            CONFIG_TMP="$(mktemp)"
+            printf '%s' "${CONTACT_CONFIG}" > "${CONFIG_TMP}"
+            if command -v php >/dev/null 2>&1; then
+              php -l "${CONFIG_TMP}" > /dev/null || {
+                echo "::error::LOLIPOP_CONTACT_CONFIG is not valid PHP (php -l failed)"
+                rm -f "${CONFIG_TMP}"
+                exit 1
+              }
+            fi
+            retry_ssh sshpass -e scp "${SCP_OPTS[@]}" "${CONFIG_TMP}" "${SSH_TARGET}:${REMOTE_HOME}/contact-config.php"
+            retry_ssh sshpass -e ssh "${SSH_OPTS[@]}" "${SSH_TARGET}" "chmod 600 '${REMOTE_HOME}/contact-config.php'"
+            rm -f "${CONFIG_TMP}"
+            echo "contact-config.php deployed to ${REMOTE_HOME}/contact-config.php"
+          else
+            echo "::notice::LOLIPOP_CONTACT_CONFIG is not set; contact-config.php is not managed by this workflow"
+          fi
+
+          # 2) アップロードして、ステージングに展開・検査する（ここで失敗しても公開中のサイトは無傷）
           retry_ssh sshpass -e scp "${SCP_OPTS[@]}" "${SSH_ARCHIVE}" "${SSH_TARGET}:${REMOTE_ARCHIVE}"
           retry_ssh sshpass -e ssh "${SSH_OPTS[@]}" "${SSH_TARGET}" \
             "set -e; rm -rf '${STAGE}'; mkdir -p '${STAGE}'; tar xzf '${REMOTE_ARCHIVE}' -C '${STAGE}'; test -f '${STAGE}/index.html'; test -f '${STAGE}/contact.php'"
 
-          # 2) 公開フォルダをリネームで入れ替える（contact-config.php は公開フォルダの外にあるので消えない）
+          # 3) 公開フォルダをリネームで入れ替える（contact-config.php は公開フォルダの外にあるので消えない）
           #    中身削除→コピー方式だと、SSH切断やコマンド中断で公開フォルダが空のまま残る。
           #    同一ファイルシステム上の mv 2回で切り替えるため中断窓がほぼ無く、
           #    失敗時は旧フォルダをそのまま戻す。直前版は .deploy-previous に残る（公開フォルダ外）。

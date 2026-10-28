@@ -153,8 +153,8 @@ composer install --no-dev --working-dir=public
 
 SMTPなどの設定は、**公開フォルダの外に置く `contact-config.php`** に書きます。GitHub Actionsのデプロイは公開フォルダごと新しいビルドで入れ替えるため、公開フォルダ内に置いた設定や、`.htaccess`の`SetEnv`は消えます。また、Lolipopの共有サーバーには環境変数を設定する管理画面が通常ありません。
 
-1. [`deploy/contact-config.example.php`](../deploy/contact-config.example.php) を `contact-config.php` にコピーし、値を入力します。
-2. サーバー上の**公開フォルダの1つ上、または2つ上**に置きます（例：公開フォルダが `~/web/saisei-med.com/` ならホーム直下の `~/contact-config.php`）。`contact.php` は `DOCUMENT_ROOT` の1つ上・2つ上の順に探します。
+1. **GitHub Actionsを使う場合（推奨）**:[`deploy/contact-config.example.php`](../deploy/contact-config.example.php) に値を入力した内容を、Secrets **`LOLIPOP_CONTACT_CONFIG`** に登録します（`gh secret set LOLIPOP_CONTACT_CONFIG --repo mori-tt/regenerative-medicine < contact-config.php`）。デプロイ時に `~/contact-config.php` へ自動配置・`chmod 600`・php構文検査まで行われます。
+2. **手動の場合**：同ファイルを `contact-config.php` にコピーして値を入力し、サーバー上の**公開フォルダの1つ上、または2つ上**に置きます（例：公開フォルダが `~/web/saisei-med.com/` ならホーム直下の `~/contact-config.php`）。`contact.php` は `DOCUMENT_ROOT` の1つ上・2つ上の順に探します。
 3. 別の場所に置く場合は、環境変数 `CONTACT_CONFIG_FILE` にフルパスを指定します。
 4. 設定ファイルが無いときは、従来どおり環境変数（`getenv`）を読みます。設定ファイルの値が優先されます。
 

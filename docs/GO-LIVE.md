@@ -38,7 +38,7 @@
 4. 公開する記事の最終読み直しと台帳への確認記録。監修者記録が確定していた6本は、直近の本文編集（クリニック名変更）で医療・法務確認が再確認待ちに戻っているため、`medicalStatus`/`legalStatus`/`reviewedAt` の再確認記録が必要。追加で公開したい記事も同様に記録する → [PUBLISHING.md](PUBLISHING.md)
 5. Lolipopの契約・ドメイン・DNS・SSL・SSH・メール・PHPを整える → §1-1
 6. GitHubの Pages・Secrets・Variables・Environment を設定する → §1-2、§4-1
-7. `contact-config.php` をサーバーに置く → §2
+7. `contact-config.php` の設定を登録（Secrets経由で自動配置、またはサーバーへ手動配置）→ §2
 8. SSHホスト鍵を登録する → §5
 
 **B. 公開当日** 9. `deployDate` を公開日にして `main` へ → §6-2 10. 手元で本番設定のビルド確認 → §6-1 11. `deploy-lolipop.yml` の内容を確認・コミット → §5 12. `DEPLOY_TARGET=both` を設定して実行 → §6-2 13. 公開直後の動作確認（HTTPS、問い合わせ送信、フィード、OGP、実機）→ §6-3
@@ -55,7 +55,7 @@
 - [ ] 独自SSLを有効にし、`https://` で表示できることを確認する（HSTSは `.htaccess` が出しますが、HTTPSが動いていることが前提です）
 - [ ] **SSHが使える契約プランか確認し、SSHを有効化する。** ホスト `ssh.lolipop.jp`、ポート `2222`、ユーザー名・パスワードは管理画面の表示に従う。SSHが使えないプランの場合は §5 のFTPS代替を使う
 - [ ] 問い合わせ用のメールアカウント（例：`info@saisei-med.com`）を作成する
-- [ ] **`contact-config.php` を置く**（§2）
+- [ ] **`contact-config.php` の設定を用意する**（§2。Secrets `LOLIPOP_CONTACT_CONFIG` に登録すればデプロイ時に自動配置される）
 - [ ] Lolipopの対象ドメインのPHPバージョンを **8.2.35以上、8.3.36以上、8.4.27以上、または8.5.12以上** にする（PHP2shell脆弱性 CVE-2026-109618 / CVE-2026-109619 対策。`contact.php` は8.2以上で動作。可能なら8.3以上を推奨）
 - [ ] ドメインの `www` 有無を決める（どちらかをもう一方へリダイレクト。§3）
 
@@ -83,26 +83,33 @@ gh api -X POST repos/mori-tt/regenerative-medicine/pages -f build_type=workflow
 - [ ] OGP画像 `public/social-card*.png` の最終確認
 - [ ] 画像の権利記録（`npm run check:rights` が通ること。本番ビルドで自動実行される）
 
-## 2. 問い合わせフォームの設定ファイル（手作業）
+## 2. 問い合わせフォームの設定ファイル
 
-Lolipopの共有サーバーには環境変数を設定する画面が通常ありません。また、デプロイは公開フォルダの中身を毎回削除するため、設定は**公開フォルダの外**に置きます。
+Lolipopの共有サーバーには環境変数を設定する画面が通常ありません。また、デプロイは公開フォルダを新しいビルドで入れ替えるため、設定は**公開フォルダの外**（ホーム直下の `~/contact-config.php`）に置きます。
+
+**GitHub Actions経由（推奨・自動）**：値を入力した `contact-config.php` の内容を Secrets **`LOLIPOP_CONTACT_CONFIG`** に登録すると、デプロイ時に `~/contact-config.php` へ自動で配置・`chmod 600` されます（php構文検査付き。サーバーへの手動アップロードは不要）。
 
 ```bash
 # 1. 雛形をコピーして値を入力する（手元で）
 cp deploy/contact-config.example.php /tmp/contact-config.php
 $EDITOR /tmp/contact-config.php
 
-# 2. サーバーのホーム直下（公開フォルダの1つ上か2つ上）へ送る
-scp -P 2222 /tmp/contact-config.php <SSHユーザー>@ssh.lolipop.jp:~/contact-config.php
+# 2. ファイルごとSecretに登録（内容は会話・ログに出ない）
+gh secret set LOLIPOP_CONTACT_CONFIG --repo mori-tt/regenerative-medicine < /tmp/contact-config.php
 
-# 3. 読み取りを自分だけにする
-ssh -p 2222 <SSHユーザー>@ssh.lolipop.jp 'chmod 600 ~/contact-config.php'
-
-# 4. 手元のコピーを消す
+# 3. 手元のコピーを消す
 rm /tmp/contact-config.php
 ```
 
-- `contact.php` は `DOCUMENT_ROOT` の1つ上、2つ上の順に `contact-config.php` を探します。見つからない場所に置いた場合は、環境変数 `CONTACT_CONFIG_FILE` でフルパスを指定します。
+**手動で置く場合**（Actionsを使わないとき）：
+
+```bash
+scp -P 2222 /tmp/contact-config.php <SSHユーザー>@ssh.lolipop.jp:~/contact-config.php
+ssh -p 2222 <SSHユーザー>@ssh.lolipop.jp 'chmod 600 ~/contact-config.php'
+```
+
+- `contact.php` は `DOCUMENT_ROOT` の1つ上、2つ上の順に `contact-config.php` を探します。自動配置はホーム直下（多くの構成で2つ上に該当）です。見つからない場所に置いた場合は、環境変数 `CONTACT_CONFIG_FILE` でフルパスを指定します。
+- `LOLIPOP_CONTACT_CONFIG` を更新すれば、次回デプロイで設定も置き換わります。登録しない場合はワークフローはスキップするだけです（サーバー上の既存ファイルは触りません）。
 - 必須は `CONTACT_TO_EMAIL`、`CONTACT_FROM_EMAIL`、`CONTACT_SMTP_USER`、`CONTACT_SMTP_PASS`、`CONTACT_ALLOWED_ORIGINS`（本番URL）。
 - 初回デプロイ後に、実際のメールで送信・受信・返信・迷惑メール判定を確認する（§6-3）。
 
@@ -121,12 +128,13 @@ rm /tmp/contact-config.php
 
 **Secrets**（Settings → Secrets and variables → Actions → Secrets）
 
-| 名前                      | 内容                                                               |
-| ------------------------- | ------------------------------------------------------------------ |
-| `LOLIPOP_SSH_USER`        | SSHユーザー名                                                      |
-| `LOLIPOP_SSH_PASSWORD`    | SSHパスワード                                                      |
-| `LOLIPOP_SSH_REMOTE_DIR`  | 公開フォルダ（例：`~/web/saisei-med.com`）。`/` やホーム自体は不可 |
-| `LOLIPOP_SSH_KNOWN_HOSTS` | `ssh-keyscan -p 2222 ssh.lolipop.jp` の出力（§5の手順で登録）      |
+| 名前                      | 内容                                                                                               |
+| ------------------------- | -------------------------------------------------------------------------------------------------- |
+| `LOLIPOP_SSH_USER`        | SSHユーザー名                                                                                      |
+| `LOLIPOP_SSH_PASSWORD`    | SSHパスワード                                                                                      |
+| `LOLIPOP_SSH_REMOTE_DIR`  | 公開フォルダ（例：`~/web/saisei-med.com`）。`/` やホーム自体は不可                                 |
+| `LOLIPOP_SSH_KNOWN_HOSTS` | `ssh-keyscan -p 2222 ssh.lolipop.jp` の出力（§5の手順で登録）                                      |
+| `LOLIPOP_CONTACT_CONFIG`  | 値を入力した `contact-config.php` の内容（任意。登録すると `~/contact-config.php` へ自動配置。§2） |
 
 **Variables**（同 → Variables）
 
@@ -151,6 +159,9 @@ REPO=mori-tt/regenerative-medicine
 gh secret set LOLIPOP_SSH_USER --repo $REPO
 gh secret set LOLIPOP_SSH_PASSWORD --repo $REPO
 gh secret set LOLIPOP_SSH_REMOTE_DIR --repo $REPO
+
+# 問い合わせ設定（任意。登録するとデプロイ時に ~/contact-config.php へ自動配置）
+gh secret set LOLIPOP_CONTACT_CONFIG --repo $REPO < /tmp/contact-config.php
 
 # Variables（運営者情報は実際の値に置き換える）
 gh variable set DEPLOY_TARGET --body both --repo $REPO
@@ -181,7 +192,7 @@ gh run watch --repo mori-tt/regenerative-medicine
 
 **`.github/workflows/deploy-lolipop.yml` はリポジトリに作成済みです。** 公開の準備ができたら、次の手順で有効化します。
 
-1. [ ] §1・§2・§4-1 の手作業（Lolipop側の準備、`contact-config.php`、Secrets / Variables、ホスト鍵の登録）を終える。ただし `DEPLOY_TARGET` は**まだ `both`/`lolipop` にしない**（未設定か `github-pages` のままにする）
+1. [ ] §1・§2・§4-1 の手作業（Lolipop側の準備、`contact-config.php` の登録、Secrets / Variables、ホスト鍵の登録）を終える。ただし `DEPLOY_TARGET` は**まだ `both`/`lolipop` にしない**（未設定か `github-pages` のままにする）
 2. [ ] `.github/workflows/deploy-lolipop.yml` の内容を確認する
 3. [ ] 内容を確認してコミット（この時点では `DEPLOY_TARGET` が `github-pages` 相当なのでジョブはスキップされる）
 4. [ ] §6 の最終確認のあと、`DEPLOY_TARGET=both`（Pagesと両方）または `lolipop`（Lolipopのみ）を設定して実行する（§6-2）
@@ -327,7 +338,7 @@ curl -s $SITE/articles/ips-cells-explained/ | grep -o 'name="robots"[^>]*'   # i
 | 記事の追加・修正       | PR → `main` にマージ。Pages・Lolipopの両方が自動更新                                                                                                                |
 | 記事を新たに公開       | 監修・法務の確認を `article-review-records.json` に記録 → `main` にマージ（[PUBLISHING.md](PUBLISHING.md)）。記事のあるカテゴリはトップ・sitemapに自動で現れる      |
 | 英・中を検索公開       | 翻訳・監修範囲の確認後、Variables `LOLIPOP_LOCALIZED_INDEXABLE=true` → 手動実行（§4-2）                                                                             |
-| 問い合わせ設定の変更   | サーバー上の `~/contact-config.php` を編集（再デプロイ不要）                                                                                                        |
+| 問い合わせ設定の変更   | Secrets `LOLIPOP_CONTACT_CONFIG` を更新して再デプロイ（自動管理）。サーバー上の `~/contact-config.php` の直接編集も可（次回デプロイで上書きされる）                 |
 | 前のバージョンに戻す   | 戻したいコミットのタグ、またはブランチを指定：`gh workflow run deploy-lolipop.yml --ref <タグまたはブランチ>`。または `git revert` → push                           |
 | 本番の自動配置を止める | Variables `DEPLOY_TARGET=github-pages`（Pagesのみに戻す）または `none`（両方停止。公開済みのサイトは消えない。消す場合は管理画面またはSSHで公開フォルダを空にする） |
 | パスワードの変更       | Lolipopでパスワードを変更 → Secrets `LOLIPOP_SSH_PASSWORD` と、メールなら `contact-config.php` を更新                                                               |
