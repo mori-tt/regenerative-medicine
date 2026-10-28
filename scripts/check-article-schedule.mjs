@@ -10,7 +10,8 @@ const media = JSON.parse(
   fs.readFileSync("src/content/article-media.json", "utf8"),
 );
 const entries = Object.values(records);
-const today = "2026-09-21";
+// 公開予定日の期限切れを検出するため、判定は常に実行時点の日本時間の当日で行う。
+const today = new Date(Date.now() + 9 * 3600 * 1000).toISOString().slice(0, 10);
 const dates = entries.map((record) => record.publishAt);
 const duplicateDates = dates.filter(
   (date, index) => dates.indexOf(date) !== index,
@@ -50,8 +51,13 @@ if (missingImageFiles.length)
   throw new Error(
     `画像ファイルがありません: ${missingImageFiles.map(([key]) => key).join(", ")}`,
   );
-if (entries.some((record) => record.publishAt < today))
-  throw new Error("今日より前の公開予定日があります");
+const overdue = entries
+  .filter((record) => record.publishAt < today)
+  .map((record) => `${record.slug}:${record.publishAt}`);
+if (overdue.length)
+  throw new Error(
+    `今日より前の公開予定日が${overdue.length}件あります: ${overdue.join(", ")}`,
+  );
 const counts = entries.reduce((map, record) => {
   const month = record.publishAt.slice(0, 7);
   map[month] = (map[month] ?? 0) + 1;

@@ -13,6 +13,7 @@ return [
     'CONTACT_SMTP_USER' => '',
     'CONTACT_SMTP_PASS' => '',
     'CONTACT_SMTP_SECURE' => 'ssl',
+    'CONTACT_PHPMAILER_AUTOLOAD' => '',
     'CONTACT_ALLOWED_ORIGINS' => 'https://saisei-med.com',
     'CONTACT_RATE_LIMIT_MAX' => '5',
     'CONTACT_RATE_LIMIT_WINDOW' => '600',

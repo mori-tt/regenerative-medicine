@@ -121,7 +121,9 @@ jobs:
         run: |
           test -n "${KNOWN_HOSTS}" || { echo "::error::LOLIPOP_SSH_KNOWN_HOSTS is not configured"; exit 1; }
           mkdir -p ~/.ssh
-          printf '%s\n' "${KNOWN_HOSTS}" > ~/.ssh/known_hosts
+          # 既定の ~/.ssh/known_hosts は上書きしない（self-hosted runner で
+          # ユーザー既存のホスト鍵を消さないため）。専用ファイルに分離する。
+          printf '%s\n' "${KNOWN_HOSTS}" > ~/.ssh/lolipop_known_hosts
 
       # ロリポップは SSH パスワード認証（2222番ポート）。
       # SSH_PRIVATE_KEY ではなく SSH_PASSWORD を使う。
@@ -157,8 +159,8 @@ jobs:
           }
 
           SSH_TARGET="${SSH_USER}@${SSH_HOST}"
-          SSH_OPTS=(-o StrictHostKeyChecking=yes -p "${SSH_PORT}")
-          SCP_OPTS=(-o StrictHostKeyChecking=yes -P "${SSH_PORT}")
+          SSH_OPTS=(-o StrictHostKeyChecking=yes -o "UserKnownHostsFile=${HOME}/.ssh/lolipop_known_hosts" -p "${SSH_PORT}")
+          SCP_OPTS=(-o StrictHostKeyChecking=yes -o "UserKnownHostsFile=${HOME}/.ssh/lolipop_known_hosts" -P "${SSH_PORT}")
 
           REMOTE_HOME=$(retry_ssh sshpass -e ssh "${SSH_OPTS[@]}" "${SSH_TARGET}" 'printf "%s" "$HOME"')
           if [ -z "${REMOTE_HOME}" ] || [ "${REMOTE_HOME}" = "/" ]; then
@@ -197,9 +199,20 @@ jobs:
           retry_ssh sshpass -e ssh "${SSH_OPTS[@]}" "${SSH_TARGET}" \
             "set -e; rm -rf '${STAGE}'; mkdir -p '${STAGE}'; tar xzf '${REMOTE_ARCHIVE}' -C '${STAGE}'; test -f '${STAGE}/index.html'; test -f '${STAGE}/contact.php'"
 
-          # 2) 公開フォルダを入れ替える（contact-config.php は公開フォルダの外にあるので消えない）
+          # 2) 公開フォルダをリネームで入れ替える（contact-config.php は公開フォルダの外にあるので消えない）
+          #    中身削除→コピー方式だと、SSH切断やコマンド中断で公開フォルダが空のまま残る。
+          #    同一ファイルシステム上の mv 2回で切り替えるため中断窓がほぼ無く、
+          #    失敗時は旧フォルダをそのまま戻す。直前版は .deploy-previous に残る（公開フォルダ外）。
+          PREVIOUS="${REMOTE_HOME}/.deploy-previous"
+          REMOTE_PARENT="${REMOTE_ROOT%/*}"
           retry_ssh sshpass -e ssh "${SSH_OPTS[@]}" "${SSH_TARGET}" \
-            "set -e; mkdir -p '${REMOTE_ROOT}'; find '${REMOTE_ROOT}' -mindepth 1 -maxdepth 1 -exec rm -rf -- {} +; cp -a '${STAGE}'/. '${REMOTE_ROOT}'/; rm -rf '${STAGE}' '${REMOTE_ARCHIVE}'"
+            "set -e; rm -rf '${PREVIOUS}'; mkdir -p '${REMOTE_PARENT}'; \
+             if [ -d '${REMOTE_ROOT}' ]; then mv '${REMOTE_ROOT}' '${PREVIOUS}'; fi; \
+             if ! mv '${STAGE}' '${REMOTE_ROOT}'; then \
+               if [ -d '${PREVIOUS}' ]; then mv '${PREVIOUS}' '${REMOTE_ROOT}'; fi; \
+               echo 'Swap failed; previous version restored' >&2; exit 1; \
+             fi; \
+             rm -f '${REMOTE_ARCHIVE}'"
 
       - name: Smoke test
         env:
@@ -207,7 +220,7 @@ jobs:
         run: |
           set -euo pipefail
           BASE="${SITE_URL%/}"
-          for path in / /articles/ /robots.txt /sitemap.xml /feed.xml /contact/ /search/; do
+          for path in / /en/ /zh/ /articles/ /robots.txt /sitemap.xml /feed.xml /contact/ /search/; do
             code=$(curl -s -o /dev/null -w '%{http_code}' --retry 3 --retry-delay 5 --retry-all-errors "${BASE}${path}")
             [ "${code}" = "200" ] || { echo "::error::${path} returned ${code}"; exit 1; }
           done

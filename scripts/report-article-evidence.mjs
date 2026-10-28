@@ -11,29 +11,40 @@ const pmids = [...urls].filter((url) =>
   url.startsWith("https://pubmed.ncbi.nlm.nih.gov/"),
 );
 const corrections = Object.values(evidence).flatMap(
-  (entry) => entry.corrections,
+  (entry) => entry.corrections ?? [],
 );
 const escape = (value) => value.replaceAll("|", "／").replaceAll("\n", " ");
 const rows = articles.map((article) => {
   const entry = evidence[article.slug];
-  const displayTitle = entry.corrections
+  const corrections = entry?.corrections ?? [];
+  const sources = entry?.sources ?? [];
+  const jaSections = entry?.locales?.ja?.sections ?? [];
+  const displayTitle = corrections
     .filter((item) => item.locale === "ja")
     .reduce(
       (value, item) => value.replaceAll(item.old, item.new),
       article.title,
     );
-  const chars = entry.locales.ja.sections
+  const chars = jaSections
     .flatMap((section) => section.paragraphs)
     .map((paragraph) => paragraph.text)
     .join("").length;
   const access = [
-    ...new Set(entry.sources.map((source) => source.accessedScope)),
+    ...new Set(sources.map((source) => source.accessedScope)),
   ].join(" / ");
-  return `| ${article.slug} | ${escape(displayTitle)} | ${chars} | ${entry.sources.length} | ${entry.corrections.length} | ${access} | ${escape(entry.auditNote)} |`;
+  const note = entry
+    ? escape(entry.auditNote ?? "")
+    : article.author
+      ? "医師執筆原稿（編集部の文献対応なし）"
+      : "evidence未登録";
+  return `| ${article.slug} | ${escape(displayTitle)} | ${chars} | ${sources.length} | ${corrections.length} | ${access} | ${note} |`;
 });
-const text = `# 記事別の文献改稿台帳（2026-09-22）
+const generatedAt = new Date(Date.now() + 9 * 3600 * 1000)
+  .toISOString()
+  .slice(0, 10);
+const text = `# 記事別の文献改稿台帳（2026-09-22開始・生成日 ${generatedAt}）
 
-対象は /articles/ 配下の全${articles.length}記事と英語・中国語版です。文献を使った編集改稿であり、医師監修や法的適合性の確定ではありません。独立した学会紹介ページ /jsrm/ と固定ページはこの208件に含みません。
+対象は /articles/ 配下の全${articles.length}記事と英語・中国語版です。文献を使った編集改稿であり、医師監修や法的適合性の確定ではありません。独立した学会紹介ページ /jsrm/ と固定ページはこの${articles.length}件に含みません。
 
 - 記事別追加本文：${Object.keys(evidence).length}件、各3言語。
 - 参照先：重複を除いて${urls.size} URL（うちPubMed ${pmids.length}件）。公的資料、原著、レビュー等を含みます。

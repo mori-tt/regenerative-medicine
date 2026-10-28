@@ -194,7 +194,7 @@ gh run watch --repo mori-tt/regenerative-medicine
 - SSHホスト鍵の固定（`StrictHostKeyChecking=yes`）。**Secrets `LOLIPOP_SSH_KNOWN_HOSTS` が未登録の間は失敗する**（意図した動作）
 - ssh/scp の各操作にリトライ（ロリポップの sshd が稀にセッションを即切断する対策）
 - `CI_RUNNER=self-hosted` の変数で自分の Mac の runner に切替可能（その場合 Homebrew で `sshpass` を導入しておく）
-- ステージングへ展開・検査（`index.html` と `contact.php` の存在）してから公開フォルダを入れ替える。アップロードや展開に失敗しても、公開中のサイトは消えない
+- ステージングへ展開・検査（`index.html` と `contact.php` の存在）してから公開フォルダを**リネームで入れ替える**。アップロードや展開に失敗しても、公開中のサイトは消えない。直前版は `~/.deploy-previous` に残る（公開フォルダ外。手動ロールバック用。次回デプロイで置き換わる）
 - デプロイ後のスモークテスト（主要URLが200、存在しないURLが404、indexableなのにnoindexになっていないこと、`vendor/` と `composer.json` が公開されていないこと）
 - ビルド時にPHPMailer（`out/vendor/autoload.php`）の有無を検査
 - Actionsのバージョンを `deploy.yml` と揃えている（`checkout@v6`、`setup-node@v5`）
@@ -216,7 +216,7 @@ rm /tmp/lolipop_known_hosts
 
 ### 注意
 
-- `NEXT_PUBLIC_MEDICAL_REVIEWER_ENABLED` はワークフローから渡していません。`site-config.json` の値（現在 `true`）が使われます。許諾が未了で止めたいときは、ワークフローの `env:` に `NEXT_PUBLIC_MEDICAL_REVIEWER_ENABLED: "false"` を**文字列で固定**してください。`${{ vars.XXX }}` をそのまま渡すと、未設定のとき空文字になり「無効」と判定されます。
+- `NEXT_PUBLIC_MEDICAL_REVIEWER_ENABLED` / `NEXT_PUBLIC_MEDICAL_REVIEWER_PLANNED` はワークフローから渡していません。`site-config.json` の値（現在 `enabled=true`・`planned=true`）が使われます。許諾が未了で止めたいときは、ワークフローの `env:` に `NEXT_PUBLIC_MEDICAL_REVIEWER_ENABLED: "false"` を**文字列で固定**してください。氏名表示を完全に消す場合は `NEXT_PUBLIC_MEDICAL_REVIEWER_PLANNED: "false"` も必要です（`planned` が残ると「監修予定者」として氏名が出続けます）。`${{ vars.XXX }}` をそのまま渡すと、未設定のとき空文字になり「無効」と判定されます。
 - GitHub Pages側（`deploy.yml`）は、このワークフローとは独立しています。`GITHUB_PAGES=true` により `basePath=/regenerative-medicine` が自動付与され、全記事・`noindex` で配信されます。
 - `schedule`（毎週土曜06:00 JST）は、`deployDate` が未来の間だけ意味があります。公開日を過ぎたら削除して構いません。
 

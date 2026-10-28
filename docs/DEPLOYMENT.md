@@ -184,4 +184,4 @@ GitHub PagesはPHPを実行しないため、確認用GitHub Pagesではフォ�
 
 静的バナーは`src/content/ads.ts`に設定し、素材を`public/`へ置いて再ビルドします。開始・終了日時による自動更新はなく、掲載開始・終了時にも再ビルドと転送が必要です。リンクに`sponsored`を付けることだけで医療広告の適法性が確認されたことにはなりません。
 
-現段階では実際のレンタルサーバーへの接続・転送は行っていません。
+GitHub Actions経由の自動デプロイは `deploy-lolipop.yml` に実装済みです（§2）。`DEPLOY_TARGET` を `both`/`lolipop` に設定するまでは転送は実行されません。
