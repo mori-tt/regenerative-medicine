@@ -31,6 +31,9 @@ NEXT_PUBLIC_PUBLICATION_MODE=preview NEXT_PUBLIC_PREVIEW_DATE=2026-10-30 npm run
 
 公開予定日・実公開日・最終編集日は `src/content/article-review-records.json` を正本にします。本文の古い日付や例示用の表から再設定しません。月10件以内を `npm run check:article-schedule` で検査します。
 
+- `publishAt` を空（`""`）にすると **公開日未定** として扱います。公開日を監修者と相談して決める段階の記事に使い、日付が決まったら `YYYY-MM-DD` を記入します（未公開記事のみ可。公開済み記事は予定日の履歴を残します）
+- `publishedAt` が入っている記事は公開済みで、`publishAt` は過去のまま残ります（期限切れエラーにはなりません）
+
 ## 監修・公開フロー（記事別JSON）
 
 記事ごとの `article-review-records.json` に、実際の確認後だけ次を記録します。下記は書式の説明であり、確認前に一括コピーしないでください。

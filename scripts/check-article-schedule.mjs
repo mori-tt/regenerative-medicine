@@ -12,12 +12,23 @@ const media = JSON.parse(
 const entries = Object.values(records);
 // 公開予定日の期限切れを検出するため、判定は常に実行時点の日本時間の当日で行う。
 const today = new Date(Date.now() + 9 * 3600 * 1000).toISOString().slice(0, 10);
-const dates = entries.map((record) => record.publishAt);
+const published = entries.filter((record) => record.publishedAt);
+const scheduled = entries.filter((record) => record.publishAt);
+const undated = entries.filter(
+  (record) => !record.publishAt && !record.publishedAt,
+);
+const dates = scheduled.map((record) => record.publishAt);
 const duplicateDates = dates.filter(
   (date, index) => dates.indexOf(date) !== index,
 );
-const missing = entries.filter(
+const missing = scheduled.filter(
   (record) => !/^\d{4}-\d{2}-\d{2}$/.test(record.publishAt),
+);
+const invalidPublishedAt = published.filter(
+  (record) => !/^\d{4}-\d{2}-\d{2}$/.test(record.publishedAt),
+);
+const publishedWithoutPlan = entries.filter(
+  (record) => record.publishedAt && !record.publishAt,
 );
 const invalidStatus = entries.filter(
   (record) => record.publishGate !== "review_record_required",
@@ -39,6 +50,14 @@ if (missing.length)
   throw new Error(
     `公開予定日が不正です: ${missing.map((record) => record.slug).join(", ")}`,
   );
+if (invalidPublishedAt.length)
+  throw new Error(
+    `実公開日が不正です: ${invalidPublishedAt.map((record) => record.slug).join(", ")}`,
+  );
+if (publishedWithoutPlan.length)
+  throw new Error(
+    `公開済みなのに公開予定日がありません: ${publishedWithoutPlan.map((record) => record.slug).join(", ")}`,
+  );
 if (invalidStatus.length)
   throw new Error(
     `公開ゲートが不正です: ${invalidStatus.map((record) => record.slug).join(", ")}`,
@@ -51,14 +70,14 @@ if (missingImageFiles.length)
   throw new Error(
     `画像ファイルがありません: ${missingImageFiles.map(([key]) => key).join(", ")}`,
   );
-const overdue = entries
-  .filter((record) => record.publishAt < today)
+const overdue = scheduled
+  .filter((record) => !record.publishedAt && record.publishAt < today)
   .map((record) => `${record.slug}:${record.publishAt}`);
 if (overdue.length)
   throw new Error(
     `今日より前の公開予定日が${overdue.length}件あります: ${overdue.join(", ")}`,
   );
-const counts = entries.reduce((map, record) => {
+const counts = scheduled.reduce((map, record) => {
   const month = record.publishAt.slice(0, 7);
   map[month] = (map[month] ?? 0) + 1;
   return map;
@@ -70,11 +89,14 @@ console.log(
   JSON.stringify(
     {
       articles: entries.length,
+      published: published.length,
+      scheduled: scheduled.length - published.length,
+      undated: undated.length,
       initialCandidates: entries.filter(
         (record) => record.releaseTrack === "initial-candidate",
       ).length,
       monthlyCounts: counts,
-      lastScheduled: entries.at(-1).publishAt,
+      lastScheduled: dates.toSorted().at(-1) ?? null,
     },
     null,
     2,
