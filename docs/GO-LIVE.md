@@ -315,7 +315,7 @@ curl -s $SITE/articles/ips-cells-explained/ | grep -o 'name="robots"[^>]*'   # i
 
 ### 6-4. 検索エンジンへの登録（手作業）
 
-- [ ] Google Search Console にドメインプロパティを登録（DNSのTXTレコードで所有確認）
+- [ ] Google Search Console にドメインプロパティを登録（DNSのTXTレコードで所有確認）。HTMLファイル認証を使う場合は、ファイルを `public/` に置いてコミットしてからデプロイする（**公開フォルダは毎回入れ替わるため、FTP等で手動アップロードした認証ファイルは消えます**）
 - [ ] `https://saisei-med.com/sitemap.xml` を送信
 - [ ] （任意）Bing Webmaster Tools に登録
 - [ ] 数日後、カバレッジで「noindex により除外」が意図したページ（検索ページ・準備中カテゴリ・英中ページ）だけであることを確認

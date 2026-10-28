@@ -9,6 +9,7 @@ import {
   categoryFor,
   isReviewed,
   isVisibleArticle,
+  publishBaseDate,
   visibleArticles,
 } from "@/content/articles";
 import { ArticleCard, AdSlot, Breadcrumbs, JsonLd } from "@/components/content";
@@ -65,10 +66,7 @@ export default async function ArticlePage({
   const reviewed = isReviewed(article);
   const scheduled =
     articleBuildMode === "all" &&
-    Boolean(
-      article.publishAt &&
-      article.publishAt > new Date().toISOString().slice(0, 10),
-    );
+    Boolean(article.publishAt && article.publishAt > publishBaseDate());
   const { prev: prevArticle, next: nextArticle } = adjacentArticles(article);
   const related = relatedArticles(article);
   const subcat = subcategoryOf(article.category, slug);
