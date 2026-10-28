@@ -166,14 +166,26 @@ jobs:
             exit 1
           fi
 
+          # パストラバーサル防止: '..' を含むパスは受け付けない（~/web/.. がHOMEを指す事故を防ぐ）
+          if [[ "${SSH_REMOTE_DIR}" == *..* ]]; then
+            echo "::error::SSH_REMOTE_DIR must not contain '..'."
+            exit 1
+          fi
+
           REMOTE_ROOT="${SSH_REMOTE_DIR%/}"
           if [[ "${REMOTE_ROOT}" == "~" ]]; then
             REMOTE_ROOT="${REMOTE_HOME}"
           elif [[ "${REMOTE_ROOT}" == "~/"* ]]; then
-            REMOTE_ROOT="${REMOTE_HOME}/${REMOTE_ROOT#~/}"
+            # "~/": クォート必須。クォートしないと ~ がローカルの HOME にチルダ展開され、剥がせず "~/web/..." が残る
+            REMOTE_ROOT="${REMOTE_HOME}/${REMOTE_ROOT#"~/"}"
           fi
           if [ -z "${REMOTE_ROOT}" ] || [ "${REMOTE_ROOT}" = "/" ] || [ "${REMOTE_ROOT}" = "${REMOTE_HOME}" ]; then
             echo "::error::SSH_REMOTE_DIR must be the site's public directory, not / or HOME."
+            exit 1
+          fi
+          # 他サイトが同居するサーバーでの誤爆防止: 解決後パスは必ず HOME 配下のサブディレクトリに限定する
+          if [[ "${REMOTE_ROOT}" != "${REMOTE_HOME}/"* ]]; then
+            echo "::error::SSH_REMOTE_DIR must resolve to a directory under HOME (e.g. ~/web/example.com)."
             exit 1
           fi
 
