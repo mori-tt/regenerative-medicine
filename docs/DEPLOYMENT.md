@@ -20,8 +20,6 @@ NEXT_PUBLIC_ARTICLE_BUILD_MODE=scheduled
 NEXT_PUBLIC_CONTACT_EMAIL=実際の受付用メールアドレス
 NEXT_PUBLIC_OPERATOR_NAME=運営者の正式名称
 NEXT_PUBLIC_OPERATOR_ADDRESS=運営者の所在地
-NEXT_PUBLIC_BASE_PATH=
-NEXT_PUBLIC_ASSET_PREFIX=
 ```
 
 準備中は`NEXT_PUBLIC_SITE_INDEXABLE=false` と `NEXT_PUBLIC_PUBLICATION_MODE=preview`を維持します。運営情報・監修・原稿・法務確認を確定し、正式公開するときだけ`NEXT_PUBLIC_SITE_INDEXABLE=true`と`NEXT_PUBLIC_PUBLICATION_MODE=production`に変更します。英語・中国語も検索公開する場合は、翻訳・医学用語・監修範囲の確認後に`NEXT_PUBLIC_LOCALIZED_INDEXABLE=true`へ変更します。両方が揃わない限り、robots・canonical周辺の公開設定とサイトマップは公開状態になりません。
