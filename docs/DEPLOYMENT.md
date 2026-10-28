@@ -70,7 +70,7 @@ mainへのpushで、2系統が並行してデプロイされます。
 | GitHub Pages（テスト確認用） | `deploy.yml`         | 全記事（`ARTICLE_BUILD_MODE=all`、ストック含む） | `noindex` 固定  |
 | Lolipop（本番）              | `deploy-lolipop.yml` | 公開日到達分のみ（`scheduled`）                  | Variablesで制御 |
 
-Lolipop側の `deploy-lolipop.yml` は **リポジトリに作成済み** ですが、ジョブに `if: vars.LOLIPOP_DEPLOY_ENABLED == 'true'` のガードが付いているため、Variablesを設定するまで実行されません。
+2つのワークフローの実行は、GitHub Variables の **`DEPLOY_TARGET`** で一元管理します。`github-pages`（Pagesのみ・未設定時の既定）、`lolipop`（Lolipopのみ）、`both`（両方）、`none`（両方停止）のいずれかを設定します。Lolipop側の `deploy-lolipop.yml` は **リポジトリに作成済み** ですが、`DEPLOY_TARGET` が `lolipop` または `both` のときだけ実行されるガードが付いているため、設定するまではPagesのみがデプロイされます（`DEPLOY_TARGET` 未設定のときだけ、旧変数 `LOLIPOP_DEPLOY_ENABLED=true` も有効＝移行措置）。
 
 ### 本番を有効化する手順
 
@@ -80,7 +80,7 @@ Lolipop側の `deploy-lolipop.yml` は **リポジトリに作成済み** です
    - `LOLIPOP_SSH_REMOTE_DIR`：対象ドメインの公開フォルダ。`/`やSSHのHOME自体は指定しない
    - `LOLIPOP_SSH_KNOWN_HOSTS`：`ssh-keyscan -p 2222 ssh.lolipop.jp` の出力（ホスト鍵を固定する。未登録だとデプロイは失敗する）
 2. GitHub Variablesに登録：
-   - `LOLIPOP_DEPLOY_ENABLED=true`（有効化スイッチ。手順3のファイル作成と最終確認が済んでから最後に設定する）
+   - `DEPLOY_TARGET=both`（デプロイ先の切替。Pagesのみなら `github-pages`、Lolipopのみなら `lolipop`。手順3のファイル作成と最終確認が済んでから最後に設定する）
    - `LOLIPOP_SITE_URL`：本番ドメイン（例 `https://example.jp`）
    - `LOLIPOP_PUBLICATION_MODE`：本番公開は `production`（`check:rights` で画像権利の記録確認をゲート）
    - `LOLIPOP_SITE_INDEXABLE=true`

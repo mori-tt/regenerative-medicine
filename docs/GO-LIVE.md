@@ -2,7 +2,7 @@
 
 本番公開に必要な**手作業**と、GitHub Actionsでの運用手順をまとめた資料です。
 
-**Lolipopへのデプロイ用ワークフローは `.github/workflows/deploy-lolipop.yml` として作成済みですが、`LOLIPOP_DEPLOY_ENABLED=true` の GitHub Variables を設定するまで実行されません。** それまでは、`main` へのpushでGitHub Pagesだけが更新されます。一方、`.htaccess` のHTTPS・www統一や `contact.php` のPHP対応は実装済みです。
+**デプロイ先は GitHub Variables の `DEPLOY_TARGET` で一元管理します**（値：`github-pages` = Pagesのみ・未設定時の既定、`lolipop` = Lolipopのみ、`both` = 両方、`none` = 両方停止）。未設定なら従来どおり `main` へのpushでGitHub Pagesだけが更新され、Lolipopへのデプロイ（`.github/workflows/deploy-lolipop.yml`、作成済み）は `DEPLOY_TARGET` を `both` または `lolipop` にするまで実行されません。なお `DEPLOY_TARGET` 未設定のときだけ、旧スイッチ `LOLIPOP_DEPLOY_ENABLED=true` も有効です（移行措置）。一方、`.htaccess` のHTTPS・www統一や `contact.php` のPHP対応は実装済みです。
 
 関連資料：[DEPLOYMENT.md](DEPLOYMENT.md)（仕組みの説明）、[DEPLOY-CHECKLIST.md](DEPLOY-CHECKLIST.md)（チェック項目）、[MANUAL-LEGAL-CHECKLIST.md](MANUAL-LEGAL-CHECKLIST.md)（法務・監修）、[PUBLISHING.md](PUBLISHING.md)（記事公開の仕組み）。
 
@@ -12,9 +12,9 @@
 
 |              | GitHub Pages（テスト）                             | Lolipop（本番）                                                                                                                                                                |
 | ------------ | -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| ワークフロー | `.github/workflows/deploy.yml`（作成済み）         | `.github/workflows/deploy-lolipop.yml`（作成済み。`LOLIPOP_DEPLOY_ENABLED=true` で有効化）                                                                                             |
+| ワークフロー | `.github/workflows/deploy.yml`（作成済み）         | `.github/workflows/deploy-lolipop.yml`（作成済み。`DEPLOY_TARGET=both` または `lolipop` で有効化）                                                                                             |
 | 起動         | `main` へのpush、手動                              | `main` へのpush（`src/**`・`public/**`・`scripts/**`・`deploy/**`・`package*.json`・`next.config.ts`・`tsconfig.json`・`.env.example` の変更時のみ）、手動、毎週土曜06:00(JST) |
-| 有効化       | 常に有効                                           | ファイルを作り、かつ Variables `LOLIPOP_DEPLOY_ENABLED=true` を設定するまで配置されない                                                                                        |
+| 有効化       | `DEPLOY_TARGET` が `lolipop`・`none` 以外なら有効（未設定も可） | Variables `DEPLOY_TARGET=both` または `lolipop` を設定するまで配置されない                                                                                        |
 | 記事         | 全251本（未監修含む）                              | 監修記録が確定した記事だけ（現在6本）                                                                                                                                          |
 | 検索公開     | 常に `noindex`                                     | Variablesで制御                                                                                                                                                                |
 | 問い合わせ   | 送信不可（PHPなし）                                | 送信可（PHP + PHPMailer）                                                                                                                                                      |
@@ -23,7 +23,7 @@
 注意：
 
 - Variablesを変えただけではワークフローは起動しません。反映するには手動実行（§4）が必要です。
-- 上記の `paths` に当てはまらない変更（`docs/` や `.github/` だけの変更）では、Lolipopは再デプロイされません。GitHub Pagesは `main` へのどのpushでも再デプロイされます。
+- 上記の `paths` に当てはまらない変更（`docs/` や `.github/` だけの変更）では、Lolipopは再デプロイされません。GitHub Pagesは `main` へのどのpushでも再デプロイされます（`DEPLOY_TARGET` が `github-pages` または `both` のとき。`lolipop`・`none` ではPagesも止まります）。
 - GitHub Pagesのテストサイトは、未監修の原稿を含む全記事をURLを知っていれば誰でも閲覧できます（`noindex` は閲覧制限ではありません）。公開したくない原稿をここに置かないでください。
 
 ## 手作業の全体チェックリスト（時系列）
@@ -41,7 +41,7 @@
 7. `contact-config.php` をサーバーに置く → §2
 8. SSHホスト鍵を登録する → §5
 
-**B. 公開当日** 9. `deployDate` を公開日にして `main` へ → §6-2 10. 手元で本番設定のビルド確認 → §6-1 11. `deploy-lolipop.yml` の内容を確認・コミット → §5 12. `LOLIPOP_DEPLOY_ENABLED=true` を設定して実行 → §6-2 13. 公開直後の動作確認（HTTPS、問い合わせ送信、フィード、OGP、実機）→ §6-3
+**B. 公開当日** 9. `deployDate` を公開日にして `main` へ → §6-2 10. 手元で本番設定のビルド確認 → §6-1 11. `deploy-lolipop.yml` の内容を確認・コミット → §5 12. `DEPLOY_TARGET=both` を設定して実行 → §6-2 13. 公開直後の動作確認（HTTPS、問い合わせ送信、フィード、OGP、実機）→ §6-3
 
 **C. 公開後** 14. Search Console / Bing 登録・sitemap送信 → §6-4 15. 数日後にインデックス状況を確認 → §6-4 16. 運用（記事追加、英中の検索公開、ロールバック、パスワード変更）→ §7
 
@@ -132,7 +132,7 @@ rm /tmp/contact-config.php
 
 | 名前                           | 本番公開時の値              | 備考                                                                |
 | ------------------------------ | --------------------------- | ------------------------------------------------------------------- |
-| `LOLIPOP_DEPLOY_ENABLED`       | `true`                      | これを設定するまでLolipopへは配置されない                           |
+| `DEPLOY_TARGET`                | `both`                      | デプロイ先の切替（`github-pages`=Pagesのみ・既定、`lolipop`、`both`、`none`） |
 | `LOLIPOP_SITE_URL`             | `https://saisei-med.com`    | ドメインのルート。サブディレクトリ不可。wwwなしに統一する前提（§3） |
 | `LOLIPOP_PUBLICATION_MODE`     | `production`                | `check:rights` が走る                                               |
 | `LOLIPOP_SITE_INDEXABLE`       | `true`                      | 検索に出す。準備中は `false`                                        |
@@ -153,7 +153,7 @@ gh secret set LOLIPOP_SSH_PASSWORD --repo $REPO
 gh secret set LOLIPOP_SSH_REMOTE_DIR --repo $REPO
 
 # Variables（運営者情報は実際の値に置き換える）
-gh variable set LOLIPOP_DEPLOY_ENABLED --body true --repo $REPO
+gh variable set DEPLOY_TARGET --body both --repo $REPO
 gh variable set LOLIPOP_SITE_URL --body https://saisei-med.com --repo $REPO
 gh variable set LOLIPOP_PUBLICATION_MODE --body production --repo $REPO
 gh variable set LOLIPOP_SITE_INDEXABLE --body true --repo $REPO
@@ -181,16 +181,19 @@ gh run watch --repo mori-tt/regenerative-medicine
 
 **`.github/workflows/deploy-lolipop.yml` はリポジトリに作成済みです。** 公開の準備ができたら、次の手順で有効化します。
 
-1. [ ] §1・§2・§4-1 の手作業（Lolipop側の準備、`contact-config.php`、Secrets / Variables、ホスト鍵の登録）を終える。ただし `LOLIPOP_DEPLOY_ENABLED` は**まだ設定しない**
+1. [ ] §1・§2・§4-1 の手作業（Lolipop側の準備、`contact-config.php`、Secrets / Variables、ホスト鍵の登録）を終える。ただし `DEPLOY_TARGET` は**まだ `both`/`lolipop` にしない**（未設定か `github-pages` のままにする）
 2. [ ] `.github/workflows/deploy-lolipop.yml` の内容を確認する
-3. [ ] 内容を確認してコミット（この時点では `LOLIPOP_DEPLOY_ENABLED` が未設定なのでジョブはスキップされる）
-4. [ ] §6 の最終確認のあと、`LOLIPOP_DEPLOY_ENABLED=true` を設定して実行する（§6-2）
+3. [ ] 内容を確認してコミット（この時点では `DEPLOY_TARGET` が `github-pages` 相当なのでジョブはスキップされる）
+4. [ ] §6 の最終確認のあと、`DEPLOY_TARGET=both`（Pagesと両方）または `lolipop`（Lolipopのみ）を設定して実行する（§6-2）
 
 このワークフローの特徴：
 
+- `DEPLOY_TARGET` 変数でデプロイ先を一元管理（`github-pages`=Pagesのみ・既定、`lolipop`、`both`、`none`）。Pages側の `deploy.yml` も同じ変数を見る
 - 同時実行を防ぐ `concurrency`（古い実行が新しい実行を壊さない）
 - `environment: production`（承認ゲート。§1-2でRequired reviewersを設定すると、デプロイ前に承認画面が出る。不要なら該当行を削除）
 - SSHホスト鍵の固定（`StrictHostKeyChecking=yes`）。**Secrets `LOLIPOP_SSH_KNOWN_HOSTS` が未登録の間は失敗する**（意図した動作）
+- ssh/scp の各操作にリトライ（ロリポップの sshd が稀にセッションを即切断する対策）
+- `CI_RUNNER=self-hosted` の変数で自分の Mac の runner に切替可能（その場合 Homebrew で `sshpass` を導入しておく）
 - ステージングへ展開・検査（`index.html` と `contact.php` の存在）してから公開フォルダを入れ替える。アップロードや展開に失敗しても、公開中のサイトは消えない
 - デプロイ後のスモークテスト（主要URLが200、存在しないURLが404、indexableなのにnoindexになっていないこと、`vendor/` と `composer.json` が公開されていないこと）
 - ビルド時にPHPMailer（`out/vendor/autoload.php`）の有無を検査
@@ -202,7 +205,11 @@ gh run watch --repo mori-tt/regenerative-medicine
 name: Deploy to Lolipop
 
 # 本番（ロリポップ）。GitHub Pagesのテストサイトとは別系統で並行公開する。
-# Variables LOLIPOP_DEPLOY_ENABLED=true を設定するまでスキップされる。
+# デプロイ先はリポジトリ Variable DEPLOY_TARGET で切り替える:
+#   both / lolipop = このワークフローが動く / github-pages（未設定時の既定）/ none = スキップ
+# DEPLOY_TARGET 未設定時だけ、旧変数 LOLIPOP_DEPLOY_ENABLED=true も有効（移行措置）。
+# Secrets（LOLIPOP_SSH_USER / LOLIPOP_SSH_PASSWORD / LOLIPOP_SSH_REMOTE_DIR / LOLIPOP_SSH_KNOWN_HOSTS）
+# が未登録の場合は、実行時にエラーで止まる。
 
 on:
   push:
@@ -243,11 +250,30 @@ env:
 
 jobs:
   build-and-deploy:
-    if: ${{ vars.LOLIPOP_DEPLOY_ENABLED == 'true' }}
-    runs-on: ubuntu-latest
+    # DEPLOY_TARGET=lolipop|both で実行。未設定（github-pages 相当）では動かない。
+    # DEPLOY_TARGET が未設定のときだけ、旧スイッチ LOLIPOP_DEPLOY_ENABLED=true も有効にする（移行措置）。
+    if: ${{ vars.DEPLOY_TARGET == 'lolipop' || vars.DEPLOY_TARGET == 'both' || (!vars.DEPLOY_TARGET && vars.LOLIPOP_DEPLOY_ENABLED == 'true') }}
+    # 既定は GitHub hosted。repo 変数 CI_RUNNER=self-hosted で自分の Mac の runner で実行する（未設定に戻せば hosted に戻る）
+    # self-hosted（Mac）で使う場合は Homebrew で sshpass を入れておくこと（Install sshpass ステップは hosted 限定）。
+    runs-on: ${{ vars.CI_RUNNER || 'ubuntu-latest' }}
     # 承認ゲートが不要なら次の1行を削除する。
     environment: production
     steps:
+      - name: Validate DEPLOY_TARGET
+        env:
+          DEPLOY_TARGET: ${{ vars.DEPLOY_TARGET }}
+          LOLIPOP_DEPLOY_ENABLED: ${{ vars.LOLIPOP_DEPLOY_ENABLED }}
+        run: |
+          case "${DEPLOY_TARGET:-github-pages}" in
+            github-pages|lolipop|both|none)
+              echo "DEPLOY_TARGET='${DEPLOY_TARGET:-<unset:github-pages>}' LOLIPOP_DEPLOY_ENABLED='${LOLIPOP_DEPLOY_ENABLED:-<unset>}'"
+              ;;
+            *)
+              echo "::error::Unknown DEPLOY_TARGET='${DEPLOY_TARGET}'. Expected: github-pages | lolipop | both | none"
+              exit 1
+              ;;
+          esac
+
       - uses: actions/checkout@v6
 
       - uses: actions/setup-node@v5
@@ -266,6 +292,8 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      # Composer が使えない環境のフォールバック用に public/phpmailer/src/ も同梱しているが、
+      # 管理しやすさ・依存解決のため、CI では Composer で vendor/ を生成する。
       - name: Install PHPMailer
         run: composer install --no-dev --working-dir=public --no-interaction --prefer-dist
 
@@ -278,12 +306,17 @@ jobs:
           test -n "${NEXT_PUBLIC_SITE_URL}" || { echo "::error::LOLIPOP_SITE_URL is not configured"; exit 1; }
           npm run build:lolipop
           npm run check:export
-          test -f out/vendor/autoload.php || { echo "::error::PHPMailer (out/vendor) is missing"; exit 1; }
+          test -f out/contact.php || { echo "::error::out/contact.php is missing"; exit 1; }
+          # Composer 経由の autoload が優先される。Composer が使えない場合は out/phpmailer/src/ がフォールバックとして使われる。
+          test -f out/vendor/autoload.php || test -f out/phpmailer/src/PHPMailer.php || { echo "::error::PHPMailer (out/vendor or out/phpmailer/src) is missing"; exit 1; }
 
+      # COPYFILE_DISABLE=1: macOS の tar が ._ (AppleDouble) ファイルを混入させないようにする（self-hosted Mac 対策）
       - name: Archive build output
-        run: tar czf regenerative-medicine-out.tar.gz -C out .
+        run: COPYFILE_DISABLE=1 tar czf regenerative-medicine-out.tar.gz -C out .
 
+      # self-hosted（Mac）は Homebrew で導入済みの sshpass を使う
       - name: Install sshpass
+        if: runner.environment == 'github-hosted'
         run: sudo apt-get update && sudo apt-get install -y sshpass
 
       - name: Trust Lolipop SSH host key
@@ -294,6 +327,9 @@ jobs:
           mkdir -p ~/.ssh
           printf '%s\n' "${KNOWN_HOSTS}" > ~/.ssh/known_hosts
 
+      # ロリポップは SSH パスワード認証（2222番ポート）。
+      # SSH_PRIVATE_KEY ではなく SSH_PASSWORD を使う。
+      # SSH_REMOTE_DIR 例: ~/web/saisei-med.com または /home/<user>/web/saisei-med.com
       - name: Deploy via SSH
         env:
           SSHPASS: ${{ secrets.LOLIPOP_SSH_PASSWORD }}
@@ -307,11 +343,28 @@ jobs:
             exit 1
           fi
 
+          # ロリポップの sshd が稀にセッションを即切断する
+          # （"Connection closed by remote host" + exit 255）ことがあるため、
+          # 一時的な切断に備えて各 ssh/scp 操作にリトライを挟む。
+          # リトライ中のメッセージは >&2 に出す（コマンド置換で標準出力を取る呼び出しを汚さないため）。
+          retry_ssh() {
+            local n=0
+            until "$@"; do
+              n=$((n+1))
+              if [ "$n" -ge 3 ]; then
+                echo "::error::Failed after $n attempts: $*" >&2
+                return 1
+              fi
+              echo "Attempt $n failed; retrying in 10s..." >&2
+              sleep 10
+            done
+          }
+
           SSH_TARGET="${SSH_USER}@${SSH_HOST}"
           SSH_OPTS=(-o StrictHostKeyChecking=yes -p "${SSH_PORT}")
           SCP_OPTS=(-o StrictHostKeyChecking=yes -P "${SSH_PORT}")
 
-          REMOTE_HOME=$(sshpass -e ssh "${SSH_OPTS[@]}" "${SSH_TARGET}" 'printf "%s" "$HOME"')
+          REMOTE_HOME=$(retry_ssh sshpass -e ssh "${SSH_OPTS[@]}" "${SSH_TARGET}" 'printf "%s" "$HOME"')
           if [ -z "${REMOTE_HOME}" ] || [ "${REMOTE_HOME}" = "/" ]; then
             echo "::error::Unable to determine remote HOME. Deployment aborted."
             exit 1
@@ -332,12 +385,12 @@ jobs:
           STAGE="${REMOTE_HOME}/.deploy-staging"
 
           # 1) アップロードして、ステージングに展開・検査する（ここで失敗しても公開中のサイトは無傷）
-          sshpass -e scp "${SCP_OPTS[@]}" "${SSH_ARCHIVE}" "${SSH_TARGET}:${REMOTE_ARCHIVE}"
-          sshpass -e ssh "${SSH_OPTS[@]}" "${SSH_TARGET}" \
+          retry_ssh sshpass -e scp "${SCP_OPTS[@]}" "${SSH_ARCHIVE}" "${SSH_TARGET}:${REMOTE_ARCHIVE}"
+          retry_ssh sshpass -e ssh "${SSH_OPTS[@]}" "${SSH_TARGET}" \
             "set -e; rm -rf '${STAGE}'; mkdir -p '${STAGE}'; tar xzf '${REMOTE_ARCHIVE}' -C '${STAGE}'; test -f '${STAGE}/index.html'; test -f '${STAGE}/contact.php'"
 
           # 2) 公開フォルダを入れ替える（contact-config.php は公開フォルダの外にあるので消えない）
-          sshpass -e ssh "${SSH_OPTS[@]}" "${SSH_TARGET}" \
+          retry_ssh sshpass -e ssh "${SSH_OPTS[@]}" "${SSH_TARGET}" \
             "set -e; mkdir -p '${REMOTE_ROOT}'; find '${REMOTE_ROOT}' -mindepth 1 -maxdepth 1 -exec rm -rf -- {} +; cp -a '${STAGE}'/. '${REMOTE_ROOT}'/; rm -rf '${STAGE}' '${REMOTE_ARCHIVE}'"
 
       - name: Smoke test
@@ -455,7 +508,7 @@ npm run preview   # http://127.0.0.1:4173 で目視確認
 ### 6-2. 公開
 
 1. [ ] `site-config.json` の `deployDate` を公開日にして `main` にマージ
-2. [ ] §4-1 の Secrets / Variables が揃っていることを確認（`LOLIPOP_DEPLOY_ENABLED=true` は最後に設定）
+2. [ ] §4-1 の Secrets / Variables が揃っていることを確認（`DEPLOY_TARGET=both` または `lolipop` は最後に設定）
 3. [ ] `.github/workflows/deploy-lolipop.yml` がコミット済みであることを確認し、`main` にpush、または `gh workflow run deploy-lolipop.yml` で実行（`production` 環境の承認画面が出たら承認）
 4. [ ] Actionsの2つのワークフロー（Pages・Lolipop）が成功したことを確認
 
@@ -494,7 +547,7 @@ curl -s $SITE/articles/ips-cells-explained/ | grep -o 'name="robots"[^>]*'   # i
 | 英・中を検索公開       | 翻訳・監修範囲の確認後、Variables `LOLIPOP_LOCALIZED_INDEXABLE=true` → 手動実行（§4-2）                                                                        |
 | 問い合わせ設定の変更   | サーバー上の `~/contact-config.php` を編集（再デプロイ不要）                                                                                                   |
 | 前のバージョンに戻す   | 戻したいコミットのタグ、またはブランチを指定：`gh workflow run deploy-lolipop.yml --ref <タグまたはブランチ>`。または `git revert` → push                      |
-| 本番の自動配置を止める | Variables `LOLIPOP_DEPLOY_ENABLED=false`（公開済みのサイトは消えない。消す場合は管理画面またはSSHで公開フォルダを空にする）                                    |
+| 本番の自動配置を止める | Variables `DEPLOY_TARGET=github-pages`（Pagesのみに戻す）または `none`（両方停止。公開済みのサイトは消えない。消す場合は管理画面またはSSHで公開フォルダを空にする）                                    |
 | パスワードの変更       | Lolipopでパスワードを変更 → Secrets `LOLIPOP_SSH_PASSWORD` と、メールなら `contact-config.php` を更新                                                          |
 | 週次ビルドの停止       | 60日間リポジトリに動きがないと、GitHubはスケジュール実行を自動で停止する。`deployDate` が過去なら週次ビルド自体は不要                                          |
 
@@ -502,7 +555,7 @@ curl -s $SITE/articles/ips-cells-explained/ | grep -o 'name="robots"[^>]*'   # i
 
 | 症状                                                                      | 原因・対処                                                                                                                   |
 | ------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| Lolipopのジョブが「skipped」になる                                        | Variables `LOLIPOP_DEPLOY_ENABLED` が `true` ではない                                                                        |
+| Lolipopのジョブが「skipped」になる                                        | Variables `DEPLOY_TARGET` が `lolipop`・`both` ではない（`DEPLOY_TARGET` 未設定なら旧 `LOLIPOP_DEPLOY_ENABLED=true` でも可）                                                                        |
 | 変更したのにLolipopが更新されない                                         | 変更が `paths` の対象外（`docs/` など）。手動実行する                                                                        |
 | ビルドで「正式公開には運営者情報と連絡先が必要です」                      | `NEXT_PUBLIC_OPERATOR_NAME` / `ADDRESS` / `CONTACT_EMAIL` のVariablesが未設定                                                |
 | ビルドで「検索公開する前に NEXT_PUBLIC_SITE_URL に本番のHTTPSドメインを」 | `LOLIPOP_SITE_URL` が未設定、`http://`、または `example.com`                                                                 |

@@ -1,7 +1,9 @@
 name: Deploy to Lolipop
 
 # 本番（ロリポップ）。GitHub Pagesのテストサイトとは別系統で並行公開する。
-# Variables LOLIPOP_DEPLOY_ENABLED=true を設定するまで、push してもこのワークフローはスキップされる。
+# デプロイ先はリポジトリ Variable DEPLOY_TARGET で切り替える:
+#   both / lolipop = このワークフローが動く / github-pages（未設定時の既定）/ none = スキップ
+# DEPLOY_TARGET 未設定時だけ、旧変数 LOLIPOP_DEPLOY_ENABLED=true も有効（移行措置）。
 # Secrets（LOLIPOP_SSH_USER / LOLIPOP_SSH_PASSWORD / LOLIPOP_SSH_REMOTE_DIR / LOLIPOP_SSH_KNOWN_HOSTS）
 # が未登録の場合は、実行時にエラーで止まる。
 
@@ -44,12 +46,30 @@ env:
 
 jobs:
   build-and-deploy:
-    # この変数が true 以外なら何もしない。ファイルはあっても未登録時は動かない。
-    if: ${{ vars.LOLIPOP_DEPLOY_ENABLED == 'true' }}
-    runs-on: ubuntu-latest
+    # DEPLOY_TARGET=lolipop|both で実行。未設定（github-pages 相当）では動かない。
+    # DEPLOY_TARGET が未設定のときだけ、旧スイッチ LOLIPOP_DEPLOY_ENABLED=true も有効にする（移行措置）。
+    if: ${{ vars.DEPLOY_TARGET == 'lolipop' || vars.DEPLOY_TARGET == 'both' || (!vars.DEPLOY_TARGET && vars.LOLIPOP_DEPLOY_ENABLED == 'true') }}
+    # 既定は GitHub hosted。repo 変数 CI_RUNNER=self-hosted で自分の Mac の runner で実行する（未設定に戻せば hosted に戻る）
+    # self-hosted（Mac）で使う場合は Homebrew で sshpass を入れておくこと（Install sshpass ステップは hosted 限定）。
+    runs-on: ${{ vars.CI_RUNNER || 'ubuntu-latest' }}
     # 承認ゲートが不要なら次の1行を削除する。
     environment: production
     steps:
+      - name: Validate DEPLOY_TARGET
+        env:
+          DEPLOY_TARGET: ${{ vars.DEPLOY_TARGET }}
+          LOLIPOP_DEPLOY_ENABLED: ${{ vars.LOLIPOP_DEPLOY_ENABLED }}
+        run: |
+          case "${DEPLOY_TARGET:-github-pages}" in
+            github-pages|lolipop|both|none)
+              echo "DEPLOY_TARGET='${DEPLOY_TARGET:-<unset:github-pages>}' LOLIPOP_DEPLOY_ENABLED='${LOLIPOP_DEPLOY_ENABLED:-<unset>}'"
+              ;;
+            *)
+              echo "::error::Unknown DEPLOY_TARGET='${DEPLOY_TARGET}'. Expected: github-pages | lolipop | both | none"
+              exit 1
+              ;;
+          esac
+
       - uses: actions/checkout@v6
 
       - uses: actions/setup-node@v5
@@ -86,10 +106,13 @@ jobs:
           # Composer 経由の autoload が優先される。Composer が使えない場合は out/phpmailer/src/ がフォールバックとして使われる。
           test -f out/vendor/autoload.php || test -f out/phpmailer/src/PHPMailer.php || { echo "::error::PHPMailer (out/vendor or out/phpmailer/src) is missing"; exit 1; }
 
+      # COPYFILE_DISABLE=1: macOS の tar が ._ (AppleDouble) ファイルを混入させないようにする（self-hosted Mac 対策）
       - name: Archive build output
-        run: tar czf regenerative-medicine-out.tar.gz -C out .
+        run: COPYFILE_DISABLE=1 tar czf regenerative-medicine-out.tar.gz -C out .
 
+      # self-hosted（Mac）は Homebrew で導入済みの sshpass を使う
       - name: Install sshpass
+        if: runner.environment == 'github-hosted'
         run: sudo apt-get update && sudo apt-get install -y sshpass
 
       - name: Trust Lolipop SSH host key
@@ -100,6 +123,9 @@ jobs:
           mkdir -p ~/.ssh
           printf '%s\n' "${KNOWN_HOSTS}" > ~/.ssh/known_hosts
 
+      # ロリポップは SSH パスワード認証（2222番ポート）。
+      # SSH_PRIVATE_KEY ではなく SSH_PASSWORD を使う。
+      # SSH_REMOTE_DIR 例: ~/web/saisei-med.com または /home/<user>/web/saisei-med.com
       - name: Deploy via SSH
         env:
           SSHPASS: ${{ secrets.LOLIPOP_SSH_PASSWORD }}
@@ -113,11 +139,28 @@ jobs:
             exit 1
           fi
 
+          # ロリポップの sshd が稀にセッションを即切断する
+          # （"Connection closed by remote host" + exit 255）ことがあるため、
+          # 一時的な切断に備えて各 ssh/scp 操作にリトライを挟む。
+          # リトライ中のメッセージは >&2 に出す（コマンド置換で標準出力を取る呼び出しを汚さないため）。
+          retry_ssh() {
+            local n=0
+            until "$@"; do
+              n=$((n+1))
+              if [ "$n" -ge 3 ]; then
+                echo "::error::Failed after $n attempts: $*" >&2
+                return 1
+              fi
+              echo "Attempt $n failed; retrying in 10s..." >&2
+              sleep 10
+            done
+          }
+
           SSH_TARGET="${SSH_USER}@${SSH_HOST}"
           SSH_OPTS=(-o StrictHostKeyChecking=yes -p "${SSH_PORT}")
           SCP_OPTS=(-o StrictHostKeyChecking=yes -P "${SSH_PORT}")
 
-          REMOTE_HOME=$(sshpass -e ssh "${SSH_OPTS[@]}" "${SSH_TARGET}" 'printf "%s" "$HOME"')
+          REMOTE_HOME=$(retry_ssh sshpass -e ssh "${SSH_OPTS[@]}" "${SSH_TARGET}" 'printf "%s" "$HOME"')
           if [ -z "${REMOTE_HOME}" ] || [ "${REMOTE_HOME}" = "/" ]; then
             echo "::error::Unable to determine remote HOME. Deployment aborted."
             exit 1
@@ -126,7 +169,7 @@ jobs:
           REMOTE_ROOT="${SSH_REMOTE_DIR%/}"
           if [[ "${REMOTE_ROOT}" == "~" ]]; then
             REMOTE_ROOT="${REMOTE_HOME}"
-          elif [[ "${REMOTE_ROOT}" == "~"* ]]; then
+          elif [[ "${REMOTE_ROOT}" == "~/"* ]]; then
             REMOTE_ROOT="${REMOTE_HOME}/${REMOTE_ROOT#~/}"
           fi
           if [ -z "${REMOTE_ROOT}" ] || [ "${REMOTE_ROOT}" = "/" ] || [ "${REMOTE_ROOT}" = "${REMOTE_HOME}" ]; then
@@ -138,12 +181,12 @@ jobs:
           STAGE="${REMOTE_HOME}/.deploy-staging"
 
           # 1) アップロードして、ステージングに展開・検査する（ここで失敗しても公開中のサイトは無傷）
-          sshpass -e scp "${SCP_OPTS[@]}" "${SSH_ARCHIVE}" "${SSH_TARGET}:${REMOTE_ARCHIVE}"
-          sshpass -e ssh "${SSH_OPTS[@]}" "${SSH_TARGET}" \
+          retry_ssh sshpass -e scp "${SCP_OPTS[@]}" "${SSH_ARCHIVE}" "${SSH_TARGET}:${REMOTE_ARCHIVE}"
+          retry_ssh sshpass -e ssh "${SSH_OPTS[@]}" "${SSH_TARGET}" \
             "set -e; rm -rf '${STAGE}'; mkdir -p '${STAGE}'; tar xzf '${REMOTE_ARCHIVE}' -C '${STAGE}'; test -f '${STAGE}/index.html'; test -f '${STAGE}/contact.php'"
 
           # 2) 公開フォルダを入れ替える（contact-config.php は公開フォルダの外にあるので消えない）
-          sshpass -e ssh "${SSH_OPTS[@]}" "${SSH_TARGET}" \
+          retry_ssh sshpass -e ssh "${SSH_OPTS[@]}" "${SSH_TARGET}" \
             "set -e; mkdir -p '${REMOTE_ROOT}'; find '${REMOTE_ROOT}' -mindepth 1 -maxdepth 1 -exec rm -rf -- {} +; cp -a '${STAGE}'/. '${REMOTE_ROOT}'/; rm -rf '${STAGE}' '${REMOTE_ARCHIVE}'"
 
       - name: Smoke test

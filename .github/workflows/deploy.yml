@@ -1,5 +1,9 @@
 name: Deploy to GitHub Pages
 
+# デプロイ先はリポジトリ Variable DEPLOY_TARGET で切り替える:
+#   github-pages（未設定時の既定）= Pagesのみ / both = 両方 / lolipop = Lolipopのみ / none = どちらも止める
+# Lolipop側のデプロイは deploy-lolipop.yml が担当。
+
 on:
   push:
     branches: [main]
@@ -14,10 +18,28 @@ concurrency:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    # DEPLOY_TARGET が 'lolipop' または 'none' のときスキップ。
+    # 未設定・'github-pages'・'both' なら実行する（未設定時は従来どおりPagesのみデプロイ）。
+    if: ${{ vars.DEPLOY_TARGET != 'lolipop' && vars.DEPLOY_TARGET != 'none' }}
+    # 既定は GitHub hosted。repo 変数 CI_RUNNER=self-hosted で自分の Mac の runner で実行する（未設定に戻せば hosted に戻る）
+    runs-on: ${{ vars.CI_RUNNER || 'ubuntu-latest' }}
     permissions:
       contents: read
     steps:
+      - name: Validate DEPLOY_TARGET
+        env:
+          DEPLOY_TARGET: ${{ vars.DEPLOY_TARGET }}
+        run: |
+          case "${DEPLOY_TARGET:-github-pages}" in
+            github-pages|lolipop|both|none)
+              echo "DEPLOY_TARGET='${DEPLOY_TARGET:-<unset:github-pages>}'"
+              ;;
+            *)
+              echo "::error::Unknown DEPLOY_TARGET='${DEPLOY_TARGET}'. Expected: github-pages | lolipop | both | none"
+              exit 1
+              ;;
+          esac
+
       - name: Checkout
         uses: actions/checkout@v6
 
@@ -52,7 +74,8 @@ jobs:
 
   deploy:
     needs: build
-    runs-on: ubuntu-latest
+    # 既定は GitHub hosted。repo 変数 CI_RUNNER=self-hosted で自分の Mac の runner で実行する（未設定に戻せば hosted に戻る）
+    runs-on: ${{ vars.CI_RUNNER || 'ubuntu-latest' }}
     permissions:
       pages: write
       id-token: write

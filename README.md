@@ -31,7 +31,10 @@ npm run preview
 ```bash
 npm run build:github-pages  # GitHub Pages：全記事・noindexの確認用サイト
 npm run build:lolipop       # Lolipop本番：公開日到達分のみ。production時は権利チェック込み
+npm run build:target        # DEPLOY_TARGET=github-pages|lolipop|both|none で対象を切替
 ```
+
+GitHub Actionsのデプロイ先も同名のリポジトリVariable `DEPLOY_TARGET` で切り替えます（`github-pages`=Pagesのみ・未設定時の既定、`lolipop`、`both`、`none`）。詳細は [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md) と [docs/GO-LIVE.md](docs/GO-LIVE.md)。
 
 ## ファイル構成
 
