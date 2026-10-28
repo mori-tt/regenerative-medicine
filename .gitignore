@@ -10,5 +10,8 @@ out/
 # Composerで入れるPHPMailer（CIで生成してデプロイする。リポジトリには含めない）
 /public/vendor/
 
+# サーバー上の実設定（SMTPパスワード等を含む）。exampleだけをコミットする
+contact-config.php
+
 # playwright screenshots saved at repo root
 /*.png
