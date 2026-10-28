@@ -29,7 +29,7 @@
 
 ## 4. 医療監修・法務レビュー
 
-- [ ] 監修医による記事レビュー（現在 `needs_medical_review` 245件／reviewed 6件）
+- [ ] 監修医による記事レビュー（現在 `needs_medical_review` 全251件。`reviewer.status=reviewed` は6件あるが、その後の本文編集で医療・法務確認が再確認待ちに戻っているため、現時点で公開ゲートを通過する記事は0本）
 - [ ] 監修済み記事を編集した場合は `lastEditedAt` が監修日を上回り公開が止まる。原稿どおりの体裁変更でも `reviewer.reviewedAt` を同日以降へ更新して再確認済みにする
 - [ ] 法務・広告表現の確認（現在 `needs_legal_editorial_review`）
 - [ ] `article-review` レコードに監修者名・日付・スコープを記入（`isReviewed` ゲートを通過させる）

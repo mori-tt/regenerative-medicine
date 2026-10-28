@@ -2,7 +2,7 @@
 
 このファイルは、コードで自動化できない確認だけをまとめたものです。確認が終わるまでは、`NEXT_PUBLIC_PUBLICATION_MODE=preview` と `NEXT_PUBLIC_SITE_INDEXABLE=false` を維持してください。
 
-全208記事の公開予定日、医学・法務・根拠・分かりやすさの確認状態、公開候補は [`src/content/article-review-records.json`](../src/content/article-review-records.json) で管理します。台帳の自動判定は実際の医学的監修や法的確認を意味しません。記事ごとの確認完了後に、確認者・日付・範囲・利益相反・修正履歴を記入してください。予約日が来ても、productionでは監修記録がない記事は公開されません。
+全記事の公開予定日、医学・法務・根拠・分かりやすさの確認状態、公開候補は [`src/content/article-review-records.json`](../src/content/article-review-records.json) で管理します。台帳の自動判定は実際の医学的監修や法的確認を意味しません。記事ごとの確認完了後に、確認者・日付・範囲・利益相反・修正履歴を記入してください。予約日が来ても、productionでは監修記録がない記事は公開されません。
 
 ## 監修の基本方針
 

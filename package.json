@@ -19,6 +19,7 @@
     "report:article-evidence": "node scripts/report-article-evidence.mjs",
     "prebuild": "npm run check:article-content && npm run test:article-review && npm run check:contact",
     "test:article-review": "node --test scripts/tests/article-review.test.mjs",
+    "test:deploy-target": "node --test scripts/tests/deploy-target.test.mjs",
     "check:contact": "node scripts/check-contact-categories.mjs"
   },
   "dependencies": {
