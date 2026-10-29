@@ -56,15 +56,14 @@ ssh-keyscan -p 2222 ssh.lolipop.jp
 
 同じ画面の **Variables** タブで「New repository variable」から1件ずつ登録します。
 
-| Variable名                     | 入れる値                                        |
-| ------------------------------ | ----------------------------------------------- |
-| `LOLIPOP_SITE_URL`             | `https://saisei-med.com`（本番ドメイン）        |
-| `LOLIPOP_PUBLICATION_MODE`     | `production`（準備中は `preview`）              |
-| `LOLIPOP_SITE_INDEXABLE`       | `true`（準備中は `false`）                      |
-| `LOLIPOP_LOCALIZED_INDEXABLE`  | `false`（英・中の確認後だけ `true`）            |
-| `NEXT_PUBLIC_CONTACT_EMAIL`    | 問い合わせ受付アドレス（indexable本番では必須） |
-| `NEXT_PUBLIC_OPERATOR_NAME`    | 運営者名（同上）                                |
-| `NEXT_PUBLIC_OPERATOR_ADDRESS` | 運営者所在地（同上）                            |
+| Variable名                     | 入れる値                                 |
+| ------------------------------ | ---------------------------------------- |
+| `LOLIPOP_SITE_URL`             | `https://saisei-med.com`（本番ドメイン） |
+| `LOLIPOP_PUBLICATION_MODE`     | `production`（準備中は `preview`）       |
+| `LOLIPOP_SITE_INDEXABLE`       | `true`（準備中は `false`）               |
+| `LOLIPOP_LOCALIZED_INDEXABLE`  | `false`（英・中の確認後だけ `true`）     |
+| `NEXT_PUBLIC_OPERATOR_NAME`    | 運営者名（同上）                         |
+| `NEXT_PUBLIC_OPERATOR_ADDRESS` | 運営者所在地（同上）                     |
 
 ### Step 4. デプロイを有効化して実行（ブラウザのみ）
 
@@ -103,7 +102,6 @@ gh variable set LOLIPOP_SITE_URL --body https://saisei-med.com --repo $REPO
 gh variable set LOLIPOP_PUBLICATION_MODE --body production --repo $REPO
 gh variable set LOLIPOP_SITE_INDEXABLE --body true --repo $REPO
 gh variable set LOLIPOP_LOCALIZED_INDEXABLE --body false --repo $REPO
-gh variable set NEXT_PUBLIC_CONTACT_EMAIL --body info@saisei-med.com --repo $REPO
 gh variable set NEXT_PUBLIC_OPERATOR_NAME --body "運営者名" --repo $REPO
 gh variable set NEXT_PUBLIC_OPERATOR_ADDRESS --body "所在地" --repo $REPO
 gh variable set DEPLOY_TARGET --body both --repo $REPO
@@ -140,7 +138,6 @@ NEXT_PUBLIC_SITE_INDEXABLE=false
 NEXT_PUBLIC_LOCALIZED_INDEXABLE=false
 NEXT_PUBLIC_PUBLICATION_MODE=preview
 NEXT_PUBLIC_ARTICLE_BUILD_MODE=scheduled
-NEXT_PUBLIC_CONTACT_EMAIL=実際の受付用メールアドレス
 NEXT_PUBLIC_OPERATOR_NAME=運営者の正式名称
 NEXT_PUBLIC_OPERATOR_ADDRESS=運営者の所在地
 ```

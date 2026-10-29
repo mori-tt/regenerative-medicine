@@ -22,7 +22,6 @@ export function organizationNode() {
     alternateName: [site.nameEn, site.nameZh],
     url: absolute(),
     logo: { "@type": "ImageObject", url: absolute("/icon.svg") },
-    ...(site.contactEmail ? { email: site.contactEmail } : {}),
   };
 }
 

@@ -26,11 +26,10 @@ const chrome = {
     operatorAddress: "Address",
     operatorContact: "Contact",
     operatorMissing:
-      "Set the operator name, address, and contact as environment variables before the official launch.",
+      "Set the operator name and address as environment variables before the official launch.",
     contactTitle: "Contact form",
     contactBody:
       "Submitted content is used only for operational contact and article verification. It does not handle diagnosis, treatment consultation, appointments, or emergency contact.",
-    contactAlt: "If the form is unavailable:",
     relatedTitle: "Related information",
     contactLink: "Contact",
     editorialLink: "Editorial policy",
@@ -42,11 +41,10 @@ const chrome = {
     operatorName: "运营者",
     operatorAddress: "地址",
     operatorContact: "联系方式",
-    operatorMissing: "正式发布前，请把运营者名称、地址与联系方式设为环境变量。",
+    operatorMissing: "正式发布前，请把运营者名称与地址设为环境变量。",
     contactTitle: "咨询表单",
     contactBody:
       "提交内容仅用于运营联系与文章核对。不处理诊断、治疗咨询、预约与紧急联系。",
-    contactAlt: "表单不可用时：",
     relatedTitle: "相关说明",
     contactLink: "联系我们",
     editorialLink: "编辑方针",
@@ -126,17 +124,11 @@ export function LocalizedInfo({
                   {site.editorAddress}
                 </p>
               )}
-              {site.contactEmail && (
-                <p>
-                  <strong>{copy.operatorContact}：</strong>
-                  <a href={`mailto:${site.contactEmail}`}>
-                    {site.contactEmail}
-                  </a>
-                </p>
-              )}
-              {(!site.operatorName ||
-                !site.operatorAddress ||
-                !site.contactEmail) &&
+              <p>
+                <strong>{copy.operatorContact}：</strong>
+                <Link href={`/${locale}/contact/`}>{copy.contactLink}</Link>
+              </p>
+              {(!site.operatorName || !site.operatorAddress) &&
                 publication.showPreparationNotices && (
                   <p className="form-result error">{copy.operatorMissing}</p>
                 )}
@@ -172,14 +164,6 @@ export function LocalizedInfo({
               <h2>{copy.contactTitle}</h2>
               <p>{copy.contactBody}</p>
               <ContactForm locale={locale} />
-              {site.contactEmail && (
-                <p className="contact-alternative">
-                  {copy.contactAlt}
-                  <a href={`mailto:${site.contactEmail}`}>
-                    {site.contactEmail}
-                  </a>
-                </p>
-              )}
             </div>
           ) : (
             <div className="policy-callout">

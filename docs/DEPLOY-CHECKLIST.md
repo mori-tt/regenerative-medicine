@@ -40,7 +40,7 @@
 ## 4.5 2サイト並行公開（GitHub Pages＝テスト / Lolipop＝本番）
 
 - [ ] GitHub Variables: `DEPLOY_TARGET`（`both`=両方、`github-pages`=Pagesのみ・既定、`lolipop`=Lolipopのみ、`none`=停止）、`LOLIPOP_SITE_URL`（本番ドメイン）、`LOLIPOP_PUBLICATION_MODE=production`、`LOLIPOP_SITE_INDEXABLE=true`、`LOLIPOP_LOCALIZED_INDEXABLE`（翻訳確認後に `true`）
-- [ ] GitHub Variables: `NEXT_PUBLIC_CONTACT_EMAIL`、`NEXT_PUBLIC_OPERATOR_NAME`、`NEXT_PUBLIC_OPERATOR_ADDRESS`（indexable本番では必須）
+- [ ] GitHub Variables: `NEXT_PUBLIC_OPERATOR_NAME`、`NEXT_PUBLIC_OPERATOR_ADDRESS`（indexable本番では必須。問い合わせ受信先は `LOLIPOP_CONTACT_CONFIG` 内の `CONTACT_TO_EMAIL`）
 - [ ] GitHub Secrets: `LOLIPOP_SSH_USER`、`LOLIPOP_SSH_PASSWORD`、`LOLIPOP_SSH_REMOTE_DIR`、`LOLIPOP_SSH_KNOWN_HOSTS`（`ssh-keyscan -p 2222 ssh.lolipop.jp` の出力）
 - [ ] `npm run check:rights` が通ること（`article-media.json` の全素材が `verified`。Unsplash検索ページURLではなく写真個別URLの記録が必要）
 

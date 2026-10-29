@@ -33,7 +33,6 @@ export const site = {
   url: parsedUrl.origin,
   description:
     "再生医療と幹細胞について、基礎知識から研究の読み方、治療を検討するときの確認事項まで。確かな情報とともに、一つずつ理解するための情報ガイド。",
-  contactEmail: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "",
   operatorName: process.env.NEXT_PUBLIC_OPERATOR_NAME || "",
   operatorAddress: process.env.NEXT_PUBLIC_OPERATOR_ADDRESS || "",
   editorName: process.env.NEXT_PUBLIC_EDITOR_NAME || rawConfig.editor.name,
@@ -44,12 +43,9 @@ if (publication.mode === "production" && indexable) {
   const missing = [
     !site.operatorName && "NEXT_PUBLIC_OPERATOR_NAME",
     !site.operatorAddress && "NEXT_PUBLIC_OPERATOR_ADDRESS",
-    !site.contactEmail && "NEXT_PUBLIC_CONTACT_EMAIL",
   ].filter(Boolean);
   if (missing.length > 0) {
-    throw new Error(
-      `正式公開には運営者情報と連絡先が必要です: ${missing.join(", ")}`,
-    );
+    throw new Error(`正式公開には運営者情報が必要です: ${missing.join(", ")}`);
   }
 }
 export function publicAsset(path: string) {

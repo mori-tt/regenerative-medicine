@@ -94,18 +94,14 @@ export default async function InfoPage({
                 {site.editorAddress}
               </p>
             )}
-            {site.contactEmail && (
-              <p>
-                <strong>連絡先：</strong>
-                <a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a>
-              </p>
-            )}
-            {(!site.operatorName ||
-              !site.operatorAddress ||
-              !site.contactEmail) &&
+            <p>
+              <strong>連絡先：</strong>
+              <Link href="/contact/">お問い合わせフォーム</Link>
+            </p>
+            {(!site.operatorName || !site.operatorAddress) &&
               publication.showPreparationNotices && (
                 <p className="form-result error">
-                  運営者名・所在地・連絡先は、実値を環境変数に設定してから正式公開してください。
+                  運営者名・所在地は、実値を環境変数に設定してから正式公開してください。
                 </p>
               )}
           </section>
@@ -137,12 +133,6 @@ export default async function InfoPage({
               送信内容は運営上の連絡と記事の確認にのみ使用します。診断・治療の相談、予約、緊急連絡には対応していません。
             </p>
             <ContactForm />
-            {site.contactEmail && (
-              <p className="contact-alternative">
-                フォームが利用できない場合：
-                <a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a>
-              </p>
-            )}
           </div>
         ) : (
           <div className="policy-callout">

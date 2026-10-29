@@ -74,7 +74,7 @@ gh api -X POST repos/mori-tt/regenerative-medicine/pages -f build_type=workflow
 
 ### 1-3. 公開内容の確定（手作業）
 
-- [ ] 運営者名・所在地・連絡先メールを確定する（`NEXT_PUBLIC_OPERATOR_NAME` / `NEXT_PUBLIC_OPERATOR_ADDRESS` / `NEXT_PUBLIC_CONTACT_EMAIL`。空のまま本番ビルドするとエラーで止まります）
+- [ ] 運営者名・所在地を確定する（`NEXT_PUBLIC_OPERATOR_NAME` / `NEXT_PUBLIC_OPERATOR_ADDRESS`。空のまま本番ビルドするとエラーで止まります）。問い合わせメールアドレスはサイトに公開しないため `NEXT_PUBLIC_CONTACT_EMAIL` は廃止。受信先は `contact-config.php` の `CONTACT_TO_EMAIL` で設定します
 - [ ] 千原良友先生の氏名・写真・肩書の掲載と「医師執筆・監修済み」の表示について**書面等の許諾**を得る。未了なら `NEXT_PUBLIC_MEDICAL_REVIEWER_ENABLED=false` でビルドする（§5の注意）
 - [ ] `src/content/site-config.json` の `deployDate` を実際の公開日にする。画面の公開日は全記事これに揃う
 - [ ] プライバシーポリシー・利用規約・広告表記・特定商取引等の法務確認（[MANUAL-LEGAL-CHECKLIST.md](MANUAL-LEGAL-CHECKLIST.md)）
@@ -145,7 +145,6 @@ ssh -p 2222 <SSHユーザー>@ssh.lolipop.jp 'chmod 600 ~/contact-config.php'
 | `LOLIPOP_PUBLICATION_MODE`     | `production`                | `check:rights` が走る                                                         |
 | `LOLIPOP_SITE_INDEXABLE`       | `true`                      | 検索に出す。準備中は `false`                                                  |
 | `LOLIPOP_LOCALIZED_INDEXABLE`  | `false`                     | 英・中の翻訳確認後に `true`                                                   |
-| `NEXT_PUBLIC_CONTACT_EMAIL`    | 受信できるアドレス          | 必須                                                                          |
 | `NEXT_PUBLIC_OPERATOR_NAME`    | 運営者の正式名称            | 必須                                                                          |
 | `NEXT_PUBLIC_OPERATOR_ADDRESS` | 運営者の所在地              | 必須                                                                          |
 | `NEXT_PUBLIC_SITE_URL`         | `https://mori-tt.github.io` | GitHub Pages用（未設定でも既定値）                                            |
@@ -169,7 +168,6 @@ gh variable set LOLIPOP_SITE_URL --body https://saisei-med.com --repo $REPO
 gh variable set LOLIPOP_PUBLICATION_MODE --body production --repo $REPO
 gh variable set LOLIPOP_SITE_INDEXABLE --body true --repo $REPO
 gh variable set LOLIPOP_LOCALIZED_INDEXABLE --body false --repo $REPO
-gh variable set NEXT_PUBLIC_CONTACT_EMAIL --body info@saisei-med.com --repo $REPO
 gh variable set NEXT_PUBLIC_OPERATOR_NAME --body "運営者名" --repo $REPO
 gh variable set NEXT_PUBLIC_OPERATOR_ADDRESS --body "所在地" --repo $REPO
 ```
@@ -288,7 +286,6 @@ npm run typecheck
 NEXT_PUBLIC_SITE_URL=https://saisei-med.com \
 NEXT_PUBLIC_PUBLICATION_MODE=production \
 NEXT_PUBLIC_SITE_INDEXABLE=true \
-NEXT_PUBLIC_CONTACT_EMAIL=info@saisei-med.com \
 NEXT_PUBLIC_OPERATOR_NAME="運営者名" \
 NEXT_PUBLIC_OPERATOR_ADDRESS="所在地" \
 npm run build:lolipop && npm run check:export
