@@ -14,6 +14,11 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   basePath,
   assetPrefix,
+  experimental: {
+    // CSSを<link>ではなく<style>でHTMLに埋め込み、レンダリングブロッキングの
+    // リクエストウォーターフォールを消す。CSSは約21KBと小さいので初回表示が速くなる。
+    inlineCss: true,
+  },
 };
 
 export default nextConfig;
