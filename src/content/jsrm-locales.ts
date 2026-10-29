@@ -38,7 +38,7 @@ export const jsrmGuideLocales: Record<SiteLocale, JsrmGuideLocale> = {
   en: {
     title: "Understanding the Japanese Society for Regenerative Medicine",
     description:
-      "Roles, history, certification, and regulatory information of the society, organized from official materials.",
+      "A feature organizing the Japanese Society for Regenerative Medicine's roles, history, academic activities, certification systems, and related regulations from official materials.",
     heroTitle: "Understanding the Japanese Society for Regenerative Medicine.",
     heroBody:
       "An academic society connecting research, clinical practice, cell processing, ethics, and legal systems in regenerative medicine. Its roles and certification are explained in plain words.",
@@ -132,7 +132,8 @@ export const jsrmGuideLocales: Record<SiteLocale, JsrmGuideLocale> = {
   },
   zh: {
     title: "了解日本再生医学学会",
-    description: "从官方资料整理学会的作用、沿革、认定制度与制度信息。",
+    description:
+      "从官方资料整理日本再生医学学会的作用、沿革、学术活动、认定医与临床培养士等认定制度及相关法规的特集。",
     heroTitle: "了解日本再生医学学会。",
     heroBody:
       "连接再生医学研究、临床、细胞加工、伦理与法制度的学术团体。用易懂的语言整理学会的作用与认定制度。",
@@ -236,7 +237,7 @@ export const jsrmChapterLocales: Record<
     "01-overview": {
       title: "What the society is",
       description:
-        "Its purpose, the fields it covers, and how patients should position it.",
+        "What the Japanese Society for Regenerative Medicine is — its purpose, the research fields it covers, and what it means for patients, from official materials.",
       sections: [
         {
           title: "The society's basic role",
@@ -262,7 +263,8 @@ export const jsrmChapterLocales: Record<
     },
     "02-history": {
       title: "Background and history",
-      description: "From the cell therapy study group to a broader field.",
+      description:
+        "How the society evolved from the 1978 cell therapy study group, and how its scope broadened over time.",
       sections: [
         {
           title: "Starting from a predecessor",
@@ -288,7 +290,8 @@ export const jsrmChapterLocales: Record<
     },
     "03-academic-activities": {
       title: "Meetings, journals, and education",
-      description: "How the society shares findings and trains specialists.",
+      description:
+        "How academic meetings, journals, and education programs let the society share research findings and train specialists.",
       sections: [
         {
           title: "What meetings are for",
@@ -315,7 +318,7 @@ export const jsrmChapterLocales: Record<
     "04-certification": {
       title: "Certification systems and what credentials mean",
       description:
-        "Certified physicians, cultivators, and points patients often misunderstand.",
+        "Certification systems such as certified regenerative-medicine physicians and clinical cell cultivators — and why certification is not a treatment guarantee.",
       sections: [
         {
           title: "A system for multiple professions",
@@ -342,7 +345,7 @@ export const jsrmChapterLocales: Record<
     "05-law-and-regulation": {
       title: "Regenerative medicine and legal systems",
       description:
-        "The Safety Act, cell processing, and provision plans from a patient viewpoint.",
+        "The Act on the Safety of Regenerative Medicine, cell-processing management, and provider plans, organized from a patient's viewpoint.",
       sections: [
         {
           title: "Regulatory information as material for safety thinking",
@@ -368,7 +371,7 @@ export const jsrmChapterLocales: Record<
     "06-public-research": {
       title: "Public research and industry-academia collaboration",
       description:
-        "Reading JST and AMED-linked public research apart from treatment.",
+        "How to find JST- and AMED-linked public research information, and the difference between active research and available treatment.",
       sections: [
         {
           title: "Why public research pages exist",
@@ -395,7 +398,7 @@ export const jsrmChapterLocales: Record<
     "07-cell-processing": {
       title: "Cell processing facilities and quality control",
       description:
-        "Steps from collection to administration, and why quality control matters.",
+        "The steps from cell collection, processing, and storage to administration — and why quality control in cell-processing facilities matters for safety.",
       sections: [
         {
           title: "Steps behind treatment",
@@ -422,7 +425,7 @@ export const jsrmChapterLocales: Record<
     "08-compensation": {
       title: "Compensation systems and preparation after treatment",
       description:
-        "Support insurance for private care and clinical research, plus pre-contract checks.",
+        "How compensation works around private care and clinical research, and what to confirm before signing a treatment contract.",
       sections: [
         {
           title: "What compensation covers",
@@ -449,7 +452,7 @@ export const jsrmChapterLocales: Record<
     "09-membership-and-education": {
       title: "Membership and learning entries",
       description:
-        "Who joins the society and what information is accessible, in plain words.",
+        "Who can join the society and what information is accessible — membership and learning entry points explained in plain language.",
       sections: [
         {
           title: "A society open to individuals and corporations",
@@ -476,7 +479,7 @@ export const jsrmChapterLocales: Record<
     "10-for-patients-and-reviewer": {
       title: "How patients should read, and Dr. Chihara's review",
       description:
-        "Final checkpoints to avoid confusing affiliation, review, and evidence.",
+        "Final checkpoints for reading information without confusing society affiliation, physician review, and treatment evidence.",
       sections: [
         {
           title: "Affiliation is one clue",
@@ -504,7 +507,8 @@ export const jsrmChapterLocales: Record<
   zh: {
     "01-overview": {
       title: "学会是什么",
-      description: "学会的目的、涉及领域，以及患者应如何定位。",
+      description:
+        "日本再生医学学会是什么。从官方资料整理学会的目的、涉及研究领域，以及患者应如何理解其存在。",
       sections: [
         {
           title: "学会的基本作用",
@@ -530,7 +534,8 @@ export const jsrmChapterLocales: Record<
     },
     "02-history": {
       title: "设立背景与沿革",
-      description: "从细胞治疗研究会开始的学会历程与领域扩展。",
+      description:
+        "追溯日本再生医学学会自1978年细胞治疗研究会起步的变迁，以及研究领域如何扩展。",
       sections: [
         {
           title: "从前身出发",
@@ -556,7 +561,8 @@ export const jsrmChapterLocales: Record<
     },
     "03-academic-activities": {
       title: "学术集会、会志与教育",
-      description: "学会分享成果、培养专家的机制。",
+      description:
+        "解读学会如何通过学术集会、学会杂志与教育项目分享研究成果、培养专家。",
       sections: [
         {
           title: "学术集会的目的",
@@ -582,7 +588,8 @@ export const jsrmChapterLocales: Record<
     },
     "04-certification": {
       title: "认定制度与资格的含义",
-      description: "再生医学认定医、临床培养士等制度与患者易误解点。",
+      description:
+        "整理再生医学认定医、临床培养士等认定制度的内容，以及患者容易误解的「认定≠疗效保证」。",
       sections: [
         {
           title: "面向多职业的制度",
@@ -608,7 +615,8 @@ export const jsrmChapterLocales: Record<
     },
     "05-law-and-regulation": {
       title: "再生医学与法制度",
-      description: "从患者视角整理安全性确保法、细胞加工与提供计划。",
+      description:
+        "从患者视角整理再生医学等安全性确保法的定位、细胞加工管理与提供计划申报。",
       sections: [
         {
           title: "制度信息是思考安全的材料",
@@ -633,7 +641,8 @@ export const jsrmChapterLocales: Record<
     },
     "06-public-research": {
       title: "公共研究与产学官合作",
-      description: "从研究与治疗的区别解读与 JST·AMED 合作的公共研究信息。",
+      description:
+        "介绍与 JST、AMED 等合作的公共研究信息的查找方法，以及「研究在进行」与「可接受治疗」的区别。",
       sections: [
         {
           title: "放置公共研究信息的意义",
@@ -659,7 +668,8 @@ export const jsrmChapterLocales: Record<
     },
     "07-cell-processing": {
       title: "细胞加工设施与质量管理",
-      description: "采集、加工、保管与给药工程，以及质量管理为何重要。",
+      description:
+        "说明细胞采集、加工、保管到给药的各工序，以及细胞加工设施的质量管理为何关系到安全。",
       sections: [
         {
           title: "治疗背后的工程",
@@ -685,7 +695,8 @@ export const jsrmChapterLocales: Record<
     },
     "08-compensation": {
       title: "补偿制度与治疗后的准备",
-      description: "整理自由诊疗与临床研究相关补偿制度，以及签约前确认事项。",
+      description:
+        "整理自由诊疗与临床研究相关补偿制度的思路，以及为防万一在签约前应确认的事项。",
       sections: [
         {
           title: "补偿制度处理什么",
@@ -711,7 +722,8 @@ export const jsrmChapterLocales: Record<
     },
     "09-membership-and-education": {
       title: "会员制度与学习入口",
-      description: "谁参加学会、能接触什么信息，用一般读者也能懂的方式整理。",
+      description:
+        "介绍谁可以参加日本再生医学学会、能接触哪些信息，用一般读者也能懂的方式整理会员制度与学习入口。",
       sections: [
         {
           title: "个人与法人可参加的学会",
@@ -737,7 +749,8 @@ export const jsrmChapterLocales: Record<
     },
     "10-for-patients-and-reviewer": {
       title: "患者的读法与千原医生的审核",
-      description: "为不混淆学会所属、医生审核与治疗依据的最后检查点。",
+      description:
+        "为不混淆学会所属、医生审核与治疗依据而准备的最后检查点，整理患者的阅读方式与医生审核的定位。",
       sections: [
         {
           title: "学会所属是一条线索",

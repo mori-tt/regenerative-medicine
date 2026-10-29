@@ -1,8 +1,9 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { Breadcrumbs } from "@/components/content";
+import { Breadcrumbs, JsonLd } from "@/components/content";
 import { infoPages } from "@/content/pages";
 import { pageMetadata, site } from "@/lib/site";
+import { webPageNode } from "@/lib/structured-data";
 import { ReviewerProfile } from "@/components/reviewer-profile";
 import { medicalReviewer, publication } from "@/lib/site-config";
 import { ContactForm } from "@/components/contact-form";
@@ -33,6 +34,15 @@ export default async function InfoPage({
   return (
     <div className="container inner-page">
       <Breadcrumbs items={[{ label: info.title }]} />
+      <JsonLd
+        data={webPageNode(
+          "ja",
+          `/${info.slug}/`,
+          info.title,
+          info.description,
+          info.slug === "contact" ? "ContactPage" : "WebPage",
+        )}
+      />
       <div className="page-heading">
         <span className="eyebrow">{info.en}</span>
         <h1>{info.title}</h1>

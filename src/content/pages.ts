@@ -4,7 +4,7 @@ export const infoPages = [
     title: "このサイトについて",
     en: "ABOUT US",
     description:
-      "知ることから、はじまる選択。再生医療ガイドの目的と運営について。",
+      "再生医療ガイドは、再生医療・幹細胞について学びたい方向けの情報サイトです。サイトの目的、運営方針、編集と広告の考え方を説明します。",
     sections: [
       {
         title: "再生医療とあなたをつなぐ、情報ガイド。",
@@ -32,7 +32,7 @@ export const infoPages = [
     title: "私たちの編集方針",
     en: "OUR EDITORIAL PROMISE",
     description:
-      "情報の確かさと、わかりやすさのために。記事づくりで大切にすること。",
+      "根拠にたどれる情報、医師による内容確認、更新と訂正の記録、広告と編集の区別。再生医療ガイドが記事づくりで大切にしている5つの方針です。",
     sections: [
       {
         title: "1. 根拠にたどれる情報を届ける",
@@ -70,7 +70,8 @@ export const infoPages = [
     slug: "supervision",
     title: "医師監修について",
     en: "MEDICAL REVIEW",
-    description: "監修者と確認の範囲が分かる、透明な監修体制を目指します。",
+    description:
+      "記事を監修する医師の紹介、資格・経歴、監修の範囲と記録の方法を公開しています。監修が個別の治療効果を保証するものではない点も説明します。",
     sections: [
       {
         title: "監修体制は現在準備中です",
@@ -96,7 +97,8 @@ export const infoPages = [
     slug: "advertising",
     title: "広告掲載について",
     en: "MEDIA & PARTNERSHIPS",
-    description: "再生医療を知りたい方へ、医療機関の情報を適切に届けるために。",
+    description:
+      "クリニック・医療機関からのバナー広告の掲載方針を説明します。想定している掲載枠、医療広告の法令への適合性の確認、掲載までの流れをまとめました。",
     sections: [
       {
         title: "広告掲載のご相談について",
@@ -129,7 +131,8 @@ export const infoPages = [
     slug: "privacy",
     title: "プライバシーポリシー",
     en: "PRIVACY",
-    description: "お問い合わせフォームなどで取得する情報の取り扱いについて。",
+    description:
+      "お問い合わせフォームや記事検索で扱う情報、送信先、保存の考え方を説明します。ホスティング事業者が保存するアクセスログの扱いも記載しています。",
     sections: [
       {
         title: "現在のサイトの機能",
@@ -155,7 +158,8 @@ export const infoPages = [
     slug: "contact",
     title: "お問い合わせ",
     en: "CONTACT",
-    description: "記事についてのご意見、監修、広告掲載に関するご相談の窓口。",
+    description:
+      "記事内容のご指摘、取材・監修、広告掲載、運営に関するご連絡はこちらのフォームから。医療相談・診断・治療の予約には対応していません。",
     sections: [
       {
         title: "お問い合わせ窓口",
@@ -176,7 +180,7 @@ export const infoPages = [
     title: "情報源・参考サイト",
     en: "SOURCES",
     description:
-      "大学・研究機関、学会、行政・規制当局の公開情報を中心に確認しています。",
+      "記事の根拠として確認している情報源の一覧です。大学・研究機関、学会、行政・規制当局の公開資料を中心に、読者自身が照合できる出典を掲載しています。",
     sections: [],
   },
   {
@@ -184,7 +188,7 @@ export const infoPages = [
     title: "はじめての方へ：学び方ガイド",
     en: "START HERE",
     description:
-      "どこから読めばいい？ 目的別の読み進め方と、このサイトの使い方。",
+      "再生医療ガイドの読み進め方を目的別に案内します。まず読む1本、基礎から治療の検討までの順番、検索・用語集の使い方をまとめました。",
     sections: [
       {
         title: "まずは1本だけ読むなら",
@@ -214,7 +218,7 @@ export const infoPages = [
     title: "用語集：再生医療の言葉",
     en: "GLOSSARY",
     description:
-      "幹細胞、分化、培養…。ニュースや説明資料に出てくる言葉を解説。",
+      "幹細胞、分化、培養、エビデンスなど、再生医療のニュースや説明資料に出てくる言葉を解説する用語集です。各用語に出典と関連記事への導線を付けています。",
     sections: [
       {
         title: "細胞に関する言葉",
@@ -244,7 +248,7 @@ export const infoPages = [
     title: "よくある質問",
     en: "FAQ",
     description:
-      "費用、痛み、通院、相談先。読者から想定される質問にまとめました。",
+      "再生医療の学び方、治療の検討、費用や相談先について、読者から想定される質問と回答をまとめました。個別の医療相談は医療機関へ。",
     sections: [
       {
         title: "学び方についての質問",
@@ -273,7 +277,8 @@ export const infoPages = [
     slug: "safety",
     title: "安全性の考え方",
     en: "SAFETY FIRST",
-    description: "効果とリスクを冷静に比べるための、安全性の物差し。",
+    description:
+      "再生医療の安全性は治療ごとに確かめるものです。手続き・データ・体制の3つの確認記録と、立ち止まるべき兆候を整理しました。",
     sections: [
       {
         title: "安全性は治療ごとに確かめる",
@@ -303,7 +308,7 @@ export const infoPages = [
     title: "制度と法律：再生医療のルール",
     en: "RULES & SYSTEMS",
     description:
-      "安全性確保法・薬機法・医療広告。治療を探す前に知っておきたい枠組み。",
+      "再生医療等安全性確保法、薬機法、認定委員会と提供計画、医療広告のルールを整理。治療を探す前に知っておきたい制度の枠組みを解説します。",
     sections: [
       {
         title: "2つの法律の役割",
@@ -332,7 +337,8 @@ export const infoPages = [
     slug: "terms",
     title: "利用規約",
     en: "TERMS",
-    description: "このサイトをご利用いただく際のお願い。正式公開前の案です。",
+    description:
+      "掲載情報の利用、引用・リンク、免責と変更に関する利用規約です。情報は診断・治療の代わりとはならず、内容は予告なく変更されることがあります。",
     sections: [
       {
         title: "情報の利用について",
@@ -361,7 +367,8 @@ export const infoPages = [
     slug: "corrections",
     title: "訂正・更新の方針",
     en: "CORRECTIONS",
-    description: "誤りがあったときの対応と、記事の更新ルールを公開します。",
+    description:
+      "事実の誤りが見つかったときの訂正方法、記事の更新と再確認のルール、ご指摘いただく際の連絡方法を公開しています。重要な訂正は理由と日付を記録します。",
     sections: [
       {
         title: "訂正の対応",
@@ -387,7 +394,8 @@ export const infoPages = [
     slug: "citations",
     title: "引用・転載について",
     en: "CITATIONS",
-    description: "記事の引用・リンク・転載の条件をまとめました。",
+    description:
+      "当サイトの記事・図版を引用・リンク・転載する際の条件です。出典を明示した短い引用の扱い、全文転載や教育目的での相談窓口をまとめました。",
     sections: [
       {
         title: "リンクについて",
@@ -413,7 +421,8 @@ export const infoPages = [
     slug: "disclaimer",
     title: "医療情報の利用上の注意",
     en: "DISCLAIMER",
-    description: "本サイトの情報を安全に使うための、免責とお願いです。",
+    description:
+      "掲載情報は診断・治療の代わりではありません。医学的知見の変化という情報の限界、広告との区別、ご利用上の注意をまとめた免責ページです。",
     sections: [
       {
         title: "診断・治療の代わりではありません",
@@ -439,7 +448,8 @@ export const infoPages = [
     slug: "accessibility",
     title: "ウェブアクセシビリティ",
     en: "ACCESSIBILITY",
-    description: "誰もが読みやすいサイトを目指す取り組みと考え方です。",
+    description:
+      "文字の大きさ・色のコントラスト・キーボード操作・スクリーンリーダーへの配慮など、このサイトのアクセシビリティへの取り組みを説明します。",
     sections: [
       {
         title: "目指すこと",
@@ -465,7 +475,8 @@ export const infoPages = [
     slug: "site-guide",
     title: "サイトマップ・ページ一覧",
     en: "SITE GUIDE",
-    description: "このサイトの全ページへの案内。目的から探せます。",
+    description:
+      "再生医療ガイドの全ページ一覧です。記事・カテゴリ・用語集・日本再生医療学会の特集・運営方針ページなど、目的にあわせて必要なページを探せます。",
     sections: [
       {
         title: "記事を探す",
@@ -491,12 +502,13 @@ export const infoPages = [
     slug: "updates",
     title: "更新情報",
     en: "UPDATES",
-    description: "記事の追加やサイト改善のお知らせをまとめます。",
+    description:
+      "記事の追加、監修状況の更新、サイト改善などのお知らせをまとめるページです。重要な変更や訂正は日付と内容が分かる形でここに記録します。",
     sections: [
       {
         title: "最近の更新",
         paragraphs: [
-          "記事を72本、案内ページを18本まで拡充し、カテゴリ別の読み順ガイドを整えました。各記事の更新日は記事ページに表示しています。",
+          "公開記事と案内ページを拡充し、カテゴリ別の読み順ガイドを整えました。記事は医師監修の確認が取れたものから順次公開しています。各記事の更新日は記事ページに表示しています。",
         ],
       },
       {

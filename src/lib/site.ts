@@ -197,7 +197,7 @@ export function pageMetadata(
             modifiedTime: options.article.modifiedTime,
             section: options.article.section,
             tags: options.article.tags,
-            authors: [absolute(localizedPath("/about/", locale))],
+            authors: [absolute(localizedPath("/supervision/", locale))],
           }
         : { type: "website" }),
     },

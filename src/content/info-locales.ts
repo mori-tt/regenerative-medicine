@@ -44,7 +44,7 @@ export const infoLocales: Record<
   en: {
     about: en(
       "About this site",
-      "Why this guide exists, who it is for, and how it is operated.",
+      "An information site for learning about regenerative medicine and stem cells — our purpose, how the site is run, and our approach to editing and advertising.",
       [
         [
           "A guide connecting regenerative medicine with you",
@@ -69,7 +69,7 @@ export const infoLocales: Record<
     ),
     "editorial-policy": en(
       "Editorial policy",
-      "What we value to deliver reliable and understandable information.",
+      "Our five editorial principles: traceable sources, physician review, recorded corrections, separation of ads and editing, and transparent production.",
       [
         [
           "1. Information you can trace to its evidence",
@@ -105,7 +105,7 @@ export const infoLocales: Record<
     ),
     supervision: en(
       "Medical review",
-      "A transparent review system where reviewers and scope are visible.",
+      "The physician who reviews our articles — credentials, career, review scope, and how reviews are recorded. Review does not guarantee individual outcomes.",
       [
         [
           "The review system is being prepared",
@@ -130,7 +130,7 @@ export const infoLocales: Record<
     ),
     advertising: en(
       "Advertising",
-      "Delivering clinic information appropriately to people who want to learn.",
+      "Our policy on banner advertising from clinics and medical institutions — planned placements, content standards, and the steps before an ad appears.",
       [
         [
           "About advertising inquiries",
@@ -161,7 +161,7 @@ export const infoLocales: Record<
     ),
     privacy: en(
       "Privacy policy",
-      "How information received through the contact form and site operations is handled.",
+      "How information submitted through the contact form and site search is handled, where it is sent, and how hosting-provider access logs are treated.",
       [
         [
           "Current site functions",
@@ -185,7 +185,7 @@ export const infoLocales: Record<
     ),
     contact: en(
       "Contact",
-      "Feedback on articles and inquiries about review and advertising.",
+      "For corrections, coverage and review requests, advertising, and operational inquiries. We do not provide medical consultations, diagnosis, or appointments.",
       [
         [
           "Contact desk",
@@ -204,7 +204,7 @@ export const infoLocales: Record<
     ),
     sources: en(
       "Sources and references",
-      "Public information from universities, research institutes, societies, and regulators.",
+      "The references our articles rely on — public materials from universities, research institutes, academic societies, and regulators, listed for readers to verify.",
       [
         [
           "Primary sources we check",
@@ -222,7 +222,7 @@ export const infoLocales: Record<
     ),
     guide: en(
       "Getting started: a learning guide",
-      "Where to start, reading paths by goal, and how to use this site.",
+      "A guided reading path through this site — the first article to read, how to move from basics to treatment questions, and how to use search and the glossary.",
       [
         [
           "If you read only one article",
@@ -249,7 +249,7 @@ export const infoLocales: Record<
     ),
     glossary: en(
       "Glossary: words in regenerative medicine",
-      "Stem cells, differentiation, culture. Words found in news and brochures explained.",
+      "Definitions of terms used in regenerative medicine news and materials — stem cells, differentiation, culture, evidence — each with its sources.",
       [
         [
           "Words about cells",
@@ -276,7 +276,7 @@ export const infoLocales: Record<
     ),
     faq: en(
       "Frequently asked questions",
-      "Costs, pain, visits, and where to consult. Answers to expected reader questions.",
+      "Expected reader questions on learning, considering treatment, costs, and where to consult. For personal medical advice, please see a medical institution.",
       [
         [
           "Questions about learning",
@@ -303,7 +303,7 @@ export const infoLocales: Record<
     ),
     safety: en(
       "Safety first",
-      "A yardstick for comparing benefits and risks calmly.",
+      "Safety in regenerative medicine must be checked per treatment. Three kinds of records to verify — procedures, data, structure — and warning signs to stop.",
       [
         [
           "Safety is checked per treatment",
@@ -330,7 +330,7 @@ export const infoLocales: Record<
     ),
     regulation: en(
       "Rules and systems",
-      "The Safety Act, the PMD Act, and medical advertising. Frameworks to know before seeking treatment.",
+      "Japan's Act on the Safety of Regenerative Medicine, the PMD Act, review committees, provider plans, and medical advertising rules — the framework explained.",
       [
         [
           "Roles of the two laws",
@@ -357,7 +357,7 @@ export const infoLocales: Record<
     ),
     terms: en(
       "Terms of use",
-      "Requests for using this site. A draft before the official launch.",
+      "Terms for using this site — how the information may be used, quoting and linking rules, disclaimers, and how terms or content may change.",
       [
         [
           "Use of information",
@@ -384,7 +384,7 @@ export const infoLocales: Record<
     ),
     corrections: en(
       "Corrections and updates",
-      "How errors are handled and how articles are updated.",
+      "How we handle factual errors, how articles are updated and re-reviewed, and how to report a problem to the editors.",
       [
         [
           "Handling corrections",
@@ -408,7 +408,7 @@ export const infoLocales: Record<
     ),
     citations: en(
       "Citations and reuse",
-      "Conditions for quoting, linking, and reproducing articles.",
+      "Conditions for quoting, linking, and reproducing our articles and figures — short quotations with attribution, and where to ask about full reuse.",
       [
         [
           "About links",
@@ -432,7 +432,7 @@ export const infoLocales: Record<
     ),
     disclaimer: en(
       "Using medical information safely",
-      "Disclaimers and requests for safe use of this site's information.",
+      "This site's information does not replace diagnosis or treatment. Our disclaimers, the limits of medical knowledge, and how advertising is kept separate.",
       [
         [
           "Not a substitute for diagnosis or treatment",
@@ -456,7 +456,7 @@ export const infoLocales: Record<
     ),
     accessibility: en(
       "Web accessibility",
-      "Our approach and efforts toward a site everyone can read.",
+      "Our accessibility efforts — text size, color contrast, keyboard navigation, and screen reader support — and how to report hard-to-use areas.",
       [
         [
           "What we aim for",
@@ -480,7 +480,7 @@ export const infoLocales: Record<
     ),
     "site-guide": en(
       "Site map and page list",
-      "A guide to every page, searchable by purpose.",
+      "A complete list of pages on this site — articles, categories, glossary, and operational policy pages — organized so you can find what you need.",
       [
         [
           "Finding articles",
@@ -502,52 +502,60 @@ export const infoLocales: Record<
         ],
       ],
     ),
-    updates: en("Updates", "New articles and site improvements.", [
+    updates: en(
+      "Updates",
+      "Announcements about new articles, review status updates, and site improvements. Important changes and corrections are recorded here.",
       [
-        "Recent updates",
         [
-          "The site now organizes articles by category with reading-order guides. Each article page shows its update date.",
+          "Recent updates",
+          [
+            "The site now organizes articles by category with reading-order guides. Each article page shows its update date.",
+          ],
+        ],
+        [
+          "Upcoming work",
+          [
+            "Completion of physician review, rechecking of sources, added figures, and search improvements are planned. Display switches sequentially as review completes.",
+          ],
+        ],
+        [
+          "Handling past notices",
+          [
+            "After the official launch, major changes and corrections are announced on this page with dates and details.",
+          ],
         ],
       ],
-      [
-        "Upcoming work",
-        [
-          "Completion of physician review, rechecking of sources, added figures, and search improvements are planned. Display switches sequentially as review completes.",
-        ],
-      ],
-      [
-        "Handling past notices",
-        [
-          "After the official launch, major changes and corrections are announced on this page with dates and details.",
-        ],
-      ],
-    ]),
+    ),
   },
   zh: {
-    about: zh("关于本网站", "介绍本指南的目的、适用读者和运营方式。", [
+    about: zh(
+      "关于本网站",
+      "再生医学指南是面向想了解再生医学与干细胞的人士的信息网站。介绍本站的目的、运营方针以及编辑与广告的处理方式。",
       [
-        "连接再生医学与你的信息指南",
         [
-          "再生医学指南是为想要了解再生医学和干细胞的人准备的信息网站。整理基础知识、研究阅读方法、考虑治疗前的确认事项，并附上信息来源。",
-          "本网站不保证治疗效果，也不一律推荐特定治疗。",
+          "连接再生医学与你的信息指南",
+          [
+            "再生医学指南是为想要了解再生医学和干细胞的人准备的信息网站。整理基础知识、研究阅读方法、考虑治疗前的确认事项，并附上信息来源。",
+            "本网站不保证治疗效果，也不一律推荐特定治疗。",
+          ],
+        ],
+        [
+          "目前的运营状况",
+          [
+            "正式发布时，将公开运营者名称、地址和联系方式等运营者信息。发布前请注意，部分页面描述的是仍在准备中的事项。",
+          ],
+        ],
+        [
+          "关于编辑与广告",
+          [
+            "将来可能用部分广告收入维持运营。广告的有无和金额不会改变文章评价，所有广告都会清楚标明。",
+          ],
         ],
       ],
-      [
-        "目前的运营状况",
-        [
-          "正式发布时，将公开运营者名称、地址和联系方式等运营者信息。发布前请注意，部分页面描述的是仍在准备中的事项。",
-        ],
-      ],
-      [
-        "关于编辑与广告",
-        [
-          "将来可能用部分广告收入维持运营。广告的有无和金额不会改变文章评价，所有广告都会清楚标明。",
-        ],
-      ],
-    ]),
+    ),
     "editorial-policy": zh(
       "编辑方针",
-      "为提供可靠、易懂的信息，写文章时重视的事项。",
+      "为确保信息可靠易懂而坚持的5项编辑方针：可追溯出处、医生审核、订正记录、广告与编辑分离、透明的制作流程。",
       [
         [
           "1. 提供可以追溯证据的信息",
@@ -581,92 +589,108 @@ export const infoLocales: Record<
         ],
       ],
     ),
-    supervision: zh("医学审核", "审核者与审核范围清晰可见的透明审核体制。", [
+    supervision: zh(
+      "医学审核",
+      "介绍审核文章的医生、资格履历、审核范围与记录方式。同时说明医学审核并不保证个体疗效或安全性。",
       [
-        "审核体制正在准备中",
         [
-          "计划由医生进行审核。目前还没有完成审核的文章，也没有确定的审核医生介绍。合同与身份确认完成后，只刊登获得许可的信息。",
-          "千原良友医生的文章同样按此规则管理，按文章显示审核范围和审核日期。",
+          "审核体制正在准备中",
+          [
+            "计划由医生进行审核。目前还没有完成审核的文章，也没有确定的审核医生介绍。合同与身份确认完成后，只刊登获得许可的信息。",
+            "千原良友医生的文章同样按此规则管理，按文章显示审核范围和审核日期。",
+          ],
+        ],
+        [
+          "审核医生介绍将刊登的信息",
+          [
+            "计划刊登姓名、所属、专业领域、已确认的资格与经历、个人简介链接和审核过的文章。如与广告主有利害关系，也会说明。",
+          ],
+        ],
+        [
+          "按文章记录审核",
+          [
+            "确认文章整体医学表述、与引用信息的一致性、效果与风险表述。刊登审核日期和确认范围，内容大幅变更时重新审核。审核不保证个别治疗效果和安全性。",
+          ],
         ],
       ],
+    ),
+    advertising: zh(
+      "广告刊登",
+      "说明来自诊所与医疗机构的横幅广告刊登方针、预定版面、内容确认标准与刊登流程。",
       [
-        "审核医生介绍将刊登的信息",
         [
-          "计划刊登姓名、所属、专业领域、已确认的资格与经历、个人简介链接和审核过的文章。如与广告主有利害关系，也会说明。",
+          "关于广告刊登咨询",
+          [
+            "将来计划接受诊所、医疗机构等的横幅广告。目前正在准备招募，尚未投放广告。费用、刊登期限和媒体资料将在运营体制完善后公开。",
+          ],
+        ],
+        [
+          "计划中的刊登位置",
+          [
+            "设想在首页文章下方、文章详情侧边栏和正文下方刊登。在电脑和手机上保持易读性，采用不妨碍医疗信息阅读的位置。",
+          ],
+        ],
+        [
+          "刊登内容的审核与标示方针",
+          [
+            "确认投放主体、链接目标、表述和刊登期限后刊登。逐一确认是否符合医疗广告相关法规和指南，不接受保证治疗效果或无根据的优良性表述。",
+            "会标明广告，与编辑文章区分。不会设立通过付费在文章中获得推荐或审核者推荐的机制。",
+          ],
+        ],
+        [
+          "刊登流程",
+          [
+            "计划流程为：咨询→确认广告内容与链接→确认条件与合同→提交素材→确认显示→开始刊登。需要个别法律判断的表述会向专家确认。",
+          ],
         ],
       ],
+    ),
+    privacy: zh(
+      "隐私政策",
+      "说明通过咨询表单与文章搜索处理的信息、发送对象与保存方式，以及托管服务商保存的访问日志的处理。",
       [
-        "按文章记录审核",
         [
-          "确认文章整体医学表述、与引用信息的一致性、效果与风险表述。刊登审核日期和确认范围，内容大幅变更时重新审核。审核不保证个别治疗效果和安全性。",
+          "本站当前功能",
+          [
+            "文章搜索在浏览器的本地执行。咨询表单获取姓名、邮箱、咨询类别和正文，用于回复、文章内容核对和运营对应。托管服务商保存的访问日志遵循该服务商的处理方式。",
+          ],
+        ],
+        [
+          "咨询中收到的信息",
+          [
+            "表单内容会转发到运营者邮箱。不保存在站内数据库，但可能残留在邮箱或备份中。本窗口不处理诊疗事务，请不要发送病史、检查结果等详细医疗信息。",
+          ],
+        ],
+        [
+          "正式发布时的完善",
+          [
+            "运营主体、地址、联系方式、保存期限、安全管理、第三方提供、公开等请求方式，将结合实际运营体制确定并在发布前更新。引入访问分析或广告服务时，会说明发送的信息、发送对象和利用目的。",
+          ],
         ],
       ],
-    ]),
-    advertising: zh("广告刊登", "为想了解再生医学的人恰当传达医疗机构信息。", [
+    ),
+    contact: zh(
+      "联系我们",
+      "文章内容指正、采访与审核、广告刊登及运营相关咨询请使用此表单。不受理医疗咨询、诊断与治疗预约。",
       [
-        "关于广告刊登咨询",
         [
-          "将来计划接受诊所、医疗机构等的横幅广告。目前正在准备招募，尚未投放广告。费用、刊登期限和媒体资料将在运营体制完善后公开。",
+          "咨询窗口",
+          [
+            "受理文章内容指正、采访与审核、广告刊登、运营相关联系。不处理医疗咨询、诊断和治疗预约。",
+          ],
+        ],
+        [
+          "关于文章内容的指正",
+          [
+            "请告知对象文章 URL、相关位置、指正内容，如有参考资料请提供来源。请不要写个人症状和检查结果，编辑会核对内容。",
+            "目前以日文页面的咨询表单为主要渠道，英文和中文咨询可在正文栏填写。",
+          ],
         ],
       ],
-      [
-        "计划中的刊登位置",
-        [
-          "设想在首页文章下方、文章详情侧边栏和正文下方刊登。在电脑和手机上保持易读性，采用不妨碍医疗信息阅读的位置。",
-        ],
-      ],
-      [
-        "刊登内容的审核与标示方针",
-        [
-          "确认投放主体、链接目标、表述和刊登期限后刊登。逐一确认是否符合医疗广告相关法规和指南，不接受保证治疗效果或无根据的优良性表述。",
-          "会标明广告，与编辑文章区分。不会设立通过付费在文章中获得推荐或审核者推荐的机制。",
-        ],
-      ],
-      [
-        "刊登流程",
-        [
-          "计划流程为：咨询→确认广告内容与链接→确认条件与合同→提交素材→确认显示→开始刊登。需要个别法律判断的表述会向专家确认。",
-        ],
-      ],
-    ]),
-    privacy: zh("隐私政策", "关于通过咨询表单等获取信息的处理方式。", [
-      [
-        "本站当前功能",
-        [
-          "文章搜索在浏览器的本地执行。咨询表单获取姓名、邮箱、咨询类别和正文，用于回复、文章内容核对和运营对应。托管服务商保存的访问日志遵循该服务商的处理方式。",
-        ],
-      ],
-      [
-        "咨询中收到的信息",
-        [
-          "表单内容会转发到运营者邮箱。不保存在站内数据库，但可能残留在邮箱或备份中。本窗口不处理诊疗事务，请不要发送病史、检查结果等详细医疗信息。",
-        ],
-      ],
-      [
-        "正式发布时的完善",
-        [
-          "运营主体、地址、联系方式、保存期限、安全管理、第三方提供、公开等请求方式，将结合实际运营体制确定并在发布前更新。引入访问分析或广告服务时，会说明发送的信息、发送对象和利用目的。",
-        ],
-      ],
-    ]),
-    contact: zh("联系我们", "关于文章意见、审核、广告刊登咨询的窗口。", [
-      [
-        "咨询窗口",
-        [
-          "受理文章内容指正、采访与审核、广告刊登、运营相关联系。不处理医疗咨询、诊断和治疗预约。",
-        ],
-      ],
-      [
-        "关于文章内容的指正",
-        [
-          "请告知对象文章 URL、相关位置、指正内容，如有参考资料请提供来源。请不要写个人症状和检查结果，编辑会核对内容。",
-          "目前以日文页面的咨询表单为主要渠道，英文和中文咨询可在正文栏填写。",
-        ],
-      ],
-    ]),
+    ),
     sources: zh(
       "信息来源与参考网站",
-      "以大学、研究机构、学会、行政和监管机构的公开信息为中心进行核对。",
+      "本站文章依据的信息来源一览。以大学、研究机构、学会、行政与监管机构公开资料为主，附上可自行核对的出处。",
       [
         [
           "核对的主要来源",
@@ -684,7 +708,7 @@ export const infoLocales: Record<
     ),
     guide: zh(
       "初次阅读指南：学习方法",
-      "从哪里读起？按目的的学习顺序和本站使用方法。",
+      "按目的介绍本站的阅读顺序。建议先读的第一篇、从基础到治疗考虑的路径、搜索与术语表的用法。",
       [
         [
           "如果只读一篇文章",
@@ -711,7 +735,7 @@ export const infoLocales: Record<
     ),
     glossary: zh(
       "术语表：再生医学用语",
-      "干细胞、分化、培养……解释新闻和说明资料中出现的词语。",
+      "以出处为依据解释再生医学新闻与说明资料中出现的词语，如干细胞、分化、培养、证据等。",
       [
         [
           "关于细胞的词语",
@@ -738,7 +762,7 @@ export const infoLocales: Record<
     ),
     faq: zh(
       "常见问题",
-      "费用、疼痛、就诊、咨询去向。整理读者可能提出的问题。",
+      "整理关于学习方法、治疗考虑、费用与咨询去向等读者可能提出的问题与回答。个人医疗咨询请前往医疗机构。",
       [
         [
           "关于学习方法的问题",
@@ -763,32 +787,36 @@ export const infoLocales: Record<
         ],
       ],
     ),
-    safety: zh("安全性", "为冷静比较效果与风险，提供安全性的标尺。", [
+    safety: zh(
+      "安全性",
+      "再生医学的安全性需按每种治疗确认。整理手续、数据、体制三类确认记录，以及应当停下来重新考虑的信号。",
       [
-        "安全性按每种治疗确认",
         [
-          "不能笼统说“再生医学安全/危险”。细胞种类、制作方法、给药方式、目标疾病和实施体制的组合不同，评价也不同。",
-          "确认的起点是：报告了哪些伤害、频率如何、进行了多长期随访。",
+          "安全性按每种治疗确认",
+          [
+            "不能笼统说“再生医学安全/危险”。细胞种类、制作方法、给药方式、目标疾病和实施体制的组合不同，评价也不同。",
+            "确认的起点是：报告了哪些伤害、频率如何、进行了多长期随访。",
+          ],
+        ],
+        [
+          "想确认的三项记录",
+          [
+            "一是手续记录：是否经过法规规定的审查和申报；二是数据记录：是否有依据研究和副作用报告；三是体制记录：是否规定了紧急应对和治疗后随访。",
+            "看看说明资料和同意文件中是否写明这些。",
+          ],
+        ],
+        [
+          "犹豫时的信号",
+          [
+            "没有依据说明、没有风险说明、催促签约、不让比较其他选择——出现这些迹象请停下来。",
+            "听取主治医生或第二诊疗意见等无利害第三方意见会有帮助。",
+          ],
         ],
       ],
-      [
-        "想确认的三项记录",
-        [
-          "一是手续记录：是否经过法规规定的审查和申报；二是数据记录：是否有依据研究和副作用报告；三是体制记录：是否规定了紧急应对和治疗后随访。",
-          "看看说明资料和同意文件中是否写明这些。",
-        ],
-      ],
-      [
-        "犹豫时的信号",
-        [
-          "没有依据说明、没有风险说明、催促签约、不让比较其他选择——出现这些迹象请停下来。",
-          "听取主治医生或第二诊疗意见等无利害第三方意见会有帮助。",
-        ],
-      ],
-    ]),
+    ),
     regulation: zh(
       "制度与法规",
-      "安全性确保法、药机法、医疗广告。在寻找治疗前想了解的框架。",
+      "整理再生医学等安全性确保法、药机法、认定委员会与提供计划、医疗广告规则。寻找治疗前应了解的制度框架。",
       [
         [
           "两部法律的作用",
@@ -813,142 +841,172 @@ export const infoLocales: Record<
         ],
       ],
     ),
-    terms: zh("使用条款", "使用本站时的约定。正式发布前的草案。", [
+    terms: zh(
+      "使用条款",
+      "本站信息的使用、引用与链接、免责与变更相关的使用条款。信息不能替代诊断与治疗，内容可能不经预告而变更。",
       [
-        "关于信息利用",
         [
-          "刊登信息以提供一般信息为目的，不能代替诊断与治疗。个别判断请务必咨询医生。文章内容会更新，不保证最新性和完整性。",
-          "来源资料更新时，以来源方为准。",
+          "关于信息利用",
+          [
+            "刊登信息以提供一般信息为目的，不能代替诊断与治疗。个别判断请务必咨询医生。文章内容会更新，不保证最新性和完整性。",
+            "来源资料更新时，以来源方为准。",
+          ],
+        ],
+        [
+          "关于引用与链接",
+          [
+            "在标明来源基础上的简短引用，以及首页、文章的链接原则上欢迎。但请避免易引起误解的截取和易被误认为广告的标示。",
+            "正式发布时将追加营利性转载和 API 大量获取的条件。",
+          ],
+        ],
+        [
+          "免责与变更",
+          [
+            "本站以提供一般信息为目的，不免除运营者因故意或重大过失等、依法不能免责的责任。条款与刊登内容可能不经预告变更，重要变更将在本页通知。",
+            "不明事项请通过联系页面联系。",
+          ],
         ],
       ],
+    ),
+    corrections: zh(
+      "勘误与更新",
+      "公开发现事实错误时的订正方法、文章更新与再确认规则，以及向编辑部反映问题的方式。",
       [
-        "关于引用与链接",
         [
-          "在标明来源基础上的简短引用，以及首页、文章的链接原则上欢迎。但请避免易引起误解的截取和易被误认为广告的标示。",
-          "正式发布时将追加营利性转载和 API 大量获取的条件。",
+          "勘误应对",
+          [
+            "发现事实错误时，核对内容后迅速修正，重要勘误在文章中记录勘误位置、理由和日期。区分轻微文字修正与涉及内容的勘误处理。",
+          ],
+        ],
+        [
+          "更新标准",
+          [
+            "制度变更或出现新知识时，重新核对相关文章。请以每篇文章的更新日期判断信息新鲜度。引用旧信息时注意发表时间。",
+          ],
+        ],
+        [
+          "指正方法",
+          [
+            "请通过联系页面告知对象 URL、相关位置、指正内容和参考资料来源。编辑核对，必要时向审核者确认。",
+          ],
         ],
       ],
+    ),
+    citations: zh(
+      "引用与转载",
+      "本站文章与图表的引用、链接与转载条件。注明出处时允许短引，全文转载或教育用途请通过咨询页联系。",
       [
-        "免责与变更",
         [
-          "本站以提供一般信息为目的，不免除运营者因故意或重大过失等、依法不能免责的责任。条款与刊登内容可能不经预告变更，重要变更将在本页通知。",
-          "不明事项请通过联系页面联系。",
+          "关于链接",
+          [
+            "原则上欢迎链接首页和各文章，无需事先联系。但请避免在易引起误解的语境中引用，或假装官方关系的标示。",
+          ],
+        ],
+        [
+          "引用条件",
+          [
+            "在标明来源（网站名、文章名、URL）基础上的简短引用可行。全文转载、翻译转载和营利性大量利用，将在正式发布时另定条件。",
+          ],
+        ],
+        [
+          "图片的处理",
+          [
+            "站内图版和插图请勿擅自转载。出于教育、报道目的的使用请通过联系页面咨询。",
+          ],
         ],
       ],
-    ]),
-    corrections: zh("勘误与更新", "公开出错时的应对和文章更新规则。", [
+    ),
+    disclaimer: zh(
+      "重要说明",
+      "本站信息不能替代诊断与治疗。整理医学知识变化带来的信息局限、与广告的区别以及使用注意事项。",
       [
-        "勘误应对",
         [
-          "发现事实错误时，核对内容后迅速修正，重要勘误在文章中记录勘误位置、理由和日期。区分轻微文字修正与涉及内容的勘误处理。",
+          "不能代替诊断与治疗",
+          [
+            "刊登信息为一般解说，不表示个别诊断和治疗方针。症状与治疗判断请务必咨询医生。紧急时请迅速到医疗机构就诊。",
+          ],
+        ],
+        [
+          "信息的局限",
+          [
+            "医学知识与制度会变化。请确认文章更新日期与来源发表时间，并与最新信息对照。刊登内容有误或不明之处，请通过联系告知。",
+          ],
+        ],
+        [
+          "与广告的区分",
+          [
+            "广告必须标明，与编辑文章区分。广告内容由广告主负责，不表示本站推荐。",
+          ],
         ],
       ],
+    ),
+    accessibility: zh(
+      "无障碍",
+      "说明本站为让每个人都易于阅读所做的努力，包括文字大小、色彩对比、键盘操作与屏幕阅读器支持。",
       [
-        "更新标准",
         [
-          "制度变更或出现新知识时，重新核对相关文章。请以每篇文章的更新日期判断信息新鲜度。引用旧信息时注意发表时间。",
+          "目标",
+          [
+            "考虑文字大小、颜色对比、键盘操作和读屏朗读。专业术语附带说明，坚持先展示要点的结构。",
+          ],
+        ],
+        [
+          "目前的应对",
+          [
+            "整理标题结构、添加替代文本、确保足够行距与留白。通过跳转正文链接和面包屑方便移动。",
+          ],
+        ],
+        [
+          "接受改进",
+          ["如有难读或难操作之处，请通过联系页面告知。将根据反馈依次改进。"],
         ],
       ],
+    ),
+    "site-guide": zh(
+      "网站地图",
+      "本站全部页面一览。可按目的查找文章、分类、术语表与运营方针等页面。",
       [
-        "指正方法",
         [
-          "请通过联系页面告知对象 URL、相关位置、指正内容和参考资料来源。编辑核对，必要时向审核者确认。",
+          "查找文章",
+          [
+            "文章一览页可找全部文章，分类页可按主题查找，关键词搜索可组合词语与分类。推荐先看学习指南与基础分类。",
+          ],
+        ],
+        [
+          "运营与方针页面",
+          [
+            "在关于本站、编辑方针、医学审核、广告刊登、使用条款、隐私政策、勘误与更新、引用与转载、重要说明、无障碍等页面公开运营想法。",
+          ],
+        ],
+        [
+          "遇到困难时",
+          [
+            "常见问题与术语表可消除疑问，仍需联系运营时请到联系页面。医疗咨询不予处理，身体问题请咨询医疗机构。",
+          ],
         ],
       ],
-    ]),
-    citations: zh("引用与转载", "整理文章引用、链接和转载的条件。", [
+    ),
+    updates: zh(
+      "更新信息",
+      "汇总文章新增、审核状态更新与网站改进的通知。重要变更与勘误记录也在此公开。",
       [
-        "关于链接",
         [
-          "原则上欢迎链接首页和各文章，无需事先联系。但请避免在易引起误解的语境中引用，或假装官方关系的标示。",
+          "最近的更新",
+          [
+            "按分类整理文章并完善阅读顺序指南。每篇文章的更新日期显示在文章页。",
+          ],
+        ],
+        [
+          "今后的计划",
+          [
+            "计划完成医生审核、重新精查来源、追加图版和改进搜索功能。从完成审核的文章起依次切换显示。",
+          ],
+        ],
+        [
+          "过去通知的处理",
+          ["正式发布后，将在本页通知重大变更与勘误，记录日期与变更内容。"],
         ],
       ],
-      [
-        "引用条件",
-        [
-          "在标明来源（网站名、文章名、URL）基础上的简短引用可行。全文转载、翻译转载和营利性大量利用，将在正式发布时另定条件。",
-        ],
-      ],
-      [
-        "图片的处理",
-        [
-          "站内图版和插图请勿擅自转载。出于教育、报道目的的使用请通过联系页面咨询。",
-        ],
-      ],
-    ]),
-    disclaimer: zh("重要说明", "为安全使用本站信息，关于免责与请求的说明。", [
-      [
-        "不能代替诊断与治疗",
-        [
-          "刊登信息为一般解说，不表示个别诊断和治疗方针。症状与治疗判断请务必咨询医生。紧急时请迅速到医疗机构就诊。",
-        ],
-      ],
-      [
-        "信息的局限",
-        [
-          "医学知识与制度会变化。请确认文章更新日期与来源发表时间，并与最新信息对照。刊登内容有误或不明之处，请通过联系告知。",
-        ],
-      ],
-      [
-        "与广告的区分",
-        [
-          "广告必须标明，与编辑文章区分。广告内容由广告主负责，不表示本站推荐。",
-        ],
-      ],
-    ]),
-    accessibility: zh("无障碍", "以人人易读为目标的举措与想法。", [
-      [
-        "目标",
-        [
-          "考虑文字大小、颜色对比、键盘操作和读屏朗读。专业术语附带说明，坚持先展示要点的结构。",
-        ],
-      ],
-      [
-        "目前的应对",
-        [
-          "整理标题结构、添加替代文本、确保足够行距与留白。通过跳转正文链接和面包屑方便移动。",
-        ],
-      ],
-      [
-        "接受改进",
-        ["如有难读或难操作之处，请通过联系页面告知。将根据反馈依次改进。"],
-      ],
-    ]),
-    "site-guide": zh("网站地图", "本站全部页面的指南，可按目的查找。", [
-      [
-        "查找文章",
-        [
-          "文章一览页可找全部文章，分类页可按主题查找，关键词搜索可组合词语与分类。推荐先看学习指南与基础分类。",
-        ],
-      ],
-      [
-        "运营与方针页面",
-        [
-          "在关于本站、编辑方针、医学审核、广告刊登、使用条款、隐私政策、勘误与更新、引用与转载、重要说明、无障碍等页面公开运营想法。",
-        ],
-      ],
-      [
-        "遇到困难时",
-        [
-          "常见问题与术语表可消除疑问，仍需联系运营时请到联系页面。医疗咨询不予处理，身体问题请咨询医疗机构。",
-        ],
-      ],
-    ]),
-    updates: zh("更新信息", "汇总文章新增与网站改进的通知。", [
-      [
-        "最近的更新",
-        ["按分类整理文章并完善阅读顺序指南。每篇文章的更新日期显示在文章页。"],
-      ],
-      [
-        "今后的计划",
-        [
-          "计划完成医生审核、重新精查来源、追加图版和改进搜索功能。从完成审核的文章起依次切换显示。",
-        ],
-      ],
-      [
-        "过去通知的处理",
-        ["正式发布后，将在本页通知重大变更与勘误，记录日期与变更内容。"],
-      ],
-    ]),
+    ),
   },
 };

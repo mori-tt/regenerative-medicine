@@ -7,13 +7,19 @@ import {
 } from "@/content/articles";
 import { allFeaturedSlugsFor } from "@/content/subcategories";
 import { CategoryNavigation } from "@/components/category-navigation";
-import { ArticleCard, Breadcrumbs, toCardData } from "@/components/content";
+import {
+  ArticleCard,
+  Breadcrumbs,
+  JsonLd,
+  toCardData,
+} from "@/components/content";
 import { pageMetadata } from "@/lib/site";
+import { webPageNode } from "@/lib/structured-data";
 import { ArticleBrowser } from "@/components/article-browser";
 import { StockReveal } from "@/components/stock-reveal";
 export const metadata = pageMetadata(
   "記事一覧",
-  "再生医療・幹細胞の基礎知識、治療の検討、研究の読み方に関する記事一覧。",
+  "再生医療・幹細胞の基礎知識、治療の検討、研究の読み方に関する公開中の記事一覧。医師監修済みの記事から順に公開しています。",
   "/articles/",
 );
 export default function ArticlesPage() {
@@ -26,6 +32,15 @@ export default function ArticlesPage() {
   return (
     <div className="container inner-page">
       <Breadcrumbs items={[{ label: "記事一覧" }]} />
+      <JsonLd
+        data={webPageNode(
+          "ja",
+          "/articles/",
+          "記事一覧",
+          "再生医療・幹細胞の基礎知識、治療の検討、研究の読み方に関する公開中の記事一覧。医師監修済みの記事から順に公開しています。",
+          "CollectionPage",
+        )}
+      />
       <div className="page-heading">
         <span className="eyebrow">THE JOURNAL</span>
         <h1>記事一覧</h1>

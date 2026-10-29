@@ -314,10 +314,7 @@ export function ContactForm({
           {copy.error}
         </p>
       )}
-      <form
-        className="contact-form"
-        onSubmit={handleConfirm}
-      >
+      <form className="contact-form" onSubmit={handleConfirm}>
         <input type="hidden" name="started_at" value={startedAt} />
         <input type="hidden" name="locale" value={locale} />
         <input type="hidden" name="return_path" value={returnPath} />

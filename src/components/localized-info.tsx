@@ -1,7 +1,8 @@
 import Link from "next/link";
 import type { SiteLocale } from "@/content/locales";
 import { infoLocales } from "@/content/info-locales";
-import { Breadcrumbs } from "./content";
+import { Breadcrumbs, JsonLd } from "./content";
+import { webPageNode } from "@/lib/structured-data";
 import { ReviewerProfile } from "./reviewer-profile";
 import { SourceDirectory } from "./source-directory";
 import { ContactForm } from "./contact-form";
@@ -69,6 +70,15 @@ export function LocalizedInfo({
           homeHref={`/${locale}/`}
           locale={locale}
           items={[{ label: content.title }]}
+        />
+        <JsonLd
+          data={webPageNode(
+            locale,
+            `/${slug}/`,
+            content.title,
+            content.description,
+            slug === "contact" ? "ContactPage" : "WebPage",
+          )}
         />
         <div className="page-heading">
           <span className="eyebrow">{copy.eyebrow}</span>

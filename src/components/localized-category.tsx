@@ -18,7 +18,8 @@ import { LocalizedArticleGrid } from "./localized-articles";
 import { StockReveal } from "./stock-reveal";
 import { FeaturedButton } from "./featured-filter";
 import { CategoryNavigation } from "./category-navigation";
-import { Breadcrumbs } from "./content";
+import { Breadcrumbs, JsonLd } from "./content";
+import { webPageNode } from "@/lib/structured-data";
 
 const categoryDescriptions = {
   en: {
@@ -167,6 +168,15 @@ export function LocalizedCategory({
             locale={locale}
             items={[{ label: title }]}
           />
+          <JsonLd
+            data={webPageNode(
+              locale,
+              `/categories/${slug}/`,
+              title,
+              description,
+              "CollectionPage",
+            )}
+          />
           <div className="page-heading">
             <span className="eyebrow">{copy.eyebrow}</span>
             <h1>{title}</h1>
@@ -197,6 +207,15 @@ export function LocalizedCategory({
           homeHref={`/${locale}/`}
           locale={locale}
           items={[{ label: title }]}
+        />
+        <JsonLd
+          data={webPageNode(
+            locale,
+            `/categories/${slug}/`,
+            title,
+            description,
+            "CollectionPage",
+          )}
         />
         <div className="page-heading">
           <span className="eyebrow">{copy.eyebrow}</span>

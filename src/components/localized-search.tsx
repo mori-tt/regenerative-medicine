@@ -2,7 +2,8 @@ import { availableCategories } from "@/content/articles";
 import { localizedCategoryName, type SiteLocale } from "@/content/locales";
 import { searchIndexPath } from "@/lib/search-index";
 import { ArticleSearch } from "./article-search";
-import { Breadcrumbs } from "./content";
+import { Breadcrumbs, JsonLd } from "./content";
+import { webPageNode } from "@/lib/structured-data";
 
 const chrome = {
   en: {
@@ -29,6 +30,15 @@ export function LocalizedSearch({ locale }: { locale: SiteLocale }) {
           homeHref={`/${locale}/`}
           locale={locale}
           items={[{ label: copy.crumb }]}
+        />
+        <JsonLd
+          data={webPageNode(
+            locale,
+            "/search/",
+            copy.crumb,
+            copy.lead,
+            "SearchResultsPage",
+          )}
         />
         <div className="page-heading">
           <span className="eyebrow">FIND YOUR NEXT READ</span>

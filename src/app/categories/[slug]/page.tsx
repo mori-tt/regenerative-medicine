@@ -10,7 +10,12 @@ import {
   stockArticles,
   visibleArticles,
 } from "@/content/articles";
-import { ArticleCard, Breadcrumbs, toCardData } from "@/components/content";
+import {
+  ArticleCard,
+  Breadcrumbs,
+  JsonLd,
+  toCardData,
+} from "@/components/content";
 import {
   featuredSlugsFor,
   groupArticlesBySubcategory,
@@ -19,6 +24,7 @@ import { StockReveal } from "@/components/stock-reveal";
 import { FeaturedButton } from "@/components/featured-filter";
 import { CategoryNavigation } from "@/components/category-navigation";
 import { pageMetadata } from "@/lib/site";
+import { webPageNode } from "@/lib/structured-data";
 export const dynamicParams = false;
 export function generateStaticParams() {
   return categories.map((c) => ({ slug: c.slug }));
@@ -69,6 +75,15 @@ export default async function CategoryPage({
     return (
       <div className="container inner-page">
         <Breadcrumbs items={[{ label: category.label }]} />
+        <JsonLd
+          data={webPageNode(
+            "ja",
+            `/categories/${slug}/`,
+            category.label,
+            category.description,
+            "CollectionPage",
+          )}
+        />
         <div className="page-heading">
           <span className="eyebrow">{category.en}</span>
           <h1>{category.label}</h1>
@@ -89,6 +104,15 @@ export default async function CategoryPage({
   return (
     <div className="container inner-page">
       <Breadcrumbs items={[{ label: category.label }]} />
+      <JsonLd
+        data={webPageNode(
+          "ja",
+          `/categories/${slug}/`,
+          category.label,
+          category.description,
+          "CollectionPage",
+        )}
+      />
       <div className="page-heading">
         <span className="eyebrow">{category.en}</span>
         <h1>{category.label}</h1>

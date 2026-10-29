@@ -26,7 +26,7 @@ export const jsrmChapters: JsrmChapter[] = [
     eyebrow: "OVERVIEW",
     title: "日本再生医療学会とは何か",
     description:
-      "学会の目的、対象とする領域、患者さんが知っておきたい立ち位置を整理します。",
+      "日本再生医療学会とは何か。学会の目的、対象とする研究領域、患者さんにとってどんな存在なのかを公式資料から整理する特集の導入です。",
     sections: [
       {
         title: "学会の基本的な役割",
@@ -60,7 +60,7 @@ export const jsrmChapters: JsrmChapter[] = [
     eyebrow: "HISTORY",
     title: "設立背景と沿革",
     description:
-      "細胞療法研究会から始まった学会の歩みと、領域の広がりをたどります。",
+      "1978年の細胞療法研究会を起点に、日本再生医療学会が歩んだ変遷と、対象領域がどう広がってきたかを公式年表からたどります。",
     sections: [
       {
         title: "前身からの出発",
@@ -94,7 +94,7 @@ export const jsrmChapters: JsrmChapter[] = [
     eyebrow: "ACADEMIC ACTIVITIES",
     title: "学術集会・学会誌・教育",
     description:
-      "学会が研究成果を共有し、専門家を育成する仕組みを読み解きます。",
+      "学術集会・学会誌・教育プログラムを通じて、日本再生医療学会が研究成果を共有し専門家を育成する仕組みを読み解きます。学会活動の中核です。",
     sections: [
       {
         title: "学術集会は何のためにあるか",
@@ -128,7 +128,7 @@ export const jsrmChapters: JsrmChapter[] = [
     eyebrow: "CERTIFICATION",
     title: "認定制度と資格の意味",
     description:
-      "再生医療認定医、臨床培養士などの制度と、患者さんが誤解しやすい点を整理します。",
+      "再生医療認定医・臨床培養士などの認定制度の内容と、患者さんが誤解しやすい「認定＝治療の保証」でない点を整理します。資格の意味を正しく読む章です。",
     sections: [
       {
         title: "複数の職種を対象にする制度",
@@ -162,7 +162,7 @@ export const jsrmChapters: JsrmChapter[] = [
     eyebrow: "LAW & REGULATION",
     title: "再生医療と法制度",
     description:
-      "再生医療等安全性確保法、細胞加工、提供計画を患者目線で整理します。",
+      "再生医療等安全性確保法の位置づけ、細胞加工の管理、提供計画の届出を患者目線で整理します。制度情報は安全性を考える材料のひとつです。",
     sections: [
       {
         title: "制度情報は安全性を考える材料",
@@ -198,7 +198,7 @@ export const jsrmChapters: JsrmChapter[] = [
     eyebrow: "PUBLIC RESEARCH",
     title: "公的研究と産学官連携",
     description:
-      "JST・AMEDなどと連携する公的研究情報を、研究と治療の違いから読み解きます。",
+      "JST・AMEDなどと連携する公的研究情報の探し方と、「研究が進んでいる」ことと「患者が受けられる治療」の違いを読み解きます。",
     sections: [
       {
         title: "公的研究の情報を置く意味",
@@ -233,7 +233,7 @@ export const jsrmChapters: JsrmChapter[] = [
     eyebrow: "CELL PROCESSING",
     title: "細胞加工施設と品質管理",
     description:
-      "細胞を採取・加工・保管・投与する工程と、品質管理がなぜ重要かを説明します。",
+      "細胞を採取・加工・保管・投与する各工程と、細胞加工施設での品質管理が安全性にとってなぜ重要かを説明します。治療の裏側にある工程です。",
     sections: [
       {
         title: "治療の裏側にある工程",
@@ -267,7 +267,7 @@ export const jsrmChapters: JsrmChapter[] = [
     eyebrow: "COMPENSATION",
     title: "補償制度と治療後の備え",
     description:
-      "自由診療・臨床研究に関わる補償制度と、契約前に確認したいことを整理します。",
+      "自由診療・臨床研究に関わる補償制度の考え方と、もしもの場合に備えて契約前に確認したい事項を整理します。治療後の備えの章です。",
     sections: [
       {
         title: "補償制度が扱うもの",
@@ -301,7 +301,7 @@ export const jsrmChapters: JsrmChapter[] = [
     eyebrow: "MEMBERSHIP & EDUCATION",
     title: "会員制度と学びの入口",
     description:
-      "誰が学会に参加し、どんな情報にアクセスできるのかを、一般の読者にも分かるように整理します。",
+      "日本再生医療学会には誰が参加し、どんな情報にアクセスできるのか。会員制度と学びの入口を一般の読者にも分かるように整理します。",
     sections: [
       {
         title: "個人・法人が参加できる学会",
@@ -335,7 +335,7 @@ export const jsrmChapters: JsrmChapter[] = [
     eyebrow: "FOR PATIENTS & REVIEW",
     title: "患者さんの読み方と千原先生の監修",
     description:
-      "学会所属、医師監修、治療の根拠を混同せずに情報を読むための最後のチェックポイントです。",
+      "学会所属・医師監修・治療の根拠を混同せずに情報を読むための最後のチェックポイント。患者さんの読み方と医師監修の位置づけを整理します。",
     sections: [
       {
         title: "学会所属は一つの手がかり",

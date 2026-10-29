@@ -25,6 +25,33 @@ export function organizationNode() {
   };
 }
 
+/** 個別ページ用の WebPage ノード。isPartOf / publisher でホームの WebSite・Organization に接続する。 */
+export function webPageNode(
+  locale: SiteLocaleCode,
+  path: string,
+  name: string,
+  description: string,
+  type:
+    | "WebPage"
+    | "ContactPage"
+    | "CollectionPage"
+    | "SearchResultsPage" = "WebPage",
+) {
+  const url = absolute(localizedPath(path, locale));
+  return {
+    "@type": type,
+    "@id": `${url}#webpage`,
+    url,
+    name,
+    description,
+    inLanguage: inLanguage[locale],
+    isPartOf: {
+      "@id": `${absolute(localizedPath("/", locale))}#website`,
+    },
+    publisher: { "@id": `${absolute()}#organization` },
+  };
+}
+
 /** トップページ用：WebSite（サイト内検索の SearchAction 付き）と Organization を @graph でまとめる。 */
 export function siteGraph(locale: SiteLocaleCode) {
   const home = absolute(localizedPath("/", locale));

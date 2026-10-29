@@ -11,7 +11,8 @@ import { LocalizedArticleCard, localizedCardData } from "./localized-article";
 import { ArticleBrowser } from "./article-browser";
 import { CategoryNavigation } from "./category-navigation";
 import { StockReveal } from "./stock-reveal";
-import { Breadcrumbs } from "./content";
+import { Breadcrumbs, JsonLd } from "./content";
+import { webPageNode } from "@/lib/structured-data";
 import type { SiteLocale } from "@/content/locales";
 
 const chrome = {
@@ -20,6 +21,8 @@ const chrome = {
     list: "Articles",
     title: "Articles",
     lead: "Deepen your understanding, one step at a time. Start with topics that interest you, and read at your own pace.",
+    description:
+      "Translated editorial manuscripts about regenerative medicine and stem cells.",
     navLabel: "Browse by category",
     listHeading: "All published articles",
     all: "All articles",
@@ -30,6 +33,7 @@ const chrome = {
     list: "文章列表",
     title: "文章列表",
     lead: "一个一个加深理解。从感兴趣的主题开始，按自己的节奏阅读。",
+    description: "关于再生医学和干细胞的中文编辑原稿。",
     navLabel: "按主题浏览",
     listHeading: "已发布文章列表",
     all: "全部文章",
@@ -95,12 +99,23 @@ export function LocalizedArticles({
   return (
     <div className="container inner-page">
       {!embedded && (
-        <Breadcrumbs
-          homeLabel={copy.home}
-          homeHref={`/${locale}/`}
-          locale={locale}
-          items={[{ label: copy.list }]}
-        />
+        <>
+          <Breadcrumbs
+            homeLabel={copy.home}
+            homeHref={`/${locale}/`}
+            locale={locale}
+            items={[{ label: copy.list }]}
+          />
+          <JsonLd
+            data={webPageNode(
+              locale,
+              "/articles/",
+              copy.title,
+              copy.description,
+              "CollectionPage",
+            )}
+          />
+        </>
       )}
       <div className="page-heading">
         <span className="eyebrow">THE JOURNAL</span>
