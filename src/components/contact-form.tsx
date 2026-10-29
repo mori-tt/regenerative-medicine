@@ -75,6 +75,8 @@ const chrome = {
     agreed: "同意する",
     notAgreed: "未同意",
     verifying: "セキュリティ確認中…完了すると送信できます",
+    verifyTimeout:
+      "セキュリティ確認が完了しない場合は、ページを再読み込みしてやり直してください。",
   },
   en: {
     sent: "Your inquiry has been sent. We usually reply within three business days.",
@@ -113,6 +115,8 @@ const chrome = {
     agreed: "Agreed",
     notAgreed: "Not agreed",
     verifying: "Running security check… You can send once it completes",
+    verifyTimeout:
+      "If the security check does not complete, reload the page and try again.",
   },
   zh: {
     sent: "咨询已发送。通常3个工作日内联系。",
@@ -149,6 +153,7 @@ const chrome = {
     agreed: "同意",
     notAgreed: "未同意",
     verifying: "正在进行安全验证…完成后即可发送",
+    verifyTimeout: "如果安全验证未完成，请刷新页面后重试。",
   },
 } as const;
 
@@ -167,6 +172,7 @@ export function ContactForm({
   const [message, setMessage] = useState("");
   const [consent, setConsent] = useState(false);
   const [turnstileToken, setTurnstileToken] = useState("");
+  const [turnstileStalled, setTurnstileStalled] = useState(false);
   const turnstileBox = useRef<HTMLDivElement>(null);
   const turnstileId = useRef<string | undefined>(undefined);
   const returnPath = locale === "ja" ? "/contact/" : `/${locale}/contact/`;
@@ -202,6 +208,14 @@ export function ContactForm({
   // トークンは使い切りなので、失敗時は reset で再発行して再試行を可能にする。
   useEffect(() => {
     if (step !== "confirm" || staticHost) return;
+    setTurnstileStalled(false);
+    // ウィジェットが検証を完了しない（bot判定等で滞留した）場合に案内を出す
+    const stallTimer = window.setTimeout(() => {
+      setTurnstileToken((t) => {
+        if (!t) setTurnstileStalled(true);
+        return t;
+      });
+    }, 15000);
     const renderWidget = () => {
       if (!window.turnstile || !turnstileBox.current) return;
       if (turnstileId.current !== undefined) return;
@@ -212,7 +226,10 @@ export function ContactForm({
         language: locale === "zh" ? "zh-cn" : locale,
         callback: setTurnstileToken,
         "expired-callback": () => setTurnstileToken(""),
-        "error-callback": () => setTurnstileToken(""),
+        "error-callback": () => {
+          setTurnstileToken("");
+          setTurnstileStalled(true);
+        },
       });
     };
     if (window.turnstile) {
@@ -232,6 +249,7 @@ export function ContactForm({
         ?.addEventListener("load", renderWidget, { once: true });
     }
     return () => {
+      window.clearTimeout(stallTimer);
       if (turnstileId.current !== undefined && window.turnstile) {
         window.turnstile.remove(turnstileId.current);
         turnstileId.current = undefined;
@@ -361,7 +379,7 @@ export function ContactForm({
             <div ref={turnstileBox} />
             {!turnstileToken && (
               <p className="contact-turnstile-note" role="status">
-                {copy.verifying}
+                {turnstileStalled ? copy.verifyTimeout : copy.verifying}
               </p>
             )}
           </div>
