@@ -17,6 +17,7 @@ declare global {
           action?: string;
           theme?: "light" | "dark" | "auto";
           language?: string;
+          appearance?: "always" | "execute" | "interaction-only";
           callback?: (token: string) => void;
           "expired-callback"?: () => void;
           "error-callback"?: () => void;
@@ -224,6 +225,8 @@ export function ContactForm({
         action: "contact",
         theme: "light",
         language: locale === "zh" ? "zh-cn" : locale,
+        // ダッシュボードでManaged/Non-interactiveなら常時表示。InvisibleモードではUI自体が出ない（設定上の正常動作）
+        appearance: "always",
         callback: setTurnstileToken,
         "expired-callback": () => setTurnstileToken(""),
         "error-callback": () => {
