@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { articles, isVisibleArticle } from "@/content/articles";
 import type { CategorySlug } from "@/content/categories";
 import type { SiteLocale } from "@/content/locales";
 
@@ -123,13 +124,21 @@ export function ArticleClosing({
   locale?: ClosingLocale;
 }) {
   const c = copy[locale];
+  const questionsArticle = articles.find(
+    (a) => a.slug === "questions-before-treatment",
+  );
+  const links = c.links.filter(
+    (l) =>
+      !l.href.includes("/questions-before-treatment/") ||
+      (questionsArticle !== undefined && isVisibleArticle(questionsArticle)),
+  );
   return (
     <>
       <section className="article-closing">
         <h2>{c.heading}</h2>
         <p>{c.closing[category]}</p>
         <ul className="closing-links">
-          {c.links.map((l) => (
+          {links.map((l) => (
             <li key={l.href}>
               <Link href={l.href}>{l.label} →</Link>
             </li>
