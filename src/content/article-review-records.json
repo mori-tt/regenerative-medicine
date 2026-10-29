@@ -142,13 +142,13 @@
   "ips-cells-explained": {
     "slug": "ips-cells-explained",
     "title": "iPS細胞とは？仕組み・研究・限定された臨床応用をわかりやすく解説",
-    "lastEditedAt": "2026-10-27",
+    "lastEditedAt": "2026-10-02",
     "imageKey": "microscope",
     "publishAt": "2026-09-29",
     "publishedAt": "2026-09-29",
     "releaseTrack": "physician-authored",
-    "medicalStatus": "needs_medical_review",
-    "legalStatus": "needs_legal_editorial_review",
+    "medicalStatus": "reviewed",
+    "legalStatus": "reviewed",
     "evidenceStatus": "physician_authored_manuscript_no_editorial_expansion",
     "clarityStatus": "physician_manuscript_kept_verbatim",
     "riskFlags": [
@@ -160,7 +160,7 @@
     "reviewer": {
       "status": "reviewed",
       "name": "千原 良友",
-      "reviewedAt": "2026-10-02",
+      "reviewedAt": "2026-10-25",
       "scope": "執筆医師本人による医学的確認",
       "conflictOfInterest": ""
     },
@@ -7918,13 +7918,13 @@
   "stem-cell-treatment-contents": {
     "slug": "stem-cell-treatment-contents",
     "title": "幹細胞治療では、実際に何を体に入れているの？",
-    "lastEditedAt": "2026-10-27",
+    "lastEditedAt": "2026-09-30",
     "imageKey": "doctor-consultation",
     "publishAt": "2026-09-28",
     "publishedAt": "2026-09-28",
     "releaseTrack": "physician-authored",
-    "medicalStatus": "needs_medical_review",
-    "legalStatus": "needs_legal_editorial_review",
+    "medicalStatus": "reviewed",
+    "legalStatus": "reviewed",
     "evidenceStatus": "physician_authored_manuscript_no_editorial_expansion",
     "clarityStatus": "physician_manuscript_kept_verbatim",
     "riskFlags": [
@@ -7944,7 +7944,7 @@
     "reviewer": {
       "status": "reviewed",
       "name": "千原 良友",
-      "reviewedAt": "2026-09-30",
+      "reviewedAt": "2026-10-25",
       "scope": "執筆医師本人による医学的確認",
       "conflictOfInterest": ""
     },
@@ -8740,13 +8740,13 @@
   "doctor-stem-cells-basics": {
     "slug": "doctor-stem-cells-basics",
     "title": "幹細胞とは？再生医療で注目される理由をわかりやすく解説",
-    "lastEditedAt": "2026-10-27",
+    "lastEditedAt": "2026-09-28",
     "imageKey": "microscope",
     "publishAt": "2026-09-22",
     "publishedAt": "2026-09-28",
     "releaseTrack": "physician-authored",
-    "medicalStatus": "needs_medical_review",
-    "legalStatus": "needs_legal_editorial_review",
+    "medicalStatus": "reviewed",
+    "legalStatus": "reviewed",
     "evidenceStatus": "physician_authored_manuscript_no_editorial_expansion",
     "clarityStatus": "physician_manuscript_kept_verbatim",
     "riskFlags": [
@@ -8767,7 +8767,7 @@
     "reviewer": {
       "status": "reviewed",
       "name": "千原 良友",
-      "reviewedAt": "2026-09-28",
+      "reviewedAt": "2026-10-25",
       "scope": "執筆医師本人による医学的確認",
       "conflictOfInterest": ""
     },
@@ -8778,13 +8778,13 @@
   "doctor-regenerative-medicine": {
     "slug": "doctor-regenerative-medicine",
     "title": "再生医療とは？幹細胞を使った治療の仕組みを解説",
-    "lastEditedAt": "2026-10-27",
+    "lastEditedAt": "2026-09-29",
     "imageKey": "doctor-consultation",
     "publishAt": "2026-09-23",
     "publishedAt": "2026-09-28",
     "releaseTrack": "physician-authored",
-    "medicalStatus": "needs_medical_review",
-    "legalStatus": "needs_legal_editorial_review",
+    "medicalStatus": "reviewed",
+    "legalStatus": "reviewed",
     "evidenceStatus": "physician_authored_manuscript_no_editorial_expansion",
     "clarityStatus": "physician_manuscript_kept_verbatim",
     "riskFlags": [
@@ -8803,7 +8803,7 @@
     "reviewer": {
       "status": "reviewed",
       "name": "千原 良友",
-      "reviewedAt": "2026-09-29",
+      "reviewedAt": "2026-10-25",
       "scope": "執筆医師本人による医学的確認",
       "conflictOfInterest": ""
     },
@@ -8814,13 +8814,13 @@
   "doctor-stem-cell-types": {
     "slug": "doctor-stem-cell-types",
     "title": "幹細胞にはどんな種類がある？ES細胞、iPS細胞、間葉系幹細胞の違い",
-    "lastEditedAt": "2026-10-27",
+    "lastEditedAt": "2026-09-28",
     "imageKey": "laboratory",
     "publishAt": "2026-09-25",
     "publishedAt": "2026-09-28",
     "releaseTrack": "physician-authored",
-    "medicalStatus": "needs_medical_review",
-    "legalStatus": "needs_legal_editorial_review",
+    "medicalStatus": "reviewed",
+    "legalStatus": "reviewed",
     "evidenceStatus": "physician_authored_manuscript_no_editorial_expansion",
     "clarityStatus": "physician_manuscript_kept_verbatim",
     "riskFlags": [
@@ -8840,7 +8840,7 @@
     "reviewer": {
       "status": "reviewed",
       "name": "千原 良友",
-      "reviewedAt": "2026-09-28",
+      "reviewedAt": "2026-10-25",
       "scope": "執筆医師本人による医学的確認",
       "conflictOfInterest": ""
     },
@@ -8851,13 +8851,13 @@
   "doctor-regenerative-approaches": {
     "slug": "doctor-regenerative-approaches",
     "title": "再生医療の3つのアプローチ：細胞移植、組織工学、体の力を生かす",
-    "lastEditedAt": "2026-10-27",
+    "lastEditedAt": "2026-09-28",
     "imageKey": "laboratory",
     "publishAt": "2026-09-26",
     "publishedAt": "2026-09-28",
     "releaseTrack": "physician-authored",
-    "medicalStatus": "needs_medical_review",
-    "legalStatus": "needs_legal_editorial_review",
+    "medicalStatus": "reviewed",
+    "legalStatus": "reviewed",
     "evidenceStatus": "physician_authored_manuscript_no_editorial_expansion",
     "clarityStatus": "physician_manuscript_kept_verbatim",
     "riskFlags": [
@@ -8876,7 +8876,7 @@
     "reviewer": {
       "status": "reviewed",
       "name": "千原 良友",
-      "reviewedAt": "2026-09-28",
+      "reviewedAt": "2026-10-25",
       "scope": "執筆医師本人による医学的確認",
       "conflictOfInterest": ""
     },
