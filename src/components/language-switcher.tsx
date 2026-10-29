@@ -24,6 +24,7 @@ export function LanguageSwitcher() {
         <Link
           key={locale}
           href={locale === "ja" ? safePath : `/${locale}${safePath}`}
+          prefetch={false}
           lang={lang}
           hrefLang={lang}
           className={active === locale ? "current" : undefined}
