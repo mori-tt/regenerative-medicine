@@ -170,8 +170,13 @@ jobs:
 
           SSH_TARGET="${SSH_USER}@${SSH_HOST}"
           # ServerAlive*: Lolipop がアイドル中のセッションを切る対策。
-          SSH_OPTS=(-o StrictHostKeyChecking=yes -o "UserKnownHostsFile=${HOME}/.ssh/lolipop_known_hosts" -p "${SSH_PORT}" -o ServerAliveInterval=15 -o ServerAliveCountMax=4)
-          SCP_OPTS=(-o StrictHostKeyChecking=yes -o "UserKnownHostsFile=${HOME}/.ssh/lolipop_known_hosts" -P "${SSH_PORT}" -o ServerAliveInterval=15 -o ServerAliveCountMax=4)
+          # ControlMaster: scp と ssh を1本のTCP接続に多重化する。
+          # 別接続だと Lolipop 側で別バックエンドに振り分けられ、
+          # アップロードしたはずのファイルが見えない事象があり得るため。
+          CM_PATH="${RUNNER_TEMP:-/tmp}/lolipop-cm-%C"
+          SSH_COMMON=(-o StrictHostKeyChecking=yes -o "UserKnownHostsFile=${HOME}/.ssh/lolipop_known_hosts" -o ServerAliveInterval=15 -o ServerAliveCountMax=4 -o ControlMaster=auto -o "ControlPath=${CM_PATH}" -o ControlPersist=120)
+          SSH_OPTS=("${SSH_COMMON[@]}" -p "${SSH_PORT}")
+          SCP_OPTS=("${SSH_COMMON[@]}" -P "${SSH_PORT}")
 
           REMOTE_HOME=$(retry_ssh sshpass -e ssh "${SSH_OPTS[@]}" "${SSH_TARGET}" 'printf "%s" "$HOME"')
           if [ -z "${REMOTE_HOME}" ] || [ "${REMOTE_HOME}" = "/" ]; then
@@ -285,7 +290,24 @@ jobs:
           if [ -f "${UPLOAD_DIR}/contact-config.php" ]; then
             UPLOADS+=("${UPLOAD_DIR}/contact-config.php")
           fi
-          retry_ssh sshpass -e scp "${SCP_OPTS[@]}" "${UPLOADS[@]}" "${SSH_TARGET}:${REMOTE_HOME}/"
+          # scp 成功でも別バックエンドに書かれてファイルが見えないことがあるため、
+          # 転送後にリモート側の存在を確認し、無ければ再送する。
+          remote_files_ok() {
+            sshpass -e ssh "${SSH_OPTS[@]}" "${SSH_TARGET}" \
+              "test -f '${REMOTE_HOME}/lolipop-deploy.sh' && test -f '${REMOTE_HOME}/${SSH_ARCHIVE}'"
+          }
+          upload_attempt=0
+          until remote_files_ok; do
+            upload_attempt=$((upload_attempt + 1))
+            if [ "${upload_attempt}" -ge 4 ]; then
+              echo "::error::Files uploaded via scp are not visible over ssh after ${upload_attempt} attempts." >&2
+              sshpass -e ssh "${SSH_OPTS[@]}" "${SSH_TARGET}" "ls -la '${REMOTE_HOME}/'" >&2 || true
+              rm -rf "${UPLOAD_DIR}"
+              exit 1
+            fi
+            [ "${upload_attempt}" -gt 1 ] && { echo "Uploaded files not visible remotely; re-uploading (attempt ${upload_attempt})..." >&2; sleep 10; }
+            retry_ssh sshpass -e scp "${SCP_OPTS[@]}" "${UPLOADS[@]}" "${SSH_TARGET}:${REMOTE_HOME}/"
+          done
           rm -rf "${UPLOAD_DIR}"
 
           # 実行も1回の SSH で完結させる（失敗してもリトライで冪等にやり直せる）
