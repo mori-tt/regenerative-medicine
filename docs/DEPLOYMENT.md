@@ -32,79 +32,90 @@ GitHub Actionsからは自動化できない部分です。管理画面で次を
 - [ ] PHPバージョンを **8.3以上**に設定
 - [ ] 既存サイトがある場合は先にバックアップ（デプロイは公開フォルダを入れ替える）
 
-### Step 2. contact-config.php の値を用意する
+### Step 2. GitHub Secrets を登録（5件・ブラウザのみ）
+
+リポジトリの **Settings → Secrets and variables → Actions → Secrets** タブで「New repository secret」から1件ずつ登録します。
+
+| Secret名                  | 入れる値                                                                                                                                |
+| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| `LOLIPOP_SSH_USER`        | SSHユーザー名（管理画面の表示どおり。例：`lolipop.jp-XXXXX`）                                                                           |
+| `LOLIPOP_SSH_PASSWORD`    | SSHパスワード                                                                                                                           |
+| `LOLIPOP_SSH_REMOTE_DIR`  | 公開フォルダ（Step 1で設定したもの。例：`~/web/saisei-med.com`）                                                                        |
+| `LOLIPOP_SSH_KNOWN_HOSTS` | 下記コマンドの出力（下欄参照）                                                                                                          |
+| `LOLIPOP_CONTACT_CONFIG`  | `contact-config.example.php` の中身に値を入力したもの（下欄参照。問い合わせフォームを使う場合に必要。デプロイ時に自動でサーバーへ配置） |
+
+**`LOLIPOP_SSH_KNOWN_HOSTS` の入れ方**（唯一ターミナルが必要な作業・中間者攻撃対策で必須）：Macのターミナルで次を実行し、出てくる数行をそのままSecret入力欄に貼り付けます。
 
 ```bash
-cp deploy/contact-config.example.php /tmp/contact-config.php
-$EDITOR /tmp/contact-config.php   # CONTACT_TO_EMAIL / CONTACT_SMTP_USER / CONTACT_SMTP_PASS 等を入力
+ssh-keyscan -p 2222 ssh.lolipop.jp
 ```
 
-Step 3でファイルごとSecretに登録します（手元には残しません）。設定項目の意味は §9 を参照。
+**`LOLIPOP_CONTACT_CONFIG` の入れ方**：GitHub上で [`deploy/contact-config.example.php`](../deploy/contact-config.example.php) を開き、中身をすべてコピーしてSecret入力欄に貼り付け、`CONTACT_TO_EMAIL=`（受信アドレス）・`CONTACT_SMTP_USER=`（Step 1で作ったメールアドレス）・`CONTACT_SMTP_PASS=`（そのパスワード）・`CONTACT_FROM_EMAIL=`・`CONTACT_ALLOWED_ORIGINS=`（本番ドメイン）を実値に書き換えて登録します。項目の意味は §9 を参照。
 
-### Step 3. GitHub Secrets を登録（5件）
+### Step 3. GitHub Variables を登録（ブラウザのみ）
 
-リポジトリ Settings → Secrets and variables → Actions → Secrets からUIで登録するか、次のコマンドで登録します。
+同じ画面の **Variables** タブで「New repository variable」から1件ずつ登録します。
 
-```bash
-REPO=mori-tt/regenerative-medicine
+| Variable名                     | 入れる値                                        |
+| ------------------------------ | ----------------------------------------------- |
+| `LOLIPOP_SITE_URL`             | `https://saisei-med.com`（本番ドメイン）        |
+| `LOLIPOP_PUBLICATION_MODE`     | `production`（準備中は `preview`）              |
+| `LOLIPOP_SITE_INDEXABLE`       | `true`（準備中は `false`）                      |
+| `LOLIPOP_LOCALIZED_INDEXABLE`  | `false`（英・中の確認後だけ `true`）            |
+| `NEXT_PUBLIC_CONTACT_EMAIL`    | 問い合わせ受付アドレス（indexable本番では必須） |
+| `NEXT_PUBLIC_OPERATOR_NAME`    | 運営者名（同上）                                |
+| `NEXT_PUBLIC_OPERATOR_ADDRESS` | 運営者所在地（同上）                            |
 
-# SSH認証（値は対話入力 → コマンド履歴に残らない）
-gh secret set LOLIPOP_SSH_USER --repo $REPO        # 例: lolipop.jp-XXXXX（管理画面の表示どおり）
-gh secret set LOLIPOP_SSH_PASSWORD --repo $REPO    # SSHパスワード
-gh secret set LOLIPOP_SSH_REMOTE_DIR --repo $REPO  # 例: ~/web/saisei-med.com
+### Step 4. デプロイを有効化して実行（ブラウザのみ）
 
-# ホスト鍵（取得 → 指紋確認 → 登録。中間者攻撃対策で必須）
-ssh-keyscan -p 2222 ssh.lolipop.jp > /tmp/kh && ssh-keygen -lf /tmp/kh
-gh secret set LOLIPOP_SSH_KNOWN_HOSTS --repo $REPO < /tmp/kh && rm /tmp/kh
+1. Variables に **`DEPLOY_TARGET`** を登録します（この設定を最後に行う＝ここで初めて本番に出ます）。
 
-# 問い合わせ設定（Step 2のファイルを登録 → デプロイ時に ~/contact-config.php へ自動配置）
-gh secret set LOLIPOP_CONTACT_CONFIG --repo $REPO < /tmp/contact-config.php && rm /tmp/contact-config.php
-```
+   | `DEPLOY_TARGET` の値           | 動作                       |
+   | ------------------------------ | -------------------------- |
+   | `github-pages`（未設定＝既定） | Pagesのみデプロイ（現状）  |
+   | `both`                         | Pages ＋ Lolipop の両方    |
+   | `lolipop`                      | Lolipopのみ                |
+   | `none`                         | 両方停止（公開済みは残る） |
 
-`LOLIPOP_CONTACT_CONFIG` は任意ですが、登録しないと問い合わせフォームは送信できません（サーバーへ手動で置く代替手順は §9）。
-
-### Step 4. GitHub Variables を登録
-
-Settings → Secrets and variables → Actions → **Variables** から登録します。
-
-```bash
-# 本番サイトの設定
-gh variable set LOLIPOP_SITE_URL --body https://saisei-med.com --repo $REPO
-gh variable set LOLIPOP_PUBLICATION_MODE --body production --repo $REPO   # 正式公開時。準備中は preview
-gh variable set LOLIPOP_SITE_INDEXABLE --body true --repo $REPO           # 同上。準備中は false
-gh variable set LOLIPOP_LOCALIZED_INDEXABLE --body false --repo $REPO     # 英・中の確認後だけ true
-
-# 運営者情報（indexable本番では必須。空だとビルドが止まる）
-gh variable set NEXT_PUBLIC_CONTACT_EMAIL --body info@saisei-med.com --repo $REPO
-gh variable set NEXT_PUBLIC_OPERATOR_NAME --body "運営者名" --repo $REPO
-gh variable set NEXT_PUBLIC_OPERATOR_ADDRESS --body "所在地" --repo $REPO
-```
-
-| `DEPLOY_TARGET` の値           | 動作                       |
-| ------------------------------ | -------------------------- |
-| `github-pages`（未設定＝既定） | Pagesのみデプロイ（現状）  |
-| `both`                         | Pages ＋ Lolipop の両方    |
-| `lolipop`                      | Lolipopのみ                |
-| `none`                         | 両方停止（公開済みは残る） |
-
-### Step 5. デプロイを実行する
-
-```bash
-# デプロイ先を有効化（この設定を最後に行う＝ここで初めて本番に出る）
-gh variable set DEPLOY_TARGET --body both --repo $REPO
-
-# 手動実行（以後は main への push・毎週土曜06:00 JST の予約実行でも自動で走る）
-gh workflow run deploy-lolipop.yml --repo $REPO
-
-# 実行状況の確認
-gh run watch --repo $REPO
-```
+2. リポジトリの **Actions** タブ → **Deploy to Lolipop** → **Run workflow**（main選択）で手動実行します。以後は main への push・毎週土曜06:00 JST の予約実行でも自動で走ります。
+3. Actions画面で進行と結果を確認します。
 
 推奨：Settings → Environments に `production` を作り Required reviewers に自分を設定すると、本番デプロイの前に承認画面が出ます（誤pushでの即時公開を防ぐ）。
 
 実行される内容：`composer`でPHPMailer生成 → `npm run build:lolipop` → 静的検査 → SSHで `contact-config.php` 配置 → ステージング展開・検査 → 公開フォルダをリネームで入れ替え（失敗時は旧版へ自動復旧）→ スモークテスト。
 
-### Step 6. 動作確認
+<details>
+<summary>CLI（gh）で一括登録する場合（省略可）</summary>
+
+```bash
+REPO=mori-tt/regenerative-medicine
+
+# Secrets（値は対話入力 → コマンド履歴に残らない）
+gh secret set LOLIPOP_SSH_USER --repo $REPO
+gh secret set LOLIPOP_SSH_PASSWORD --repo $REPO
+gh secret set LOLIPOP_SSH_REMOTE_DIR --repo $REPO
+ssh-keyscan -p 2222 ssh.lolipop.jp > /tmp/kh && ssh-keygen -lf /tmp/kh
+gh secret set LOLIPOP_SSH_KNOWN_HOSTS --repo $REPO < /tmp/kh && rm /tmp/kh
+gh secret set LOLIPOP_CONTACT_CONFIG --repo $REPO < contact-config.php  # 値を入力済みのファイルから
+
+# Variables
+gh variable set LOLIPOP_SITE_URL --body https://saisei-med.com --repo $REPO
+gh variable set LOLIPOP_PUBLICATION_MODE --body production --repo $REPO
+gh variable set LOLIPOP_SITE_INDEXABLE --body true --repo $REPO
+gh variable set LOLIPOP_LOCALIZED_INDEXABLE --body false --repo $REPO
+gh variable set NEXT_PUBLIC_CONTACT_EMAIL --body info@saisei-med.com --repo $REPO
+gh variable set NEXT_PUBLIC_OPERATOR_NAME --body "運営者名" --repo $REPO
+gh variable set NEXT_PUBLIC_OPERATOR_ADDRESS --body "所在地" --repo $REPO
+gh variable set DEPLOY_TARGET --body both --repo $REPO
+
+# 実行・確認
+gh workflow run deploy-lolipop.yml --repo $REPO
+gh run watch --repo $REPO
+```
+
+</details>
+
+### Step 5. 動作確認
 
 - `https://saisei-med.com/` でトップ・記事・検索が表示される
 - `curl -sI http://saisei-med.com/` → `301` で `https://` へ
