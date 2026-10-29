@@ -2,7 +2,7 @@
 
 本番公開に必要な**手作業**と、GitHub Actionsでの運用手順をまとめた資料です。
 
-**デプロイ先は GitHub Variables の `DEPLOY_TARGET` で一元管理します**（値：`github-pages` = Pagesのみ・未設定時の既定、`lolipop` = Lolipopのみ、`both` = 両方、`none` = 両方停止）。未設定なら従来どおり `main` へのpushでGitHub Pagesだけが更新され、Lolipopへのデプロイ（`.github/workflows/deploy-lolipop.yml`、作成済み）は `DEPLOY_TARGET` を `both` または `lolipop` にするまで実行されません。なお `DEPLOY_TARGET` 未設定のときだけ、旧スイッチ `LOLIPOP_DEPLOY_ENABLED=true` も有効です（移行措置）。一方、`.htaccess` のHTTPS・www統一や `contact.php` のPHP対応は実装済みです。
+**デプロイ先は GitHub Variables の `DEPLOY_TARGET` で一元管理します**（値：`github-pages` = Pagesのみ・未設定時の既定、`lolipop` = Lolipopのみ、`both` = 両方、`none` = 両方停止）。未設定なら従来どおり `main` へのpushでGitHub Pagesだけが更新され、Lolipopへのデプロイ（`.github/workflows/deploy-lolipop.yml`、作成済み）は `DEPLOY_TARGET` を `both` または `lolipop` にするまで実行されません。一方、`.htaccess` のHTTPS・www統一や `contact.php` のPHP対応は実装済みです。
 
 関連資料：[DEPLOYMENT.md](DEPLOYMENT.md)（仕組みの説明）、[DEPLOY-CHECKLIST.md](DEPLOY-CHECKLIST.md)（チェック項目）、[MANUAL-LEGAL-CHECKLIST.md](MANUAL-LEGAL-CHECKLIST.md)（法務・監修）、[PUBLISHING.md](PUBLISHING.md)（記事公開の仕組み）。
 
@@ -345,9 +345,9 @@ curl -s $SITE/articles/ips-cells-explained/ | grep -o 'name="robots"[^>]*'   # i
 
 | 症状                                                                      | 原因・対処                                                                                                                                                                        |
 | ------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Lolipopのジョブが「skipped」になる                                        | Variables `DEPLOY_TARGET` が `lolipop`・`both` ではない（`DEPLOY_TARGET` 未設定なら旧 `LOLIPOP_DEPLOY_ENABLED=true` でも可）                                                      |
+| Lolipopのジョブが「skipped」になる                                        | Variables `DEPLOY_TARGET` が `lolipop`・`both` ではない                                                                                                                           |
 | 変更したのにLolipopが更新されない                                         | 変更が `paths` の対象外（`docs/` など）。手動実行する                                                                                                                             |
-| ビルドで「正式公開には運営者情報と連絡先が必要です」                      | `NEXT_PUBLIC_OPERATOR_NAME` / `ADDRESS` / `CONTACT_EMAIL` のVariablesが未設定                                                                                                     |
+| ビルドで「正式公開には運営者情報が必要です」                              | `NEXT_PUBLIC_OPERATOR_NAME` / `ADDRESS` のVariablesが未設定                                                                                                                       |
 | ビルドで「検索公開する前に NEXT_PUBLIC_SITE_URL に本番のHTTPSドメインを」 | `LOLIPOP_SITE_URL` が未設定、`http://`、または `example.com`                                                                                                                      |
 | `check:rights` で失敗                                                     | `article-media.json` の全素材が `verified` でない（写真個別のURL・ライセンス・確認日を記録）                                                                                      |
 | 「PHPMailer (out/vendor) is missing」                                     | `composer install --working-dir=public` が失敗している                                                                                                                            |

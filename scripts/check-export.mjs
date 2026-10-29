@@ -103,9 +103,6 @@ for (const path of pages) {
     const url = decodeURIComponent(match[1]);
     if (url.startsWith("//")) continue;
     const target = await targetForUrl(url);
-    await Promise.resolve(target).catch(() =>
-      assert.fail(`${label}: missing internal target ${url}`),
-    );
     assert.ok(target, `${label}: missing internal target ${url}`);
     linkCount++;
   }

@@ -43,9 +43,9 @@ test("deploy.yml skips only on lolipop or none", () => {
   assert.ok(gate, "pages job gate not found or changed");
 });
 
-test("deploy-lolipop.yml runs on lolipop/both with legacy fallback", () => {
+test("deploy-lolipop.yml runs only on lolipop/both", () => {
   const gate = lolipopWorkflow.match(
-    /if: \$\{\{ vars\.DEPLOY_TARGET == 'lolipop' \|\| vars\.DEPLOY_TARGET == 'both' \|\| \(!vars\.DEPLOY_TARGET && vars\.LOLIPOP_DEPLOY_ENABLED == 'true'\) \}\}/,
+    /if: \$\{\{ vars\.DEPLOY_TARGET == 'lolipop' \|\| vars\.DEPLOY_TARGET == 'both' \}\}/,
   );
   assert.ok(gate, "lolipop job gate not found or changed");
 });

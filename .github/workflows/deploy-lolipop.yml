@@ -3,7 +3,6 @@ name: Deploy to Lolipop
 # 本番（ロリポップ）。GitHub Pagesのテストサイトとは別系統で並行公開する。
 # デプロイ先はリポジトリ Variable DEPLOY_TARGET で切り替える:
 #   both / lolipop = このワークフローが動く / github-pages（未設定時の既定）/ none = スキップ
-# DEPLOY_TARGET 未設定時だけ、旧変数 LOLIPOP_DEPLOY_ENABLED=true も有効（移行措置）。
 # Secrets（LOLIPOP_SSH_USER / LOLIPOP_SSH_PASSWORD / LOLIPOP_SSH_REMOTE_DIR / LOLIPOP_SSH_KNOWN_HOSTS）
 # が未登録の場合は、実行時にエラーで止まる。
 # 任意: LOLIPOP_CONTACT_CONFIG に contact-config.php の内容を登録すると、
@@ -49,8 +48,7 @@ env:
 jobs:
   build-and-deploy:
     # DEPLOY_TARGET=lolipop|both で実行。未設定（github-pages 相当）では動かない。
-    # DEPLOY_TARGET が未設定のときだけ、旧スイッチ LOLIPOP_DEPLOY_ENABLED=true も有効にする（移行措置）。
-    if: ${{ vars.DEPLOY_TARGET == 'lolipop' || vars.DEPLOY_TARGET == 'both' || (!vars.DEPLOY_TARGET && vars.LOLIPOP_DEPLOY_ENABLED == 'true') }}
+    if: ${{ vars.DEPLOY_TARGET == 'lolipop' || vars.DEPLOY_TARGET == 'both' }}
     # 既定は GitHub hosted。repo 変数 CI_RUNNER=self-hosted で自分の Mac の runner で実行する（未設定に戻せば hosted に戻る）
     # self-hosted（Mac）で使う場合は Homebrew で sshpass を入れておくこと（Install sshpass ステップは hosted 限定）。
     runs-on: ${{ vars.CI_RUNNER || 'ubuntu-latest' }}
@@ -60,11 +58,10 @@ jobs:
       - name: Validate DEPLOY_TARGET
         env:
           DEPLOY_TARGET: ${{ vars.DEPLOY_TARGET }}
-          LOLIPOP_DEPLOY_ENABLED: ${{ vars.LOLIPOP_DEPLOY_ENABLED }}
         run: |
           case "${DEPLOY_TARGET:-github-pages}" in
             github-pages|lolipop|both|none)
-              echo "DEPLOY_TARGET='${DEPLOY_TARGET:-<unset:github-pages>}' LOLIPOP_DEPLOY_ENABLED='${LOLIPOP_DEPLOY_ENABLED:-<unset>}'"
+              echo "DEPLOY_TARGET='${DEPLOY_TARGET:-<unset:github-pages>}'"
               ;;
             *)
               echo "::error::Unknown DEPLOY_TARGET='${DEPLOY_TARGET}'. Expected: github-pages | lolipop | both | none"
@@ -97,7 +94,6 @@ jobs:
 
       - name: Build scheduled Lolipop output
         env:
-          NEXT_PUBLIC_CONTACT_EMAIL: ${{ vars.NEXT_PUBLIC_CONTACT_EMAIL }}
           NEXT_PUBLIC_OPERATOR_NAME: ${{ vars.NEXT_PUBLIC_OPERATOR_NAME }}
           NEXT_PUBLIC_OPERATOR_ADDRESS: ${{ vars.NEXT_PUBLIC_OPERATOR_ADDRESS }}
         run: |

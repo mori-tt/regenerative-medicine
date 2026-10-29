@@ -176,7 +176,7 @@ mainへのpushで、`DEPLOY_TARGET`の設定に応じた系統がデプロイさ
 | GitHub Pages（テスト確認用） | `deploy.yml`         | 全記事（`ARTICLE_BUILD_MODE=all`、ストック含む） | `noindex` 固定  |
 | Lolipop（本番）              | `deploy-lolipop.yml` | 公開日到達分のみ（`scheduled`）                  | Variablesで制御 |
 
-2つのワークフローの実行は、GitHub Variables の **`DEPLOY_TARGET`** で一元管理します。`github-pages`（Pagesのみ・未設定時の既定）、`lolipop`（Lolipopのみ）、`both`（両方）、`none`（両方停止）のいずれかを設定します。Lolipop側の `deploy-lolipop.yml` は **リポジトリに作成済み** ですが、`DEPLOY_TARGET` が `lolipop` または `both` のときだけ実行されるガードが付いているため、設定するまではPagesのみがデプロイされます（`DEPLOY_TARGET` 未設定のときだけ、旧変数 `LOLIPOP_DEPLOY_ENABLED=true` も有効＝移行措置）。
+2つのワークフローの実行は、GitHub Variables の **`DEPLOY_TARGET`** で一元管理します。`github-pages`（Pagesのみ・未設定時の既定）、`lolipop`（Lolipopのみ）、`both`（両方）、`none`（両方停止）のいずれかを設定します。Lolipop側の `deploy-lolipop.yml` は **リポジトリに作成済み** ですが、`DEPLOY_TARGET` が `lolipop` または `both` のときだけ実行されるガードが付いているため、設定するまではPagesのみがデプロイされます。
 
 `LOLIPOP_PUBLICATION_MODE` が `production` のときだけ `npm run check:rights` が走り、`src/content/article-media.json` の全素材が `rightsStatus=verified` でないとビルドが止まります（Unsplash等の検索ページURLではなく、使用した写真個別のURL・ライセンス・権利者・確認日を記録してから `verified` に変更してください）。
 
