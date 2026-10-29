@@ -162,7 +162,10 @@ if (
     !array_key_exists($category, $categoryLabels) ||
     mb_strlen($message) < 10 || mb_strlen($message) > 5000 ||
     !$consent || !in_array($locale, ['ja', 'en', 'zh'], true) ||
-    preg_match('/[\r\n\x00-\x08\x0B\x0C\x0E-\x1F]/', $name . $email . $message)
+    // ヘッダーに使う単一行項目は改行・制御文字を拒否。本文は複数行を許し、
+    // 危険な制御文字（NUL等、改行・タブ以外）だけを拒否する。
+    preg_match('/[\r\n\x00-\x08\x0B\x0C\x0E-\x1F]/', $name . $email) ||
+    preg_match('/[\x00-\x08\x0B\x0C\x0E-\x1F]/', $message)
 ) {
     respond(false, '入力内容をご確認ください。', 422);
 }
@@ -183,6 +186,26 @@ $body = "再生医療ガイドのお問い合わせフォームから受信し�
     "種類: {$categoryLabel}\n" .
     "言語: {$locale}\n\n" .
     "内容:\n{$message}\n";
+
+// 記入者への自動返信（CONTACT_AUTO_REPLY=false で停止）。
+// 失敗しても問い合わせ自体は受付済みのため、ログに残すだけで応答は変えない。
+$autoReply = env_value('CONTACT_AUTO_REPLY', 'true') !== 'false';
+$replySubjects = [
+    'ja' => '【再生医療ガイド】お問い合わせを受け付けました',
+    'en' => '[Regenerative Medicine Guide] Your inquiry has been received',
+    'zh' => '[再生医疗指南] 已收到您的咨询',
+];
+$replyIntros = [
+    'ja' => "{$name} 様\n\nこのたびは再生医療ガイドへお問い合わせいただき、ありがとうございます。\n以下の内容で受け付けました。内容を確認のうえ、必要に応じてご連絡いたします。\n※医師への医療相談・個別の診療相談にはお答えできません。",
+    'en' => "Dear {$name},\n\nThank you for contacting Regenerative Medicine Guide.\nWe have received your inquiry below and will get back to you if needed.\n*We cannot respond to individual medical consultations.",
+    'zh' => "{$name} 您好\n\n感谢您联系再生医疗指南。\n我们已收到以下咨询内容，必要时会与您联系。\n*我们无法解答个人的医疗咨询。",
+];
+$replySubject = $replySubjects[$locale] ?? $replySubjects['ja'];
+$replyBody = ($replyIntros[$locale] ?? $replyIntros['ja']) . "\n\n" .
+    "──────────────────────────────\n" .
+    "{$categoryLabel}\n{$email}\n\n{$message}\n" .
+    "──────────────────────────────\n" .
+    "※ This is an automated message. Please discard it if it was not intended for you. / このメールは自動送信です。心当たりのない場合は破棄してください。";
 
 $autoloadCandidates = array_filter([
     env_value('CONTACT_PHPMAILER_AUTOLOAD'),
@@ -220,12 +243,28 @@ if ($autoloaded && class_exists('PHPMailer\\PHPMailer\\PHPMailer')) {
             ? PHPMailer\PHPMailer\PHPMailer::ENCRYPTION_STARTTLS
             : PHPMailer\PHPMailer\PHPMailer::ENCRYPTION_SMTPS;
         $mail->CharSet = 'UTF-8';
+        // エンベロープ送信者（Return-Path）を From と揃えて SPF 判定の精度を上げる
+        $mail->Sender = $from;
         $mail->setFrom($from, $fromName);
         $mail->addAddress($to);
         $mail->addReplyTo($email, $name);
         $mail->Subject = $subject;
         $mail->Body = $body;
         $mail->send();
+        if ($autoReply) {
+            try {
+                $mail->clearAddresses();
+                $mail->clearReplyTos();
+                $mail->addAddress($email);
+                // 記入者がこのメールに返信した場合は問い合わせ受付アドレスへ届くようにする
+                $mail->addReplyTo($to, $fromName);
+                $mail->Subject = $replySubject;
+                $mail->Body = $replyBody;
+                $mail->send();
+            } catch (Throwable $replyException) {
+                error_log('Contact auto-reply failed: ' . $replyException->getMessage());
+            }
+        }
         respond(true, 'お問い合わせを受け付けました。');
     } catch (Throwable $exception) {
         error_log('PHPMailer contact error: ' . $exception->getMessage());
@@ -244,6 +283,15 @@ $headers = "From: {$from}\r\n" .
     "Reply-To: {$email}\r\n" .
     "Content-Type: text/plain; charset=UTF-8\r\n";
 if (mail($to, $encodedSubject, $body, $headers, '-f' . $from)) {
+    if ($autoReply) {
+        $encodedReplySubject = function_exists('mb_encode_mimeheader') ? mb_encode_mimeheader($replySubject, 'UTF-8') : $replySubject;
+        $replyHeaders = "From: {$from}\r\n" .
+            "Reply-To: {$to}\r\n" .
+            "Content-Type: text/plain; charset=UTF-8\r\n";
+        if (!mail($email, $encodedReplySubject, $replyBody, $replyHeaders, '-f' . $from)) {
+            error_log('Contact auto-reply failed (native mail).');
+        }
+    }
     respond(true, 'お問い合わせを受け付けました。');
 }
 error_log('Native mail() failed for contact form.');

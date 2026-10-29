@@ -21,5 +21,6 @@ return [
     'CONTACT_ALLOWED_ORIGINS' => 'https://saisei-med.com',
     'CONTACT_RATE_LIMIT_MAX' => '5',
     'CONTACT_RATE_LIMIT_WINDOW' => '600',
+    'CONTACT_AUTO_REPLY' => 'true',
     'CONTACT_ALLOW_NATIVE_MAIL' => 'false',
 ];
