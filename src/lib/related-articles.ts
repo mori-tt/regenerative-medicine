@@ -13,7 +13,7 @@ import {
 const fallbackLabel = { ja: "その他", en: "Other", zh: "其他" };
 
 /** カテゴリページと同じ並び（サブカテゴリ順→優先順→未分類→コラム）の公開記事。 */
-export function orderedCategoryArticles(
+function orderedCategoryArticles(
   category: Article["category"],
 ): Article[] {
   const listed = visibleArticles(articles).filter(

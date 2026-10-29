@@ -14,7 +14,7 @@ const inLanguage: Record<SiteLocaleCode, string> = {
 };
 
 /** 運営組織。全ページの publisher / author から同じ @id で参照する。 */
-export function organizationNode() {
+function organizationNode() {
   return {
     "@type": "Organization",
     "@id": `${absolute()}#organization`,

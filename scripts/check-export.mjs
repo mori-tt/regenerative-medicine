@@ -87,11 +87,12 @@ for (const path of pages) {
       /<meta name="robots" content="[^"]*noindex/,
       `${label}: preview must be noindex`,
     );
-  if (label.startsWith("search/"))
+  // 検索結果ページは言語に関係なく常に noindex（LOCALIZED_INDEXABLE に関わらず）
+  if (/^(?:en|zh)\/search\//.test(label) || label.startsWith("search/"))
     assert.match(
       html,
       /<meta name="robots" content="[^"]*noindex/,
-      "Search must be noindex",
+      `${label}: Search must be noindex`,
     );
   for (const match of html.matchAll(
     /<script type="application\/ld\+json">([\s\S]*?)<\/script>/g,

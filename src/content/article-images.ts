@@ -3,7 +3,7 @@ import media from "./article-media.json";
 export type ArticleImage = (typeof media.assets)[keyof typeof media.assets] & {
   key: string;
 };
-export const articleImages = Object.fromEntries(
+const articleImages = Object.fromEntries(
   Object.entries(media.assets).map(([key, image]) => [key, { ...image, key }]),
 ) as Record<string, ArticleImage>;
 

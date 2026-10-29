@@ -7,7 +7,7 @@ const parsedUrl = new URL(configuredUrl);
 export const basePath =
   process.env.NEXT_PUBLIC_BASE_PATH ??
   (process.env.GITHUB_PAGES === "true" ? "/regenerative-medicine" : "");
-export const indexable = process.env.NEXT_PUBLIC_SITE_INDEXABLE === "true";
+const indexable = process.env.NEXT_PUBLIC_SITE_INDEXABLE === "true";
 export const publiclyIndexable = indexable && publication.mode === "production";
 // 英語・中国語ページは翻訳・医学用語・監修範囲を確認した後に個別に検索公開する。
 export const localizedIndexable =
@@ -63,7 +63,7 @@ const ogLocaleFor: Record<SiteLocaleCode, string> = {
   zh: "zh_CN",
 };
 
-export function basePathOf(path: string): string {
+function basePathOf(path: string): string {
   if (path === "/en" || path === "/en/") return "/";
   if (path === "/zh" || path === "/zh/") return "/";
   if (path.startsWith("/en/")) return path.slice(3) || "/";
@@ -92,7 +92,7 @@ const shortSiteNameFor: Partial<Record<SiteLocaleCode, string>> = {
 };
 
 /** 「タイトル | サイト名」が目安の 60 文字を超える場合は短縮名、それでも長ければタイトル単体にする。 */
-export function pageTitleFor(title: string, locale: SiteLocaleCode): string {
+function pageTitleFor(title: string, locale: SiteLocaleCode): string {
   const full = `${title} | ${siteNameFor(locale)}`;
   if (full.length <= 60) return full;
   const short = shortSiteNameFor[locale];
