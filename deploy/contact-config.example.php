@@ -23,4 +23,9 @@ return [
     'CONTACT_RATE_LIMIT_WINDOW' => '600',
     'CONTACT_AUTO_REPLY' => 'true',
     'CONTACT_ALLOW_NATIVE_MAIL' => 'false',
+    // Cloudflare Turnstile（ボット対策）。ダッシュボードで発行した Secret key。
+    // 空のままなら検証は無効（フォームは従来どおり動作）。設定すると必須化される。
+    'TURNSTILE_SECRET' => '',
+    // サイトキーに登録したフロントのドメイン（カンマ区切り。本番ドメインのみ。localhost は含めない）
+    'TURNSTILE_HOSTNAMES' => 'saisei-med.com',
 ];

@@ -1,8 +1,32 @@
 "use client";
 
-import { FormEvent, useEffect, useState } from "react";
+import { FormEvent, useEffect, useRef, useState } from "react";
 import { publicAsset } from "@/lib/site";
 import type { SiteLocale } from "@/content/locales";
+
+// Cloudflare Turnstile のサイトキー（公開用。秘密鍵は contact-config.php の TURNSTILE_SECRET）
+const TURNSTILE_SITEKEY = "0x4AAAAAAFquCXnsFKyoP5_N";
+
+declare global {
+  interface Window {
+    turnstile?: {
+      render(
+        container: HTMLElement,
+        options: {
+          sitekey: string;
+          action?: string;
+          theme?: "light" | "dark" | "auto";
+          language?: string;
+          callback?: (token: string) => void;
+          "expired-callback"?: () => void;
+          "error-callback"?: () => void;
+        },
+      ): string;
+      reset(widgetId: string): void;
+      remove(widgetId: string): void;
+    };
+  }
+}
 
 type Step = "input" | "confirm";
 
@@ -50,6 +74,7 @@ const chrome = {
     consentRow: "個人情報の取り扱い",
     agreed: "同意する",
     notAgreed: "未同意",
+    verifying: "セキュリティ確認中…完了すると送信できます",
   },
   en: {
     sent: "Your inquiry has been sent. We usually reply within three business days.",
@@ -87,6 +112,7 @@ const chrome = {
     consentRow: "Privacy policy consent",
     agreed: "Agreed",
     notAgreed: "Not agreed",
+    verifying: "Running security check… You can send once it completes",
   },
   zh: {
     sent: "咨询已发送。通常3个工作日内联系。",
@@ -122,6 +148,7 @@ const chrome = {
     consentRow: "个人信息处理",
     agreed: "同意",
     notAgreed: "未同意",
+    verifying: "正在进行安全验证…完成后即可发送",
   },
 } as const;
 
@@ -139,6 +166,9 @@ export function ContactForm({
   const [category, setCategory] = useState("");
   const [message, setMessage] = useState("");
   const [consent, setConsent] = useState(false);
+  const [turnstileToken, setTurnstileToken] = useState("");
+  const turnstileBox = useRef<HTMLDivElement>(null);
+  const turnstileId = useRef<string | undefined>(undefined);
   const returnPath = locale === "ja" ? "/contact/" : `/${locale}/contact/`;
 
   useEffect(() => {
@@ -167,6 +197,49 @@ export function ContactForm({
     }
   }, [copy, locale]);
 
+  // 確認画面に Turnstile を明示レンダリングする（送信直前の新鮮なトークンを
+  // 使うため。入力画面で発行すると確認画面の滞在時間で期限切れになる）。
+  // トークンは使い切りなので、失敗時は reset で再発行して再試行を可能にする。
+  useEffect(() => {
+    if (step !== "confirm" || staticHost) return;
+    const renderWidget = () => {
+      if (!window.turnstile || !turnstileBox.current) return;
+      if (turnstileId.current !== undefined) return;
+      turnstileId.current = window.turnstile.render(turnstileBox.current, {
+        sitekey: TURNSTILE_SITEKEY,
+        action: "contact",
+        theme: "light",
+        language: locale === "zh" ? "zh-cn" : locale,
+        callback: setTurnstileToken,
+        "expired-callback": () => setTurnstileToken(""),
+        "error-callback": () => setTurnstileToken(""),
+      });
+    };
+    if (window.turnstile) {
+      renderWidget();
+    } else if (!document.getElementById("cf-turnstile-api")) {
+      const script = document.createElement("script");
+      script.id = "cf-turnstile-api";
+      script.src =
+        "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit";
+      script.async = true;
+      script.defer = true;
+      script.onload = renderWidget;
+      document.head.appendChild(script);
+    } else {
+      document
+        .getElementById("cf-turnstile-api")
+        ?.addEventListener("load", renderWidget, { once: true });
+    }
+    return () => {
+      if (turnstileId.current !== undefined && window.turnstile) {
+        window.turnstile.remove(turnstileId.current);
+        turnstileId.current = undefined;
+      }
+      setTurnstileToken("");
+    };
+  }, [step, staticHost, locale]);
+
   const categoryLabel = (value: string) =>
     copy.options.find(([v]) => v === value)?.[1] ?? value;
 
@@ -178,11 +251,18 @@ export function ContactForm({
   }
 
   async function handleSubmit() {
-    if (staticHost) {
+    if (staticHost || !turnstileToken) {
       setStatus({ type: "error", message: copy.error });
       return;
     }
     setStatus({ type: "submitting" });
+
+    // トークンは使い切りのため、失敗したら reset で再発行して再試行できる状態にする
+    const resetTurnstile = () => {
+      if (turnstileId.current !== undefined && window.turnstile)
+        window.turnstile.reset(turnstileId.current);
+      setTurnstileToken("");
+    };
 
     try {
       const res = await fetch(publicAsset("/contact.php"), {
@@ -201,6 +281,7 @@ export function ContactForm({
           locale,
           started_at: startedAt,
           return_path: returnPath,
+          "cf-turnstile-response": turnstileToken,
         }),
       });
 
@@ -220,12 +301,14 @@ export function ContactForm({
         setConsent(false);
         setStep("input");
       } else {
+        resetTurnstile();
         setStatus({
           type: "error",
           message: data.message || copy.error,
         });
       }
     } catch {
+      resetTurnstile();
       setStatus({ type: "error", message: copy.error });
     }
   }
@@ -273,6 +356,16 @@ export function ContactForm({
             <dd>{consent ? copy.agreed : copy.notAgreed}</dd>
           </div>
         </dl>
+        {!staticHost && (
+          <div className="contact-turnstile">
+            <div ref={turnstileBox} />
+            {!turnstileToken && (
+              <p className="contact-turnstile-note" role="status">
+                {copy.verifying}
+              </p>
+            )}
+          </div>
+        )}
         {statusBanner}
         <div className="contact-confirm-actions">
           <button
@@ -287,7 +380,9 @@ export function ContactForm({
             type="button"
             className="button"
             onClick={handleSubmit}
-            disabled={status.type === "submitting"}
+            disabled={
+              status.type === "submitting" || (!staticHost && !turnstileToken)
+            }
           >
             {status.type === "submitting" ? copy.sending : copy.send}
           </button>

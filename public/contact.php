@@ -91,6 +91,42 @@ function request_is_allowed_origin(): bool {
     return false;
 }
 
+// siteverify の正規エンドポイント。応答の action/hostname も呼び出し側で必ず照合する。
+function turnstile_verify(string $secret, string $token, string $remoteIp): ?array {
+    $payload = http_build_query([
+        'secret' => $secret,
+        'response' => $token,
+        'remoteip' => $remoteIp,
+    ]);
+    $url = 'https://challenges.cloudflare.com/turnstile/v0/siteverify';
+    $raw = false;
+    if (function_exists('curl_init')) {
+        $ch = curl_init($url);
+        curl_setopt_array($ch, [
+            CURLOPT_POST => true,
+            CURLOPT_POSTFIELDS => $payload,
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_TIMEOUT => 10,
+            CURLOPT_HTTPHEADER => ['Content-Type: application/x-www-form-urlencoded'],
+        ]);
+        $raw = curl_exec($ch);
+        curl_close($ch);
+    } else {
+        $context = stream_context_create([
+            'http' => [
+                'method' => 'POST',
+                'header' => "Content-Type: application/x-www-form-urlencoded\r\n",
+                'content' => $payload,
+                'timeout' => 10,
+            ],
+        ]);
+        $raw = @file_get_contents($url, false, $context);
+    }
+    if ($raw === false || $raw === '') return null;
+    $decoded = json_decode($raw, true);
+    return is_array($decoded) ? $decoded : null;
+}
+
 function rate_limit_exceeded(): bool {
     $max = max(1, (int)env_value('CONTACT_RATE_LIMIT_MAX', '5'));
     $window = max(60, (int)env_value('CONTACT_RATE_LIMIT_WINDOW', '600'));
@@ -155,6 +191,26 @@ if ($honeypot !== '' || ($startedAt > 0 && (int)(microtime(true) * 1000) - $star
 $linkCount = preg_match_all('#https?://|www\.#i', $message);
 if ($linkCount !== false && $linkCount > 3) {
     respond(true, 'お問い合わせを受け付けました。');
+}
+
+// Cloudflare Turnstile。TURNSTILE_SECRET を contact-config.php に設定すると検証が有効になる。
+// success===true かつ action=contact、hostname が登録ドメインと一致する応答だけを受け付ける。
+$turnstileSecret = env_value('TURNSTILE_SECRET');
+if ($turnstileSecret !== '') {
+    $turnstileToken = $input['cf-turnstile-response'] ?? '';
+    $turnstileHosts = array_filter(array_map('trim', explode(',', env_value('TURNSTILE_HOSTNAMES'))));
+    if (!is_string($turnstileToken) || $turnstileToken === '' || strlen($turnstileToken) > 2048 || $turnstileHosts === []) {
+        respond(false, '送信できませんでした。時間を置いて再度お試しください。', 403);
+    }
+    $verify = turnstile_verify($turnstileSecret, $turnstileToken, (string)($_SERVER['REMOTE_ADDR'] ?? ''));
+    $verified = is_array($verify)
+        && ($verify['success'] ?? false) === true
+        && ($verify['action'] ?? '') === 'contact'
+        && in_array((string)($verify['hostname'] ?? ''), $turnstileHosts, true);
+    if (!$verified) {
+        error_log('Turnstile verification failed: ' . json_encode($verify));
+        respond(false, '送信できませんでした。時間を置いて再度お試しください。', 403);
+    }
 }
 if (
     $name === '' || mb_strlen($name) > 80 ||
