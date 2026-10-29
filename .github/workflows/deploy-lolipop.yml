@@ -126,6 +126,17 @@ jobs:
           # 既定の ~/.ssh/known_hosts は上書きしない（self-hosted runner で
           # ユーザー既存のホスト鍵を消さないため）。専用ファイルに分離する。
           printf '%s\n' "${KNOWN_HOSTS}" > ~/.ssh/lolipop_known_hosts
+          # Secret の中身が対象ホストの鍵行か事前検証する。指紋の貼り付け・
+          # ポート指定なし・改行混入などの形式ミスをデプロイ開始前に検出する。
+          # 表示するのはホスト部のみ（鍵本体は出さない。内容は Secret 由来の
+          # ため GitHub のマスキング対象でもある）。
+          if ! ssh-keygen -F "[${SSH_HOST}]:${SSH_PORT}" -f ~/.ssh/lolipop_known_hosts > /dev/null; then
+            echo "::error::LOLIPOP_SSH_KNOWN_HOSTS の形式が不正です。"
+            echo "ssh-keyscan -p ${SSH_PORT} ${SSH_HOST} の出力のうち、[${SSH_HOST}]:${SSH_PORT} で始まる行をそのまま貼ってください（例: [${SSH_HOST}]:${SSH_PORT} ssh-rsa AAAA...）。"
+            echo "登録されている内容の行頭（ホスト部）:"
+            grep -v '^#' ~/.ssh/lolipop_known_hosts | cut -d' ' -f1 | sed 's/^/  /'
+            exit 1
+          fi
 
       # ロリポップは SSH パスワード認証（2222番ポート）。
       # SSH_PRIVATE_KEY ではなく SSH_PASSWORD を使う。
