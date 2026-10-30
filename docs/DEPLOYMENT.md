@@ -284,3 +284,34 @@ GitHub PagesはPHPを実行しないため、確認用GitHub Pagesではフォ�
 静的バナーは`src/content/ads.ts`に設定し、素材を`public/`へ置いて再ビルドします。開始・終了日時による自動更新はなく、掲載開始・終了時にも再ビルドと転送が必要です。リンクに`sponsored`を付けることだけで医療広告の適法性が確認されたことにはなりません。
 
 GitHub Actions経由の自動デプロイは `deploy-lolipop.yml` に実装済みです（§4）。`DEPLOY_TARGET` を `both`/`lolipop` に設定するまでは転送は実行されません。
+
+## 11. Cloudflare のキャッシュ設定(PageSpeed / TTFB 対策)
+
+本番は Cloudflare プロキシ経由です。画像などの静的アセットは既定でエッジキャッシュされますが、**HTML は既定でキャッシュ対象外**(`cf-cache-status: DYNAMIC`)のため、毎回ロリポップのオリジンまで往復し TTFB が悪化します。Cloudflare ダッシュボードで HTML をエッジキャッシュする Cache Rule を作成してください。
+
+1. Cloudflare ダッシュボード → 対象ゾーン → **Caching → Cache Rules → Create rule**。
+2. Rule name: 例 `cache-static-site`。
+3. When incoming requests match: **Custom filter expression** を選び、PHP エンドポイントを外す式にします。
+
+   ```
+   not (http.request.uri.path eq "/contact.php")
+   ```
+
+   問い合わせフォームのHTMLページ自体は静的なのでキャッシュして構いません。`contact.php` はPOST専用ですが、動的PHPはキャッシュ対象に含めない方が安全です(`vendor/`・`composer.json` は `.htaccess` で公開拒否済み)。
+
+4. **Cache eligibility: Eligible for cache** をオン。**Edge TTL**: Ignore origin TTL で固定値(例 1時間。オリジンが `no-cache` を返すため `Respect origin` ではキャッシュされません)。**Browser TTL** は Respect origin のままにします(ブラウザには従来通り毎回再検証を返し、訪問者が古い版を見続けることを防ぎます)。
+5. 保存後、数回アクセスして `curl -sI https://saisei-med.com/ | grep -i cf-cache-status` が `HIT` になればエッジ配信成功です。
+
+### デプロイ後のパージは自動化済み
+
+HTMLをキャッシュすると、**以降のデプロイ反映にはエッジのパージが必要**になります。`deploy-lolipop.yml` 末尾の `Purge Cloudflare cache` ステップが `purge_everything` を実行するので、次の Secrets を GitHub に登録するだけで有効になります(未登録ならスキップされ、デプロイ自体は成功扱い)。
+
+1. Cloudflare ダッシュボード右上 → **My Profile → API Tokens → Create Token**。「Purge Cache」テンプレート、またはカスタムで Permissions: `Zone → Cache Purge → Purge`、Zone Resources: 対象ゾーンのみ。
+2. ゾーンIDは Overview 右側「API」欄の **Zone ID**。
+3. GitHub → Settings → Secrets and variables → Actions に `CLOUDFLARE_API_TOKEN` と `CLOUDFLARE_ZONE_ID` を登録。
+
+土曜 cron による予約日公開の再デプロイも同じパージを通るため、登録しておけば公開日処理がエッジキャッシュに阻害されません。
+
+補足:
+
+- `beacon.min.js`(Cloudflare Web Analytics)はCSPで許可済みの意図的利用です。使わない場合はダッシュボードの Web Analytics で自動挿入をオフにし、`public/.htaccess` のCSPから `cloudflareinsights.com` 系を外してください。
